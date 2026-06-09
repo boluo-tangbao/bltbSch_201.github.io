@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>业余生活 | Life Gallery</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="click-layer" id="clickLayer"></div>
+
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">Life Gallery</div>
+      <div class="nav-links">
+        <a href="#sports">体育</a>
+        <a href="#art">艺术</a>
+        <a href="#anime">二次元</a>
+        <a href="#travel">旅游</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">My After-Class Life</p>
+      <h1>我的业余生活</h1>
+      <p class="hero-text">
+        这里记录学习之外的生活切面：运动带来的节奏感，艺术带来的审美体验，
+        二次元带来的想象力，以及旅行带来的新鲜视角。
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#sports" class="btn primary">开始浏览</a>
+        <a href="#gallery" class="btn secondary">生活相册</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint">点击页面试试看 ✦</div>
+  </header>
+
+  <main>
+    <section class="intro card">
+      <h2>关于这个页面</h2>
+      <p>
+        这个网页是一个独立的生活展示站，不用于学术或求职简历主体，
+        而是展示我更轻松、真实和多元的一面。
+      </p>
+    </section>
+
+    <section id="sports" class="life-section">
+      <div class="section-text">
+        <span class="section-label">01 / Sports</span>
+        <h2>体育</h2>
+        <p>
+          运动是我保持状态和调整节奏的方式。无论是跑步、健身、球类运动还是徒步，
+          它们都让我在学习之外获得一种稳定的能量。
+        </p>
+
+        <div class="tags">
+          <span>跑步</span>
+          <span>健身</span>
+          <span>篮球</span>
+          <span>羽毛球</span>
+          <span>徒步</span>
+        </div>
+      </div>
+
+      <div class="image-card">
+        <img src="images/sports.jpg" alt="体育生活照片" />
+      </div>
+    </section>
+
+    <section id="art" class="life-section reverse">
+      <div class="section-text">
+        <span class="section-label">02 / Art</span>
+        <h2>艺术</h2>
+        <p>
+          我喜欢音乐、摄影、电影、绘画和设计。艺术对我来说不只是放松，
+          也是一种观察情绪、构图、色彩和表达方式的窗口。
+        </p>
+
+        <div class="tags">
+          <span>音乐</span>
+          <span>摄影</span>
+          <span>电影</span>
+          <span>绘画</span>
+          <span>设计</span>
+        </div>
+      </div>
+
+      <div class="image-card">
+        <img src="images/art.jpg" alt="艺术生活照片" />
+      </div>
+    </section>
+
+    <section id="anime" class="life-section">
+      <div class="section-text">
+        <span class="section-label">03 / ACG</span>
+        <h2>二次元</h2>
+        <p>
+          动画、漫画、游戏和轻小说给我提供了另一个充满想象力的世界。
+          我喜欢作品中的世界观、角色塑造、叙事节奏和情绪表达。
+        </p>
+
+        <div class="tags">
+          <span>动画</span>
+          <span>漫画</span>
+          <span>游戏</span>
+          <span>轻小说</span>
+          <span>ACG</span>
+        </div>
+      </div>
+
+      <div class="image-card">
+        <img src="images/anime.jpg" alt="二次元兴趣照片" />
+      </div>
+    </section>
+
+    <section id="travel" class="life-section reverse">
+      <div class="section-text">
+        <span class="section-label">04 / Travel</span>
+        <h2>旅游</h2>
+        <p>
+          我喜欢在旅行中观察城市、自然、建筑、饮食和人的生活方式。
+          旅行让我从熟悉的环境中跳出来，获得新的灵感和记忆。
+        </p>
+
+        <div class="tags">
+          <span>城市旅行</span>
+          <span>自然风景</span>
+          <span>博物馆</span>
+          <span>美食</span>
+          <span>人文体验</span>
+        </div>
+      </div>
+
+      <div class="image-card">
+        <img src="images/travel.jpg" alt="旅游生活照片" />
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+      <h2>生活相册</h2>
+      <p>一些轻松的生活片段，可以之后慢慢替换成自己的照片。</p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">Sports</div>
+        <div class="gallery-item">Art</div>
+        <div class="gallery-item">ACG</div>
+        <div class="gallery-item">Travel</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 My Life Gallery · Built with GitHub Pages</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
