@@ -1,31 +1,43 @@
 const symbols = ["~", "*", "+", "o"];
 
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("section[data-link]").forEach(function (section) {
+    section.classList.add("is-clickable");
+
+    section.addEventListener("click", function (event) {
+      if (event.target.closest("a")) {
+        return;
+      }
+
+      goToSectionPage(section);
+    });
+
+    section.addEventListener("keydown", function (event) {
+      if (event.key !== "Enter" && event.key !== " ") {
+        return;
+      }
+
+      event.preventDefault();
+      goToSectionPage(section);
+    });
+  });
+});
+
 document.addEventListener("click", function (event) {
   createRipple(event.clientX, event.clientY);
   createSparkles(event.clientX, event.clientY);
+});
 
-  const section = event.target.closest("[data-link]");
-  if (!section || event.target.closest("a")) {
-    return;
-  }
-
+function goToSectionPage(section) {
   const target = section.dataset.link;
-  if (target) {
-    window.setTimeout(() => {
-      window.location.href = target;
-    }, 120);
-  }
-});
-
-document.addEventListener("keydown", function (event) {
-  const section = event.target.closest("[data-link]");
-  if (!section || (event.key !== "Enter" && event.key !== " ")) {
+  if (!target) {
     return;
   }
 
-  event.preventDefault();
-  window.location.href = section.dataset.link;
-});
+  window.setTimeout(() => {
+    window.location.href = target;
+  }, 120);
+}
 
 function createRipple(x, y) {
   const ripple = document.createElement("div");

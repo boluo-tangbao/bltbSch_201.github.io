@@ -210,22 +210,56 @@ main,
 }
 
 .life-section {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 42px;
   align-items: center;
   padding: 42px;
   margin-bottom: 36px;
-  cursor: pointer;
   transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
 }
 
-.life-section:hover,
-.life-section:focus-visible {
+.life-section[data-link],
+.life-section.is-clickable {
+  cursor: pointer;
+}
+
+.life-section[data-link]::after,
+.life-section.is-clickable::after {
+  content: "点击进入";
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--aqua-deep);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.2;
+  box-shadow: 0 8px 18px var(--shadow);
+  opacity: 0.78;
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.life-section[data-link]:hover,
+.life-section[data-link]:focus-visible,
+.life-section.is-clickable:hover,
+.life-section.is-clickable:focus-visible {
   border-color: var(--aqua);
   box-shadow: 0 22px 58px rgba(8, 127, 152, 0.2);
   transform: translateY(-5px);
   outline: none;
+}
+
+.life-section[data-link]:hover::after,
+.life-section[data-link]:focus-visible::after,
+.life-section.is-clickable:hover::after,
+.life-section.is-clickable:focus-visible::after {
+  opacity: 1;
+  transform: translateY(-2px);
 }
 
 .life-section.reverse {
