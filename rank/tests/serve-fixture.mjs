@@ -1,0 +1,25 @@
+import { cpSync, mkdirSync, writeFileSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
+import { resolve } from 'node:path'
+import { createServer } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+const root = fileURLToPath(new URL('../', import.meta.url)), target = resolve(root, '.fixture-app')
+mkdirSync(target, { recursive: true })
+for (const item of ['src', 'public', 'index.html']) cpSync(resolve(root, item), resolve(target, item), { recursive: true })
+const places = Array.from({ length: 28 }, (_, index) => ({
+  id: `demo-${index}`, name: index === 0 ? '仅供测试的虚构店铺与很长很长很长的中文名称（演示）' : `虚构店铺 ${index}（演示）`,
+  city: index % 2 ? '测试乙城' : '测试甲城', tier: ['hang', 'top', 'above', 'npc', 'bad'][Math.floor(index / 7)], order: index * 10,
+  summary: 'TEST 咖啡与陈列，中文短评换行测试。\n这是虚构的自动化测试素材，不代表真实体验。', pros: '测试亮点', cons: '测试不足', details: '第一段中文详情。\n第二段体验与理由。',
+  tags: ['测试标签'], cover: index === 0 ? 'images/places/test.svg' : null, coverAlt: index === 0 ? '虚构测试图案' : '', gallery: [], visitedAt: index === 0 ? '2026-09' : null, updatedAt: '2026-09-18', published: true, isDemo: true,
+}))
+places.push({ ...places[0], id: 'hidden', name: '不可见草稿', published: false })
+writeFileSync(resolve(target, 'src/data/places.json'), JSON.stringify(places))
+writeFileSync(resolve(target, 'src/data/updates.json'), JSON.stringify([
+  { id: 'added-test', placeId: 'demo-0', type: 'added', note: '仅供测试的新增原因', date: '2026-09-18' },
+  { id: 'hidden-update', placeId: 'hidden', type: 'added', note: '不可见更新原因', date: '2026-09-18' },
+]))
+writeFileSync(resolve(target, 'public/images/places/test.svg'), '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300"><rect width="600" height="300" fill="#e4bd74"/><circle cx="300" cy="150" r="85" fill="#628875"/><text x="300" y="165" text-anchor="middle" font-size="40" fill="white">DEMO</text></svg>')
+const server = await createServer({ root: target, configFile: false, plugins: [vue()], base: '/jimmyGu.github.io/rank/', server: { host: '127.0.0.1', port: 4174, strictPort: true } })
+await server.listen()
+server.printUrls()

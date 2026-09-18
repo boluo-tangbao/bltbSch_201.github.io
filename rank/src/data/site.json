@@ -1,0 +1,16 @@
+{
+  "title": "我的逛店体验榜",
+  "description": "把逛过的店，慢慢排成一份自己的答案。记录真实感受，也给下一次出发留一点参考。",
+  "author": "菠萝汤包scho",
+  "updatedAt": null,
+  "rankWithinTier": true,
+  "recentDays": 30,
+  "criteria": "个人主观体验排序。夯为最高推荐度，拉完了为最低推荐度；其余评价标准待补充。",
+  "tierDescriptions": {
+    "hang": "最高推荐度",
+    "top": "评价标准待补充",
+    "above": "评价标准待补充",
+    "npc": "评价标准待补充",
+    "bad": "最低推荐度"
+  }
+}
