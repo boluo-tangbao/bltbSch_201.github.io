@@ -1,6 +1,7 @@
 import type { Place, Site } from '../types'
 import { tiers } from './model'
 import { assetUrl } from './assets'
+import { cityColor } from './cities'
 
 export type ExportMode = 'compact' | 'review'
 export interface ExportResult { url: string; name: string; width: number; height: number }
@@ -54,7 +55,9 @@ export async function exportRanking(options: { site: Site; places: Place[]; allP
   ctx.font = font(20)
   const scopeLines = wrapText(ctx, `范围：${scope} · ${places.length} 个条目`, WIDTH - 96)
   const urlLines = wrapText(ctx, websiteUrl, WIDTH - 96)
-  const headerHeight = 120 + titleLines.length * 30 + scopeLines.length * 28
+  const legendCities = [...new Set(places.map(p => p.city))]
+  const legendLines = wrapText(ctx, legendCities.length ? `城市边框：${legendCities.join(' / ')}` : '城市颜色待收录后显示', WIDTH - 96)
+  const headerHeight = 130 + titleLines.length * 30 + scopeLines.length * 28 + legendLines.length * 26
   const footerHeight = 70 + urlLines.length * 25
   type Card = { place: Place; name: string[]; city: string[]; summary: string[]; height: number }
   type Row = { tier: typeof tiers[number]; cards: Card[]; height: number }
@@ -91,6 +94,7 @@ export async function exportRanking(options: { site: Site; places: Place[]; allP
       const metaY = 76 + titleLines.length * 30
       ctx.fillText(`${site.author} · ${updatedAt ? '内容更新 ' + updatedAt : '暂无内容更新'} · ${site.rankWithinTier ? '同档分先后' : '同档不分先后'}`, 48, metaY)
       writeLines(ctx, scopeLines, 48, metaY + 32, 28)
+      writeLines(ctx, legendLines, 48, metaY + 36 + scopeLines.length * 28, 26)
       let y = headerHeight
       for (const row of page) {
         ctx.fillStyle = row.tier.color; ctx.fillRect(48, y, WIDTH - 96, 43)
@@ -102,6 +106,7 @@ export async function exportRanking(options: { site: Site; places: Place[]; allP
         row.cards.forEach((card, col) => {
           const x = 48 + col * (cardWidth + gap), top = y + 55
           ctx.fillStyle = '#ffffff'; ctx.fillRect(x, top, cardWidth, row.height - 65)
+          ctx.strokeStyle = cityColor(card.place.city, site.cityColors); ctx.lineWidth = 4; ctx.strokeRect(x + 2, top + 2, cardWidth - 4, row.height - 69)
           if (card.place.cover) cover(ctx, images.get(card.place.cover)!, x + 16, top + 16, innerWidth, 160, card.place.coverPosition)
           else { ctx.fillStyle = '#eeeee5'; ctx.fillRect(x + 16, top + 16, innerWidth, 160); ctx.fillStyle = '#89917d'; ctx.font = font(21); ctx.fillText('暂无图片', x + 34, top + 80) }
           let textY = top + 192

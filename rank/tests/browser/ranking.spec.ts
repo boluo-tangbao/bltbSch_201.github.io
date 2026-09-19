@@ -42,7 +42,7 @@ test('fixture: published data, stable rank, combined filters, details and histor
   await page.getByLabel('城市筛选').selectOption('测试甲城')
   await page.getByRole('searchbox').fill(' test ')
   await expect(page.locator('.place-card')).toHaveCount(14)
-  await expect(page.locator('.rank-number').nth(1)).toHaveText('#3')
+  await expect(page.locator('.rank-number').nth(1)).toContainText('#3')
   await page.reload(); await expect(page.locator('.place-card')).toHaveCount(14)
   await page.locator('.card-link').first().click()
   await expect(page.locator('.detail-text')).toContainText('第二段体验与理由')

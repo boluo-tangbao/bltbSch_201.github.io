@@ -2,7 +2,10 @@
 
 菠萝汤包scho 的中文个人榜单。首次发布为真实空榜单，不包含演示体验。
 
+2026-09-19 更新：总榜改为纯图片优先、城市颜色边框，新增独立地图与视频介绍子页及完整内容 HTML 导出。字段填写、视频片段和地图坐标要求见 [新版维护说明](docs/v2-guide.md)。
+
 - 榜单：<https://boluo-tangbao.github.io/jimmyGu.github.io/rank/>
+- 地图与视频介绍：<https://boluo-tangbao.github.io/jimmyGu.github.io/rank/guide/>
 - 原个人主页：<https://boluo-tangbao.github.io/jimmyGu.github.io/>
 - 仓库：<https://github.com/boluo-tangbao/jimmyGu.github.io>
 
@@ -16,6 +19,9 @@
 | 记录新增、升档、降档、文案修改与原因 | `rank/src/data/updates.json` |
 | 改标题、署名、评价标准、同档规则 | `rank/src/data/site.json` |
 | 上传自己的封面和详情照片 | `rank/public/images/places/` |
+| 固定各城市的边框和地图颜色 | `rank/src/data/site.json` 的 `cityColors` |
+| 地图位置和视频介绍 | `rank/src/data/places.json` 的 `location`、`video` |
+| 上传已剪好的视频片段（可选） | `rank/public/videos/places/` |
 
 最简流程：上传图片 → 修改 JSON → 提交到 `main` → 在 Actions 等待绿色成功 → 打开榜单确认。无需改组件代码。也可以直接把条目、评价与图片交给 Agent 更新。
 
@@ -48,6 +54,8 @@
 ```
 
 五档 ID 顺序固定：`hang`（夯）、`top`（顶级）、`above`（人上人）、`npc`（NPC）、`bad`（拉完了）。初始配置同档分先后，`order` 越小排名越靠前，同档公开条目的 `order` 不能重复。可按 10、20、30 留出插入空间。筛选后保留全榜中的档内编号。
+
+发布新城市前，在 `site.json` 的 `cityColors` 中给该城市配置唯一的 `#RRGGBB` 颜色，供总榜和地图统一使用。总榜默认只展示图片，通过“显示名称与城市”开关查看辅助文字和档内编号；点击图片到独立介绍子页。
 
 `visitedAt` 允许 `2026-09`、`2026-09-18` 或 `null`；不知道日期就留 `null`，页面显示“未记录”。`updatedAt` 必須由内容维护者填写真实更新日，不由构建时间代替。空榜单的站点 `updatedAt` 为 `null`；页面在站点日期、已公开条目日期和公开更新记录中取最新值。
 

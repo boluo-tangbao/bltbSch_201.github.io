@@ -5,6 +5,7 @@
   "updatedAt": null,
   "rankWithinTier": true,
   "recentDays": 30,
+  "cityColors": {},
   "criteria": "个人主观体验排序。夯为最高推荐度，拉完了为最低推荐度；其余评价标准待补充。",
   "tierDescriptions": {
     "hang": "最高推荐度",

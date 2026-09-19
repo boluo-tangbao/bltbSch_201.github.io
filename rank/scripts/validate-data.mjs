@@ -18,6 +18,13 @@ export function validateData(site, places, updates, imageExists = () => true) {
   if (typeof site.rankWithinTier !== 'boolean') fail('site.json', 'rankWithinTier', '必须是布尔值')
   if (!Number.isInteger(site.recentDays) || site.recentDays < 0) fail('site.json', 'recentDays', '必须是非负整数')
   for (const tier of TIERS) if (typeof site.tierDescriptions?.[tier] !== 'string' || !site.tierDescriptions[tier].trim()) fail('site.json', tier, '缺少档位说明')
+  const colors = site.cityColors || {}, usedColors = new Set()
+  if (typeof colors !== 'object' || Array.isArray(colors)) fail('site.json', 'cityColors', '必须是城市到颜色的对象')
+  else for (const [city, color] of Object.entries(colors)) {
+    if (!city.trim() || typeof color !== 'string' || !/^#[0-9a-f]{6}$/i.test(color)) fail('site.json', city, '城市颜色必须是 #RRGGBB')
+    else if (usedColors.has(color.toLowerCase())) fail('site.json', city, '不同城市不能使用相同颜色')
+    if (typeof color === 'string') usedColors.add(color.toLowerCase())
+  }
   if (!Array.isArray(places) || !Array.isArray(updates)) return [...errors, 'places.json 和 updates.json 必须是数组']
   const ids = new Set(), updateIds = new Set(), orders = new Set()
   const image = (path, file, id) => {
@@ -36,6 +43,7 @@ export function validateData(site, places, updates, imageExists = () => true) {
       orders.add(orderKey)
     }
     for (const key of ['name', 'city', 'summary']) if (typeof p[key] !== 'string' || !p[key].trim()) fail('places.json', p.id, `${key} 必填`)
+    if (p.published && !Object.hasOwn(colors, p.city)) fail('places.json', p.id, `请在 site.json 的 cityColors 中固定 ${p.city} 的城市颜色`)
     for (const [key, limit] of [['name', 160], ['city', 80], ['summary', 600]]) if (typeof p[key] === 'string' && p[key].length > limit) fail('places.json', p.id, `${key} 超过 ${limit} 字，无法保证导出排版`)
     for (const key of ['details', 'coverAlt']) if (typeof p[key] !== 'string') fail('places.json', p.id, `${key} 必须是字符串（可留空）`)
     for (const key of ['pros', 'cons']) if (p[key] !== undefined && typeof p[key] !== 'string') fail('places.json', p.id, `${key} 必须是字符串`)
@@ -47,6 +55,21 @@ export function validateData(site, places, updates, imageExists = () => true) {
     if (p.coverPosition !== undefined && (!Array.isArray(p.coverPosition) || p.coverPosition.length !== 2 || p.coverPosition.some(v => !Number.isFinite(v) || v < 0 || v > 100))) fail('places.json', p.id, 'coverPosition 必须为两个 0–100 数字')
     if (!Array.isArray(p.gallery)) fail('places.json', p.id, 'gallery 必须为数组')
     else for (const g of p.gallery) { image(g?.src, 'places.json', p.id); if (typeof g?.alt !== 'string' || !g.alt.trim()) fail('places.json', p.id, 'gallery 图片需要 alt') }
+    if (p.location != null) {
+      const l = p.location
+      if (typeof l !== 'object' || !Number.isFinite(l.lat) || Math.abs(l.lat) > 85.05112878 || !Number.isFinite(l.lng) || Math.abs(l.lng) > 180 || l.coordinateSystem !== 'wgs84' || typeof l.address !== 'string') fail('places.json', p.id, 'location 需要有效的 WGS84 经纬度和 address 字符串（纬度须在地图显示范围内）')
+    }
+    if (p.video != null) {
+      const v = p.video
+      let safeUrl = false
+      try { const url = new URL(v.url); safeUrl = url.protocol === 'https:' && !url.username && !url.password } catch {}
+      if (!safeUrl || typeof v.title !== 'string' || !v.title.trim() || typeof v.excerpt !== 'string') fail('places.json', p.id, 'video 需要 HTTPS 原视频链接、title 和 excerpt 字符串')
+      if ((v.startSeconds !== undefined && (!Number.isInteger(v.startSeconds) || v.startSeconds < 0)) || (v.endSeconds !== undefined && (!Number.isInteger(v.endSeconds) || v.startSeconds === undefined || v.endSeconds <= v.startSeconds))) fail('places.json', p.id, '视频时间必须为非负整数秒，结束时间须晚于开始时间')
+      if (v.clip != null) {
+        if (typeof v.clip !== 'string' || !/^videos\/places\/[a-zA-Z0-9_\-/]+\.(mp4|webm)$/.test(v.clip) || v.clip.includes('..') || v.clip.includes('//')) fail('places.json', p.id, '视频片段必须为 videos/places/ 下的 mp4/webm 相对路径')
+        else if (!imageExists(v.clip)) fail('places.json', p.id, `视频文件不存在：${v.clip}`)
+      }
+    }
   }
   for (const u of updates) {
     if (!u || typeof u !== 'object') { fail('updates.json', '?', '更新必须为对象'); continue }
