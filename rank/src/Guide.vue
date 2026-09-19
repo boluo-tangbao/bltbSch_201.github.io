@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import siteData from './data/site.json'
 import placeData from './data/places.json'
 import type { Place, Site } from './types'
@@ -21,6 +21,12 @@ const selected = computed(() => {
   return id ? all.find(p => p.id === id) : undefined
 })
 const isIndex = computed(() => !route.value || route.value === '#' || route.value === '#/')
+onMounted(() => {
+  if (!isIndex.value) nextTick(() => {
+    detailContainer.value?.focus({ preventScroll: true })
+    detailContainer.value?.scrollIntoView({ behavior: 'instant', block: 'start' })
+  })
+})
 const rankOf = (p: Place) => all.filter(x => x.tier === p.tier).findIndex(x => x.id === p.id) + 1
 const boardUrl = computed(() => {
   const p = new URLSearchParams()
