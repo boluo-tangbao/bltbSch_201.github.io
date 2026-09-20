@@ -37,12 +37,12 @@ async function generate() {
 <template>
   <dialog ref="dialog" class="export-dialog" aria-labelledby="export-title" @cancel="emit('close')" @close="emit('close')">
     <div class="dialog-heading"><h2 id="export-title">把榜单带走</h2><button class="icon-button" aria-label="关闭导出" @click="emit('close')">×</button></div>
-    <p>图片适合快速分享；完整内容文件保留图文、视频介绍、来源链接与导航信息，可离线阅读或打印为 PDF。</p>
+    <p>图片适合快速分享；完整内容文件保留店铺评价、图片与导航信息，可离线阅读或打印为 PDF。</p>
     <fieldset :disabled="busy"><legend>选择版式</legend><label><input v-model="mode" type="radio" value="compact" name="mode" />简洁排序图 · 图片与名称</label><label><input v-model="mode" type="radio" value="review" name="mode" />短评长图 · 加上一句话评价</label><label><input v-model="mode" type="radio" value="full" name="mode" />完整内容 · HTML 图文存档</label></fieldset>
     <fieldset :disabled="busy"><legend>导出范围</legend><label><input v-model="all" type="radio" :value="false" name="scope" />当前筛选 · {{ places.length }} 个条目</label><label><input v-model="all" type="radio" :value="true" name="scope" />完整榜单 · {{ allPlaces.length }} 个条目</label></fieldset>
     <button class="button dark" :disabled="busy" @click="generate">{{ busy ? '正在生成…' : results.length || documentResult ? '重新生成' : mode === 'full' ? '生成完整内容' : '生成图片' }}</button>
     <p v-if="error" class="export-status export-error" role="alert">{{ error }}</p>
-    <p v-else-if="documentResult" class="export-status" role="status">完整内容已生成，图片已嵌入文件；视频和地图链接需要联网打开。</p>
+    <p v-else-if="documentResult" class="export-status" role="status">完整内容已生成，图片已嵌入文件；地图链接需要联网打开。</p>
     <p v-else-if="busy || results.length" class="export-status" role="status">{{ busy ? '正在加载字体与图片，请稍候。' : `已生成 ${results.length} 张图片。点击下方链接保存；手机也可长按图片保存。` }}</p>
     <ul class="download-list"><li v-for="(result, index) in results" :key="result.url"><a :href="result.url" :download="result.name">↓ 下载第 {{ index + 1 }} 页 · {{ result.width }} × {{ result.height }}</a><img :src="result.url" :alt="`导出预览，第 ${index + 1} 页`" /></li></ul>
     <a v-if="documentResult" class="button full-download" :href="documentResult.url" :download="documentResult.name">↓ 下载完整内容（HTML）</a>

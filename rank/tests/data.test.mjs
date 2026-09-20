@@ -2,29 +2,65 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { validateData, validDate } from '../scripts/validate-data.mjs'
-import { filterPlaces, publicUpdates, recentBadge } from '../src/utils/model.ts'
-import { cityColor, navigationUrl } from '../src/utils/cities.ts'
+import { flattenPlaces, filterPlaces, publicUpdates, recentBadge } from '../src/utils/model.ts'
+import { cityColor, navigationUrl, hasCoordinates, placeAddress } from '../src/utils/cities.ts'
+
+test('city groups inherit their names without mutating source entries', () => {
+  const entry = { id: 'a', name: '测试店', tier: 'top', order: 20, published: true, summary: '测试', tags: [] }
+  const groups = { 上海: [entry], 广州: [{ ...entry, id: 'b', order: 10 }], 苏州: [] }
+  const result = flattenPlaces(groups)
+  assert.deepEqual(result.map(p => p.city), ['上海', '广州'])
+  assert.equal(Object.hasOwn(entry, 'city'), false)
+  assert.deepEqual(filterPlaces(result).map(p => p.id), ['b', 'a'])
+  assert.deepEqual(filterPlaces(result, '上海').map(p => p.id), ['a'])
+})
 
 const site = JSON.parse(readFileSync(new URL('../src/data/site.json', import.meta.url), 'utf8'))
 site.cityColors = { '测试城市': '#b95b43' }
-const place = { id: 'test-place', name: '虚构测试店', city: '测试城市', tier: 'top', order: 10, summary: 'TEST 中文短评', details: '', tags: ['咖啡'], cover: null, coverAlt: '', gallery: [], visitedAt: null, updatedAt: '2026-09-18', published: true, isDemo: true }
+const place = { id: 'test-place', name: '虚构测试店', city: '测试城市', tier: 'top', order: 10, summary: 'TEST 中文短评', details: '', tags: ['咖啡'], cover: null, gallery: [], visitedAt: null, updatedAt: '2026-09-18', published: true }
+
+test('authoring format rejects legacy fields and duplicate IDs or ranks across cities', () => {
+  const { city, ...entry } = place
+  const config = { ...site, cityColors: { 上海: '#b95b43', 广州: '#507ba2' } }
+  assert.deepEqual(validateData(config, { 上海: [entry], 广州: [] }, []), [])
+  for (const key of ['city', 'pros', 'cons', 'coverAlt', 'isDemo', 'video']) {
+    assert.ok(validateData(config, { 上海: [{ ...entry, [key]: null }] }, []).some(e => e.includes(key)))
+  }
+  for (const invalid of [[], null, { 上海: {} }, { ' 上海': [entry] }, { 上海: [null] }]) assert.ok(validateData(config, invalid, []).length)
+  const errors = validateData(config, { 上海: [entry], 广州: [entry] }, [])
+  assert.ok(errors.some(e => e.includes('重复 ID')))
+  assert.ok(errors.some(e => e.includes('order 不得重复')))
+})
+
+test('text addresses are retained without inventing coordinates or navigation', () => {
+  const p = { ...place, location: '上海市黄浦区南京东路800号第一百货C馆' }
+  assert.deepEqual(validateEntries(site, [p], []), [])
+  assert.equal(placeAddress(p), p.location)
+  assert.equal(hasCoordinates(p), false)
+  assert.equal(navigationUrl(p), null)
+})
+function validateEntries(site, places, updates, imageExists) {
+  const groups = Object.fromEntries([...new Set(places.map(p => p.city))].map(city => [city, places.filter(p => p.city === city).map(({city, ...p}) => p)]))
+  return validateData(site, groups, updates, imageExists)
+}
+
 test('empty board is valid, and real dates are checked', () => {
-  assert.deepEqual(validateData(site, [], []), [])
+  assert.deepEqual(validateEntries(site, [], []), [])
   assert.equal(validDate('2026-02-30'), false)
   assert.equal(validDate('2024-02-29'), true)
   assert.equal(validDate('2026-09', true), true)
   assert.equal(validDate('2026-13', true), false)
 })
 test('bad data blocks publication with file and ID', () => {
-  const errors = validateData(site, [place, { ...place, tier: 'wrong', cover: 'images/places/missing.webp' }], [], () => false)
+  const errors = validateEntries(site, [place, { ...place, tier: 'wrong', cover: 'images/places/missing.webp' }], [], () => false)
   for (const expected of ['重复 ID', '非法档位', '图片文件不存在']) assert.ok(errors.some(e => e.includes('places.json [test-place]') && e.includes(expected)))
-  assert.ok(validateData(site, [{ ...place, cover: 'images/places/../../secret.png' }], []).some(e => e.includes('相对图片路径')))
+  assert.ok(validateEntries(site, [{ ...place, cover: 'images/places/../../secret.png' }], []).some(e => e.includes('相对图片路径')))
 })
 test('update references and tier transitions must be valid', () => {
   const update = { id: 'change-1', placeId: place.id, date: '2026-09-18', type: 'tier-change', fromTier: 'top', toTier: 'top', note: '测试' }
-  assert.ok(validateData(site, [place], [update]).some(e => e.includes('前后档位')))
-  assert.ok(validateData(site, [], [{ ...update, placeId: 'missing' }]).some(e => e.includes('不存在')))
-  assert.ok(validateData(site, [place], [{ ...update, toTier: 'hang', date: '2026-09-19' }]).some(e => e.includes('updatedAt')))
+  assert.ok(validateEntries(site, [place], [update]).some(e => e.includes('前后档位')))
+  assert.ok(validateEntries(site, [], [{ ...update, placeId: 'missing' }]).some(e => e.includes('不存在')))
+  assert.ok(validateEntries(site, [place], [{ ...update, toTier: 'hang', date: '2026-09-19' }]).some(e => e.includes('updatedAt')))
 })
 test('search composes with city and preserves published tier/order', () => {
   const others = [{ ...place, id: 'hidden', published: false }, { ...place, id: 'second', order: 20 }, { ...place, id: 'first', tier: 'hang' }, { ...place, id: 'elsewhere', city: '别处' }]
@@ -39,25 +75,18 @@ test('hidden updates stay hidden and future records are not marked recent', () =
   assert.equal(recentBadge(place.id, updates, 30, new Date('2026-09-01').getTime()), '')
 })
 test('city colors are fixed, unique and required for published cities', () => {
-  assert.deepEqual(validateData(site, [place], []), [])
+  assert.deepEqual(validateEntries(site, [place], []), [])
   assert.equal(cityColor('测试城市', site.cityColors), '#b95b43')
-  assert.ok(validateData({ ...site, cityColors: {} }, [place], []).some(e => e.includes('cityColors')))
-  assert.ok(validateData({ ...site, cityColors: { a: '#aabbcc', b: '#AABBCC' } }, [], []).some(e => e.includes('相同颜色')))
+  assert.ok(validateEntries({ ...site, cityColors: {} }, [place], []).some(e => e.includes('cityColors')))
+  assert.ok(validateEntries({ ...site, cityColors: { a: '#aabbcc', b: '#AABBCC' } }, [], []).some(e => e.includes('相同颜色')))
 })
 test('location uses explicit WGS84 and navigation preserves lon/lat order', () => {
   const p = { ...place, location: { lat: 30, lng: 120, coordinateSystem: 'wgs84', address: '测试' } }
-  assert.deepEqual(validateData(site, [p], []), [])
+  assert.deepEqual(validateEntries(site, [p], []), [])
   const url = new URL(navigationUrl(p, true))
   assert.equal(url.searchParams.get('position'), '120,30')
   assert.equal(url.searchParams.get('coordinate'), 'wgs84')
   assert.equal(navigationUrl(place), null)
-  assert.ok(validateData(site, [{ ...p, location: { ...p.location, lat: 91 } }], []).some(e => e.includes('WGS84')))
-  assert.ok(validateData(site, [{ ...p, location: { ...p.location, coordinateSystem: 'gcj02' } }], []).some(e => e.includes('WGS84')))
-})
-test('video metadata blocks unsafe links, invalid segments and missing clips', () => {
-  const video = { url: 'https://example.com/video', title: '测试介绍', excerpt: '', startSeconds: 10, endSeconds: 20, clip: null }
-  assert.deepEqual(validateData(site, [{ ...place, video }], []), [])
-  assert.ok(validateData(site, [{ ...place, video: { ...video, url: 'javascript:alert(1)' } }], []).some(e => e.includes('HTTPS')))
-  assert.ok(validateData(site, [{ ...place, video: { ...video, endSeconds: 9 } }], []).some(e => e.includes('结束时间')))
-  assert.ok(validateData(site, [{ ...place, video: { ...video, clip: 'videos/places/missing.mp4' } }], [], () => false).some(e => e.includes('视频文件不存在')))
+  assert.ok(validateEntries(site, [{ ...p, location: { ...p.location, lat: 91 } }], []).some(e => e.includes('WGS84')))
+  assert.ok(validateEntries(site, [{ ...p, location: { ...p.location, coordinateSystem: 'gcj02' } }], []).some(e => e.includes('WGS84')))
 })

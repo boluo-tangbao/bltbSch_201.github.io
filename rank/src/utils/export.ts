@@ -68,7 +68,7 @@ export async function exportRanking(options: { site: Site; places: Place[]; allP
     for (let start = 0; start < matching.length; start += cols) {
       const cards = matching.slice(start, start + cols).map(place => {
         ctx.font = font(25, true); const name = wrapText(ctx, place.name, innerWidth)
-        ctx.font = font(19); const city = wrapText(ctx, `${place.city}${place.isDemo ? ' · 演示' : ''}${site.rankWithinTier ? ` · #${allPlaces.filter(p => p.tier === tier.id).findIndex(p => p.id === place.id) + 1}` : ''}`, innerWidth)
+        ctx.font = font(19); const city = wrapText(ctx, `${place.city}${site.rankWithinTier ? ` · #${allPlaces.filter(p => p.tier === tier.id).findIndex(p => p.id === place.id) + 1}` : ''}`, innerWidth)
         ctx.font = font(22); const summary = mode === 'review' ? wrapText(ctx, place.summary, innerWidth) : []
         return { place, name, city, summary, height: 215 + city.length * 25 + name.length * 34 + (summary.length ? 16 + summary.length * 32 : 0) }
       })

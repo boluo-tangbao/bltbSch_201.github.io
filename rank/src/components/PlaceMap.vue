@@ -3,10 +3,10 @@ import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import type { Place } from '../types'
-import { cityColor, navigationUrl } from '../utils/cities'
+import { cityColor, navigationUrl, hasCoordinates } from '../utils/cities'
 const props = defineProps<{ places: Place[]; colors: Record<string, string>; selectedId?: string }>()
 const emit = defineEmits<{ select: [id: string] }>()
-const points = computed(() => props.places.filter(p => p.location))
+const points = computed(() => props.places.filter(hasCoordinates))
 const container = ref<HTMLElement>()
 const active = ref(false), tileError = ref(false)
 let map: L.Map | undefined, layer: L.LayerGroup | undefined, tiles: L.TileLayer | undefined
@@ -24,8 +24,8 @@ function refresh() {
     })
     const popup = document.createElement('div')
     const name = document.createElement('strong'); name.textContent = p.name; popup.append(name)
-    const location = document.createElement('p'); location.textContent = `${p.city}${p.isDemo ? ' · 演示' : ''}`; popup.append(location)
-    const detail = document.createElement('button'); detail.textContent = '查看视频与详情'; detail.className = 'map-detail-button'; detail.onclick = () => emit('select', p.id); popup.append(detail)
+    const location = document.createElement('p'); location.textContent = `${p.city}`; popup.append(location)
+    const detail = document.createElement('button'); detail.textContent = '查看评价与详情'; detail.className = 'map-detail-button'; detail.onclick = () => emit('select', p.id); popup.append(detail)
     const go = document.createElement('a'); go.href = navigationUrl(p, true)!; go.textContent = '去这里 ↗'; go.target = '_blank'; go.rel = 'noopener noreferrer'; popup.append(go)
     marker.bindPopup(popup).on('click', () => emit('select', p.id)).addTo(layer)
     markers.set(p.id, marker)

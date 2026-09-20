@@ -1,4 +1,4 @@
-import type { Place, Update } from '../types/index.ts'
+import type { Place, PlacesByCity, Update } from '../types/index.ts'
 
 export const tiers = [
   { id: 'hang', label: '夯', color: '#ed765e', pale: '#fff4ef' },
@@ -7,6 +7,10 @@ export const tiers = [
   { id: 'npc', label: 'NPC', color: '#9ebdb0', pale: '#f1f7f4' },
   { id: 'bad', label: '拉完了', color: '#afb9c8', pale: '#f3f5f8' },
 ] as const
+
+export function flattenPlaces(groups: PlacesByCity): Place[] {
+  return Object.entries(groups).flatMap(([city, places]) => places.map(place => ({ ...place, city })))
+}
 
 export function filterPlaces(places: Place[], city = '', query = '') {
   const keyword = query.trim().toLocaleLowerCase()

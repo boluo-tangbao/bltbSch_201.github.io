@@ -3,8 +3,8 @@ import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import siteData from './data/site.json'
 import placeData from './data/places.json'
 import updateData from './data/updates.json'
-import type { Place, Site, Update } from './types'
-import { filterPlaces, publicUpdates, recentBadge, tierLabel, tiers, updateLabel } from './utils/model'
+import type { Place, PlacesByCity, Site, Update } from './types'
+import { flattenPlaces, filterPlaces, publicUpdates, recentBadge, tierLabel, tiers, updateLabel } from './utils/model'
 import PlaceCard from './components/PlaceCard.vue'
 import PlaceDetail from './components/PlaceDetail.vue'
 import CityLegend from './components/CityLegend.vue'
@@ -18,7 +18,7 @@ const colors = site.cityColors || {}
 const showLabels = ref(false)
 const qaUrl = `${import.meta.env.BASE_URL}qa/`
 const homeUrl = `${import.meta.env.BASE_URL}../`
-const places = placeData as Place[]
+const places = flattenPlaces(placeData as PlacesByCity)
 const all = filterPlaces(places)
 const updates = publicUpdates(updateData as Update[], places)
 const params = new URLSearchParams(location.search)
@@ -92,15 +92,15 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
           <div class="filter-result"><span role="status" aria-live="polite">{{ filtered.length }} 个结果</span><button class="text-button" :disabled="!hasFilters" @click="reset">重置</button></div>
         </div>
         <CityLegend :cities="cities" :colors="colors" :active="city" @select="city = $event" />
-        <div class="photo-options"><span>点击图片，查看视频介绍和地图位置</span><label><input v-model="showLabels" type="checkbox" />显示名称与城市</label></div>
+        <div class="photo-options"><span>点击图片，查看详细评价和地图位置</span><label><input v-model="showLabels" type="checkbox" />显示名称与城市</label></div>
         <div v-if="!all.length && !hasFilters" class="empty-intro"><span class="empty-icon" aria-hidden="true">＋</span><div><strong>第一站，还在路上</strong><p>这里暂时没有条目。等真实体验到来，再把每一票投给心里的位置。</p></div><span class="empty-pill">待填充</span></div>
         <div v-if="hasFilters && !filtered.length" class="no-results" role="status"><strong>没有找到匹配的条目</strong><span>试试其他关键词或城市。</span><button class="text-button" @click="reset">重置筛选 ↗</button></div>
         <div class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels }"><section v-for="(tier, index) in tiers" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ index + 1 }}</span><h3 :id="`tier-${tier.id}`">{{ tier.label }}</h3><span class="tier-count">{{ filtered.filter(p => p.tier === tier.id).length }} 个条目</span></div><div class="tier-content"><div v-if="!filtered.some(p => p.tier === tier.id)" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in filtered.filter(p => p.tier === tier.id)" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="`${guideUrl}#/place/${p.id}`" :rank="site.rankWithinTier ? rankOf(p) : undefined" :badge="recentBadge(p.id, updates, site.recentDays)" /></div></div></section></div>
         <p class="board-caption"><span>推荐度从上到下递减</span><span>{{ site.rankWithinTier ? '同档分先后 · 从左到右，从上到下' : '同档不分先后' }}</span></p>
       </section>
 
-      <section class="guide-entry"><div><h2>心里有一站，就去地图找找</h2><p>同样的城市颜色，对应地图上的位置。视频介绍与到访路线也在这里。</p></div><a :href="guideUrl" class="button dark">打开地图与介绍 ↗</a></section>
-      <div class="bottom-grid"><section class="updates-section" aria-labelledby="updates-title"><div class="section-heading"><div><span class="section-number">02</span><h2 id="updates-title">最近更新</h2></div><span class="muted tiny">持续记录中</span></div><div v-if="!updates.length" class="quiet-empty"><span class="timeline-dot"></span><div><h3>还没有更新记录</h3><p>新增、改档与评价修改，都会在这里留下足迹。</p></div></div><ol v-else class="update-list"><li v-for="u in updates.slice(0, 10)" :key="u.id"><time>{{ u.date }}</time><div><span class="update-kind">{{ updateLabel(u) }}</span><a :href="`${guideUrl}#/place/${u.placeId}`">{{ all.find(p => p.id === u.placeId)?.name }}</a><span v-if="all.find(p => p.id === u.placeId)?.isDemo" class="demo-badge">演示</span><p v-if="u.type === 'tier-change'">{{ tierLabel(u.fromTier!) }} → {{ tierLabel(u.toTier!) }}</p><p>{{ u.note }}</p></div></li></ol></section>
+      <section class="guide-entry"><div><h2>心里有一站，就去地图找找</h2><p>同样的城市颜色，对应地图上的位置。详细评价与到访路线也在这里。</p></div><a :href="guideUrl" class="button dark">打开地图与介绍 ↗</a></section>
+      <div class="bottom-grid"><section class="updates-section" aria-labelledby="updates-title"><div class="section-heading"><div><span class="section-number">02</span><h2 id="updates-title">最近更新</h2></div><span class="muted tiny">持续记录中</span></div><div v-if="!updates.length" class="quiet-empty"><span class="timeline-dot"></span><div><h3>还没有更新记录</h3><p>新增、改档与评价修改，都会在这里留下足迹。</p></div></div><ol v-else class="update-list"><li v-for="u in updates.slice(0, 10)" :key="u.id"><time>{{ u.date }}</time><div><span class="update-kind">{{ updateLabel(u) }}</span><a :href="`${guideUrl}#/place/${u.placeId}`">{{ all.find(p => p.id === u.placeId)?.name }}</a><p v-if="u.type === 'tier-change'">{{ tierLabel(u.fromTier!) }} → {{ tierLabel(u.toTier!) }}</p><p>{{ u.note }}</p></div></li></ol></section>
       <section class="criteria-section" aria-labelledby="criteria-title"><div class="section-heading"><div><span class="section-number">03</span><h2 id="criteria-title">关于这份榜单</h2></div><span class="about-icon" aria-hidden="true">i</span></div><p>{{ site.criteria }}</p><div class="criteria-scale"><span v-for="t in tiers" :key="t.id"><i :style="{ background: t.color }"></i>{{ t.label }}</span></div><details><summary>查看各档标准与排序规则</summary><dl><template v-for="t in tiers" :key="t.id"><dt>{{ t.label }}</dt><dd>{{ site.tierDescriptions[t.id] }}</dd></template></dl><p>{{ site.rankWithinTier ? '同档有先后，卡片编号表示该档内的完整排名；筛选后保留原排名。' : '同档不分先后，展示顺序仅用于排版。' }}</p><p>到访日期未提供时显示“未记录”；内容更新日期由作者维护。</p></details><p class="personal-note">仅代表个人体验，供你出发前参考。</p></section></div>
       <Guestbook />
     </template>

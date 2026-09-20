@@ -1,11 +1,11 @@
 # 我的逛店体验榜
 
-菠萝汤包scho 的中文个人榜单。首次发布为真实空榜单，不包含演示体验。
+菠萝汤包scho 的中文个人榜单。店铺按城市归档，由作者维护真实体验。
 
-2026-09-19 更新：总榜改为纯图片优先、城市颜色边框，新增独立地图与视频介绍子页及完整内容 HTML 导出。字段填写、视频片段和地图坐标要求见 [新版维护说明](docs/v2-guide.md)。
+2026-09-20 更新：店铺按城市分组，精简字段，详情以图文评价为主。完整填写示例见 [城市归档填写指南](docs/city-data.md)。
 
 - 榜单：<https://boluo-tangbao.github.io/jimmyGu.github.io/rank/>
-- 地图与视频介绍：<https://boluo-tangbao.github.io/jimmyGu.github.io/rank/guide/>
+- 地图与详细评价：<https://boluo-tangbao.github.io/jimmyGu.github.io/rank/guide/>
 - 原个人主页：<https://boluo-tangbao.github.io/jimmyGu.github.io/>
 - 仓库：<https://github.com/boluo-tangbao/jimmyGu.github.io>
 
@@ -20,83 +20,17 @@
 | 改标题、署名、评价标准、同档规则 | `rank/src/data/site.json` |
 | 上传自己的封面和详情照片 | `rank/public/images/places/` |
 | 固定各城市的边框和地图颜色 | `rank/src/data/site.json` 的 `cityColors` |
-| 地图位置和视频介绍 | `rank/src/data/places.json` 的 `location`、`video` |
-| 上传已剪好的视频片段（可选） | `rank/public/videos/places/` |
+| 地址与地图位置 | `rank/src/data/places.json` 的 `location` |
 
 最简流程：上传图片 → 修改 JSON → 提交到 `main` → 在 Actions 等待绿色成功 → 打开榜单确认。无需改组件代码。也可以直接把条目、评价与图片交给 Agent 更新。
 
-### 新增条目示例
+### 按城市填写
 
-以下是**虚构演示模板**，默认不发布。将其复制进 `places.json` 的数组中（多个对象之间用英文逗号分隔）。填写自己的真实内容、日期、档位与 ID 后，将 `isDemo` 改为 `false`，将 `published` 改为 `true`。不要把下面的演示短评当成真实观点。
+`places.json` 现在使用 `{ "上海": [店铺对象], "广州": [] }`，店铺内部不填写 `city`。全站同档仍共用 `order` 排序，不同城市也不能出现同档重复顺序。
 
-```json
-[
-  {
-    "id": "my-place-001",
-    "name": "待填写名称（演示）",
-    "city": "待填写城市",
-    "tier": "top",
-    "order": 10,
-    "summary": "待填写你自己的一句话结论。",
-    "pros": "",
-    "cons": "",
-    "details": "待填写体验与原因。换段可用 \n。",
-    "tags": [],
-    "cover": null,
-    "coverAlt": "",
-    "gallery": [],
-    "visitedAt": null,
-    "updatedAt": "2026-09-18",
-    "published": false,
-    "isDemo": true
-  }
-]
-```
+已移除 `pros`、`cons`、`coverAlt`、`isDemo`、`video`。优点不足直接写在 `details`；封面说明自动从城市和店名生成；`location` 可先填文字地址。
 
-五档 ID 顺序固定：`hang`（夯）、`top`（顶级）、`above`（人上人）、`npc`（NPC）、`bad`（拉完了）。初始配置同档分先后，`order` 越小排名越靠前，同档公开条目的 `order` 不能重复。可按 10、20、30 留出插入空间。筛选后保留全榜中的档内编号。
-
-发布新城市前，在 `site.json` 的 `cityColors` 中给该城市配置唯一的 `#RRGGBB` 颜色，供总榜和地图统一使用。总榜默认只展示图片，通过“显示名称与城市”开关查看辅助文字和档内编号；点击图片到独立介绍子页。
-
-`visitedAt` 允许 `2026-09`、`2026-09-18` 或 `null`；不知道日期就留 `null`，页面显示“未记录”。`updatedAt` 必須由内容维护者填写真实更新日，不由构建时间代替。空榜单的站点 `updatedAt` 为 `null`；页面在站点日期、已公开条目日期和公开更新记录中取最新值。
-
-新增后在 `updates.json` 中添加记录，日期与条目的内容日期保持一致：
-
-```json
-[
-  {
-    "id": "my-place-001-added-20260918",
-    "placeId": "my-place-001",
-    "date": "2026-09-18",
-    "type": "added",
-    "note": "这里填写实际新增原因。"
-  }
-]
-```
-
-### 改档示例
-
-假设你决定将某条目从“人上人”改到“顶级”：在该条目中修改 `"tier": "top"`，选择该档未使用的 `order`，更新 `updatedAt`，再追加以下更新记录。以下日期与理由需改成真实内容：
-
-```json
-{
-  "id": "my-place-001-change-20260920",
-  "placeId": "my-place-001",
-  "date": "2026-09-20",
-  "type": "tier-change",
-  "fromTier": "above",
-  "toTier": "top",
-  "note": "这里填写你决定改档的实际原因。"
-}
-```
-
-只有改文案时使用 `"type": "edited"`，不填前后档位。最近更新展示最多 10 条，新增和升降标记默认保留 30 天，可在 `site.json` 的 `recentDays` 修改。隐藏条目的更新记录也不会展示。`published: false` 只控制展示，公开仓库和前端构建中都不要放私密内容。
-
-### 换图
-
-1. 上传 WebP、JPEG、PNG 等图片到 `rank/public/images/places/`，优先压缩到适当大小。
-2. 条目中填 `"cover": "images/places/my-shop.webp"` 和准确的 `coverAlt`。不用以 `/` 开头，不写 `public/`，不使用外部图片地址。
-3. 可选 `"coverPosition": [50, 30]` 指定水平、垂直焦点百分比，默认均为 50。
-4. 详情图写为 `"gallery": [{ "src": "images/places/inside.webp", "alt": "店内陈列" }]`。没有照片保留 `cover: null` 和空数组即可。
+完整可复制模板、图片路径、坐标和更新记录说明见 [城市归档填写指南](docs/city-data.md)。JSON 请保存为 UTF-8。
 
 ## 开发与验证
 

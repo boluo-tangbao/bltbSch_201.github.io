@@ -9,7 +9,7 @@ export function validDate(value, month = false) {
   const parsed = new Date(full + 'T00:00:00Z')
   return !Number.isNaN(parsed.getTime()) && parsed.toISOString().slice(0, 10) === full
 }
-export function validateData(site, places, updates, imageExists = () => true) {
+export function validateData(site, groups, updates, imageExists = () => true) {
   const errors = [], fail = (file, id, message) => errors.push(`${file} [${id ?? '?'}] ${message}`)
   if (!site || typeof site !== 'object') return ['site.json 必须是对象']
   for (const key of ['title', 'description', 'criteria']) if (typeof site[key] !== 'string' || !site[key].trim()) fail('site.json', key, '必须填写文字')
@@ -25,7 +25,18 @@ export function validateData(site, places, updates, imageExists = () => true) {
     else if (usedColors.has(color.toLowerCase())) fail('site.json', city, '不同城市不能使用相同颜色')
     if (typeof color === 'string') usedColors.add(color.toLowerCase())
   }
-  if (!Array.isArray(places) || !Array.isArray(updates)) return [...errors, 'places.json 和 updates.json 必须是数组']
+  if (!groups || typeof groups !== 'object' || Array.isArray(groups)) return [...errors, 'places.json 必须是城市名称到店铺数组的对象']
+  if (!Array.isArray(updates)) return [...errors, 'updates.json 必须是数组']
+  const places = []
+  for (const [city, entries] of Object.entries(groups)) {
+    if (!city.trim() || city !== city.trim() || city.length > 80) fail('places.json', city, '城市名称须为 1–80 字且不能有首尾空格')
+    if (!Array.isArray(entries)) { fail('places.json', city, '城市下必须是店铺数组'); continue }
+    for (const entry of entries) {
+      if (!entry || typeof entry !== 'object' || Array.isArray(entry)) { fail('places.json', city, '条目必须是对象'); continue }
+      for (const key of ['city', 'pros', 'cons', 'coverAlt', 'isDemo', 'video']) if (Object.hasOwn(entry, key)) fail('places.json', entry.id, key === 'city' ? 'city 已移到城市分组，请删除店铺内的 city' : key + ' 已移除，请删除此字段')
+      places.push({ ...entry, city })
+    }
+  }
   const ids = new Set(), updateIds = new Set(), orders = new Set()
   const image = (path, file, id) => {
     if (typeof path !== 'string' || !/^images\/places\//.test(path) || path.split('/').some(s => !s || s === '..' || s === '.') || /[\\?#%]/.test(path) || !/\.(webp|png|jpe?g|avif|gif|svg)$/i.test(path)) fail(file, id, `图片必须使用 images/places/ 下的相对图片路径：${path}`)
@@ -45,30 +56,20 @@ export function validateData(site, places, updates, imageExists = () => true) {
     for (const key of ['name', 'city', 'summary']) if (typeof p[key] !== 'string' || !p[key].trim()) fail('places.json', p.id, `${key} 必填`)
     if (p.published && !Object.hasOwn(colors, p.city)) fail('places.json', p.id, `请在 site.json 的 cityColors 中固定 ${p.city} 的城市颜色`)
     for (const [key, limit] of [['name', 160], ['city', 80], ['summary', 600]]) if (typeof p[key] === 'string' && p[key].length > limit) fail('places.json', p.id, `${key} 超过 ${limit} 字，无法保证导出排版`)
-    for (const key of ['details', 'coverAlt']) if (typeof p[key] !== 'string') fail('places.json', p.id, `${key} 必须是字符串（可留空）`)
-    for (const key of ['pros', 'cons']) if (p[key] !== undefined && typeof p[key] !== 'string') fail('places.json', p.id, `${key} 必须是字符串`)
-    for (const key of ['published', 'isDemo']) if (typeof p[key] !== 'boolean') fail('places.json', p.id, `${key} 必须是布尔值`)
+    for (const key of ['details']) if (typeof p[key] !== 'string') fail('places.json', p.id, `${key} 必须是字符串（可留空）`)
+    for (const key of ['published']) if (typeof p[key] !== 'boolean') fail('places.json', p.id, `${key} 必须是布尔值`)
     if (!Array.isArray(p.tags) || p.tags.some(t => typeof t !== 'string')) fail('places.json', p.id, 'tags 必须是文字数组')
     if (p.visitedAt !== null && !validDate(p.visitedAt, true)) fail('places.json', p.id, 'visitedAt 必须为真实年月、日期或 null')
     if (!validDate(p.updatedAt)) fail('places.json', p.id, 'updatedAt 必须为真实 YYYY-MM-DD 日期')
-    if (p.cover !== null) { image(p.cover, 'places.json', p.id); if (typeof p.coverAlt !== 'string' || !p.coverAlt.trim()) fail('places.json', p.id, '封面图需要 coverAlt') }
+    if (p.cover !== null) image(p.cover, 'places.json', p.id)
     if (p.coverPosition !== undefined && (!Array.isArray(p.coverPosition) || p.coverPosition.length !== 2 || p.coverPosition.some(v => !Number.isFinite(v) || v < 0 || v > 100))) fail('places.json', p.id, 'coverPosition 必须为两个 0–100 数字')
     if (!Array.isArray(p.gallery)) fail('places.json', p.id, 'gallery 必须为数组')
     else for (const g of p.gallery) { image(g?.src, 'places.json', p.id); if (typeof g?.alt !== 'string' || !g.alt.trim()) fail('places.json', p.id, 'gallery 图片需要 alt') }
-    if (p.location != null) {
+    if (typeof p.location === 'string') {
+      if (!p.location.trim()) fail('places.json', p.id, '地址不能为空文字，未知请填 null')
+    } else if (p.location != null) {
       const l = p.location
       if (typeof l !== 'object' || !Number.isFinite(l.lat) || Math.abs(l.lat) > 85.05112878 || !Number.isFinite(l.lng) || Math.abs(l.lng) > 180 || l.coordinateSystem !== 'wgs84' || typeof l.address !== 'string') fail('places.json', p.id, 'location 需要有效的 WGS84 经纬度和 address 字符串（纬度须在地图显示范围内）')
-    }
-    if (p.video != null) {
-      const v = p.video
-      let safeUrl = false
-      try { const url = new URL(v.url); safeUrl = url.protocol === 'https:' && !url.username && !url.password } catch {}
-      if (!safeUrl || typeof v.title !== 'string' || !v.title.trim() || typeof v.excerpt !== 'string') fail('places.json', p.id, 'video 需要 HTTPS 原视频链接、title 和 excerpt 字符串')
-      if ((v.startSeconds !== undefined && (!Number.isInteger(v.startSeconds) || v.startSeconds < 0)) || (v.endSeconds !== undefined && (!Number.isInteger(v.endSeconds) || v.startSeconds === undefined || v.endSeconds <= v.startSeconds))) fail('places.json', p.id, '视频时间必须为非负整数秒，结束时间须晚于开始时间')
-      if (v.clip != null) {
-        if (typeof v.clip !== 'string' || !/^videos\/places\/[a-zA-Z0-9_\-/]+\.(mp4|webm)$/.test(v.clip) || v.clip.includes('..') || v.clip.includes('//')) fail('places.json', p.id, '视频片段必须为 videos/places/ 下的 mp4/webm 相对路径')
-        else if (!imageExists(v.clip)) fail('places.json', p.id, `视频文件不存在：${v.clip}`)
-      }
     }
   }
   for (const u of updates) {
@@ -99,6 +100,6 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       return !rel.startsWith('..') && !isAbsolute(rel) && existsSync(target) && statSync(target).isFile() && !!extname(target)
     })
     if (errors.length) throw new Error(errors.join('\n'))
-    console.log(`数据校验通过：${data.places.length} 个条目，${data.updates.length} 条更新。`)
+    console.log(`数据校验通过：${Object.values(data.places).reduce((n, entries) => n + entries.length, 0)} 个条目，${data.updates.length} 条更新。`)
   } catch (error) { console.error(error.message); process.exitCode = 1 }
 }

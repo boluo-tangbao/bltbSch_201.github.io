@@ -69,7 +69,7 @@ test('bottom guestbook supports direct link, latest-first pages, empty state and
 test('production counter loads once per page and fails honestly when service is blocked', async ({ page }) => {
   const production = 'https://boluo-tangbao.github.io/jimmyGu.github.io/rank/'
   await page.route('https://boluo-tangbao.github.io/**', route => {
-    let file = new URL(route.request().url()).pathname.replace('/jimmyGu.github.io/rank/', '')
+    let file = decodeURIComponent(new URL(route.request().url()).pathname).replace('/jimmyGu.github.io/rank/', '')
     if (!file || file.endsWith('/')) file += 'index.html'
     const mime = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.svg': 'image/svg+xml' }[extname(file)] || 'application/octet-stream'
     return route.fulfill({ contentType: mime, body: readFileSync(resolve('dist', file)) })

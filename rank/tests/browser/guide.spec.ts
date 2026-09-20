@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { readFileSync, mkdirSync } from 'node:fs'
 const base = 'http://127.0.0.1:4174/jimmyGu.github.io/rank/'
-const liveBuild = 'http://127.0.0.1:4173/jimmyGu.github.io/rank/'
+const liveBuild = 'http://127.0.0.1:4175/jimmyGu.github.io/rank/'
 const tile = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=', 'base64')
 mkdirSync('test-results/evidence', { recursive: true })
 
@@ -24,7 +24,7 @@ test('independent guide page works on production subpath, mobile and tablet', as
   expect(errors).toEqual([])
 })
 
-test('photo-only board, fixed city colors, video detail and complete offline content', async ({ page }) => {
+test('photo-only board, fixed city colors, written detail and complete offline content', async ({ page }) => {
   await page.goto(base)
   const photo = page.locator('.photo-card').first()
   await expect(photo.locator('.card-link')).toHaveCSS('border-top-color', 'rgb(185, 91, 67)')
@@ -33,13 +33,11 @@ test('photo-only board, fixed city colors, video detail and complete offline con
   await expect(photo.locator('.photo-caption')).toHaveCSS('opacity', '1')
   await photo.locator('a').click()
   await expect(page).toHaveURL(/\/rank\/guide\/#\/place\/demo-0$/)
-  await expect(page.locator('.video-excerpt')).toContainText('<script>不是可执行内容</script>')
-  await expect(page.locator('.video-time')).toHaveText('1:03–1:35')
-  await expect(page.getByRole('link', { name: '打开原视频' })).toHaveAttribute('href', 'https://example.com/video')
+  await expect(page.locator('.detail-text')).toContainText('<script>不是可执行内容</script>')
   const nav = new URL(await page.getByRole('link', { name: '去这里 · 高德地图' }).getAttribute('href') || '')
   expect(nav.searchParams.get('coordinate')).toBe('wgs84'); expect(nav.searchParams.get('callnative')).toBe('1')
   await expect(page.locator('.guide-detail')).toHaveCSS('border-top-color', 'rgb(185, 91, 67)')
-  await page.reload(); await expect(page.locator('.video-excerpt')).toBeVisible()
+  await page.reload(); await expect(page.locator('.detail-text')).toBeVisible()
   await page.setViewportSize({ width: 375, height: 900 })
   await page.reload()
   await expect(page.locator('.guide-detail h1')).toBeInViewport()
@@ -54,7 +52,7 @@ test('photo-only board, fixed city colors, video detail and complete offline con
   let content = readFileSync('test-results/evidence/full-content.html', 'utf8')
   expect(content).toContain('data:image/svg+xml;base64,')
   expect(content).toContain('&lt;script&gt;不是可执行内容&lt;/script&gt;')
-  expect(content).toContain('虚构视频介绍'); expect(content).not.toContain('不可见草稿')
+  expect(content).toContain('详细评价'); expect(content).not.toContain('不可见草稿')
   expect(content).not.toContain('虚构店铺 1（演示）')
   await page.getByLabel('完整榜单 · 28 个条目').check()
   await page.getByRole('button', { name: '重新生成' }).click()
@@ -75,14 +73,14 @@ test('map and directory share colors, selection, filters and responsive layout',
   await expect(page.locator('.map-pin')).toHaveCount(4)
   await expect(page.locator('.map-pin').first()).toHaveCSS('background-color', 'rgb(185, 91, 67)')
   await page.locator('.map-pin-wrapper').first().click()
-  await expect(page.locator('.video-excerpt')).toBeVisible()
+  await expect(page.locator('.detail-text')).toBeVisible()
   await expect(page.locator('.map-pin.selected')).toHaveCount(1)
   await page.getByLabel('城市筛选').selectOption('测试乙城')
   await expect(page.locator('.map-pin')).toHaveCount(2)
   await expect(page.locator('.place-directory nav a')).toHaveCount(14)
   await page.locator('.place-directory nav a').first().click()
   await expect(page.locator('.guide-detail h1')).toHaveText('虚构店铺 1（演示）')
-  await expect(page.getByText('视频介绍待补充', { exact: true })).toBeVisible()
+  await expect(page.locator('.video-pending, video')).toHaveCount(0)
   await page.getByRole('button', { name: '重置', exact: true }).click()
   await page.getByRole('button', { name: '查看全部位置' }).click()
   expect(tileRequests).toBeGreaterThan(0)

@@ -6,3 +6,5 @@ playwright-report/
 .fixture-app/
 .DS_Store
 *.local
+
+.fixture-empty/
