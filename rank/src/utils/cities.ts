@@ -10,11 +10,16 @@ export function placeAddress(place: Place) {
   return typeof place.location === 'string' ? place.location : place.location?.address || ''
 }
 export function navigationUrl(place: Place, openApp = false) {
-  if (!hasCoordinates(place)) return null
-  const params = new URLSearchParams({
-    position: `${place.location.lng},${place.location.lat}`,
-    name: `${place.city} · ${place.name}`, coordinate: 'wgs84',
-    callnative: openApp ? '1' : '0', src: 'tangbao-shop-ranking',
-  })
-  return `https://uri.amap.com/marker?${params}`
+  const address = placeAddress(place)
+  if (!address) return null
+  if (hasCoordinates(place)) {
+    const params = new URLSearchParams({
+      position: `${place.location.lng},${place.location.lat}`,
+      name: `${place.city} · ${place.name}`, coordinate: 'wgs84',
+      callnative: openApp ? '1' : '0', src: 'tangbao-shop-ranking',
+    })
+    return `https://uri.amap.com/marker?${params}`
+  }
+  const params = new URLSearchParams({ keyword: address, callnative: openApp ? '1' : '0', src: 'tangbao-shop-ranking' })
+  return `https://uri.amap.com/search?${params}`
 }
