@@ -135,6 +135,12 @@ Vite 默认 base 为 `/jimmyGu.github.io/rank/`；CI 从 `configure-pages` 返�
 
 当前默认域名免费，无需购买 DNS 服务。自定义域名需要先拥有该域名，不能任意修改 GitHub 的 `github.io` 域名。购买后通常使用注册商提供的 DNS 管理，在仓库 Pages 设置里填写域名并按 [GitHub 自定义域名文档](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) 设置解析、确认 HTTPS，再重新运行工作流。绑定会影响此仓库的**整个个人站点**；榜单仍在 `/rank/`，操作前应确定期望的域名范围。
 
+## 访问统计、QA 和留言
+
+新增 `/rank/qa/` 收集建议，`/rank/#guestbook` 是榜单页底留言区。访客在网页阅读，通过 GitHub 登录后提交；作者在仓库 Issues 中回复和管理。三个榜单页面的页脚接入不蒜子访问次数，打开或刷新计一次，不做 IP 去重。
+
+配置、计数范围、管理方式和验证说明见 [社区功能说明](docs/community.md)。
+
 ## 排错与回退
 
 - **Actions 数据校验失败**：日志会显示 JSON 文件、条目 ID 和原因。检查重复 ID、档位 ID、同档 `order`、真实日期、缺图路径、更新记录引用和改档前后档位。修复后正常提交。

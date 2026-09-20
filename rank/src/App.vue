@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import siteData from './data/site.json'
 import placeData from './data/places.json'
 import updateData from './data/updates.json'
@@ -10,10 +10,13 @@ import PlaceDetail from './components/PlaceDetail.vue'
 import CityLegend from './components/CityLegend.vue'
 import { cityColor } from './utils/cities'
 import ExportPanel from './components/ExportPanel.vue'
+import Guestbook from './components/Guestbook.vue'
+import VisitCounter from './components/VisitCounter.vue'
 
 const site = siteData as Site
 const colors = site.cityColors || {}
 const showLabels = ref(false)
+const qaUrl = `${import.meta.env.BASE_URL}qa/`
 const homeUrl = `${import.meta.env.BASE_URL}../`
 const places = placeData as Place[]
 const all = filterPlaces(places)
@@ -26,7 +29,7 @@ const main = ref<HTMLElement>()
 const exportOpen = ref(false)
 const syncRoute = () => {
   route.value = location.hash
-  nextTick(() => { main.value?.focus(); window.scrollTo(0, 0) })
+  nextTick(() => { if (route.value === '#guestbook') document.getElementById('guestbook')?.scrollIntoView(); else { main.value?.focus(); window.scrollTo(0, 0) } })
 }
 const syncHistory = () => {
   const params = new URLSearchParams(location.search)
@@ -51,7 +54,8 @@ const guideUrl = computed(() => {
   if (query.value.trim()) p.set('q', query.value.trim())
   return `${import.meta.env.BASE_URL}guide/${p.size ? '?' + p : ''}`
 })
-const isHome = computed(() => !route.value || route.value === '#' || route.value === '#/')
+const isHome = computed(() => !route.value || route.value === '#' || route.value === '#/' || route.value === '#guestbook')
+onMounted(() => { if (route.value === '#guestbook') nextTick(() => document.getElementById('guestbook')?.scrollIntoView()) })
 const currentPlace = computed(() => {
   const match = route.value.match(/^#\/place\/([a-z0-9-]+)$/)
   return match ? all.find(p => p.id === match[1]) : undefined
@@ -67,7 +71,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
   <a href="#main-content" class="skip-link" @click.prevent="main?.focus()">跳到正文</a>
   <header class="site-header"><div class="header-inner">
     <a href="#/" class="brand"><span class="brand-mark" aria-hidden="true">排</span><span>汤包的逛店手记<small>PLACES & PREFERENCES</small></span></a>
-    <nav aria-label="主导航"><a href="#/" :aria-current="isHome ? 'page' : undefined">图片总榜</a><a :href="guideUrl">地图与介绍</a><a :href="homeUrl">个人主页 <span aria-hidden="true">↗</span></a></nav>
+    <nav aria-label="主导航"><a href="#/" :aria-current="isHome ? 'page' : undefined">图片总榜</a><a :href="guideUrl">地图与介绍</a><a :href="qaUrl">QA 与建议</a><a :href="homeUrl">个人主页 <span aria-hidden="true">↗</span></a></nav>
   </div></header>
 
   <main id="main-content" ref="main" tabindex="-1" class="page-shell">
@@ -98,11 +102,12 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
       <section class="guide-entry"><div><h2>心里有一站，就去地图找找</h2><p>同样的城市颜色，对应地图上的位置。视频介绍与到访路线也在这里。</p></div><a :href="guideUrl" class="button dark">打开地图与介绍 ↗</a></section>
       <div class="bottom-grid"><section class="updates-section" aria-labelledby="updates-title"><div class="section-heading"><div><span class="section-number">02</span><h2 id="updates-title">最近更新</h2></div><span class="muted tiny">持续记录中</span></div><div v-if="!updates.length" class="quiet-empty"><span class="timeline-dot"></span><div><h3>还没有更新记录</h3><p>新增、改档与评价修改，都会在这里留下足迹。</p></div></div><ol v-else class="update-list"><li v-for="u in updates.slice(0, 10)" :key="u.id"><time>{{ u.date }}</time><div><span class="update-kind">{{ updateLabel(u) }}</span><a :href="`${guideUrl}#/place/${u.placeId}`">{{ all.find(p => p.id === u.placeId)?.name }}</a><span v-if="all.find(p => p.id === u.placeId)?.isDemo" class="demo-badge">演示</span><p v-if="u.type === 'tier-change'">{{ tierLabel(u.fromTier!) }} → {{ tierLabel(u.toTier!) }}</p><p>{{ u.note }}</p></div></li></ol></section>
       <section class="criteria-section" aria-labelledby="criteria-title"><div class="section-heading"><div><span class="section-number">03</span><h2 id="criteria-title">关于这份榜单</h2></div><span class="about-icon" aria-hidden="true">i</span></div><p>{{ site.criteria }}</p><div class="criteria-scale"><span v-for="t in tiers" :key="t.id"><i :style="{ background: t.color }"></i>{{ t.label }}</span></div><details><summary>查看各档标准与排序规则</summary><dl><template v-for="t in tiers" :key="t.id"><dt>{{ t.label }}</dt><dd>{{ site.tierDescriptions[t.id] }}</dd></template></dl><p>{{ site.rankWithinTier ? '同档有先后，卡片编号表示该档内的完整排名；筛选后保留原排名。' : '同档不分先后，展示顺序仅用于排版。' }}</p><p>到访日期未提供时显示“未记录”；内容更新日期由作者维护。</p></details><p class="personal-note">仅代表个人体验，供你出发前参考。</p></section></div>
+      <Guestbook />
     </template>
 
     <section v-else-if="currentPlace" class="detail-page"><a href="#/" class="back-link">← 返回榜单</a><a :href="`${guideUrl}#/place/${currentPlace.id}`" class="button">地图与地点目录 ↗</a><PlaceDetail :place="currentPlace" :rank="site.rankWithinTier ? rankOf(currentPlace) : undefined" :color="cityColor(currentPlace.city, colors)" /></section>
     <section v-else class="not-found"><p class="eyebrow">这一站暂未收录</p><h1>没有找到这个条目</h1><p>链接可能有误，或条目尚未公开。</p><a href="#/" class="button dark">返回榜单</a></section>
   </main>
-  <footer class="site-footer"><span><b>{{ site.author }}</b> · 一店一感受，一次次更新。</span><span>认真逛店，自由排名 <span aria-hidden="true">↗</span></span></footer>
+  <footer class="site-footer"><span><b>{{ site.author }}</b> · 一店一感受，一次次更新。</span><VisitCounter /></footer>
   <ExportPanel v-if="exportOpen" :site="site" :places="filtered" :all-places="all" :scope="scope" :updated-at="contentDate" @close="exportOpen = false" />
 </template>

@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
         guide: fileURLToPath(new URL('./guide/index.html', import.meta.url)),
+        qa: fileURLToPath(new URL('./qa/index.html', import.meta.url)),
       },
     },
   },
