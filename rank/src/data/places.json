@@ -12,9 +12,11 @@
         "galgame",
         "地偶",
         "寄售",
-        "同人谷",
+        "同人",
+        "中古",
         "快闪",
-        "Kpop"
+        "Kpop",
+        "欧美"
       ],
       "cover": "images/places/Shanghai/第一百货.jpg",
       "gallery": [],
@@ -34,7 +36,12 @@
         "官店",
         "手办模型",
         "书籍",
-        "快闪"
+        "快闪",
+        "街机舞萌娃娃机",
+        "BJD娃娃",
+        "卡牌",
+        "欧美",
+        "少女乐队"
       ],
       "cover": "images/places/Shanghai/南京路百联.png",
       "gallery": [],
@@ -52,7 +59,6 @@
       "details": "新世界城的优势也是快闪。但相比于其他主打快闪的地方，这里的谷店质量明显更高。那家中古店就值得一来了，还有NHK和Capcom的官店。我觉得有明确目标时，它非常值得一来！",
       "tags": [
         "中古",
-        "手办模型",
         "galgame",
         "快闪"
       ],
@@ -73,8 +79,12 @@
       "tags": [
         "中古",
         "寄售",
+        "CD",
         "最速通行证",
-        "少女乐队"
+        "BJD娃娃",
+        "少女乐队",
+        "欧美",
+        "同人"
       ],
       "cover": "images/places/Shanghai/华盛.jpg",
       "gallery": [],
@@ -96,7 +106,10 @@
         "寄售",
         "卡牌",
         "扭蛋",
-        "CD"
+        "CD",
+        "galgame",
+        "欧美",
+        "少女乐队"
       ],
       "cover": "images/places/Shanghai/百米.jpeg",
       "gallery": [],
@@ -115,7 +128,9 @@
       "tags": [
         "官店",
         "书籍",
-        "快闪"
+        "快闪",
+        "手办模型",
+        "地偶"
       ],
       "cover": "images/places/Shanghai/五角场百联.jpeg",
       "gallery": [],
@@ -135,8 +150,13 @@
         "中古",
         "lolita",
         "谷子集市",
-        "街机",
-        "CD"
+        "街机舞萌娃娃机",
+        "CD",
+        "galgame",
+        "寄售",
+        "欧美",
+        "同人",
+        "少女乐队"
       ],
       "cover": "images/places/Shanghai/迪美.jpg",
       "gallery": [],
@@ -156,7 +176,10 @@
         "快闪",
         "卡牌",
         "扭蛋",
-        "Kpop"
+        "Kpop",
+        "书籍",
+        "同人",
+        "女仆咖啡厅"
       ],
       "cover": "images/places/Shanghai/静安大悦城.jpg",
       "gallery": [],
@@ -175,7 +198,10 @@
       "tags": [
         "谷子集市",
         "快闪",
-        "扭蛋"
+        "扭蛋",
+        "Lolita",
+        "随舞",
+        "街机舞萌娃娃机"
       ],
       "cover": "images/places/Shanghai/五角场万达.jpg",
       "gallery": [],
@@ -192,7 +218,8 @@
       "summary": "最齐的日本书店",
       "details": "啥样的日语书都有，够新够全，小说、画本、漫画、写真集等等。就是汇率。。。",
       "tags": [
-        "书籍"
+        "书籍",
+        "欧美"
       ],
       "cover": "images/places/Shanghai/番外/外文书店/外文书店.jpg",
       "gallery": [],
@@ -210,8 +237,8 @@
       "details": "东盛、大牛。印象最深的是乐队谷和中古、同人，还有一家lolita。适合吃自助等待时逛逛，逛完就能去对面啦~",
       "tags": [
         "lolita",
-        "同人谷",
-        "日本"
+        "中古",
+        "同人"
       ],
       "cover": "images/places/Shanghai/番外/悦荟/悦荟广场.jpg",
       "gallery": [],
@@ -230,7 +257,6 @@
       "tags": [
         "扭蛋",
         "卡牌",
-        "日本",
         "Kpop"
       ],
       "cover": "images/places/Shanghai/TPY中心.jpg",
@@ -248,8 +274,8 @@
       "summary": "二游外场~米哈游鹰角",
       "details": "终末地，王者荣耀，星铁等等，附近的游戏公司和游戏博物馆为它提供巨大附加价值。冲着外场来没问题，喜欢这些IP也推荐来，谷店只算是附带产品。",
       "tags": [
-        "雕塑",
-        "二游"
+        "大雕塑",
+        "扭蛋"
       ],
       "cover": "images/places/Shanghai/鑫耀光环.jpg",
       "gallery": [],
@@ -266,8 +292,9 @@
       "summary": "1:1自由，高达粉必去",
       "details": "Bandai全球布局，全世界也没几台。商场整体为日系，可以来体验一下。",
       "tags": [
-        "雕塑",
-        "模型"
+        "大雕塑",
+        "手办模型",
+        "官店"
       ],
       "cover": "images/places/Shanghai/番外/高达基地/lalaport.jpg",
       "gallery": [],
@@ -284,7 +311,8 @@
       "summary": "Jump、快闪和宫崎骏",
       "details": "除了Jump，还有偶尔的快闪，整体不如TPY中心。交大吃的好差...",
       "tags": [
-        "快闪"
+        "快闪",
+        "官店"
       ],
       "cover": "images/places/Shanghai/美罗城.jpg",
       "gallery": [],
@@ -304,7 +332,10 @@
       "tags": [
         "宝可梦",
         "lolita",
-        "日谷"
+        "中古",
+        "谷子集市",
+        "街机舞萌娃娃机",
+        "卡牌"
       ],
       "cover": "images/places/Shanghai/长宁龙之梦.webp",
       "gallery": [],
@@ -337,11 +368,16 @@
       "tier": "above",
       "order": 97,
       "summary": "普陀一哥！不只地偶和舞萌，换新后终于好逛了。",
-      "details": "环球港的底色还是地偶和舞萌，但换新后不再只靠它们撑场：谷店和可逛的内容更丰富，整体也更有活力。和市中心头部商圈比，选店密度仍有差距；放在普陀，它就是值得专程留半天的区域主场。",
+      "details": "环球港的底色还是地偶和舞萌，但换新后不再只靠它们撑场：谷店和可逛的内容更丰富，整体也更有活力。还有目前上海第一家也是唯一一家线下闲鱼商店。和市中心头部商圈比，选店密度仍有差距；放在普陀，它就是值得专程留半天的区域主场。",
       "tags": [
         "地偶",
         "卡牌",
-        "书籍"
+        "书籍",
+        "中古",
+        "谷子集市",
+        "寄售",
+        "手办模型",
+        "街机舞萌娃娃机"
       ],
       "cover": "images/places/Shanghai/环球港.jpg",
       "gallery": [],
@@ -376,9 +412,12 @@
       "details": "日常逛起来偏冷清，节假日则会稍多一点。虽然有不错的潮玩季、gsc等店铺，打折的也不少，但总体数量一般，需要犹豫前往。它的价值在于百联本家联动和地偶活动。",
       "tags": [
         "卡牌",
-        "美国",
+        "欧美",
         "手办模型",
-        "地偶"
+        "地偶",
+        "中古",
+        "女仆咖啡厅",
+        "快闪"
       ],
       "cover": "images/places/Shanghai/番外/闵行南方百联/南方.png",
       "gallery": [],
@@ -401,9 +440,15 @@
         "卡牌",
         "随舞",
         "寄售",
-        "手办模型",
         "谷子集市",
-        "二游"
+        "地偶",
+        "最速通行证",
+        "BJD娃娃",
+        "少女乐队",
+        "同人",
+        "Kpop",
+        "最速通行证",
+        "galgame"
       ],
       "cover": "images/places/Guangzhou/广州地王广场.jpg",
       "gallery": [],
@@ -421,11 +466,14 @@
       "details": "很多个人店和传统连锁品牌，能看到上海看不到的种类。",
       "tags": [
         "中古",
-        "卡牌",
         "手办模型",
-        "谷子集市",
-        "二游",
-        "主机"
+        "寄售",
+        "快闪",
+        "欧美",
+        "扭蛋",
+        "BJD娃娃",
+        "galgame",
+        "同人"
       ],
       "cover": "images/places/Guangzhou/dmxc/西/202404301058080515.jpg",
       "gallery": [],
@@ -444,7 +492,10 @@
       "tags": [
         "卡牌",
         "官店",
-        "娃衣"
+        "BJD娃娃",
+        "扭蛋",
+        "同人",
+        "少女乐队"
       ],
       "cover": "images/places/Guangzhou/dmxc/东/QQ图片20260124165737.jpg",
       "gallery": [],
@@ -461,10 +512,12 @@
       "summary": "地下迷宫，快闪居多",
       "details": "快闪偏多",
       "tags": [
-        "手办模型",
         "谷子集市",
-        "二游",
-        "Kpop"
+        "Kpop",
+        "中古",
+        "Lolita",
+        "卡牌",
+        "快闪"
       ],
       "cover": "images/places/Guangzhou/时尚天河.webp",
       "gallery": [],
@@ -482,7 +535,8 @@
       "details": "有不错的模玩店和哥特女装店",
       "tags": [
         "手办模型",
-        "lolita"
+        "Lolita",
+        "欧美"
       ],
       "cover": "images/places/Guangzhou/北京路.jpg",
       "gallery": [],
