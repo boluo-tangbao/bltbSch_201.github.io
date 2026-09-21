@@ -32,12 +32,16 @@ test('authoring format rejects legacy fields and duplicate IDs or ranks across c
   assert.ok(errors.some(e => e.includes('order 不得重复')))
 })
 
-test('text addresses are retained without inventing coordinates or navigation', () => {
+test('text addresses are retained and can open address-based navigation without coordinates', () => {
   const p = { ...place, location: '上海市黄浦区南京东路800号第一百货C馆' }
   assert.deepEqual(validateEntries(site, [p], []), [])
   assert.equal(placeAddress(p), p.location)
   assert.equal(hasCoordinates(p), false)
-  assert.equal(navigationUrl(p), null)
+  const url = new URL(navigationUrl(p, true))
+  assert.equal(url.origin, 'https://uri.amap.com')
+  assert.equal(url.pathname, '/search')
+  assert.equal(url.searchParams.get('keyword'), p.location)
+  assert.equal(url.searchParams.get('callnative'), '1')
 })
 function validateEntries(site, places, updates, imageExists) {
   const groups = Object.fromEntries([...new Set(places.map(p => p.city))].map(city => [city, places.filter(p => p.city === city).map(({city, ...p}) => p)]))
