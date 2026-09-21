@@ -5,8 +5,8 @@
       "name": "第一百货",
       "tier": "hang",
       "order": 10,
-      "summary": "啥都有，位置好",
-      "details": "填写具体体验和评级理由。\n换一段继续写。",
+      "summary": "位置好、门类全，南京路上最夯选择。",
+      "details": "谷子集市、寄售、同人谷、galgame、K-pop应有尽有。活动期间，这里更是有地偶表演、小型漫展、快闪cafe等丰富的活动。再加上地理位置的bonus，它不一定每一项都做到最强，但胜在无敌的全面性。",
       "tags": [
         "谷子集市",
         "galgame",
@@ -18,7 +18,7 @@
       ],
       "cover": "images/places/Shanghai/第一百货.jpg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-07-13",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "上海市黄浦区南京东路800号第一百货C馆"
@@ -28,8 +28,8 @@
       "name": "南京路百联",
       "tier": "hang",
       "order": 20,
-      "summary": "全国唯一",
-      "details": "填写具体体验和评级理由。\n换一段继续写。",
+      "summary": "全国唯一！The one",
+      "details": "请输入文本。这里都算一个景点了，无需多言....",
       "tags": [
         "官店",
         "手办模型",
@@ -38,7 +38,7 @@
       ],
       "cover": "images/places/Shanghai/南京路百联.png",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-08-29",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "上海市黄浦区南京东路348号百联ZX创趣场"
@@ -48,8 +48,8 @@
       "name": "新世界城",
       "tier": "top",
       "order": 50,
-      "summary": "店多，位置好",
-      "details": "填写具体体验和评级理由。\n换一段继续写。",
+      "summary": "店够多、位置够好，最古中古+卡普空NHK",
+      "details": "新世界城的优势也是快闪。但相比于其他主打快闪的地方，这里的谷店质量明显更高。那家中古店就值得一来了，还有NHK和Capcom的官店。我觉得有明确目标时，它非常值得一来！",
       "tags": [
         "中古",
         "手办模型",
@@ -58,7 +58,7 @@
       ],
       "cover": "images/places/Shanghai/新世界城.jpg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-08-02",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "上海市黄浦区南京西路2~68号新世界城"
@@ -68,8 +68,8 @@
       "name": "华盛小亭",
       "tier": "top",
       "order": 10,
-      "summary": "寄售天堂，粥批必吃，日谷寄售，少女乐队",
-      "details": "填写具体体验和评级理由。\n换一段继续写。",
+      "summary": "寄售浓度拉满，粥批、日谷和少女乐队爱好者别错过。",
+      "details": "店铺偏小，但店铺多；开在地铁站里。寄售毫无疑问是华盛的代名词，你高兴甚至能泡一天。除此之外，主日谷、少女乐队和明日方舟通行证的店铺都很有存在感，香澄社、玉见星间、葱谷八等等。\n 对于愿意耐心淘货的人，想找稀有物或比价可以多停一会儿；而如果追求整洁大店体验的话，需要慎重了。",
       "tags": [
         "中古",
         "寄售",
@@ -78,7 +78,7 @@
       ],
       "cover": "images/places/Shanghai/华盛.jpg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-09-09",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "上海市黄浦区南京西路19号人民广场地铁站7号口内"
@@ -88,8 +88,8 @@
       "name": "百米香榭",
       "tier": "top",
       "order": 20,
-      "summary": "上海最古二次元，中古桌游，手办模型天堂",
-      "details": "填写具体体验和评级理由。\n换一段继续写。",
+      "summary": "沪上老牌二次元地标，文庙精神延续。",
+      "details": "高情商来说，百米香榭不走新商场式的精致路线；低情商，比较破旧。装修后味大的问题解决了一点，但是厕所仍然一言难尽。\n 但店龄和品类沉淀换来了贴近霓虹风格的内容：手办模型扎堆、扭蛋CD不少、牌佬聚集地、一番赏和中古一半的商家也都有。对于热门ip爱好者肯定不是第一选择，但是百米属于过去的人。",
       "tags": [
         "中古",
         "手办模型",
@@ -100,7 +100,7 @@
       ],
       "cover": "images/places/Shanghai/百米.jpeg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-08-29",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "上海市黄浦区广西北路248号"
@@ -110,8 +110,8 @@
       "name": "五角场百联",
       "tier": "top",
       "order": 30,
-      "summary": "南京路百联平替？",
-      "details": "杨浦二次元中心，有复旦财大同济等校的大学生",
+      "summary": "贴近大学城的新百联",
+      "details": "周边高校和大量人流量使这里不只是谷店的天下，与百联的联动、官方的快闪、同好的活动都是它相比于南京路创趣姐姐的优势。但和姐姐相比，阵容与规模仍有差距；但对杨浦人来说，what can I say！",
       "tags": [
         "官店",
         "书籍",
@@ -119,7 +119,7 @@
       ],
       "cover": "images/places/Shanghai/五角场百联.jpeg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2025-11-09",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "上海市杨浦区区四平路2500号百联ZX造趣场"
@@ -129,8 +129,8 @@
       "name": "迪美",
       "tier": "top",
       "order": 40,
-      "summary": "街机轰趴，lolita、jk店集合，也有中古和CD",
-      "details": "填写具体体验和评级理由。\n换一段继续写。",
+      "summary": "街机、JK、Lolita，日谷和中古、CD；酒香不怕巷子深~",
+      "details": "迪美的魅力而是千禧年地下商场的混搭感：服饰店（已转型为年轻女性向）+ 中古、上新的日谷国谷，还有一家 CD 店。\n时不时迪美也会办集市和快闪、only之类的中小型活动。但正因为不那么标准化，会给愿意慢逛者带来惊喜。",
       "tags": [
         "中古",
         "lolita",
@@ -140,7 +140,7 @@
       ],
       "cover": "images/places/Shanghai/迪美.jpg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-06-27",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "上海市黄浦区人民大道221号"
@@ -150,8 +150,8 @@
       "name": "静安大悦城",
       "tier": "above",
       "order": 10,
-      "summary": "快闪真神，但谷店乏善可陈，设施完善",
-      "details": "填写具体体验和评级理由。\n换一段继续写。",
+      "summary": "快闪必吃榜，但平时一般",
+      "details": "静安大悦城的场地、动线和配套都很成熟。在活动档期，冲着快闪和各种coser们确实值得专门来一趟，顺便灰头土脸地挤萨莉亚和金匠。\n问题是常驻谷店不够有记忆点，脱离活动后不是很好逛。因此把它当活动目的地比当日常谷店商圈更合适。",
       "tags": [
         "快闪",
         "卡牌",
@@ -160,7 +160,7 @@
       ],
       "cover": "images/places/Shanghai/静安大悦城.jpg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-05-02",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "上海市黄浦区西藏北路166号"
@@ -170,8 +170,8 @@
       "name": "五角场万达广场",
       "tier": "above",
       "order": 20,
-      "summary": "百联附属，有些特色店",
-      "details": "附近的合生汇有时候有地偶活动",
+      "summary": "五角场百联的延伸，可顺路。",
+      "details": "有些谷子、扭蛋能补上杨浦百联缺失的感觉。\n btw，附近合生汇偶有地偶活动，时间排得好时可以把这一带一次逛完。",
       "tags": [
         "谷子集市",
         "快闪",
@@ -179,7 +179,7 @@
       ],
       "cover": "images/places/Shanghai/五角场万达.jpg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2025-11-02",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "上海市杨浦区政通路189号万达广场C栋"
@@ -189,14 +189,14 @@
       "name": "外文书店",
       "tier": "above",
       "order": 30,
-      "summary": "最齐的外文书店",
-      "details": "啥样的日语书都有，就是汇率。。。",
+      "summary": "最齐的日本书店",
+      "details": "啥样的日语书都有，够新够全，小说、画本、漫画、写真集等等。就是汇率。。。",
       "tags": [
         "书籍"
       ],
       "cover": "images/places/Shanghai/番外/外文书店/外文书店.jpg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-02-07",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "上海市黄浦区福州路390号"
@@ -206,8 +206,8 @@
       "name": "悦荟广场",
       "tier": "above",
       "order": 40,
-      "summary": "百联对面的去处",
-      "details": "东盛大牛，有一点乐队谷和中古同人，也有一家lolita",
+      "summary": "百联对面的可去之处",
+      "details": "东盛、大牛。印象最深的是乐队谷和中古、同人，还有一家lolita。适合吃自助等待时逛逛，逛完就能去对面啦~",
       "tags": [
         "lolita",
         "同人谷",
@@ -215,7 +215,7 @@
       ],
       "cover": "images/places/Shanghai/番外/悦荟/悦荟广场.jpg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-04-18",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "上海市黄浦区南京东路353号"
@@ -225,8 +225,8 @@
       "name": "TPY中心",
       "tier": "npc",
       "order": 10,
-      "summary": "徐汇最二",
-      "details": "卡牌和日谷小店，有点好价",
+      "summary": "徐汇最二之地",
+      "details": "卡牌和日谷小店，最大的店价格和布置很好。老店挺多，希望能一直保留下去。",
       "tags": [
         "扭蛋",
         "卡牌",
@@ -235,7 +235,7 @@
       ],
       "cover": "images/places/Shanghai/TPY中心.jpg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-09-18",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "上海市徐汇区肇嘉浜路1117号"
@@ -246,32 +246,32 @@
       "tier": "npc",
       "order": 20,
       "summary": "二游外场~米哈游鹰角",
-      "details": "终末地，王者荣耀，星铁等等，附近的游戏公司和游戏博物馆为它提供巨大附加价值",
+      "details": "终末地，王者荣耀，星铁等等，附近的游戏公司和游戏博物馆为它提供巨大附加价值。冲着外场来没问题，喜欢这些IP也推荐来，谷店只算是附带产品。",
       "tags": [
         "雕塑",
         "二游"
       ],
       "cover": "images/places/Shanghai/鑫耀光环.jpg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-09-09",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "上海市徐汇区漕宝路261号"
+      "location": "上海市徐汇区漕宝路261号鑫耀光环live二期"
     },
     {
       "id": "shanghai-shop-014",
       "name": "金桥LaLaport",
       "tier": "npc",
       "order": 30,
-      "summary": "自由1:1，高达粉必去",
-      "details": "Bandai全球布局，全世界也没几台",
+      "summary": "1:1自由，高达粉必去",
+      "details": "Bandai全球布局，全世界也没几台。商场整体为日系，可以来体验一下。",
       "tags": [
         "雕塑",
         "模型"
       ],
       "cover": "images/places/Shanghai/番外/高达基地/lalaport.jpg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-05-23",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "上海市浦东新区新金桥路738号"
@@ -282,13 +282,13 @@
       "tier": "npc",
       "order": 40,
       "summary": "Jump、快闪和宫崎骏",
-      "details": "",
+      "details": "除了Jump，还有偶尔的快闪，整体不如TPY中心。交大吃的好差...",
       "tags": [
         "快闪"
       ],
       "cover": "images/places/Shanghai/美罗城.jpg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-09-18",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "上海市徐汇区肇嘉浜路1111号"
@@ -299,8 +299,8 @@
       "name": "长宁龙之梦",
       "tier": "above",
       "order": 80,
-      "summary": "宝可梦中心",
-      "details": "除了宝可梦中心，还有少数谷店，有一定质量",
+      "summary": "宝可梦中心是主菜，周边谷店让它不只是一站打卡。",
+      "details": "宝可梦中心给了这里足够明确的目的性，周边还有少数几家质量在线的日谷和 Lolita 店可顺手逛。冲宝可梦很值得来！",
       "tags": [
         "宝可梦",
         "lolita",
@@ -308,8 +308,8 @@
       ],
       "cover": "images/places/Shanghai/长宁龙之梦.webp",
       "gallery": [],
-      "visitedAt": null,
-      "updatedAt": "2026-09-19",
+      "visitedAt": "2026-07-08",
+      "updatedAt": "2026-09-20",
       "published": true,
       "location": "上海市长宁区长宁路1018号龙之梦城市生活中心"
     },
@@ -318,16 +318,16 @@
       "name": "长宁巴黎春天",
       "tier": "bad",
       "order": 10,
-      "summary": "福瑞吉祥物",
-      "details": "除了牌店没啥，不如去南京路",
+      "summary": "福瑞吉祥物。卡牌能看，其他内容撑不起。",
+      "details": "这里几乎由卡牌店撑着，K-pop 和其他二次元内容都比较零散，逛起来很快就到头。住在长宁、顺路补卡可以；想认真逛谷，还是直接去南京路更省时间。",
       "tags": [
         "Kpop",
         "卡牌"
       ],
       "cover": "images/places/Shanghai/长宁巴黎春天.png",
       "gallery": [],
-      "visitedAt": null,
-      "updatedAt": "2026-09-19",
+      "visitedAt": "2026-05-27",
+      "updatedAt": "2026-09-20",
       "published": true,
       "location": "上海市长宁区天山路762号"
     },
@@ -336,8 +336,8 @@
       "name": "环球港",
       "tier": "above",
       "order": 97,
-      "summary": "普陀一哥，地偶二号场",
-      "details": "朝气蓬勃，挺多还不错的谷店",
+      "summary": "普陀一哥！不只地偶和舞萌，换新后终于好逛了。",
+      "details": "环球港的底色还是地偶和舞萌，但换新后不再只靠它们撑场：谷店和可逛的内容更丰富，整体也更有活力。和市中心头部商圈比，选店密度仍有差距；放在普陀，它就是值得专程留半天的区域主场。",
       "tags": [
         "地偶",
         "卡牌",
@@ -345,8 +345,8 @@
       ],
       "cover": "images/places/Shanghai/环球港.jpg",
       "gallery": [],
-      "visitedAt": null,
-      "updatedAt": "2026-09-19",
+      "visitedAt": "2026-07-08",
+      "updatedAt": "2026-09-20",
       "published": true,
       "location": "上海市普陀区中山北路3300号月星环球港b2层"
     },
@@ -355,15 +355,15 @@
       "name": "悦沢书店",
       "tier": "above",
       "order": 90,
-      "summary": "喝咖啡+现场看漫画轻小说",
-      "details": "环境不错，各种书也多",
+      "summary": "能喝咖啡、能坐下翻书的多 IP 书店。",
+      "details": "它把大热 IP、漫画轻小说书架和咖啡座位放到同一个空间里，提供阅读素材，就是建议你不要买完就走而是坐下品味。书的选择和可读性都有诚意，种类也够多，适合慢节奏；只想高效率扫货的话，不是它的节奏。",
       "tags": [
         "书籍"
       ],
       "cover": "images/places/Shanghai/番外/光启城/1771903814425.jpg",
       "gallery": [],
-      "visitedAt": null,
-      "updatedAt": "2026-09-19",
+      "visitedAt": "2026-05-08",
+      "updatedAt": "2026-09-20",
       "published": true,
       "location": "上海市徐汇区宜山路455号b2层"
     },
@@ -372,8 +372,8 @@
       "name": "南方百联lab",
       "tier": "npc",
       "order": 90,
-      "summary": "没人气，但有潮玩季",
-      "details": "店铺不多，平时更是没啥人。但经常会有地偶和百联联动活动。",
+      "summary": "位置偏、客流淡，活动限定商圈。",
+      "details": "日常逛起来偏冷清，节假日则会稍多一点。虽然有不错的潮玩季、gsc等店铺，打折的也不少，但总体数量一般，需要犹豫前往。它的价值在于百联本家联动和地偶活动。",
       "tags": [
         "卡牌",
         "美国",
@@ -382,8 +382,8 @@
       ],
       "cover": "images/places/Shanghai/番外/闵行南方百联/南方.png",
       "gallery": [],
-      "visitedAt": null,
-      "updatedAt": "2026-09-19",
+      "visitedAt": "2026-06-18",
+      "updatedAt": "2026-09-20",
       "published": true,
       "location": "上海市闵行区沪闵路7250号南方百联商城2区"
     }
@@ -407,7 +407,7 @@
       ],
       "cover": "images/places/Guangzhou/广州地王广场.jpg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-01-20",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "广东省广州市较场西路26号"
@@ -429,7 +429,7 @@
       ],
       "cover": "images/places/Guangzhou/dmxc/西/202404301058080515.jpg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-01-21",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "广东省广州市吉祥路1号动漫星城西区"
@@ -448,7 +448,7 @@
       ],
       "cover": "images/places/Guangzhou/dmxc/东/QQ图片20260124165737.jpg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-01-18",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "广东省广州市吉祥路1号动漫星城东区"
@@ -468,7 +468,7 @@
       ],
       "cover": "images/places/Guangzhou/时尚天河.webp",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-01-19",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "广东省广州市天河路299号"
@@ -486,7 +486,7 @@
       ],
       "cover": "images/places/Guangzhou/北京路.jpg",
       "gallery": [],
-      "visitedAt": null,
+      "visitedAt": "2026-01-18",
       "updatedAt": "2026-09-19",
       "published": true,
       "location": "广东省广州市北京路步行街"
