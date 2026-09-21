@@ -6,6 +6,7 @@ export interface PlaceEntry {
   gallery: { src: string; alt: string }[]
   visitedAt: string | null; updatedAt: string; published: boolean
   location?: string | { lat: number; lng: number; coordinateSystem: 'wgs84'; address: string } | null
+  mapSnapshot?: { src: string; alt: string; updatedAt: string }
 }
 export type PlacesByCity = Record<string, PlaceEntry[]>
 export interface Place extends PlaceEntry { city: string }
