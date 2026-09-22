@@ -37,6 +37,8 @@ jobs:
         working-directory: rank
         env:
           SITE_BASE: ${{ steps.pages.outputs.base_path }}/rank/
+          VITE_BAIDU_MAP_AK: ${{ secrets.BAIDU_MAP_AK }}
+          VITE_BAIDU_MAP_PROXY_URL: ${{ secrets.BAIDU_MAP_PROXY_URL }}
       - run: node scripts/assemble-site.mjs
       - uses: actions/upload-pages-artifact@v5
         with:

@@ -1,6 +1,6 @@
 import type { Place, Site, Update } from '../types'
 import { assetUrl } from './assets'
-import { cityColor, hasCoordinates, placeAddress, navigationUrl } from './cities'
+import { baiduMapUrl, cityColor, hasCoordinates, placeAddress } from './cities'
 import { tiers, tierLabel, updateLabel } from './model'
 
 export function escapeHtml(value: string) {
@@ -28,7 +28,7 @@ export async function exportDocument(site: Site, places: Place[], allPlaces: Pla
   const legend = [...new Set(places.map(p => p.city))].map(city => `<span><i style="background:${cityColor(city, site.cityColors)}"></i>${e(city)}</span>`).join('')
   const content = tiers.map(t => `<section><h2 style="background:${t.color}">${t.label}</h2>${places.filter(p => p.tier === t.id).map(p => {
     const rank = allPlaces.filter(x => x.tier === p.tier).findIndex(x => x.id === p.id) + 1
-    return `<article style="border-color:${cityColor(p.city, site.cityColors)}"><p>${e(p.city)}${site.rankWithinTier ? ` · 档内第 ${rank} 名` : ''}</p><h3>${e(p.name)}</h3>${p.cover ? `<img src="${images.get(p.cover)}" alt="${e(p.city + ' · ' + p.name)}">` : '<p>暂无图片</p>'}<p class="prose">${e(p.summary)}</p><p>到访：${e(p.visitedAt || '未记录')} · 内容更新：${e(p.updatedAt)}</p>${p.tags.length ? `<p>标签：${p.tags.map(e).join(' / ')}</p>` : ''}${paragraph('详细评价', p.details)}${p.gallery.map(g => `<figure><img src="${images.get(g.src)}" alt="${e(g.alt)}"><figcaption>${e(g.alt)}</figcaption></figure>`).join('')}${p.location ? `<h4>位置与导航</h4><p>${e(placeAddress(p) || '详细地址待补充')}</p>${hasCoordinates(p) ? `<p>WGS84：${p.location.lat}, ${p.location.lng}</p><a href="${e(navigationUrl(p, true)!)}">在高德地图查看</a>` : '<p>地址已记录，坐标待补充。</p>'}` : '<p>位置待补充。</p>'}<p><a href="${website}guide/#/place/${p.id}">查看最新介绍</a></p></article>`
+    return `<article style="border-color:${cityColor(p.city, site.cityColors)}"><p>${e(p.city)}${site.rankWithinTier ? ` · 档内第 ${rank} 名` : ''}</p><h3>${e(p.name)}</h3>${p.cover ? `<img src="${images.get(p.cover)}" alt="${e(p.city + ' · ' + p.name)}">` : '<p>暂无图片</p>'}<p class="prose">${e(p.summary)}</p><p>到访：${e(p.visitedAt || '未记录')} · 内容更新：${e(p.updatedAt)}</p>${p.tags.length ? `<p>标签：${p.tags.map(e).join(' / ')}</p>` : ''}${paragraph('详细评价', p.details)}${p.gallery.map(g => `<figure><img src="${images.get(g.src)}" alt="${e(g.alt)}"><figcaption>${e(g.alt)}</figcaption></figure>`).join('')}${p.location ? `<h4>位置与导航</h4><p>${e(placeAddress(p) || '详细地址待补充')}</p>${hasCoordinates(p) ? `<p>WGS84：${p.location.lat}, ${p.location.lng}</p>` : '<p>地址已记录，坐标由百度地图在线解析。</p>'}<a href="${e(baiduMapUrl(p)!)}">在百度地图查看</a>` : '<p>位置待补充。</p>'}<p><a href="${website}guide/#/place/${p.id}">查看最新介绍</a></p></article>`
   }).join('') || '<p>暂无条目</p>'}</section>`).join('')
   const ids = new Set(places.map(p => p.id))
   const history = updates.filter(u => ids.has(u.placeId)).map(u => `<li>${e(u.date)} · ${e(places.find(p => p.id === u.placeId)!.name)} · ${updateLabel(u)}${u.type === 'tier-change' ? `（${tierLabel(u.fromTier!)} → ${tierLabel(u.toTier!)}）` : ''}<p class="prose">${e(u.note)}</p></li>`).join('')

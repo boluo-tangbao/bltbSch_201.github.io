@@ -7,7 +7,6 @@ import AddressMap from './AddressMap.vue'
 
 const props = defineProps<{ place: Place; rank?: number; color: string }>()
 const address = computed(() => placeAddress(props.place))
-const osmUrl = computed(() => address.value ? `https://www.openstreetmap.org/search?query=${encodeURIComponent(address.value)}` : '')
 </script>
 
 <template>
@@ -20,13 +19,13 @@ const osmUrl = computed(() => address.value ? `https://www.openstreetmap.org/sea
     </header>
     <section class="detail-body detail-review" aria-labelledby="review-heading"><p class="section-label">MY NOTES</p><h2 id="review-heading">详细评价</h2><p v-if="place.details" class="detail-text">{{ place.details }}</p><p v-else class="detail-empty">评价待补充。</p></section>
     <section v-if="address" class="place-mini-map" aria-labelledby="nearby-map-heading">
-      <div class="place-mini-map-heading"><div><p class="section-label">AROUND HERE</p><h2 id="nearby-map-heading">店铺周边</h2></div><span>无需登录 · 可拖动、缩放 · 带比例尺</span></div>
+      <div class="place-mini-map-heading"><div><p class="section-label">AROUND HERE</p><h2 id="nearby-map-heading">店铺周边</h2></div><span>百度地图 · 无需访客登录 · 可拖动、缩放</span></div>
       <AddressMap :place="place" :color="color" />
-      <p class="map-caption">在线底图异常时，可显示配置过的每月 500m 备份图。</p>
+      <p class="map-caption">百度在线地图异常时，可显示配置过的每月 500m 备份图。</p>
     </section>
     <footer class="detail-destination" aria-label="怎么去">
       <div><p class="section-label">DIRECTIONS</p><h2>怎么去</h2><p>{{ address || '位置待补充，暂不提供导航。' }}</p></div>
-      <div v-if="address" class="destination-actions"><a :href="navigationUrl(place, true)!" target="_blank" rel="noopener noreferrer" class="button dark">高德地图 ↗</a><a :href="baiduMapUrl(place)!" target="_blank" rel="noopener noreferrer" class="button">百度地图 ↗</a><a :href="googleMapsUrl(place)!" target="_blank" rel="noopener noreferrer" class="button">Google 地图 ↗</a><a :href="osmUrl" target="_blank" rel="noopener noreferrer" class="button">OpenStreetMap ↗</a></div>
+      <div v-if="address" class="destination-actions"><a :href="baiduMapUrl(place)!" target="_blank" rel="noopener noreferrer" class="button dark">百度地图 ↗</a><a :href="navigationUrl(place, true)!" target="_blank" rel="noopener noreferrer" class="button">高德地图 ↗</a><a :href="googleMapsUrl(place)!" target="_blank" rel="noopener noreferrer" class="button">Google 地图 ↗</a></div>
     </footer>
   </article>
 </template>
