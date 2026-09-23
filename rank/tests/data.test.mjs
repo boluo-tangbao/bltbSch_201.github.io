@@ -4,6 +4,8 @@ import { readFileSync } from 'node:fs'
 import { validateData, validDate } from '../scripts/validate-data.mjs'
 import { flattenPlaces, filterPlaces, publicUpdates, recentBadge } from '../src/utils/model.ts'
 import { cityColor, navigationUrl, hasCoordinates, placeAddress } from '../src/utils/cities.ts'
+import { wgs84ToBd09 } from '../src/utils/coordinates.ts'
+import { pointForPlace } from '../src/utils/baiduMaps.ts'
 
 test('city groups inherit their names without mutating source entries', () => {
   const entry = { id: 'a', name: '测试店', tier: 'top', order: 20, published: true, summary: '测试', tags: [] }
@@ -93,4 +95,25 @@ test('location uses explicit WGS84 and navigation preserves lon/lat order', () =
   assert.equal(navigationUrl(place), null)
   assert.ok(validateEntries(site, [{ ...p, location: { ...p.location, lat: 91 } }], []).some(e => e.includes('WGS84')))
   assert.ok(validateEntries(site, [{ ...p, location: { ...p.location, coordinateSystem: 'gcj02' } }], []).some(e => e.includes('WGS84')))
+})
+
+test('WGS84 coordinates are converted locally to Baidu BD-09', () => {
+  const point = wgs84ToBd09(121.470895, 31.237372)
+  assert.ok(Math.abs(point.lng - 121.48197256) < 0.000002)
+  assert.ok(Math.abs(point.lat - 31.24134309) < 0.000002)
+})
+
+test('coordinate-backed places never call Baidu online conversion', async () => {
+  let constructed = 0
+  const api = {
+    Point: class {
+      constructor(lng, lat) { this.lng = lng; this.lat = lat; constructed++ }
+    },
+    Convertor: class { constructor() { throw new Error('online conversion must not be used') } },
+    Geocoder: class { constructor() { throw new Error('online geocoding must not be used') } },
+  }
+  const result = await pointForPlace(api, { ...place, location: { lat: 31.237372, lng: 121.470895, coordinateSystem: 'wgs84', address: '测试' } })
+  assert.equal(constructed, 1)
+  assert.ok(Math.abs(result.lng - 121.48197256) < 0.000002)
+  assert.ok(Math.abs(result.lat - 31.24134309) < 0.000002)
 })

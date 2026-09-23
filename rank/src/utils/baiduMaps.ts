@@ -1,5 +1,6 @@
-import type { Place } from '../types'
-import { hasCoordinates, placeAddress } from './cities'
+import type { Place } from '../types/index.ts'
+import { hasCoordinates, placeAddress } from './cities.ts'
+import { wgs84ToBd09 } from './coordinates.ts'
 
 type BMapApi = Record<string, any>
 export type BaiduPoint = { lng: number; lat: number }
@@ -13,6 +14,7 @@ declare global {
 }
 
 const CACHE_KEY = 'shop-ranking-baidu-geocode-v1'
+const GEOCODE_TIMEOUT_MS = 8000
 let apiPromise: Promise<BMapApi> | undefined
 
 function env(name: 'VITE_BAIDU_MAP_AK' | 'VITE_BAIDU_MAP_PROXY_URL') {
@@ -67,22 +69,29 @@ export async function geocodeWithBaidu(api: BMapApi, address: string, city = '')
   const cache = readCache()
   if (cache[key]) return new api.Point(cache[key][0], cache[key][1])
   const point = await new Promise<BaiduPoint | null>((resolve) => {
-    new api.Geocoder().getPoint(address, (result: BaiduPoint | null) => resolve(result || null), city)
+    let settled = false
+    const timeout = window.setTimeout(() => finish(null), GEOCODE_TIMEOUT_MS)
+    function finish(result: BaiduPoint | null) {
+      if (settled) return
+      settled = true
+      window.clearTimeout(timeout)
+      resolve(result || null)
+    }
+    try {
+      new api.Geocoder().getPoint(address, finish, city)
+    } catch {
+      finish(null)
+    }
   })
   if (point) { cache[key] = [point.lng, point.lat]; writeCache(cache) }
   return point
 }
 
-async function convertWgs84(api: BMapApi, lng: number, lat: number): Promise<BaiduPoint | null> {
-  return new Promise(resolve => {
-    new api.Convertor().translate([new api.Point(lng, lat)], 1, 5, (result: { status: number; points?: BaiduPoint[] }) => {
-      resolve(result.status === 0 && result.points?.[0] ? result.points[0] : null)
-    })
-  })
-}
-
 export async function pointForPlace(api: BMapApi, place: Place): Promise<BaiduPoint | null> {
-  if (hasCoordinates(place)) return convertWgs84(api, place.location.lng, place.location.lat)
+  if (hasCoordinates(place)) {
+    const point = wgs84ToBd09(place.location.lng, place.location.lat)
+    return new api.Point(point.lng, point.lat)
+  }
   const address = placeAddress(place)
   return address ? geocodeWithBaidu(api, address, place.city) : null
 }

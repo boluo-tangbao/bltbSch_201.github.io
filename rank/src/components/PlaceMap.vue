@@ -2,7 +2,7 @@
 import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import type { Place } from '../types'
 import { baiduMapConfigured, escapeMapHtml, geocodeWithBaidu, loadBaiduMaps, pointForPlace, type BaiduPoint } from '../utils/baiduMaps'
-import { baiduMapUrl, cityColor, placeAddress } from '../utils/cities'
+import { baiduMapUrl, cityColor, hasCoordinates, placeAddress } from '../utils/cities'
 
 const props = defineProps<{ places: Place[]; colors: Record<string, string>; selectedId?: string }>()
 const emit = defineEmits<{ select: [id: string] }>()
@@ -37,7 +37,7 @@ async function refresh() {
 async function renderCities(current: number) {
   const points: BaiduPoint[] = []
   for (const group of groups.value) {
-    const point = await geocodeWithBaidu(api, group.city, group.city)
+    const point = await cityCenter(group)
     if (current !== revision) return
     if (!point) continue
     points.push(point)
@@ -51,7 +51,7 @@ async function renderCities(current: number) {
 }
 
 async function renderCity(group: { city: string; places: Place[] }, current: number) {
-  const cityPoint = await geocodeWithBaidu(api, group.city, group.city)
+  const cityPoint = await cityCenter(group)
   if (current !== revision) return
   if (cityPoint) map.centerAndZoom(cityPoint, 12)
   const points: BaiduPoint[] = []
@@ -67,6 +67,17 @@ async function renderCity(group: { city: string; places: Place[] }, current: num
   if (points.length > 1) map.setViewport(points, { margins: [65, 65, 65, 65] })
   else if (points[0]) map.centerAndZoom(points[0], 17)
   focusSelected()
+}
+
+async function cityCenter(group: { city: string; places: Place[] }): Promise<BaiduPoint | null> {
+  const locatedPlaces = group.places.filter(hasCoordinates)
+  if (!locatedPlaces.length) return geocodeWithBaidu(api, group.city, group.city)
+  const points = (await Promise.all(locatedPlaces.map(place => pointForPlace(api, place)))).filter((point): point is BaiduPoint => Boolean(point))
+  if (!points.length) return null
+  return new api.Point(
+    points.reduce((sum, point) => sum + point.lng, 0) / points.length,
+    points.reduce((sum, point) => sum + point.lat, 0) / points.length,
+  )
 }
 
 function addPlaceMarker(place: Place, point: BaiduPoint, sequence: number) {
