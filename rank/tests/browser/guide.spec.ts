@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { readFileSync, mkdirSync } from 'node:fs'
-const base = 'http://127.0.0.1:4174/jimmyGu.github.io/rank/'
-const liveBuild = 'http://127.0.0.1:4175/jimmyGu.github.io/rank/'
+const base = 'http://127.0.0.1:4174/bltbSch_201.github.io/rank/'
+const liveBuild = 'http://127.0.0.1:4175/bltbSch_201.github.io/rank/'
 const tile = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=', 'base64')
 mkdirSync('test-results/evidence', { recursive: true })
 

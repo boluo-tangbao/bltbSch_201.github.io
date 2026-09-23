@@ -1,7 +1,7 @@
 import { test, expect, type Page } from '@playwright/test'
 import { mkdirSync } from 'node:fs'
-const empty = 'http://127.0.0.1:4175/jimmyGu.github.io/rank/'
-const fixture = 'http://127.0.0.1:4174/jimmyGu.github.io/rank/'
+const empty = 'http://127.0.0.1:4175/bltbSch_201.github.io/rank/'
+const fixture = 'http://127.0.0.1:4174/bltbSch_201.github.io/rank/'
 mkdirSync('test-results/evidence', { recursive: true })
 async function noOverflow(page: Page) { expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true) }
 test('empty board: responsive layout, filters, invalid detail, exports', async ({ page }) => {

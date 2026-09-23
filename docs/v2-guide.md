@@ -2,9 +2,9 @@
 
 当前内容结构与完整示例见 [城市归档填写指南](city-data.md)。2026-09-20 起不再使用旧版视频、优缺点、演示标记与封面说明字段。
 
-- 总榜：`/jimmyGu.github.io/rank/`
-- 地图与目录：`/jimmyGu.github.io/rank/guide/`
-- 店铺详情：`/jimmyGu.github.io/rank/guide/#/place/店铺ID`
+- 总榜：`/bltbSch_201.github.io/rank/`
+- 地图与目录：`/bltbSch_201.github.io/rank/guide/`
+- 店铺详情：`/bltbSch_201.github.io/rank/guide/#/place/店铺ID`
 
 图片外框、城市图例、地图和导出使用 site.json 的统一城市颜色。同档从左到右、从上到下按 order 排列，跨城市保持全榜顺序。
 

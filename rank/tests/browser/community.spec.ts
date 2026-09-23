@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test'
 import { readFileSync, mkdirSync } from 'node:fs'
 import { resolve, extname } from 'node:path'
-const base = 'http://127.0.0.1:4173/jimmyGu.github.io/rank/'
-const api = 'https://api.github.com/repos/boluo-tangbao/jimmyGu.github.io'
+const base = 'http://127.0.0.1:4173/bltbSch_201.github.io/rank/'
+const api = 'https://api.github.com/repos/boluo-tangbao/bltbSch_201.github.io'
 mkdirSync('test-results/evidence', { recursive: true })
 
 test('QA submission prepares a public GitHub suggestion, lists real API results, and fits mobile', async ({ page, context }) => {
@@ -22,7 +22,7 @@ test('QA submission prepares a public GitHub suggestion, lists real API results,
   await page.getByRole('button', { name: '前往 GitHub 提交' }).click()
   const popup = await popupPromise; await popup.waitForLoadState()
   const url = new URL(popup.url())
-  expect(url.pathname).toBe('/boluo-tangbao/jimmyGu.github.io/issues/new')
+  expect(url.pathname).toBe('/boluo-tangbao/bltbSch_201.github.io/issues/new')
   expect(url.searchParams.has('labels')).toBe(false)
   expect(url.searchParams.get('template')).toBe('rank-feedback.md')
   expect(url.searchParams.get('title')).toBe('[推荐店铺] 杭州的一家小店')
@@ -53,7 +53,7 @@ test('bottom guestbook supports direct link, latest-first pages, empty state and
   await expect(page.getByRole('heading', { name: '路过，留句话' })).toBeInViewport()
   await expect(page.locator('.comment-list li')).toHaveCount(1)
   await expect(page.locator('.comment-list img')).toHaveCount(0)
-  await expect(page.getByRole('link', { name: '使用 GitHub 留言' })).toHaveAttribute('href', 'https://github.com/boluo-tangbao/jimmyGu.github.io/issues/1#new_comment_field')
+  await expect(page.getByRole('link', { name: '使用 GitHub 留言' })).toHaveAttribute('href', 'https://github.com/boluo-tangbao/bltbSch_201.github.io/issues/1#new_comment_field')
   await page.getByRole('button', { name: '加载更早的留言' }).click()
   await expect(page.locator('.comment-list li')).toHaveCount(2)
   await expect(page.locator('.comment-list li').last()).toContainText('更早的留言')
@@ -67,9 +67,9 @@ test('bottom guestbook supports direct link, latest-first pages, empty state and
 })
 
 test('production counter loads once per page and fails honestly when service is blocked', async ({ page }) => {
-  const production = 'https://boluo-tangbao.github.io/jimmyGu.github.io/rank/'
+  const production = 'https://boluo-tangbao.github.io/bltbSch_201.github.io/rank/'
   await page.route('https://boluo-tangbao.github.io/**', route => {
-    let file = decodeURIComponent(new URL(route.request().url()).pathname).replace('/jimmyGu.github.io/rank/', '')
+    let file = decodeURIComponent(new URL(route.request().url()).pathname).replace('/bltbSch_201.github.io/rank/', '')
     if (!file || file.endsWith('/')) file += 'index.html'
     const mime = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.svg': 'image/svg+xml' }[extname(file)] || 'application/octet-stream'
     return route.fulfill({ contentType: mime, body: readFileSync(resolve('dist', file)) })

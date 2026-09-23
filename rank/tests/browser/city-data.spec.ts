@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 import { readFileSync } from 'node:fs'
 const groups = JSON.parse(readFileSync('src/data/places.json', 'utf8'))
 const published = Object.entries(groups).flatMap(([city, entries]) => (entries as any[]).filter(p => p.published).map(p => ({ ...p, city })))
-const base = 'http://127.0.0.1:4173/jimmyGu.github.io/rank/'
+const base = 'http://127.0.0.1:4173/bltbSch_201.github.io/rank/'
 
 test('production city archive renders written details, tags, and text-address maps', async ({ page }) => {
   await page.route('https://api.github.com/**', route => route.fulfill({ json: route.request().url().endsWith('/issues/1') ? { comments: 0 } : [] }))

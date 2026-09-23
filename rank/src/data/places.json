@@ -23,7 +23,12 @@
       "visitedAt": "2026-07-13",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "上海市黄浦区南京东路800号第一百货C馆"
+      "location": {
+        "lat": 31.237372,
+        "lng": 121.470895,
+        "coordinateSystem": "wgs84",
+        "address": "上海市黄浦区南京东路800号第一百货C馆"
+      }
     },
     {
       "id": "shanghai-shop-002",
@@ -48,7 +53,12 @@
       "visitedAt": "2026-08-29",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "上海市黄浦区南京东路348号百联ZX创趣场"
+      "location": {
+        "lat": 31.239113,
+        "lng": 121.478747,
+        "coordinateSystem": "wgs84",
+        "address": "上海市黄浦区南京东路348号百联ZX创趣场"
+      }
     },
     {
       "id": "shanghai-shop-003",
@@ -67,7 +77,12 @@
       "visitedAt": "2026-08-02",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "上海市黄浦区南京西路2~68号新世界城"
+      "location": {
+        "lat": 31.23704,
+        "lng": 121.469133,
+        "coordinateSystem": "wgs84",
+        "address": "上海市黄浦区南京西路2~68号新世界城"
+      }
     },
     {
       "id": "shanghai-shop-004",
@@ -91,7 +106,12 @@
       "visitedAt": "2026-09-09",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "上海市黄浦区南京西路19号人民广场地铁站7号口内"
+      "location": {
+        "lat": 31.236076,
+        "lng": 121.469282,
+        "coordinateSystem": "wgs84",
+        "address": "上海市黄浦区南京西路19号人民广场地铁站7号口内"
+      }
     },
     {
       "id": "shanghai-shop-005",
@@ -116,7 +136,12 @@
       "visitedAt": "2026-08-29",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "上海市黄浦区广西北路248号"
+      "location": {
+        "lat": 31.235439,
+        "lng": 121.47456,
+        "coordinateSystem": "wgs84",
+        "address": "上海市黄浦区广西北路248号"
+      }
     },
     {
       "id": "shanghai-shop-006",
@@ -137,7 +162,12 @@
       "visitedAt": "2025-11-09",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "上海市杨浦区区四平路2500号百联ZX造趣场"
+      "location": {
+        "lat": 31.300361,
+        "lng": 121.511513,
+        "coordinateSystem": "wgs84",
+        "address": "上海市杨浦区区四平路2500号百联ZX造趣场"
+      }
     },
     {
       "id": "shanghai-shop-007",
@@ -163,7 +193,12 @@
       "visitedAt": "2026-06-27",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "上海市黄浦区人民大道221号"
+      "location": {
+        "lat": 31.230084,
+        "lng": 121.468957,
+        "coordinateSystem": "wgs84",
+        "address": "上海市黄浦区人民大道221号"
+      }
     },
     {
       "id": "shanghai-shop-008",
@@ -186,7 +221,12 @@
       "visitedAt": "2026-05-02",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "上海市黄浦区西藏北路166号"
+      "location": {
+        "lat": 31.245608,
+        "lng": 121.467556,
+        "coordinateSystem": "wgs84",
+        "address": "上海市黄浦区西藏北路166号"
+      }
     },
     {
       "id": "shanghai-shop-009",
@@ -208,7 +248,12 @@
       "visitedAt": "2025-11-02",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "上海市杨浦区政通路189号万达广场C栋"
+      "location": {
+        "lat": 31.304204,
+        "lng": 121.508219,
+        "coordinateSystem": "wgs84",
+        "address": "上海市杨浦区政通路189号万达广场C栋"
+      }
     },
     {
       "id": "shanghai-shop-010",
@@ -226,7 +271,12 @@
       "visitedAt": "2026-02-07",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "上海市黄浦区福州路390号"
+      "location": {
+        "lat": 31.236032,
+        "lng": 121.478443,
+        "coordinateSystem": "wgs84",
+        "address": "上海市黄浦区福州路390号"
+      }
     },
     {
       "id": "shanghai-shop-011",
@@ -245,7 +295,12 @@
       "visitedAt": "2026-04-18",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "上海市黄浦区南京东路353号"
+      "location": {
+        "lat": 31.238568,
+        "lng": 121.479102,
+        "coordinateSystem": "wgs84",
+        "address": "上海市黄浦区南京东路353号"
+      }
     },
     {
       "id": "shanghai-shop-012",
@@ -264,7 +319,12 @@
       "visitedAt": "2026-09-18",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "上海市徐汇区肇嘉浜路1117号"
+      "location": {
+        "lat": 31.194887,
+        "lng": 121.434547,
+        "coordinateSystem": "wgs84",
+        "address": "上海市徐汇区肇嘉浜路1117号"
+      }
     },
     {
       "id": "shanghai-shop-013",
@@ -282,7 +342,12 @@
       "visitedAt": "2026-09-09",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "上海市徐汇区漕宝路261号鑫耀光环live二期"
+      "location": {
+        "lat": 31.168415,
+        "lng": 121.410019,
+        "coordinateSystem": "wgs84",
+        "address": "上海市徐汇区漕宝路261号鑫耀光环live二期"
+      }
     },
     {
       "id": "shanghai-shop-014",
@@ -301,7 +366,12 @@
       "visitedAt": "2026-05-23",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "上海市浦东新区新金桥路738号"
+      "location": {
+        "lat": 31.254933,
+        "lng": 121.599531,
+        "coordinateSystem": "wgs84",
+        "address": "上海市浦东新区新金桥路738号"
+      }
     },
     {
       "id": "shanghai-shop-015",
@@ -319,7 +389,12 @@
       "visitedAt": "2026-09-18",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "上海市徐汇区肇嘉浜路1111号"
+      "location": {
+        "lat": 31.19482,
+        "lng": 121.435029,
+        "coordinateSystem": "wgs84",
+        "address": "上海市徐汇区肇嘉浜路1111号"
+      }
     }, 
     
     {
@@ -342,7 +417,12 @@
       "visitedAt": "2026-07-08",
       "updatedAt": "2026-09-20",
       "published": true,
-      "location": "上海市长宁区长宁路1018号龙之梦城市生活中心"
+      "location": {
+        "lat": 31.220979,
+        "lng": 121.412018,
+        "coordinateSystem": "wgs84",
+        "address": "上海市长宁区长宁路1018号龙之梦城市生活中心"
+      }
     },
     {
       "id": "shanghai-shop-017",
@@ -360,7 +440,12 @@
       "visitedAt": "2026-05-27",
       "updatedAt": "2026-09-20",
       "published": true,
-      "location": "上海市长宁区天山路762号"
+      "location": {
+        "lat": 31.213585,
+        "lng": 121.397526,
+        "coordinateSystem": "wgs84",
+        "address": "上海市长宁区天山路762号"
+      }
     },
     {
       "id": "shanghai-shop-018",
@@ -384,7 +469,12 @@
       "visitedAt": "2026-07-08",
       "updatedAt": "2026-09-20",
       "published": true,
-      "location": "上海市普陀区中山北路3300号月星环球港b2层"
+      "location": {
+        "lat": 31.235078,
+        "lng": 121.407974,
+        "coordinateSystem": "wgs84",
+        "address": "上海市普陀区中山北路3300号月星环球港b2层"
+      }
     },
     {
       "id": "shanghai-shop-019",
@@ -401,7 +491,12 @@
       "visitedAt": "2026-05-08",
       "updatedAt": "2026-09-20",
       "published": true,
-      "location": "上海市徐汇区宜山路455号b2层"
+      "location": {
+        "lat": 31.185786,
+        "lng": 121.423879,
+        "coordinateSystem": "wgs84",
+        "address": "上海市徐汇区宜山路455号b2层"
+      }
     },
     {
       "id": "shanghai-shop-020",
@@ -424,7 +519,12 @@
       "visitedAt": "2026-06-18",
       "updatedAt": "2026-09-20",
       "published": true,
-      "location": "上海市闵行区沪闵路7250号南方百联商城2区"
+      "location": {
+        "lat": 31.132931,
+        "lng": 121.395376,
+        "coordinateSystem": "wgs84",
+        "address": "上海市闵行区沪闵路7250号南方百联商城2区"
+      }
     }
   ],
   "广州": [
@@ -455,7 +555,12 @@
       "visitedAt": "2026-01-20",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "广东省广州市较场西路26号"
+      "location": {
+        "lat": 23.128403,
+        "lng": 113.278212,
+        "coordinateSystem": "wgs84",
+        "address": "广东省广州市较场西路26号"
+      }
     },    
     {
       "id": "guangzhou-shop-002",
@@ -480,7 +585,12 @@
       "visitedAt": "2026-01-21",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "广东省广州市吉祥路1号动漫星城西区"
+      "location": {
+        "lat": 23.128469,
+        "lng": 113.258682,
+        "coordinateSystem": "wgs84",
+        "address": "广东省广州市吉祥路1号动漫星城西区"
+      }
     },
     {
       "id": "guangzhou-shop-003",
@@ -502,7 +612,12 @@
       "visitedAt": "2026-01-18",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "广东省广州市吉祥路1号动漫星城东区"
+      "location": {
+        "lat": 23.12846,
+        "lng": 113.259232,
+        "coordinateSystem": "wgs84",
+        "address": "广东省广州市吉祥路1号动漫星城东区"
+      }
     },    
     {
       "id": "guangzhou-shop-004",
@@ -524,7 +639,12 @@
       "visitedAt": "2026-01-19",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "广东省广州市天河路299号"
+      "location": {
+        "lat": 23.137324,
+        "lng": 113.319434,
+        "coordinateSystem": "wgs84",
+        "address": "广东省广州市天河路299号"
+      }
     },
     {
       "id": "guangzhou-shop-005",
@@ -543,7 +663,12 @@
       "visitedAt": "2026-01-18",
       "updatedAt": "2026-09-19",
       "published": true,
-      "location": "广东省广州市北京路步行街"
+      "location": {
+        "lat": 23.123626,
+        "lng": 113.262351,
+        "coordinateSystem": "wgs84",
+        "address": "广东省广州市北京路步行街"
+      }
     }
   ],
   "苏州": [],

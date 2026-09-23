@@ -5,7 +5,7 @@
 ## 必做：限制浏览器端 AK
 
 1. 在百度地图开放平台创建“浏览器端”AK。
-2. 在 AK 设置中开启 JavaScript API，并配置 Referer 白名单，只允许正式站点域名 `boluo-tangbao.github.io`。页面路径 `/jimmyGu.github.io/rank/` 不属于域名部分，无需单独作为域名填写。
+2. 在 AK 设置中开启 JavaScript API，并配置 Referer 白名单，只允许正式站点域名 `boluo-tangbao.github.io`。页面路径 `/bltbSch_201.github.io/rank/` 不属于域名部分，无需单独作为域名填写。
 3. 本地调试建议使用单独的开发 AK，并只允许 `localhost` / `127.0.0.1`；不要把正式 AK 放宽到任意来源。
 4. 定期查看调用统计和配额告警；发现异常时轮换 AK。
 

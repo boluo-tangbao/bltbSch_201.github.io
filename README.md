@@ -4,10 +4,10 @@
 
 2026-09-20 更新：店铺按城市分组，精简字段，详情以图文评价为主。完整填写示例见 [城市归档填写指南](docs/city-data.md)。
 
-- 榜单：<https://boluo-tangbao.github.io/jimmyGu.github.io/rank/>
-- 地图与详细评价：<https://boluo-tangbao.github.io/jimmyGu.github.io/rank/guide/>
-- 原个人主页：<https://boluo-tangbao.github.io/jimmyGu.github.io/>
-- 仓库：<https://github.com/boluo-tangbao/jimmyGu.github.io>
+- 榜单：<https://boluo-tangbao.github.io/bltbSch_201.github.io/rank/>
+- 地图与详细评价：<https://boluo-tangbao.github.io/bltbSch_201.github.io/rank/guide/>
+- 站点首页：<https://boluo-tangbao.github.io/bltbSch_201.github.io/>
+- 仓库：<https://github.com/boluo-tangbao/bltbSch_201.github.io>
 
 根目录的个人主页、学习经历、项目经历与博客保持原样；新应用源代码在 `rank/`。工作流将原站静态文件和榜单构建产物一起发布。
 
@@ -42,7 +42,7 @@ npm ci
 npm run dev
 ```
 
-开发地址：`http://127.0.0.1:5173/jimmyGu.github.io/rank/`。
+开发地址：`http://127.0.0.1:5173/bltbSch_201.github.io/rank/`。
 
 ```sh
 npm run validate:data
@@ -51,7 +51,7 @@ npm run build
 npm run preview
 ```
 
-构建依次运行 JSON/内容校验、Vue/TypeScript 类型检查、Vite 构建。预览地址：`http://127.0.0.1:4173/jimmyGu.github.io/rank/`。
+构建依次运行 JSON/内容校验、Vue/TypeScript 类型检查、Vite 构建。预览地址：`http://127.0.0.1:4173/bltbSch_201.github.io/rank/`。
 
 浏览器检查使用已安装的 Microsoft Edge：`npm run test:browser`。没有 Edge 的环境可安装 Playwright Chromium 并把 `playwright.config.ts` 的 `channel` 配置移除。检查包含空榜单、测试条目、隐藏数据、详情直达/刷新/返回、筛选恢复、375/768/1440px 无溢出、两种 PNG 导出、分页、错误提示和重试。虚构测试数据仅写到忽略的 `.fixture-app/`，不修改正式 JSON、不进入部署产物。截图与实际导出文件在 `rank/test-results/evidence/`。
 
@@ -65,7 +65,7 @@ npm run preview
 4. 合并输出到 `_site/`：保留原站已跟踪的静态页面与素材，新榜单放在 `_site/rank/`。不会上传整个源码目录。
 5. Pages 上传与部署作业完成并显示绿色成功后，再访问实际站点确认。只有部署作业拥有 `pages: write` 与 `id-token: write`。
 
-Vite 默认 base 为 `/jimmyGu.github.io/rank/`；CI 从 `configure-pages` 返回的真实 `base_path` 推导路径。图片、脚本、CSS 和详情链接都支持仓库子路径，详情使用 `#/place/稳定ID`，刷新不需要服务端路由。
+Vite 默认 base 为 `/bltbSch_201.github.io/rank/`；CI 从 `configure-pages` 返回的真实 `base_path` 推导路径。图片、脚本、CSS 和详情链接都支持仓库子路径，详情使用 `#/place/稳定ID`，刷新不需要服务端路由。
 
 当前默认域名免费，无需购买 DNS 服务。自定义域名需要先拥有该域名，不能任意修改 GitHub 的 `github.io` 域名。购买后通常使用注册商提供的 DNS 管理，在仓库 Pages 设置里填写域名并按 [GitHub 自定义域名文档](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) 设置解析、确认 HTTPS，再重新运行工作流。绑定会影响此仓库的**整个个人站点**；榜单仍在 `/rank/`，操作前应确定期望的域名范围。
 

@@ -2,8 +2,8 @@
 
 ## 已接入的位置
 
-- 图片总榜与页底留言：`/jimmyGu.github.io/rank/`，留言锚点 `#guestbook`。
-- QA 与建议：`/jimmyGu.github.io/rank/qa/`。与原有 `guide/` 一样是独立 HTML 入口，可直接访问和刷新。
+- 图片总榜与页底留言：`/bltbSch_201.github.io/rank/`，留言锚点 `#guestbook`。
+- QA 与建议：`/bltbSch_201.github.io/rank/qa/`。与原有 `guide/` 一样是独立 HTML 入口，可直接访问和刷新。
 - 三个页面的页脚都显示累计访问次数。
 
 ## 访问统计
@@ -18,7 +18,7 @@
 
 配置在 `rank/src/data/community.json`。读取公开 GitHub API 不需要登录，不在前端使用令牌。
 
-- 留言保存在 [Issue #1](https://github.com/boluo-tangbao/jimmyGu.github.io/issues/1) 的评论中。任何人可在网站阅读；点击“使用 GitHub 留言”后在 GitHub 登录并提交，回网站刷新。网站显示文字、作者、日期和原文链接，每页最多 30 条，最新页优先，可加载更早留言。
+- 留言保存在 [Issue #1](https://github.com/boluo-tangbao/bltbSch_201.github.io/issues/1) 的评论中。任何人可在网站阅读；点击“使用 GitHub 留言”后在 GitHub 登录并提交，回网站刷新。网站显示文字、作者、日期和原文链接，每页最多 30 条，最新页优先，可加载更早留言。
 - QA 表单打开 GitHub 新 Issue 页面并预填标题/正文，**必须在 GitHub 完成最终提交**。标题限 70 字、说明限 600 字，避免 URL 超过服务器长度限制。需要更多信息可在 GitHub 编辑提交内容。
 - 使用 `.github/ISSUE_TEMPLATE/rank-feedback.md` 自动附加 `rank-feedback` 标签；不能使用需要仓库写权限的 `labels` URL 参数，否则普通访客可能无法提交。网站读取该标签下全部状态的 Issue，排除 PR，每页 20 条。
 - 每次打开页面及点击刷新时获取最新内容。API 限流/网络失败会保留已加载内容并提示直接去 GitHub 查看；没有离线假留言。

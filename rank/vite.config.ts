@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 
 export default defineConfig({
   plugins: [vue()],
-  base: process.env.SITE_BASE || '/jimmyGu.github.io/rank/',
+  base: process.env.SITE_BASE || '/bltbSch_201.github.io/rank/',
   build: {
     rolldownOptions: {
       input: {
