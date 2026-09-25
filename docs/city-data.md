@@ -1,4 +1,4 @@
-# 按城市填写店铺（2026-09-20）
+# 按城市填写店铺（2026-09-23）
 
 维护 `rank/src/data/places.json`。最外层以城市名称归档，每个城市对应一个店铺数组，店铺内部不用写 `city`。可先保留空城市数组，空城市不会显示在前台筛选里。
 
@@ -85,21 +85,72 @@
 
 ## 更新记录与发布
 
-`rank/src/data/updates.json` 仍是数组，用店铺 `id` 关联。例如：
+`rank/src/data/updates.json` 仍是数组，用店铺 `id` 关联。同一天、同一类型的操作可以写成一个批次。
+
+批量新增或批量修改评价使用 `placeIds`：
 
 ```json
 [
   {
-    "id": "shanghai-shop-001-added-20260920",
-    "placeId": "shanghai-shop-001",
-    "date": "2026-09-20",
+    "id": "places-added-20260923",
+    "date": "2026-09-23",
     "type": "added",
-    "note": "填写新增或调整的实际原因"
+    "placeIds": [
+      "shanghai-shop-001",
+      "shanghai-shop-002",
+      "guangzhou-shop-001"
+    ],
+    "note": "首次加入榜单。"
   }
 ]
 ```
 
-只改评价用 `edited`；改档用 `tier-change` 并提供 `fromTier` / `toTier`。同步店铺的 `updatedAt`，更新记录不能晚于它。无需为城市另建更新文件。
+一次调整多个地点档位时使用 `changes`，每个地点分别记录原档位和新档位：
+
+```json
+[
+  {
+    "id": "ranking-adjusted-20260923",
+    "date": "2026-09-23",
+    "type": "tier-change",
+    "changes": [
+      {
+        "placeId": "shanghai-shop-001",
+        "fromTier": "top",
+        "toTier": "hang"
+      },
+      {
+        "placeId": "shanghai-shop-002",
+        "fromTier": "top",
+        "toTier": "above"
+      }
+    ],
+    "note": "重新比较近期体验后统一调整排名。"
+  }
+]
+```
+
+如果地点仍在原档位，只是调整同档内的先后顺序，使用 `ranking-change` 和 `placeIds`，不需要填写技术性的 `order` 数值：
+
+```json
+[
+  {
+    "id": "ranking-order-adjusted-20260923",
+    "date": "2026-09-23",
+    "type": "ranking-change",
+    "placeIds": [
+      "shanghai-shop-001",
+      "shanghai-shop-002",
+      "shanghai-shop-003"
+    ],
+    "note": "重新比较后调整同档内的先后顺序。"
+  }
+]
+```
+
+只改评价时把 `type` 写为 `edited`，同样可以使用 `placeIds`。只更新一个地点时，旧的 `placeId` 单条格式仍然兼容；单次调档可继续在记录顶层填写 `placeId`、`fromTier`、`toTier`。同一批次不能重复填写相同地点，也不能同时混用单条和批量字段。
+
+同步每个相关店铺的 `updatedAt`，更新记录不能晚于它。无需为城市另建更新文件。页面会把一个批次显示成一条时间线记录，但每个地点仍会独立获得“新增/升档/降档”徽章。
 
 图片仍放 `rank/public/images/places/`，可以自行建城市子目录。路径不写 `public/`，文件名大小写必须一致。可选 `coverPosition: [50, 30]` 调整封面焦点。
 

@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { validateData, validDate } from '../scripts/validate-data.mjs'
-import { flattenPlaces, filterPlaces, publicUpdates, recentBadge } from '../src/utils/model.ts'
+import { flattenPlaces, filterPlaces, publicUpdates, recentBadge, updateItems, updateLabel } from '../src/utils/model.ts'
 import { cityColor, navigationUrl, hasCoordinates, placeAddress } from '../src/utils/cities.ts'
 import { wgs84ToBd09 } from '../src/utils/coordinates.ts'
 import { pointForPlace } from '../src/utils/baiduMaps.ts'
@@ -64,9 +64,30 @@ test('bad data blocks publication with file and ID', () => {
 })
 test('update references and tier transitions must be valid', () => {
   const update = { id: 'change-1', placeId: place.id, date: '2026-09-18', type: 'tier-change', fromTier: 'top', toTier: 'top', note: '测试' }
-  assert.ok(validateEntries(site, [place], [update]).some(e => e.includes('前后档位')))
+  assert.ok(validateEntries(site, [place], [update]).some(e => e.includes('fromTier/toTier')))
   assert.ok(validateEntries(site, [], [{ ...update, placeId: 'missing' }]).some(e => e.includes('不存在')))
   assert.ok(validateEntries(site, [place], [{ ...update, toTier: 'hang', date: '2026-09-19' }]).some(e => e.includes('updatedAt')))
+})
+test('updates support compact batches while retaining the single-place form', () => {
+  const second = { ...place, id: 'second-place', order: 20 }
+  const hidden = { ...place, id: 'hidden-place', order: 30, published: false }
+  const added = { id: 'added-batch', date: '2026-09-18', type: 'added', placeIds: [place.id, second.id], note: '同日加入' }
+  const ranked = { id: 'ranked-batch', date: '2026-09-18', type: 'tier-change', changes: [
+    { placeId: place.id, fromTier: 'top', toTier: 'hang' },
+    { placeId: second.id, fromTier: 'top', toTier: 'above' },
+  ], note: '批量重排' }
+  const reordered = { id: 'reordered-batch', date: '2026-09-18', type: 'ranking-change', placeIds: [place.id, second.id], note: '调整档内顺序' }
+  assert.deepEqual(validateEntries(site, [place, second], [added, ranked, reordered]), [])
+  assert.deepEqual(updateItems(added).map(item => item.placeId), [place.id, second.id])
+  assert.equal(updateLabel(added), '批量新增')
+  assert.equal(updateLabel(ranked), '批量调档')
+  assert.equal(updateLabel(reordered), '批量调序')
+  assert.equal(recentBadge(place.id, [reordered], 30, new Date('2026-09-19').getTime()), '调序')
+  assert.equal(recentBadge(second.id, [added], 30, new Date('2026-09-19').getTime()), '新增')
+  const visible = publicUpdates([{ ...added, placeIds: [place.id, hidden.id] }], [place, hidden])
+  assert.deepEqual(visible[0].placeIds, [place.id])
+  assert.ok(validateEntries(site, [place, second], [{ ...added, placeIds: [place.id, place.id] }]).some(e => e.includes('重复引用')))
+  assert.ok(validateEntries(site, [place, second], [{ ...ranked, changes: [] }]).some(e => e.includes('至少需要一个地点')))
 })
 test('search composes with city and preserves published tier/order', () => {
   const others = [{ ...place, id: 'hidden', published: false }, { ...place, id: 'second', order: 20 }, { ...place, id: 'first', tier: 'hang' }, { ...place, id: 'elsewhere', city: '别处' }]

@@ -1,177 +1,43 @@
 [
   {
-    "id": "shanghai-shop-001-added-20260919",
-    "placeId": "shanghai-shop-001",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-002-added-20260919",
-    "placeId": "shanghai-shop-002",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-003-added-20260919",
-    "placeId": "shanghai-shop-003",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-004-added-20260919",
-    "placeId": "shanghai-shop-004",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-005-added-20260919",
-    "placeId": "shanghai-shop-005",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-006-added-20260919",
-    "placeId": "shanghai-shop-006",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-007-added-20260919",
-    "placeId": "shanghai-shop-007",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-008-added-20260919",
-    "placeId": "shanghai-shop-008",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-009-added-20260919",
-    "placeId": "shanghai-shop-009",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-010-added-20260919",
-    "placeId": "shanghai-shop-010",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-011-added-20260919",
-    "placeId": "shanghai-shop-011",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-012-added-20260919",
-    "placeId": "shanghai-shop-012",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-013-added-20260919",
-    "placeId": "shanghai-shop-013",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-014-added-20260919",
-    "placeId": "shanghai-shop-014",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-015-added-20260919",
-    "placeId": "shanghai-shop-015",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-016-added-20260920",
-    "placeId": "shanghai-shop-016",
+    "id": "places-added-20260920",
     "date": "2026-09-20",
     "type": "added",
+    "placeIds": [
+      "shanghai-shop-016",
+      "shanghai-shop-017",
+      "shanghai-shop-018",
+      "shanghai-shop-019",
+      "shanghai-shop-020"
+    ],
     "note": "首次加入榜单。"
   },
   {
-    "id": "shanghai-shop-017-added-20260920",
-    "placeId": "shanghai-shop-017",
-    "date": "2026-09-20",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-018-added-20260920",
-    "placeId": "shanghai-shop-018",
-    "date": "2026-09-20",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-019-added-20260920",
-    "placeId": "shanghai-shop-019",
-    "date": "2026-09-20",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "shanghai-shop-020-added-20260920",
-    "placeId": "shanghai-shop-020",
-    "date": "2026-09-20",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "guangzhou-shop-001-added-20260919",
-    "placeId": "guangzhou-shop-001",
+    "id": "places-added-20260919",
     "date": "2026-09-19",
     "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "guangzhou-shop-002-added-20260919",
-    "placeId": "guangzhou-shop-002",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "guangzhou-shop-003-added-20260919",
-    "placeId": "guangzhou-shop-003",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "guangzhou-shop-004-added-20260919",
-    "placeId": "guangzhou-shop-004",
-    "date": "2026-09-19",
-    "type": "added",
-    "note": "首次加入榜单。"
-  },
-  {
-    "id": "guangzhou-shop-005-added-20260919",
-    "placeId": "guangzhou-shop-005",
-    "date": "2026-09-19",
-    "type": "added",
+    "placeIds": [
+      "shanghai-shop-001",
+      "shanghai-shop-002",
+      "shanghai-shop-003",
+      "shanghai-shop-004",
+      "shanghai-shop-005",
+      "shanghai-shop-006",
+      "shanghai-shop-007",
+      "shanghai-shop-008",
+      "shanghai-shop-009",
+      "shanghai-shop-010",
+      "shanghai-shop-011",
+      "shanghai-shop-012",
+      "shanghai-shop-013",
+      "shanghai-shop-014",
+      "shanghai-shop-015",
+      "guangzhou-shop-001",
+      "guangzhou-shop-002",
+      "guangzhou-shop-003",
+      "guangzhou-shop-004",
+      "guangzhou-shop-005"
+    ],
     "note": "首次加入榜单。"
   }
 ]

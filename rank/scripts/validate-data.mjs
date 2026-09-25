@@ -76,13 +76,44 @@ export function validateData(site, groups, updates, imageExists = () => true) {
     if (!u || typeof u !== 'object') { fail('updates.json', '?', '更新必须为对象'); continue }
     if (typeof u.id !== 'string' || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(u.id)) fail('updates.json', u.id, '无效 ID')
     if (updateIds.has(u.id)) fail('updates.json', u.id, '重复 ID'); updateIds.add(u.id)
-    if (!ids.has(u.placeId)) fail('updates.json', u.id, '引用了不存在的条目')
     if (!validDate(u.date)) fail('updates.json', u.id, 'date 必须为真实 YYYY-MM-DD 日期')
-    if (!['added', 'tier-change', 'edited'].includes(u.type)) fail('updates.json', u.id, '无效更新类型')
+    if (!['added', 'tier-change', 'ranking-change', 'edited'].includes(u.type)) fail('updates.json', u.id, '无效更新类型')
     if (typeof u.note !== 'string' || !u.note.trim()) fail('updates.json', u.id, '必须填写更新原因 note')
-    if (u.type === 'tier-change' && (!TIERS.includes(u.fromTier) || !TIERS.includes(u.toTier) || u.fromTier === u.toTier)) fail('updates.json', u.id, '升降档必须提供合法且不同的前后档位')
-    const p = places.find(p => p?.id === u.placeId)
-    if (p && validDate(p.updatedAt) && validDate(u.date) && u.date > p.updatedAt) fail('updates.json', u.id, '更新记录晚于条目的 updatedAt，请同步内容日期')
+    let targets = []
+    if (u.type === 'tier-change') {
+      if (u.placeIds !== undefined) fail('updates.json', u.id, '批量调档请使用 changes，而不是 placeIds')
+      const hasLegacy = typeof u.placeId === 'string'
+      if (u.changes !== undefined && !Array.isArray(u.changes)) fail('updates.json', u.id, 'changes 必须是调档数组')
+      if (Array.isArray(u.changes) && hasLegacy) fail('updates.json', u.id, 'placeId 与 changes 只能填写一种')
+      if (Array.isArray(u.changes)) {
+        if (!u.changes.length) fail('updates.json', u.id, 'changes 至少需要一个地点')
+        targets = u.changes
+      } else if (hasLegacy) targets = [{ placeId: u.placeId, fromTier: u.fromTier, toTier: u.toTier }]
+      else fail('updates.json', u.id, '调档记录需要 placeId 或 changes')
+      for (const target of targets) {
+        if (!target || typeof target !== 'object' || !TIERS.includes(target.fromTier) || !TIERS.includes(target.toTier) || target.fromTier === target.toTier) fail('updates.json', u.id, '每个调档地点都必须提供合法且不同的 fromTier/toTier')
+      }
+    } else {
+      if (u.changes !== undefined) fail('updates.json', u.id, '新增、文案修改或调序请使用 placeIds，而不是 changes')
+      if (u.fromTier !== undefined || u.toTier !== undefined) fail('updates.json', u.id, '只有调档记录可以填写 fromTier/toTier')
+      const hasLegacy = typeof u.placeId === 'string'
+      if (u.placeIds !== undefined && !Array.isArray(u.placeIds)) fail('updates.json', u.id, 'placeIds 必须是地点 ID 数组')
+      if (Array.isArray(u.placeIds) && hasLegacy) fail('updates.json', u.id, 'placeId 与 placeIds 只能填写一种')
+      if (Array.isArray(u.placeIds)) {
+        if (!u.placeIds.length) fail('updates.json', u.id, 'placeIds 至少需要一个地点')
+        targets = u.placeIds.map(placeId => ({ placeId }))
+      } else if (hasLegacy) targets = [{ placeId: u.placeId }]
+      else fail('updates.json', u.id, '更新记录需要 placeId 或 placeIds')
+    }
+    const targetIds = new Set()
+    for (const target of targets) {
+      const placeId = target?.placeId
+      if (typeof placeId !== 'string' || !ids.has(placeId)) fail('updates.json', u.id, `引用了不存在的条目：${String(placeId)}`)
+      if (targetIds.has(placeId)) fail('updates.json', u.id, `同一批次重复引用条目：${placeId}`)
+      targetIds.add(placeId)
+      const p = places.find(p => p?.id === placeId)
+      if (p && validDate(p.updatedAt) && validDate(u.date) && u.date > p.updatedAt) fail('updates.json', u.id, `更新记录晚于 ${placeId} 的 updatedAt，请同步内容日期`)
+    }
   }
   return errors
 }

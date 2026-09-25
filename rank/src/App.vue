@@ -4,7 +4,7 @@ import siteData from './data/site.json'
 import placeData from './data/places.json'
 import updateData from './data/updates.json'
 import type { Place, PlacesByCity, Site, Update } from './types'
-import { flattenPlaces, filterPlaces, publicUpdates, recentBadge, tierLabel, tiers, updateLabel } from './utils/model'
+import { flattenPlaces, filterPlaces, publicUpdates, recentBadge, tierLabel, tiers, updateItems, updateLabel } from './utils/model'
 import PlaceCard from './components/PlaceCard.vue'
 import PlaceDetail from './components/PlaceDetail.vue'
 import CityLegend from './components/CityLegend.vue'
@@ -84,7 +84,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
       </section>
 
       <section class="guide-entry"><div><h2>心里有一站，就去地图找找</h2><p>同样的城市颜色，对应地图上的位置。详细评价与到访路线也在这里。</p></div><a :href="guideUrl" class="button dark">打开地图与介绍 ↗</a></section>
-      <div class="bottom-grid"><section class="updates-section" aria-labelledby="updates-title"><div class="section-heading"><div><span class="section-number">02</span><h2 id="updates-title">最近更新</h2></div><span class="muted tiny">持续记录中</span></div><div v-if="!updates.length" class="quiet-empty"><span class="timeline-dot"></span><div><h3>还没有更新记录</h3><p>新增、改档与评价修改，都会在这里留下足迹。</p></div></div><ol v-else class="update-list"><li v-for="u in updates.slice(0, 10)" :key="u.id"><time>{{ u.date }}</time><div><span class="update-kind">{{ updateLabel(u) }}</span><a :href="`${guideUrl}#/place/${u.placeId}`">{{ all.find(p => p.id === u.placeId)?.name }}</a><p v-if="u.type === 'tier-change'">{{ tierLabel(u.fromTier!) }} → {{ tierLabel(u.toTier!) }}</p><p>{{ u.note }}</p></div></li></ol></section>
+      <div class="bottom-grid"><section class="updates-section" aria-labelledby="updates-title"><div class="section-heading"><div><span class="section-number">02</span><h2 id="updates-title">最近更新</h2></div><span class="muted tiny">持续记录中</span></div><div v-if="!updates.length" class="quiet-empty"><span class="timeline-dot"></span><div><h3>还没有更新记录</h3><p>新增、改档与评价修改，都会在这里留下足迹。</p></div></div><ol v-else class="update-list"><li v-for="u in updates.slice(0, 10)" :key="u.id"><time>{{ u.date }}</time><div class="update-body"><div class="update-summary"><span class="update-kind">{{ updateLabel(u) }}</span><strong v-if="updateItems(u).length > 1">{{ updateItems(u).length }} 个地点</strong></div><div class="update-places"><a v-for="item in updateItems(u)" :key="item.placeId" :href="`${guideUrl}#/place/${item.placeId}`"><span>{{ all.find(p => p.id === item.placeId)?.name }}</span><small v-if="u.type === 'tier-change'">{{ tierLabel(item.fromTier!) }} → {{ tierLabel(item.toTier!) }}</small></a></div><p>{{ u.note }}</p></div></li></ol></section>
       <section class="criteria-section" aria-labelledby="criteria-title"><div class="section-heading"><div><span class="section-number">03</span><h2 id="criteria-title">关于这份榜单</h2></div><span class="about-icon" aria-hidden="true">i</span></div><p>{{ site.criteria }}</p><div class="criteria-scale"><span v-for="t in tiers" :key="t.id"><i :style="{ background: t.color }"></i>{{ t.label }}</span></div><details><summary>查看各档标准与排序规则</summary><dl><template v-for="t in tiers" :key="t.id"><dt>{{ t.label }}</dt><dd>{{ site.tierDescriptions[t.id] }}</dd></template></dl><p>{{ site.rankWithinTier ? '同档有先后，卡片编号表示该档内的完整排名；筛选后保留原排名。' : '同档不分先后，展示顺序仅用于排版。' }}</p><p>到访日期未提供时显示“未记录”；内容更新日期由作者维护。</p></details><p class="personal-note">仅代表个人体验，供你出发前参考。</p></section></div>
       <Guestbook />
     </template>
