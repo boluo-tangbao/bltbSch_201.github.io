@@ -22,7 +22,7 @@
 | 固定各城市的边框和地图颜色 | `rank/src/data/site.json` 的 `cityColors` |
 | 地址与地图位置 | `rank/src/data/places.json` 的 `location` |
 
-最简流程：上传图片 → 修改 JSON → 提交到 `main` → 在 Actions 等待绿色成功 → 打开榜单确认。无需改组件代码。也可以直接把条目、评价与图片交给 Agent 更新。
+最简流程：上传图片 → 修改 JSON → 推送到 `main` → Actions 自动记录档内顺序调整并部署 → 打开榜单确认。无需手动生成排名更新记录或改组件代码。也可以直接把条目、评价与图片交给 Agent 更新。
 
 ### 按城市填写
 

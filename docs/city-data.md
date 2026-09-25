@@ -130,23 +130,7 @@
 ]
 ```
 
-如果地点仍在原档位，只是调整同档内的先后顺序，使用 `ranking-change` 和 `placeIds`，不需要填写技术性的 `order` 数值：
-
-```json
-[
-  {
-    "id": "ranking-order-adjusted-20260923",
-    "date": "2026-09-23",
-    "type": "ranking-change",
-    "placeIds": [
-      "shanghai-shop-001",
-      "shanghai-shop-002",
-      "shanghai-shop-003"
-    ],
-    "note": "重新比较后调整同档内的先后顺序。"
-  }
-]
-```
+如果地点仍在原档位，只是调整同档内的先后顺序，推送到 `main` 后由 Pages 工作流自动生成 `ranking-change` 批次记录并同步相关条目的 `updatedAt`，随后 Actions bot 会提交记录并继续本轮部署。无需手动运行 npm 命令或填写调整原因。
 
 只改评价时把 `type` 写为 `edited`，同样可以使用 `placeIds`。只更新一个地点时，旧的 `placeId` 单条格式仍然兼容；单次调档可继续在记录顶层填写 `placeId`、`fromTier`、`toTier`。同一批次不能重复填写相同地点，也不能同时混用单条和批量字段。
 
