@@ -5,23 +5,12 @@ import { tierLabel } from '../utils/model'
 import { baiduMapUrl, googleMapsUrl, navigationUrl, placeAddress } from '../utils/cities'
 import AddressMap from './AddressMap.vue'
 import PlaceGallery from './PlaceGallery.vue'
+import { parseRichText, richTextClasses } from '../utils/richText'
 
 const props = defineProps<{ place: Place; rank?: number; color: string }>()
 const address = computed(() => placeAddress(props.place))
-const detailParagraphs = computed(() => props.place.details.split(/\r?\n+/).map((paragraph) => paragraph.trim()).filter(Boolean).map((paragraph) => {
-  const parts: { text: string; strong: boolean }[] = []
-  const marker = /\*\*(.+?)\*\*/g
-  let cursor = 0
-  for (const match of paragraph.matchAll(marker)) {
-    const start = match.index ?? 0
-    if (start > cursor) parts.push({ text: paragraph.slice(cursor, start), strong: false })
-    parts.push({ text: match[1], strong: true })
-    cursor = start + match[0].length
-  }
-  if (cursor < paragraph.length) parts.push({ text: paragraph.slice(cursor), strong: false })
-  return parts
-}))
-const visitNotes = computed(() => props.place.visitNotes ?? [])
+const detailParagraphs = computed(() => props.place.details.split(/\r?\n+/).map(paragraph => paragraph.trim()).filter(Boolean).map(paragraph => parseRichText(paragraph)))
+const visitNotes = computed(() => (props.place.visitNotes ?? []).map(note => parseRichText(note)))
 </script>
 
 <template>
@@ -39,11 +28,11 @@ const visitNotes = computed(() => props.place.visitNotes ?? [])
       </header>
       <p v-if="detailParagraphs.length" class="detail-review-deck">环境、店铺分布与逛店体验</p>
       <div v-if="detailParagraphs.length" class="detail-prose">
-        <p v-for="(paragraph, index) in detailParagraphs" :key="index"><template v-for="(part, partIndex) in paragraph" :key="partIndex"><strong v-if="part.strong">{{ part.text }}</strong><span v-else>{{ part.text }}</span></template></p>
+        <p v-for="(paragraph, index) in detailParagraphs" :key="index"><template v-for="(part, partIndex) in paragraph" :key="partIndex"><strong v-if="part.strong" :class="richTextClasses(part)">{{ part.text }}</strong><span v-else :class="richTextClasses(part)">{{ part.text }}</span></template></p>
       </div>
       <aside v-if="visitNotes.length" class="detail-visit-notes" aria-labelledby="visit-notes-heading">
         <header class="detail-visit-heading"><span class="detail-visit-icon" aria-hidden="true">✦</span><div><p class="section-label">PINEAPPLE'S PICKS</p><h3 id="visit-notes-heading">菠萝の建议</h3></div></header>
-        <ul class="detail-visit-list"><li v-for="(note, index) in visitNotes" :key="index"><span class="detail-visit-mark" aria-hidden="true">↗</span><p>{{ note }}</p></li></ul>
+        <ul class="detail-visit-list"><li v-for="(note, index) in visitNotes" :key="index"><span class="detail-visit-mark" aria-hidden="true">↗</span><p><template v-for="(part, partIndex) in note" :key="partIndex"><strong v-if="part.strong" :class="richTextClasses(part)">{{ part.text }}</strong><span v-else :class="richTextClasses(part)">{{ part.text }}</span></template></p></li></ul>
       </aside>
     </section>
     <PlaceGallery v-if="place.gallery.length" :images="place.gallery" :color="color" />
@@ -58,3 +47,9 @@ const visitNotes = computed(() => props.place.visitNotes ?? [])
     </footer>
   </article>
 </template>
+
+<style scoped>
+.text-red.text-red { color: #c62828; background: none; }
+.text-large { font-size: 1.25em; font-weight: 800; line-height: 1.6; }
+.text-huge { font-size: 2.8em; font-weight: 900; line-height: 1.3; }
+</style>

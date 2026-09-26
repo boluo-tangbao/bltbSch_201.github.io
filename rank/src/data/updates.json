@@ -1,5 +1,47 @@
 [
   {
+    "id": "suzhou-gallery-added-20260926",
+    "date": "2026-09-26",
+    "type": "edited",
+    "placeIds": [
+      "suzhou-shop-001",
+      "suzhou-shop-002",
+      "suzhou-shop-003"
+    ],
+    "note": "新增苏州三处商圈的精选实拍图集与封面，突出店铺陈列、切页、谷子集市和随舞现场。"
+  },
+  {
+    "id": "suzhou-maps-added-20260926",
+    "date": "2026-09-26",
+    "type": "edited",
+    "placeIds": [
+      "suzhou-shop-001",
+      "suzhou-shop-002",
+      "suzhou-shop-003"
+    ],
+    "note": "补充苏州三处商圈的核实地址，启用详情地图、全榜地图及导航。"
+  },
+  {
+    "id": "places-text-styling-20260926",
+    "date": "2026-09-26",
+    "type": "edited",
+    "placeIds": [
+      "shanghai-shop-002",
+      "shanghai-shop-004",
+      "shanghai-shop-005",
+      "shanghai-shop-009",
+      "shanghai-shop-018",
+      "shanghai-shop-013",
+      "shanghai-shop-014",
+      "shanghai-shop-015",
+      "shanghai-shop-017",
+      "suzhou-shop-001",
+      "suzhou-shop-002",
+      "suzhou-shop-003"
+    ],
+    "note": "调整上海、苏州介绍的字号与重点标红，补充雕像打卡小手记及长宁顺路补卡建议。"
+  },
+  {
     "id": "suzhou-places-added-20260926",
     "date": "2026-09-26",
     "type": "added",

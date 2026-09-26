@@ -37,7 +37,7 @@
       "tier": "hang",
       "order": 20,
       "summary": "全国唯一！The one",
-      "details": "请输入文本。\n\n这里都算一个景点了，无需多言....",
+      "details": "[huge]**请输入文本**[/huge]。\n\n这里都算一个景点了，无需多言....",
       "tags": [
         "官店",
         "手办模型",
@@ -52,7 +52,7 @@
       "cover": "images/places/Shanghai/南京路百联.png",
       "gallery": [],
       "visitedAt": "2026-08-29",
-      "updatedAt": "2026-09-19",
+      "updatedAt": "2026-09-26",
       "published": true,
       "location": {
         "lat": 31.239113,
@@ -91,7 +91,7 @@
       "tier": "top",
       "order": 10,
       "summary": "寄售浓度拉满，粥批、日谷和少女乐队爱好者别错过。",
-      "details": "店铺偏小，但店铺多；开在地铁站里。\n\n**寄售毫无疑问是华盛的代名词**，你高兴甚至能泡一天。\n\n除此之外，主日谷、少女乐队和明日方舟通行证的店铺都很有存在感，香澄社、玉见星间、葱谷八等等。",
+      "details": "店铺偏小，但店铺多；开在地铁站里。\n\n[large]**寄售**[/large]**毫无疑问是华盛的代名词**，你高兴甚至能泡一天。\n\n除此之外，主日谷、少女乐队和明日方舟通行证的店铺都很有存在感，香澄社、玉见星间、葱谷八等等。",
       "visitNotes": ["对于愿意耐心淘货的人，想找稀有物或比价可以多停一会儿；偏好整洁大店体验的话，建议降低预期。"],
       "tags": [
         "中古",
@@ -106,7 +106,7 @@
       "cover": "images/places/Shanghai/华盛.jpg",
       "gallery": [],
       "visitedAt": "2026-09-09",
-      "updatedAt": "2026-09-19",
+      "updatedAt": "2026-09-26",
       "published": true,
       "location": {
         "lat": 31.236076,
@@ -121,7 +121,7 @@
       "tier": "top",
       "order": 20,
       "summary": "沪上老牌二次元地标，文庙精神延续。",
-      "details": "高情商来说，百米香榭不走新商场式的精致路线；低情商，比较破旧。\n\n装修后味大的问题解决了一点，但是厕所仍然一言难尽。\n\n但店龄和品类沉淀换来了贴近霓虹风格的内容：**手办模型扎堆、扭蛋CD不少、牌佬聚集地**、一番赏和中古一半的商家也都有。\n\n对于热门ip爱好者肯定不是第一选择，但是百米属于过去的人。",
+      "details": "[large]高情商来说，百米香榭不走新商场式的精致路线；低情商，比较破旧。[/large]\n\n装修后味大的问题解决了一点，但是厕所仍然一言难尽。\n\n但店龄和品类沉淀换来了贴近霓虹风格的内容：**手办模型扎堆、扭蛋CD不少、牌佬聚集地**、一番赏和中古一半的商家也都有。\n\n对于热门ip爱好者肯定不是第一选择，但是百米属于过去的人。",
       "tags": [
         "中古",
         "手办模型",
@@ -136,7 +136,7 @@
       "cover": "images/places/Shanghai/百米.jpeg",
       "gallery": [],
       "visitedAt": "2026-08-29",
-      "updatedAt": "2026-09-19",
+      "updatedAt": "2026-09-26",
       "published": true,
       "location": {
         "lat": 31.235439,
@@ -237,7 +237,7 @@
       "tier": "above",
       "order": 40,
       "summary": "五角场百联的延伸，可顺路。",
-      "details": "有些谷子、扭蛋能补上杨浦百联缺失的感觉。\n\nbtw，附近合生汇偶有地偶活动，时间排得好时可以把这一带一次逛完。",
+      "details": "有些谷子、扭蛋能补上杨浦百联缺失的感觉。\n\nbtw，附近[red]合生汇[/red]偶有[red]地偶[/red]活动，时间排得好时可以把这一带一次逛完。",
       "tags": [
         "谷子集市",
         "快闪",
@@ -249,7 +249,7 @@
       "cover": "images/places/Shanghai/五角场万达.jpg",
       "gallery": [],
       "visitedAt": "2025-11-02",
-      "updatedAt": "2026-09-19",
+      "updatedAt": "2026-09-26",
       "published": true,
       "location": {
         "lat": 31.304204,
@@ -337,6 +337,7 @@
       "order": 30,
       "summary": "二游外场~米哈游鹰角",
       "details": "终末地，王者荣耀，星铁等等，附近的游戏公司和游戏博物馆为它提供巨大附加价值。\n\n冲着外场来没问题，喜欢这些IP也推荐来，谷店只算是附带产品。",
+      "visitNotes": ["看到[red]**流萤**[/red]大雕像，真的很难拒绝；光是冲着她来看看、拍张照，就有了来这一趟的理由。"],
       "tags": [
         "大雕塑",
         "扭蛋"
@@ -344,7 +345,7 @@
       "cover": "images/places/Shanghai/鑫耀光环.jpg",
       "gallery": [],
       "visitedAt": "2026-09-09",
-      "updatedAt": "2026-09-19",
+      "updatedAt": "2026-09-26",
       "published": true,
       "location": {
         "lat": 31.168415,
@@ -360,6 +361,7 @@
       "order": 50,
       "summary": "1:1自由，高达粉必去",
       "details": "Bandai全球布局，全世界也没几台。\n\n商场整体为日系，可以来体验一下。",
+      "visitNotes": ["面对[red]**自由高达**[/red]大雕像，实在很难拒绝；1:1 的自由站在眼前，高达粉哪能忍住不来打卡。"],
       "tags": [
         "大雕塑",
         "手办模型",
@@ -368,7 +370,7 @@
       "cover": "images/places/Shanghai/番外/高达基地/lalaport.jpg",
       "gallery": [],
       "visitedAt": "2026-05-23",
-      "updatedAt": "2026-09-19",
+      "updatedAt": "2026-09-26",
       "published": true,
       "location": {
         "lat": 31.254933,
@@ -383,7 +385,7 @@
       "tier": "npc",
       "order": 70,
       "summary": "Jump、快闪和宫崎骏",
-      "details": "除了Jump，还有偶尔的快闪，整体不如TPY中心。\n\n交大吃的好差...",
+      "details": "除了[red]Jump[/red]，还有偶尔的快闪，整体不如TPY中心。\n\n交大吃的好差...",
       "tags": [
         "快闪",
         "官店"
@@ -391,7 +393,7 @@
       "cover": "images/places/Shanghai/美罗城.jpg",
       "gallery": [],
       "visitedAt": "2026-09-18",
-      "updatedAt": "2026-09-19",
+      "updatedAt": "2026-09-26",
       "published": true,
       "location": {
         "lat": 31.19482,
@@ -434,7 +436,7 @@
       "order": 10,
       "summary": "福瑞吉祥物。卡牌能看，其他内容撑不起。",
       "details": "这里几乎由卡牌店撑着，K-pop 和其他二次元内容都比较零散，逛起来很快就到头。",
-      "visitNotes": ["住在长宁时可以顺路补卡；想认真逛谷，去南京路更省时间。"],
+      "visitNotes": ["**住在长宁时可以顺路补卡**"],
       "tags": [
         "Kpop",
         "卡牌"
@@ -442,7 +444,7 @@
       "cover": "images/places/Shanghai/长宁巴黎春天.png",
       "gallery": [],
       "visitedAt": "2026-05-27",
-      "updatedAt": "2026-09-20",
+      "updatedAt": "2026-09-26",
       "published": true,
       "location": {
         "lat": 31.213585,
@@ -457,7 +459,7 @@
       "tier": "above",
       "order": 60,
       "summary": "普陀一哥！不只地偶和舞萌，换新后终于好逛了。",
-      "details": "环球港的底色还是地偶和舞萌，但换新后不再只靠它们撑场：谷店和可逛的内容更丰富，整体也更有活力。\n\n还有目前上海第一家也是唯一一家线下闲鱼商店。\n\n和市中心头部商圈相比，选店密度仍有差距；放在普陀，它是区域主场。",
+      "details": "环球港的底色还是[red]地偶[/red]和[red]舞萌[/red]，但换新后不再只靠它们撑场：谷店和可逛的内容更丰富，整体也更有活力。\n\n还有目前上海第一家也是唯一一家线下闲鱼商店。\n\n和市中心头部商圈相比，选店密度仍有差距；放在普陀，它是区域主场。",
       "visitNotes": ["如果安排环球港一带，值得留出半天慢慢逛。"],
       "tags": [
         "地偶",
@@ -472,7 +474,7 @@
       "cover": "images/places/Shanghai/环球港.jpg",
       "gallery": [],
       "visitedAt": "2026-07-08",
-      "updatedAt": "2026-09-20",
+      "updatedAt": "2026-09-26",
       "published": true,
       "location": {
         "lat": 31.235078,
@@ -689,17 +691,17 @@
       "tier": "bad",
       "order": 20,
       "summary": "只有二次元墙和零散小店，不值得专程跑一趟，拉中拉。",
-      "details": "只看到一面二次元墙和零散的小店，丝毫没找到能逛的路线，根本不值得专程跑一趟，拉中拉。",
+      "details": "只看到一面二次元墙和零散的小店，丝毫没找到能逛的路线，[red]**根本不值得专程跑一趟，拉中拉**[/red]。",
       "tags": [
         "手办模型",
         "卡牌"
       ],
-      "cover": null,
-      "gallery": [],
-      "visitedAt": null,
+      "cover": "images/places/Suzhou/XiangchengTianjie/1790155728214.webp",
+      "gallery": [{"src":"images/places/Suzhou/XiangchengTianjie/1790155728214.webp","alt":"龙湖相城天街的建筑与室外连廊","group":"商场外部"},{"src":"images/places/Suzhou/XiangchengTianjie/二次元墙.webp","alt":"相城天街二次元互动留言墙","group":"商场实拍"},{"src":"images/places/Suzhou/XiangchengTianjie/1790155727878.webp","alt":"玩集萌店面的模型与潮玩陈列","group":"零散店铺"},{"src":"images/places/Suzhou/XiangchengTianjie/1790155728369.webp","alt":"相城天街卡牌店铺与赛事信息屏","group":"零散店铺"}],
+      "visitedAt": "2026-09-19",
       "updatedAt": "2026-09-26",
       "published": true,
-      "location": null
+      "location": "江苏省苏州市相城区相城大道1399号龙湖相城天街"
     },
     {
       "id": "suzhou-shop-002",
@@ -707,7 +709,7 @@
       "tier": "top",
       "order": 70,
       "summary": "能一路逛下去的亚文化副本，颇有“小第一百货”的味道。",
-      "details": "星悦汇位于苏州中心商圈，像一栋可以一路刷下去的亚文化副本：谷店、K-pop、猫咖、电玩、潮玩和吃的都接得上。\n\n令我印象较深的是浮游猫旗舰店和不少的日谷店，很有看头。整体谷店数量多，既有国内名店，也有好价日谷和个人模型店，货架够满、价格和质量在线；新番谷稍少，整体也偏女性向，但逛起来有自己的内容。\n\n颇有“小第一百货”的味道。",
+      "details": "星悦汇位于苏州中心商圈，像一栋可以一路刷下去的亚文化副本：谷店、K-pop、猫咖、电玩、潮玩和吃的都接得上。\n\n令我印象较深的是[red]**浮游猫旗舰店**[/red]和不少的日谷店，很有看头。整体谷店数量多，既有国内名店，也有[red]好价日谷和个人模型店[/red]，货架够满、价格和质量在线；**新番谷稍少，整体也偏女性向**，但逛起来有自己的内容。\n\n颇有[red]**“小第一百货”**[/red]的味道。",
       "tags": [
         "寄售",
         "卡牌",
@@ -716,12 +718,12 @@
         "Kpop",
         "lolita"
       ],
-      "cover": null,
-      "gallery": [],
-      "visitedAt": null,
+      "cover": "images/places/Suzhou/Xingyuehui/星悦汇外部.webp",
+      "gallery": [{"src":"images/places/Suzhou/Xingyuehui/星悦汇外部.webp","alt":"星悦汇外部广场与商场入口","group":"商场氛围"},{"src":"images/places/Suzhou/Xingyuehui/星悦汇内部1.webp","alt":"星悦汇谷店相连的楼层通道","group":"商场氛围"},{"src":"images/places/Suzhou/Xingyuehui/星悦汇吉祥物.webp","alt":"星悦汇商场中的大型角色装置","group":"商场氛围"},{"src":"images/places/Suzhou/Xingyuehui/浮游猫痛包店.webp","alt":"浮游猫痛包旗舰店入口与店内展示","group":"谷店招牌"},{"src":"images/places/Suzhou/Xingyuehui/AkibaGo.webp","alt":"AKIBA GO 店面与谷子陈列","group":"谷店招牌"},{"src":"images/places/Suzhou/Xingyuehui/三月兽.webp","alt":"三月兽店面与店内货架","group":"谷店招牌"},{"src":"images/places/Suzhou/Xingyuehui/飞社长.webp","alt":"飞社长店面与店内谷子陈列","group":"谷店招牌"},{"src":"images/places/Suzhou/Xingyuehui/好价日谷店.webp","alt":"日谷店内密集的周边货架","group":"日谷与陈列"},{"src":"images/places/Suzhou/Xingyuehui/好价日谷店3.webp","alt":"日谷店摆满周边的分层展示架","group":"日谷与陈列"},{"src":"images/places/Suzhou/Xingyuehui/好价日谷店2.webp","alt":"日谷店手写的作品清单与陈列","group":"日谷与陈列"},{"src":"images/places/Suzhou/Xingyuehui/模型店.webp","alt":"ONE TWO GOODS 模型店入口与展示柜","group":"模型与潮玩"},{"src":"images/places/Suzhou/Xingyuehui/模玩熊.webp","alt":"模玩熊店内的模型与周边陈列","group":"模型与潮玩"},{"src":"images/places/Suzhou/Xingyuehui/扭扭城.webp","alt":"扭扭城成排的扭蛋机与店内装饰","group":"扭蛋与同好"},{"src":"images/places/Suzhou/Xingyuehui/扭扭城1.webp","alt":"扭扭城的同好留言墙与装饰","group":"扭蛋与同好"},{"src":"images/places/Suzhou/Xingyuehui/Kpop.webp","alt":"星悦汇 K-pop 周边店铺所在区域","group":"亚文化空间"},{"src":"images/places/Suzhou/Xingyuehui/jk店.webp","alt":"星悦汇 JK 服饰店面与展示","group":"亚文化空间"},{"src":"images/places/Suzhou/Xingyuehui/商场中的各类红黑榜1.webp","alt":"星悦汇商场内的作品红黑榜投票墙","group":"亚文化空间"}],
+      "visitedAt": "2026-09-19",
       "updatedAt": "2026-09-26",
       "published": true,
-      "location": null
+      "location": "江苏省苏州市工业园区苏州中心广场68幢星悦汇"
     },
     {
       "id": "suzhou-shop-003",
@@ -729,7 +731,7 @@
       "tier": "above",
       "order": 90,
       "summary": "谷店、活动和谷子集市扎堆，二次元氛围有“活人感”。",
-      "details": "金地的谷店和活动扎堆，还有初具规模的谷子集市。\n\n谷店也各具特色，比如“恰谷恰谷”的大量线下切页售卖，其他谷质量也在线。\n\n这里的二次元氛围一直有“活人感”，商场仍在装修改造，期待后续升级。",
+      "details": "金地的谷店和活动扎堆，还有[red]**初具规模的谷子集市**[/red]。\n\n谷店也各具特色，比如[red]“恰谷恰谷”的大量线下切页售卖[/red]，其他谷质量也在线。\n\n这里的二次元氛围一直有[red]**“活人感”**[/red]，商场仍在装修改造，期待后续升级。",
       "tags": [
         "谷子集市",
         "卡牌",
@@ -739,12 +741,12 @@
         "中古",
         "lolita"
       ],
-      "cover": null,
-      "gallery": [],
-      "visitedAt": null,
+      "cover": "images/places/Suzhou/SUONE/金地广场内部.webp",
+      "gallery": [{"src":"images/places/Suzhou/SUONE/金地广场内部.webp","alt":"金地广场的二次元主题店铺与通道","group":"商场氛围"},{"src":"images/places/Suzhou/SUONE/跳蚤市场.webp","alt":"金地广场跳蚤市场入口与摊位区域","group":"谷子集市"},{"src":"images/places/Suzhou/SUONE/恰谷.webp","alt":"恰谷恰谷店铺招牌与入口","group":"恰谷与切页"},{"src":"images/places/Suzhou/SUONE/恰谷1.webp","alt":"恰谷恰谷分箱摆放的切页与周边","group":"恰谷与切页"},{"src":"images/places/Suzhou/SUONE/恰谷2.webp","alt":"恰谷恰谷切页篮筐的近景","group":"恰谷与切页"},{"src":"images/places/Suzhou/SUONE/中古.webp","alt":"金地广场中古店内的货架与展示柜","group":"谷店与陈列"},{"src":"images/places/Suzhou/SUONE/手动一番赏.webp","alt":"金地广场手动一番赏展示与机器","group":"谷店与陈列"},{"src":"images/places/Suzhou/SUONE/签名墙.webp","alt":"金地广场同好签名留言墙","group":"商场氛围"},{"src":"images/places/Suzhou/SUONE/随舞3.webp","alt":"金地广场中庭随舞活动的整体现场","group":"随舞现场"},{"src":"images/places/Suzhou/SUONE/随舞.webp","alt":"金地广场随舞活动中的表演者","group":"随舞现场"}],
+      "visitedAt": "2026-09-19",
       "updatedAt": "2026-09-26",
       "published": true,
-      "location": null
+      "location": "江苏省苏州市姑苏区新市路1号SUONE金地广场"
     }
   ],
   "兰州": []
