@@ -63,9 +63,9 @@ onBeforeUnmount(() => {
       <div>
         <p class="section-label">PHOTO ALBUM</p>
         <h2 id="place-gallery-heading">现场图集</h2>
-        <p class="place-gallery-intro">按区域整理的逛店记录，点开图片可看大图</p>
+        <p class="place-gallery-intro">按区域整理的逛店记录，点击图片看大图，视频可直接播放</p>
       </div>
-      <span class="place-gallery-count"><strong>{{ images.length }}</strong> 张记录</span>
+      <span class="place-gallery-count"><strong>{{ images.length }}</strong> 个素材</span>
     </header>
 
     <nav v-if="groups.length > 1" class="place-gallery-nav" aria-label="图集分组">
@@ -74,29 +74,39 @@ onBeforeUnmount(() => {
 
     <div class="place-gallery-groups">
       <section v-for="group in groups" :id="group.id" :key="group.id" class="place-gallery-group" :aria-label="group.name">
-        <div class="place-gallery-group-heading"><h3>{{ group.name }}</h3><span>{{ group.images.length }} 张</span></div>
+        <div class="place-gallery-group-heading"><h3>{{ group.name }}</h3><span>{{ group.images.length }} 个素材</span></div>
         <div class="place-gallery-grid">
-          <button v-for="entry in group.images" :key="entry.image.src" class="place-gallery-item" type="button" :aria-label="`查看：${entry.image.alt}`" @click="openGallery(entry.index)">
-            <img :src="assetUrl(entry.image.src)" :alt="entry.image.alt" loading="lazy" decoding="async">
+          <article v-for="entry in group.images" :key="entry.image.src" class="place-gallery-item">
+            <video v-if="entry.image.type === 'video'" class="place-gallery-inline-video" controls preload="metadata" playsinline :aria-label="entry.image.alt">
+              <source :src="assetUrl(entry.image.src)" type="video/mp4">
+              浏览器暂不支持播放此视频。
+            </video>
+            <button v-else class="place-gallery-image-preview" type="button" :aria-label="`查看：${entry.image.alt}`" @click="openGallery(entry.index)">
+              <img :src="assetUrl(entry.image.src)" :alt="entry.image.alt" loading="lazy" decoding="async">
+              <span class="place-gallery-zoom" aria-hidden="true">↗</span>
+            </button>
+            <span v-if="entry.image.type === 'video'" class="place-gallery-video-badge" aria-hidden="true">VIDEO</span>
             <span class="place-gallery-item-caption">{{ entry.image.alt }}</span>
-            <span class="place-gallery-zoom" aria-hidden="true">↗</span>
-          </button>
+            <a v-if="entry.image.sourceUrl" class="place-gallery-source" :href="entry.image.sourceUrl" target="_blank" rel="noopener noreferrer">来源：{{ entry.image.sourceName || '原始页面' }} ↗</a>
+          </article>
         </div>
       </section>
     </div>
 
     <Teleport to="body">
-      <div v-if="currentImage" class="place-gallery-lightbox" role="dialog" aria-modal="true" :aria-label="`${currentImage.alt}，第 ${(activeIndex ?? 0) + 1} 张，共 ${images.length} 张`" @click.self="closeGallery">
+      <div v-if="currentImage" class="place-gallery-lightbox" role="dialog" aria-modal="true" :aria-label="`${currentImage.alt}，第 ${(activeIndex ?? 0) + 1} 个，共 ${images.length} 个`" @click.self="closeGallery">
         <button class="place-gallery-close" type="button" aria-label="关闭大图" @click="closeGallery">×</button>
-        <button class="place-gallery-arrow is-previous" type="button" aria-label="上一张" @click="showRelativeImage(-1)">‹</button>
+        <button class="place-gallery-arrow is-previous" type="button" aria-label="上一个素材" @click="showRelativeImage(-1)">‹</button>
         <figure class="place-gallery-viewer">
-          <img :src="assetUrl(currentImage.src)" :alt="currentImage.alt">
-          <figcaption><span>{{ currentImage.alt }}</span><small>{{ (activeIndex ?? 0) + 1 }} / {{ images.length }}</small></figcaption>
+          <video v-if="currentImage.type === 'video'" class="place-gallery-lightbox-video" controls preload="metadata" playsinline :aria-label="currentImage.alt">
+            <source :src="assetUrl(currentImage.src)" type="video/mp4">
+            浏览器暂不支持播放此视频。
+          </video>
+          <img v-else :src="assetUrl(currentImage.src)" :alt="currentImage.alt">
+          <figcaption><span>{{ currentImage.alt }}</span><a v-if="currentImage.sourceUrl" :href="currentImage.sourceUrl" target="_blank" rel="noopener noreferrer">来源：{{ currentImage.sourceName || '原始页面' }} ↗</a><small>{{ (activeIndex ?? 0) + 1 }} / {{ images.length }}</small></figcaption>
         </figure>
-        <button class="place-gallery-arrow is-next" type="button" aria-label="下一张" @click="showRelativeImage(1)">›</button>
+        <button class="place-gallery-arrow is-next" type="button" aria-label="下一个素材" @click="showRelativeImage(1)">›</button>
       </div>
     </Teleport>
   </section>
 </template>
-
-

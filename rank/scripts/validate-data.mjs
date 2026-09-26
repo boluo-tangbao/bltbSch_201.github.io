@@ -38,9 +38,14 @@ export function validateData(site, groups, updates, imageExists = () => true) {
     }
   }
   const ids = new Set(), updateIds = new Set(), orders = new Set()
+  const safeAssetPath = path => typeof path === 'string' && /^images\/places\//.test(path) && !path.split('/').some(s => !s || s === '..' || s === '.') && !/[\\?#%]/.test(path)
   const image = (path, file, id) => {
-    if (typeof path !== 'string' || !/^images\/places\//.test(path) || path.split('/').some(s => !s || s === '..' || s === '.') || /[\\?#%]/.test(path) || !/\.(webp|png|jpe?g|avif|gif|svg)$/i.test(path)) fail(file, id, `图片必须使用 images/places/ 下的相对图片路径：${path}`)
+    if (!safeAssetPath(path) || !/\.(webp|png|jpe?g|avif|gif|svg)$/i.test(path)) fail(file, id, `图片必须使用 images/places/ 下的相对图片路径：${path}`)
     else if (!imageExists(path)) fail(file, id, `图片文件不存在：${path}`)
+  }
+  const video = (path, file, id) => {
+    if (!safeAssetPath(path) || !/\.mp4$/i.test(path)) fail(file, id, `视频必须使用 images/places/ 下的 MP4 相对路径：${path}`)
+    else if (!imageExists(path)) fail(file, id, `视频文件不存在：${path}`)
   }
   for (const p of places) {
     if (!p || typeof p !== 'object') { fail('places.json', '?', '条目必须是对象'); continue }
@@ -64,7 +69,14 @@ export function validateData(site, groups, updates, imageExists = () => true) {
     if (p.cover !== null) image(p.cover, 'places.json', p.id)
     if (p.coverPosition !== undefined && (!Array.isArray(p.coverPosition) || p.coverPosition.length !== 2 || p.coverPosition.some(v => !Number.isFinite(v) || v < 0 || v > 100))) fail('places.json', p.id, 'coverPosition 必须为两个 0–100 数字')
     if (!Array.isArray(p.gallery)) fail('places.json', p.id, 'gallery 必须为数组')
-    else for (const g of p.gallery) { image(g?.src, 'places.json', p.id); if (typeof g?.alt !== 'string' || !g.alt.trim()) fail('places.json', p.id, 'gallery 图片需要 alt') }
+    else for (const g of p.gallery) {
+      if (!g || typeof g !== 'object' || Array.isArray(g)) { fail('places.json', p.id, 'gallery 项必须是对象'); continue }
+      if (g.type !== undefined && !['image', 'video'].includes(g.type)) fail('places.json', p.id, 'gallery type 只能是 image 或 video')
+      if (g.type === 'video') video(g.src, 'places.json', p.id)
+      else image(g.src, 'places.json', p.id)
+      if (typeof g.alt !== 'string' || !g.alt.trim()) fail('places.json', p.id, 'gallery 图片或视频需要 alt')
+      if (g.group !== undefined && (typeof g.group !== 'string' || !g.group.trim())) fail('places.json', p.id, 'gallery group 必须是非空文字')
+    }
     if (typeof p.location === 'string') {
       if (!p.location.trim()) fail('places.json', p.id, '地址不能为空文字，未知请填 null')
     } else if (p.location != null) {
