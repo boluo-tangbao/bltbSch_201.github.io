@@ -2,7 +2,7 @@ export type TierId = 'hang' | 'top' | 'above' | 'npc' | 'bad'
 export interface GalleryMedia { src: string; alt: string; group?: string; type?: 'image' | 'video'; sourceName?: string; sourceUrl?: string }
 export interface PlaceEntry {
   id: string; name: string; tier: TierId; order: number
-  summary: string; details: string; tags: string[]
+  summary: string; details: string; visitNotes?: string[]; tags: string[]
   cover: string | null; coverPosition?: [number, number]
   gallery: GalleryMedia[]
   visitedAt: string | null; updatedAt: string; published: boolean
