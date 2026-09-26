@@ -1,7 +1,7 @@
 import config from '../data/community.json'
 export const repoUrl = `https://github.com/${config.repository}`
 export const issueUrl = (number: number) => `${repoUrl}/issues/${number}`
-export const guestbookUrl = `${issueUrl(config.guestbookIssue)}#new_comment_field`
+export const bilibiliProfileUrl = config.bilibiliProfile
 export const feedbackUrl = `${repoUrl}/issues?q=${encodeURIComponent(`is:issue label:${config.feedbackLabel}`)}`
 export async function github<T>(path: string): Promise<T> {
   const response = await fetch(`https://api.github.com/repos/${config.repository}${path}`, {

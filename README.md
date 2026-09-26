@@ -71,7 +71,7 @@ Vite 默认 base 为 `/bltbSch_201.github.io/rank/`；CI 从 `configure-pages` �
 
 ## 访问统计、QA 和留言
 
-新增 `/rank/qa/` 收集建议，`/rank/#guestbook` 是榜单页底留言区。访客在网页阅读，通过 GitHub 登录后提交；作者在仓库 Issues 中回复和管理。三个榜单页面的页脚接入不蒜子访问次数，打开或刷新计一次，不做 IP 去重。
+新增 `/rank/qa/` 收集建议，`/rank/#guestbook` 是榜单页底留言入口，跳转作者 B 站主页私信；建议仍通过 GitHub Issues 提交并跟进。三个榜单页面的页脚接入不蒜子访问次数，打开或刷新计一次，不做 IP 去重。
 
 配置、计数范围、管理方式和验证说明见 [社区功能说明](docs/community.md)。
 
