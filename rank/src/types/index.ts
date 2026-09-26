@@ -1,9 +1,10 @@
 export type TierId = 'hang' | 'top' | 'above' | 'npc' | 'bad'
+export interface GalleryImage { src: string; alt: string; group?: string }
 export interface PlaceEntry {
   id: string; name: string; tier: TierId; order: number
   summary: string; details: string; tags: string[]
   cover: string | null; coverPosition?: [number, number]
-  gallery: { src: string; alt: string }[]
+  gallery: GalleryImage[]
   visitedAt: string | null; updatedAt: string; published: boolean
   location?: string | { lat: number; lng: number; coordinateSystem: 'wgs84'; address: string } | null
   mapSnapshot?: { src: string; alt: string; updatedAt: string }

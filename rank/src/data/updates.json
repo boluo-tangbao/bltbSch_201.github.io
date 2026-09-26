@@ -39,5 +39,18 @@
       "guangzhou-shop-005"
     ],
     "note": "首次加入榜单。"
+  },
+  {
+    "id": "guangzhou-details-expanded-20260925",
+    "date": "2026-09-25",
+    "type": "edited",
+    "placeIds": [
+      "guangzhou-shop-001",
+      "guangzhou-shop-002",
+      "guangzhou-shop-003",
+      "guangzhou-shop-004",
+      "guangzhou-shop-005"
+    ],
+    "note": "补充广州各地的个人探店体验、区域特点和逛店建议。"
   }
 ]
