@@ -138,3 +138,24 @@ test('coordinate-backed places never call Baidu online conversion', async () => 
   assert.ok(Math.abs(result.lng - 121.48197256) < 0.000002)
   assert.ok(Math.abs(result.lat - 31.24134309) < 0.000002)
 })
+
+test('published Suzhou locations work when online address resolution is unavailable', async () => {
+  const groups = JSON.parse(readFileSync(new URL('../src/data/places.json', import.meta.url), 'utf8'))
+  const entries = groups['苏州'].filter(p => p.published)
+  assert.equal(entries.length, 3)
+  const api = {
+    Point: class { constructor(lng, lat) { this.lng = lng; this.lat = lat } },
+    Geocoder: class { constructor() { throw new Error('address resolution is unavailable') } },
+    Convertor: class { constructor() { throw new Error('online conversion is unavailable') } },
+  }
+  for (const entry of entries) {
+    const p = { ...entry, city: '苏州' }
+    assert.ok(hasCoordinates(p), `${p.name} needs fixed coordinates`)
+    assert.equal(p.location.coordinateSystem, 'wgs84')
+    assert.ok(p.location.lng > 120.6 && p.location.lng < 120.7)
+    assert.ok(p.location.lat > 31.28 && p.location.lat < 31.38)
+    const point = await pointForPlace(api, p)
+    assert.ok(Number.isFinite(point.lng) && Number.isFinite(point.lat))
+    assert.equal(new URL(navigationUrl(p)).pathname, '/marker')
+  }
+})

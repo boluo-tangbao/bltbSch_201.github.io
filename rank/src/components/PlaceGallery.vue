@@ -63,7 +63,7 @@ onBeforeUnmount(() => {
       <div>
         <p class="section-label">PHOTO ALBUM</p>
         <h2 id="place-gallery-heading">现场图集</h2>
-        <p class="place-gallery-intro">按区域整理的逛店记录，点击图片看大图，视频可直接播放</p>
+        <p class="place-gallery-intro">逛店照片与现场视频，点击图片看大图，视频可直接播放</p>
       </div>
       <span class="place-gallery-count"><strong>{{ images.length }}</strong> 个素材</span>
     </header>
@@ -77,7 +77,7 @@ onBeforeUnmount(() => {
         <div class="place-gallery-group-heading"><h3>{{ group.name }}</h3><span>{{ group.images.length }} 个素材</span></div>
         <div class="place-gallery-grid">
           <article v-for="entry in group.images" :key="entry.image.src" class="place-gallery-item">
-            <video v-if="entry.image.type === 'video'" class="place-gallery-inline-video" controls preload="metadata" playsinline :aria-label="entry.image.alt">
+            <video v-if="entry.image.type === 'video'" class="place-gallery-inline-video" controls preload="metadata" playsinline :poster="entry.image.poster ? assetUrl(entry.image.poster) : undefined" :aria-label="entry.image.alt">
               <source :src="assetUrl(entry.image.src)" type="video/mp4">
               浏览器暂不支持播放此视频。
             </video>
@@ -98,7 +98,7 @@ onBeforeUnmount(() => {
         <button class="place-gallery-close" type="button" aria-label="关闭大图" @click="closeGallery">×</button>
         <button class="place-gallery-arrow is-previous" type="button" aria-label="上一个素材" @click="showRelativeImage(-1)">‹</button>
         <figure class="place-gallery-viewer">
-          <video v-if="currentImage.type === 'video'" class="place-gallery-lightbox-video" controls preload="metadata" playsinline :aria-label="currentImage.alt">
+          <video v-if="currentImage.type === 'video'" class="place-gallery-lightbox-video" controls preload="metadata" playsinline :poster="currentImage.poster ? assetUrl(currentImage.poster) : undefined" :aria-label="currentImage.alt">
             <source :src="assetUrl(currentImage.src)" type="video/mp4">
             浏览器暂不支持播放此视频。
           </video>

@@ -74,6 +74,7 @@ export function validateData(site, groups, updates, imageExists = () => true) {
       if (g.type !== undefined && !['image', 'video'].includes(g.type)) fail('places.json', p.id, 'gallery type 只能是 image 或 video')
       if (g.type === 'video') video(g.src, 'places.json', p.id)
       else image(g.src, 'places.json', p.id)
+      if (g.poster !== undefined) image(g.poster, 'places.json', p.id)
       if (typeof g.alt !== 'string' || !g.alt.trim()) fail('places.json', p.id, 'gallery 图片或视频需要 alt')
       if (g.group !== undefined && (typeof g.group !== 'string' || !g.group.trim())) fail('places.json', p.id, 'gallery group 必须是非空文字')
     }

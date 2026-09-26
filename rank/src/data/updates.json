@@ -1,5 +1,50 @@
 [
   {
+    "id": "guangzhou-gallery-groups-20260926",
+    "date": "2026-09-26",
+    "type": "edited",
+    "placeIds": [
+      "guangzhou-shop-001",
+      "guangzhou-shop-002",
+      "guangzhou-shop-003",
+      "guangzhou-shop-004"
+    ],
+    "note": "广州照片与视频统一按商圈外部、店铺外景、店铺内景和额外活动整理，简化展示标题。"
+  },
+  {
+    "id": "suzhou-gallery-groups-20260926",
+    "date": "2026-09-26",
+    "type": "edited",
+    "placeIds": [
+      "suzhou-shop-001",
+      "suzhou-shop-002",
+      "suzhou-shop-003"
+    ],
+    "note": "苏州照片与视频统一按商圈外部、店铺外景、店铺内景和额外活动整理。"
+  },
+  {
+    "id": "suzhou-videos-and-gallery-names-20260926",
+    "date": "2026-09-26",
+    "type": "edited",
+    "placeIds": [
+      "suzhou-shop-001",
+      "suzhou-shop-002",
+      "suzhou-shop-003"
+    ],
+    "note": "加入星悦汇与金地广场三段现场视频，苏州图集统一为现场照片与现场视频，简化标题并统一资源文件命名。"
+  },
+  {
+    "id": "suzhou-coordinates-fixed-20260926",
+    "date": "2026-09-26",
+    "type": "edited",
+    "placeIds": [
+      "suzhou-shop-001",
+      "suzhou-shop-002",
+      "suzhou-shop-003"
+    ],
+    "note": "手动补齐苏州三处商圈的 WGS84 坐标，地图与导航直接使用坐标，绕过在线地址解析。"
+  },
+  {
     "id": "suzhou-gallery-added-20260926",
     "date": "2026-09-26",
     "type": "edited",
