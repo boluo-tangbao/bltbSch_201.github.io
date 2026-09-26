@@ -682,6 +682,70 @@
       }
     }
   ],
-  "苏州": [],
+  "苏州": [
+    {
+      "id": "suzhou-shop-001",
+      "name": "龙湖相城天街",
+      "tier": "bad",
+      "order": 20,
+      "summary": "只有二次元墙和零散小店，不值得专程跑一趟，拉中拉。",
+      "details": "只看到一面二次元墙和零散的小店，丝毫没找到能逛的路线，根本不值得专程跑一趟，拉中拉。",
+      "tags": [
+        "手办模型",
+        "卡牌"
+      ],
+      "cover": null,
+      "gallery": [],
+      "visitedAt": null,
+      "updatedAt": "2026-09-26",
+      "published": true,
+      "location": null
+    },
+    {
+      "id": "suzhou-shop-002",
+      "name": "星悦汇",
+      "tier": "top",
+      "order": 70,
+      "summary": "能一路逛下去的亚文化副本，颇有“小第一百货”的味道。",
+      "details": "星悦汇位于苏州中心商圈，像一栋可以一路刷下去的亚文化副本：谷店、K-pop、猫咖、电玩、潮玩和吃的都接得上。\n\n令我印象较深的是浮游猫旗舰店和不少的日谷店，很有看头。整体谷店数量多，既有国内名店，也有好价日谷和个人模型店，货架够满、价格和质量在线；新番谷稍少，整体也偏女性向，但逛起来有自己的内容。\n\n颇有“小第一百货”的味道。",
+      "tags": [
+        "寄售",
+        "卡牌",
+        "扭蛋",
+        "手办模型",
+        "Kpop",
+        "lolita"
+      ],
+      "cover": null,
+      "gallery": [],
+      "visitedAt": null,
+      "updatedAt": "2026-09-26",
+      "published": true,
+      "location": null
+    },
+    {
+      "id": "suzhou-shop-003",
+      "name": "SUONE金地广场",
+      "tier": "above",
+      "order": 90,
+      "summary": "谷店、活动和谷子集市扎堆，二次元氛围有“活人感”。",
+      "details": "金地的谷店和活动扎堆，还有初具规模的谷子集市。\n\n谷店也各具特色，比如“恰谷恰谷”的大量线下切页售卖，其他谷质量也在线。\n\n这里的二次元氛围一直有“活人感”，商场仍在装修改造，期待后续升级。",
+      "tags": [
+        "谷子集市",
+        "卡牌",
+        "快闪",
+        "随舞",
+        "同人",
+        "中古",
+        "lolita"
+      ],
+      "cover": null,
+      "gallery": [],
+      "visitedAt": null,
+      "updatedAt": "2026-09-26",
+      "published": true,
+      "location": null
+    }
+  ],
   "兰州": []
 }

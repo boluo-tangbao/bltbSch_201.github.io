@@ -1,5 +1,16 @@
 [
   {
+    "id": "suzhou-places-added-20260926",
+    "date": "2026-09-26",
+    "type": "added",
+    "placeIds": [
+      "suzhou-shop-001",
+      "suzhou-shop-002",
+      "suzhou-shop-003"
+    ],
+    "note": "新增苏州龙湖相城天街、星悦汇和SUONE金地广场的评级、探店评价及标签。"
+  },
+  {
     "id": "places-added-20260920",
     "date": "2026-09-20",
     "type": "added",
