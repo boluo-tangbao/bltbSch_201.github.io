@@ -1,10 +1,14 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, ref } from 'vue'
+import { computed, nextTick, onBeforeUnmount, ref } from 'vue'
 import type { Place } from '../types'
-import { assetUrl } from '../utils/assets'
+import { assetUrl, previewUrl, previewSrcset } from '../utils/assets'
+import FullImage from './FullImage.vue'
 
 const props = defineProps<{ images: Place['gallery']; color: string }>()
 const activeIndex = ref<number | null>(null)
+const closeButton = ref<HTMLButtonElement>()
+let previousFocus: HTMLElement | null = null
+let previousOverflow = ''
 
 const groups = computed(() => {
   const result: { name: string; id: string; images: { image: Place['gallery'][number]; index: number }[] }[] = []
@@ -35,15 +39,19 @@ function scrollToGroup(id: string) {
 }
 
 function openGallery(index: number) {
+  previousFocus = document.activeElement as HTMLElement | null
+  previousOverflow = document.body.style.overflow
   activeIndex.value = index
   document.body.style.overflow = 'hidden'
   window.addEventListener('keydown', handleKeydown)
+  nextTick(() => closeButton.value?.focus())
 }
 
 function closeGallery() {
   activeIndex.value = null
-  document.body.style.overflow = ''
+  document.body.style.overflow = previousOverflow
   window.removeEventListener('keydown', handleKeydown)
+  previousFocus?.focus({ preventScroll: true })
 }
 
 function showRelativeImage(offset: number) {
@@ -53,7 +61,7 @@ function showRelativeImage(offset: number) {
 
 onBeforeUnmount(() => {
   window.removeEventListener('keydown', handleKeydown)
-  document.body.style.overflow = ''
+  if (activeIndex.value !== null) document.body.style.overflow = previousOverflow
 })
 </script>
 
@@ -63,7 +71,7 @@ onBeforeUnmount(() => {
       <div>
         <p class="section-label">PHOTO ALBUM</p>
         <h2 id="place-gallery-heading">现场图集</h2>
-        <p class="place-gallery-intro">逛店照片与现场视频，点击图片看大图，视频可直接播放</p>
+        <p class="place-gallery-intro">点击照片查看高清原图，点击视频封面播放</p>
       </div>
       <span class="place-gallery-count"><strong>{{ images.length }}</strong> 个素材</span>
     </header>
@@ -77,13 +85,10 @@ onBeforeUnmount(() => {
         <div class="place-gallery-group-heading"><h3>{{ group.name }}</h3><span>{{ group.images.length }} 个素材</span></div>
         <div class="place-gallery-grid">
           <article v-for="entry in group.images" :key="entry.image.src" class="place-gallery-item">
-            <video v-if="entry.image.type === 'video'" class="place-gallery-inline-video" controls preload="metadata" playsinline :poster="entry.image.poster ? assetUrl(entry.image.poster) : undefined" :aria-label="entry.image.alt">
-              <source :src="assetUrl(entry.image.src)" type="video/mp4">
-              浏览器暂不支持播放此视频。
-            </video>
-            <button v-else class="place-gallery-image-preview" type="button" :aria-label="`查看：${entry.image.alt}`" @click="openGallery(entry.index)">
-              <img :src="assetUrl(entry.image.src)" :alt="entry.image.alt" loading="lazy" decoding="async">
-              <span class="place-gallery-zoom" aria-hidden="true">↗</span>
+            <button class="place-gallery-image-preview" type="button" :aria-label="`${entry.image.type === 'video' ? '播放' : '查看'}：${entry.image.alt}`" @click="openGallery(entry.index)">
+              <img :src="previewUrl(entry.image.src)" :srcset="previewSrcset(entry.image.src)" sizes="(max-width: 580px) 40vw, (max-width: 800px) 160px, 220px" :alt="entry.image.alt" loading="lazy" decoding="async">
+              <span v-if="entry.image.type === 'video'" class="place-gallery-play" aria-hidden="true">▶</span>
+              <span v-else class="place-gallery-zoom" aria-hidden="true">↗</span>
             </button>
             <span v-if="entry.image.type === 'video'" class="place-gallery-video-badge" aria-hidden="true">VIDEO</span>
             <span class="place-gallery-item-caption">{{ entry.image.alt }}</span>
@@ -95,15 +100,15 @@ onBeforeUnmount(() => {
 
     <Teleport to="body">
       <div v-if="currentImage" class="place-gallery-lightbox" role="dialog" aria-modal="true" :aria-label="`${currentImage.alt}，第 ${(activeIndex ?? 0) + 1} 个，共 ${images.length} 个`" @click.self="closeGallery">
-        <button class="place-gallery-close" type="button" aria-label="关闭大图" @click="closeGallery">×</button>
+        <button ref="closeButton" class="place-gallery-close" type="button" aria-label="关闭大图" @click="closeGallery">×</button>
         <button class="place-gallery-arrow is-previous" type="button" aria-label="上一个素材" @click="showRelativeImage(-1)">‹</button>
         <figure class="place-gallery-viewer">
-          <video v-if="currentImage.type === 'video'" class="place-gallery-lightbox-video" controls preload="metadata" playsinline :poster="currentImage.poster ? assetUrl(currentImage.poster) : undefined" :aria-label="currentImage.alt">
+          <video v-if="currentImage.type === 'video'" :key="currentImage.src" class="place-gallery-lightbox-video" controls autoplay preload="metadata" playsinline :poster="previewUrl(currentImage.src)" :aria-label="currentImage.alt">
             <source :src="assetUrl(currentImage.src)" type="video/mp4">
             浏览器暂不支持播放此视频。
           </video>
-          <img v-else :src="assetUrl(currentImage.src)" :alt="currentImage.alt">
-          <figcaption><span>{{ currentImage.alt }}</span><a v-if="currentImage.sourceUrl" :href="currentImage.sourceUrl" target="_blank" rel="noopener noreferrer">来源：{{ currentImage.sourceName || '原始页面' }} ↗</a><small>{{ (activeIndex ?? 0) + 1 }} / {{ images.length }}</small></figcaption>
+          <FullImage v-else :key="currentImage.src" :src="currentImage.src" :alt="currentImage.alt" />
+          <figcaption><span>{{ currentImage.alt }}</span><a :href="assetUrl(currentImage.src)" target="_blank" rel="noopener noreferrer">{{ currentImage.type === 'video' ? '打开视频' : '打开原图' }} ↗</a><a v-if="currentImage.sourceUrl" :href="currentImage.sourceUrl" target="_blank" rel="noopener noreferrer">来源：{{ currentImage.sourceName || '原始页面' }} ↗</a><small>{{ (activeIndex ?? 0) + 1 }} / {{ images.length }}</small></figcaption>
         </figure>
         <button class="place-gallery-arrow is-next" type="button" aria-label="下一个素材" @click="showRelativeImage(1)">›</button>
       </div>

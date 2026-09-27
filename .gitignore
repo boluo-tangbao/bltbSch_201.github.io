@@ -11,3 +11,8 @@ playwright-report/
 
 # Keep original photo/video archives locally; publish curated web assets only.
 /rank/source-media/
+
+# Generated automatically before development/build; originals remain untouched.
+/rank/public/images/previews/
+/rank/src/data/media-previews.json
+/rank/.npm-cache/

@@ -1,5 +1,15 @@
 [
   {
+    "id": "suzhou-shop-info-20260927",
+    "date": "2026-09-27",
+    "type": "edited",
+    "placeIds": [
+      "suzhou-shop-002",
+      "suzhou-shop-003"
+    ],
+    "note": "根据近期小红书帖子与评论，补充星悦汇的模玩熊寄售、三楼店铺变化，以及金地广场的楼层店单和摆摊信息。保留实地评价与评级。"
+  },
+  {
     "id": "guangzhou-gallery-groups-20260926",
     "date": "2026-09-26",
     "type": "edited",

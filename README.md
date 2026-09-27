@@ -44,6 +44,10 @@ npm run dev
 
 开发地址：`http://127.0.0.1:5173/bltbSch_201.github.io/rank/`。
 
+图片总榜和现场图集自动使用 320/640px WebP 预览，进入可视区域才加载。点击照片后显示预览并请求高清原图，加载失败可重试或单独打开原图；视频只显示封面，点击后才创建播放器并请求 MP4。原始图片和视频保持不变，完整内容导出仍使用原图。
+
+`npm run dev` 和 `npm run build` 自动运行 `prepare:media`，为已公开条目的封面、图集和视频生成预览（无封面的视频自动提取首帧）。预览和索引分别位于忽略的 `rank/public/images/previews/` 与 `rank/src/data/media-previews.json`，无需手动提交或填写缩略图路径；构建产物会带上预览。修改素材后重新启动开发服务或构建。生成使用 [Sharp](https://sharp.pixelplumbing.com/api-resize/) 和随 npm 依赖安装的 FFmpeg，无需额外安装系统工具。
+
 ```sh
 npm run validate:data
 npm test
