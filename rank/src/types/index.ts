@@ -16,6 +16,8 @@ export interface UpdateItem {
 }
 export interface Update {
   id: string; date: string; type: 'added' | 'tier-change' | 'ranking-change' | 'edited'; note: string
+  /** Edited updates can distinguish writing, galleries, and map information. */
+  category?: 'content' | 'gallery' | 'map'
   /** Legacy single-place form. */
   placeId?: string; fromTier?: TierId; toTier?: TierId
   /** Compact batch form for added/edited/ranking-change updates. */

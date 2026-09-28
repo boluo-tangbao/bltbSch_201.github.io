@@ -15,7 +15,7 @@ export function flattenPlaces(groups: PlacesByCity): Place[] {
 export function filterPlaces(places: Place[], city = '', query = '', tag = '') {
   const keyword = query.trim().toLocaleLowerCase()
   return places.filter(p => p.published && (!city || p.city === city) && (!tag || p.tags.includes(tag)) &&
-    (!keyword || [p.name, p.city, p.summary, ...p.tags].join(' ').toLocaleLowerCase().includes(keyword)))
+    (!keyword || [p.name, p.city, ...p.tags].join(' ').toLocaleLowerCase().includes(keyword)))
     .sort((a, b) => tiers.findIndex(t => t.id === a.tier) - tiers.findIndex(t => t.id === b.tier) || a.order - b.order || a.id.localeCompare(b.id))
 }
 export function publicUpdates(updates: Update[], places: Place[]) {
@@ -36,7 +36,7 @@ export function updateItems(update: Update): UpdateItem[] {
 }
 export function updateItemLabel(update: Update, item: UpdateItem) {
   if (update.type === 'added') return '新增'
-  if (update.type === 'edited') return '文案修改'
+  if (update.type === 'edited') return editedLabel(update)
   if (update.type === 'ranking-change') return '调序'
   if (!item.fromTier || !item.toTier) return '调档'
   return tiers.findIndex(t => t.id === item.toTier) < tiers.findIndex(t => t.id === item.fromTier) ? '升档' : '降档'
@@ -44,11 +44,16 @@ export function updateItemLabel(update: Update, item: UpdateItem) {
 export function updateLabel(u: Update) {
   const items = updateItems(u)
   if (u.type === 'added') return items.length > 1 ? '批量新增' : '新增'
-  if (u.type === 'edited') return items.length > 1 ? '批量修改' : '文案修改'
+  if (u.type === 'edited') return editedLabel(u)
   if (u.type === 'ranking-change') return items.length > 1 ? '批量调序' : '排名调整'
   const labels = new Set(items.map(item => updateItemLabel(u, item)))
   if (items.length > 1) return labels.size === 1 ? `批量${[...labels][0]}` : '批量调档'
   return items[0] ? updateItemLabel(u, items[0]) : '调档'
+}
+function editedLabel(update: Update) {
+  if (update.category === 'gallery') return '图集更新'
+  if (update.category === 'map') return '地图更新'
+  return '内容更新'
 }
 export function recentBadge(id: string, updates: Update[], days: number, now = Date.now()) {
   for (const update of updates) {

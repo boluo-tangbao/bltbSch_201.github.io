@@ -3,6 +3,7 @@
     "id": "suzhou-shop-info-20260927",
     "date": "2026-09-27",
     "type": "edited",
+    "category": "content",
     "placeIds": [
       "suzhou-shop-002",
       "suzhou-shop-003"
@@ -13,6 +14,7 @@
     "id": "guangzhou-gallery-groups-20260926",
     "date": "2026-09-26",
     "type": "edited",
+    "category": "gallery",
     "placeIds": [
       "guangzhou-shop-001",
       "guangzhou-shop-002",
@@ -25,6 +27,7 @@
     "id": "suzhou-gallery-groups-20260926",
     "date": "2026-09-26",
     "type": "edited",
+    "category": "gallery",
     "placeIds": [
       "suzhou-shop-001",
       "suzhou-shop-002",
@@ -36,6 +39,7 @@
     "id": "suzhou-videos-and-gallery-names-20260926",
     "date": "2026-09-26",
     "type": "edited",
+    "category": "gallery",
     "placeIds": [
       "suzhou-shop-001",
       "suzhou-shop-002",
@@ -47,6 +51,7 @@
     "id": "suzhou-coordinates-fixed-20260926",
     "date": "2026-09-26",
     "type": "edited",
+    "category": "map",
     "placeIds": [
       "suzhou-shop-001",
       "suzhou-shop-002",
@@ -58,6 +63,7 @@
     "id": "suzhou-gallery-added-20260926",
     "date": "2026-09-26",
     "type": "edited",
+    "category": "gallery",
     "placeIds": [
       "suzhou-shop-001",
       "suzhou-shop-002",
@@ -69,6 +75,7 @@
     "id": "suzhou-maps-added-20260926",
     "date": "2026-09-26",
     "type": "edited",
+    "category": "map",
     "placeIds": [
       "suzhou-shop-001",
       "suzhou-shop-002",
@@ -80,6 +87,7 @@
     "id": "places-text-styling-20260926",
     "date": "2026-09-26",
     "type": "edited",
+    "category": "content",
     "placeIds": [
       "shanghai-shop-002",
       "shanghai-shop-004",
@@ -152,6 +160,7 @@
     "id": "guangzhou-details-expanded-20260925",
     "date": "2026-09-25",
     "type": "edited",
+    "category": "content",
     "placeIds": [
       "guangzhou-shop-001",
       "guangzhou-shop-002",

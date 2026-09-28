@@ -4,7 +4,7 @@ import type { Place } from '../types'
 import { baiduMapConfigured, escapeMapHtml, geocodeWithBaidu, loadBaiduMaps, pointForPlace, type BaiduPoint } from '../utils/baiduMaps'
 import { baiduMapUrl, cityColor, hasCoordinates, placeAddress } from '../utils/cities'
 
-const props = defineProps<{ places: Place[]; colors: Record<string, string>; selectedId?: string }>()
+const props = defineProps<{ places: Place[]; totalPlaces: number; colors: Record<string, string>; selectedId?: string }>()
 const emit = defineEmits<{ select: [id: string] }>()
 const groups = computed(() => [...new Set(props.places.filter(place => placeAddress(place)).map(place => place.city))].sort((a, b) => a.localeCompare(b, 'zh-CN')).map(city => ({ city, places: props.places.filter(place => place.city === city && placeAddress(place)) })))
 const total = computed(() => groups.value.reduce((sum, group) => sum + group.places.length, 0))
@@ -116,7 +116,10 @@ async function activate() {
 }
 
 async function retry() { revision++; map?.destroy?.(); map = undefined; api = undefined; await activate() }
-watch(() => props.places, () => void refresh())
+watch(() => props.places, () => {
+  if (selectedCity.value && !groups.value.some(group => group.city === selectedCity.value)) selectedCity.value = ''
+  void refresh()
+})
 watch(() => props.selectedId, id => {
   const place = id ? props.places.find(item => item.id === id) : undefined
   if (place && selectedCity.value !== place.city) cityView(place.city); else focusSelected()
@@ -128,8 +131,9 @@ onBeforeUnmount(() => { revision++; map?.destroy?.() })
   <section class="map-section atlas-map" aria-labelledby="atlas-title">
     <header class="atlas-heading"><div><p class="section-label">PLACE ATLAS</p><h2 id="atlas-title">从全国，到一座城</h2><p>先选城市，再按地图序号选择店铺。</p></div><div class="atlas-count"><strong>{{ total }}</strong><span>个地址<br />{{ groups.length }} 座城市</span></div></header>
     <div class="map-toolbar"><div class="map-breadcrumb"><button :aria-current="!selectedCity || undefined" @click="countryView">中国</button><span>›</span><b>{{ selectedCity || '选择城市' }}</b></div><span v-if="locating">{{ locating }}</span><button v-if="active && selectedCity" class="text-button" @click="countryView">返回全国</button></div>
-    <div v-if="!active" class="map-welcome"><h3>{{ total ? '打开全榜地图' : '下一站，等你来标记' }}</h3><p>{{ total ? `已收录 ${groups.length} 座城市的 ${total} 个地址。` : '暂时没有已填写的位置。' }}</p><button v-if="total" class="button dark" @click="activate">加载百度分层地图</button><small v-if="total">访客无需登录；全国层显示城市，城市层显示店铺序号。</small></div>
+    <div v-if="!active" class="map-welcome"><h3>{{ total ? '打开地点地图' : props.totalPlaces ? '没有匹配的地点' : '下一站，等你来标记' }}</h3><p>{{ total ? `当前筛选包含 ${groups.length} 座城市的 ${total} 个地址。` : props.totalPlaces ? '试试其他城市、关键词或标签。' : '暂时没有已填写的位置。' }}</p><button v-if="total" class="button dark" @click="activate">加载百度分层地图</button><small v-if="total">访客无需登录；全国层显示城市，城市层显示店铺序号。</small></div>
     <template v-else><div class="city-map-tabs"><button v-for="group in groups" :key="group.city" :aria-pressed="selectedCity === group.city" @click="cityView(group.city)"><i :style="{ background: cityColor(group.city, colors) }"></i>{{ group.city }}<small>{{ group.places.length }}</small></button></div><div ref="container" class="place-map atlas-map-canvas" :aria-label="selectedCity ? `${selectedCity} 百度店铺地图` : '百度中国城市分布地图'"></div><div v-if="selectedGroup" class="city-place-list"><button v-for="(place, index) in selectedGroup.places" :key="place.id" :aria-current="selectedId === place.id || undefined" :aria-label="`${index + 1}号地点：${place.name}`" @click="$emit('select', place.id)"><i class="place-sequence" :style="{ background: cityColor(place.city, colors) }">{{ index + 1 }}</i><span><strong>{{ place.name }}</strong><small>{{ placeAddress(place) }}</small></span><b>→</b></button></div></template>
+    <div v-if="active && !total" class="map-notice" role="status">当前筛选没有可显示的地点。</div>
     <div v-if="mapError" class="map-notice" role="status">{{ mapError }}<button v-if="baiduMapConfigured()" class="text-button" @click="retry">重试</button></div>
   </section>
 </template>

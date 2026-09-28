@@ -91,6 +91,7 @@ export function validateData(site, groups, updates, imageExists = () => true) {
     if (updateIds.has(u.id)) fail('updates.json', u.id, '重复 ID'); updateIds.add(u.id)
     if (!validDate(u.date)) fail('updates.json', u.id, 'date 必须为真实 YYYY-MM-DD 日期')
     if (!['added', 'tier-change', 'ranking-change', 'edited'].includes(u.type)) fail('updates.json', u.id, '无效更新类型')
+    if (u.category !== undefined && (u.type !== 'edited' || !['content', 'gallery', 'map'].includes(u.category))) fail('updates.json', u.id, 'category 仅用于 edited，且只能是 content、gallery 或 map')
     if (typeof u.note !== 'string' || !u.note.trim()) fail('updates.json', u.id, '必须填写更新原因 note')
     let targets = []
     if (u.type === 'tier-change') {
@@ -107,7 +108,7 @@ export function validateData(site, groups, updates, imageExists = () => true) {
         if (!target || typeof target !== 'object' || !TIERS.includes(target.fromTier) || !TIERS.includes(target.toTier) || target.fromTier === target.toTier) fail('updates.json', u.id, '每个调档地点都必须提供合法且不同的 fromTier/toTier')
       }
     } else {
-      if (u.changes !== undefined) fail('updates.json', u.id, '新增、文案修改或调序请使用 placeIds，而不是 changes')
+      if (u.changes !== undefined) fail('updates.json', u.id, '新增、内容更新或调序请使用 placeIds，而不是 changes')
       if (u.fromTier !== undefined || u.toTier !== undefined) fail('updates.json', u.id, '只有调档记录可以填写 fromTier/toTier')
       const hasLegacy = typeof u.placeId === 'string'
       if (u.placeIds !== undefined && !Array.isArray(u.placeIds)) fail('updates.json', u.id, 'placeIds 必须是地点 ID 数组')

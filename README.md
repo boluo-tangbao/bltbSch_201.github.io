@@ -16,7 +16,7 @@
 | 想做什么 | 文件 |
 | --- | --- |
 | 新增店铺、改评价、改档位与顺序 | `rank/src/data/places.json` |
-| 记录新增、升档、降档、文案修改与原因 | `rank/src/data/updates.json` |
+| 记录新增、排名、内容、图集和地图更新及原因 | `rank/src/data/updates.json` |
 | 改标题、署名、评价标准、同档规则 | `rank/src/data/site.json` |
 | 上传自己的封面和详情照片 | `rank/public/images/places/` |
 | 固定各城市的边框和地图颜色 | `rank/src/data/site.json` 的 `cityColors` |
