@@ -60,11 +60,11 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
   <main id="main-content" ref="main" tabindex="-1" class="page-shell">
     <template v-if="isHome">
       <section class="hero" aria-labelledby="page-title">
-        <div class="hero-copy"><p class="eyebrow"><span></span> 一份持续更新的个人榜单</p><h1 id="page-title">{{ site.title }}<span class="title-dot">。</span></h1>
+        <div class="hero-copy"><p class="eyebrow"><span></span> CITY LOG / 一份持续更新的个人榜单</p><h1 id="page-title">{{ site.title }}<span class="title-dot">。</span></h1>
           <p class="hero-description">{{ site.description }}</p>
           <div class="byline"><span class="author-avatar" aria-hidden="true">汤</span><span>{{ site.author }}</span><span class="separator">/</span><span>{{ contentDate ? `内容更新于 ${contentDate}` : '等待第一条体验' }}</span></div>
         </div>
-        <div class="hero-note" aria-label="榜单概况"><div class="note-top"><span>我的城市探索记录</span><span aria-hidden="true">↗</span></div><div class="stats"><div><strong>{{ String(all.length).padStart(2, '0') }}</strong><span>家店铺</span></div><span class="stats-divider"></span><div><strong>{{ String(cities.length).padStart(2, '0') }}</strong><span>座城市</span></div></div><div class="mini-scale" aria-hidden="true"><span v-for="tier in tiers" :key="tier.id" :style="{ background: tier.color }"></span></div><p>{{ all.length ? '走过的路，留下自己的判断。' : '榜单已就位，故事慢慢填。' }}</p></div>
+        <div class="hero-note" aria-label="榜单概况"><div class="note-top"><span>我的城市探索记录</span><span aria-hidden="true">✦</span></div><div class="stats"><div><strong>{{ String(all.length).padStart(2, '0') }}</strong><span>家店铺</span></div><span class="stats-divider"></span><div><strong>{{ String(cities.length).padStart(2, '0') }}</strong><span>座城市</span></div></div><div class="mini-scale" aria-hidden="true"><span v-for="tier in tiers" :key="tier.id" :style="{ background: tier.color }"></span></div><p>{{ all.length ? '走过的路，留下自己的判断。' : '榜单已就位，故事慢慢填。' }}</p></div>
       </section>
 
       <section class="board-section" aria-labelledby="board-title">
