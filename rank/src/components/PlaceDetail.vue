@@ -8,7 +8,7 @@ import PlaceGallery from './PlaceGallery.vue'
 import { parseRichText, richTextClasses } from '../utils/richText'
 
 const props = defineProps<{ place: Place; rank?: number; color: string }>()
-const mikuSrc = `${import.meta.env.BASE_URL}images/pixel-miku.webp`
+const mikuSrc = `${import.meta.env.BASE_URL}images/pixel-miku-profile.webp`
 const address = computed(() => placeAddress(props.place))
 const detailParagraphs = computed(() => props.place.details.split(/\r?\n+/).map(paragraph => paragraph.trim()).filter(Boolean).map(paragraph => parseRichText(paragraph)))
 const visitNotes = computed(() => (props.place.visitNotes ?? []).map(note => parseRichText(note)))

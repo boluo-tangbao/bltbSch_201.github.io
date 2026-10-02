@@ -49,7 +49,7 @@ function tierColor(p: Place) { return tiers.find(t => t.id === p.tier)?.color ||
 </script>
 <template>
   <a href="#guide-main" class="skip-link" @click.prevent="main?.focus()">跳到正文</a>
-  <header class="site-header"><div class="header-inner"><a :href="boardUrl" class="brand"><BrandEmblem /><span>汤包的逛店手记<small>PLACES & PREFERENCES</small></span></a><nav aria-label="主导航"><a :href="boardUrl">图片总榜</a><a href="#/" aria-current="page">地图与介绍</a><a :href="`${base}qa/`">QA 与建议</a></nav></div></header>
+  <header class="site-header guide-site-header"><div class="header-inner"><a :href="boardUrl" class="brand"><BrandEmblem /><span>汤包的逛店手记<small>PLACES & PREFERENCES</small></span></a><nav aria-label="主导航"><a :href="boardUrl">图片总榜</a><a href="#/" aria-current="page">地图与介绍</a><a :href="`${base}qa/`">QA 与建议</a></nav></div></header>
   <main ref="main" id="guide-main" tabindex="-1" class="page-shell guide-page">
     <div class="guide-hero"><div><p class="eyebrow">从画面到地点</p><h1>下一站，去哪逛？</h1><p>按城市找店，在地图上定位。每一站都有自己的体验与评价。</p></div><a :href="boardUrl" class="button">← 回到图片总榜</a></div>
     <div class="filter-bar"><label class="city-filter"><span class="sr-only">城市筛选</span><select v-model="city" aria-label="城市筛选"><option value="">全部城市</option><option v-if="city && !cities.includes(city)" :value="city">{{ city }}（暂无条目）</option><option v-for="c in cities" :key="c">{{ c }}</option></select></label><label class="search-filter"><input v-model="query" type="search" aria-label="关键词搜索" placeholder="搜索店名、城市或标签…" /></label><div class="filter-result"><span role="status">{{ filtered.length }} 个结果</span><button class="text-button" :disabled="!city && !tag && !query.trim()" @click="reset">重置</button></div></div>
