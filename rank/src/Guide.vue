@@ -52,7 +52,7 @@ function tierColor(p: Place) { return tiers.find(t => t.id === p.tier)?.color ||
   <a href="#guide-main" class="skip-link" @click.prevent="main?.focus()">跳到正文</a>
   <SiteHeader active="guide" />
   <main ref="main" id="guide-main" tabindex="-1" class="page-shell guide-page">
-    <div class="guide-hero"><div><p class="eyebrow">从画面到地点</p><div class="mascot-title"><h1>下一站，去哪逛？</h1><MascotMoments class="mascot-embedded mascot-inline" :ids="['aqua', 'emilia', 'elf']" label="地图手记角色" /></div><p>按城市找店，在地图上定位。每一站都有自己的体验与评价。</p></div><a :href="boardUrl" class="button">← 回到图片总榜</a></div>
+    <div class="guide-hero"><div><p class="eyebrow">从画面到地点</p><h1><span>下一站，</span><span>去哪逛？</span></h1><p>按城市找店，在地图上定位。每一站都有自己的体验与评价。</p></div><MascotMoments class="mascot-embedded mascot-inline" :ids="['aqua', 'emilia', 'elf']" label="地图手记角色" /><a :href="boardUrl" class="button">← 回到图片总榜</a></div>
     <div class="filter-bar"><label class="city-filter"><span class="sr-only">城市筛选</span><select v-model="city" aria-label="城市筛选"><option value="">全部城市</option><option v-if="city && !cities.includes(city)" :value="city">{{ city }}（暂无条目）</option><option v-for="c in cities" :key="c">{{ c }}</option></select></label><label class="search-filter"><input v-model="query" type="search" aria-label="关键词搜索" placeholder="搜索店名、城市或标签…" /></label><div class="filter-result"><span role="status">{{ filtered.length }} 个结果</span><button class="text-button" :disabled="!city && !tag && !query.trim()" @click="reset">重置</button></div></div>
     <CityLegend :cities="cities" :colors="colors" :active="city" @select="city = $event" />
     <TagLegend :tags="tags" :active="tag" @select="tag = $event" />
@@ -62,7 +62,7 @@ function tierColor(p: Place) { return tiers.find(t => t.id === p.tier)?.color ||
         <section ref="detailContainer" tabindex="-1" class="selected-detail" aria-label="当前地点介绍">
           <template v-if="selected"><p v-if="!filtered.some(p => p.id === selected!.id)" class="map-notice">当前查看的地点不在筛选结果中。<button class="text-button" @click="reset">显示全部地点</button></p><div class="detail-navigation"><a :href="boardUrl">← 返回图片总榜</a><a href="#/">关闭介绍 ×</a></div><PlaceDetail :key="selected.id" :place="selected" :rank="site.rankWithinTier ? rankOf(selected) : undefined" :color="cityColor(selected.city, colors)" /></template>
           <div v-else-if="!isIndex" class="guide-empty-detail"><h2>没有找到这个条目</h2><p>链接可能有误，或条目尚未公开。</p><a href="#/" class="button">返回地图目录</a></div>
-          <div v-else class="guide-empty-detail"><MascotMoments class="mascot-embedded mascot-empty" :ids="['ichinose', 'mordred', 'hestia', 'zero-two', 'eris', 'marin']" label="地点介绍角色" /><h2>每一站，都有一段介绍</h2><p>从地点目录选择一家店，查看评价、店铺周边和导航。</p></div>
+          <div v-else class="guide-empty-detail"><MascotMoments class="mascot-embedded mascot-empty" :ids="['ichinose', 'mordred', 'hestia', 'zero-two', 'eris', 'marin']" label="地点介绍角色" /><div class="guide-empty-copy"><h2>每一站，都有一段介绍</h2><p>从地点目录选择一家店，查看评价、店铺周边和导航。</p></div></div>
         </section>
       </div>
     </div>

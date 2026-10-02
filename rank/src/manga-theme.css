@@ -760,70 +760,107 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
   .button,.photo-card .card-link { transition: none; }
 }
 
-/* Small character accents live inside existing headings and cards. */
-.mascot-moments.mascot-embedded {
-  width: auto;
-  flex: none;
-  margin: 0;
-  padding: 0;
-}
-.mascot-embedded .mascot-moments-line { min-height: 0; }
-.mascot-embedded .mascot-moment { width: 48px; height: 48px; margin: 0; transform: none; }
-.mascot-embedded .mascot-moment:hover,
-.mascot-embedded .mascot-moment:focus-visible { transform: translateY(-2px); }
-.mascot-embedded .mascot-bio { right: 0; width: min(280px, calc(100vw - 48px)); }
-.mascot-title { display: flex; align-items: center; gap: 12px; }
-.mascot-title > :is(h1, h2) { min-width: 0; }
-.board-page .hero { min-height: 300px; margin: 28px 8px 36px 0; padding: 36px 40px; overflow: visible; }
+/* Portrait sizes are exactly three times the previous desktop/mobile dimensions. */
+.mascot-moments { --portrait-size: 216px; width: auto; flex: none; margin: 0; padding: 0; }
+.mascot-moments-line { min-height: 0; }
+.mascot-moments .mascot-moment { width: var(--portrait-size); height: var(--portrait-size); margin: 0; transform: none; }
+.mascot-moment:hover,.mascot-moment:focus-visible { transform: translateY(-3px); }
+.mascot-embedded { --portrait-size: 144px; }
+.mascot-note,.mascot-empty { --portrait-size: 168px; }
+.mascot-bio { right: 0; width: min(280px, calc(100vw - 48px)); }
+.mascot-title { display: flex; align-items: center; gap: 18px; }
+.mascot-title > :is(h1,h2) { min-width: 0; }
+.board-page .hero { min-height: 300px; gap: 32px; margin: 28px 8px 36px 0; padding: 36px 32px; overflow: visible; }
 .board-page .hero::before { inset: 0 0 0 auto; width: 36%; height: auto; border-radius: 0; }
 .board-page .hero::after { display: none; }
 .board-page .hero h1 { font-size: clamp(38px, 4.2vw, 56px); margin: 20px 0 16px; }
-.board-page .hero-note { z-index: 5; }
-.hero-note > .mascot-note { position: absolute; top: -41px; right: 12px; transform: rotate(-3deg); }
-.mascot-note .mascot-moment { width: 56px; height: 56px; }
-.board-page .section-heading > div { align-items: center; }
-.board-page .section-heading .mascot-inline .mascot-moment { width: 44px; height: 44px; }
-.board-section > .section-heading { margin-bottom: 14px; }
-.board-section .mascot-inline .mascot-bio { left: -120px; right: auto; }
+.hero-aside { position: relative; z-index: 5; display: grid; grid-template-columns: minmax(0,1fr) 168px; align-items: end; width: 350px; flex: none; }
+.board-page .hero-note { width: auto; padding: 16px 13px; transform: rotate(-3deg); }
+.board-page .hero-note .note-top > span:last-child { display: none; }
+.board-page .hero-note .stats { gap: 12px; margin: 14px 0; }
+.board-page .hero-note .stats strong { font-size: 34px; }
+.hero-aside > .mascot-note { margin: 0 0 -3px; }
+.board-page .section-heading .mascot-inline { --portrait-size: 132px; }
+.board-section > .section-heading { position: relative; min-height: 110px; margin-bottom: 14px; padding-left: 150px; }
+.board-section > .section-heading > div { align-items: center; }
+.board-section > .section-heading .mascot-inline { position: absolute; left: 0; bottom: 0; }
+.board-section .mascot-bio { left: 0; right: auto; }
 .board-page .bottom-grid { margin-top: 28px; }
-.board-page .updates-section .section-heading { padding-bottom: 12px; margin-bottom: 14px; }
-.board-page .updates-section .section-heading > div { gap: 9px; }
-.guide-page .guide-hero { margin: 28px 8px 28px 0; padding: 24px 30px; overflow: visible; }
-.guide-page .guide-hero::after { inset: 0 0 0 auto; width: 30%; height: 100%; border-radius: 0; }
-.guide-page .guide-hero > div { z-index: 5; }
+.board-page .updates-section .section-heading { position: relative; min-height: 116px; padding: 0 140px 12px 0; margin-bottom: 14px; }
+.updates-section .section-heading > .mascot-inline { position: absolute; right: -6px; bottom: 0; }
+.board-page .updates-section .section-heading > div { gap: 9px; align-items: center; }
+.guide-page .guide-hero { display: grid; grid-template-columns: minmax(0,1fr) 144px auto; gap: 24px; margin: 28px 8px 28px 0; padding: 22px 30px; overflow: visible; }
+.guide-page .guide-hero::after { inset: 0 0 0 auto; width: 36%; height: 100%; border-radius: 0; }
+.guide-page .guide-hero > .mascot-moments { z-index: 5; align-self: end; }
 .guide-page .guide-hero h1 { margin: 8px 0; }
 .guide-page .guide-layout { margin-top: 20px; margin-bottom: 28px; }
 .guide-page .selected-detail { margin-top: 0; }
 .guide-page .detail-navigation { margin-top: 0; }
-.guide-page .guide-empty-detail { padding: 26px 24px; }
-.guide-empty-detail > .mascot-empty { width: fit-content; margin: 0 auto 8px; }
-.mascot-empty .mascot-moment { width: 56px; height: 56px; }
-.mascot-empty .mascot-bio { right: 50%; transform: translateX(50%); }
+.guide-page .guide-empty-detail { display: flex; align-items: center; justify-content: center; gap: 24px; padding: 22px 24px; text-align: left; }
+.guide-empty-copy { max-width: 360px; }
+.guide-empty-copy p { line-height: 1.8; }
 .guide-page .atlas-map { overflow: visible; margin-top: 28px; }
-.guide-page .atlas-heading { padding-top: 20px; padding-bottom: 20px; }
+.guide-page .atlas-heading { padding-top: 16px; padding-bottom: 20px; }
 .guide-page .atlas-heading h2 { margin: 0; }
-.guide-page .atlas-heading .mascot-title { margin-bottom: 4px; }
-@media (max-width: 800px) {
-  .board-page .hero { gap: 24px; padding: 30px 26px; }
-  .board-page .hero h1 { font-size: 38px; }
+.guide-page .atlas-heading .mascot-title { margin-bottom: -6px; }
+.detail-miku { width: 192px; height: 192px; margin: -12px 0 -12px -12px; }
+.detail-visit-heading { gap: 16px; }
+.qa-page > .guide-hero { display: grid; grid-template-columns: minmax(0,1fr) 216px; gap: 12px 24px; overflow: visible; }
+.qa-page > .guide-hero::after { inset: 0 0 0 auto; width: 35%; height: 100%; border-radius: 0; }
+.qa-page > .guide-hero > .mascot-qa-cover { grid-column: 2; grid-row: 1 / 3; z-index: 5; }
+.qa-page > .guide-hero > .button { grid-column: 1; justify-self: start; }
+.qa-page .mascot-host > .mascot-overlay { top: 8px; right: 10px; }
+.qa-page .mascot-host > h2 { display: flex; align-items: center; min-height: 190px; padding-right: 212px; }
+.qa-page .faq > h2 { min-height: 166px; }
+.qa-page .feedback-list > .section-heading { display: block; min-height: 190px; padding: 35px 212px 0 0; }
+.qa-page .feedback-list > .section-heading .text-button { margin-top: 12px; }
+@media (max-width: 1000px) {
+  .qa-layout { grid-template-columns: 1fr; }
+  .board-page .hero { display: block; padding: 28px; }
+  .board-page .hero-copy { max-width: none; }
+  .hero-aside { margin: 20px 0 0 auto; }
+  .guide-page .guide-hero { grid-template-columns: minmax(0,1fr) 144px; gap: 12px 18px; }
+  .guide-page .guide-hero > .mascot-moments { grid-column: 2; grid-row: 1 / 3; align-self: center; }
+  .guide-page .guide-hero > .button { grid-column: 1; justify-self: start; margin: 0; }
 }
 @media (max-width: 580px) {
-  .board-page .hero { margin-top: 22px; margin-bottom: 28px; padding: 22px 18px; }
+  .mascot-moments { --portrait-size: 168px; }
+  .mascot-embedded { --portrait-size: 144px; }
+  .mascot-note,.mascot-empty { --portrait-size: 168px; }
+  .board-page .section-heading .mascot-inline { --portrait-size: 114px; }
+  .guide-page .guide-hero > .mascot-moments,.mascot-title .mascot-moments { --portrait-size: 132px; }
+  .board-page .hero { margin-top: 22px; margin-bottom: 24px; padding: 22px 18px; }
   .board-page .hero h1 { font-size: 35px; margin: 16px 0 12px; }
   .board-page .hero .byline { margin-top: 14px; }
-  .board-page .hero-note { width: calc(100% - 14px); margin: 24px auto 0; padding: 13px 16px; transform: rotate(1deg); }
-  .board-page .hero-note .stats { margin: 10px 0; }
-  .board-page .hero-note .stats strong { font-size: 30px; }
+  .hero-aside { width: 100%; margin-top: 22px; }
+  .board-page .hero-note { margin: 0; padding: 13px 10px; }
+  .board-page .hero-note .stats { gap: 9px; margin: 10px 0; }
+  .board-page .hero-note .stats strong { font-size: 27px; }
   .board-page .hero-note p { margin-top: 8px; }
-  .board-page .hero-note > .mascot-note { right: 8px; transform: rotate(-1deg); }
-  .board-page .section-heading > div { gap: 6px; }
-  .board-page .section-heading .mascot-inline .mascot-moment { width: 38px; height: 38px; }
-  .guide-page .guide-hero { margin-top: 22px; margin-bottom: 24px; padding: 20px 18px; }
-  .guide-page .guide-hero h1 { font-size: clamp(24px, 6.7vw, 29px); }
-  .guide-page .guide-hero .button { margin-top: 12px; }
-  .mascot-title { gap: 6px; }
-  .mascot-title .mascot-moment { width: 44px; height: 44px; }
+  .board-section > .section-heading { display: grid; grid-template-columns: minmax(0,1fr); min-height: 114px; padding-left: 126px; gap: 8px; align-content: center; }
+  .board-section > .section-heading > div { gap: 6px; }
+  .board-section > .section-heading > .button { justify-self: start; }
+  .board-page .updates-section .section-heading { min-height: 104px; padding-right: 114px; }
+  .board-page .updates-section .section-heading > div { gap: 6px; }
+  .guide-page .guide-hero { grid-template-columns: minmax(0,1fr) 132px; gap: 14px 8px; margin-top: 22px; margin-bottom: 24px; padding: 20px 18px; }
+  .guide-page .guide-hero h1 { font-size: 28px; line-height: 1.3; }
+  .guide-page .guide-hero h1 > span { display: block; white-space: nowrap; }
+  .guide-page .guide-hero > .button { grid-column: 1 / -1; }
+  .guide-page .guide-hero > .mascot-moments { grid-row: 1; }
+  .mascot-title { gap: 8px; }
   .guide-page .atlas-heading { padding-left: 18px!important; padding-right: 18px!important; }
-  .guide-page .atlas-heading h2 { font-size: 22px; }
-  .guide-page .guide-empty-detail { padding: 22px 16px; }
+  .guide-page .atlas-heading h2 { font-size: 23px; line-height: 1.4; }
+  .guide-page .guide-empty-detail { gap: 8px; padding: 20px 12px; }
+  .guide-empty-copy h2 { font-size: 17px; }
+  .guide-empty-copy p { font-size: 12px; }
+  .detail-miku { width: 156px; height: 156px; }
+  .detail-visit-heading { gap: 4px; }
+  .qa-page > .guide-hero { grid-template-columns: minmax(0,1fr) 168px; gap: 12px 0; padding: 20px 16px; }
+  .qa-page > .guide-hero h1 { font-size: 26px; }
+  .qa-page > .guide-hero > .mascot-qa-cover { grid-row: 1; }
+  .qa-page > .guide-hero > .button { grid-column: 1 / -1; }
+  .qa-page .mascot-host > .mascot-overlay { top: 12px; right: 4px; }
+  .qa-page .mascot-host > h2 { min-height: 152px; padding-right: 152px; }
+  .qa-page .faq > h2 { min-height: 130px; }
+  .qa-page .feedback-list > .section-heading { min-height: 152px; padding: 22px 152px 0 0; }
 }
