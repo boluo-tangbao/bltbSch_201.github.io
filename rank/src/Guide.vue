@@ -51,13 +51,13 @@ function tierColor(p: Place) { return tiers.find(t => t.id === p.tier)?.color ||
 <template>
   <a href="#guide-main" class="skip-link" @click.prevent="main?.focus()">跳到正文</a>
   <SiteHeader active="guide" />
-  <MascotMoments :ids="['aqua', 'emilia', 'elf']" label="地图序章角色" />
+  <MascotMoments class="mascot-top-guide" :ids="['aqua', 'emilia', 'elf']" label="地图序章角色" />
   <main ref="main" id="guide-main" tabindex="-1" class="page-shell guide-page">
     <div class="guide-hero"><div><p class="eyebrow">从画面到地点</p><h1>下一站，去哪逛？</h1><p>按城市找店，在地图上定位。每一站都有自己的体验与评价。</p></div><a :href="boardUrl" class="button">← 回到图片总榜</a></div>
     <div class="filter-bar"><label class="city-filter"><span class="sr-only">城市筛选</span><select v-model="city" aria-label="城市筛选"><option value="">全部城市</option><option v-if="city && !cities.includes(city)" :value="city">{{ city }}（暂无条目）</option><option v-for="c in cities" :key="c">{{ c }}</option></select></label><label class="search-filter"><input v-model="query" type="search" aria-label="关键词搜索" placeholder="搜索店名、城市或标签…" /></label><div class="filter-result"><span role="status">{{ filtered.length }} 个结果</span><button class="text-button" :disabled="!city && !tag && !query.trim()" @click="reset">重置</button></div></div>
     <CityLegend :cities="cities" :colors="colors" :active="city" @select="city = $event" />
     <TagLegend :tags="tags" :active="tag" @select="tag = $event" />
-    <MascotMoments :ids="['ichinose', 'mordred', 'hestia']" label="地图筛选角色" />
+    <MascotMoments class="mascot-left" :ids="['ichinose', 'mordred', 'hestia']" label="地点目录角色" />
     <div class="guide-layout">
       <aside class="place-directory" aria-label="地点目录"><div class="directory-heading"><h2>地点目录</h2><span>{{ filtered.length }}</span></div><div v-if="!filtered.length" class="directory-empty"><p>{{ all.length ? '没有找到匹配的条目' : '还没有收录店铺' }}</p><small>{{ all.length ? '换个关键词、城市或标签，或重置筛选。' : '第一条体验发布后，就能从这里直接查看。' }}</small><button v-if="city || tag || query.trim()" class="text-button" @click="reset">重置筛选</button></div><div v-else class="directory-groups"><details v-for="section in citySections" :key="section.city" class="directory-city-group" open><summary><i class="city-dot" :style="{ background: cityColor(section.city, colors) }"></i>{{ section.city }}<span class="directory-city-count">{{ section.places.length }} 家</span></summary><nav :aria-label="section.city + ' 店铺目录'"><a v-for="p in section.places" :key="p.id" class="directory-place" :href="'#/place/' + p.id" :aria-current="selected?.id === p.id ? 'page' : undefined" :style="{ '--city-color': cityColor(p.city, colors), '--tier-color': tierColor(p) }"><span class="directory-rank">{{ tierLabel(p.tier) }}<small v-if="site.rankWithinTier">#{{ rankOf(p) }}</small></span><span class="directory-copy"><strong>{{ p.name }}</strong></span></a></nav></details></div></aside>
       <div class="guide-main-column">

@@ -82,10 +82,10 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
         </div>
         <CityLegend :cities="cities" :colors="colors" :active="city" @select="city = $event" />
         <TagLegend :tags="tags" :active="tag" @select="tag = $event" />
-        <MascotMoments :ids="['misaki', 'sinon', 'rin']" label="榜单照片角色" />
         <div class="photo-options"><span>点击图片，查看详细评价和地图位置</span><label><input v-model="showLabels" type="checkbox" />显示名称与城市</label></div>
         <div v-if="!all.length && !hasFilters" class="empty-intro"><span class="empty-icon" aria-hidden="true">＋</span><div><strong>第一站，还在路上</strong><p>这里暂时没有条目。等真实体验到来，再把每一票投给心里的位置。</p></div><span class="empty-pill">待填充</span></div>
         <div v-if="hasFilters && !filtered.length" class="no-results" role="status"><strong>没有找到匹配的条目</strong><span>试试其他关键词、城市或标签。</span><button class="text-button" @click="reset">重置筛选 ↗</button></div>
+        <MascotMoments :ids="['misaki', 'sinon', 'rin']" label="榜单照片角色" />
         <div class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels }"><section v-for="(tier, index) in tiers" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ index + 1 }}</span><h3 :id="`tier-${tier.id}`">{{ tier.label }}</h3><span class="tier-count">{{ filtered.filter(p => p.tier === tier.id).length }} 个条目</span></div><div class="tier-content"><div v-if="!filtered.some(p => p.tier === tier.id)" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in filtered.filter(p => p.tier === tier.id)" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="`${guideUrl}#/place/${p.id}`" :rank="site.rankWithinTier ? rankOf(p) : undefined" :badge="recentBadge(p.id, updates, site.recentDays)" /></div></div></section></div>
         <p class="board-caption"><span>推荐度从上到下递减</span><span>{{ site.rankWithinTier ? '同档分先后 · 从左到右，从上到下' : '同档不分先后' }}</span></p>
       </section>

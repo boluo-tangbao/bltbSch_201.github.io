@@ -94,31 +94,32 @@
 }
 .mascot-moments {
   position: relative;
-  z-index: 3;
-  width: fit-content;
-  max-width: calc(100% - 32px);
-  margin: 7px auto 18px;
+  z-index: 4;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0 0 -2px;
+  padding-right: 7px;
 }
 .mascot-moments-line {
   display: flex;
   align-items: end;
-  justify-content: center;
-  gap: 12px;
-  min-height: 78px;
-  padding: 0 14px;
-  border-bottom: 2px dashed #d997a5;
+  justify-content: flex-end;
+  min-height: 76px;
 }
 .mascot-moment {
   display: block;
   width: 72px;
   height: 72px;
   flex: none;
+  margin-left: -5px;
   padding: 0;
   border: 0;
   background: transparent;
+  transform: translateY(4px);
   transition: transform .16s ease;
 }
-.mascot-moment:hover,.mascot-moment:focus-visible { transform: translateY(-6px); }
+.mascot-moment:hover,.mascot-moment:focus-visible { transform: translateY(-3px); }
 .mascot-moment img {
   display: block;
   width: 100%;
@@ -131,10 +132,9 @@
   position: absolute;
   z-index: 30;
   top: calc(100% + 5px);
-  left: 50%;
+  right: 7px;
   width: min(310px, calc(100vw - 36px));
   padding: 12px 15px;
-  transform: translateX(-50%);
   border: 2px solid #292932;
   border-radius: 3px;
   background: #fffaf1;
@@ -147,8 +147,17 @@
 .mascot-bio strong { display: block; margin-bottom: 3px; font-size: 14px; }
 .mascot-bio p { margin-bottom: 5px; }
 .mascot-bio small { color: #a34b60; font-size: 11px; font-weight: 700; }
-.site-header + .mascot-moments { margin-top: 0; }
-.site-header + .mascot-moments + .page-shell > :is(.hero, .guide-hero) { margin-top: 14px; }
+.site-header + .mascot-moments {
+  width: calc(100% - 88px);
+  max-width: 1112px;
+  margin: 0 auto -2px;
+  padding-right: 0;
+}
+.site-header + .mascot-top-guide { max-width: 1292px; }
+.site-header + .mascot-moments + .page-shell > :is(.hero, .guide-hero) { margin-top: 0; }
+.mascot-moments + :is(.bottom-grid, .atlas-map) { margin-top: 0; }
+.mascot-left { justify-content: flex-start; padding-left: 7px; }
+.mascot-left .mascot-bio { right: auto; left: 7px; }
 
 .hero {
   position: relative;
@@ -727,8 +736,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
   .bottom-grid>section { padding: 20px; }
 }
 @media(max-width:580px) {
-  .mascot-moments-line { min-height: 62px; gap: 8px; padding: 0 8px; }
-  .mascot-moment { width: 56px; height: 56px; }
+  .site-header + .mascot-moments { width: calc(100% - 56px); }
+  .mascot-moments-line { min-height: 61px; }
+  .mascot-moment { width: 56px; height: 56px; margin-left: -3px; }
   .detail-miku { width: 52px; height: 52px; margin-left: -4px; }
   .tier-board { margin-right: 5px; box-shadow: 5px 5px 0 var(--manga-ink); }
   .tier-label { min-height: 63px; box-shadow: inset 5px 0 var(--tier-color); }
