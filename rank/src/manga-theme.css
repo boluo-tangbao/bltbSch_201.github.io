@@ -92,6 +92,31 @@
   color: #db5269;
   font-size: 12px;
 }
+.mascot-strip {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 8px;
+  width: 100%;
+  max-width: 1200px;
+  height: 94px;
+  margin: 0 auto;
+  padding: 0 36px;
+  pointer-events: none;
+}
+.pixel-mascot {
+  display: block;
+  width: clamp(50px, 5.85vw, 84px);
+  height: clamp(50px, 5.85vw, 84px);
+  flex: none;
+  object-fit: contain;
+  image-rendering: pixelated;
+  transform: translateY(5px);
+  filter: drop-shadow(2px 2px 0 #292932);
+}
+.mascot-strip + .page-shell > :is(.hero, .guide-hero) { margin-top: 0; }
 
 .hero {
   position: relative;
@@ -105,17 +130,6 @@
     radial-gradient(circle, #ec9fa979 1.3px, transparent 1.6px) right 16px top 15px / 15px 15px no-repeat,
     linear-gradient(117deg, #fffaf1 0%, #fffaf1 59%, #ffe2e2 59.2%, #ffe2e2 100%);
   box-shadow: 8px 8px 0 #292932;
-}
-.mascot-bridge { position: relative; height: 84px; }
-.mascot-bridge + .hero { margin-top: 0; }
-.bridge-miku {
-  position: absolute;
-  z-index: 3;
-  right: clamp(50px, 12vw, 170px);
-  bottom: -5px;
-  width: 84px;
-  height: 84px;
-  filter: drop-shadow(3px 3px 0 #292932);
 }
 .hero::before {
   content: '';
@@ -254,7 +268,7 @@
   color: #292932;
   font-weight: 750;
 }
-.guide-site-header :is(.brand, nav),
+.site-header :is(.brand, nav),
 .guide-page :is(h1, h2, h3, .directory-city-group summary, .directory-place strong, .button, .detail-navigation) {
   font-family: 'Guide Cartoon', 'Microsoft YaHei', 'PingFang SC', sans-serif;
   font-weight: 400;
@@ -681,8 +695,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
   .bottom-grid>section { padding: 20px; }
 }
 @media(max-width:580px) {
-  .mascot-bridge { height: 66px; }
-  .bridge-miku { right: 18px; bottom: -4px; width: 64px; height: 64px; }
+  .mascot-strip { height: 72px; gap: 4px; padding: 0 20px; }
+  .pixel-mascot { width: clamp(48px, 16vw, 64px); height: clamp(48px, 16vw, 64px); }
   .detail-miku { width: 52px; height: 52px; margin-left: -4px; }
   .tier-board { margin-right: 5px; box-shadow: 5px 5px 0 var(--manga-ink); }
   .tier-label { min-height: 63px; box-shadow: inset 5px 0 var(--tier-color); }

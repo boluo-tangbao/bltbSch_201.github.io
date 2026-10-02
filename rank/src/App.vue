@@ -14,10 +14,10 @@ import { useStoredFilters } from './utils/filters'
 import ExportPanel from './components/ExportPanel.vue'
 import Guestbook from './components/Guestbook.vue'
 import VisitCounter from './components/VisitCounter.vue'
-import BrandEmblem from './components/BrandEmblem.vue'
+import SiteHeader from './components/SiteHeader.vue'
+import MascotStrip from './components/MascotStrip.vue'
 
 const site = siteData as Site
-const mikuSrc = `${import.meta.env.BASE_URL}images/pixel-miku-profile.webp`
 const colors = site.cityColors || {}
 const showLabels = ref(false)
 const expandedUpdates = ref<string[]>([])
@@ -27,8 +27,6 @@ const toggleUpdate = (id: string) => {
     ? expandedUpdates.value.filter(item => item !== id)
     : [...expandedUpdates.value, id]
 }
-const qaUrl = `${import.meta.env.BASE_URL}qa/`
-const homeUrl = `${import.meta.env.BASE_URL}../`
 const places = flattenPlaces(placeData as PlacesByCity)
 const all = filterPlaces(places)
 const updates = publicUpdates(updateData as Update[], places)
@@ -61,14 +59,11 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
 
 <template>
   <a href="#main-content" class="skip-link" @click.prevent="main?.focus()">跳到正文</a>
-  <header class="site-header"><div class="header-inner">
-    <a href="#/" class="brand"><BrandEmblem /><span>汤包的逛店手记<small>PLACES & PREFERENCES</small></span></a>
-    <nav aria-label="主导航"><a href="#/" :aria-current="isHome ? 'page' : undefined">图片总榜</a><a :href="guideUrl">地图与介绍</a><a :href="qaUrl">QA 与建议</a><a :href="homeUrl">个人主页 <span aria-hidden="true">↗</span></a></nav>
-  </div></header>
+  <SiteHeader active="board" />
+  <MascotStrip />
 
   <main id="main-content" ref="main" tabindex="-1" class="page-shell">
     <template v-if="isHome">
-      <div class="mascot-bridge" aria-hidden="true"><img class="pixel-miku bridge-miku" :src="mikuSrc" alt="" width="84" height="84" /></div>
       <section class="hero" aria-labelledby="page-title">
         <div class="hero-copy"><p class="eyebrow"><span></span> CITY LOG / 一份持续更新的个人榜单</p><h1 id="page-title">{{ site.title }}<span class="title-dot">。</span></h1>
           <p class="hero-description">{{ site.description }}</p>
