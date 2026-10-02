@@ -15,7 +15,7 @@ import ExportPanel from './components/ExportPanel.vue'
 import Guestbook from './components/Guestbook.vue'
 import VisitCounter from './components/VisitCounter.vue'
 import SiteHeader from './components/SiteHeader.vue'
-import MascotStrip from './components/MascotStrip.vue'
+import MascotMoments from './components/MascotMoments.vue'
 
 const site = siteData as Site
 const colors = site.cityColors || {}
@@ -60,7 +60,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
 <template>
   <a href="#main-content" class="skip-link" @click.prevent="main?.focus()">跳到正文</a>
   <SiteHeader active="board" />
-  <MascotStrip />
+  <MascotMoments :ids="['miku', 'deepseek', 'akane']" label="榜单序章角色" />
 
   <main id="main-content" ref="main" tabindex="-1" class="page-shell">
     <template v-if="isHome">
@@ -74,6 +74,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
 
       <section class="board-section" aria-labelledby="board-title">
         <div class="section-heading"><div><span class="section-number">01</span><h2 id="board-title">图片总榜</h2><span class="desktop-note">{{ site.rankWithinTier ? '同档按顺序排名' : '同档不分先后' }}</span></div><button class="button dark" @click="exportOpen = true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 15v5h16v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>导出榜单</button></div>
+        <MascotMoments :ids="['utaha', 'yui', 'ami']" label="榜单筛选角色" />
         <div class="filter-bar">
           <label class="city-filter"><span class="sr-only">城市筛选</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 10c0 5-6 10-6 10S6 15 6 10a6 6 0 1 1 12 0Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2" stroke="currentColor" stroke-width="1.5"/></svg><select v-model="city" aria-label="城市筛选"><option value="">全部城市</option><option v-if="city && !cities.includes(city)" :value="city">{{ city }}（暂无条目）</option><option v-for="c in cities" :key="c">{{ c }}</option></select></label>
           <label class="search-filter"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.5"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.5"/></svg><input v-model="query" type="search" placeholder="搜索店名、城市或标签…" aria-label="关键词搜索" /></label>
@@ -81,6 +82,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
         </div>
         <CityLegend :cities="cities" :colors="colors" :active="city" @select="city = $event" />
         <TagLegend :tags="tags" :active="tag" @select="tag = $event" />
+        <MascotMoments :ids="['misaki', 'sinon', 'rin']" label="榜单照片角色" />
         <div class="photo-options"><span>点击图片，查看详细评价和地图位置</span><label><input v-model="showLabels" type="checkbox" />显示名称与城市</label></div>
         <div v-if="!all.length && !hasFilters" class="empty-intro"><span class="empty-icon" aria-hidden="true">＋</span><div><strong>第一站，还在路上</strong><p>这里暂时没有条目。等真实体验到来，再把每一票投给心里的位置。</p></div><span class="empty-pill">待填充</span></div>
         <div v-if="hasFilters && !filtered.length" class="no-results" role="status"><strong>没有找到匹配的条目</strong><span>试试其他关键词、城市或标签。</span><button class="text-button" @click="reset">重置筛选 ↗</button></div>
@@ -89,6 +91,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
       </section>
 
       <section class="guide-entry"><div><h2>心里有一站，就去地图找找</h2><p>同样的城市颜色，对应地图上的位置。详细评价与到访路线也在这里。</p></div><a :href="guideUrl" class="button dark">打开地图与介绍 ↗</a></section>
+      <MascotMoments :ids="['onodera', 'esdeath', 'kumiko']" label="最近更新角色" />
       <div class="bottom-grid"><section class="updates-section" aria-labelledby="updates-title"><div class="section-heading"><div><span class="section-number">02</span><h2 id="updates-title">最近更新</h2></div><span class="muted tiny">持续记录中</span></div><div v-if="!updates.length" class="quiet-empty"><span class="timeline-dot"></span><div><h3>还没有更新记录</h3><p>新增、排名与内容更新，都会在这里留下足迹。</p></div></div><ol v-else class="update-list"><li v-for="u in updates.slice(0, 1)" :key="u.id"><time>{{ u.date }}</time><div class="update-body"><div class="update-summary"><span class="update-kind">{{ updateLabel(u) }}</span><strong v-if="updateItems(u).length > 1">{{ updateItems(u).length }} 个地点</strong></div><div class="update-places"><a v-for="item in visibleUpdateItems(u)" :key="item.placeId" :href="`${guideUrl}#/place/${item.placeId}`"><span>{{ all.find(p => p.id === item.placeId)?.name }}</span><small v-if="u.type === 'tier-change'">{{ tierLabel(item.fromTier!) }} → {{ tierLabel(item.toTier!) }}</small></a><button v-if="updateItems(u).length > 2" type="button" class="update-more" :aria-expanded="expandedUpdates.includes(u.id)" @click="toggleUpdate(u.id)">{{ expandedUpdates.includes(u.id) ? '收起' : `展开其余 ${updateItems(u).length - 2} 处` }} <span aria-hidden="true">{{ expandedUpdates.includes(u.id) ? '−' : '＋' }}</span></button></div><p>{{ u.note }}</p></div></li></ol></section>
       <section class="criteria-section" aria-labelledby="criteria-title"><div class="section-heading"><div><span class="section-number">03</span><h2 id="criteria-title">关于这份榜单</h2></div><span class="about-icon" aria-hidden="true">i</span></div><p>{{ site.criteria }}</p><div class="criteria-scale"><span v-for="t in tiers" :key="t.id"><i :style="{ background: t.color }"></i>{{ t.label }}</span></div><details><summary>查看各档标准与排序规则</summary><dl><template v-for="t in tiers" :key="t.id"><dt>{{ t.label }}</dt><dd>{{ site.tierDescriptions[t.id] }}</dd></template></dl><p>{{ site.rankWithinTier ? '同档有先后，卡片编号表示该档内的完整排名；筛选后保留原排名。' : '同档不分先后，展示顺序仅用于排版。' }}</p><p>到访日期未提供时显示“未记录”；内容更新日期由作者维护。</p></details><p class="personal-note">仅代表个人体验，供你出发前参考。</p></section></div>
       <Guestbook />

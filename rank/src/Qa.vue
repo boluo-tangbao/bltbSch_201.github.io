@@ -4,7 +4,7 @@ import site from './data/site.json'
 import config from './data/community.json'
 import VisitCounter from './components/VisitCounter.vue'
 import SiteHeader from './components/SiteHeader.vue'
-import MascotStrip from './components/MascotStrip.vue'
+import MascotMoments from './components/MascotMoments.vue'
 import { bilibiliProfileUrl, github, feedbackUrl, issueUrl, readableDate, suggestionUrl } from './utils/community'
 type Suggestion = { number: number; title: string; state: string; created_at: string; user: { login: string } | null; pull_request?: unknown }
 const main = ref<HTMLElement>(), category = ref('功能建议'), title = ref(''), body = ref(''), opened = ref(false)
@@ -30,7 +30,7 @@ onMounted(() => load(true))
 <template>
   <a href="#qa-main" class="skip-link" @click.prevent="main?.focus()">跳到正文</a>
   <SiteHeader active="qa" />
-  <MascotStrip />
+  <MascotMoments :ids="['miku', 'deepseek', 'akane']" label="QA 页面角色" />
   <main id="qa-main" ref="main" tabindex="-1" class="page-shell qa-page">
     <div class="guide-hero"><div><p class="eyebrow">一起把这份手记补完整</p><h1>你的想法，我想听听。</h1><p>推荐一家店、纠正一处信息，或告诉我哪里可以更好用。</p></div><a :href="bilibiliProfileUrl" target="_blank" rel="noopener noreferrer" class="button">只是想聊聊？去 B 站私信 ↗</a></div>
     <div class="qa-layout"><section class="community-panel" aria-labelledby="suggest-title"><h2 id="suggest-title">提个建议</h2><form class="suggestion-form" @submit.prevent="submit"><label>建议类型<select v-model="category"><option>功能建议</option><option>推荐店铺</option><option>内容纠错</option><option>使用问题</option><option>其他想法</option></select></label><label>一句话说明<input v-model="title" required maxlength="70" placeholder="你希望新增什么，或哪里需要修改？" /></label><label>详细描述<textarea v-model="body" required maxlength="600" rows="7" placeholder="推荐店铺可以写店名和城市；遇到问题可以描述设备、页面和操作步骤。"></textarea></label><span class="form-count">{{ body.length }} / 600</span><p class="community-hint">下一步会打开 GitHub，登录后点击提交才会发布。内容公开，请勿填写个人隐私。</p><button class="button dark" type="submit" :disabled="!title.trim() || !body.trim()">前往 GitHub 提交 ↗</button><p v-if="opened" role="status" class="community-hint">已打开提交页；请在 GitHub 完成发布。若没有弹出窗口，<a :href="suggestionUrl(category, title, body)" target="_blank" rel="noopener noreferrer">点击这里继续</a>。</p></form></section>
