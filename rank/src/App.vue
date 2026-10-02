@@ -14,6 +14,7 @@ import { useStoredFilters } from './utils/filters'
 import ExportPanel from './components/ExportPanel.vue'
 import Guestbook from './components/Guestbook.vue'
 import VisitCounter from './components/VisitCounter.vue'
+import BrandEmblem from './components/BrandEmblem.vue'
 
 const site = siteData as Site
 const colors = site.cityColors || {}
@@ -53,7 +54,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
 <template>
   <a href="#main-content" class="skip-link" @click.prevent="main?.focus()">跳到正文</a>
   <header class="site-header"><div class="header-inner">
-    <a href="#/" class="brand"><span class="brand-mark" aria-hidden="true">排</span><span>汤包的逛店手记<small>PLACES & PREFERENCES</small></span></a>
+    <a href="#/" class="brand"><BrandEmblem /><span>汤包的逛店手记<small>PLACES & PREFERENCES</small></span></a>
     <nav aria-label="主导航"><a href="#/" :aria-current="isHome ? 'page' : undefined">图片总榜</a><a :href="guideUrl">地图与介绍</a><a :href="qaUrl">QA 与建议</a><a :href="homeUrl">个人主页 <span aria-hidden="true">↗</span></a></nav>
   </div></header>
 
@@ -62,7 +63,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
       <section class="hero" aria-labelledby="page-title">
         <div class="hero-copy"><p class="eyebrow"><span></span> CITY LOG / 一份持续更新的个人榜单</p><h1 id="page-title">{{ site.title }}<span class="title-dot">。</span></h1>
           <p class="hero-description">{{ site.description }}</p>
-          <div class="byline"><span class="author-avatar" aria-hidden="true">汤</span><span>{{ site.author }}</span><span class="separator">/</span><span>{{ contentDate ? `内容更新于 ${contentDate}` : '等待第一条体验' }}</span></div>
+          <div class="byline"><span>{{ site.author }}</span><span class="separator">/</span><span>{{ contentDate ? `内容更新于 ${contentDate}` : '等待第一条体验' }}</span></div>
         </div>
         <div class="hero-note" aria-label="榜单概况"><div class="note-top"><span>我的城市探索记录</span><span aria-hidden="true">✦</span></div><div class="stats"><div><strong>{{ String(all.length).padStart(2, '0') }}</strong><span>家店铺</span></div><span class="stats-divider"></span><div><strong>{{ String(cities.length).padStart(2, '0') }}</strong><span>座城市</span></div></div><div class="mini-scale" aria-hidden="true"><span v-for="tier in tiers" :key="tier.id" :style="{ background: tier.color }"></span></div><p>{{ all.length ? '走过的路，留下自己的判断。' : '榜单已就位，故事慢慢填。' }}</p></div>
       </section>
