@@ -145,6 +145,7 @@
   text-align: left;
 }
 .mascot-bio strong { display: block; margin-bottom: 3px; font-size: 14px; }
+.mascot-bio::before { content: ''; position: absolute; inset: -9px 0 auto; height: 9px; }
 .mascot-bio p { margin-bottom: 5px; }
 .mascot-bio small { color: #a34b60; font-size: 11px; font-weight: 700; }
 .mascot-next { display: block; margin-top: 7px; padding: 2px 0; border: 0; background: none; color: #a34b60; font-size: 11px; font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
@@ -757,4 +758,72 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 }
 @media(prefers-reduced-motion:reduce) {
   .button,.photo-card .card-link { transition: none; }
+}
+
+/* Small character accents live inside existing headings and cards. */
+.mascot-moments.mascot-embedded {
+  width: auto;
+  flex: none;
+  margin: 0;
+  padding: 0;
+}
+.mascot-embedded .mascot-moments-line { min-height: 0; }
+.mascot-embedded .mascot-moment { width: 48px; height: 48px; margin: 0; transform: none; }
+.mascot-embedded .mascot-moment:hover,
+.mascot-embedded .mascot-moment:focus-visible { transform: translateY(-2px); }
+.mascot-embedded .mascot-bio { right: 0; width: min(280px, calc(100vw - 48px)); }
+.mascot-title { display: flex; align-items: center; gap: 12px; }
+.mascot-title > :is(h1, h2) { min-width: 0; }
+.board-page .hero { min-height: 300px; margin: 28px 8px 36px 0; padding: 36px 40px; overflow: visible; }
+.board-page .hero::before { inset: 0 0 0 auto; width: 36%; height: auto; border-radius: 0; }
+.board-page .hero::after { display: none; }
+.board-page .hero h1 { font-size: clamp(38px, 4.2vw, 56px); margin: 20px 0 16px; }
+.board-page .hero-note { z-index: 5; }
+.hero-note > .mascot-note { position: absolute; top: -41px; right: 12px; transform: rotate(-3deg); }
+.mascot-note .mascot-moment { width: 56px; height: 56px; }
+.board-page .section-heading > div { align-items: center; }
+.board-page .section-heading .mascot-inline .mascot-moment { width: 44px; height: 44px; }
+.board-section > .section-heading { margin-bottom: 14px; }
+.board-section .mascot-inline .mascot-bio { left: -120px; right: auto; }
+.board-page .bottom-grid { margin-top: 28px; }
+.board-page .updates-section .section-heading { padding-bottom: 12px; margin-bottom: 14px; }
+.board-page .updates-section .section-heading > div { gap: 9px; }
+.guide-page .guide-hero { margin: 28px 8px 28px 0; padding: 24px 30px; overflow: visible; }
+.guide-page .guide-hero::after { inset: 0 0 0 auto; width: 30%; height: 100%; border-radius: 0; }
+.guide-page .guide-hero > div { z-index: 5; }
+.guide-page .guide-hero h1 { margin: 8px 0; }
+.guide-page .guide-layout { margin-top: 20px; margin-bottom: 28px; }
+.guide-page .selected-detail { margin-top: 0; }
+.guide-page .detail-navigation { margin-top: 0; }
+.guide-page .guide-empty-detail { padding: 26px 24px; }
+.guide-empty-detail > .mascot-empty { width: fit-content; margin: 0 auto 8px; }
+.mascot-empty .mascot-moment { width: 56px; height: 56px; }
+.mascot-empty .mascot-bio { right: 50%; transform: translateX(50%); }
+.guide-page .atlas-map { overflow: visible; margin-top: 28px; }
+.guide-page .atlas-heading { padding-top: 20px; padding-bottom: 20px; }
+.guide-page .atlas-heading h2 { margin: 0; }
+.guide-page .atlas-heading .mascot-title { margin-bottom: 4px; }
+@media (max-width: 800px) {
+  .board-page .hero { gap: 24px; padding: 30px 26px; }
+  .board-page .hero h1 { font-size: 38px; }
+}
+@media (max-width: 580px) {
+  .board-page .hero { margin-top: 22px; margin-bottom: 28px; padding: 22px 18px; }
+  .board-page .hero h1 { font-size: 35px; margin: 16px 0 12px; }
+  .board-page .hero .byline { margin-top: 14px; }
+  .board-page .hero-note { width: calc(100% - 14px); margin: 24px auto 0; padding: 13px 16px; transform: rotate(1deg); }
+  .board-page .hero-note .stats { margin: 10px 0; }
+  .board-page .hero-note .stats strong { font-size: 30px; }
+  .board-page .hero-note p { margin-top: 8px; }
+  .board-page .hero-note > .mascot-note { right: 8px; transform: rotate(-1deg); }
+  .board-page .section-heading > div { gap: 6px; }
+  .board-page .section-heading .mascot-inline .mascot-moment { width: 38px; height: 38px; }
+  .guide-page .guide-hero { margin-top: 22px; margin-bottom: 24px; padding: 20px 18px; }
+  .guide-page .guide-hero h1 { font-size: clamp(24px, 6.7vw, 29px); }
+  .guide-page .guide-hero .button { margin-top: 12px; }
+  .mascot-title { gap: 6px; }
+  .mascot-title .mascot-moment { width: 44px; height: 44px; }
+  .guide-page .atlas-heading { padding-left: 18px!important; padding-right: 18px!important; }
+  .guide-page .atlas-heading h2 { font-size: 22px; }
+  .guide-page .guide-empty-detail { padding: 22px 16px; }
 }

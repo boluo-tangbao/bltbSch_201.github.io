@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, nextTick, ref, watch } from 'vue'
 import { mascotById } from '../data/mascots'
 
 const props = defineProps<{ ids: string[]; label?: string }>()
@@ -8,6 +8,18 @@ const characters = computed(() => props.ids.map(id => mascotById[id]).filter(Boo
 const currentIndex = ref(0)
 const character = computed(() => characters.value[currentIndex.value] ?? null)
 const showingBio = ref(false)
+const bio = ref<HTMLElement>()
+const bioShift = ref(0)
+
+watch(showingBio, async visible => {
+  bioShift.value = 0
+  if (!visible) return
+  await nextTick()
+  const bounds = bio.value?.getBoundingClientRect()
+  if (!bounds) return
+  // Keep the biography on screen even when its avatar sits near a card's edge.
+  bioShift.value = Math.max(16 - bounds.left, Math.min(0, window.innerWidth - 16 - bounds.right))
+})
 
 function nextCharacter() {
   currentIndex.value = (currentIndex.value + 1) % characters.value.length
@@ -29,7 +41,7 @@ function onBlur(event: FocusEvent) {
         <img :src="`${base}images/${character.file}`" :alt="character.name" width="72" height="72" loading="lazy" />
       </button>
     </div>
-    <div v-if="showingBio && character" class="mascot-bio" role="status">
+    <div v-if="showingBio && character" ref="bio" class="mascot-bio" :style="{ translate: `${bioShift}px 0` }">
       <strong>{{ character.name }}</strong>
       <p>{{ character.description }}</p>
       <small>{{ character.debut }}</small>
