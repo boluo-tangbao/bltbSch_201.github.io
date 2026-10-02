@@ -5,28 +5,35 @@ import { mascotById } from '../data/mascots'
 const props = defineProps<{ ids: string[]; label?: string }>()
 const base = import.meta.env.BASE_URL
 const characters = computed(() => props.ids.map(id => mascotById[id]).filter(Boolean))
-const activeId = ref<string | null>(null)
-const active = computed(() => activeId.value ? mascotById[activeId.value] : null)
+const currentIndex = ref(0)
+const character = computed(() => characters.value[currentIndex.value] ?? null)
+const showingBio = ref(false)
+
+function nextCharacter() {
+  currentIndex.value = (currentIndex.value + 1) % characters.value.length
+  showingBio.value = true
+}
 
 function onBlur(event: FocusEvent) {
-  if (!(event.currentTarget as HTMLElement).contains(event.relatedTarget as Node | null)) activeId.value = null
+  if (!(event.currentTarget as HTMLElement).contains(event.relatedTarget as Node | null)) showingBio.value = false
 }
 </script>
 
 <template>
-  <div class="mascot-moments" :aria-label="label || '像素角色'" @mouseleave="activeId = null" @focusout="onBlur" @keydown.esc="activeId = null">
+  <div class="mascot-moments" :aria-label="label || '像素角色'" @mouseleave="showingBio = false" @focusout="onBlur" @keydown.esc="showingBio = false">
     <div class="mascot-moments-line">
-      <button v-for="character in characters" :key="character.id" type="button" class="mascot-moment"
+      <button v-if="character" type="button" class="mascot-moment"
         :aria-label="`${character.name}。${character.description}${character.debut}`"
-        :aria-expanded="activeId === character.id"
-        @mouseenter="activeId = character.id" @focus="activeId = character.id" @click="activeId = character.id">
+        :aria-expanded="showingBio"
+        @mouseenter="showingBio = true" @focus="showingBio = true" @click="showingBio = true">
         <img :src="`${base}images/${character.file}`" :alt="character.name" width="72" height="72" loading="lazy" />
       </button>
     </div>
-    <div v-if="active" class="mascot-bio" role="status">
-      <strong>{{ active.name }}</strong>
-      <p>{{ active.description }}</p>
-      <small>{{ active.debut }}</small>
+    <div v-if="showingBio && character" class="mascot-bio" role="status">
+      <strong>{{ character.name }}</strong>
+      <p>{{ character.description }}</p>
+      <small>{{ character.debut }}</small>
+      <button v-if="characters.length > 1" type="button" class="mascot-next" @click="nextCharacter">换一位 ↻</button>
     </div>
   </div>
 </template>

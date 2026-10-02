@@ -147,6 +147,7 @@
 .mascot-bio strong { display: block; margin-bottom: 3px; font-size: 14px; }
 .mascot-bio p { margin-bottom: 5px; }
 .mascot-bio small { color: #a34b60; font-size: 11px; font-weight: 700; }
+.mascot-next { display: block; margin-top: 7px; padding: 2px 0; border: 0; background: none; color: #a34b60; font-size: 11px; font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
 .site-header + .mascot-moments {
   width: calc(100% - 88px);
   max-width: 1112px;
@@ -158,6 +159,9 @@
 .mascot-moments + :is(.bottom-grid, .atlas-map) { margin-top: 0; }
 .mascot-left { justify-content: flex-start; padding-left: 7px; }
 .mascot-left .mascot-bio { right: auto; left: 7px; }
+.mascot-host { position: relative; overflow: visible; }
+.mascot-host > .mascot-overlay { position: absolute; top: -55px; right: 8px; width: auto; margin: 0; padding: 0; }
+.mascot-overlay .mascot-moments-line { min-height: 0; }
 
 .hero {
   position: relative;
@@ -739,6 +743,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
   .site-header + .mascot-moments { width: calc(100% - 56px); }
   .mascot-moments-line { min-height: 61px; }
   .mascot-moment { width: 56px; height: 56px; margin-left: -3px; }
+  .mascot-host > .mascot-overlay { top: -42px; }
   .detail-miku { width: 52px; height: 52px; margin-left: -4px; }
   .tier-board { margin-right: 5px; box-shadow: 5px 5px 0 var(--manga-ink); }
   .tier-label { min-height: 63px; box-shadow: inset 5px 0 var(--tier-color); }
