@@ -17,8 +17,16 @@ import VisitCounter from './components/VisitCounter.vue'
 import BrandEmblem from './components/BrandEmblem.vue'
 
 const site = siteData as Site
+const mikuSrc = `${import.meta.env.BASE_URL}images/pixel-miku.webp`
 const colors = site.cityColors || {}
 const showLabels = ref(false)
+const expandedUpdates = ref<string[]>([])
+const visibleUpdateItems = (update: Update) => expandedUpdates.value.includes(update.id) ? updateItems(update) : updateItems(update).slice(0, 2)
+const toggleUpdate = (id: string) => {
+  expandedUpdates.value = expandedUpdates.value.includes(id)
+    ? expandedUpdates.value.filter(item => item !== id)
+    : [...expandedUpdates.value, id]
+}
 const qaUrl = `${import.meta.env.BASE_URL}qa/`
 const homeUrl = `${import.meta.env.BASE_URL}../`
 const places = flattenPlaces(placeData as PlacesByCity)
@@ -66,6 +74,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
           <div class="byline"><span>{{ site.author }}</span><span class="separator">/</span><span>{{ contentDate ? `内容更新于 ${contentDate}` : '等待第一条体验' }}</span></div>
         </div>
         <div class="hero-note" aria-label="榜单概况"><div class="note-top"><span>我的城市探索记录</span><span aria-hidden="true">✦</span></div><div class="stats"><div><strong>{{ String(all.length).padStart(2, '0') }}</strong><span>家店铺</span></div><span class="stats-divider"></span><div><strong>{{ String(cities.length).padStart(2, '0') }}</strong><span>座城市</span></div></div><div class="mini-scale" aria-hidden="true"><span v-for="tier in tiers" :key="tier.id" :style="{ background: tier.color }"></span></div><p>{{ all.length ? '走过的路，留下自己的判断。' : '榜单已就位，故事慢慢填。' }}</p></div>
+        <img class="pixel-miku hero-miku" :src="mikuSrc" alt="" aria-hidden="true" width="128" height="128" />
       </section>
 
       <section class="board-section" aria-labelledby="board-title">
@@ -85,7 +94,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
       </section>
 
       <section class="guide-entry"><div><h2>心里有一站，就去地图找找</h2><p>同样的城市颜色，对应地图上的位置。详细评价与到访路线也在这里。</p></div><a :href="guideUrl" class="button dark">打开地图与介绍 ↗</a></section>
-      <div class="bottom-grid"><section class="updates-section" aria-labelledby="updates-title"><div class="section-heading"><div><span class="section-number">02</span><h2 id="updates-title">最近更新</h2></div><span class="muted tiny">持续记录中</span></div><div v-if="!updates.length" class="quiet-empty"><span class="timeline-dot"></span><div><h3>还没有更新记录</h3><p>新增、排名与内容更新，都会在这里留下足迹。</p></div></div><ol v-else class="update-list"><li v-for="u in updates.slice(0, 10)" :key="u.id"><time>{{ u.date }}</time><div class="update-body"><div class="update-summary"><span class="update-kind">{{ updateLabel(u) }}</span><strong v-if="updateItems(u).length > 1">{{ updateItems(u).length }} 个地点</strong></div><div class="update-places"><a v-for="item in updateItems(u)" :key="item.placeId" :href="`${guideUrl}#/place/${item.placeId}`"><span>{{ all.find(p => p.id === item.placeId)?.name }}</span><small v-if="u.type === 'tier-change'">{{ tierLabel(item.fromTier!) }} → {{ tierLabel(item.toTier!) }}</small></a></div><p>{{ u.note }}</p></div></li></ol></section>
+      <div class="bottom-grid"><section class="updates-section" aria-labelledby="updates-title"><div class="section-heading"><div><span class="section-number">02</span><h2 id="updates-title">最近更新</h2></div><span class="muted tiny">持续记录中</span></div><div v-if="!updates.length" class="quiet-empty"><span class="timeline-dot"></span><div><h3>还没有更新记录</h3><p>新增、排名与内容更新，都会在这里留下足迹。</p></div></div><ol v-else class="update-list"><li v-for="u in updates.slice(0, 10)" :key="u.id"><time>{{ u.date }}</time><div class="update-body"><div class="update-summary"><span class="update-kind">{{ updateLabel(u) }}</span><strong v-if="updateItems(u).length > 1">{{ updateItems(u).length }} 个地点</strong></div><div class="update-places"><a v-for="item in visibleUpdateItems(u)" :key="item.placeId" :href="`${guideUrl}#/place/${item.placeId}`"><span>{{ all.find(p => p.id === item.placeId)?.name }}</span><small v-if="u.type === 'tier-change'">{{ tierLabel(item.fromTier!) }} → {{ tierLabel(item.toTier!) }}</small></a><button v-if="updateItems(u).length > 2" type="button" class="update-more" :aria-expanded="expandedUpdates.includes(u.id)" @click="toggleUpdate(u.id)">{{ expandedUpdates.includes(u.id) ? '收起' : `展开其余 ${updateItems(u).length - 2} 处` }} <span aria-hidden="true">{{ expandedUpdates.includes(u.id) ? '−' : '＋' }}</span></button></div><p>{{ u.note }}</p></div></li></ol></section>
       <section class="criteria-section" aria-labelledby="criteria-title"><div class="section-heading"><div><span class="section-number">03</span><h2 id="criteria-title">关于这份榜单</h2></div><span class="about-icon" aria-hidden="true">i</span></div><p>{{ site.criteria }}</p><div class="criteria-scale"><span v-for="t in tiers" :key="t.id"><i :style="{ background: t.color }"></i>{{ t.label }}</span></div><details><summary>查看各档标准与排序规则</summary><dl><template v-for="t in tiers" :key="t.id"><dt>{{ t.label }}</dt><dd>{{ site.tierDescriptions[t.id] }}</dd></template></dl><p>{{ site.rankWithinTier ? '同档有先后，卡片编号表示该档内的完整排名；筛选后保留原排名。' : '同档不分先后，展示顺序仅用于排版。' }}</p><p>到访日期未提供时显示“未记录”；内容更新日期由作者维护。</p></details><p class="personal-note">仅代表个人体验，供你出发前参考。</p></section></div>
       <Guestbook />
     </template>
