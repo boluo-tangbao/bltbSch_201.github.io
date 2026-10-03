@@ -1,0 +1,16 @@
+.updates-page { max-width: 1000px; }
+.updates-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin: 30px 8px 24px 0; }
+.updates-heading h1 { font-size: 32px; text-shadow: 2px 2px 0 #f7b7c0; }
+.updates-heading p { margin-top: 8px; color: #6f636d; font-size: 13px; }
+.updates-heading .button { flex: none; }
+.updates-archive { margin-bottom: 40px; }
+.updates-total { margin-bottom: 18px; color: #6f636d; font-size: 12px; }
+.updates-archive .update-list > li:last-child { border-bottom: 0; padding-bottom: 0; }
+@media (max-width: 580px) {
+  .updates-heading { gap: 12px; margin-top: 22px; }
+  .updates-heading h1 { font-size: 26px; }
+  .updates-heading p { font-size: 12px; line-height: 1.6; }
+  .updates-heading .button { padding: 8px 10px; font-size: 11px; }
+  .updates-archive .update-list > li { flex-wrap: wrap; gap: 8px; }
+  .updates-archive .update-body { flex-basis: 100%; }
+}

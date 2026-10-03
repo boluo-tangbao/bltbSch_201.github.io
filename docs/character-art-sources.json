@@ -1,0 +1,221 @@
+{
+  "miku": {
+    "page": "https://piapro.net/pages/character",
+    "image": "https://piapro.net/images/ch_img_miku.png",
+    "frame": {
+      "width": 117.9545,
+      "left": -9.0909,
+      "top": 0
+    },
+    "file": "official/miku.png"
+  },
+  "akane": {
+    "page": "https://jmagazine.myjcom.jp/category/anime/post001115/",
+    "image": "https://jmagazine.myjcom.jp/uploads/20260130_ishimi1_13.jpg",
+    "label": "J:COM 授权动画画面",
+    "frame": {
+      "width": 177.6765,
+      "left": -38.7244,
+      "top": 0
+    },
+    "file": "official/akane.jpg"
+  },
+  "utaha": {
+    "page": "https://www.saenai.tv/character/",
+    "image": "https://www.saenai.tv/images/character/chara_utaha_vsl.png",
+    "frame": {
+      "width": 100,
+      "left": 0,
+      "top": -10.8932
+    },
+    "file": "official/utaha.png"
+  },
+  "yui": {
+    "page": "https://www.tbs.co.jp/anime/oregairu/character/chara03.html",
+    "image": "https://www.tbs.co.jp/anime/oregairu/character/img/chara_img_03.jpg",
+    "label": "官方动画画面",
+    "frame": {
+      "width": 177.7188,
+      "left": -59.6817,
+      "top": 0
+    },
+    "file": "official/yui.jpg"
+  },
+  "sinon": {
+    "page": "https://www.swordart-online.net/phantom/character/",
+    "image": "https://www.swordart-online.net/phantom/assets/img/chara/big/02_shinon.png",
+    "frame": {
+      "width": 131.0169,
+      "left": 7.6271,
+      "top": 0,
+      "clip": "inset(0 40% 0 0)"
+    },
+    "file": "official/sinon.png"
+  },
+  "rin": {
+    "page": "https://www.fatestaynightusa.com/ubw/sp/chara/",
+    "image": "https://www.fatestaynightusa.com/ubw/chara/img/ch03.jpg",
+    "label": "官方动画画面",
+    "frame": {
+      "width": 177.8523,
+      "left": -30.2013,
+      "top": 0
+    },
+    "file": "official/rin.jpg"
+  },
+  "onodera": {
+    "page": "https://www.nisekoi.jp/sp/chara/",
+    "image": "https://www.nisekoi.jp/sp/assets/img/chara/03/main.png",
+    "frame": {
+      "width": 100,
+      "left": 0,
+      "top": 0
+    },
+    "file": "official/onodera.png"
+  },
+  "kumiko": {
+    "page": "https://tv.anime-eupho.com/sp/character/kumiko/",
+    "image": "https://tv.anime-eupho.com/sp/img/character/kumiko.png",
+    "frame": {
+      "width": 177.7778,
+      "left": -90.2778,
+      "top": -5.5556,
+      "clip": "inset(5% 0 0 66%)"
+    },
+    "file": "official/kumiko.png"
+  },
+  "aqua": {
+    "page": "https://konosuba.com/3rd/character/",
+    "image": "https://konosuba.com/3rd/character/img/aqua.png",
+    "frame": {
+      "width": 100,
+      "left": 0,
+      "top": 0
+    },
+    "file": "official/aqua.png"
+  },
+  "emilia": {
+    "page": "https://re-zero-anime.jp/tv/character/",
+    "image": "https://re-zero-anime.jp/tv/assets/character/c/2a.webp?v2",
+    "frame": {
+      "width": 117.8947,
+      "left": -8.9474,
+      "top": 0
+    },
+    "file": "official/emilia.webp"
+  },
+  "ichinose": {
+    "page": "https://youkosozitsuryoku-2nd.com/character/ichinose.html",
+    "image": "https://youkosozitsuryoku-2nd.com/assets/img/character/ichinose@2x.png",
+    "frame": {
+      "width": 100,
+      "left": 0,
+      "top": 0
+    },
+    "file": "official/ichinose.png"
+  },
+  "mordred": {
+    "page": "https://fate-apocrypha.com/sp/character/?chara=red_saber",
+    "image": "https://fate-apocrypha.com/sp/assets/img/chara/detail/detail_red_saber.png",
+    "frame": {
+      "width": 187.5,
+      "left": 8.75,
+      "top": 0,
+      "clip": "inset(0 58% 55% 0)"
+    },
+    "file": "official/mordred.png"
+  },
+  "hestia": {
+    "page": "https://danmachi.com/danmachi5/character/",
+    "image": "https://danmachi.com/danmachi5/character/images/chara_tachi_02.png",
+    "frame": {
+      "width": 113.3333,
+      "left": 13.8889,
+      "top": 0,
+      "clip": "inset(0 52% 0 0)"
+    },
+    "file": "official/hestia.png"
+  },
+  "zero-two": {
+    "page": "https://darli-fra.jp/character/",
+    "image": "https://darli-fra.jp/assets/img/common/character/character01/c_zerotwo_stand.png",
+    "frame": {
+      "width": 85.2941,
+      "left": 7.3529,
+      "top": 0
+    },
+    "file": "official/zero-two.png"
+  },
+  "marin": {
+    "page": "https://bisquedoll-anime.com/1st/character/",
+    "image": "https://bisquedoll-anime.com/1st/assets/img/character/chara_1.png",
+    "frame": {
+      "width": 83.3333,
+      "left": 8.3333,
+      "top": 0
+    },
+    "file": "official/marin.png"
+  },
+  "mutsumi": {
+    "page": "https://anime.bang-dream.com/avemujica/character/mutsumi/",
+    "image": "https://anime.bang-dream.com/avemujica/wordpress/wp-content/themes/avemujica_0102/assets/images/common/character/img_mutsumi_1.png",
+    "frame": {
+      "width": 116.9231,
+      "left": -4.6154,
+      "top": 0
+    },
+    "file": "official/mutsumi.png"
+  },
+  "misaki": {
+    "page": "https://vo-index.sega.jp/chara/index06.html",
+    "image": "https://vo-index.sega.jp/img/character/chara_main06.png",
+    "frame": {
+      "width": 86.2069,
+      "left": 5.1724,
+      "top": 0
+    },
+    "file": "official/misaki.png"
+  },
+  "ami": {
+    "page": "https://www.tv-tokyo.co.jp/contents/toradora/chara/",
+    "image": "https://www.tv-tokyo.co.jp/contents/toradora/images/chara/ami.gif",
+    "frame": {
+      "width": 206.6116,
+      "left": -111.157,
+      "top": -50.4132,
+      "clip": "inset(34% 1% 1% 60%)"
+    },
+    "file": "official/ami.gif"
+  },
+  "esdeath": {
+    "page": "http://akame.tv/character.html",
+    "image": "http://akame.tv/images/character/chara_9.png",
+    "frame": {
+      "width": 314.7541,
+      "left": -110.4918,
+      "top": 0,
+      "clip": "inset(0 35% 0 35%)"
+    },
+    "file": "official/esdeath.png"
+  },
+  "miuna": {
+    "page": "http://nagiasu.jp/character/",
+    "image": "http://nagiasu.jp/character/images/character_18.png",
+    "frame": {
+      "width": 382.9787,
+      "left": -140.4255,
+      "top": -122.3404
+    },
+    "file": "official/miuna.png"
+  },
+  "eris": {
+    "page": "https://mushokutensei.jp/news/260619_01/",
+    "image": "https://mushokutensei.jp/wp-content/uploads/2026/06/MT3_character_visual_eris_r-768x1024.jpg",
+    "frame": {
+      "width": 139.6364,
+      "left": -20.9091,
+      "top": -12.7273
+    },
+    "file": "official/eris.jpg"
+  }
+}

@@ -8,7 +8,6 @@ import PlaceGallery from './PlaceGallery.vue'
 import { parseRichText, richTextClasses } from '../utils/richText'
 
 const props = defineProps<{ place: Place; rank?: number; color: string }>()
-const mikuSrc = `${import.meta.env.BASE_URL}images/pixel-miku-profile.webp`
 const address = computed(() => placeAddress(props.place))
 const detailParagraphs = computed(() => props.place.details.split(/\r?\n+/).map(paragraph => paragraph.trim()).filter(Boolean).map(paragraph => parseRichText(paragraph)))
 const visitNotes = computed(() => (props.place.visitNotes ?? []).map(note => parseRichText(note)))
@@ -21,6 +20,7 @@ const visitNotes = computed(() => (props.place.visitNotes ?? []).map(note => par
       <h1>{{ place.name }}</h1><p class="detail-summary">{{ place.summary }}</p>
       <div class="detail-facts"><span v-if="place.visitedAt"><small>到访</small>{{ place.visitedAt }}</span><span><small>更新</small>{{ place.updatedAt }}</span><span v-if="address"><small>地址</small>{{ address }}</span></div>
       <div v-if="place.tags.length" class="tags detail-tags" aria-label="店铺标签"><span v-for="item in place.tags" :key="item"># {{ item }}</span></div>
+      <nav v-if="address" class="detail-quick-directions" aria-label="直接导航"><a :href="navigationUrl(place, true)!" target="_blank" rel="noopener noreferrer" class="button dark">高德导航 ↗</a><a :href="baiduMapUrl(place)!" target="_blank" rel="noopener noreferrer" class="button">百度地图 ↗</a><a :href="googleMapsUrl(place)!" target="_blank" rel="noopener noreferrer" class="button">Google 地图 ↗</a></nav>
     </header>
     <section v-if="detailParagraphs.length || visitNotes.length" class="detail-body detail-review" aria-labelledby="review-heading">
       <header class="detail-review-heading">
@@ -32,7 +32,7 @@ const visitNotes = computed(() => (props.place.visitNotes ?? []).map(note => par
         <p v-for="(paragraph, index) in detailParagraphs" :key="index"><template v-for="(part, partIndex) in paragraph" :key="partIndex"><strong v-if="part.strong" :class="richTextClasses(part)">{{ part.text }}</strong><span v-else :class="richTextClasses(part)">{{ part.text }}</span></template></p>
       </div>
       <aside v-if="visitNotes.length" class="detail-visit-notes" aria-labelledby="visit-notes-heading">
-        <header class="detail-visit-heading"><img class="pixel-miku detail-miku" :src="mikuSrc" alt="" aria-hidden="true" width="64" height="64" /><div><p class="section-label">bltb's picks</p><h3 id="visit-notes-heading">菠萝の建议</h3></div></header>
+        <header class="detail-visit-heading"><div><p class="section-label">bltb's picks</p><h3 id="visit-notes-heading">菠萝の建议</h3></div></header>
         <ul class="detail-visit-list"><li v-for="(note, index) in visitNotes" :key="index"><span class="detail-visit-mark" aria-hidden="true">↗</span><p><template v-for="(part, partIndex) in note" :key="partIndex"><strong v-if="part.strong" :class="richTextClasses(part)">{{ part.text }}</strong><span v-else :class="richTextClasses(part)">{{ part.text }}</span></template></p></li></ul>
       </aside>
     </section>

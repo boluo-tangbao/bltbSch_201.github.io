@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import BrandEmblem from './BrandEmblem.vue'
 
-const props = defineProps<{ active: 'board' | 'guide' | 'qa' }>()
+const props = defineProps<{ active: 'board' | 'guide' | 'qa' | 'updates' }>()
 const base = import.meta.env.BASE_URL
 const boardHref = props.active === 'board' ? '#/' : base
 const guideHref = props.active === 'guide' ? '#/' : `${base}guide/`

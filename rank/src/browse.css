@@ -1,0 +1,37 @@
+/* Browsing layout is independent of the shared portrait artwork and sizes. */
+.hero-browse-links { display: flex; gap: 20px; margin-top: 16px; font-size: 13px; font-weight: 800; }
+.hero-browse-links a { color: #a83750; text-decoration: underline; text-underline-offset: 4px; }
+.hero-browse-links a:hover { color: #742038; }
+.tag-filter { gap: 5px; margin-bottom: 14px; }
+.tag-filter button { padding: 3px 7px; font-size: 11px; line-height: 1.6; }
+.photo-board:not(.show-photo-labels) .photo-caption { opacity: 0; }
+.photo-board.show-photo-labels .photo-caption { opacity: 1; pointer-events: none; }
+.guide-view-switch { display: flex; gap: 8px; margin: 14px 7px 16px 0; }
+.guide-view-switch button { border: 1.5px solid var(--manga-ink); border-radius: 4px; padding: 9px 18px; background: var(--manga-paper); color: var(--manga-ink); font: inherit; font-size: 13px; font-weight: 800; }
+.guide-view-switch button[aria-pressed=true] { background: var(--manga-ink); color: #fffaf1; box-shadow: 3px 3px 0 var(--manga-pink); }
+.guide-map-panel .atlas-map { margin-top: 0; margin-bottom: 24px; }
+.detail-quick-directions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.detail-quick-directions .button { min-height: 38px; padding: 8px 12px; font-size: 12px; }
+
+/* Touch screens keep the labels visible; only a hovering mouse hides them. */
+@media (hover: hover) and (pointer: fine) {
+  .photo-board.show-photo-labels .card-link:hover .photo-caption { opacity: 0; }
+  .photo-board.show-photo-labels .card-link:focus-visible .photo-caption { opacity: 1; }
+}
+
+@media (max-width: 800px) {
+  .guide-map-view .place-directory,
+  .guide-map-view .selected-detail.is-awaiting-place { display: none; }
+}
+
+@media (max-width: 580px) {
+  .city-legend { margin-top: 12px; margin-bottom: 12px; }
+  .tag-filter { gap: 4px; margin-bottom: 12px; }
+  .tag-filter-title { font-size: 10px; }
+  .tag-filter button { padding: 2px 6px; font-size: 10px; line-height: 1.6; }
+  .photo-options { gap: 6px; margin: 8px 0; font-size: 10px; }
+  .guide-view-switch { margin-top: 12px; margin-bottom: 14px; }
+  .guide-view-switch button { flex: 1; padding: 8px 10px; font-size: 12px; }
+  .detail-quick-directions { gap: 6px; margin-top: 16px; }
+  .detail-quick-directions .button { padding: 8px 10px; font-size: 11px; }
+}

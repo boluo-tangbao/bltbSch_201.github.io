@@ -359,6 +359,51 @@ main,
   margin-top: 24px;
 }
 
+/* Front-facing character portraits on the personal homepage. */
+.pixel-gallery { padding: 36px; margin-bottom: 36px; scroll-margin-top: 24px; }
+.pixel-gallery-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.pixel-gallery h2 { margin: 8px 0; color: var(--aqua-deep); font-size: clamp(24px, 3vw, 34px); line-height: 1.4; }
+.pixel-gallery-intro { margin: 10px 0 26px; color: var(--muted); }
+.pixel-rank-link { color: var(--aqua-deep); font-size: 14px; font-weight: 700; text-decoration: underline; text-underline-offset: 5px; }
+.pixel-characters { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 14px; list-style: none; padding: 0; margin: 0; }
+.pixel-character { display: block; width: 100%; height: 100%; padding: 10px 8px 12px; border: 1px solid var(--line); border-radius: 8px; background: #f4fdff; color: var(--ink); font: inherit; cursor: pointer; transition: transform .2s, border-color .2s; }
+.pixel-character:hover { transform: translateY(-4px); border-color: var(--aqua); background: white; }
+.pixel-character:focus-visible,.pixel-dialog button:focus-visible { outline: 3px solid var(--aqua-deep); outline-offset: 4px; }
+.pixel-character-stage { display: flex; align-items: center; justify-content: center; aspect-ratio: 1; padding: 4px; }
+.pixel-character img { display: block; width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+.pixel-character-name { display: block; margin-top: 8px; font-size: 13px; font-weight: 700; line-height: 1.5; }
+.pixel-dialog { position: fixed; width: min(780px, calc(100% - 32px)); max-height: calc(100dvh - 32px); overflow-y: auto; padding: 36px; border: 1px solid var(--line); border-radius: 12px; background: #f3fdff; color: var(--ink); box-shadow: 0 24px 80px #07343f40; }
+.pixel-dialog::backdrop { background: #103d49b0; backdrop-filter: blur(5px); }
+.pixel-dialog-close { position: absolute; top: 10px; right: 10px; width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 8px; background: white; color: var(--aqua-deep); font-size: 28px; cursor: pointer; }
+.pixel-dialog-content { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; gap: 28px; }
+.pixel-dialog-stage { height: min(420px, 60dvh); display: flex; align-items: center; justify-content: center; }
+.pixel-dialog-stage img { display: block; width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+.pixel-character-stage,.pixel-dialog-stage { position: relative; overflow: hidden; }
+.pixel-dialog-stage { width: 100%; height: auto; aspect-ratio: 1; }
+:is(.pixel-character-stage,.pixel-dialog-stage).original-art img { position: absolute; width: var(--art-width); max-width: none; height: auto; left: var(--art-left); top: var(--art-top); object-fit: initial; image-rendering: auto; clip-path: var(--art-clip); }
+.pixel-character-source,.photo-credit { font-size: 12px; color: var(--muted); }
+.photo-credit { display: block; margin-top: 8px; }
+.pixel-dialog-copy h2 { color: var(--aqua-deep); font-size: 28px; line-height: 1.4; margin: 10px 0 16px; }
+.pixel-character-debut { color: var(--muted); font-size: 13px; }
+.pixel-dialog-controls { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 26px; font-size: 12px; }
+.pixel-dialog-controls button { border: 1px solid var(--line); border-radius: 6px; background: white; padding: 8px; color: var(--aqua-deep); font: inherit; cursor: pointer; }
+@media (max-width: 1000px) { .pixel-characters { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+@media (max-width: 600px) {
+  .pixel-gallery { padding: 22px 16px; }
+  .pixel-characters { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; }
+  .pixel-character { padding: 6px 4px 10px; }
+  .pixel-character-stage { padding: 0; }
+  .pixel-character-name { font-size: 11px; }
+  .pixel-dialog { padding: 46px 20px 22px; }
+  .pixel-dialog-content { grid-template-columns: minmax(0,1fr); gap: 16px; }
+  .pixel-dialog-stage { width: min(280px, 100%); height: auto; margin-inline: auto; }
+  .pixel-dialog-copy h2 { font-size: 24px; margin-bottom: 10px; }
+  .pixel-dialog-copy p { margin: 8px 0; }
+  .pixel-dialog-controls { margin-top: 16px; }
+}
+@media (max-width: 360px) { .pixel-characters { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (prefers-reduced-motion: reduce) { .pixel-character { transition: none; } }
+
 .gallery-item {
   min-height: 160px;
   border-radius: 8px;

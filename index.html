@@ -6,7 +6,7 @@
 
   <title>业余生活 | Life Gallery</title>
 
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=6" />
 </head>
 
 <body>
@@ -20,6 +20,8 @@
         <a href="#art">艺术</a>
         <a href="#anime">二次元</a>
         <a href="#travel">旅游</a>
+        <a href="#pixel-gallery">我的动画老婆们</a>
+        <a href="rank/">城市榜单 ↗</a>
       </div>
     </nav>
 
@@ -34,6 +36,7 @@
       <div class="hero-buttons">
         <a href="#sports" class="btn primary">开始浏览</a>
         <a href="#gallery" class="btn secondary">生活相册</a>
+        <a href="#pixel-gallery" class="btn secondary">看看我的动画老婆们</a>
       </div>
     </div>
 
@@ -70,7 +73,7 @@
       </div>
 
       <div class="image-card">
-        <img src="images/sports.png" alt="体育生活照片" />
+        <img src="images/sports.webp" alt="草坪上的足球" width="960" height="640" loading="lazy" decoding="async" /><small class="photo-credit"><a href="https://commons.wikimedia.org/wiki/File:Adidas_soccer_ball_on_a_grass_pitch_(Unsplash).jpg" target="_blank" rel="noopener noreferrer">照片：Peter Glaser · CC0</a></small>
       </div>
     </section>
 
@@ -94,7 +97,7 @@
       </div>
 
       <div class="image-card">
-        <img src="images/art.jpg" alt="艺术生活照片" />
+        <img src="images/art.webp" alt="钢琴与乐谱" width="960" height="640" loading="lazy" decoding="async" /><small class="photo-credit"><a href="https://commons.wikimedia.org/wiki/File:Grand_piano_with_music.jpg" target="_blank" rel="noopener noreferrer">照片：Vanessa David</a> · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a> · 封面取景</small>
       </div>
     </section>
 
@@ -120,8 +123,19 @@
       </div>
 
       <div class="image-card">
-        <img src="images/anime.jpg" alt="二次元兴趣照片" />
+        <img src="images/anime.webp" alt="苏州相城天街玩聚猫店面" width="960" height="640" loading="lazy" decoding="async" /><small class="photo-credit">照片：城市手记 · 苏州相城天街</small>
       </div>
+    </section>
+
+    <section id="pixel-gallery" class="pixel-gallery card" aria-labelledby="pixel-gallery-title">
+      <div class="pixel-gallery-heading">
+        <div><span class="section-label">Anime Favorites</span><h2 id="pixel-gallery-title">我的动画老婆们</h2></div>
+        <a href="rank/" class="pixel-rank-link">去看看城市榜单 ↗</a>
+      </div>
+      <p class="pixel-gallery-intro">把喜欢的角色留在生活里。原画半身取景，点击看看她的故事和素材出处。</p>
+      <p id="pixel-gallery-status" role="status">角色相册加载中…</p>
+      <ul id="pixel-characters" class="pixel-characters" aria-label="我的动画老婆们相册"></ul>
+      <noscript><p>启用 JavaScript 可以浏览角色相册。</p></noscript>
     </section>
 
     <section id="travel" class="life-section reverse" data-link="travel.html" tabindex="0" role="link" aria-label="进入旅游页面">
@@ -145,7 +159,7 @@
       </div>
 
       <div class="image-card">
-        <img src="images/travel.jpg" alt="旅游生活照片" />
+        <img src="images/travel.webp" alt="苏州相城天街外观" width="960" height="640" loading="lazy" decoding="async" /><small class="photo-credit">照片：城市手记 · 苏州相城天街</small>
       </div>
     </section>
 
@@ -166,6 +180,13 @@
     <p>© 2026 My Life Gallery · Built with GitHub Pages</p>
   </footer>
 
-  <script src="script.js?v=3"></script>
+  <dialog id="pixel-dialog" class="pixel-dialog" aria-labelledby="pixel-character-name">
+    <button type="button" class="pixel-dialog-close" aria-label="关闭角色介绍" autofocus>×</button>
+    <div class="pixel-dialog-content">
+      <div class="pixel-dialog-stage"><img id="pixel-character-image" alt="" /></div>
+      <div class="pixel-dialog-copy"><span class="section-label">Anime Favorites</span><h2 id="pixel-character-name"></h2><p id="pixel-character-description"></p><p id="pixel-character-debut" class="pixel-character-debut"></p><a id="pixel-character-source" class="pixel-character-source" target="_blank" rel="noopener noreferrer" hidden></a><div class="pixel-dialog-controls"><button type="button" id="pixel-previous" aria-label="上一位角色">← 上一位</button><span id="pixel-character-position" aria-live="polite"></span><button type="button" id="pixel-next" aria-label="下一位角色">下一位 →</button></div></div>
+    </div>
+  </dialog>
+  <script src="script.js?v=6"></script>
 </body>
 </html>

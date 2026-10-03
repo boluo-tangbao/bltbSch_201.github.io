@@ -1,6 +1,7 @@
 const symbols = ["~", "*", "+", "o"];
 
 document.addEventListener("DOMContentLoaded", function () {
+  initializePixelGallery();
   document.querySelectorAll("section[data-link]").forEach(function (section) {
     section.classList.add("is-clickable");
 
@@ -22,6 +23,84 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+async function initializePixelGallery() {
+  const gallery = document.getElementById("pixel-characters");
+  if (!gallery) return;
+  const status = document.getElementById("pixel-gallery-status");
+  const dialog = document.getElementById("pixel-dialog");
+  try {
+    const response = await fetch("rank/characters.json");
+    if (!response.ok) throw new Error("Character gallery unavailable");
+    const characters = await response.json();
+    function framePortrait(stage, character) {
+      stage.classList.toggle("original-art", !!character.frame);
+      const frame = character.frame || { width: 100, left: 0, top: 0 };
+      stage.style.setProperty("--art-width", `${frame.width}%`);
+      stage.style.setProperty("--art-left", `${frame.left}%`);
+      stage.style.setProperty("--art-top", `${frame.top}%`);
+      stage.style.setProperty("--art-clip", frame.clip || "none");
+    }
+    let selected = 0;
+    function showCharacter(index) {
+      selected = (index + characters.length) % characters.length;
+      const character = characters[selected];
+      const image = document.getElementById("pixel-character-image");
+      image.src = `rank/${character.portrait}`;
+      image.alt = `${character.name}的正面半身像`;
+      framePortrait(image.parentElement, character);
+      const source = document.getElementById("pixel-character-source");
+      source.hidden = !character.source;
+      if (character.source) { source.href = character.source.url; source.textContent = `${character.source.label} ↗`; }
+      document.getElementById("pixel-character-name").textContent = character.name;
+      document.getElementById("pixel-character-description").textContent = character.description;
+      document.getElementById("pixel-character-debut").textContent = character.debut;
+      document.getElementById("pixel-character-position").textContent = `${selected + 1} / ${characters.length}`;
+    }
+    characters.forEach((character, index) => {
+      const item = document.createElement("li");
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "pixel-character";
+      button.setAttribute("aria-haspopup", "dialog");
+      button.setAttribute("aria-label", `查看${character.name}的半身像与介绍`);
+      const stage = document.createElement("span");
+      stage.className = "pixel-character-stage";
+      framePortrait(stage, character);
+      const image = document.createElement("img");
+      image.src = `rank/${character.portrait}`;
+      image.alt = `${character.name}的正面半身像`;
+      image.width = 512;
+      image.height = 512;
+      image.loading = "lazy";
+      image.decoding = "async";
+      const name = document.createElement("span");
+      name.className = "pixel-character-name";
+      name.textContent = character.name;
+      stage.append(image);
+      button.append(stage, name);
+      button.addEventListener("click", () => {
+        showCharacter(index);
+        dialog.showModal();
+      });
+      item.append(button);
+      gallery.append(item);
+    });
+    status.hidden = true;
+    dialog.querySelector(".pixel-dialog-close").addEventListener("click", () => dialog.close());
+    dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
+    document.getElementById("pixel-previous").addEventListener("click", () => showCharacter(selected - 1));
+    document.getElementById("pixel-next").addEventListener("click", () => showCharacter(selected + 1));
+    dialog.addEventListener("keydown", event => {
+      if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+        event.preventDefault();
+        showCharacter(selected + (event.key === "ArrowLeft" ? -1 : 1));
+      }
+    });
+  } catch {
+    status.textContent = "角色相册暂时没有加载成功，请刷新页面再试试。";
+  }
+}
 
 document.addEventListener("click", function (event) {
   createRipple(event.clientX, event.clientY);

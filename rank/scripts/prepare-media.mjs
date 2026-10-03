@@ -5,10 +5,16 @@ import { fileURLToPath } from 'node:url'
 import { execFileSync } from 'node:child_process'
 import sharp from 'sharp'
 import ffmpeg from '@ffmpeg-installer/ffmpeg'
+import { mascots } from '../src/data/mascots.ts'
 
 // Keep previews separate from original media; content hashes invalidate browser caches.
 export async function prepareMedia(root) {
   const publicRoot = resolve(root, 'public')
+  // Share biographies with rank pages, but keep the homepage's anime favorites separate.
+  const homepageCharacters = mascots.filter(({ id }) => id !== 'miku' && id !== 'deepseek')
+  writeFileSync(resolve(publicRoot, 'characters.json'), JSON.stringify(homepageCharacters.map(({ file, ...character }) => ({
+    ...character, portrait: `images/${file}`,
+  })), null, 2) + '\n')
   const output = resolve(publicRoot, 'images/previews')
   mkdirSync(output, { recursive: true })
   const groups = JSON.parse(readFileSync(resolve(root, 'src/data/places.json'), 'utf8'))
