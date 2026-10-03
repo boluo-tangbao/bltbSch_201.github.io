@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { assetUrl, previewUrl } from '../utils/assets'
+import { displayUrl, previewUrl } from '../utils/assets'
 
 defineProps<{ src: string; alt: string }>()
 const loaded = ref(false)
@@ -12,10 +12,10 @@ function retry() { loaded.value = false; failed.value = false; attempt.value++ }
 <template>
   <div class="full-image" :aria-busy="!loaded && !failed">
     <img class="full-image-preview" :class="{ 'is-hidden': loaded }" :src="previewUrl(src)" alt="" aria-hidden="true" decoding="async">
-    <img :key="`${src}-${attempt}`" class="full-image-original" :class="{ 'is-ready': loaded }" :src="assetUrl(src)" :alt="alt" decoding="async" @load="loaded = true" @error="failed = true">
+    <img :key="`${src}-${attempt}`" class="full-image-original" :class="{ 'is-ready': loaded }" :src="displayUrl(src)" :alt="alt" decoding="async" fetchpriority="high" @load="loaded = true" @error="failed = true">
     <div v-if="!loaded" class="full-image-status" role="status">
-      <template v-if="failed">原图加载失败 <button type="button" @click="retry">重试</button></template>
-      <template v-else>正在加载高清原图…</template>
+      <template v-if="failed">大图加载失败 <button type="button" @click="retry">重试</button></template>
+      <template v-else>正在加载高清图片…</template>
     </div>
   </div>
 </template>

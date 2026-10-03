@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath } from 'node:url'
-import { createReadStream, existsSync } from 'node:fs'
+import { createReadStream, existsSync, readFileSync } from 'node:fs'
 import { extname, isAbsolute, relative, resolve } from 'node:path'
 
 const rankBase = process.env.SITE_BASE || '/bltbSch_201.github.io/rank/'
@@ -35,8 +35,22 @@ const personalSitePreview = {
   },
 }
 
+// These two portraits are always above the fold: discover them before Vue runs.
+const criticalPortraits = {
+  name: 'critical-portrait-preload',
+  transformIndexHtml(_html: string, context: { filename: string }) {
+    const filename = context.filename.replaceAll('\\', '/')
+    const file = filename.endsWith('/guide/index.html') ? 'pixel-aqua-profile.webp'
+      : filename.endsWith('/qa/index.html') ? 'pixel-deepseek-profile.webp' : null
+    const manifest = fileURLToPath(new URL('./src/data/portrait-previews.json', import.meta.url))
+    if (!file || !existsSync(manifest)) return []
+    const portraits = JSON.parse(readFileSync(manifest, 'utf8')) as Record<string, string>
+    return portraits[file] ? [{ tag: 'link', attrs: { rel: 'preload', as: 'image', href: `${rankBase}${portraits[file]}`, fetchpriority: 'high' }, injectTo: 'head' as const }] : []
+  },
+}
+
 export default defineConfig({
-  plugins: [personalSitePreview, vue()],
+  plugins: [personalSitePreview, criticalPortraits, vue()],
   base: rankBase,
   build: {
     rolldownOptions: {

@@ -7,6 +7,9 @@ import vue from '@vitejs/plugin-vue'
 const root = fileURLToPath(new URL('../', import.meta.url)), empty = process.argv.includes('--empty'), target = resolve(root, empty ? '.fixture-empty' : '.fixture-app')
 mkdirSync(target, { recursive: true })
 for (const item of ['src', 'index.html', 'guide', 'qa']) cpSync(resolve(root, item), resolve(target, item), { recursive: true })
+// The copied source sits one directory deeper than the real app.
+const mascotSource = resolve(target, 'src/data/mascots.ts')
+writeFileSync(mascotSource, readFileSync(mascotSource, 'utf8').replace('../../../docs/', '../../../../docs/'))
 mkdirSync(resolve(target, 'public/images/places'), { recursive: true })
 cpSync(resolve(root, 'public/favicon.svg'), resolve(target, 'public/favicon.svg'))
 const site = JSON.parse(readFileSync(resolve(root, 'src/data/site.json'), 'utf8'))
@@ -26,6 +29,6 @@ writeFileSync(resolve(target, 'src/data/updates.json'), JSON.stringify(empty ? [
   { id: 'hidden-update', placeId: 'hidden', type: 'added', note: '不可见更新原因', date: '2026-09-18' },
 ]))
 writeFileSync(resolve(target, 'public/images/places/test.svg'), '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300"><rect width="600" height="300" fill="#e4bd74"/><circle cx="300" cy="150" r="85" fill="#628875"/><text x="300" y="165" text-anchor="middle" font-size="40" fill="white">DEMO</text></svg>')
-const server = await createServer({ root: target, configFile: false, plugins: [vue()], base: '/bltbSch_201.github.io/rank/', server: { host: '127.0.0.1', port: empty ? 4175 : 4174, strictPort: true } })
+const server = await createServer({ root: target, configFile: false, plugins: [vue()], base: '/bltbSch_201.github.io/rank/', server: { host: '127.0.0.1', port: empty ? 4175 : 4174, strictPort: true, fs: { allow: [root, resolve(root, '../docs')] } } })
 await server.listen()
 server.printUrls()

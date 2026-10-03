@@ -53,7 +53,7 @@ function tierColor(p: Place) { return tiers.find(t => t.id === p.tier)?.color ||
   <a href="#guide-main" class="skip-link" @click.prevent="main?.focus()">跳到正文</a>
   <SiteHeader active="guide" />
   <main ref="main" id="guide-main" tabindex="-1" class="page-shell guide-page" :class="{ 'guide-map-view': guideView === 'map' }">
-    <div class="guide-hero compact-map-hero"><div class="map-hero-line"><h1>去哪逛？</h1><p>挑个城市，开逛～</p><a :href="boardUrl" class="button" aria-label="回到图片总榜">← 总榜</a></div><MascotMoments class="mascot-embedded mascot-inline" :ids="['aqua', 'emilia']" rotate-all label="地图手记角色" /></div>
+    <div class="guide-hero compact-map-hero"><div class="map-hero-line"><h1>去哪逛？</h1><p>挑个城市，开逛～</p><a :href="boardUrl" class="button" aria-label="回到图片总榜">← 总榜</a></div><MascotMoments class="mascot-embedded mascot-inline" priority :ids="['aqua', 'emilia']" rotate-all label="地图手记角色" /></div>
     <div class="filter-bar"><label class="city-filter"><span class="sr-only">城市筛选</span><select v-model="city" aria-label="城市筛选"><option value="">全部城市</option><option v-if="city && !cities.includes(city)" :value="city">{{ city }}（暂无条目）</option><option v-for="c in cities" :key="c">{{ c }}</option></select></label><label class="search-filter"><input v-model="query" type="search" aria-label="关键词搜索" placeholder="搜索店名、城市或标签…" /></label><div class="filter-result"><span role="status">{{ filtered.length }} 个结果</span><button class="text-button" :disabled="!city && !tag && !query.trim()" @click="reset">重置</button></div></div>
     <CityLegend :cities="cities" :colors="colors" :active="city" @select="city = $event" />
     <TagLegend :tags="tags" :active="tag" @select="tag = $event" />

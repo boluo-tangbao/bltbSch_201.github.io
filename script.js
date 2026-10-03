@@ -68,7 +68,7 @@ async function initializePixelGallery() {
       stage.className = "pixel-character-stage";
       framePortrait(stage, character);
       const image = document.createElement("img");
-      image.src = `rank/${character.portrait}`;
+      image.src = `rank/${character.thumbnail || character.portrait}`;
       image.alt = `${character.name}的正面半身像`;
       image.width = 512;
       image.height = 512;

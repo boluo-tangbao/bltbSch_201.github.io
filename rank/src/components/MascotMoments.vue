@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed, nextTick, ref, watch } from 'vue'
 import { pixelMascotById, pixelPortraitVariants } from '../data/mascots'
+import { portraitUrl } from '../utils/assets'
 
-const props = defineProps<{ ids: string[]; label?: string; rotateAll?: boolean }>()
-const base = import.meta.env.BASE_URL
+const props = defineProps<{ ids: string[]; label?: string; rotateAll?: boolean; priority?: boolean }>()
 const characters = computed(() => [...new Set(props.rotateAll ? [...props.ids, ...Object.keys(pixelMascotById)] : props.ids)]
   .map(id => pixelMascotById[id]).filter(Boolean))
 const currentIndex = ref(0)
@@ -44,6 +44,18 @@ function nextPortrait() {
   portraitIndexes.value[character.value.id] = (portraitIndex.value + 1) % portraitFiles.value.length
 }
 
+function showBio() {
+  showingBio.value = true
+  const connection = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection
+  if (connection?.saveData || characters.value.length < 2) return
+  // Warm only the next character when someone interacts, rather than downloading the roster.
+  const next = characters.value[(currentIndex.value + 1) % characters.value.length]
+  const file = pixelPortraitVariants[next.id]?.[0] || next.file
+  const image = new Image()
+  image.fetchPriority = 'low'
+  image.src = portraitUrl(file)
+}
+
 function onBlur(event: FocusEvent) {
   if (!(event.currentTarget as HTMLElement).contains(event.relatedTarget as Node | null)) showingBio.value = false
 }
@@ -55,8 +67,8 @@ function onBlur(event: FocusEvent) {
       <button v-if="character" type="button" class="mascot-moment"
         :aria-label="`${character.name}。${character.description}${character.debut}。${characters.length > 1 ? '点击人物换一位角色' : '查看角色介绍'}`"
         :aria-expanded="showingBio"
-        @mouseenter="showingBio = true" @focus="showingBio = true" @click="nextCharacter">
-        <span class="mascot-portrait" :class="{ 'original-art': character.frame }" :style="portraitStyle"><img :src="`${base}images/${portraitFile}`" :alt="character.name" :data-view="portraitView || undefined" width="72" height="72" loading="lazy" /></span>
+        @mouseenter="showBio" @focus="showBio" @click="nextCharacter">
+        <span class="mascot-portrait" :class="{ 'original-art': character.frame }" :style="portraitStyle"><img :src="portraitUrl(portraitFile)" :alt="character.name" :data-view="portraitView || undefined" width="256" height="256" :loading="priority ? 'eager' : 'lazy'" :fetchpriority="priority ? 'high' : 'auto'" decoding="async" /></span>
       </button>
     </div>
     <span v-if="character" class="sr-only" aria-live="polite" aria-atomic="true">{{ character.name }}，{{ portraitView }}</span>

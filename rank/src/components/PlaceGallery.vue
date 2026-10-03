@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, ref } from 'vue'
 import type { Place } from '../types'
-import { assetUrl, previewUrl, previewSrcset } from '../utils/assets'
+import { assetUrl, playbackUrl, previewUrl, previewSrcset } from '../utils/assets'
 import FullImage from './FullImage.vue'
 
 const props = defineProps<{ images: Place['gallery']; color: string }>()
@@ -71,7 +71,7 @@ onBeforeUnmount(() => {
       <div>
         <p class="section-label">PHOTO ALBUM</p>
         <h2 id="place-gallery-heading">现场图集</h2>
-        <p class="place-gallery-intro">点击照片查看高清原图，点击视频封面播放</p>
+        <p class="place-gallery-intro">点击照片放大，点击视频封面播放</p>
       </div>
       <span class="place-gallery-count"><strong>{{ images.length }}</strong> 个素材</span>
     </header>
@@ -104,11 +104,11 @@ onBeforeUnmount(() => {
         <button class="place-gallery-arrow is-previous" type="button" aria-label="上一个素材" @click="showRelativeImage(-1)">‹</button>
         <figure class="place-gallery-viewer">
           <video v-if="currentImage.type === 'video'" :key="currentImage.src" class="place-gallery-lightbox-video" controls autoplay preload="metadata" playsinline :poster="previewUrl(currentImage.src)" :aria-label="currentImage.alt">
-            <source :src="assetUrl(currentImage.src)" type="video/mp4">
+            <source :src="playbackUrl(currentImage.src)" type="video/mp4">
             浏览器暂不支持播放此视频。
           </video>
           <FullImage v-else :key="currentImage.src" :src="currentImage.src" :alt="currentImage.alt" />
-          <figcaption><span>{{ currentImage.alt }}</span><a :href="assetUrl(currentImage.src)" target="_blank" rel="noopener noreferrer">{{ currentImage.type === 'video' ? '打开视频' : '打开原图' }} ↗</a><a v-if="currentImage.sourceUrl" :href="currentImage.sourceUrl" target="_blank" rel="noopener noreferrer">来源：{{ currentImage.sourceName || '原始页面' }} ↗</a><small>{{ (activeIndex ?? 0) + 1 }} / {{ images.length }}</small></figcaption>
+          <figcaption><span>{{ currentImage.alt }}</span><a :href="assetUrl(currentImage.src)" target="_blank" rel="noopener noreferrer">{{ currentImage.type === 'video' ? '打开原视频' : '打开原图' }} ↗</a><a v-if="currentImage.sourceUrl" :href="currentImage.sourceUrl" target="_blank" rel="noopener noreferrer">来源：{{ currentImage.sourceName || '原始页面' }} ↗</a><small>{{ (activeIndex ?? 0) + 1 }} / {{ images.length }}</small></figcaption>
         </figure>
         <button class="place-gallery-arrow is-next" type="button" aria-label="下一个素材" @click="showRelativeImage(1)">›</button>
       </div>

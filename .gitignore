@@ -15,5 +15,6 @@ playwright-report/
 # Generated automatically before development/build; originals remain untouched.
 /rank/public/images/previews/
 /rank/src/data/media-previews.json
+/rank/src/data/portrait-previews.json
 /rank/public/characters.json
 /rank/.npm-cache/
