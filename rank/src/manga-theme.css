@@ -386,11 +386,16 @@
   background: var(--manga-marble);
 }
 body {
+  min-height: 100vh;
   color: var(--manga-ink);
+  /* Full-width screentone and panel lines continue into the page gutters. */
   background:
-    linear-gradient(133deg, transparent 0 46%, #d9d4d42b 46.15%, transparent 46.35% 100%) 0 0 / 650px 720px,
-    linear-gradient(37deg, transparent 0 68%, #e4d5d529 68.1%, transparent 68.3% 100%) 0 0 / 730px 790px,
-    #f8f6f3;
+    radial-gradient(ellipse 260px 460px at left 240px, #f374821c, transparent 100%),
+    radial-gradient(ellipse 280px 480px at right 640px, #f3748224, transparent 100%),
+    radial-gradient(circle, #a6526424 .8px, transparent 1px) 0 0 / 12px 12px,
+    linear-gradient(133deg, transparent 0 46%, #a652641a 46.05% 46.3%, transparent 46.4% 100%) 0 0 / 560px 680px,
+    linear-gradient(37deg, transparent 0 68%, #a6526412 68.05% 68.3%, transparent 68.4% 100%) 0 0 / 690px 760px,
+    var(--manga-marble);
 }
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,textarea:focus-visible {
   outline-color: var(--manga-pink);
