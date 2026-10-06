@@ -40,7 +40,7 @@ const shopDirectory = computed(() => (shopDirectories as Record<string, ShopDire
         <ul class="detail-visit-list"><li v-for="(note, index) in visitNotes" :key="index"><span class="detail-visit-mark" aria-hidden="true">↗</span><p><template v-for="(part, partIndex) in note" :key="partIndex"><strong v-if="part.strong" :class="richTextClasses(part)">{{ part.text }}</strong><span v-else :class="richTextClasses(part)">{{ part.text }}</span></template></p></li></ul>
       </aside>
     </section>
-    <ShopDirectory v-if="shopDirectory" :directory="shopDirectory" />
+    <ShopDirectory v-if="shopDirectory" :directory="shopDirectory" :visited-at="place.visitedAt" />
     <PlaceGallery v-if="place.gallery.length" :images="place.gallery" :color="color" />
     <section v-if="address" class="place-mini-map" aria-labelledby="nearby-map-heading">
       <div class="place-mini-map-heading"><div><p class="section-label">AROUND HERE</p><h2 id="nearby-map-heading">店铺周边</h2></div><span>百度地图 · 无需访客登录 · 可拖动、缩放</span></div>

@@ -93,6 +93,7 @@ onBeforeUnmount(() => {
             <span v-if="entry.image.type === 'video'" class="place-gallery-video-badge" aria-hidden="true">VIDEO</span>
             <span class="place-gallery-item-caption">{{ entry.image.alt }}</span>
             <a v-if="entry.image.sourceUrl" class="place-gallery-source" :href="entry.image.sourceUrl" target="_blank" rel="noopener noreferrer">来源：{{ entry.image.sourceName || '原始页面' }} ↗</a>
+            <span v-else-if="entry.image.sourceName" class="place-gallery-source">来源：{{ entry.image.sourceName }}</span>
           </article>
         </div>
       </section>
@@ -108,7 +109,7 @@ onBeforeUnmount(() => {
             浏览器暂不支持播放此视频。
           </video>
           <FullImage v-else :key="currentImage.src" :src="currentImage.src" :alt="currentImage.alt" />
-          <figcaption><span>{{ currentImage.alt }}</span><a :href="assetUrl(currentImage.src)" target="_blank" rel="noopener noreferrer">{{ currentImage.type === 'video' ? '打开原视频' : '打开原图' }} ↗</a><a v-if="currentImage.sourceUrl" :href="currentImage.sourceUrl" target="_blank" rel="noopener noreferrer">来源：{{ currentImage.sourceName || '原始页面' }} ↗</a><small>{{ (activeIndex ?? 0) + 1 }} / {{ images.length }}</small></figcaption>
+          <figcaption><span>{{ currentImage.alt }}</span><a :href="assetUrl(currentImage.src)" target="_blank" rel="noopener noreferrer">{{ currentImage.type === 'video' ? '打开原视频' : '打开原图' }} ↗</a><a v-if="currentImage.sourceUrl" :href="currentImage.sourceUrl" target="_blank" rel="noopener noreferrer">来源：{{ currentImage.sourceName || '原始页面' }} ↗</a><span v-else-if="currentImage.sourceName">来源：{{ currentImage.sourceName }}</span><small>{{ (activeIndex ?? 0) + 1 }} / {{ images.length }}</small></figcaption>
         </figure>
         <button class="place-gallery-arrow is-next" type="button" aria-label="下一个素材" @click="showRelativeImage(1)">›</button>
       </div>

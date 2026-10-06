@@ -152,14 +152,23 @@ export function validateShopDirectories(directories, places) {
     const names = new Set()
     for (const shop of directory.shops) {
       if (!object(shop)) { fail(id, '店铺必须是对象'); continue }
-      for (const key of ['name', 'floor', 'note']) if (!text(shop[key])) fail(id, `店铺 ${key} 必填`)
+      for (const key of ['name', 'note']) if (!text(shop[key])) fail(id, `店铺 ${key} 必填`)
+      if (shop.floor !== undefined && !text(shop.floor)) fail(id, `${shop.name} 未知楼层请省略 floor`)
       if (names.has(shop.name)) fail(id, `店名重复：${shop.name}`)
       names.add(shop.name)
       if (!['recent', 'listed', 'older', 'unverified', 'closed'].includes(shop.status)) fail(id, `${shop.name} 核实状态无效`)
+      if (shop.kind !== undefined && !text(shop.kind)) fail(id, `${shop.name} 主营必须为非空文字`)
+      if (shop.kindSources !== undefined) {
+        if (!text(shop.kind) || !Array.isArray(shop.kindSources) || !shop.kindSources.length) fail(id, `${shop.name} 主营依据需要非空主营与来源数组`)
+        else for (const source of shop.kindSources) {
+          if (!object(source) || !text(source.label) || !url(source.url)) fail(id, `${shop.name} 主营依据需要名称与 HTTPS 链接`)
+        }
+      }
       if (!Array.isArray(shop.sources) || !shop.sources.length) fail(id, `${shop.name} 缺少核对依据`)
       else for (const source of shop.sources) {
         if (!object(source) || !text(source.label) || !url(source.url)) { fail(id, `${shop.name} 依据需要名称与 HTTPS 链接`); continue }
         if (source.date !== undefined && (!validDate(source.date) || source.date > directory.checkedAt)) fail(id, `${shop.name} 来源日期无效或晚于核对日期`)
+        if (source.dateLabel !== undefined && (!text(source.dateLabel) || source.date !== undefined)) fail(id, `${shop.name} 来源时间范围必须是非空文字，且不能与 date 同时填写`)
       }
       if (shop.accounts !== undefined) {
         if (!Array.isArray(shop.accounts) || !shop.accounts.length) { fail(id, `${shop.name} 无账号时请省略 accounts`); continue }
