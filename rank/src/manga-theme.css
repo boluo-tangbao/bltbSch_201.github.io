@@ -64,7 +64,7 @@
   align-items: center;
   gap: 7px;
   color: #303039;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 750;
 }
 .site-header nav a {
@@ -330,7 +330,7 @@
 
 @media(max-width:800px) {
   .site-header .header-inner { min-height: 76px; gap: 18px; }
-  .site-header nav { gap: 2px; font-size: 11px; }
+  .site-header nav { gap: 2px; font-size: 15px; }
   .site-header nav a { padding: 6px 8px; }
   .hero { gap: 25px; padding: 38px 30px; }
   .hero h1 { font-size: clamp(38px, 5.5vw, 50px); }
@@ -351,7 +351,7 @@
   .site-header .brand-mark { width: 31px; height: 31px; font-size: 17px; box-shadow: 3px 3px 0 #f37482; }
   .site-header .brand-mark svg { width: 21px; height: 21px; }
   .site-header .brand small { margin-top: 3px; font-size: 7px; }
-  .site-header nav { width: 100%; gap: 2px; overflow-x: auto; font-size: 11px; }
+  .site-header nav { width: 100%; gap: 2px; overflow-x: auto; font-size: 14px; }
   .site-header nav a { min-height: 29px; padding: 4px 7px; }
   .site-header nav a[aria-current] { box-shadow: 2px 2px 0 #292932; }
   .site-header nav a[aria-current]::before { margin-right: 3px; font-size: 10px; }
@@ -534,8 +534,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
   pointer-events: none;
 }
 .guide-entry>* { position: relative; z-index: 1; }
-.guide-entry h2 { color: var(--manga-ink); font-size: 20px; font-weight: 850; }
-.guide-entry p { color: #675d65; }
+.guide-entry h2 { color: var(--manga-ink); font-size: 28px; font-weight: 850; line-height: 1.5; }
+.guide-entry p { color: #675d65; font-size: 17px; line-height: 1.8; }
 .bottom-grid { align-items: start; gap: 24px; margin-top: 45px; }
 .bottom-grid>section {
   min-width: 0;
@@ -687,7 +687,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .map-status { background: #f9edef; color: #795665; }
 .map-caption { color: #766a72; }
 .detail-destination { border-top: 2px solid var(--manga-ink); background: #ffe8eb; }
-.detail-destination p:last-child { color: #65545f; }
+.detail-destination .section-label { font-size: 13px; }
+.detail-destination h2 { font-size: 24px; line-height: 1.5; }
+.detail-destination p:last-child { color: #65545f; font-size: 17px; line-height: 1.8; }
+.detail-destination .button { font-size: 15px; }
 .atlas-map {
   overflow: hidden;
   border: 2px solid var(--manga-ink);
@@ -877,7 +880,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .board-page .guide-entry::before { left: 0; right: auto; width: 190px; }
 .board-page .guide-entry > .mascot-moments { z-index: 4; }
 .guide-entry-copy { min-width: 0; text-align: right; }
-.guide-entry-copy .button { margin-top: 18px; }
+.guide-entry-copy .button { margin-top: 18px; font-size: 16px; }
 .guestbook-layout { display: grid; grid-template-columns: minmax(0, 1fr) 144px; align-items: start; gap: 24px; }
 .guestbook-copy { min-width: 0; }
 .mascot-guestbook { justify-self: end; }
@@ -887,8 +890,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
   .board-page .guide-entry { grid-template-columns: 96px minmax(0, 1fr); gap: 12px; padding: 20px 16px; }
   .board-page .guide-entry::before { width: 114px; }
   .mascot-map-entry { --portrait-size: 96px; }
-  .guide-entry-copy h2 { font-size: 18px; line-height: 1.5; }
-  .guide-entry-copy .button { padding: 10px; font-size: 12px; }
+  .guide-entry-copy h2 { font-size: 24px; line-height: 1.5; }
+  .guide-entry-copy p { font-size: 16px; }
+  .guide-entry-copy .button { padding: 10px; font-size: 14px; }
   .guestbook-layout { grid-template-columns: minmax(0, 1fr) 88px; gap: 12px; }
   .mascot-guestbook { --portrait-size: 88px; }
   .site-footer { gap: 10px 16px; }
