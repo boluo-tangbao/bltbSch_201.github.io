@@ -5,12 +5,16 @@ import { tierLabel } from '../utils/model'
 import { baiduMapUrl, googleMapsUrl, navigationUrl, placeAddress } from '../utils/cities'
 import AddressMap from './AddressMap.vue'
 import PlaceGallery from './PlaceGallery.vue'
+import ShopDirectory from './ShopDirectory.vue'
+import shopDirectories from '../data/shop-directories.json'
+import type { ShopDirectory as ShopDirectoryData } from '../types'
 import { parseRichText, richTextClasses } from '../utils/richText'
 
 const props = defineProps<{ place: Place; rank?: number; color: string }>()
 const address = computed(() => placeAddress(props.place))
 const detailParagraphs = computed(() => props.place.details.split(/\r?\n+/).map(paragraph => paragraph.trim()).filter(Boolean).map(paragraph => parseRichText(paragraph)))
 const visitNotes = computed(() => (props.place.visitNotes ?? []).map(note => parseRichText(note)))
+const shopDirectory = computed(() => (shopDirectories as Record<string, ShopDirectoryData>)[props.place.id])
 </script>
 
 <template>
@@ -36,6 +40,7 @@ const visitNotes = computed(() => (props.place.visitNotes ?? []).map(note => par
         <ul class="detail-visit-list"><li v-for="(note, index) in visitNotes" :key="index"><span class="detail-visit-mark" aria-hidden="true">↗</span><p><template v-for="(part, partIndex) in note" :key="partIndex"><strong v-if="part.strong" :class="richTextClasses(part)">{{ part.text }}</strong><span v-else :class="richTextClasses(part)">{{ part.text }}</span></template></p></li></ul>
       </aside>
     </section>
+    <ShopDirectory v-if="shopDirectory" :directory="shopDirectory" />
     <PlaceGallery v-if="place.gallery.length" :images="place.gallery" :color="color" />
     <section v-if="address" class="place-mini-map" aria-labelledby="nearby-map-heading">
       <div class="place-mini-map-heading"><div><p class="section-label">AROUND HERE</p><h2 id="nearby-map-heading">店铺周边</h2></div><span>百度地图 · 无需访客登录 · 可拖动、缩放</span></div>

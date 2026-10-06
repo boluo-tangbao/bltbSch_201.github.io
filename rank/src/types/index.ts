@@ -1,5 +1,15 @@
 export type TierId = 'hang' | 'top' | 'above' | 'npc' | 'bad'
 export interface GalleryMedia { src: string; alt: string; group?: string; type?: 'image' | 'video'; poster?: string; sourceName?: string; sourceUrl?: string }
+export interface ShopAccount {
+  platform: 'xiaohongshu' | 'douyin'; name: string; handle?: string; url: string; scope: 'store' | 'brand'
+}
+export interface ShopSource { label: string; url: string; date?: string }
+export interface DirectoryShop {
+  name: string; floor: string; kind?: string
+  status: 'recent' | 'listed' | 'older' | 'unverified' | 'closed'
+  note: string; sources: ShopSource[]; accounts?: ShopAccount[]
+}
+export interface ShopDirectory { area: string; checkedAt: string; shops: DirectoryShop[] }
 export interface PlaceEntry {
   id: string; name: string; tier: TierId; order: number
   summary: string; details: string; visitNotes?: string[]; tags: string[]

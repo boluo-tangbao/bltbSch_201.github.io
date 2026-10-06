@@ -1,5 +1,13 @@
 [
   {
+    "id": "guangzhou-dmxc-shop-directory-20261005",
+    "date": "2026-10-05",
+    "type": "edited",
+    "category": "content",
+    "placeIds": ["guangzhou-shop-002", "guangzhou-shop-003"],
+    "note": "动漫星城东西区新增谷店一览（自整理），按楼层记录店铺、营业核对依据及小红书和抖音官方账号；旧店单未确认的营业状态单独标注。"
+  },
+  {
     "id": "suzhou-shop-info-20260927",
     "date": "2026-09-27",
     "type": "edited",

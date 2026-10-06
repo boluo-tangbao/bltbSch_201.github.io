@@ -9,7 +9,7 @@ export function validDate(value, month = false) {
   const parsed = new Date(full + 'T00:00:00Z')
   return !Number.isNaN(parsed.getTime()) && parsed.toISOString().slice(0, 10) === full
 }
-export function validateData(site, groups, updates, imageExists = () => true) {
+export function validateData(site, groups, updates, imageExists = () => true, directories = {}) {
   const errors = [], fail = (file, id, message) => errors.push(`${file} [${id ?? '?'}] ${message}`)
   if (!site || typeof site !== 'object') return ['site.json 必须是对象']
   for (const key of ['title', 'description', 'criteria']) if (typeof site[key] !== 'string' || !site[key].trim()) fail('site.json', key, '必须填写文字')
@@ -129,13 +129,60 @@ export function validateData(site, groups, updates, imageExists = () => true) {
       if (p && validDate(p.updatedAt) && validDate(u.date) && u.date > p.updatedAt) fail('updates.json', u.id, `更新记录晚于 ${placeId} 的 updatedAt，请同步内容日期`)
     }
   }
+  errors.push(...validateShopDirectories(directories, places))
+  return errors
+}
+
+export function validateShopDirectories(directories, places) {
+  const errors = [], fail = (id, message) => errors.push(`shop-directories.json [${id}] ${message}`)
+  const object = value => value && typeof value === 'object' && !Array.isArray(value)
+  const text = value => typeof value === 'string' && !!value.trim()
+  const url = value => {
+    try { const parsed = new URL(value); return parsed.protocol === 'https:' && !parsed.username && !parsed.password ? parsed : null }
+    catch { return null }
+  }
+  if (!object(directories)) return ['shop-directories.json 必须是地点 ID 到店单的对象']
+  const ids = new Set(places.map(place => place.id))
+  for (const [id, directory] of Object.entries(directories)) {
+    if (!ids.has(id)) fail(id, '引用了不存在的地点')
+    if (!object(directory)) { fail(id, '店单必须是对象'); continue }
+    if (!text(directory.area)) fail(id, '需要填写区域')
+    if (!validDate(directory.checkedAt)) fail(id, 'checkedAt 必须是真实 YYYY-MM-DD 日期')
+    if (!Array.isArray(directory.shops) || !directory.shops.length) { fail(id, 'shops 必须是非空店铺数组'); continue }
+    const names = new Set()
+    for (const shop of directory.shops) {
+      if (!object(shop)) { fail(id, '店铺必须是对象'); continue }
+      for (const key of ['name', 'floor', 'note']) if (!text(shop[key])) fail(id, `店铺 ${key} 必填`)
+      if (names.has(shop.name)) fail(id, `店名重复：${shop.name}`)
+      names.add(shop.name)
+      if (!['recent', 'listed', 'older', 'unverified', 'closed'].includes(shop.status)) fail(id, `${shop.name} 核实状态无效`)
+      if (!Array.isArray(shop.sources) || !shop.sources.length) fail(id, `${shop.name} 缺少核对依据`)
+      else for (const source of shop.sources) {
+        if (!object(source) || !text(source.label) || !url(source.url)) { fail(id, `${shop.name} 依据需要名称与 HTTPS 链接`); continue }
+        if (source.date !== undefined && (!validDate(source.date) || source.date > directory.checkedAt)) fail(id, `${shop.name} 来源日期无效或晚于核对日期`)
+      }
+      if (shop.accounts !== undefined) {
+        if (!Array.isArray(shop.accounts) || !shop.accounts.length) { fail(id, `${shop.name} 无账号时请省略 accounts`); continue }
+        const accounts = new Set()
+        for (const account of shop.accounts) {
+          if (!object(account)) { fail(id, `${shop.name} 账号必须是对象`); continue }
+          const parsed = url(account.url)
+          const correctHost = account.platform === 'xiaohongshu' ? parsed && ['www.xiaohongshu.com', 'xiaohongshu.com'].includes(parsed.hostname) && /^\/user\/profile\/[a-z0-9]+\/?$/.test(parsed.pathname)
+            : account.platform === 'douyin' ? parsed && ['www.douyin.com', 'douyin.com'].includes(parsed.hostname) && /^\/user\/[A-Za-z0-9_-]+\/?$/.test(parsed.pathname) : false
+          if (!text(account.name) || !correctHost || !['store', 'brand'].includes(account.scope) || (account.handle !== undefined && !text(account.handle))) fail(id, `${shop.name} 账号只能填写小红书或抖音主页，并注明店铺号或品牌号`)
+          if (accounts.has(account.url)) fail(id, `${shop.name} 账号重复`)
+          accounts.add(account.url)
+        }
+      }
+    }
+  }
   return errors
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const root = fileURLToPath(new URL('../', import.meta.url)), data = {}
   try {
-    for (const name of ['site', 'places', 'updates']) {
+    for (const name of ['site', 'places', 'updates', 'shop-directories']) {
       try { data[name] = JSON.parse(readFileSync(resolve(root, `src/data/${name}.json`), 'utf8')) }
       catch (error) { throw new Error(`${name}.json 无法解析：${error.message}`) }
     }
@@ -143,7 +190,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     const errors = validateData(data.site, data.places, data.updates, path => {
       const target = resolve(publicRoot, path), rel = relative(publicRoot, target)
       return !rel.startsWith('..') && !isAbsolute(rel) && existsSync(target) && statSync(target).isFile() && !!extname(target)
-    })
+    }, data['shop-directories'])
     if (errors.length) throw new Error(errors.join('\n'))
     console.log(`数据校验通过：${Object.values(data.places).reduce((n, entries) => n + entries.length, 0)} 个条目，${data.updates.length} 条更新。`)
   } catch (error) { console.error(error.message); process.exitCode = 1 }
