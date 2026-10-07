@@ -21,6 +21,7 @@
 | 上传自己的封面和详情照片 | `rank/public/images/places/` |
 | 固定各城市的边框和地图颜色 | `rank/src/data/site.json` 的 `cityColors` |
 | 地址与地图位置 | `rank/src/data/places.json` 的 `location` |
+| 商圈店铺一览、营业与主营依据 | `rank/src/data/shop-directories.json`；遵循 [固定维护规则](docs/shop-directory-rules.md) |
 
 最简流程：上传图片 → 修改 JSON → 推送到 `main` → Actions 自动记录档内顺序调整并部署 → 打开榜单确认。无需手动生成排名更新记录或改组件代码。也可以直接把条目、评价与图片交给 Agent 更新。
 

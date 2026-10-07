@@ -2,12 +2,22 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { validateShopDirectories } from '../scripts/validate-data.mjs'
-import { sourcePredatesVisit } from '../src/utils/shopDirectory.ts'
+import { shopDisplayStatus, sourcePredatesVisit } from '../src/utils/shopDirectory.ts'
 
 const directories = JSON.parse(readFileSync(new URL('../src/data/shop-directories.json', import.meta.url), 'utf8'))
 const groups = JSON.parse(readFileSync(new URL('../src/data/places.json', import.meta.url), 'utf8'))
 const places = Object.values(groups).flat()
 const fixture = () => ({ test: { area: '东区', checkedAt: '2026-10-05', shops: [{ name: '测试店', floor: '负二层', status: 'unverified', note: '保留旧线索', sources: [{ label: '来源', url: 'https://example.com/source' }] }] } })
+
+test('only verified account entries are shown as open; closed notices override accounts', () => {
+  const shop = fixture().test.shops[0]
+  shop.status = 'recent'
+  assert.equal(shopDisplayStatus(shop), 'evidence')
+  shop.accounts = [{ platform: 'xiaohongshu', name: '测试店', url: 'https://www.xiaohongshu.com/user/profile/123abc', scope: 'store' }]
+  assert.equal(shopDisplayStatus(shop), 'open')
+  shop.status = 'closed'
+  assert.equal(shopDisplayStatus(shop), 'closed')
+})
 
 test('author visit annotation uses latest evidence and excludes equal, newer or unknown dates', () => {
   const source = date => ({ label: '探店', url: 'https://example.com/post', date })

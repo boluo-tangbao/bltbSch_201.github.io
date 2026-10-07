@@ -1,4 +1,9 @@
-import type { ShopSource } from '../types/index.ts'
+import type { DirectoryShop, ShopSource } from '../types/index.ts'
+
+export function shopDisplayStatus(shop: DirectoryShop): 'open' | 'evidence' | 'closed' {
+  if (shop.status === 'closed') return 'closed'
+  return shop.accounts?.length ? 'open' : 'evidence'
+}
 
 export function latestSourceDate(sources: ShopSource[]): string | undefined {
   return sources.flatMap(source => source.date ? [source.date] : []).sort().at(-1)

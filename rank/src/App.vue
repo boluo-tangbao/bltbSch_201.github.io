@@ -79,7 +79,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
         <CityLegend :cities="cities" :colors="colors" :active="city" @select="city = $event" />
         <TagLegend :tags="tags" :active="tag" @select="tag = $event" />
         <div class="photo-options"><span>点击图片查看详情 · 悬停隐藏店名</span><label><input v-model="showLabels" type="checkbox" />显示名称与城市</label></div>
-        <div v-if="!all.length && !hasFilters" class="empty-intro"><span class="empty-icon" aria-hidden="true">＋</span><div><strong>第一站，还在路上</strong><p>这里暂时没有条目。等真实体验到来，再把每一票投给心里的位置。</p></div><span class="empty-pill">待填充</span></div>
+        <div v-if="!all.length && !hasFilters" class="empty-intro"><span class="empty-icon" aria-hidden="true">＋</span><div><strong>规划中，还在路上待访问</strong><p>等亲自来，再写~</p></div><span class="empty-pill">待填充</span></div>
         <div v-if="hasFilters && !filtered.length" class="no-results" role="status"><strong>没有找到匹配的条目</strong><span>试试其他关键词、城市或标签。</span><button class="text-button" @click="reset">重置筛选 ↗</button></div>
         <div class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels }"><section v-for="(tier, index) in tiers" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ index + 1 }}</span><h3 :id="`tier-${tier.id}`">{{ tier.label }}</h3><span class="tier-count">{{ filtered.filter(p => p.tier === tier.id).length }} 个条目</span></div><div class="tier-content"><div v-if="!filtered.some(p => p.tier === tier.id)" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in filtered.filter(p => p.tier === tier.id)" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="`${guideUrl}#/place/${p.id}`" :rank="site.rankWithinTier ? rankOf(p) : undefined" :priority="p.id === firstPhotoId" :badge="recentBadge(p.id, updates, site.recentDays)" /></div></div></section></div>
         <p class="board-caption"><span>推荐度从上到下递减</span><span>{{ site.rankWithinTier ? '同档分先后 · 从左到右，从上到下' : '同档不分先后' }}</span></p>
@@ -87,16 +87,16 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
 
       <section class="guide-entry" aria-labelledby="guide-entry-title">
         <MascotMoments class="mascot-embedded mascot-map-entry" :ids="['aqua', 'emilia']" rotate-all label="地图入口角色" />
-        <div class="guide-entry-copy"><h2 id="guide-entry-title">心里有一站，就去地图找找</h2><p>同样的城市颜色，对应地图上的位置。详细评价与到访路线也在这里。</p><a :href="guideUrl" class="button dark">打开地图与介绍 ↗</a></div>
+        <div class="guide-entry-copy"><h2 id="guide-entry-title">不知道在哪里？怎么去？那就去地图找找</h2><p>同样的城市颜色，对应地图上的位置。详细评价与到访路线也在这里。</p><a :href="guideUrl" class="button dark">打开地图与介绍 ↗</a></div>
       </section>
       <div class="bottom-grid"><section class="updates-section" aria-labelledby="updates-title"><div class="section-heading"><div><span class="section-number">02</span><h2 id="updates-title">最近更新</h2></div><a :href="updatesUrl" target="_blank" rel="noopener noreferrer" class="updates-all-link">查看全部 ↗<span class="sr-only">（新标签页）</span></a></div><UpdateList :updates="updates.slice(0, 2)" :places="all" /></section>
-      <section class="criteria-section" aria-labelledby="criteria-title"><div class="section-heading"><div><span class="section-number">03</span><h2 id="criteria-title">关于这份榜单</h2></div></div><p>{{ site.criteria }}</p><div class="criteria-scale"><span v-for="t in tiers" :key="t.id"><i :style="{ background: t.color }"></i>{{ t.label }}</span></div><details><summary>查看各档标准与排序规则</summary><dl><template v-for="t in tiers" :key="t.id"><dt>{{ t.label }}</dt><dd>{{ site.tierDescriptions[t.id] }}</dd></template></dl><p>{{ site.rankWithinTier ? '同档有先后，卡片编号表示该档内的完整排名；筛选后保留原排名。' : '同档不分先后，展示顺序仅用于排版。' }}</p><p>到访日期未提供时显示“未记录”；内容更新日期由作者维护。</p></details><p class="personal-note">仅代表个人体验，供你出发前参考。</p></section></div>
+      <section class="criteria-section" aria-labelledby="criteria-title"><div class="section-heading"><div><span class="section-number">03</span><h2 id="criteria-title">关于这份榜单</h2></div></div><p>{{ site.criteria }}</p><div class="criteria-scale"><span v-for="t in tiers" :key="t.id"><i :style="{ background: t.color }"></i>{{ t.label }}</span></div><details><summary>查看各档标准与排序规则</summary><dl><template v-for="t in tiers" :key="t.id"><dt>{{ t.label }}</dt><dd>{{ site.tierDescriptions[t.id] }}</dd></template></dl><p>{{ site.rankWithinTier ? '同档有先后，卡片编号表示该档内的完整排名；筛选后保留原排名。' : '同档不分先后。' }}</p><p>到访日期未提供时显示“未记录”；内容更新日期由作者维护。</p></details><p class="personal-note">仅代表个人体验，供你出发前参考。</p></section></div>
       <Guestbook />
     </template>
 
     <section v-else-if="currentPlace" class="detail-page"><a href="#/" class="back-link">← 返回榜单</a><a :href="`${guideUrl}#/place/${currentPlace.id}`" class="button">地图与地点目录 ↗</a><PlaceDetail :place="currentPlace" :rank="site.rankWithinTier ? rankOf(currentPlace) : undefined" :color="cityColor(currentPlace.city, colors)" /></section>
     <section v-else class="not-found"><p class="eyebrow">这一站暂未收录</p><h1>没有找到这个条目</h1><p>链接可能有误，或条目尚未公开。</p><a href="#/" class="button dark">返回榜单</a></section>
   </main>
-  <footer class="site-footer"><span><b>{{ site.author }}</b> · 一店一感受，一次次更新。</span><VisitCounter /></footer>
+  <footer class="site-footer"><span><b>{{ site.author }}</b> · 一店一更新，纯主观感受，你们永远对。</span><VisitCounter /></footer>
   <ExportPanel v-if="exportOpen" :site="site" :places="filtered" :all-places="all" :scope="scope" :updated-at="contentDate" @close="exportOpen = false" />
 </template>

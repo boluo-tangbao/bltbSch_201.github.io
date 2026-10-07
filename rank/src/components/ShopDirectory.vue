@@ -1,16 +1,20 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { ShopDirectory } from '../types'
-import { latestSourceDate, sourcePredatesVisit } from '../utils/shopDirectory'
+import { latestSourceDate, shopDisplayStatus, sourcePredatesVisit } from '../utils/shopDirectory'
 
 const props = defineProps<{ directory: ShopDirectory; visitedAt?: string | null }>()
 const statusLabel = { open: '营业中', evidence: '有营业线索', closed: '已公布闭店' }
 const shops = computed(() => props.directory.shops.map(shop => {
-  const status: keyof typeof statusLabel = shop.status === 'closed' ? 'closed' : shop.accounts?.length ? 'open' : 'evidence'
+  const status = shopDisplayStatus(shop)
   const sourceTime = shop.sources.find(source => source.dateLabel)?.dateLabel
     ?? latestSourceDate(shop.sources)
   return { ...shop, displayStatus: status, sourceTime, authorVisited: sourcePredatesVisit(shop.sources, props.visitedAt) }
 }))
+const groups = computed(() => [
+  { more: false, shops: shops.value.filter(shop => shop.displayStatus === 'open') },
+  { more: true, shops: shops.value.filter(shop => shop.displayStatus !== 'open') },
+])
 const platformLabel = { xiaohongshu: '小红书', douyin: '抖音' }
 </script>
 
@@ -20,19 +24,34 @@ const platformLabel = { xiaohongshu: '小红书', douyin: '抖音' }
       <div><p class="section-label">SHOP DIRECTORY</p><h2 id="shop-directory-heading">谷店一览（自整理）</h2></div>
       <span>{{ directory.area }} · 核对 {{ directory.checkedAt }}</span>
     </header>
-    <p class="shop-directory-intro">收录谷店、周边与卡牌店。找到并核对过小红书或抖音官方账号的标为「营业中」，其余标为「有营业线索」，注明来源时间；有明确闭店公告的保留闭店标注。</p>
+    <p class="shop-directory-intro">收录谷店、周边与卡牌店。默认展示已核对小红书或抖音官方账号、标为「营业中」的店铺；状态不确定和已公布闭店的历史记录放在「展开更多」。保留探店帖子、楼层攻略等依据与来源时间，供你参考核对。</p>
+    <p v-if="!groups[0].shops.length" class="shop-directory-empty">暂没有已确认营业中的店铺，可展开更多查看已有线索。</p>
+    <template v-for="group in groups" :key="String(group.more)">
+    <component :is="group.more ? 'details' : 'div'" v-if="group.shops.length" :class="group.more ? 'shop-directory-more' : 'shop-directory-confirmed'">
+    <summary v-if="group.more">展开更多（{{ group.shops.length }} 家）<span>营业待核实与历史记录</span></summary>
     <ul class="shop-list">
-      <li v-for="shop in shops" :key="shop.name" class="shop-row">
+      <li v-for="shop in group.shops" :key="shop.name" class="shop-row">
         <div class="shop-row-title"><h3>{{ shop.name }}</h3><span class="shop-status" :class="'is-' + shop.displayStatus">{{ statusLabel[shop.displayStatus] }}</span></div>
-        <p v-if="shop.floor" class="shop-location">位置：{{ shop.floor }}</p>
-        <p v-if="shop.kind" class="shop-kind">主营：{{ shop.kind }}</p>
+        <dl class="shop-facts">
+          <template v-if="shop.floor"><dt>位置</dt><dd class="shop-location">{{ shop.floor }}</dd></template>
+          <template v-if="shop.kind"><dt>主营</dt><dd class="shop-kind">{{ shop.kind }}</dd></template>
+        </dl>
         <p v-if="shop.displayStatus === 'evidence'" class="shop-time"><template v-if="shop.sourceTime">线索更新：{{ shop.sourceTime }}</template><template v-else>来源核对：<time :datetime="directory.checkedAt">{{ directory.checkedAt }}</time></template></p>
         <p v-if="shop.authorVisited" class="shop-author-visit">依据：作者亲自探店<time v-if="visitedAt" :datetime="visitedAt">（{{ visitedAt }}）</time></p>
+        <p v-if="shop.note" class="shop-evidence-note"><b>依据说明</b>{{ shop.note }}</p>
+        <p class="shop-source-label">营业／位置来源</p>
+        <ul class="shop-sources" :aria-label="shop.name + '的营业与位置依据'">
+          <li v-for="source in shop.sources" :key="source.url + source.label"><a :href="source.url" target="_blank" rel="noopener noreferrer">{{ source.label }} ↗</a><span v-if="source.date || source.dateLabel"> · {{ source.dateLabel || source.date }}</span></li>
+        </ul>
+        <div v-if="shop.kindSources?.length" class="shop-kind-evidence"><p>主营依据（不作为当前营业确认）：</p><ul class="shop-sources"><li v-for="source in shop.kindSources" :key="source.url + source.label"><a :href="source.url" target="_blank" rel="noopener noreferrer">{{ source.label }} ↗</a><span v-if="source.date || source.dateLabel"> · {{ source.dateLabel || source.date }}</span></li></ul></div>
+        <p v-if="shop.accounts?.length" class="shop-source-label">官方账号</p>
         <ul v-if="shop.accounts?.length" class="shop-accounts" :aria-label="shop.name + '的官方账号'">
           <li v-for="account in shop.accounts" :key="account.platform + account.url"><a :href="account.url" target="_blank" rel="noopener noreferrer"><b>{{ platformLabel[account.platform] }}</b><span>{{ account.name }}<small v-if="account.handle">号：{{ account.handle }}</small></span><em v-if="account.scope === 'brand'">品牌号</em><span aria-hidden="true">↗</span></a></li>
         </ul>
       </li>
     </ul>
+    </component>
+    </template>
   </section>
 </template>
 
@@ -51,9 +70,21 @@ const platformLabel = { xiaohongshu: '小红书', douyin: '抖音' }
 .shop-status.is-open { background: #e8f3ed; color: #347357; }
 .shop-status.is-evidence { background: #eaf0f8; color: #45698d; }
 .shop-status.is-closed { background: #f9e4e8; color: #983b52; }
-.shop-location,.shop-kind { font-size: 12px; color: #896873; margin: 8px 0; line-height: 1.7; }
+.shop-facts { display: grid; grid-template-columns: 2em minmax(0, 1fr); gap: 5px 12px; margin: 12px 0; font-size: 13px; line-height: 1.8; }
+.shop-facts dt { color: #79626b; font-weight: 700; }
+.shop-facts dd { margin: 0; color: #534a52; overflow-wrap: anywhere; }
 .shop-time { font-size: 12px; color: #45698d; margin: 8px 0; }
 .shop-author-visit { font-size: 12px; color: #347357; margin: 10px 0; line-height: 1.7; }
+.shop-directory-empty { font-size: 13px; line-height: 1.8; color: #79626b; }
+.shop-directory-more { margin-top: 20px; border-top: 1px dashed #d9aab6; padding-top: 14px; }
+.shop-directory-more > summary { cursor: pointer; font-size: 16px; font-weight: 800; color: #a83750; line-height: 1.8; }
+.shop-directory-more > summary span { margin-left: 12px; font-size: 12px; font-weight: 400; color: #79626b; }
+.shop-directory-more[open] > summary { margin-bottom: 14px; }
+.shop-evidence-note,.shop-kind-evidence { margin: 10px 0; color: #79626b; font-size: 12px; line-height: 1.8; }
+.shop-evidence-note b { display: block; font-weight: 700; }
+.shop-source-label { margin-top: 12px; font-size: 12px; font-weight: 700; color: #79626b; }
+.shop-sources { padding-left: 18px; margin: 8px 0 12px; color: #79626b; font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; }
+.shop-sources a { color: #a83750; text-decoration: underline; text-underline-offset: 3px; }
 .shop-accounts { display: grid; gap: 6px; }
 .shop-accounts a { display: flex; align-items: flex-start; gap: 7px; padding: 8px; border: 1px solid #ead2d8; font-size: 12px; text-decoration: none; overflow-wrap: anywhere; }
 .shop-accounts a:hover { background: #fff0f3; }
