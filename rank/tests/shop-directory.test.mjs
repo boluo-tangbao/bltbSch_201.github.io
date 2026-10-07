@@ -19,6 +19,17 @@ test('only verified account entries are shown as open; closed notices override a
   assert.equal(shopDisplayStatus(shop), 'closed')
 })
 
+test('explicit official listings confirm operation without social accounts; closure still wins', () => {
+  const shop = fixture().test.shops[0]
+  shop.operatingConfirmation = 'official-listing'
+  assert.equal(shopDisplayStatus(shop), 'open')
+  assert.deepEqual(validateShopDirectories({ test: { ...fixture().test, shops: [shop] } }, [{ id: 'test' }]), [])
+  shop.status = 'closed'
+  assert.equal(shopDisplayStatus(shop), 'closed')
+  shop.operatingConfirmation = 'guessed'
+  assert.ok(validateShopDirectories({ test: { ...fixture().test, shops: [shop] } }, [{ id: 'test' }]).some(error => error.includes('营业确认依据无效')))
+})
+
 test('author visit annotation uses latest evidence and excludes equal, newer or unknown dates', () => {
   const source = date => ({ label: '探店', url: 'https://example.com/post', date })
   assert.equal(sourcePredatesVisit([source('2025-09-29')], '2026-01-20'), true)

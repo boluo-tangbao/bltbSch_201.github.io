@@ -157,6 +157,7 @@ export function validateShopDirectories(directories, places) {
       if (names.has(shop.name)) fail(id, `店名重复：${shop.name}`)
       names.add(shop.name)
       if (!['recent', 'listed', 'older', 'unverified', 'closed'].includes(shop.status)) fail(id, `${shop.name} 核实状态无效`)
+      if (shop.operatingConfirmation !== undefined && shop.operatingConfirmation !== 'official-listing') fail(id, `${shop.name} 营业确认依据无效`)
       if (shop.kind !== undefined && !text(shop.kind)) fail(id, `${shop.name} 主营必须为非空文字`)
       if (shop.kindSources !== undefined) {
         if (!text(shop.kind) || !Array.isArray(shop.kindSources) || !shop.kindSources.length) fail(id, `${shop.name} 主营依据需要非空主营与来源数组`)

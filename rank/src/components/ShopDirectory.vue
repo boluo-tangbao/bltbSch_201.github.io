@@ -24,7 +24,7 @@ const platformLabel = { xiaohongshu: '小红书', douyin: '抖音' }
       <div><p class="section-label">SHOP DIRECTORY</p><h2 id="shop-directory-heading">谷店一览（自整理）</h2></div>
       <span>{{ directory.area }} · 核对 {{ directory.checkedAt }}</span>
     </header>
-    <p class="shop-directory-intro">收录谷店、周边与卡牌店。默认展示已核对小红书或抖音官方账号、标为「营业中」的店铺；状态不确定和已公布闭店的历史记录放在「展开更多」。保留探店帖子、楼层攻略等依据与来源时间，供你参考核对。</p>
+    <p class="shop-directory-intro">收录谷店、周边与卡牌店。已核对官方账号，或官方店单／官网明确列出的门店，标为「营业中」并默认展示；状态不确定和已公布闭店的记录放在「展开更多」，附依据说明与来源链接。</p>
     <p v-if="!groups[0].shops.length" class="shop-directory-empty">暂没有已确认营业中的店铺，可展开更多查看已有线索。</p>
     <template v-for="group in groups" :key="String(group.more)">
     <component :is="group.more ? 'details' : 'div'" v-if="group.shops.length" :class="group.more ? 'shop-directory-more' : 'shop-directory-confirmed'">
@@ -39,11 +39,13 @@ const platformLabel = { xiaohongshu: '小红书', douyin: '抖音' }
         <p v-if="shop.displayStatus === 'evidence'" class="shop-time"><template v-if="shop.sourceTime">线索更新：{{ shop.sourceTime }}</template><template v-else>来源核对：<time :datetime="directory.checkedAt">{{ directory.checkedAt }}</time></template></p>
         <p v-if="shop.authorVisited" class="shop-author-visit">依据：作者亲自探店<time v-if="visitedAt" :datetime="visitedAt">（{{ visitedAt }}）</time></p>
         <p v-if="shop.note" class="shop-evidence-note"><b>依据说明</b>{{ shop.note }}</p>
+        <template v-if="shop.displayStatus !== 'open'">
         <p class="shop-source-label">营业／位置来源</p>
         <ul class="shop-sources" :aria-label="shop.name + '的营业与位置依据'">
           <li v-for="source in shop.sources" :key="source.url + source.label"><a :href="source.url" target="_blank" rel="noopener noreferrer">{{ source.label }} ↗</a><span v-if="source.date || source.dateLabel"> · {{ source.dateLabel || source.date }}</span></li>
         </ul>
         <div v-if="shop.kindSources?.length" class="shop-kind-evidence"><p>主营依据（不作为当前营业确认）：</p><ul class="shop-sources"><li v-for="source in shop.kindSources" :key="source.url + source.label"><a :href="source.url" target="_blank" rel="noopener noreferrer">{{ source.label }} ↗</a><span v-if="source.date || source.dateLabel"> · {{ source.dateLabel || source.date }}</span></li></ul></div>
+        </template>
         <p v-if="shop.accounts?.length" class="shop-source-label">官方账号</p>
         <ul v-if="shop.accounts?.length" class="shop-accounts" :aria-label="shop.name + '的官方账号'">
           <li v-for="account in shop.accounts" :key="account.platform + account.url"><a :href="account.url" target="_blank" rel="noopener noreferrer"><b>{{ platformLabel[account.platform] }}</b><span>{{ account.name }}<small v-if="account.handle">号：{{ account.handle }}</small></span><em v-if="account.scope === 'brand'">品牌号</em><span aria-hidden="true">↗</span></a></li>

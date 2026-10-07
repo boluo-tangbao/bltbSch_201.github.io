@@ -6,6 +6,7 @@ export interface ShopAccount {
 export interface ShopSource { label: string; url: string; date?: string; dateLabel?: string }
 export interface DirectoryShop {
   name: string; floor?: string; kind?: string
+  operatingConfirmation?: 'official-listing'
   status: 'recent' | 'listed' | 'older' | 'unverified' | 'closed'
   note: string; sources: ShopSource[]; kindSources?: ShopSource[]; accounts?: ShopAccount[]
 }

@@ -558,6 +558,7 @@
     "shops": [
       {
         "name": "animate 广州店",
+        "operatingConfirmation": "official-listing",
         "floor": "负二层",
         "status": "listed",
         "note": "官网仍列东区 B2 E2048–2049、E2053；旧攻略中的负三层位置不再沿用。",
@@ -640,6 +641,7 @@
       },
       {
         "name": "森罗万象 GOODSFUN",
+        "operatingConfirmation": "official-listing",
         "floor": "负二层",
         "status": "listed",
         "note": "品牌官网门店页仍列广州动漫星城东区负二层。",
@@ -659,6 +661,7 @@
       },
       {
         "name": "BUSHIROAD 武士道",
+        "operatingConfirmation": "official-listing",
         "floor": "负二层",
         "status": "recent",
         "note": "8 月商场报道仍列入品牌阵容；7 月探店标注东区负二层。",
