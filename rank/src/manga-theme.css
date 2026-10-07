@@ -578,6 +578,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .section-number { padding: 3px 6px; border: 1px solid var(--manga-ink); background: #ffdce2; box-shadow: 2px 2px 0 var(--manga-ink); font-weight: 850; }
 .update-kind { border: 1px solid #d99aa8; border-radius: 0; background: #ffe2e7; font-weight: 750; }
 .criteria-section>p,.criteria-section details,.criteria-section .personal-note { color: #695e67; }
+.criteria-copy { white-space: pre-line; }
 .criteria-section summary { color: var(--manga-ink); font-weight: 750; }
 .criteria-scale>span { color: #514851; }
 .site-footer {
