@@ -4,7 +4,14 @@
     "date": "2026-10-06",
     "type": "edited",
     "category": "content",
-    "placeIds": ["guangzhou-shop-001", "guangzhou-shop-002", "guangzhou-shop-003", "guangzhou-shop-004", "suzhou-shop-002", "suzhou-shop-003"],
+    "placeIds": [
+      "guangzhou-shop-001",
+      "guangzhou-shop-002",
+      "guangzhou-shop-003",
+      "guangzhou-shop-004",
+      "suzhou-shop-002",
+      "suzhou-shop-003"
+    ],
     "note": "根据已读探店、作者直拍及品牌品类资料，为45家店补充主营，其中27家没有已核对的小红书或抖音账号。主营依据单独保存在后台，不影响营业线索时间与状态；仅有店名而无法确认品类的条目继续省略主营。"
   },
   {
@@ -12,7 +19,15 @@
     "date": "2026-10-06",
     "type": "edited",
     "category": "gallery",
-    "placeIds": ["guangzhou-shop-001", "guangzhou-shop-002", "guangzhou-shop-003", "guangzhou-shop-004", "suzhou-shop-001", "suzhou-shop-002", "suzhou-shop-003"],
+    "placeIds": [
+      "guangzhou-shop-001",
+      "guangzhou-shop-002",
+      "guangzhou-shop-003",
+      "guangzhou-shop-004",
+      "suzhou-shop-001",
+      "suzhou-shop-002",
+      "suzhou-shop-003"
+    ],
     "note": "原先未标注来源的图片和视频补充作者直拍标注，日期采用对应地点的到访日期；缩略图卡片与放大查看均展示来源。"
   },
   {
@@ -20,7 +35,14 @@
     "date": "2026-10-06",
     "type": "edited",
     "category": "gallery",
-    "placeIds": ["guangzhou-shop-001", "guangzhou-shop-002", "guangzhou-shop-003", "guangzhou-shop-004", "suzhou-shop-002", "suzhou-shop-003"],
+    "placeIds": [
+      "guangzhou-shop-001",
+      "guangzhou-shop-002",
+      "guangzhou-shop-003",
+      "guangzhou-shop-004",
+      "suzhou-shop-002",
+      "suzhou-shop-003"
+    ],
     "note": "根据已核对的店铺官方小红书账号补充11张图片和1段视频，覆盖动漫星城东西区、地王广场、时尚天河、星悦汇及SUONE金地广场。沿用商圈外部、店铺外景、店铺内景、额外活动分类，保留原有照片，补充素材标注官方来源。"
   },
   {
@@ -28,7 +50,14 @@
     "date": "2026-10-06",
     "type": "edited",
     "category": "content",
-    "placeIds": ["guangzhou-shop-001", "guangzhou-shop-002", "guangzhou-shop-003", "guangzhou-shop-004", "suzhou-shop-002", "suzhou-shop-003"],
+    "placeIds": [
+      "guangzhou-shop-001",
+      "guangzhou-shop-002",
+      "guangzhou-shop-003",
+      "guangzhou-shop-004",
+      "suzhou-shop-002",
+      "suzhou-shop-003"
+    ],
     "note": "谷店一览改为平铺店铺卡片，位置与主营分行、未知楼层省略，证据说明和链接仅保留在后台数据。核对过官方账号的标为营业中，其余标为有营业线索并显示来源时间；线索早于作者到访日期的补充作者亲自探店标注，保留明确闭店公告。"
   },
   {
@@ -36,7 +65,12 @@
     "date": "2026-10-05",
     "type": "edited",
     "category": "content",
-    "placeIds": ["guangzhou-shop-004", "guangzhou-shop-001", "suzhou-shop-003", "suzhou-shop-002"],
+    "placeIds": [
+      "guangzhou-shop-004",
+      "guangzhou-shop-001",
+      "suzhou-shop-003",
+      "suzhou-shop-002"
+    ],
     "note": "时尚天河、地王广场、SUONE金地广场和星悦汇新增谷店一览（自整理）：按区域与楼层列店铺、来源及核对过的小红书和抖音官方账号，区分近期线索、待核实旧店和已公布闭店，注明金地耀卡搬迁及星悦汇限时快闪。保留实地评分与排序。"
   },
   {
@@ -44,7 +78,10 @@
     "date": "2026-10-05",
     "type": "edited",
     "category": "content",
-    "placeIds": ["guangzhou-shop-002", "guangzhou-shop-003"],
+    "placeIds": [
+      "guangzhou-shop-002",
+      "guangzhou-shop-003"
+    ],
     "note": "动漫星城东西区新增谷店一览（自整理），按楼层记录店铺、营业核对依据及小红书和抖音官方账号；旧店单未确认的营业状态单独标注。"
   },
   {
@@ -217,5 +254,14 @@
       "guangzhou-shop-005"
     ],
     "note": "补充广州各地的个人探店体验、区域特点和逛店建议。"
+  },
+  {
+    "id": "ranking-order-20261007-e406c5f40d60",
+    "date": "2026-10-07",
+    "type": "ranking-change",
+    "placeIds": [
+      "suzhou-shop-003"
+    ],
+    "note": "档内顺序调整。"
   }
 ]
