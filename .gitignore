@@ -18,3 +18,8 @@ playwright-report/
 /rank/src/data/portrait-previews.json
 /rank/public/characters.json
 /rank/.npm-cache/
+
+# 活动网页素材由 scripts/prepare-anime-events.mjs 生成，保留混放原素材。
+/images/anime/event-web/
+/data/anime-events.json
+/data/activities.json

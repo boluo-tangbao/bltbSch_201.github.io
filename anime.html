@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>二次元 | Life Gallery</title>
   <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="activities.css?v=2" />
 </head>
 
-<body>
+<body class="anime-page">
   <div class="click-layer" id="clickLayer"></div>
 
   <header class="page-hero">
@@ -30,13 +31,22 @@
       </p>
       <div class="hero-buttons">
         <a class="btn primary" href="index.html">返回首页</a>
-        <a class="btn secondary" href="travel.html">下一页</a>
+        <a class="btn secondary" href="activities.html?topic=acg#event-records">查看二次元活动 ↗</a>
       </div>
     </div>
   </header>
 
   <main class="detail-main">
-    <section class="detail-layout">
+    <section class="event-section event-preview" id="event-records" data-preview-count="3" aria-labelledby="event-section-title">
+      <header class="event-section-header">
+        <div><span class="event-kicker">MEMORIES / ACG</span><h2 id="event-section-title">最近的二次元活动</h2><p>从现场带回来的几段回忆。</p></div>
+        <a class="event-all-link" href="activities.html?topic=acg#event-records">查看二次元活动记录 ↗</a>
+      </header>
+      <p id="event-preview-status" class="event-status" role="status">正在加载活动预览…</p>
+      <div class="event-grid" id="event-preview-grid"></div>
+      <noscript><a href="activities.html?topic=acg">前往二次元活动记录</a></noscript>
+    </section>
+    <section class="detail-layout" id="anime-intro">
       <article class="detail-panel">
         <h2>从逃避到真正热爱</h2>
         <p>
@@ -70,5 +80,6 @@
   </footer>
 
   <script src="script.js?v=7"></script>
+  <script src="anime-activities.js?v=2"></script>
 </body>
 </html>

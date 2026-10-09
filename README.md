@@ -33,6 +33,10 @@
 
 完整可复制模板、图片路径、坐标和更新记录说明见 [城市归档填写指南](docs/city-data.md)。JSON 请保存为 UTF-8。
 
+## 二次元活动相册
+
+活动图片和视频混放在 `images/anime/events/日期：活动名称/`。网站分类在 `scripts/anime-events.config.mjs` 手动维护；生成与预览方式见 [活动记录维护](docs/anime-events.md)。完整活动与相册在 `activities.html`；`anime.html` 只显示三场二次元预览，anime 与 rank 入口进入 `activities.html?topic=acg`。通过配置主题 `life` 可加入其他生活活动。
+
 ## 开发与验证
 
 使用 **Node.js 24 LTS** 和 npm；CI 使用相同主版本。Vue 3 + TypeScript + Vite，无后端、数据库或账号系统。TypeScript 固定为与 Vue 类型检查器兼容的 5.9.3，依赖锁文件已提交。

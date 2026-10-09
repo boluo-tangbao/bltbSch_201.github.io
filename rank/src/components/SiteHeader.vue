@@ -17,6 +17,7 @@ const homeHref = `${base}../`
         <a :href="boardHref" :aria-current="active === 'board' ? 'page' : undefined">图片总榜</a>
         <a :href="guideHref" :aria-current="active === 'guide' ? 'page' : undefined">地图与介绍</a>
         <a :href="qaHref" :aria-current="active === 'qa' ? 'page' : undefined">QA 与建议</a>
+        <a :href="`${base}../activities.html?topic=acg#event-records`">活动记录 <span aria-hidden="true">↗</span></a>
         <a :href="homeHref">个人主页 <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
