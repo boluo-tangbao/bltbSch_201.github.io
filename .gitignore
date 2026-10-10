@@ -19,7 +19,9 @@ playwright-report/
 /rank/public/characters.json
 /rank/.npm-cache/
 
-# 活动网页素材由 scripts/prepare-anime-events.mjs 生成，保留混放原素材。
+# 活动原素材与 event.json 保存在 content/activities；仅忽略生成产物。
+/assets/generated/
+# 旧版本遗留的生成产物（可安全重新生成）。
 /images/anime/event-web/
 /data/anime-events.json
 /data/activities.json

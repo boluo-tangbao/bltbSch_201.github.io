@@ -9,7 +9,7 @@
 - 站点首页：<https://boluo-tangbao.github.io/bltbSch_201.github.io/>
 - 仓库：<https://github.com/boluo-tangbao/bltbSch_201.github.io>
 
-根目录的个人主页、学习经历、项目经历与博客保持原样；新应用源代码在 `rank/`。工作流将原站静态文件和榜单构建产物一起发布。
+根目录保留主站公开 HTML 页面；共享 CSS/JavaScript 位于 `assets/css/` 和 `assets/js/`，原始活动位于 `content/activities/`。榜单仍使用独立的 `rank/` Vue/Vite 项目，工作流将主站网页素材与榜单构建产物一起发布。
 
 ## 下次更新，只需改这些文件
 
@@ -33,9 +33,18 @@
 
 完整可复制模板、图片路径、坐标和更新记录说明见 [城市归档填写指南](docs/city-data.md)。JSON 请保存为 UTF-8。
 
-## 二次元活动相册
+## 活动相册与主站文件结构
 
-活动图片和视频混放在 `images/anime/events/日期：活动名称/`。网站分类在 `scripts/anime-events.config.mjs` 手动维护；生成与预览方式见 [活动记录维护](docs/anime-events.md)。完整活动与相册在 `activities.html`；`anime.html` 只显示三场二次元预览，anime 与 rank 入口进入 `activities.html?topic=acg`。通过配置主题 `life` 可加入其他生活活动。
+每场原始图片、视频与唯一元数据混放在 `content/activities/日期：活动名称/`，Agent 维护其中的 `event.json`；无需重复配置表。保留稳定 ID 和日期原文，主题支持 acg、sports、art、travel、life，每场只有一个主要主题。
+
+全部记录在 `activities.html`；各栏目通过 `?topic=主题` 进入相应列表。`anime.html` 只显示三场可关闭的二次元预览，rank 入口也只看二次元。其他栏目可用普通分享链接引用同场活动，无需复制记录。
+
+- 新增活动、改分类：`content/activities/日期：活动名称/event.json`。
+- 改页面内容和栏目入口：根目录 HTML。
+- 改主站样式、交互：`assets/css/`、`assets/js/`；rank 继续在自己的项目内修改。
+- 自动输出：`assets/generated/activities/manifest.json` 与 `media/`；最终部署目录 `_site/`，两者不提交。
+
+完整结构、模板、预览和验证命令见 [活动记录维护](docs/activities.md)。在 rank 构建后，在根目录执行 `node scripts/assemble-site.mjs`、`node scripts/verify-activities.mjs`、`node scripts/preview-site.mjs`。组装不发布约 1.5 GB 的活动原素材，只使用优化后的网页图片与转码视频，并复用增量缓存。
 
 ## 开发与验证
 
@@ -71,7 +80,7 @@ npm run preview
 1. 仓库默认分支是 `main`。在 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。
 2. 推送 `.github/workflows/deploy.yml` 和完整代码、锁文件到 `main`。也可在 Actions 手动运行 **Deploy personal site and ranking to Pages**。
 3. 工作流安装 Node 24、执行 `npm ci`、单元测试、内容校验、类型检查和构建，然后运行 `scripts/assemble-site.mjs`。
-4. 合并输出到 `_site/`：保留原站已跟踪的静态页面与素材，新榜单放在 `_site/rank/`。不会上传整个源码目录。
+4. 合并输出到 `_site/`：保留主站页面、assets 和公开 images，新榜单放在 `_site/rank/`。活动原始素材 `content/activities/` 不进入部署目录；组装后执行活动验收。
 5. Pages 上传与部署作业完成并显示绿色成功后，再访问实际站点确认。只有部署作业拥有 `pages: write` 与 `id-token: write`。
 
 Vite 默认 base 为 `/bltbSch_201.github.io/rank/`；CI 从 `configure-pages` 返回的真实 `base_path` 推导路径。图片、脚本、CSS 和详情链接都支持仓库子路径，详情使用 `#/place/稳定ID`，刷新不需要服务端路由。
@@ -92,6 +101,6 @@ Vite 默认 base 为 `/bltbSch_201.github.io/rank/`；CI 从 `configure-pages` �
 - **导出失败**：按提示检查图片是否已提交、路径是否正确；只支持仓库内同源素材，修复后重新生成。
 - **旧内容仍显示**：查看 Actions 是否有失败或等待审批，等待成功后刷新浏览器。工作流文件存在不代表已上线。
 - **回退内容**：在 GitHub 编辑器把错误字段改回并提交，或本地执行 `git revert <需要撤销的提交>` 后正常推送。不要强推或重写历史，下一次成功部署即发布回退版本。
-- **增加原站其他文件类型**：`scripts/assemble-site.mjs` 保留已跟踪的静态文件，新增特殊扩展名时在白名单补充；提交后才会被复制。
+- **增加原站其他文件类型**：`scripts/assemble-site.mjs` 保留已跟踪的静态文件，新增特殊扩展名时在白名单补充；assets、images 与根目录 HTML 在本地预览中也包含尚未提交的文件。
 
 实现时核对的官方资料：[Vue 快速开始](https://vuejs.org/guide/quick-start.html)、[Vite Pages 部署](https://vite.dev/guide/static-deploy.html#github-pages)、[GitHub 自定义工作流](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。

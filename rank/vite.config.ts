@@ -7,7 +7,7 @@ import { extname, isAbsolute, relative, resolve } from 'node:path'
 const rankBase = process.env.SITE_BASE || '/bltbSch_201.github.io/rank/'
 const homeBase = rankBase.replace(/rank\/$/, '')
 const homeRoot = fileURLToPath(new URL('../', import.meta.url))
-const homeFiles = new Set(['index.html', 'sports.html', 'art.html', 'anime.html', 'travel.html', 'style.css', 'script.js', 'activities.html', 'activities.css', 'activities.js', 'anime-activities.js', 'data/activities.json'])
+const homeFiles = new Set(['index.html', 'sports.html', 'art.html', 'anime.html', 'travel.html', 'activities.html'])
 const mimeTypes: Record<string, string> = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.svg': 'image/svg+xml', '.json': 'application/json', '.mp4': 'video/mp4' }
 
 // Vite serves the rank app; also serve the existing personal site at its real URL.
@@ -25,7 +25,7 @@ const personalSitePreview = {
       }
       if (!pathname.startsWith(homeBase) || pathname.startsWith(rankBase)) return next()
       const file = pathname.slice(homeBase.length) || 'index.html'
-      if (!homeFiles.has(file) && !/^images\/.+\.(webp|png|jpe?g|svg|mp4)$/i.test(file)) return next()
+      if (!homeFiles.has(file) && !/^images\/(?!anime\/events\/).+\.(webp|png|jpe?g|svg)$/i.test(file) && !/^assets\/.+\.(css|js|json|webp|mp4)$/i.test(file)) return next()
       const target = resolve(homeRoot, file), relativePath = relative(homeRoot, target)
       if (relativePath.startsWith('..') || isAbsolute(relativePath) || !existsSync(target)) return next()
       response.setHeader('Content-Type', mimeTypes[extname(target)] || 'application/octet-stream')

@@ -7,7 +7,7 @@
     "node": ">=24 <25"
   },
   "scripts": {
-    "predev": "npm run prepare:media",
+    "predev": "npm run prepare:media && node ../scripts/prepare-activities.mjs",
     "dev": "vite --host 127.0.0.1",
     "prepare:media": "node scripts/prepare-media.mjs",
     "validate:data": "node scripts/validate-data.mjs",

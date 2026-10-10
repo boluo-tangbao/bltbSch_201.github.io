@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>活动记录 | Life Gallery</title>
-  <link rel="stylesheet" href="style.css?v=6" />
-  <link rel="stylesheet" href="activities.css?v=2" />
+  <link rel="stylesheet" href="assets/css/style.css?v=6" />
+  <link rel="stylesheet" href="assets/css/activities.css?v=2" />
 </head>
 <body class="activities-page">
   <div class="click-layer" id="clickLayer"></div>
@@ -23,13 +23,13 @@
   <main class="detail-main">
     <section class="event-section" id="event-records" aria-labelledby="event-section-title">
       <header class="event-section-header">
-        <div><span class="event-kicker">LIFE / MEMORIES</span><h2 id="event-section-title">那些到场的日子</h2><p>二次元与生活里的活动，照片和视频都收在这里。</p></div>
+        <div><span class="event-kicker">LIFE / MEMORIES</span><h2 id="event-section-title">那些到场的日子</h2><p>参加过的活动，照片和视频都收在这里。</p></div>
         <div class="event-tally" aria-label="活动素材总数"><span><strong id="event-total">—</strong>场记录</span><span><strong id="event-photos">—</strong>张照片</span><span><strong id="event-videos">—</strong>段视频</span></div>
       </header>
       <p id="event-loading" class="event-status" role="status">正在翻开活动相册…</p>
       <div id="event-index" hidden>
         <div class="event-toolbar">
-          <label id="event-topic-control">活动主题<select id="event-topic"><option value="">全部主题</option><option value="acg">二次元</option><option value="life">其他生活</option></select></label>
+          <label id="event-topic-control">活动主题<select id="event-topic"><option value="">全部主题</option><option value="acg">二次元</option><option value="sports">体育</option><option value="art">艺术</option><option value="travel">旅行</option><option value="life">生活</option></select></label>
           <div class="event-filters" id="event-filters" aria-label="活动分类"></div>
           <label>参加年份<select id="event-year"><option value="">全部年份</option></select></label>
         </div>
@@ -39,6 +39,7 @@
       <div id="event-album" hidden>
         <a href="#event-records" class="event-back">← 返回全部活动记录</a>
         <header class="event-album-heading"><span class="event-kicker" id="event-album-category"></span><h3 id="event-album-title" tabindex="-1"></h3><p id="event-album-meta"></p><p>点击照片放大，点击视频封面播放。</p></header>
+        <p id="event-album-note" hidden></p>
         <div class="event-media-grid" id="event-media-grid"></div>
       </div>
       <noscript>请启用 JavaScript，以浏览活动照片与视频。</noscript>
@@ -51,7 +52,7 @@
 
   </main>
   <footer><p>© 2026 My Life Gallery · 活动记录</p></footer>
-  <script src="script.js?v=7"></script>
-  <script src="activities.js?v=2"></script>
+  <script src="assets/js/script.js?v=7"></script>
+  <script src="assets/js/activities.js?v=2"></script>
 </body>
 </html>

@@ -73,7 +73,21 @@ jobs:
           SITE_BASE: ${{ steps.pages.outputs.base_path }}/rank/
           VITE_BAIDU_MAP_AK: ${{ secrets.BAIDU_MAP_AK }}
           VITE_BAIDU_MAP_PROXY_URL: ${{ secrets.BAIDU_MAP_PROXY_URL }}
+      - name: Restore generated activity media cache
+        uses: actions/cache@v4
+        with:
+          path: assets/generated/activities/media
+          key: activities-v1-${{ runner.os }}-${{ hashFiles('content/activities/**', 'scripts/prepare-activities.mjs') }}
+          restore-keys: activities-v1-${{ runner.os }}-
       - run: node scripts/assemble-site.mjs
+      - name: Install activity browser checker
+        run: npx playwright install --with-deps chromium
+        working-directory: rank
+      - name: Verify main site and activities
+        run: node scripts/verify-activities.mjs
+        env:
+          PLAYWRIGHT_CHANNEL: chromium
+          SITE_BASE: ${{ steps.pages.outputs.base_path }}/
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site

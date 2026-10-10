@@ -3,13 +3,14 @@ import { createReadStream, existsSync, statSync } from 'node:fs'
 import { resolve, relative, isAbsolute, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 const root=fileURLToPath(new URL('../_site/',import.meta.url))
+export const previewBase = (process.env.SITE_BASE || '/bltbSch_201.github.io/').replace(/\/?$/, '/')
 export function previewServer(port=4180) {
- const base='/bltbSch_201.github.io/'
+ const base=previewBase
  const types={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.json':'application/json','.webp':'image/webp','.jpg':'image/jpeg','.png':'image/png','.svg':'image/svg+xml','.woff2':'font/woff2','.mp4':'video/mp4'}
  const server=createServer((req,res)=>{
   let pathname
   try{pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname)}catch{res.writeHead(400);res.end();return}
-  if(pathname==='/'){res.writeHead(302,{Location:base+'activities.html#event-records'});res.end();return}
+  if(pathname==='/'){res.writeHead(302,{Location:base+'index.html'});res.end();return}
   if(!pathname.startsWith(base)){res.writeHead(404);res.end();return}
   let file=resolve(root,pathname.slice(base.length)||'index.html'),rel=relative(root,file)
   if(rel.startsWith('..')||isAbsolute(rel)||!existsSync(file)){res.writeHead(404);res.end();return}
@@ -23,4 +24,4 @@ export function previewServer(port=4180) {
  })
  return new Promise(done=>server.listen(port,'127.0.0.1',()=>done(server)))
 }
-if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){await previewServer();console.log('活动预览：http://127.0.0.1:4180/bltbSch_201.github.io/activities.html#event-records')}
+if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){await previewServer();console.log('站点预览：http://127.0.0.1:4180'+previewBase)}
