@@ -1,5 +1,43 @@
 [
   {
+    "id": "shanghai-band-instrument-shops-20261010",
+    "date": "2026-10-10",
+    "type": "added",
+    "placeIds": [
+      "shanghai-shop-021"
+    ],
+    "note": "新增少女乐队乐器店类别，以 HIPPIHO 为代表收录5张本地照片，按商圈外部、店铺外景和店铺内景分类；类别不限于一家店，照片明确标注具体店名，未记录的探访日期与地址留空。"
+  },
+  {
+    "id": "shanghai-local-gallery-20261010",
+    "date": "2026-10-10",
+    "type": "edited",
+    "category": "gallery",
+    "placeIds": [
+      "shanghai-shop-001",
+      "shanghai-shop-002",
+      "shanghai-shop-003",
+      "shanghai-shop-004",
+      "shanghai-shop-005",
+      "shanghai-shop-006",
+      "shanghai-shop-007",
+      "shanghai-shop-008",
+      "shanghai-shop-009",
+      "shanghai-shop-010",
+      "shanghai-shop-011",
+      "shanghai-shop-012",
+      "shanghai-shop-013",
+      "shanghai-shop-014",
+      "shanghai-shop-015",
+      "shanghai-shop-016",
+      "shanghai-shop-017",
+      "shanghai-shop-018",
+      "shanghai-shop-019",
+      "shanghai-shop-020"
+    ],
+    "note": "上海20处地点接入214张本地整理图片，沿用商圈外部、店铺外景、店铺内景和额外活动分类；日期子目录按原目录标注作者探访日期，未记录日期的图片不套用地点到访时间。修正百米香榭封面路径，调整五角场万达与金桥LaLaport外景封面。"
+  },
+  {
     "id": "shop-business-kinds-20261006",
     "date": "2026-10-06",
     "type": "edited",

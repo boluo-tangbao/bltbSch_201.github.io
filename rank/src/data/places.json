@@ -22,9 +22,124 @@
         "欧美"
       ],
       "cover": "images/places/Shanghai/第一百货.jpg",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/第一百货.jpg",
+          "alt": "商场外观",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/1791366115951.jpg",
+          "alt": "楼层导览",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/1791366104590.jpg",
+          "alt": "Lola 店面",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/1791366104610.jpg",
+          "alt": "谷店街区",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/1791366104654.jpg",
+          "alt": "Lolita 店铺街区",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/1791366115898.jpg",
+          "alt": "FONZ GOODS 店面",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322606.jpg",
+          "alt": "潮趣店面",
+          "group": "店铺外景",
+          "sourceName": "作者‘2025-09-27’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322311.jpg",
+          "alt": "少女乐队周边",
+          "group": "店铺内景",
+          "sourceName": "作者‘2025-09-27’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322430.jpg",
+          "alt": "角色周边陈列",
+          "group": "店铺内景",
+          "sourceName": "作者‘2025-09-27’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322494.jpg",
+          "alt": "亚克力周边",
+          "group": "店铺内景",
+          "sourceName": "作者‘2025-09-27’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322668.jpg",
+          "alt": "谷子展示台",
+          "group": "店铺内景",
+          "sourceName": "作者‘2025-09-27’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322738.jpg",
+          "alt": "角色周边近景",
+          "group": "店铺内景",
+          "sourceName": "作者‘2025-09-27’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/image.png",
+          "alt": "主题店内布置",
+          "group": "店铺内景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/live_1b9cb1d5eb5aa1ee7a261eaa698e50d114596466.jpg",
+          "alt": "周边货架",
+          "group": "店铺内景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/QQ图片20250921192736.jpg",
+          "alt": "角色海报陈列",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/1791366104491.jpg",
+          "alt": "角色立牌合影区",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/1791366104693.jpg",
+          "alt": "角色主题通道",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/ac3c4fd4-25eb-456c-868f-15a052ce9616.jpg",
+          "alt": "谷子集市现场",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/第一百货/faadd134-fb6e-4ce5-b325-b8245ecb8356.jpg",
+          "alt": "集市摊位",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        }
+      ],
       "visitedAt": "2026-07-13",
-      "updatedAt": "2026-09-19",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.237372,
@@ -52,9 +167,100 @@
         "少女乐队"
       ],
       "cover": "images/places/Shanghai/南京路百联.png",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/南京路百联.png",
+          "alt": "商场外观",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/南京路百联/R-C.png",
+          "alt": "商场夜景",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/南京路百联/ZX大牌.png",
+          "alt": "品牌与店面拼图",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/南京路百联/1791424546954.jpg",
+          "alt": "角色手办陈列",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/南京路百联/1791424547028.jpg",
+          "alt": "周边橱窗",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/南京路百联/2025-9-27/1791462350192.jpg",
+          "alt": "角色周边近景",
+          "group": "店铺内景",
+          "sourceName": "作者‘2025-09-27’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/南京路百联/2025-9-27/1791462350394.jpg",
+          "alt": "周边商品说明",
+          "group": "店铺内景",
+          "sourceName": "作者‘2025-09-27’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/南京路百联/2025-9-27/1791462350441.jpg",
+          "alt": "周边展示墙",
+          "group": "店铺内景",
+          "sourceName": "作者‘2025-09-27’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/南京路百联/QQ图片20250920112449.jpg",
+          "alt": "少女乐队周边",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/南京路百联/QQ图片20250920112456.jpg",
+          "alt": "初音未来毛绒",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/南京路百联/1791364873786.jpg",
+          "alt": "ANIME GIRLS PROJECT STORE 活动告示",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/南京路百联/1791364417711.jpg",
+          "alt": "少女乐队主题立牌",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/南京路百联/1791364833847.jpg",
+          "alt": "同好绘画墙",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/南京路百联/1791424546975.jpg",
+          "alt": "同好留言墙",
+          "group": "额外活动",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/南京路百联/2025-9-27/1791462350326.jpg",
+          "alt": "主题展览",
+          "group": "额外活动",
+          "sourceName": "作者‘2025-09-27’直拍"
+        }
+      ],
       "visitedAt": "2026-08-29",
-      "updatedAt": "2026-09-26",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.239113,
@@ -76,9 +282,70 @@
         "快闪"
       ],
       "cover": "images/places/Shanghai/新世界城.jpg",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/新世界城.jpg",
+          "alt": "商场外观",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917235214.jpg",
+          "alt": "IPSTAR 潮玩星球店面",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917235804.jpg",
+          "alt": "谷店门头（视频截图）",
+          "group": "店铺外景",
+          "sourceName": "本地整理截图（原始链接未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917235911.jpg",
+          "alt": "CAPCOM STORE 店面（视频截图）",
+          "group": "店铺外景",
+          "sourceName": "本地整理截图（原始链接未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/新世界城/1791364833804.jpg",
+          "alt": "中古毛绒陈列",
+          "group": "店铺内景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/新世界城/1791435579075.jpg",
+          "alt": "中古周边展示柜",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917234052.jpg",
+          "alt": "角色主题商品",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917235203.jpg",
+          "alt": "店内周边货架",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917235206.jpg",
+          "alt": "角色联动商品",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/新世界城/1791364417877.jpg",
+          "alt": "逛店间隙的冰淇淋",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        }
+      ],
       "visitedAt": "2026-08-02",
-      "updatedAt": "2026-09-19",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.23704,
@@ -108,9 +375,100 @@
         "同人"
       ],
       "cover": "images/places/Shanghai/华盛.jpg",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/华盛.jpg",
+          "alt": "华盛街入口",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/华盛/1791364833763.jpg",
+          "alt": "华盛漫趣集入口",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/华盛/2025-9-10/1791462921482.jpg",
+          "alt": "谷店通道",
+          "group": "店铺外景",
+          "sourceName": "作者‘2025-09-10’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/华盛/2025-9-10/1791462921708.jpg",
+          "alt": "谷店门头与陈列",
+          "group": "店铺外景",
+          "sourceName": "作者‘2025-09-10’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/华盛/2025-9-10/QQ图片20250918115954.jpg",
+          "alt": "谷店橱窗",
+          "group": "店铺外景",
+          "sourceName": "作者‘2025-09-10’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/华盛/641.jpg",
+          "alt": "店铺门头",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/华盛/QQ图片20250918120034.jpg",
+          "alt": "红色店面通道",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/华盛/无标题3.png",
+          "alt": "逛店通道（视频截图）",
+          "group": "店铺外景",
+          "sourceName": "本地整理截图（原始链接未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/华盛/1791366052632.jpg",
+          "alt": "初音未来周边橱窗",
+          "group": "店铺内景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/华盛/2025-9-10/1791462921662.jpg",
+          "alt": "寄售篮中的角色毛绒",
+          "group": "店铺内景",
+          "sourceName": "作者‘2025-09-10’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/华盛/2025-9-10/QQ图片20250918120037.jpg",
+          "alt": "角色卡片陈列",
+          "group": "店铺内景",
+          "sourceName": "作者‘2025-09-10’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/华盛/641 (1).jpg",
+          "alt": "日谷与毛绒陈列",
+          "group": "店铺内景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/华盛/1791364833900.jpg",
+          "alt": "少女乐队角色立牌",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/华盛/1791366052608.jpg",
+          "alt": "角色立牌合影区",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/华盛/无标题2.png",
+          "alt": "角色应援布置（视频截图）",
+          "group": "额外活动",
+          "sourceName": "本地整理截图（原始链接未记录）"
+        }
+      ],
       "visitedAt": "2026-09-09",
-      "updatedAt": "2026-09-26",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.236076,
@@ -137,10 +495,107 @@
         "欧美",
         "少女乐队"
       ],
-      "cover": "images/places/Shanghai/百米.jpeg",
-      "gallery": [],
+      "cover": "images/places/Shanghai/百米香榭.jpeg",
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/百米香榭.jpeg",
+          "alt": "百米香榭街区",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/百米/58f7c668-55b9-48a7-b5e4-82318c3c588b.jpg.710x400.jpg",
+          "alt": "街区入口",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/百米/内部.png",
+          "alt": "商场中庭",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/百米/百米香榭 小y.png",
+          "alt": "楼梯与店铺入口",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/百米/1791364873484.jpg",
+          "alt": "店铺橱窗",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/百米/2025-9-24/1791462377159.jpg",
+          "alt": "第三新红魔馆玩具店",
+          "group": "店铺外景",
+          "sourceName": "作者‘2025-09-24’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/百米/2025-9-24/1791462377221.jpg",
+          "alt": "谷店门头",
+          "group": "店铺外景",
+          "sourceName": "作者‘2025-09-24’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/百米/2025-9-24/1791462377283.jpg",
+          "alt": "HAO 次元屋门头",
+          "group": "店铺外景",
+          "sourceName": "作者‘2025-09-24’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/百米/2025-9-24/1791462377390.jpg",
+          "alt": "恋恋谷门头",
+          "group": "店铺外景",
+          "sourceName": "作者‘2025-09-24’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/百米/2025-9-24/1791462377449.jpg",
+          "alt": "小 Y 动漫门头",
+          "group": "店铺外景",
+          "sourceName": "作者‘2025-09-24’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/百米/1791364873548.jpg",
+          "alt": "少女乐队毛绒橱窗",
+          "group": "店铺内景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/百米/2025-9-24/1791462376963.jpg",
+          "alt": "假面骑士模型",
+          "group": "店铺内景",
+          "sourceName": "作者‘2025-09-24’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/百米/2025-9-24/1791462377020.jpg",
+          "alt": "周边展示柜",
+          "group": "店铺内景",
+          "sourceName": "作者‘2025-09-24’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/百米/2025-9-24/1791462377094.jpg",
+          "alt": "寄售篮陈列",
+          "group": "店铺内景",
+          "sourceName": "作者‘2025-09-24’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/百米/2025-9-24/1791462377339.jpg",
+          "alt": "角色模型货架",
+          "group": "店铺内景",
+          "sourceName": "作者‘2025-09-24’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/百米/1791364873717.jpg",
+          "alt": "少女乐队角色立牌",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        }
+      ],
       "visitedAt": "2026-08-29",
-      "updatedAt": "2026-09-26",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.235439,
@@ -164,9 +619,34 @@
         "地偶"
       ],
       "cover": "images/places/Shanghai/五角场百联.jpeg",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/五角场百联.jpeg",
+          "alt": "商场外观",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/五角场百联/百联akibago.png",
+          "alt": "AKIBA GO 店面",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/五角场百联/百联地下.png",
+          "alt": "地下店铺通道",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/五角场百联/QQ图片20250920112445.jpg",
+          "alt": "角色手办陈列",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        }
+      ],
       "visitedAt": "2025-11-09",
-      "updatedAt": "2026-09-19",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.300361,
@@ -195,9 +675,70 @@
         "少女乐队"
       ],
       "cover": "images/places/Shanghai/迪美.jpg",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/迪美.jpg",
+          "alt": "地下商场入口",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/迪美/无标题4.png",
+          "alt": "SAKASTORE 店面（视频截图）",
+          "group": "店铺外景",
+          "sourceName": "本地整理截图（原始链接未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/迪美/无标题5.png",
+          "alt": "秋子谷子店（视频截图）",
+          "group": "店铺外景",
+          "sourceName": "本地整理截图（原始链接未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/迪美/hjYMAbGw.jpg",
+          "alt": "Lolita 服饰陈列",
+          "group": "店铺内景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/迪美/1791424546889.jpg",
+          "alt": "亚克力周边货架",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/迪美/1791424546998.jpg",
+          "alt": "谷子展示墙",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/迪美/QQ图片20250917233126.jpg",
+          "alt": "少女乐队立牌",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/迪美/QQ图片20250917233824.jpg",
+          "alt": "少女乐队画集",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/迪美/QQ图片20250917233832.jpg",
+          "alt": "角色主题海报",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/迪美/R-C.jpeg",
+          "alt": "异时秘室入口",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        }
+      ],
       "visitedAt": "2026-06-27",
-      "updatedAt": "2026-09-19",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.230084,
@@ -226,9 +767,76 @@
         "女仆咖啡厅"
       ],
       "cover": "images/places/Shanghai/静安大悦城.jpg",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/静安大悦城.jpg",
+          "alt": "商场外观",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/静安大悦城/2025-9-10/1791462835335.jpg",
+          "alt": "商场夜景",
+          "group": "商圈外部",
+          "sourceName": "作者‘2025-09-10’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/静安大悦城/大悦城地铁接口.png",
+          "alt": "地铁连接通道（视频截图）",
+          "group": "商圈外部",
+          "sourceName": "本地整理截图（原始链接未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/静安大悦城/大悦城大扶梯.png",
+          "alt": "商场扶梯",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/静安大悦城/2025-9-10/1791462835387.jpg",
+          "alt": "谷店通道",
+          "group": "店铺外景",
+          "sourceName": "作者‘2025-09-10’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/静安大悦城/35e606fef0df479abd4bb80a35a63acf.webp",
+          "alt": "IPSTAR 潮玩星球店面",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/静安大悦城/QQ图片20250920112416.jpg",
+          "alt": "谷店门头（视频截图）",
+          "group": "店铺外景",
+          "sourceName": "本地整理截图（原始链接未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/静安大悦城/2025-9-10/1791462835263.jpg",
+          "alt": "Poooku 周边陈列",
+          "group": "店铺内景",
+          "sourceName": "作者‘2025-09-10’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/正片/静安大悦城/027f1094b1bf494dacd484fa0e3411d7.jpg",
+          "alt": "少女乐队主题活动",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/静安大悦城/1c47ff158dc74cc2aeb5ddc368a83287.webp",
+          "alt": "同好聚集现场",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/静安大悦城/6631c00b23d798475.jpg_e1080.png",
+          "alt": "角色立牌布置",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        }
+      ],
       "visitedAt": "2026-05-02",
-      "updatedAt": "2026-09-19",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.245608,
@@ -252,10 +860,59 @@
         "随舞",
         "街机舞萌娃娃机"
       ],
-      "cover": "images/places/Shanghai/五角场万达.jpg",
-      "gallery": [],
+      "cover": "images/places/Shanghai/五角场万达1.jpg",
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/五角场万达1.jpg",
+          "alt": "商场外观与户外活动",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/五角场万达/QQ图片20250920112428.jpg",
+          "alt": "ComicSoul 店面",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/五角场万达/QQ图片20250920112436.jpg",
+          "alt": "谷店展示橱窗",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/五角场万达/QQ图片20250921181627.jpg",
+          "alt": "三月兽店面",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/五角场万达/QQ图片20250921181632.jpg",
+          "alt": "GOODSLOVE 店面",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/五角场万达/QQ图片20250920112431.jpg",
+          "alt": "周边货架",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/五角场万达/QQ图片20250920112439.jpg",
+          "alt": "GASHAPON 扭蛋机",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/五角场万达.jpg",
+          "alt": "商场内活动现场",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        }
+      ],
       "visitedAt": "2025-11-02",
-      "updatedAt": "2026-09-26",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.304204,
@@ -276,9 +933,46 @@
         "欧美"
       ],
       "cover": "images/places/Shanghai/正片/外文书店/外文书店.jpg",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/正片/外文书店/外文书店.jpg",
+          "alt": "书店外观",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/外文书店/1791435721618.jpg",
+          "alt": "店内公告",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/外文书店/微信图片_20250930192638_28_9.jpg",
+          "alt": "漫画与周边展示台",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/外文书店/微信图片_20250930192642_29_9.jpg",
+          "alt": "日语书籍货架",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/外文书店/微信图片_20250930192646_30_9.jpg",
+          "alt": "漫画陈列",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/外文书店/微信图片_20250930192650_31_9.jpg",
+          "alt": "书店内部",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        }
+      ],
       "visitedAt": "2026-02-07",
-      "updatedAt": "2026-09-19",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.236032,
@@ -304,9 +998,58 @@
         "扭蛋"
       ],
       "cover": "images/places/Shanghai/正片/悦荟/悦荟广场.jpg",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/正片/悦荟/悦荟广场.jpg",
+          "alt": "店铺入口",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/悦荟/微信图片_20250930192442_21_9.jpg",
+          "alt": "楼层导览",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/悦荟/微信图片_20250930192445_22_9.jpg",
+          "alt": "逛店通道",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/悦荟/微信图片_20250930192433_19_9.jpg",
+          "alt": "Lolita 服饰区",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/悦荟/微信图片_20250930192438_20_9.jpg",
+          "alt": "扭蛋机陈列",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/悦荟/微信图片_20250930192449_23_9.jpg",
+          "alt": "谷店展示柜",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/悦荟/微信图片_20250930192454_24_9.jpg",
+          "alt": "寄售周边",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/悦荟/微信图片_20250930192459_25_9.jpg",
+          "alt": "谷子陈列墙",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        }
+      ],
       "visitedAt": "2026-04-18",
-      "updatedAt": "2026-09-19",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.238568,
@@ -328,9 +1071,52 @@
         "Kpop"
       ],
       "cover": "images/places/Shanghai/TPY中心.jpg",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/TPY中心.jpg",
+          "alt": "TPY 中心外观",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/TPY/v2-d7eef91345f7963731f62d4a0fda869b_1440w.jpg",
+          "alt": "谷 GO 店面",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/TPY/ef69fd0096f7492884583041a34a43d7~tplv-tt-origin-web_gif.jpeg",
+          "alt": "周边店铺通道",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/TPY/新建文件夹/1791364764319.jpg",
+          "alt": "寄售篮陈列",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/TPY/新建文件夹/1791364764395.jpg",
+          "alt": "角色手办展示",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/TPY/新建文件夹/1791364764456.jpg",
+          "alt": "角色模型近景",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/TPY/8e9e286ffdfb4ea2a35dfdca81882ca7~tplv-tt-origin-web_gif.jpeg",
+          "alt": "间谍过家家主题快闪",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        }
+      ],
       "visitedAt": "2026-09-18",
-      "updatedAt": "2026-09-19",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.194887,
@@ -354,9 +1140,88 @@
         "扭蛋"
       ],
       "cover": "images/places/Shanghai/鑫耀光环.jpg",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/鑫耀光环.jpg",
+          "alt": "商圈外观",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/鑫耀光环1.jpg",
+          "alt": "商圈夜景",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/鑫耀光环live二期/1791365958316.jpg",
+          "alt": "商圈导览",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/鑫耀光环live二期/QQ图片20250921192726.jpg",
+          "alt": "周边店面",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/鑫耀光环live二期/QQ图片20250921192711.jpg",
+          "alt": "周边毛绒近景",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/鑫耀光环live二期/1791367310499.jpg",
+          "alt": "主题合影装置",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/鑫耀光环live二期/1791367310528.jpg",
+          "alt": "户外主题灯柱",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/鑫耀光环live二期/1791367310561.jpg",
+          "alt": "游戏主题打卡装置",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/鑫耀光环live二期/1791367310589.jpg",
+          "alt": "打卡装置说明",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/鑫耀光环live二期/641 (1).png",
+          "alt": "游戏主题雕塑",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/鑫耀光环live二期/641.png",
+          "alt": "流萤雕像",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/鑫耀光环live二期/QQ图片20250921192721.jpg",
+          "alt": "流萤雕像夜景",
+          "group": "额外活动",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/鑫耀光环live二期/QQ图片20250921192716.jpg",
+          "alt": "主题公交车",
+          "group": "额外活动",
+          "sourceName": "作者直拍（日期未记录）"
+        }
+      ],
       "visitedAt": "2026-09-09",
-      "updatedAt": "2026-09-26",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.168415,
@@ -380,10 +1245,47 @@
         "手办模型",
         "官店"
       ],
-      "cover": "images/places/Shanghai/正片/高达基地/lalaport.jpg",
-      "gallery": [],
+      "cover": "images/places/Shanghai/金桥商场.jpg",
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/金桥商场.jpg",
+          "alt": "商场与自由高达夜景",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/高达基地/微信图片_20250930195503_48_9.jpg",
+          "alt": "高达主题展示橱窗",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/高达基地/微信图片_20250930195453_47_9.jpg",
+          "alt": "高达模型陈列",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/高达基地/1791367418429.jpg",
+          "alt": "自由高达全景",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/高达基地/1791367418492.jpg",
+          "alt": "自由高达夜景",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/高达基地/lalaport.jpg",
+          "alt": "自由高达与模型合影",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        }
+      ],
       "visitedAt": "2026-05-23",
-      "updatedAt": "2026-09-26",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.254933,
@@ -404,9 +1306,28 @@
         "官店"
       ],
       "cover": "images/places/Shanghai/美罗城.jpg",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/美罗城.jpg",
+          "alt": "商场外观",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/美罗城/359.jpg",
+          "alt": "JUMP SHOP 店面",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/美罗城/R-C (2).jpeg",
+          "alt": "LoFt 店面",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        }
+      ],
       "visitedAt": "2026-09-18",
-      "updatedAt": "2026-09-26",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.19482,
@@ -431,9 +1352,160 @@
         "卡牌"
       ],
       "cover": "images/places/Shanghai/长宁龙之梦.webp",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/长宁龙之梦.webp",
+          "alt": "商场外观",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/又又中心.png",
+          "alt": "附近又又中心外观",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/地图2.png",
+          "alt": "周边位置图",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/QQ图片20260228114551.jpg",
+          "alt": "地铁站入口",
+          "group": "商圈外部",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/1771942020187.jpg",
+          "alt": "周边地下街导览",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/1771942019522.jpg",
+          "alt": "地下街谷店门头",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/1771942019875.jpg",
+          "alt": "商场中庭",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/1771942020474.jpg",
+          "alt": "卡牌店面",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/1771942020660.jpg",
+          "alt": "谷店入口",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/1791367132436.jpg",
+          "alt": "中庭与店铺",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/1791423728340.jpg",
+          "alt": "宝可梦卡牌道馆店面",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/附近的又又中心/1771942021016.jpg",
+          "alt": "附近又又中心：谷店入口",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/1771942020031.jpg",
+          "alt": "日谷货架",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/1771942020353.jpg",
+          "alt": "地下街周边柜台",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/1771942021273.jpg",
+          "alt": "少女乐队周边",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/1771942021377.jpg",
+          "alt": "周边陈列",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/1771942021557.jpg",
+          "alt": "寄售周边篮",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/gNZ-fOrChu-qILzPGjJNxmq96WQf9d0MXAcZi5R8nbfGKDTbW_7uJ9a8Vov6u-JTY0q73sB2DyQcgmKUxZFQtw.jpg",
+          "alt": "宝可梦毛绒展示",
+          "group": "店铺内景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/t5jsGBM3Qn4my8TIDTsy-GqdYLS1sLcB3dwYW-z3hRdwYx_nUmSK1zYhklQGcOLTY0q73sB2DyQcgmKUxZFQtw.jpg",
+          "alt": "宝可梦毛绒陈列",
+          "group": "店铺内景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/附近的又又中心/1771942021170.jpg",
+          "alt": "附近又又中心：周边货架",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/0DoXVAIdGI4cPB7R9BimunYvbXQkIJ8LAN4lghLCscKgBBV-YXdHAnr5HQjsJFYsY0q73sB2DyQcgmKUxZFQtw.jpg",
+          "alt": "周边作品展示墙",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/1771942019710.jpg",
+          "alt": "地下街角色涂鸦墙",
+          "group": "额外活动",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/1771942020847.jpg",
+          "alt": "角色立牌与留言",
+          "group": "额外活动",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/f96b99f1-582f-4d7b-bfab-461d0d8f5715.jpg",
+          "alt": "宝可梦卡牌交流现场",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/QQ图片20260228114612.jpg",
+          "alt": "商场角色装置",
+          "group": "额外活动",
+          "sourceName": "作者直拍（日期未记录）"
+        }
+      ],
       "visitedAt": "2026-07-08",
-      "updatedAt": "2026-09-20",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.220979,
@@ -457,9 +1529,70 @@
         "卡牌"
       ],
       "cover": "images/places/Shanghai/长宁巴黎春天.png",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/长宁巴黎春天.png",
+          "alt": "商场外观",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁巴黎春天/1771942617540.jpg",
+          "alt": "店铺橱窗",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁巴黎春天/1771942617701.jpg",
+          "alt": "小谷星球店面",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁巴黎春天/1771942618249.jpg",
+          "alt": "谷店入口",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁巴黎春天/1771942618380.jpg",
+          "alt": "卡牌店面",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁巴黎春天/1771942618534.jpg",
+          "alt": "主题店门口",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁巴黎春天/1771942618699.jpg",
+          "alt": "集换社店面",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁巴黎春天/1771942617403.jpg",
+          "alt": "卡牌与周边陈列",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁巴黎春天/1771942617876.jpg",
+          "alt": "K-pop 周边货架",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁巴黎春天/bc4a534bbc84402f942ca4b49f3aaf7b.webp",
+          "alt": "商场吉祥物宣传图",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        }
+      ],
       "visitedAt": "2026-05-27",
-      "updatedAt": "2026-09-26",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.213585,
@@ -489,9 +1622,76 @@
         "街机舞萌娃娃机"
       ],
       "cover": "images/places/Shanghai/环球港.jpg",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/环球港.jpg",
+          "alt": "商场中庭",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/星月环球港/1791364418029.jpg",
+          "alt": "闲鱼循环商店入口说明",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/星月环球港/1791364418247.jpg",
+          "alt": "闲鱼循环商店店面",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/星月环球港/微信图片_20250930194456_41_9.jpg",
+          "alt": "扭蛋店面",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/星月环球港/微信图片_20250930194458_42_9.jpg",
+          "alt": "心斋卡牌社店面",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/星月环球港/微信图片_20250930194459_43_9.jpg",
+          "alt": "卡游店面",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/星月环球港/微信图片_20250930194500_44_9.jpg",
+          "alt": "幻想乡店面",
+          "group": "店铺外景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/星月环球港/微信图片_20251001194248_49_9.jpg",
+          "alt": "谷店门头",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/星月环球港/微信图片_20251001194249_50_9.jpg",
+          "alt": "谷店街区",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/星月环球港/1791364418175.jpg",
+          "alt": "店内商品说明",
+          "group": "店铺内景",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/星月环球港/1791364417945.jpg",
+          "alt": "角色主题展板",
+          "group": "额外活动",
+          "sourceName": "本地整理图片（日期未记录）"
+        }
+      ],
       "visitedAt": "2026-07-08",
-      "updatedAt": "2026-09-26",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.235078,
@@ -514,9 +1714,106 @@
         "书籍"
       ],
       "cover": "images/places/Shanghai/正片/光启城悦沢/1771903814425.jpg",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/正片/光启城悦沢/1771903813933.jpg",
+          "alt": "光启城中庭",
+          "group": "商圈外部",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/光启城悦沢/地址.png",
+          "alt": "周边位置图",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/光启城悦沢/1771903814425.jpg",
+          "alt": "悦沢书店入口",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/光启城悦沢/1771903813469.jpg",
+          "alt": "书店指示牌",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/光启城悦沢/1771903813318.jpg",
+          "alt": "漫画与轻小说书架",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/光启城悦沢/1771903813410.jpg",
+          "alt": "书店全景",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/光启城悦沢/1771903813531.jpg",
+          "alt": "书籍近景",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/光启城悦沢/1771903813589.jpg",
+          "alt": "日语书籍展示台",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/光启城悦沢/1771903813665.jpg",
+          "alt": "书籍陈列墙",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/光启城悦沢/1771903813795.jpg",
+          "alt": "角色周边与文具",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/光启城悦沢/1771903814003.jpg",
+          "alt": "书店内景",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/光启城悦沢/1771903814086.jpg",
+          "alt": "书籍背面信息",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/光启城悦沢/1771903814143.jpg",
+          "alt": "新书展示台",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/光启城悦沢/1771903814220.jpg",
+          "alt": "书架通道",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/光启城悦沢/1771903814293.jpg",
+          "alt": "店内阅读空间",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/光启城悦沢/1771903814480.jpg",
+          "alt": "书架陈列",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        }
+      ],
       "visitedAt": "2026-05-08",
-      "updatedAt": "2026-09-20",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.185786,
@@ -542,9 +1839,16 @@
         "快闪"
       ],
       "cover": "images/places/Shanghai/正片/闵行南方百联/南方.png",
-      "gallery": [],
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/正片/闵行南方百联/南方.png",
+          "alt": "商场入口",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        }
+      ],
       "visitedAt": "2026-06-18",
-      "updatedAt": "2026-09-20",
+      "updatedAt": "2026-10-10",
       "published": true,
       "location": {
         "lat": 31.132931,
@@ -552,6 +1856,55 @@
         "coordinateSystem": "wgs84",
         "address": "上海市闵行区沪闵路7250号南方百联商城2区"
       }
+    },
+    {
+      "id": "shanghai-shop-021",
+      "name": "少女乐队乐器店",
+      "tier": "npc",
+      "order": 80,
+      "summary": "以 HIPPIHO 为代表，少女乐队主题、乐器和周边聚在一起。",
+      "details": "**少女乐队乐器店是一类去处**，HIPPIHO 是其中比较有名的一家。\n\n这类店把乐器展示与少女乐队文化放到同一个空间里。HIPPIHO 的现场照片里能看到吉他墙、主题乐器和角色周边陈列。",
+      "tags": [
+        "少女乐队",
+        "乐器"
+      ],
+      "cover": "images/places/Shanghai/正片/Hippiho/微信图片_20250930192935_38_9.jpg",
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/正片/Hippiho/微信图片_20250930192941_39_9.jpg",
+          "alt": "HIPPIHO：所在商场外观",
+          "group": "商圈外部",
+          "sourceName": "本地整理照片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/Hippiho/微信图片_20250930192935_38_9.jpg",
+          "alt": "HIPPIHO：店面与招牌",
+          "group": "店铺外景",
+          "sourceName": "本地整理照片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/Hippiho/微信图片_20250930192927_34_9.jpg",
+          "alt": "HIPPIHO：吉他墙与少女乐队周边",
+          "group": "店铺内景",
+          "sourceName": "本地整理照片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/Hippiho/微信图片_20250930192931_36_9.jpg",
+          "alt": "HIPPIHO：角色周边陈列",
+          "group": "店铺内景",
+          "sourceName": "本地整理照片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/Hippiho/微信图片_20250930192933_37_9.jpg",
+          "alt": "HIPPIHO：主题乐器展示",
+          "group": "店铺内景",
+          "sourceName": "本地整理照片（日期未记录）"
+        }
+      ],
+      "visitedAt": null,
+      "updatedAt": "2026-10-10",
+      "published": true,
+      "location": null
     }
   ],
   "广州": [
