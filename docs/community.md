@@ -30,8 +30,4 @@
 
 建议表单采用 **GitHub 登录后提交**，不是匿名投稿，也没有内嵌 OAuth 登录窗口；日常交流使用 B 站私信。未来需要匿名或站内直接提交建议，应接入带服务端校验、存储和管理能力的后端，不能把管理令牌放到网页。
 
-## 验证
-
-2026-09-19：生产构建与 8 项数据测试通过；10 项 Edge 浏览器场景覆盖既有功能和新增 QA、页底留言、分页、错误重试、纯文本显示、375/768/1440px 布局、生产域名下每页仅加载一次计数脚本、计数服务被阻止的降级提示。浏览器社区数据与计数脚本使用拦截响应；没有向公开留言板写入测试留言。额外实际调用官方统计接口两次，确认真实计数连续递增。提交跳转验证到 GitHub 新 Issue URL 和预填参数，没有冒充访客发布建议。
-
 GitHub 官方参考：[从 URL 创建 Issue 与参数权限](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue#creating-an-issue-from-a-url-query)、[公开评论 API](https://docs.github.com/en/rest/issues/comments)。
