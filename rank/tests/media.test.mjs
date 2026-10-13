@@ -25,7 +25,7 @@ test('previews preserve originals, ignore drafts, reuse outputs and invalidate c
     const first = await prepareMedia(root)
     assert.deepEqual(Object.keys(first), [source])
     assert.deepEqual(readFileSync(originalPath), original)
-    for (const [key, width] of [['small', 320], ['large', 640], ['display', 1280]]) {
+    for (const [key, width] of [['tiny', 160], ['small', 320], ['large', 640], ['display', 1280]]) {
       const meta = await sharp(readFileSync(join(root, 'public', first[source][key]))).metadata()
       assert.equal(meta.format, 'webp')
       assert.equal(meta.width, width)
@@ -33,12 +33,16 @@ test('previews preserve originals, ignore drafts, reuse outputs and invalidate c
     }
     const previewPath = join(root, 'public', first[source].small)
     const mtime = statSync(previewPath).mtimeMs
+    const tinyPath = join(root, 'public', first[source].tiny)
+    const tinyMtime = statSync(tinyPath).mtimeMs
     assert.deepEqual(await prepareMedia(root), first)
     assert.equal(statSync(previewPath).mtimeMs, mtime)
+    assert.equal(statSync(tinyPath).mtimeMs, tinyMtime)
     await sharp({ create: { width: 1800, height: 1200, channels: 3, background: '#cc7f41' } }).png().toFile(originalPath)
     const changed = readFileSync(originalPath)
     const second = await prepareMedia(root)
     assert.notEqual(second[source].small, first[source].small)
+    assert.notEqual(second[source].tiny, first[source].tiny)
     assert.deepEqual(readFileSync(originalPath), changed)
     assert.deepEqual(JSON.parse(readFileSync(join(root, 'src/data/media-previews.json'), 'utf8')), second)
   } finally {

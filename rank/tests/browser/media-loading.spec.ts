@@ -19,7 +19,22 @@ test('board requests responsive previews without downloading original covers', a
   await expect(photos.last()).toHaveJSProperty('complete', true)
   expect(requests.some(url => published.some(p => p.cover && url === mediaUrl(p.cover)))).toBe(false)
   expect(requests.some(url => url.includes('/images/previews/'))).toBe(true)
-  await expect(photos.first()).toHaveAttribute('srcset', /320w, .*640w/)
+  await expect(photos.first()).toHaveAttribute('srcset', /160w, .*320w, .*640w/)
+  await expect(photos.first()).toHaveJSProperty('complete', true)
+  expect(await photos.first().evaluate((img: HTMLImageElement) => img.currentSrc)).toMatch(/-160\.webp$/)
+})
+
+test('three-column mobile board uses smaller previews on high-density screens', async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 950 }, deviceScaleFactor: 3 })
+  try {
+    const page = await context.newPage()
+    await page.goto(base)
+    const photos = page.locator('.card-photo img')
+    await photos.evaluateAll(images => images.forEach(image => { (image as HTMLImageElement).loading = 'eager' }))
+    await expect.poll(() => photos.evaluateAll(images => images.every(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0))).toBe(true)
+    expect(await photos.evaluateAll(images => images.every(image => (image as HTMLImageElement).currentSrc.endsWith('-320.webp')))).toBe(true)
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+  } finally { await context.close() }
 })
 
 test('gallery loads a screen-sized image, preserves originals and recovers from failure', async ({ page }) => {

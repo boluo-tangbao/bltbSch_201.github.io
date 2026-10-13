@@ -19,6 +19,16 @@ const personalSitePreview = {
       let pathname: string
       try { pathname = decodeURIComponent(new URL(request.url || '/', 'http://localhost').pathname) }
       catch { return next() }
+      const rankFile = pathname.slice(rankBase.length)
+      // Generated filenames include a content hash; edits get a new URL.
+      if (pathname.startsWith(rankBase) && /^images\/previews\/[a-f0-9]{20}-(160|320|640|1280|pixel|character)\.webp$/.test(rankFile)) {
+        const target = resolve(homeRoot, 'rank/public', rankFile)
+        if (!existsSync(target)) return next()
+        response.setHeader('Content-Type', 'image/webp')
+        response.setHeader('Cache-Control', 'public, max-age=31536000, immutable')
+        createReadStream(target).on('error', () => response.destroy()).pipe(response)
+        return
+      }
       const duplicateHome = `${rankBase}${homeBase.replace(/^\//, '')}`
       if (homeBase !== '/' && pathname === duplicateHome) {
         response.writeHead(302, { Location: homeBase }); response.end(); return

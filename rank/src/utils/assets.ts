@@ -1,7 +1,7 @@
 import previewData from '../data/media-previews.json'
 import portraitData from '../data/portrait-previews.json'
 
-const previews = previewData as Record<string, { small: string; large: string; display?: string; playback?: string }>
+const previews = previewData as Record<string, { tiny?: string; small: string; large: string; display?: string; playback?: string }>
 const portraits = portraitData as Record<string, string>
 
 export function assetUrl(path: string) {
@@ -14,7 +14,8 @@ export function previewUrl(path: string) {
 
 export function previewSrcset(path: string) {
   const preview = previews[path]
-  return preview ? `${assetUrl(preview.small)} 320w, ${assetUrl(preview.large)} 640w` : undefined
+  const tiny = preview?.tiny ? `${assetUrl(preview.tiny)} 160w, ` : ''
+  return preview ? `${tiny}${assetUrl(preview.small)} 320w, ${assetUrl(preview.large)} 640w` : undefined
 }
 
 export function displayUrl(path: string) {

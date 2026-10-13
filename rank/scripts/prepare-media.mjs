@@ -67,11 +67,12 @@ export async function prepareMedia(root) {
     const path = publicPath(publicRoot, source)
     const input = readFileSync(path)
     const hash = createHash('sha256').update(input).update('preview-v1').digest('hex').slice(0, 20)
+    const tiny = `images/previews/${hash}-160.webp`
     const small = `images/previews/${hash}-320.webp`
     const large = `images/previews/${hash}-640.webp`
     const display = `images/previews/${hash}-1280.webp`
     let frame
-    for (const [width, target] of [[320, small], [640, large], ...(videos.has(key) ? [] : [[1280, display]])]) {
+    for (const [width, target] of [[160, tiny], [320, small], [640, large], ...(videos.has(key) ? [] : [[1280, display]])]) {
       const destination = resolve(publicRoot, target)
       if (!existsSync(destination)) {
         if (/\.mp4$/i.test(source) && !frame) {
@@ -80,7 +81,7 @@ export async function prepareMedia(root) {
         await sharp(frame || input).rotate().resize({ width, withoutEnlargement: true }).webp({ quality: width === 1280 ? 82 : 72, effort: 4 }).toFile(destination)
       }
     }
-    manifest[key] = { small, large, ...(videos.has(key) ? {} : { display }) }
+    manifest[key] = { tiny, small, large, ...(videos.has(key) ? {} : { display }) }
     originalBytes += input.length
     previewBytes += readFileSync(resolve(publicRoot, small)).length
   }
