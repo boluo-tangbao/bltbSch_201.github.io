@@ -6,8 +6,7 @@ import type { Place, PlacesByCity, Site } from './types'
 import { flattenPlaces, filterPlaces, tierLabel, tiers } from './utils/model'
 import { cityColor } from './utils/cities'
 import { useStoredFilters } from './utils/filters'
-import CityLegend from './components/CityLegend.vue'
-import TagLegend from './components/TagLegend.vue'
+import BrowseFilters from './components/BrowseFilters.vue'
 import PlaceMap from './components/PlaceMap.vue'
 import PlaceDetail from './components/PlaceDetail.vue'
 import VisitCounter from './components/VisitCounter.vue'
@@ -35,7 +34,7 @@ onMounted(() => {
   })
 })
 const rankOf = (p: Place) => all.filter(x => x.tier === p.tier).findIndex(x => x.id === p.id) + 1
-const boardUrl = computed(() => base)
+const boardUrl = computed(() => selected.value ? `${base}#place-card-${selected.value.id}` : base)
 function sync() {
   route.value = location.hash
   if (route.value.match(/^#\/place\//)) nextTick(() => {
@@ -55,8 +54,7 @@ function tierColor(p: Place) { return tiers.find(t => t.id === p.tier)?.color ||
   <main ref="main" id="guide-main" tabindex="-1" class="page-shell guide-page" :class="{ 'guide-map-view': guideView === 'map' }">
     <div class="guide-hero compact-map-hero"><div class="map-hero-line"><h1>去哪逛？</h1><p>挑个城市，开逛～</p><a :href="boardUrl" class="button" aria-label="回到图片总榜">← 总榜</a></div><MascotMoments class="mascot-embedded mascot-inline" priority :ids="['aqua', 'emilia']" rotate-all label="地图手记角色" /></div>
     <div class="filter-bar"><label class="city-filter"><span class="sr-only">城市筛选</span><select v-model="city" aria-label="城市筛选"><option value="">全部城市</option><option v-if="city && !cities.includes(city)" :value="city">{{ city }}（暂无条目）</option><option v-for="c in cities" :key="c">{{ c }}</option></select></label><label class="search-filter"><input v-model="query" type="search" aria-label="关键词搜索" placeholder="搜索店名、城市或标签…" /></label><div class="filter-result"><span role="status">{{ filtered.length }} 个结果</span><button class="text-button" :disabled="!city && !tag && !query.trim()" @click="reset">重置</button></div></div>
-    <CityLegend :cities="cities" :colors="colors" :active="city" @select="city = $event" />
-    <TagLegend :tags="tags" :active="tag" @select="tag = $event" />
+    <BrowseFilters :cities="cities" :colors="colors" :tags="tags" :city="city" :tag="tag" :query="query" @city="city = $event" @tag="tag = $event" @query="query = $event" />
     <nav class="guide-view-switch" aria-label="地图与地点列表切换"><button type="button" :aria-pressed="guideView === 'map'" aria-controls="guide-atlas" @click="guideView = 'map'">地图</button><button type="button" :aria-pressed="guideView === 'list'" aria-controls="guide-directory" @click="guideView = 'list'">地点列表 · {{ filtered.length }}</button></nav>
     <div v-show="guideView === 'map'" id="guide-atlas" class="guide-map-panel">
       <PlaceMap :places="filtered" :total-places="all.length" :colors="colors" :selected-id="filtered.some(p => p.id === selected?.id) ? selected?.id : undefined" @select="select" />

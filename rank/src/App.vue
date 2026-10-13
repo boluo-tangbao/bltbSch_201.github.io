@@ -7,8 +7,7 @@ import type { Place, PlacesByCity, Site, Update } from './types'
 import { flattenPlaces, filterPlaces, publicUpdates, recentBadge, tiers } from './utils/model'
 import PlaceCard from './components/PlaceCard.vue'
 import PlaceDetail from './components/PlaceDetail.vue'
-import CityLegend from './components/CityLegend.vue'
-import TagLegend from './components/TagLegend.vue'
+import BrowseFilters from './components/BrowseFilters.vue'
 import { cityColor } from './utils/cities'
 import { useStoredFilters } from './utils/filters'
 import ExportPanel from './components/ExportPanel.vue'
@@ -28,12 +27,30 @@ const { city, tag, query, reset } = useStoredFilters()
 const route = ref(location.hash)
 const main = ref<HTMLElement>()
 const exportOpen = ref(false)
+let restoreFrame = 0
+function restoreBoardFocus() {
+  if (restoreFrame) window.cancelAnimationFrame(restoreFrame)
+  restoreFrame = window.requestAnimationFrame(() => { restoreFrame = 0; focusBoardCard() })
+}
+function focusBoardCard() {
+  const id = route.value.match(/^#place-card-([a-z0-9-]+)$/)?.[1]
+  const card = id ? document.getElementById(`place-card-${id}`) : null
+  if (!card) return false
+  card.scrollIntoView({ block: 'center', behavior: 'instant' })
+  card.querySelector<HTMLAnchorElement>('a')?.focus({ preventScroll: true })
+  return true
+}
 const syncRoute = () => {
   route.value = location.hash
-  nextTick(() => { if (route.value === '#guestbook') document.getElementById('guestbook')?.scrollIntoView(); else { main.value?.focus(); window.scrollTo(0, 0) } })
+  nextTick(() => { if (route.value === '#guestbook') document.getElementById('guestbook')?.scrollIntoView(); else if (!focusBoardCard()) { main.value?.focus(); window.scrollTo(0, 0) } })
 }
 window.addEventListener('hashchange', syncRoute)
-onBeforeUnmount(() => { window.removeEventListener('hashchange', syncRoute) })
+window.addEventListener('pageshow', restoreBoardFocus)
+onBeforeUnmount(() => {
+  window.removeEventListener('hashchange', syncRoute)
+  window.removeEventListener('pageshow', restoreBoardFocus)
+  if (restoreFrame) window.cancelAnimationFrame(restoreFrame)
+})
 const filtered = computed(() => filterPlaces(places, city.value, query.value, tag.value))
 const firstPhotoId = computed(() => tiers.map(tier => filtered.value.find(place => place.tier === tier.id && place.cover)).find(Boolean)?.id)
 const tags = computed(() => [...new Set(all.flatMap(p => p.tags))].sort((a, b) => a.localeCompare(b, 'zh-CN')))
@@ -45,8 +62,11 @@ function browseBoard() {
   const heading = document.getElementById('board-title')
   heading?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' })
 }
-const isHome = computed(() => !route.value || route.value === '#' || route.value === '#/' || route.value === '#guestbook')
-onMounted(() => { if (route.value === '#guestbook') nextTick(() => document.getElementById('guestbook')?.scrollIntoView()) })
+const isHome = computed(() => !route.value || route.value === '#' || route.value === '#/' || route.value === '#guestbook' || /^#place-card-[a-z0-9-]+$/.test(route.value))
+onMounted(() => nextTick(() => {
+  if (route.value === '#guestbook') document.getElementById('guestbook')?.scrollIntoView()
+  else focusBoardCard()
+}))
 const currentPlace = computed(() => {
   const match = route.value.match(/^#\/place\/([a-z0-9-]+)$/)
   return match ? all.find(p => p.id === match[1]) : undefined
@@ -76,8 +96,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
           <label class="search-filter"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.5"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.5"/></svg><input v-model="query" type="search" placeholder="搜索店名、城市或标签…" aria-label="关键词搜索" /></label>
           <div class="filter-result"><span role="status" aria-live="polite">{{ filtered.length }} 个结果</span><button class="text-button" :disabled="!hasFilters" @click="reset">重置</button></div>
         </div>
-        <CityLegend :cities="cities" :colors="colors" :active="city" @select="city = $event" />
-        <TagLegend :tags="tags" :active="tag" @select="tag = $event" />
+        <BrowseFilters :cities="cities" :colors="colors" :tags="tags" :city="city" :tag="tag" :query="query" @city="city = $event" @tag="tag = $event" @query="query = $event" />
         <div class="photo-options"><span>点击图片查看详情 · 悬停隐藏店名</span><label><input v-model="showLabels" type="checkbox" />显示名称与城市</label></div>
         <div v-if="!all.length && !hasFilters" class="empty-intro"><span class="empty-icon" aria-hidden="true">＋</span><div><strong>规划中，还在路上待访问</strong><p>等亲自来，再写~</p></div><span class="empty-pill">待填充</span></div>
         <div v-if="hasFilters && !filtered.length" class="no-results" role="status"><strong>没有找到匹配的条目</strong><span>试试其他关键词、城市或标签。</span><button class="text-button" @click="reset">重置筛选 ↗</button></div>
@@ -94,7 +113,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
       <Guestbook />
     </template>
 
-    <section v-else-if="currentPlace" class="detail-page"><a href="#/" class="back-link">← 返回榜单</a><a :href="`${guideUrl}#/place/${currentPlace.id}`" class="button">地图与地点目录 ↗</a><PlaceDetail :place="currentPlace" :rank="site.rankWithinTier ? rankOf(currentPlace) : undefined" :color="cityColor(currentPlace.city, colors)" /></section>
+    <section v-else-if="currentPlace" class="detail-page"><a :href="`#place-card-${currentPlace.id}`" class="back-link">← 返回榜单</a><a :href="`${guideUrl}#/place/${currentPlace.id}`" class="button">地图与地点目录 ↗</a><PlaceDetail :key="currentPlace.id" :place="currentPlace" :rank="site.rankWithinTier ? rankOf(currentPlace) : undefined" :color="cityColor(currentPlace.city, colors)" /></section>
     <section v-else class="not-found"><p class="eyebrow">这一站暂未收录</p><h1>没有找到这个条目</h1><p>链接可能有误，或条目尚未公开。</p><a href="#/" class="button dark">返回榜单</a></section>
   </main>
   <footer class="site-footer"><span><b>{{ site.author }}</b> · 一店一更新，纯主观感受，你们永远对。</span><VisitCounter /></footer>
