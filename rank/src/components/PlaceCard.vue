@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import type { Place } from '../types'
 import PlaceImage from './PlaceImage.vue'
-defineProps<{ place: Place; rank?: number; badge: string; color: string; href: string; priority?: boolean }>()
+import SearchMatch from './SearchMatch.vue'
+import type { PlaceSearchMatch } from '../utils/search'
+defineProps<{ place: Place; rank?: number; badge: string; color: string; href: string; priority?: boolean; match?: PlaceSearchMatch }>()
 </script>
 <template>
   <article :id="`place-card-${place.id}`" class="place-card photo-card" :style="{ '--city-color': color }">
@@ -9,5 +11,6 @@ defineProps<{ place: Place; rank?: number; badge: string; color: string; href: s
       <div class="card-photo"><PlaceImage :src="place.cover" :alt="`${place.city} · ${place.name}`" :position="place.coverPosition" :priority="priority" /></div>
       <div class="photo-caption"><span>{{ place.name }}</span><small>{{ place.city }}<span v-if="rank" class="rank-number"> · #{{ rank }}</span><span v-if="badge"> · {{ badge }}</span></small></div>
     </a>
+    <SearchMatch v-if="match" :match="match" />
   </article>
 </template>

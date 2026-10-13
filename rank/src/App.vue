@@ -2,8 +2,10 @@
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import siteData from './data/site.json'
 import placeData from './data/places.json'
+import directoryData from './data/shop-directories.json'
 import updateData from './data/updates.json'
-import type { Place, PlacesByCity, Site, Update } from './types'
+import type { Place, PlacesByCity, ShopDirectory, Site, Update } from './types'
+import { createPlaceSearchIndex, matchPlaces } from './utils/search'
 import { flattenPlaces, filterPlaces, publicUpdates, recentBadge, tiers } from './utils/model'
 import PlaceCard from './components/PlaceCard.vue'
 import PlaceDetail from './components/PlaceDetail.vue'
@@ -21,6 +23,7 @@ const site = siteData as Site
 const colors = site.cityColors || {}
 const showLabels = ref(true)
 const places = flattenPlaces(placeData as PlacesByCity)
+const searchIndex = createPlaceSearchIndex(places, directoryData as Record<string, ShopDirectory>)
 const all = filterPlaces(places)
 const updates = publicUpdates(updateData as Update[], places)
 const { city, tag, query, reset } = useStoredFilters()
@@ -51,7 +54,8 @@ onBeforeUnmount(() => {
   window.removeEventListener('pageshow', restoreBoardFocus)
   if (restoreFrame) window.cancelAnimationFrame(restoreFrame)
 })
-const filtered = computed(() => filterPlaces(places, city.value, query.value, tag.value))
+const searchMatches = computed(() => matchPlaces(searchIndex, query.value))
+const filtered = computed(() => filterPlaces(places, city.value, query.value, tag.value, searchMatches.value))
 const firstPhotoId = computed(() => tiers.map(tier => filtered.value.find(place => place.tier === tier.id && place.cover)).find(Boolean)?.id)
 const tags = computed(() => [...new Set(all.flatMap(p => p.tags))].sort((a, b) => a.localeCompare(b, 'zh-CN')))
 const cities = [...new Set(all.map(p => p.city))].sort((a, b) => a.localeCompare(b, 'zh-CN'))
@@ -100,7 +104,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
         <div class="photo-options"><span>点击图片查看详情 · 悬停隐藏店名</span><label><input v-model="showLabels" type="checkbox" />显示名称与城市</label></div>
         <div v-if="!all.length && !hasFilters" class="empty-intro"><span class="empty-icon" aria-hidden="true">＋</span><div><strong>规划中，还在路上待访问</strong><p>等亲自来，再写~</p></div><span class="empty-pill">待填充</span></div>
         <div v-if="hasFilters && !filtered.length" class="no-results" role="status"><strong>没有找到匹配的条目</strong><span>试试其他关键词、城市或标签。</span><button class="text-button" @click="reset">重置筛选 ↗</button></div>
-        <div class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels }"><section v-for="(tier, index) in tiers" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ index + 1 }}</span><h3 :id="`tier-${tier.id}`">{{ tier.label }}</h3><span class="tier-count">{{ filtered.filter(p => p.tier === tier.id).length }} 个条目</span></div><div class="tier-content"><div v-if="!filtered.some(p => p.tier === tier.id)" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in filtered.filter(p => p.tier === tier.id)" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="`${guideUrl}#/place/${p.id}`" :rank="site.rankWithinTier ? rankOf(p) : undefined" :priority="p.id === firstPhotoId" :badge="recentBadge(p.id, updates, site.recentDays)" /></div></div></section></div>
+        <div class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels }"><section v-for="(tier, index) in tiers" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ index + 1 }}</span><h3 :id="`tier-${tier.id}`">{{ tier.label }}</h3><span class="tier-count">{{ filtered.filter(p => p.tier === tier.id).length }} 个条目</span></div><div class="tier-content"><div v-if="!filtered.some(p => p.tier === tier.id)" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in filtered.filter(p => p.tier === tier.id)" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="`${guideUrl}#/place/${p.id}`" :rank="site.rankWithinTier ? rankOf(p) : undefined" :priority="p.id === firstPhotoId" :badge="recentBadge(p.id, updates, site.recentDays)" :match="searchMatches.get(p.id)" /></div></div></section></div>
         <p class="board-caption"><span>推荐度从上到下递减</span><span>{{ site.rankWithinTier ? '同档分先后 · 从左到右，从上到下' : '同档不分先后' }}</span></p>
       </section>
 

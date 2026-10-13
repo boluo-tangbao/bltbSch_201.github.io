@@ -12,10 +12,10 @@ export function flattenPlaces(groups: PlacesByCity): Place[] {
   return Object.entries(groups).flatMap(([city, places]) => places.map(place => ({ ...place, city })))
 }
 
-export function filterPlaces(places: Place[], city = '', query = '', tag = '') {
+export function filterPlaces(places: Place[], city = '', query = '', tag = '', matches?: ReadonlyMap<string, unknown>) {
   const keyword = query.trim().toLocaleLowerCase()
   return places.filter(p => p.published && (!city || p.city === city) && (!tag || p.tags.includes(tag)) &&
-    (!keyword || [p.name, p.city, ...p.tags].join(' ').toLocaleLowerCase().includes(keyword)))
+    (!keyword || (matches ? matches.has(p.id) : [p.name, p.city, ...p.tags].join(' ').toLocaleLowerCase().includes(keyword))))
     .sort((a, b) => tiers.findIndex(t => t.id === a.tier) - tiers.findIndex(t => t.id === b.tier) || a.order - b.order || a.id.localeCompare(b.id))
 }
 export function publicUpdates(updates: Update[], places: Place[]) {

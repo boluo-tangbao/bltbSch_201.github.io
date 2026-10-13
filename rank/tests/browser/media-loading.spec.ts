@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { readFileSync } from 'node:fs'
 
-const base = 'http://127.0.0.1:4173/bltbSch_201.github.io/rank/'
+const base = process.env.BROWSE_TEST_BASE || 'http://127.0.0.1:4173/bltbSch_201.github.io/rank/'
 const places = Object.values(JSON.parse(readFileSync('src/data/places.json', 'utf8'))).flat() as any[]
 const published = places.filter(p => p.published)
 const photoPlace = published.find(p => p.gallery.some((g: any) => g.type !== 'video'))

@@ -6,6 +6,7 @@ export interface ShopAccount {
 export interface ShopSource { label: string; url: string; date?: string; dateLabel?: string }
 export interface DirectoryShop {
   name: string; floor?: string; kind?: string
+  aliases?: string[]
   operatingConfirmation?: 'official-listing'
   status: 'recent' | 'listed' | 'older' | 'unverified' | 'closed'
   note: string; sources: ShopSource[]; kindSources?: ShopSource[]; accounts?: ShopAccount[]
@@ -13,6 +14,7 @@ export interface DirectoryShop {
 export interface ShopDirectory { area: string; checkedAt: string; shops: DirectoryShop[] }
 export interface PlaceEntry {
   id: string; name: string; tier: TierId; order: number
+  aliases?: string[]
   summary: string; details: string; visitNotes?: string[]; tags: string[]
   cover: string | null; coverPosition?: [number, number]
   gallery: GalleryMedia[]

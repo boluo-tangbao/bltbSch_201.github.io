@@ -3,6 +3,9 @@ import { resolve, relative, isAbsolute, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const TIERS = ['hang', 'top', 'above', 'npc', 'bad']
+function validAliases(aliases) {
+  return Array.isArray(aliases) && aliases.every(alias => typeof alias === 'string' && alias.trim() === alias && alias.length > 0 && alias.length <= 160) && new Set(aliases).size === aliases.length
+}
 export function validDate(value, month = false) {
   if (typeof value !== 'string' || !(month ? /^\d{4}-\d{2}(-\d{2})?$/ : /^\d{4}-\d{2}-\d{2}$/).test(value)) return false
   const full = value.length === 7 ? value + '-01' : value
@@ -64,6 +67,7 @@ export function validateData(site, groups, updates, imageExists = () => true, di
     for (const key of ['details']) if (typeof p[key] !== 'string') fail('places.json', p.id, `${key} 必须是字符串（可留空）`)
     for (const key of ['published']) if (typeof p[key] !== 'boolean') fail('places.json', p.id, `${key} 必须是布尔值`)
     if (!Array.isArray(p.tags) || p.tags.some(t => typeof t !== 'string')) fail('places.json', p.id, 'tags 必须是文字数组')
+    if (p.aliases !== undefined && !validAliases(p.aliases)) fail('places.json', p.id, 'aliases 必须是不重复的 1–160 字别名数组，不能有首尾空格')
     if (p.visitedAt !== null && !validDate(p.visitedAt, true)) fail('places.json', p.id, 'visitedAt 必须为真实年月、日期或 null')
     if (!validDate(p.updatedAt)) fail('places.json', p.id, 'updatedAt 必须为真实 YYYY-MM-DD 日期')
     if (p.cover !== null) image(p.cover, 'places.json', p.id)
@@ -153,6 +157,7 @@ export function validateShopDirectories(directories, places) {
     for (const shop of directory.shops) {
       if (!object(shop)) { fail(id, '店铺必须是对象'); continue }
       for (const key of ['name', 'note']) if (!text(shop[key])) fail(id, `店铺 ${key} 必填`)
+      if (shop.aliases !== undefined && !validAliases(shop.aliases)) fail(id, `${shop.name} aliases 必须是不重复的 1–160 字别名数组，不能有首尾空格`)
       if (shop.floor !== undefined && !text(shop.floor)) fail(id, `${shop.name} 未知楼层请省略 floor`)
       if (names.has(shop.name)) fail(id, `店名重复：${shop.name}`)
       names.add(shop.name)

@@ -12,7 +12,7 @@ test('directory, map and search use the same filtered places', async ({ page }) 
   await expect(page.locator('.place-directory nav a')).toHaveCount(14)
   await expect(page.locator('.atlas-count strong')).toHaveText('2')
 
-  await page.getByRole('searchbox').fill('TEST')
+  await page.getByRole('searchbox').fill('unmatched-keyword-927')
   await expect(page.locator('.place-directory nav a')).toHaveCount(0)
   await expect(page.locator('.atlas-count strong')).toHaveText('0')
   await expect(page.getByText('没有匹配的地点')).toBeVisible()
