@@ -96,6 +96,42 @@ try{
   const refs=await page.locator('[src],link[rel="stylesheet"],a[href]').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('src')||n.getAttribute('href')).filter(Boolean));
   for(const ref of new Set(refs))if(!/^(https?:|#|mailto:)/.test(ref)){const response=await page.request.get(new URL(ref,base+file).href);assert.ok(response.ok(),file+': '+ref);}
  }
+ // 分享使用稳定活动地址，浏览状态通过 URL 和历史条目恢复。
+ await page.context().grantPermissions(['clipboard-read','clipboard-write'],{origin:new URL(base).origin});
+ await page.setViewportSize({width:390,height:950});
+ await page.goto(base+'activities.html#event-records');await page.locator('.event-card').first().waitFor();
+ await page.locator('[data-category="'+photoEvent.category+'"]').click();await page.locator('#event-year').selectOption(photoEvent.year);
+ assert.equal(new URL(page.url()).searchParams.get('category'),photoEvent.category);assert.equal(new URL(page.url()).searchParams.get('year'),photoEvent.year);
+ await page.reload();await page.locator('.event-card').first().waitFor();assert.equal(await page.locator('#event-year').inputValue(),photoEvent.year);
+ assert.equal(await page.locator('.event-card').count(),data.filter(e=>e.category===photoEvent.category&&e.year===photoEvent.year).length);
+ const lastCard=page.locator('.event-card').last();await lastCard.scrollIntoViewIfNeeded();
+ const savedScroll=await page.evaluate(()=>scrollY);await lastCard.click();await page.locator('#event-album').waitFor({state:'visible'});
+ const eventId=new URL(page.url()).hash.slice(7);await page.reload();await page.locator('#event-album').waitFor({state:'visible'});
+ await page.locator('#event-share').click();await page.waitForFunction(()=>document.querySelector('#event-share-status').textContent.includes('已复制'));
+ assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),base+'activities.html#event/'+eventId);
+ await page.screenshot({path:resolve('test-results/activities/share-390.png')});
+ await page.locator('.event-back').click();await page.locator('#event-album').waitFor({state:'hidden'});await page.waitForFunction(y=>Math.abs(scrollY-y)<5,savedScroll);
+ assert.equal(await page.locator('#event-year').inputValue(),photoEvent.year);
+ await page.reload();await page.locator('.event-card').first().waitFor();await page.waitForFunction(y=>Math.abs(scrollY-y)<5,savedScroll);
+ await page.locator('.event-card').last().click();await page.locator('#event-album').waitFor({state:'visible'});await page.goBack();await page.locator('#event-album').waitFor({state:'hidden'});await page.waitForFunction(y=>Math.abs(scrollY-y)<5,savedScroll);
+ await page.goto(base+'activities.html#event/'+eventId);await page.locator('#event-album').waitFor({state:'visible'});
+ await page.evaluate(()=>Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async()=>{throw new Error('blocked')}}}));
+ await page.locator('#event-share').click();await page.locator('#event-share-fallback').waitFor({state:'visible'});assert.equal(await page.locator('#event-share-url').inputValue(),base+'activities.html#event/'+eventId);
+ await page.goto(base+'activities.html#event-records');await page.locator('.event-card').first().waitFor();assert.equal(await page.locator('#event-year').inputValue(),'');
+ // 跨两次不同筛选的浏览记录，后退和前进也恢复对应的控件与列表。
+ await page.locator('[data-category="'+photoEvent.category+'"]').click();await page.locator('#event-year').selectOption(photoEvent.year);
+ await page.locator('.event-card').first().click();await page.locator('#event-album').waitFor({state:'visible'});
+ const firstAlbumUrl=page.url();
+ await page.locator('.event-back').click();await page.locator('#event-album').waitFor({state:'hidden'});
+ await page.locator('#event-year').selectOption('');await page.locator('[data-category=""]').click();await page.locator('#event-topic').selectOption('acg');
+ await page.locator('.event-card').first().click();await page.locator('#event-album').waitFor({state:'visible'});
+ await page.goBack();await page.locator('#event-album').waitFor({state:'hidden'});
+ assert.equal(await page.locator('#event-topic').inputValue(),'acg');assert.equal(await page.locator('.event-card').count(),acg.length);
+ await page.goBack();await page.locator('#event-album').waitFor({state:'visible'});assert.equal(page.url(),firstAlbumUrl);
+ assert.equal(await page.locator('#event-year').inputValue(),photoEvent.year);assert.equal(await page.locator('#event-topic').inputValue(),'');
+ assert.equal(await page.locator('[data-category="'+photoEvent.category+'"]').getAttribute('aria-pressed'),'true');
+ await page.goForward();await page.locator('#event-album').waitFor({state:'hidden'});
+ assert.equal(await page.locator('#event-topic').inputValue(),'acg');assert.equal(await page.locator('#event-year').inputValue(),'');assert.equal(await page.locator('.event-card').count(),acg.length);
  // 验证 rank 开发环境也能实际读取迁移后的主站页面、清单及媒体。
  const {createServer}=await import(pathToFileURL(require.resolve('vite')).href);
  const previousBase=process.env.SITE_BASE;

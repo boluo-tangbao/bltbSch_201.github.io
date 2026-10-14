@@ -81,3 +81,11 @@
   .photo-board.comfortable-view .photo-caption small { font-size: 12px; }
 }
 @media (hover: none) { .compact-hover-hint { display: none; } }
+
+/* Keep inked framing on the hero and tiers, with quieter secondary controls. */
+.button:not(.dark), .guide-hero .button:not(.dark) { border: 1px solid #d8bdc5; background: #fffdfa; box-shadow: none; }
+.button:not(.dark):hover, .guide-hero .button:not(.dark):hover { transform: none; background: #fff0f3; border-color: #b27c8d; box-shadow: none; }
+.city-legend button, .tag-filter button { border-color: #dfccd2; box-shadow: none; }
+.city-legend button[aria-pressed=true], .tag-filter button[aria-pressed=true] { box-shadow: none; }
+.photo-card .card-link { box-shadow: 0 2px 6px #29293214; }
+.photo-card .card-link:hover, .photo-card .card-link:focus-visible { transform: translateY(-2px); box-shadow: 0 4px 12px #29293224; }

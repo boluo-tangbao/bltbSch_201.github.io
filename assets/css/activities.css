@@ -54,3 +54,13 @@
 .event-toolbar #event-topic-control { margin-left: 0; }
 .event-preview { margin-bottom: 56px; }
 @media(max-width:600px) { .activities-page .page-hero { min-height: auto; } }
+
+/* Sharing is a quiet secondary action beside the return link. */
+.event-album-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.event-share-button { min-height: 36px; padding: 7px 12px; border: 1px solid #badde3; border-radius: 5px; background: #ffffffbf; color: var(--aqua-deep); font: inherit; font-size: 13px; cursor: pointer; }
+.event-share-button:hover { background: white; border-color: var(--aqua-deep); }
+.event-share-button:disabled { opacity: .65; cursor: wait; }
+.event-share-status { margin: 8px 0 0; color: var(--muted); font-size: 12px; }
+.event-share-status:empty { display: none; }
+.event-share-fallback { display: block; margin-top: 10px; color: var(--muted); font-size: 12px; }
+.event-share-fallback input { display: block; width: 100%; margin-top: 5px; padding: 8px; border: 1px solid var(--line); border-radius: 5px; background: white; color: var(--ink); font: inherit; font-size: 16px; }
