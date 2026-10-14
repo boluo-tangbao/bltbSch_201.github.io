@@ -66,7 +66,6 @@ onBeforeUnmount(() => {
       <h1>{{ place.name }}</h1><p class="detail-summary">{{ place.summary }}</p>
       <div class="detail-facts"><span v-if="place.visitedAt"><small>到访</small>{{ place.visitedAt }}</span><span><small>更新</small>{{ place.updatedAt }}</span><span v-if="address"><small>地址</small>{{ address }}</span></div>
       <div v-if="place.tags.length" class="tags detail-tags" aria-label="店铺标签"><span v-for="item in place.tags" :key="item"># {{ item }}</span></div>
-      <nav v-if="address" class="detail-quick-directions" aria-label="直接导航"><a :href="navigationUrl(place, true)!" target="_blank" rel="noopener noreferrer" class="button dark">高德导航 ↗</a><a :href="baiduMapUrl(place)!" target="_blank" rel="noopener noreferrer" class="button">百度地图 ↗</a><a :href="googleMapsUrl(place)!" target="_blank" rel="noopener noreferrer" class="button">Google 地图 ↗</a></nav>
     </header>
     <nav ref="chapterNav" class="detail-chapters" aria-label="地点章节导航">
       <button v-for="chapter in chapters" :key="chapter.key" type="button" :aria-controls="chapterId(chapter.key)" :aria-current="activeChapter === chapter.key ? 'location' : undefined" @click="goToChapter(chapter.key)">{{ chapter.label }}</button>

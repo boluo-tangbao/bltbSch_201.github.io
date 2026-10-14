@@ -3,16 +3,17 @@ import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } fro
 import { resolve, dirname, extname } from 'node:path'
 import { execFileSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
-const root = fileURLToPath(new URL('../', import.meta.url))
+const root = resolve(fileURLToPath(new URL('../', import.meta.url)))
 const out = resolve(root, '_site')
 await prepareActivities()
 if (!existsSync(resolve(root,'rank/dist/index.html'))) throw new Error('请先在 rank/ 运行 npm run build')
+// Normalize the Windows path before Git's ownership check; check inputs before clearing the preview.
+const tracked=execFileSync('git',['-c','safe.directory='+root.replaceAll('\\','/'),'ls-files','-z'],{cwd:root,encoding:'utf8'}).split('\0').filter(Boolean)
 // 每次组装清空旧产物，防止遗留素材或删除的页面继续发布。
 if(out !== resolve(root,'_site')) throw new Error('部署目录越界')
 rmSync(out, { recursive:true, force:true })
 mkdirSync(out,{recursive:true})
 const extensions = new Set(['.html','.css','.js','.png','.jpg','.jpeg','.svg','.webp','.avif','.gif','.pdf','.ico','.woff','.woff2','.txt','.xml'])
-const tracked=execFileSync('git',['-c','safe.directory='+root,'ls-files','-z'],{cwd:root,encoding:'utf8'}).split('\0').filter(Boolean)
 for(const file of tracked) {
  if(/^(rank|scripts|docs|content|data|assets|images|test-results|_site|\.github)\//.test(file)||file.startsWith('.')||(!extensions.has(extname(file))&&file!=='CNAME')||!existsSync(resolve(root,file)))continue
  const target=resolve(out,file);mkdirSync(dirname(target),{recursive:true});cpSync(resolve(root,file),target)

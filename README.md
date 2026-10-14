@@ -68,6 +68,12 @@
 
 完整结构、模板、预览和验证命令见 [活动记录维护](docs/activities.md)。在 rank 构建后，在根目录执行 `node scripts/assemble-site.mjs`、`node scripts/verify-activities.mjs`、`node scripts/preview-site.mjs`。组装不发布约 1.5 GB 的活动原素材，只使用优化后的网页图片与转码视频，并复用增量缓存。
 
+## 榜单视图与常用标签
+
+图片总榜提供“紧凑／舒适”切换，默认保留紧凑图榜；舒适视图使用较大图片和图下店名，手机为两列，城市色框、档内排名、筛选和详情入口一致。浏览器会记住所选视图。
+
+常用标签按“扭蛋、同人、中古、寄售、手办模型、lolita”顺序显示，其他标签在默认折叠的“更多标签”中；榜单与地图页面共用，原始地点标签不变。常用顺序在 `rank/src/components/BrowseFilters.vue` 的 `preferredTags` 维护，视图样式在 `rank/src/browse.css`。地点标签下不再重复显示地图按钮，底部“怎么去”继续提供导航。
+
 ## 开发与验证
 
 使用 **Node.js 24 LTS** 和 npm；CI 使用相同主版本。Vue 3 + TypeScript + Vite，无后端、数据库或账号系统。TypeScript 固定为与 Vue 类型检查器兼容的 5.9.3，依赖锁文件已提交。
