@@ -7,7 +7,7 @@ import assert from 'node:assert/strict'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { previewServer, previewBase } from './preview-site.mjs'
 const require=createRequire(new URL('../rank/package.json',import.meta.url))
-const {chromium}=require('playwright')
+const {chromium,expect}=require('@playwright/test')
 const data=JSON.parse(readFileSync(new URL('../assets/generated/activities/manifest.json',import.meta.url),'utf8'))
 const source=readActivities(), acg=data.filter(e=>e.topic==='acg')
 const photoEvent=data.find(e=>e.media.filter(m=>m.type==='image').length>=2), videoEvent=data.find(e=>e.media.some(m=>m.type==='video'))
@@ -51,7 +51,13 @@ try{
   await page.screenshot({path:resolve('test-results/activities/album-'+width+'.png')});await page.locator('.event-back').click();assert.equal(await page.locator('.event-card').count(),data.filter(e=>e.category===photoEvent.category&&e.year===photoEvent.year).length)
  }
  // 每个分享链接都可直接打开，包含模糊日期与纯视频相册。
- for(const event of data){await page.goto(base+'activities.html#event/'+event.id);await page.locator('#event-album').waitFor({state:'visible'});assert.equal(await page.locator('.event-media').count(),event.media.length)}
+ for(const event of data){
+  await page.goto(base+'activities.html#event/'+event.id);
+  // Hash navigation updates on the next animation frame; an already visible album can still belong to the previous event.
+  await expect(page.locator('#event-album-title')).toHaveText(event.name);
+  await expect(page.locator('#event-album')).toBeVisible();
+  await expect(page.locator('.event-media')).toHaveCount(event.media.length);
+ }
  await page.goto(base+'activities.html#event/'+videoEvent.id);await page.locator('.event-media').nth(videoEvent.media.findIndex(m=>m.type==='video')).click();await page.waitForFunction(()=>document.querySelector('#event-dialog video')?.readyState>=1);assert.ok(await page.locator('video').evaluate(v=>v.duration>0));await page.locator('video').evaluate(v=>v.play());await page.waitForFunction(()=>document.querySelector('video')?.currentTime>.25);await page.locator('#event-close').click();await page.locator('video').waitFor({state:'detached'});assert.equal(await page.locator('video').count(),0)
  await page.goto(base+'activities.html#event/not-found');await page.locator('.event-card').first().waitFor();assert.equal(await page.locator('.event-card').count(),data.length)
  await page.goto(base+'rank/');const link=page.getByRole('link',{name:'活动记录',exact:true});await link.waitFor();await link.click();await page.locator('.event-card').first().waitFor();assert.equal(await page.locator('.event-card').count(),acg.length)
