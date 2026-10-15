@@ -1,7 +1,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
-import { createPlaceSearchIndex, matchPlaces, searchHighlights } from '../src/utils/search.ts'
+import { createPlaceSearchIndex, matchPlaces, searchHighlights, searchTargetId, placeDetailHash, parsePlaceRoute } from '../src/utils/search.ts'
 import { flattenPlaces, filterPlaces } from '../src/utils/model.ts'
 import { validateData, validateShopDirectories } from '../scripts/validate-data.mjs'
 
@@ -73,4 +73,22 @@ test('optional place and shop aliases reject malformed or duplicate entries', ()
     assert.ok(validateData(site, { [city]: [{ ...entry, aliases }] }, []).some(error => error.includes('aliases')))
     assert.ok(validateShopDirectories({ [place.id]: { ...directory, shops: [{ ...shop, aliases }] } }, [place]).some(error => error.includes('aliases')))
   }
+})
+
+test('search targets identify exact visible paragraphs, notes and verified shop aliases', () => {
+  const entry = { ...place, details: '\n\n第一段\n\n **HIPPIHO** 乐器 \n', visitNotes: ['吉他墙'] }
+  const index = createPlaceSearchIndex([entry], { [entry.id]: directory })
+  assert.deepEqual(matchPlaces(index, 'HIPPIHO').get(entry.id).target, { kind: 'paragraph', index: 1 })
+  assert.deepEqual(matchPlaces(index, '吉他墙').get(entry.id).target, { kind: 'note', index: 0 })
+  assert.deepEqual(matchPlaces(index, 'OPEN SHOP').get(entry.id).target, { kind: 'shop', name: '确认店' })
+  assert.deepEqual(matchPlaces(index, entry.name).get(entry.id).target, { kind: 'heading' })
+  assert.notEqual(searchTargetId(entry.id, { kind: 'shop', name: 'A&B' }), searchTargetId(entry.id, { kind: 'shop', name: 'A B' }))
+})
+
+test('explicit search navigation round trips special characters without changing ordinary detail routes', () => {
+  for (const query of ['上海 HIPPIHO', 'A&B + #?', '']) {
+    assert.deepEqual(parsePlaceRoute(placeDetailHash(place.id, query)), { id: place.id, query })
+  }
+  assert.equal(placeDetailHash(place.id), '#/place/' + place.id)
+  for (const hash of ['#/place/', '#place-card-test-place', '#/place/test-place/extra']) assert.equal(parsePlaceRoute(hash), undefined)
 })

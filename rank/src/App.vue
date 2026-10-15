@@ -5,7 +5,7 @@ import placeData from './data/places.json'
 import directoryData from './data/shop-directories.json'
 import updateData from './data/updates.json'
 import type { Place, PlacesByCity, ShopDirectory, Site, Update } from './types'
-import { createPlaceSearchIndex, matchPlaces } from './utils/search'
+import { createPlaceSearchIndex, matchPlaces, parsePlaceRoute, placeDetailHash } from './utils/search'
 import { flattenPlaces, filterPlaces, publicUpdates, recentBadge, tiers } from './utils/model'
 import PlaceCard from './components/PlaceCard.vue'
 import PlaceDetail from './components/PlaceDetail.vue'
@@ -81,8 +81,8 @@ onMounted(() => nextTick(() => {
   else focusBoardCard()
 }))
 const currentPlace = computed(() => {
-  const match = route.value.match(/^#\/place\/([a-z0-9-]+)$/)
-  return match ? all.find(p => p.id === match[1]) : undefined
+  const match = parsePlaceRoute(route.value)
+  return match ? all.find(p => p.id === match.id) : undefined
 })
 const contentDate = [site.updatedAt, ...all.map(p => p.updatedAt), ...updates.map(u => u.date)].filter(Boolean).sort().at(-1) || null
 const rankOf = (p: Place) => all.filter(x => x.tier === p.tier).findIndex(x => x.id === p.id) + 1
@@ -122,7 +122,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
         </div>
         <div v-if="!all.length && !hasFilters" class="empty-intro"><span class="empty-icon" aria-hidden="true">＋</span><div><strong>规划中，还在路上待访问</strong><p>等亲自来，再写~</p></div><span class="empty-pill">待填充</span></div>
         <div v-if="hasFilters && !filtered.length" class="no-results" role="status"><strong>没有找到匹配的条目</strong><span>试试其他关键词、城市或标签。</span><button class="text-button" @click="reset">重置筛选 ↗</button></div>
-        <div v-if="boardSections.length" class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels, 'comfortable-view': boardView === 'comfortable' }"><section v-for="tier in boardSections" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ tier.index + 1 }}</span><h3 :id="`tier-${tier.id}`">{{ tier.label }}</h3><span class="tier-count">{{ tier.places.length }} 个条目</span></div><div class="tier-content"><div v-if="!tier.places.length" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in tier.places" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="`${guideUrl}#/place/${p.id}`" :rank="site.rankWithinTier ? rankOf(p) : undefined" :priority="p.id === firstPhotoId" :comfortable="boardView === 'comfortable'" :badge="recentBadge(p.id, updates, site.recentDays)" /></div></div></section></div>
+        <div v-if="boardSections.length" class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels, 'comfortable-view': boardView === 'comfortable' }"><section v-for="tier in boardSections" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ tier.index + 1 }}</span><h3 :id="`tier-${tier.id}`">{{ tier.label }}</h3><span class="tier-count">{{ tier.places.length }} 个条目</span></div><div class="tier-content"><div v-if="!tier.places.length" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in tier.places" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="`${guideUrl}${placeDetailHash(p.id, query)}`" :rank="site.rankWithinTier ? rankOf(p) : undefined" :priority="p.id === firstPhotoId" :comfortable="boardView === 'comfortable'" :badge="recentBadge(p.id, updates, site.recentDays)" /></div></div></section></div>
         <p v-if="boardSections.length" class="board-caption"><span>推荐度从上到下递减</span><span>{{ site.rankWithinTier ? '同档分先后 · 从左到右，从上到下' : '同档不分先后' }}</span></p>
       </section>
 
@@ -135,7 +135,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
       <Guestbook />
     </template>
 
-    <section v-else-if="currentPlace" class="detail-page"><a :href="`#place-card-${currentPlace.id}`" class="back-link">← 返回榜单</a><a :href="`${guideUrl}#/place/${currentPlace.id}`" class="button">地图与地点目录 ↗</a><PlaceDetail :key="currentPlace.id" :place="currentPlace" :rank="site.rankWithinTier ? rankOf(currentPlace) : undefined" :color="cityColor(currentPlace.city, colors)" /></section>
+    <section v-else-if="currentPlace" class="detail-page"><a :href="`#place-card-${currentPlace.id}`" class="back-link">← 返回榜单</a><a :href="`${guideUrl}#/place/${currentPlace.id}`" class="button">地图与地点目录 ↗</a><PlaceDetail :key="currentPlace.id" :search-query="parsePlaceRoute(route)?.query" :place="currentPlace" :rank="site.rankWithinTier ? rankOf(currentPlace) : undefined" :color="cityColor(currentPlace.city, colors)" /></section>
     <section v-else class="not-found"><p class="eyebrow">这一站暂未收录</p><h1>没有找到这个条目</h1><p>链接可能有误，或条目尚未公开。</p><a href="#/" class="button dark">返回榜单</a></section>
   </main>
   <footer class="site-footer"><span><b>{{ site.author }}</b> · 一店一更新，纯主观感受，你们永远对。</span><VisitCounter /></footer>

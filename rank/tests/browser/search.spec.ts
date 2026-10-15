@@ -1,9 +1,12 @@
 import { test, expect } from '@playwright/test'
 import { mkdirSync, readFileSync } from 'node:fs'
+import { createPlaceSearchIndex, matchPlaces, searchTargetId } from '../../src/utils/search'
 const base = process.env.BROWSE_TEST_BASE || 'http://127.0.0.1:4173/bltbSch_201.github.io/rank/'
 const groups = JSON.parse(readFileSync('src/data/places.json', 'utf8'))
 const places = Object.entries(groups).flatMap(([city, entries]) => (entries as any[]).map(place => ({ ...place, city })))
 const hipp = places.find(place => place.id === 'shanghai-shop-021')
+const directories = JSON.parse(readFileSync('src/data/shop-directories.json', 'utf8'))
+const searchIndex = createPlaceSearchIndex(places, directories)
 mkdirSync('test-results/evidence', { recursive: true })
 
 test('HIPPIHO search identifies the parent place and remains available through detail and return', async ({ page }) => {
@@ -17,6 +20,9 @@ test('HIPPIHO search identifies the parent place and remains available through d
   await expect(page.locator('.active-filters')).toHaveCount(0)
   await card.locator('.card-link').click()
   await expect(page.locator('.selected-detail h1')).toHaveText(hipp.name)
+  const targetId = searchTargetId(hipp.id, matchPlaces(searchIndex, 'hippiho').get(hipp.id)!.target!)
+  await expect(page.locator('[id="' + targetId + '"]')).toBeFocused()
+  await expect(page.locator('[id="' + targetId + '"]')).toBeInViewport()
   await expect(page.getByRole('searchbox')).toHaveValue('hippiho')
   await page.getByRole('link', { name: '返回图片总榜' }).click()
   await expect(page.locator('#place-card-' + hipp.id + ' .card-link')).toBeFocused()
@@ -31,10 +37,41 @@ test('searching a verified shop finds its commercial area and does not change sh
   await expect(card.locator('.photo-caption')).toContainText('动漫星城')
   await expect(card.locator('.search-match, mark')).toHaveCount(0)
   await card.locator('.card-link').click()
+  const shopTarget = page.locator('[id="' + searchTargetId('guangzhou-shop-003', matchPlaces(searchIndex, 'animate').get('guangzhou-shop-003')!.target!) + '"]')
+  await expect(shopTarget).toBeFocused()
+  await expect(shopTarget).toBeInViewport()
   await expect(page.locator('.shop-directory')).toBeVisible()
   const more = page.locator('.shop-directory details')
   await expect(more).not.toHaveAttribute('open')
   await expect(more.locator('.shop-sources').first()).not.toBeVisible()
+})
+
+test('explicit search targets survive reload and support same-place searches without adding excerpts', async ({ page }) => {
+  for (const width of [390, 1440]) {
+    await page.setViewportSize({ width, height: 950 })
+    await page.goto(base + 'guide/?filters=1&q=animate')
+    await page.getByRole('button', { name: '地点列表 · 1', exact: true }).click()
+    await page.locator('.directory-place').click()
+    const targetId = searchTargetId('guangzhou-shop-003', matchPlaces(searchIndex, 'animate').get('guangzhou-shop-003')!.target!)
+    const target = page.locator('[id="' + targetId + '"]')
+    await expect(target).toBeFocused()
+    expect(await target.evaluate(el => el.getBoundingClientRect().top)).toBeGreaterThanOrEqual(70)
+    await page.reload()
+    await expect(target).toBeFocused()
+    await expect(target).toBeInViewport()
+    await expect(page.locator('.shop-directory-more')).not.toHaveAttribute('open')
+    await expect(page.locator('mark, .search-match')).toHaveCount(0)
+    await page.screenshot({ path: `test-results/evidence/search-direct-shop-${width}.png` })
+    await page.getByRole('searchbox').focus()
+    await page.getByRole('button', { name: '地点列表 · 1', exact: true }).click()
+    await page.locator('.directory-place').click()
+    await expect(target).toBeFocused()
+    await page.getByRole('searchbox').fill('BUSHIROAD')
+    await page.getByRole('button', { name: '地点列表 · 1', exact: true }).click()
+    await page.locator('.directory-place').click()
+    const nextId = searchTargetId('guangzhou-shop-003', matchPlaces(searchIndex, 'BUSHIROAD').get('guangzhou-shop-003')!.target!)
+    await expect(page.locator('[id="' + nextId + '"]')).toBeFocused()
+  }
 })
 
 test('keyword, city and tag conditions compose, normalize width and clear without leftover matches', async ({ page }) => {

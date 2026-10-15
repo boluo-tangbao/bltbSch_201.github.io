@@ -2,6 +2,7 @@ import type { Place, Site } from '../types'
 import { tiers } from './model'
 import { assetUrl } from './assets'
 import { cityColor } from './cities'
+import { exportCheckpoint, waitForExport, type ExportTask } from './exportTask'
 
 export type ExportMode = 'compact' | 'review'
 export interface ExportResult { url: string; name: string; width: number; height: number }
@@ -25,12 +26,17 @@ export function wrapText(ctx: CanvasRenderingContext2D, text: string, width: num
 function writeLines(ctx: CanvasRenderingContext2D, lines: string[], x: number, y: number, lineHeight: number) {
   lines.forEach((line, i) => ctx.fillText(line, x, y + i * lineHeight))
 }
-async function loadImage(src: string) {
+async function loadImage(src: string, signal?: AbortSignal) {
+  signal?.throwIfAborted()
   return new Promise<HTMLImageElement>((resolve, reject) => {
     const img = new Image()
-    const timer = setTimeout(() => reject(new Error(`图片加载超时：${src}`)), 15000)
-    img.onload = () => { clearTimeout(timer); resolve(img) }
-    img.onerror = () => { clearTimeout(timer); reject(new Error(`图片加载失败：${src}，请检查素材后重试。`)) }
+    const cleanup = () => { clearTimeout(timer); img.onload = null; img.onerror = null; signal?.removeEventListener('abort', abort) }
+    const fail = (reason: unknown) => { cleanup(); img.src = ''; reject(reason) }
+    const abort = () => fail(signal?.reason)
+    const timer = setTimeout(() => fail(new Error(`图片加载超时：${src}`)), 15000)
+    img.onload = () => { cleanup(); resolve(img) }
+    img.onerror = () => fail(new Error(`图片加载失败：${src}，请检查素材后重试。`))
+    signal?.addEventListener('abort', abort, { once: true })
     img.src = assetUrl(src)
   })
 }
@@ -39,11 +45,18 @@ function cover(ctx: CanvasRenderingContext2D, img: HTMLImageElement, x: number, 
   const sw = w / scale, sh = h / scale
   ctx.drawImage(img, (img.naturalWidth - sw) * position[0] / 100, (img.naturalHeight - sh) * position[1] / 100, sw, sh, x, y, w, h)
 }
-export async function exportRanking(options: { site: Site; places: Place[]; allPlaces: Place[]; mode: ExportMode; scope: string; updatedAt: string | null; websiteUrl: string }) {
-  await document.fonts.ready
+export async function exportRanking(options: { site: Site; places: Place[]; allPlaces: Place[]; mode: ExportMode; scope: string; updatedAt: string | null; websiteUrl: string } & ExportTask) {
+  options.onProgress?.({ stage: '准备字体', completed: 0, total: 0 })
+  await waitForExport(document.fonts.ready, options.signal)
   const { site, places, allPlaces, mode, scope, updatedAt, websiteUrl } = options
   const images = new Map<string, HTMLImageElement>()
-  for (const p of places) if (p.cover && !images.has(p.cover)) images.set(p.cover, await loadImage(p.cover))
+  const paths = [...new Set(places.flatMap(p => p.cover ? [p.cover] : []))]
+  options.onProgress?.({ stage: '加载封面', completed: 0, total: paths.length })
+  for (const path of paths) {
+    images.set(path, await loadImage(path, options.signal))
+    options.onProgress?.({ stage: '加载封面', completed: images.size, total: paths.length })
+    await exportCheckpoint(options)
+  }
   const canvas = document.createElement('canvas')
   canvas.width = WIDTH; canvas.height = MAX_HEIGHT
   const ctx = canvas.getContext('2d')
@@ -85,7 +98,9 @@ export async function exportRanking(options: { site: Site; places: Place[]; allP
   if (current.length) pages.push(current)
   const results: ExportResult[] = []
   try {
+    options.onProgress?.({ stage: '生成图片', completed: 0, total: pages.length })
     for (const [index, page] of pages.entries()) {
+      await exportCheckpoint(options)
       canvas.height = headerHeight + page.reduce((sum, row) => sum + row.height, 0) + footerHeight
       ctx.fillStyle = '#f8f7f3'; ctx.fillRect(0, 0, WIDTH, canvas.height); ctx.textBaseline = 'top'
       ctx.fillStyle = '#b75138'; ctx.font = font(17); ctx.fillText('PLACES & PREFERENCES · 个人体验榜', 48, 28)
@@ -118,10 +133,13 @@ export async function exportRanking(options: { site: Site; places: Place[]; allP
       }
       ctx.fillStyle = '#7b846e'; ctx.font = font(18); ctx.fillText(`个人主观体验 · ${mode === 'compact' ? '简洁排序图' : '短评长图'} · 第 ${index + 1} / ${pages.length} 页`, 48, y + 20)
       ctx.font = font(20); writeLines(ctx, urlLines, 48, y + 48, 25)
-      const blob = await new Promise<Blob>((resolve, reject) => canvas.toBlob(b => b ? resolve(b) : reject(new Error('PNG 生成失败，请重试。')), 'image/png'))
+      const blob = await waitForExport(new Promise<Blob>((resolve, reject) => canvas.toBlob(b => b ? resolve(b) : reject(new Error('PNG 生成失败，请重试。')), 'image/png')), options.signal)
+      options.signal?.throwIfAborted()
       const date = new Date(); const stamp = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`
       results.push({ url: URL.createObjectURL(blob), name: `逛店榜-${stamp}-${mode}-${index + 1}.png`, width: WIDTH, height: canvas.height })
+      options.onProgress?.({ stage: '生成图片', completed: index + 1, total: pages.length })
     }
+    options.signal?.throwIfAborted()
     return results
   } catch (error) { results.forEach(r => URL.revokeObjectURL(r.url)); throw error }
 }

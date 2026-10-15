@@ -2,8 +2,9 @@
 import { computed } from 'vue'
 import type { ShopDirectory } from '../types'
 import { latestSourceDate, shopDisplayStatus, sourcePredatesVisit } from '../utils/shopDirectory'
+import { searchTargetId } from '../utils/search'
 
-const props = defineProps<{ directory: ShopDirectory; visitedAt?: string | null }>()
+const props = defineProps<{ directory: ShopDirectory; visitedAt?: string | null; placeId?: string }>()
 const statusLabel = { open: '营业中', evidence: '有营业线索', closed: '已公布闭店' }
 const shops = computed(() => props.directory.shops.map(shop => {
   const status = shopDisplayStatus(shop)
@@ -30,7 +31,7 @@ const platformLabel = { xiaohongshu: '小红书', douyin: '抖音' }
     <component :is="group.more ? 'details' : 'div'" v-if="group.shops.length" :class="group.more ? 'shop-directory-more' : 'shop-directory-confirmed'">
     <summary v-if="group.more">展开更多（{{ group.shops.length }} 家）<span>营业待核实与历史记录</span></summary>
     <ul class="shop-list">
-      <li v-for="shop in group.shops" :key="shop.name" class="shop-row">
+      <li v-for="shop in group.shops" :id="placeId ? searchTargetId(placeId, { kind: 'shop', name: shop.name }) : undefined" :key="shop.name" class="shop-row" tabindex="-1">
         <div class="shop-row-title"><h3>{{ shop.name }}</h3><span class="shop-status" :class="'is-' + shop.displayStatus">{{ statusLabel[shop.displayStatus] }}</span></div>
         <dl class="shop-facts">
           <template v-if="shop.floor"><dt>位置</dt><dd class="shop-location">{{ shop.floor }}</dd></template>
@@ -66,6 +67,8 @@ const platformLabel = { xiaohongshu: '小红书', douyin: '抖音' }
 .shop-list,.shop-accounts { list-style: none; padding: 0; margin: 0; }
 .shop-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .shop-row { min-width: 0; padding: 16px; border: 1px solid #e5c5cc; background: #fffdfa; }
+.shop-row { scroll-margin-top: 80px; }
+.shop-row:focus { outline: 2px solid #a83750; outline-offset: 3px; }
 .shop-row-title { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
 .shop-row h3 { margin: 0; font-size: 16px; }
 .shop-status { font-size: 11px; padding: 3px 7px; background: #f3eee7; color: #756253; white-space: nowrap; }
