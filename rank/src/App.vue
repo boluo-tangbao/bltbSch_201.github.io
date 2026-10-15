@@ -10,6 +10,7 @@ import { flattenPlaces, filterPlaces, publicUpdates, recentBadge, tiers } from '
 import PlaceCard from './components/PlaceCard.vue'
 import PlaceDetail from './components/PlaceDetail.vue'
 import BrowseFilters from './components/BrowseFilters.vue'
+import ShareFilters from './components/ShareFilters.vue'
 import { cityColor } from './utils/cities'
 import { useStoredFilters } from './utils/filters'
 import ExportPanel from './components/ExportPanel.vue'
@@ -33,7 +34,7 @@ const places = flattenPlaces(placeData as PlacesByCity)
 const searchIndex = createPlaceSearchIndex(places, directoryData as Record<string, ShopDirectory>)
 const all = filterPlaces(places)
 const updates = publicUpdates(updateData as Update[], places)
-const { city, tag, query, reset } = useStoredFilters()
+const { city, tag, query, reset, linkTo } = useStoredFilters()
 const route = ref(location.hash)
 const main = ref<HTMLElement>()
 const exportOpen = ref(false)
@@ -67,7 +68,8 @@ const firstPhotoId = computed(() => tiers.map(tier => filtered.value.find(place 
 const tags = computed(() => [...new Set(all.flatMap(p => p.tags))].sort((a, b) => a.localeCompare(b, 'zh-CN')))
 const cities = [...new Set(all.map(p => p.city))].sort((a, b) => a.localeCompare(b, 'zh-CN'))
 const hasFilters = computed(() => !!city.value || !!tag.value || !!query.value.trim())
-const guideUrl = computed(() => `${import.meta.env.BASE_URL}guide/`)
+const boardSections = computed(() => tiers.map((tier, index) => ({ ...tier, index, places: filtered.value.filter(place => place.tier === tier.id) })).filter(section => !hasFilters.value || section.places.length))
+const guideUrl = computed(() => linkTo(`${import.meta.env.BASE_URL}guide/`))
 const updatesUrl = `${import.meta.env.BASE_URL}updates/`
 function browseBoard() {
   const heading = document.getElementById('board-title')
@@ -90,7 +92,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
 
 <template>
   <a href="#main-content" class="skip-link" @click.prevent="main?.focus()">跳到正文</a>
-  <SiteHeader active="board" />
+  <SiteHeader active="board" :guide-url="guideUrl" />
 
   <main id="main-content" ref="main" tabindex="-1" class="page-shell board-page">
     <template v-if="isHome">
@@ -115,12 +117,13 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
             <button type="button" :aria-pressed="boardView === 'comfortable'" @click="boardView = 'comfortable'">舒适</button>
           </div>
           <label v-if="boardView === 'compact'"><input v-model="showLabels" type="checkbox" />显示名称与城市</label>
+          <ShareFilters :city="city" :tag="tag" :query="query" />
           <span class="board-view-hint">点击卡片查看详情<span v-if="boardView === 'compact'" class="compact-hover-hint"> · 悬停隐藏店名</span><span v-else> · 图片下方显示店名与城市</span></span>
         </div>
         <div v-if="!all.length && !hasFilters" class="empty-intro"><span class="empty-icon" aria-hidden="true">＋</span><div><strong>规划中，还在路上待访问</strong><p>等亲自来，再写~</p></div><span class="empty-pill">待填充</span></div>
         <div v-if="hasFilters && !filtered.length" class="no-results" role="status"><strong>没有找到匹配的条目</strong><span>试试其他关键词、城市或标签。</span><button class="text-button" @click="reset">重置筛选 ↗</button></div>
-        <div class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels, 'comfortable-view': boardView === 'comfortable' }"><section v-for="(tier, index) in tiers" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ index + 1 }}</span><h3 :id="`tier-${tier.id}`">{{ tier.label }}</h3><span class="tier-count">{{ filtered.filter(p => p.tier === tier.id).length }} 个条目</span></div><div class="tier-content"><div v-if="!filtered.some(p => p.tier === tier.id)" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in filtered.filter(p => p.tier === tier.id)" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="`${guideUrl}#/place/${p.id}`" :rank="site.rankWithinTier ? rankOf(p) : undefined" :priority="p.id === firstPhotoId" :comfortable="boardView === 'comfortable'" :badge="recentBadge(p.id, updates, site.recentDays)" :match="searchMatches.get(p.id)" /></div></div></section></div>
-        <p class="board-caption"><span>推荐度从上到下递减</span><span>{{ site.rankWithinTier ? '同档分先后 · 从左到右，从上到下' : '同档不分先后' }}</span></p>
+        <div v-if="boardSections.length" class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels, 'comfortable-view': boardView === 'comfortable' }"><section v-for="tier in boardSections" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ tier.index + 1 }}</span><h3 :id="`tier-${tier.id}`">{{ tier.label }}</h3><span class="tier-count">{{ tier.places.length }} 个条目</span></div><div class="tier-content"><div v-if="!tier.places.length" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in tier.places" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="`${guideUrl}#/place/${p.id}`" :rank="site.rankWithinTier ? rankOf(p) : undefined" :priority="p.id === firstPhotoId" :comfortable="boardView === 'comfortable'" :badge="recentBadge(p.id, updates, site.recentDays)" /></div></div></section></div>
+        <p v-if="boardSections.length" class="board-caption"><span>推荐度从上到下递减</span><span>{{ site.rankWithinTier ? '同档分先后 · 从左到右，从上到下' : '同档不分先后' }}</span></p>
       </section>
 
       <section class="guide-entry" aria-labelledby="guide-entry-title">

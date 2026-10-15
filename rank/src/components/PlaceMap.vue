@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import type { Place } from '../types'
+import AddressActions from './AddressActions.vue'
 import { baiduMapConfigured, escapeMapHtml, geocodeWithBaidu, loadBaiduMaps, pointForPlace, type BaiduPoint } from '../utils/baiduMaps'
 import { baiduMapUrl, cityColor, hasCoordinates, placeAddress } from '../utils/cities'
 
@@ -8,6 +9,8 @@ const props = defineProps<{ places: Place[]; totalPlaces: number; colors: Record
 const emit = defineEmits<{ select: [id: string] }>()
 const groups = computed(() => [...new Set(props.places.filter(place => placeAddress(place)).map(place => place.city))].sort((a, b) => a.localeCompare(b, 'zh-CN')).map(city => ({ city, places: props.places.filter(place => place.city === city && placeAddress(place)) })))
 const total = computed(() => groups.value.reduce((sum, group) => sum + group.places.length, 0))
+const withoutAddress = computed(() => props.places.filter(place => !placeAddress(place)))
+const addressedPlaces = computed(() => props.places.filter(place => placeAddress(place)))
 const selectedCity = ref(''), active = ref(false), locating = ref(''), mapError = ref('')
 const selectedGroup = computed(() => groups.value.find(group => group.city === selectedCity.value))
 const container = ref<HTMLElement>()
@@ -22,7 +25,7 @@ function markerHtml(sequence: number, place: Place, selected = false) {
 function labelStyle() { return { border: '0', padding: '0', background: 'transparent', cursor: 'pointer' } }
 
 async function refresh() {
-  if (!map || !api) return
+  if (!map || !api || mapError.value) return
   const current = ++revision
   locating.value = ''; mapError.value = ''; map.clearOverlays(); markers.clear()
   try {
@@ -30,7 +33,7 @@ async function refresh() {
     else await renderCities(current)
   } catch (error) {
     console.error('[BaiduMap] 全榜地图刷新失败', error)
-    mapError.value = error instanceof Error ? error.message : '百度地图暂时无法加载'
+    if (current === revision) mapError.value = '地图暂时无法显示'
   }
 }
 
@@ -93,6 +96,7 @@ function addPlaceMarker(place: Place, point: BaiduPoint, sequence: number) {
 }
 
 function focusSelected() {
+  if (!map) return
   for (const [id, marker] of markers) marker.overlay.setContent(markerHtml(marker.sequence, marker.place, id === props.selectedId))
   const marker = props.selectedId ? markers.get(props.selectedId) : undefined
   if (marker) map.panTo(marker.point)
@@ -101,9 +105,11 @@ function focusSelected() {
 async function activate() {
   active.value = true; mapError.value = ''; await nextTick()
   if (!container.value || map) return
-  if (!baiduMapConfigured()) { mapError.value = '百度地图尚未配置，请设置站点 AK'; return }
+  if (!baiduMapConfigured()) { mapError.value = '地图暂时无法显示'; return }
+  const current = ++revision
   try {
     api = await loadBaiduMaps()
+    if (current !== revision || !container.value) return
     map = new api.Map(container.value, { enableMapClick: false })
     map.enableScrollWheelZoom(true)
     map.addControl(new api.ScaleControl({ anchor: 2 }))
@@ -111,13 +117,15 @@ async function activate() {
     await refresh()
   } catch (error) {
     console.error('[BaiduMap] 全榜地图加载失败', error)
-    mapError.value = error instanceof Error ? error.message : '百度地图暂时无法加载'
+    if (current === revision) mapError.value = '地图暂时无法显示'
   }
 }
 
 async function retry() { revision++; map?.destroy?.(); map = undefined; api = undefined; await activate() }
 watch(() => props.places, () => {
   if (selectedCity.value && !groups.value.some(group => group.city === selectedCity.value)) selectedCity.value = ''
+  if (!total.value) { revision++; map?.destroy?.(); map = undefined; active.value = false; mapError.value = ''; return }
+  if (active.value && !map && !mapError.value) { void activate(); return }
   void refresh()
 })
 watch(() => props.selectedId, id => {
@@ -131,9 +139,23 @@ onBeforeUnmount(() => { revision++; map?.destroy?.() })
   <section class="map-section atlas-map" aria-labelledby="atlas-title">
     <header class="atlas-heading"><div><p class="section-label">PLACE ATLAS</p><div class="mascot-title"><h2 id="atlas-title">从全国，到一座城</h2><slot name="mascot" /></div><p>先选城市，再按地图序号选择店铺。</p></div><div class="atlas-count"><strong>{{ total }}</strong><span>个地址<br />{{ groups.length }} 座城市</span></div></header>
     <div class="map-toolbar"><div class="map-breadcrumb"><button :aria-current="!selectedCity || undefined" @click="countryView">中国</button><span>›</span><b>{{ selectedCity || '选择城市' }}</b></div><span v-if="locating">{{ locating }}</span><button v-if="active && selectedCity" class="text-button" @click="countryView">返回全国</button></div>
-    <div v-if="!active" class="map-welcome"><h3>{{ total ? '打开地点地图' : props.totalPlaces ? '没有匹配的地点' : '下一站，等你来标记' }}</h3><p>{{ total ? `当前筛选包含 ${groups.length} 座城市的 ${total} 个地址。` : props.totalPlaces ? '试试其他城市、关键词或标签。' : '暂时没有已填写的位置。' }}</p><button v-if="total" class="button dark" @click="activate">加载百度分层地图</button><small v-if="total">访客无需登录；全国层显示城市，城市层显示店铺序号。</small></div>
-    <template v-else><div class="city-map-tabs"><button v-for="group in groups" :key="group.city" :aria-pressed="selectedCity === group.city" @click="cityView(group.city)"><i :style="{ background: cityColor(group.city, colors) }"></i>{{ group.city }}<small>{{ group.places.length }}</small></button></div><div ref="container" class="place-map atlas-map-canvas" :aria-label="selectedCity ? `${selectedCity} 百度店铺地图` : '百度中国城市分布地图'"></div><div v-if="selectedGroup" class="city-place-list"><button v-for="(place, index) in selectedGroup.places" :key="place.id" :aria-current="selectedId === place.id || undefined" :aria-label="`${index + 1}号地点：${place.name}`" @click="$emit('select', place.id)"><i class="place-sequence" :style="{ background: cityColor(place.city, colors) }">{{ index + 1 }}</i><span><strong>{{ place.name }}</strong><small>{{ placeAddress(place) }}</small></span><b>→</b></button></div></template>
-    <div v-if="active && !total" class="map-notice" role="status">当前筛选没有可显示的地点。</div>
-    <div v-if="mapError" class="map-notice" role="status">{{ mapError }}<button v-if="baiduMapConfigured()" class="text-button" @click="retry">重试</button></div>
+    <div v-if="!active" class="map-welcome" :class="{ 'is-empty': !total }"><h3>{{ total ? '打开地点地图' : places.length ? '匹配地点暂无地址' : props.totalPlaces ? '没有匹配的地点' : '下一站，等你来标记' }}</h3><p>{{ total ? `当前筛选匹配 ${places.length} 处地点，其中 ${total} 处有地址。` : places.length ? `已找到 ${places.length} 处地点，暂未填写可导航的地址。` : props.totalPlaces ? '试试其他城市、关键词或标签。' : '暂时没有收录地点。' }}</p><button v-if="total" class="button dark" @click="activate">加载百度分层地图</button></div>
+    <template v-else-if="!mapError"><div class="city-map-tabs"><button v-for="group in groups" :key="group.city" :aria-pressed="selectedCity === group.city" @click="cityView(group.city)"><i :style="{ background: cityColor(group.city, colors) }"></i>{{ group.city }}<small>{{ group.places.length }}</small></button></div><div ref="container" class="place-map atlas-map-canvas" :aria-label="selectedCity ? `${selectedCity} 百度店铺地图` : '百度中国城市分布地图'"></div><div v-if="selectedGroup" class="city-place-list"><button v-for="(place, index) in selectedGroup.places" :key="place.id" :aria-current="selectedId === place.id || undefined" :aria-label="`${index + 1}号地点：${place.name}`" @click="$emit('select', place.id)"><i class="place-sequence" :style="{ background: cityColor(place.city, colors) }">{{ index + 1 }}</i><span><strong>{{ place.name }}</strong><small>{{ placeAddress(place) }}</small></span><b>→</b></button></div></template>
+    <div v-if="withoutAddress.length" class="map-missing-address" role="status"><span>暂无地址 · {{ withoutAddress.length }} 处</span><button v-for="place in withoutAddress" :key="place.id" type="button" @click="$emit('select', place.id)">{{ place.name }} →</button></div>
+    <section v-if="mapError" class="map-address-fallback" aria-label="地址与导航">
+      <p class="map-notice" role="status">{{ mapError }}<button v-if="baiduMapConfigured()" class="text-button" @click="retry">重试</button></p>
+      <ul><li v-for="place in addressedPlaces" :key="place.id"><h3>{{ place.name }}</h3><p>{{ placeAddress(place) }}</p><AddressActions :place="place" /></li></ul>
+    </section>
   </section>
 </template>
+
+<style scoped>
+.atlas-map .map-welcome.is-empty { min-height: 0; padding: 24px 18px; }
+.map-missing-address { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 12px 16px; border-top: 1px solid #dfb8c3; color: #76515d; font-size: 12px; }
+.map-missing-address button { min-height: 44px; padding: 6px 10px; border: 1px solid #d5a5b2; border-radius: 4px; color: #84394e; background: #fffaf1; font: inherit; }
+.map-address-fallback ul { list-style: none; margin: 0; padding: 0 16px; max-height: 460px; overflow-y: auto; }
+.map-address-fallback li { padding: 16px 0; }
+.map-address-fallback li + li { border-top: 1px solid #dfb8c3; }
+.map-address-fallback h3 { font-size: 15px; }
+.map-address-fallback li > p { margin: 6px 0 12px; color: #76515d; font-size: 12px; overflow-wrap: anywhere; }
+</style>

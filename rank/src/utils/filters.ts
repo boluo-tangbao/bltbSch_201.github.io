@@ -1,4 +1,5 @@
-import { ref, watch, type Ref } from 'vue'
+import { onBeforeUnmount, ref, watch } from 'vue'
+import { filtersFromSearch, urlWithFilters } from './filterLinks'
 
 type SavedFilters = { city?: string; tag?: string; query?: string }
 const key = 'tangbao-rank-filters-v1'
@@ -10,10 +11,30 @@ function read(): Required<SavedFilters> {
   } catch { return { city: '', tag: '', query: '' } }
 }
 
-export function useStoredFilters(): { city: Ref<string>; tag: Ref<string>; query: Ref<string>; reset: () => void } {
-  const saved = read(), city = ref(saved.city), tag = ref(saved.tag), query = ref(saved.query)
+export function useStoredFilters() {
+  const fromUrl = filtersFromSearch(location.search)
+  const urlMode = ref(fromUrl !== null)
+  const saved = fromUrl ?? read(), city = ref(saved.city), tag = ref(saved.tag), query = ref(saved.query)
   watch([city, tag, query], () => {
-    try { localStorage.setItem(key, JSON.stringify({ city: city.value, tag: tag.value, query: query.value })) } catch {}
-  })
-  return { city, tag, query, reset: () => { city.value = ''; tag.value = ''; query.value = '' } }
+    const filters = { city: city.value, tag: tag.value, query: query.value }
+    try { localStorage.setItem(key, JSON.stringify(filters)) } catch {}
+    if (urlMode.value) {
+      const href = urlWithFilters(location.href, filters)
+      if (href !== location.href) history.replaceState(history.state, '', href)
+    }
+  }, { immediate: true })
+  function restore() {
+    const filters = filtersFromSearch(location.search)
+    urlMode.value = filters !== null
+    const value = filters ?? read()
+    city.value = value.city; tag.value = value.tag; query.value = value.query
+  }
+  window.addEventListener('popstate', restore)
+  onBeforeUnmount(() => window.removeEventListener('popstate', restore))
+  function linkTo(path: string) {
+    if (!urlMode.value) return path
+    const url = new URL(urlWithFilters(new URL(path, location.href).href, { city: city.value, tag: tag.value, query: query.value }))
+    return `${url.pathname}${url.search}${url.hash}`
+  }
+  return { city, tag, query, linkTo, reset: () => { city.value = ''; tag.value = ''; query.value = '' } }
 }

@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import BrandEmblem from './BrandEmblem.vue'
 
-const props = defineProps<{ active: 'board' | 'guide' | 'qa' | 'updates' }>()
+const props = defineProps<{ active: 'board' | 'guide' | 'qa' | 'updates'; boardUrl?: string; guideUrl?: string }>()
 const base = import.meta.env.BASE_URL
-const boardHref = props.active === 'board' ? '#/' : base
-const guideHref = props.active === 'guide' ? '#/' : `${base}guide/`
+const boardHref = computed(() => props.active === 'board' ? '#/' : props.boardUrl || base)
+const guideHref = computed(() => props.active === 'guide' ? '#/' : props.guideUrl || `${base}guide/`)
 const qaHref = `${base}qa/`
 const homeHref = `${base}../`
 </script>

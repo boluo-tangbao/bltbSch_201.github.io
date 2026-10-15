@@ -5,11 +5,11 @@ import placeData from './data/places.json'
 import directoryData from './data/shop-directories.json'
 import type { Place, PlacesByCity, ShopDirectory, Site } from './types'
 import { createPlaceSearchIndex, matchPlaces } from './utils/search'
-import SearchMatch from './components/SearchMatch.vue'
 import { flattenPlaces, filterPlaces, tierLabel, tiers } from './utils/model'
 import { cityColor } from './utils/cities'
 import { useStoredFilters } from './utils/filters'
 import BrowseFilters from './components/BrowseFilters.vue'
+import ShareFilters from './components/ShareFilters.vue'
 import PlaceMap from './components/PlaceMap.vue'
 import PlaceDetail from './components/PlaceDetail.vue'
 import VisitCounter from './components/VisitCounter.vue'
@@ -18,7 +18,7 @@ import MascotMoments from './components/MascotMoments.vue'
 const site = siteData as Site, all = filterPlaces(flattenPlaces(placeData as PlacesByCity))
 const searchIndex = createPlaceSearchIndex(all, directoryData as Record<string, ShopDirectory>)
 const colors = site.cityColors || {}, base = import.meta.env.BASE_URL
-const { city, tag, query, reset } = useStoredFilters()
+const { city, tag, query, reset, linkTo } = useStoredFilters()
 const route = ref(location.hash)
 const guideView = ref<'map' | 'list'>('map')
 const main = ref<HTMLElement>(), detailContainer = ref<HTMLElement>()
@@ -40,7 +40,7 @@ onMounted(() => {
   })
 })
 const rankOf = (p: Place) => all.filter(x => x.tier === p.tier).findIndex(x => x.id === p.id) + 1
-const boardUrl = computed(() => selected.value ? `${base}#place-card-${selected.value.id}` : base)
+const boardUrl = computed(() => linkTo(selected.value ? `${base}#place-card-${selected.value.id}` : base))
 function sync() {
   route.value = location.hash
   if (route.value.match(/^#\/place\//)) nextTick(() => {
@@ -56,17 +56,17 @@ function tierColor(p: Place) { return tiers.find(t => t.id === p.tier)?.color ||
 </script>
 <template>
   <a href="#guide-main" class="skip-link" @click.prevent="main?.focus()">跳到正文</a>
-  <SiteHeader active="guide" />
+  <SiteHeader active="guide" :board-url="linkTo(base)" />
   <main ref="main" id="guide-main" tabindex="-1" class="page-shell guide-page" :class="{ 'guide-map-view': guideView === 'map' }">
     <div class="guide-hero compact-map-hero"><div class="map-hero-line"><h1>去哪逛？</h1><p>挑个城市，开逛～</p><a :href="boardUrl" class="button" aria-label="回到图片总榜">← 总榜</a></div><MascotMoments class="mascot-embedded mascot-inline" priority :ids="['aqua', 'emilia']" rotate-all label="地图手记角色" /></div>
     <div class="filter-bar"><label class="city-filter"><span class="sr-only">城市筛选</span><select v-model="city" aria-label="城市筛选"><option value="">全部城市</option><option v-if="city && !cities.includes(city)" :value="city">{{ city }}（暂无条目）</option><option v-for="c in cities" :key="c">{{ c }}</option></select></label><label class="search-filter"><input v-model="query" type="search" aria-label="关键词搜索" placeholder="搜索店名、城市或标签…" /></label><div class="filter-result"><span role="status">{{ filtered.length }} 个结果</span><button class="text-button" :disabled="!city && !tag && !query.trim()" @click="reset">重置</button></div></div>
     <BrowseFilters :cities="cities" :colors="colors" :tags="tags" :city="city" :tag="tag" :query="query" @city="city = $event" @tag="tag = $event" @query="query = $event" />
-    <nav class="guide-view-switch" aria-label="地图与地点列表切换"><button type="button" :aria-pressed="guideView === 'map'" aria-controls="guide-atlas" @click="guideView = 'map'">地图</button><button type="button" :aria-pressed="guideView === 'list'" aria-controls="guide-directory" @click="guideView = 'list'">地点列表 · {{ filtered.length }}</button></nav>
+    <div class="guide-browse-actions"><nav class="guide-view-switch" aria-label="地图与地点列表切换"><button type="button" :aria-pressed="guideView === 'map'" aria-controls="guide-atlas" @click="guideView = 'map'">地图</button><button type="button" :aria-pressed="guideView === 'list'" aria-controls="guide-directory" @click="guideView = 'list'">地点列表 · {{ filtered.length }}</button></nav><ShareFilters :city="city" :tag="tag" :query="query" /></div>
     <div v-show="guideView === 'map'" id="guide-atlas" class="guide-map-panel">
       <PlaceMap :places="filtered" :total-places="all.length" :colors="colors" :selected-id="filtered.some(p => p.id === selected?.id) ? selected?.id : undefined" @select="select" />
     </div>
     <div class="guide-layout">
-      <aside id="guide-directory" class="place-directory" aria-label="地点目录"><div class="directory-heading"><h2>地点目录</h2><span>{{ filtered.length }}</span></div><div v-if="!filtered.length" class="directory-empty"><p>{{ all.length ? '没有找到匹配的条目' : '还没有收录店铺' }}</p><small>{{ all.length ? '换个关键词、城市或标签，或重置筛选。' : '第一条体验发布后，就能从这里直接查看。' }}</small><button v-if="city || tag || query.trim()" class="text-button" @click="reset">重置筛选</button></div><div v-else class="directory-groups"><details v-for="section in citySections" :key="section.city" class="directory-city-group" :open="!!query.trim()"><summary><i class="city-dot" :style="{ background: cityColor(section.city, colors) }"></i>{{ section.city }}<span class="directory-city-count">{{ section.places.length }} 家</span></summary><nav :aria-label="section.city + ' 店铺目录'"><a v-for="p in section.places" :key="p.id" class="directory-place" :href="'#/place/' + p.id" :aria-current="selected?.id === p.id ? 'page' : undefined" :style="{ '--city-color': cityColor(p.city, colors), '--tier-color': tierColor(p) }"><span class="directory-rank">{{ tierLabel(p.tier) }}<small v-if="site.rankWithinTier">#{{ rankOf(p) }}</small></span><span class="directory-copy"><strong>{{ p.name }}</strong><SearchMatch v-if="searchMatches.has(p.id)" :match="searchMatches.get(p.id)!" /></span></a></nav></details></div></aside>
+      <aside id="guide-directory" class="place-directory" aria-label="地点目录"><div class="directory-heading"><h2>地点目录</h2><span>{{ filtered.length }}</span></div><div v-if="!filtered.length" class="directory-empty"><p>{{ all.length ? '没有找到匹配的条目' : '还没有收录店铺' }}</p><small>{{ all.length ? '换个关键词、城市或标签，或重置筛选。' : '第一条体验发布后，就能从这里直接查看。' }}</small><button v-if="city || tag || query.trim()" class="text-button" @click="reset">重置筛选</button></div><div v-else class="directory-groups"><details v-for="section in citySections" :key="section.city" class="directory-city-group" :open="!!query.trim()"><summary><i class="city-dot" :style="{ background: cityColor(section.city, colors) }"></i>{{ section.city }}<span class="directory-city-count">{{ section.places.length }} 家</span></summary><nav :aria-label="section.city + ' 店铺目录'"><a v-for="p in section.places" :key="p.id" class="directory-place" :href="'#/place/' + p.id" :aria-current="selected?.id === p.id ? 'page' : undefined" :style="{ '--city-color': cityColor(p.city, colors), '--tier-color': tierColor(p) }"><span class="directory-rank">{{ tierLabel(p.tier) }}<small v-if="site.rankWithinTier">#{{ rankOf(p) }}</small></span><span class="directory-copy"><strong>{{ p.name }}</strong></span></a></nav></details></div></aside>
       <div class="guide-main-column">
         <section ref="detailContainer" tabindex="-1" class="selected-detail" :class="{ 'is-awaiting-place': isIndex && !selected }" aria-label="当前地点介绍">
           <template v-if="selected"><p v-if="!filtered.some(p => p.id === selected!.id)" class="map-notice">当前查看的地点不在筛选结果中。<button class="text-button" @click="reset">显示全部地点</button></p><div class="detail-navigation"><a :href="boardUrl">← 返回图片总榜</a><a href="#/">关闭介绍 ×</a></div><PlaceDetail :key="selected.id" :place="selected" :rank="site.rankWithinTier ? rankOf(selected) : undefined" :color="cityColor(selected.city, colors)" /></template>
@@ -80,6 +80,6 @@ function tierColor(p: Place) { return tiers.find(t => t.id === p.tier)?.color ||
 </template>
 
 <style scoped>
-.directory-copy:has(.search-match) { display: block; }
-.directory-copy:has(.search-match) > strong { white-space: normal; overflow-wrap: anywhere; }
+.guide-browse-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 0 16px; }
+.guide-browse-actions .guide-view-switch { flex: 1; min-width: 0; margin: 0; }
 </style>

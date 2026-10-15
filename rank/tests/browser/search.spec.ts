@@ -13,8 +13,8 @@ test('HIPPIHO search identifies the parent place and remains available through d
   await expect(page.locator('.place-card')).toHaveCount(1)
   const card = page.locator('#place-card-' + hipp.id)
   await expect(card.locator('.photo-caption')).toContainText(hipp.name)
-  await expect(card.locator('.search-match small')).toHaveText('介绍提及')
-  await expect(card.locator('.search-match mark')).toHaveText('HIPPIHO')
+  await expect(card.locator('.search-match, mark')).toHaveCount(0)
+  await expect(page.locator('.active-filters')).toHaveCount(0)
   await card.locator('.card-link').click()
   await expect(page.locator('.selected-detail h1')).toHaveText(hipp.name)
   await expect(page.getByRole('searchbox')).toHaveValue('hippiho')
@@ -29,8 +29,7 @@ test('searching a verified shop finds its commercial area and does not change sh
   const card = page.locator('#place-card-guangzhou-shop-003')
   await expect(page.locator('.place-card')).toHaveCount(1)
   await expect(card.locator('.photo-caption')).toContainText('动漫星城')
-  await expect(card.locator('.search-match small')).toHaveText('店铺一览')
-  await expect(card.locator('.search-match')).toContainText('animate 广州店')
+  await expect(card.locator('.search-match, mark')).toHaveCount(0)
   await card.locator('.card-link').click()
   await expect(page.locator('.shop-directory')).toBeVisible()
   const more = page.locator('.shop-directory details')
@@ -68,7 +67,7 @@ test('guide search opens the matching city group and keeps map and directory res
   await expect(page.locator('.directory-city-group')).toHaveAttribute('open', '')
   await expect(page.locator('.directory-place')).toHaveCount(1)
   await expect(page.locator('.directory-place')).toContainText(hipp.name)
-  await expect(page.locator('.directory-place .search-match mark')).toHaveText('HIPPIHO')
+  await expect(page.locator('.directory-place .search-match, .directory-place mark')).toHaveCount(0)
   await page.screenshot({ path: 'test-results/evidence/search-mobile-guide.png' })
   await page.getByRole('button', { name: '地图', exact: true }).click()
   await expect(page.locator('.atlas-count strong')).toHaveText('0')
@@ -85,13 +84,13 @@ test('guide search opens the matching city group and keeps map and directory res
   await expect(page.locator('.directory-place')).toHaveCount(1)
 })
 
-test('search annotations fit mobile and desktop cards without altering the rank order', async ({ page }) => {
+test('search results remain plain cards and preserve rank order across viewports', async ({ page }) => {
   await page.goto(base)
   await page.getByRole('searchbox').fill('少女乐队')
   const order = await page.locator('.place-card').evaluateAll(cards => cards.map(card => card.id))
   for (const width of [320, 390, 1440]) {
     await page.setViewportSize({ width, height: 950 })
-    for (const match of await page.locator('.search-match').all()) expect(await match.evaluate(el => el.scrollWidth <= el.clientWidth)).toBe(true)
+    await expect(page.locator('.place-card .search-match, .place-card mark')).toHaveCount(0)
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
     expect(await page.locator('.place-card').evaluateAll(cards => cards.map(card => card.id))).toEqual(order)
   }
