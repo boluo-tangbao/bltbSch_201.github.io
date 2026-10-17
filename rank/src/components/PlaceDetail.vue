@@ -6,6 +6,7 @@ import { baiduMapUrl, googleMapsUrl, navigationUrl, placeAddress } from '../util
 import AddressMap from './AddressMap.vue'
 import PlaceGallery from './PlaceGallery.vue'
 import ShopDirectory from './ShopDirectory.vue'
+import BilibiliClips from './BilibiliClips.vue'
 import shopDirectories from '../data/shop-directories.json'
 import type { ShopDirectory as ShopDirectoryData } from '../types'
 import { parseRichText, richTextClasses } from '../utils/richText'
@@ -105,6 +106,7 @@ onBeforeUnmount(() => {
         <ul class="detail-visit-list"><li v-for="(note, index) in visitNotes" :id="targetId({ kind: 'note', index })" :key="index" tabindex="-1"><span class="detail-visit-mark" aria-hidden="true">↗</span><p><template v-for="(part, partIndex) in note" :key="partIndex"><strong v-if="part.strong" :class="richTextClasses(part)">{{ part.text }}</strong><span v-else :class="richTextClasses(part)">{{ part.text }}</span></template></p></li></ul>
       </aside>
     </section>
+    <BilibiliClips :key="place.id" :place-id="place.id" :place-name="place.name" />
     <ShopDirectory v-if="shopDirectory" :id="chapterId('shops')" class="detail-chapter" :place-id="place.id" :directory="shopDirectory" :visited-at="place.visitedAt" />
     <div v-if="place.gallery.length" :id="chapterId('gallery')" class="detail-chapter"><PlaceGallery :images="place.gallery" :color="color" /></div>
     <section v-if="address" :id="chapterId('nearby')" class="place-mini-map detail-chapter" aria-labelledby="nearby-map-heading">

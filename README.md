@@ -24,6 +24,7 @@
 | 项目目录、原件、生成副本与清理方法 | [本地文件结构](本地文件结构.md) |
 | 填写店铺、图集、地图和更新记录 | [城市归档填写指南](docs/city-data.md) |
 | 添加活动和维护相册 | [活动记录维护](docs/activities.md) |
+| 接入 B 站视频、章节定位与手动加载 | [B 站章节播放器实施说明](docs/bilibili-chapters.md) |
 | 店铺营业分类与原始依据保留要求 | [店铺一览固定维护规则](docs/shop-directory-rules.md) |
 | 地图配置与 AK 使用 | [百度地图接入](docs/baidu-map-security.md) |
 | 访问统计、建议和留言管理 | [社区功能说明](docs/community.md) |

@@ -1,6 +1,7 @@
 import { readFileSync, existsSync, statSync } from 'node:fs'
 import { resolve, relative, isAbsolute, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { validateBilibiliCatalog } from '../src/utils/bilibili.ts'
 
 const TIERS = ['hang', 'top', 'above', 'npc', 'bad']
 function validAliases(aliases) {
@@ -197,7 +198,7 @@ export function validateShopDirectories(directories, places) {
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const root = fileURLToPath(new URL('../', import.meta.url)), data = {}
   try {
-    for (const name of ['site', 'places', 'updates', 'shop-directories']) {
+    for (const name of ['site', 'places', 'updates', 'shop-directories', 'bilibili-videos']) {
       try { data[name] = JSON.parse(readFileSync(resolve(root, `src/data/${name}.json`), 'utf8')) }
       catch (error) { throw new Error(`${name}.json 无法解析：${error.message}`) }
     }
@@ -206,6 +207,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       const target = resolve(publicRoot, path), rel = relative(publicRoot, target)
       return !rel.startsWith('..') && !isAbsolute(rel) && existsSync(target) && statSync(target).isFile() && !!extname(target)
     }, data['shop-directories'])
+    errors.push(...validateBilibiliCatalog(data['bilibili-videos'], Object.values(data.places).flat().map(p => p.id)))
     if (errors.length) throw new Error(errors.join('\n'))
     console.log(`数据校验通过：${Object.values(data.places).reduce((n, entries) => n + entries.length, 0)} 个条目，${data.updates.length} 条更新。`)
   } catch (error) { console.error(error.message); process.exitCode = 1 }
