@@ -1,0 +1,206 @@
+{
+  "placeId": "shanghai-shop-003",
+  "readAt": "2026-10-18",
+  "confirmedVisible": [
+    {
+      "name": "CAPCOM STORE CHINA 喀普康中心",
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "CAPCOM卡普空中心",
+          "handle": "9685517887",
+          "url": "https://www.xiaohongshu.com/user/profile/6481e8f2000000001001fb99",
+          "scope": "store"
+        }
+      ],
+      "evidence": [
+        {
+          "label": "CAPCOM 官网当前门店目录（上海店）",
+          "url": "https://www.capcom.co.jp/amusement/brands/capcomstore/"
+        }
+      ],
+      "note": "CAPCOM 当前官网门店目录列出上海新世界城四楼 B08；小红书门店号发布上海中心上新与2025新年活动。具体到货以本店公告为准。"
+    },
+    {
+      "name": "矿也 MiNE",
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "矿也MiNE",
+          "handle": "KuangYeMiNE",
+          "url": "https://www.xiaohongshu.com/user/profile/65315a79000000002a034608",
+          "scope": "brand"
+        }
+      ],
+      "evidence": [
+        {
+          "label": "上海新世界城官方微博（矿也门店上新）",
+          "url": "https://www.sina.cn/media/2210057511",
+          "date": "2026-10-10"
+        },
+        {
+          "label": "矿也MiNE品牌号·绵绵玛咻线下首发与门店地址",
+          "url": "https://www.xiaohongshu.com/explore/6aca0e1f000000000a020a9f",
+          "dateLabel": "页面显示“编辑于7天前”（2026-10-18核对，未换算具体发帖日期）"
+        }
+      ],
+      "note": "商场官方2026年10月10日公告列出新世界城四楼门店；另核对矿也MiNE品牌号，近期绵绵玛咻上新帖明确列本店四层地址。首发及库存以当日门店为准。"
+    },
+    {
+      "name": "SNK 中心",
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "SNK中心-官方授权店",
+          "handle": "18951356220",
+          "url": "https://www.xiaohongshu.com/user/profile/683d176c000000001d017a7d",
+          "scope": "store"
+        }
+      ],
+      "evidence": [
+        {
+          "label": "SNK 中心官方授权店·国庆新品上架与门店地址",
+          "url": "https://www.xiaohongshu.com/explore/68db55be000000000402244c",
+          "date": "2025-09-29"
+        },
+        {
+          "label": "SNK 官方上海门店预告",
+          "url": "https://www.snkchina.com.cn/general/news/20250728/60112.html",
+          "date": "2025-07-21"
+        }
+      ],
+      "note": "已核对小红书官方授权店账号；2025年9月29日实际上新帖写明新世界城四楼 SNK 中心，补足此前只有开店预告的证据。"
+    },
+    {
+      "name": "三丽鸥 Sanrio Gift Gate",
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "三丽鸥新世界城1",
+          "handle": "63575637441",
+          "url": "https://www.xiaohongshu.com/user/profile/561329f23f95a3652527ff53",
+          "scope": "store"
+        }
+      ],
+      "evidence": [
+        {
+          "label": "三丽鸥官网当前线下门店目录·上海新世界商场",
+          "url": "https://www.sanrio.com.cn/store.html"
+        },
+        {
+          "label": "三丽鸥新世界城门店经营号·当前地址与上新主页",
+          "url": "https://www.xiaohongshu.com/user/profile/561329f23f95a3652527ff53",
+          "dateLabel": "当前主页未标发布日期，2026-10-18读取；身份及地址与官网店单核对"
+        }
+      ],
+      "note": "当前官网目录确认本店；另核对“三丽鸥新世界城1”门店经营号，简介明确南京西路2—68号新世界城四楼，主页有店铺日常和新品上新。具体商品以当日门店为准。"
+    },
+    {
+      "name": "谷力全开（新世界城店）",
+      "accounts": [
+        {
+          "platform": "douyin",
+          "name": "上海谷力全开谷子店",
+          "handle": "82429591376",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAn0KtLk4JJrIvB7f_zu_rO85cP_h7uOOx4BsrhYeZy0lDiZigPBbaMBgzb4_-RbGQ",
+          "scope": "brand"
+        }
+      ],
+      "evidence": [
+        {
+          "label": "谷力全开本人·当前分店简介",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAn0KtLk4JJrIvB7f_zu_rO85cP_h7uOOx4BsrhYeZy0lDiZigPBbaMBgzb4_-RbGQ",
+          "dateLabel": "当前主页未标发布日期，2026-10-18读取"
+        },
+        {
+          "label": "谷力全开本人·新世界城路线指引",
+          "url": "https://www.douyin.com/video/7523190582504983843",
+          "date": "2025-07-04"
+        },
+        {
+          "label": "谷力全开本人·开业地址4A21（主页已读正文）",
+          "url": "https://www.douyin.com/video/7520564859622559028",
+          "dateLabel": "未独立取得发布日期，2026-10-18读取主页作品正文"
+        },
+        {
+          "label": "谷力全开本人·凹凸世界十周年新世界城首发（往期经营依据）",
+          "url": "https://www.douyin.com/note/7652344844216961204",
+          "dateLabel": "正文写开售时间2026-06-18；未取得发帖日期"
+        }
+      ],
+      "note": "本人账号当前简介列人民广场新世界城四楼；开业指引写明4A21，2026年经营内容也明确本店。账号同时服务五角场店，不把另一分店货品直接套用于本店；旧“鸣潮餐厅旁”仅是当时路引。"
+    },
+    {
+      "name": "無限萌界（新世界城店）",
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "無限萌界_新世界城",
+          "handle": "7097281814",
+          "url": "https://www.xiaohongshu.com/user/profile/65570708000000000802c1a5",
+          "scope": "store"
+        }
+      ],
+      "evidence": [
+        {
+          "label": "無限萌界本人·八楼地址、试营业与餐饮经营主页",
+          "url": "https://www.xiaohongshu.com/user/profile/65570708000000000802c1a5",
+          "dateLabel": "当前主页未标发布日期；当值表写10.17～10.23，2026-10-18读取，不补造年份"
+        }
+      ],
+      "note": "门店本人简介明确新世界城8F、点单时间及试营业信息；主页有10月17日至23日当值表和餐饮内容。作为主题餐饮收录，与四层“新漫界”是不同主体；往期联动不视为当前仍在开展。"
+    }
+  ],
+  "reused": {
+    "count": 3,
+    "shops": [
+      "CAPCOM STORE CHINA 喀普康中心",
+      "矿也 MiNE",
+      "SNK 中心"
+    ],
+    "readAt": "2026-10-18",
+    "ledger": "../new-world-city-20261018/accounts.json"
+  },
+  "candidates": [
+    {
+      "name": "墟弥Goods",
+      "platform": "douyin",
+      "handle": "87826009059",
+      "url": "https://www.douyin.com/user/MS4wLjABAAAABbP8IzFlflOevnqFGDvId7bXjoHHD24ezsGnprT0ek2yRVkB0fcrkvEFFSb-EINo",
+      "result": "已打开认证店铺主页；已读全国通贩及大悦城活动，未核对新世界城分店，提取地址合集时超时，不接入accounts"
+    },
+    {
+      "name": "GOODSLOVE",
+      "result": "用户查询GOODSLOVE 新世界；五角场、焦作等分店排除，STORE候选无简介未确认本店"
+    },
+    {
+      "name": "漫魂",
+      "result": "用户查询漫魂；认证同名无简介，方正县店排除，未取得本店关联"
+    },
+    {
+      "name": "LCH领潮汇",
+      "result": "用户查询领潮汇；结果为同音服饰等，未匹配本店"
+    },
+    {
+      "name": "芳香屋",
+      "result": "用户查询芳香屋 谷店；穿搭个人等同名结果，不认作门店"
+    },
+    {
+      "name": "二次三香",
+      "result": "用户查询二次三香；结果为三香等个人同名，未匹配本店"
+    },
+    {
+      "name": "IPSTAR零售店",
+      "result": "用户查询IPSTAR 上海 新世界；未匹配，原已核实北京崇文新世界候选继续排除；本轮三期官方主题餐厅不等同独立零售店"
+    }
+  ],
+  "statistics": {
+    "visibleShopCount": 19,
+    "open": 12,
+    "pending": 7,
+    "hidden": 2,
+    "accountShopCount": 6,
+    "accountLinks": 6
+  },
+  "limitations": "本轮双平台发现已执行，八楼抖音补漏返回502；两次页面读取超时。未核实的候选明确归档，不宣称穷尽或完成所有覆盖。"
+}

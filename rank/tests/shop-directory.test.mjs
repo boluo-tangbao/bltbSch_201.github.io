@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { validateShopDirectories } from '../scripts/validate-data.mjs'
-import { shopDisplayStatus, sourcePredatesVisit } from '../src/utils/shopDirectory.ts'
+import { shopDisplayStatus, shopDirectoryGroups, sourcePredatesVisit } from '../src/utils/shopDirectory.ts'
 
 const directories = JSON.parse(readFileSync(new URL('../src/data/shop-directories.json', import.meta.url), 'utf8'))
 const groups = JSON.parse(readFileSync(new URL('../src/data/places.json', import.meta.url), 'utf8'))
@@ -39,6 +39,42 @@ test('author visit annotation uses latest evidence and excludes equal, newer or 
   assert.equal(sourcePredatesVisit([source(undefined)], '2026-01-20'), false)
   assert.equal(sourcePredatesVisit([source('2025-09-29'), { label: '国庆帖', url: 'https://example.com/new', dateLabel: '2026 年国庆前' }], '2026-01-20'), false)
   assert.equal(sourcePredatesVisit([source('2025-09-29'), { label: '官方账号', url: 'https://www.xiaohongshu.com/user/profile/123abc' }], '2026-01-20'), true)
+})
+
+test('limited stores and themes have their own groups without promoting unverified or closed records', () => {
+  const shop = fixture().test.shops[0]
+  const regular = { ...shop, name: '常规店', operatingConfirmation: 'official-listing' }
+  const temporary = { ...regular, name: '慢闪店', limited: { scope: 'store', period: '9月—10月（原文未标年份）' } }
+  const theme = { ...regular, name: '本期主题', limited: { scope: 'theme', period: '2026-10-01 至 2026-11-01' } }
+  const uncertain = { ...shop, name: '限时线索', limited: { scope: 'store', period: '档期待核实' } }
+  const closed = { ...theme, name: '已结束主题', status: 'closed' }
+  const groups = shopDirectoryGroups([regular, temporary, theme, uncertain, closed, shop])
+  assert.deepEqual(groups.regular.open.map(s => s.name), ['常规店'])
+  assert.deepEqual(groups.regular.evidence.map(s => s.name), ['测试店'])
+  assert.deepEqual(groups.limited.open.map(s => s.name), ['慢闪店', '本期主题'])
+  assert.deepEqual(groups.limited.evidence.map(s => s.name), ['限时线索'])
+  assert.equal(shopDirectoryGroups([{ ...regular, note: '每日10:00—22:00，往期促销已结束' }]).limited.open.length, 0)
+})
+
+test('limited periods preserve unknown years and reject impossible dates, reversed ranges and ended active themes', () => {
+  const validate = limited => {
+    const data = fixture()
+    data.test.shops[0].limited = limited
+    return validateShopDirectories(data, [{ id: 'test' }])
+  }
+  assert.deepEqual(validate({ scope: 'store', period: '9月30日—10月31日（年份未标）' }), [])
+  assert.deepEqual(validate({ scope: 'theme', period: '截至2026-10-05', endsOn: '2026-10-05' }), [])
+  for (const limited of [
+    { scope: 'guessed', period: '未知' },
+    { scope: 'store', period: '' },
+    { scope: 'store', period: '未知', startsOn: '2026-02-30' },
+    { scope: 'theme', period: '倒置', startsOn: '2026-11-01', endsOn: '2026-10-01' },
+    { scope: 'theme', period: '已结束', endsOn: '2026-10-04' },
+  ]) assert.ok(validate(limited).length)
+  const data = fixture()
+  data.test.shops[0].status = 'closed'
+  data.test.shops[0].limited = { scope: 'theme', period: '截至2026-10-04', endsOn: '2026-10-04' }
+  assert.deepEqual(validateShopDirectories(data, [{ id: 'test' }]), [])
 })
 
 test('published shop directories reference actual places and carry source evidence', () => {

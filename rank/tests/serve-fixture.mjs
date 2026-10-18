@@ -12,6 +12,8 @@ const mascotSource = resolve(target, 'src/data/mascots.ts')
 writeFileSync(mascotSource, readFileSync(mascotSource, 'utf8').replace('../../../docs/', '../../../../docs/'))
 mkdirSync(resolve(target, 'public/images/places'), { recursive: true })
 cpSync(resolve(root, 'public/favicon.svg'), resolve(target, 'public/favicon.svg'))
+mkdirSync(resolve(target, 'public/brand'), { recursive: true })
+cpSync(resolve(root, 'public/brand/bilibili-tv.svg'), resolve(target, 'public/brand/bilibili-tv.svg'))
 const site = JSON.parse(readFileSync(resolve(root, 'src/data/site.json'), 'utf8'))
 site.cityColors = { '测试甲城': '#b95b43', '测试乙城': '#507ba2' }
 writeFileSync(resolve(target, 'src/data/site.json'), JSON.stringify(site))

@@ -1,0 +1,124 @@
+{
+  "reviewedAt": "2026-10-18",
+  "placeId": "shanghai-shop-003",
+  "window": {
+    "from": "2025-01-01",
+    "through": "2026-10-18",
+    "basis": "当前年度及上一年度；当前维护的官网目录例外，未标日期不捏造"
+  },
+  "shopSources": [
+    {
+      "label": "CAPCOM 官网当前门店目录（上海店）",
+      "url": "https://www.capcom.co.jp/amusement/brands/capcomstore/"
+    },
+    {
+      "label": "上海新世界城官方微博（小小谷努咪上新）",
+      "url": "https://www.sina.cn/news/detail/5354964727628101.html",
+      "date": "2026-10-17"
+    },
+    {
+      "label": "上海新世界城官方微博（矿也门店上新）",
+      "url": "https://www.sina.cn/media/2210057511",
+      "date": "2026-10-10"
+    },
+    {
+      "label": "矿也MiNE品牌号·绵绵玛咻线下首发与门店地址",
+      "url": "https://www.xiaohongshu.com/explore/6aca0e1f000000000a020a9f",
+      "dateLabel": "页面显示“编辑于7天前”（2026-10-18核对，未换算具体发帖日期）"
+    },
+    {
+      "label": "SNK 中心官方授权店·国庆新品上架与门店地址",
+      "url": "https://www.xiaohongshu.com/explore/68db55be000000000402244c",
+      "date": "2025-09-29"
+    },
+    {
+      "label": "SNK 官方上海门店预告",
+      "url": "https://www.snkchina.com.cn/general/news/20250728/60112.html",
+      "date": "2025-07-21"
+    },
+    {
+      "label": "新世界公司管理层·2025年度业绩说明会问答10",
+      "url": "https://roadshow.cnstock.com/fbh/xsj2025",
+      "date": "2026-05-27"
+    },
+    {
+      "label": "三丽鸥官网当前线下门店目录·上海新世界商场",
+      "url": "https://www.sanrio.com.cn/store.html"
+    },
+    {
+      "label": "焦糖小谷包·上海吃谷攻略",
+      "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+      "date": "2026-06-11"
+    },
+    {
+      "label": "赢商网·新世界城业态报道（熊舒苗）",
+      "url": "https://m.winshang.com/news737942.html",
+      "date": "2025-12-26"
+    },
+    {
+      "label": "新闻晨报·记者王丽芳报道新世界城谷里谷气闭店公告",
+      "url": "https://ep.shxwcb.com/2025/11/19/20251119-02-2_20251118234808.html",
+      "date": "2025-11-19"
+    },
+    {
+      "label": "IPSTAR 官方鸣潮主题店闭店提醒",
+      "url": "https://www.sina.cn/news/detail/5318412382245813.html",
+      "date": "2026-07-08"
+    }
+  ],
+  "currentOfficialDirectories": [
+    {
+      "shop": "CAPCOM STORE CHINA 喀普康中心",
+      "label": "CAPCOM 官网当前门店目录（上海店）",
+      "url": "https://www.capcom.co.jp/amusement/brands/capcomstore/",
+      "sourceDate": null,
+      "readAt": "2026-10-18",
+      "exception": "当前官网门店目录"
+    },
+    {
+      "shop": "三丽鸥 Sanrio Gift Gate",
+      "label": "三丽鸥官网当前线下门店目录·上海新世界商场",
+      "url": "https://www.sanrio.com.cn/store.html",
+      "sourceDate": null,
+      "readAt": "2026-10-18",
+      "exception": "当前官网门店目录"
+    }
+  ],
+  "accounts": [
+    {
+      "shop": "CAPCOM STORE CHINA 喀普康中心",
+      "platform": "xiaohongshu",
+      "name": "CAPCOM卡普空中心",
+      "handle": "9685517887",
+      "url": "https://www.xiaohongshu.com/user/profile/6481e8f2000000001001fb99",
+      "scope": "store",
+      "reviewedAt": "2026-10-18"
+    },
+    {
+      "shop": "矿也 MiNE",
+      "platform": "xiaohongshu",
+      "name": "矿也MiNE",
+      "handle": "KuangYeMiNE",
+      "url": "https://www.xiaohongshu.com/user/profile/65315a79000000002a034608",
+      "scope": "brand",
+      "reviewedAt": "2026-10-18"
+    },
+    {
+      "shop": "SNK 中心",
+      "platform": "xiaohongshu",
+      "name": "SNK中心-官方授权店",
+      "handle": "18951356220",
+      "url": "https://www.xiaohongshu.com/user/profile/683d176c000000001d017a7d",
+      "scope": "store",
+      "reviewedAt": "2026-10-18"
+    }
+  ],
+  "imagesFile": "images.json",
+  "archiveFile": "archive.json",
+  "limitations": [
+    "近期攻略仍有已闭店门店，不能按发布日期直接判断全部阵容。",
+    "未取得KT原始闭店公告；只移出生产店单归档，不补造实际撤店日期。",
+    "未完成全店全平台穷尽检索；逐店已执行与待补路径见accounts.json。",
+    "作者原现场／本地整理素材的未记录日期保持原样，不冒充近期网图。"
+  ]
+}

@@ -1,0 +1,393 @@
+{
+  "place": {
+    "id": "shanghai-shop-003",
+    "name": "新世界城",
+    "tier": "top",
+    "order": 60,
+    "summary": "店够多、位置够好，最古中古+卡普空NHK",
+    "details": "新世界城的优势也是快闪。\n\n但相比于其他主打快闪的地方，这里的谷店质量明显更高。\n\n**那家中古店就值得一来了**，还有**NHK和Capcom的官店**。\n\n我觉得有明确目标时，它**非常值得一来！**",
+    "tags": [
+      "中古",
+      "galgame",
+      "快闪"
+    ],
+    "cover": "images/places/Shanghai/新世界城.jpg",
+    "gallery": [
+      {
+        "src": "images/places/Shanghai/新世界城.jpg",
+        "alt": "商场外观",
+        "group": "商圈外部",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917235214.jpg",
+        "alt": "IPSTAR 潮玩星球店面",
+        "group": "店铺外景",
+        "sourceName": "作者直拍（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917235804.jpg",
+        "alt": "谷店门头（视频截图）",
+        "group": "店铺外景",
+        "sourceName": "本地整理截图（原始链接未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917235911.jpg",
+        "alt": "CAPCOM STORE 店面（视频截图）",
+        "group": "店铺外景",
+        "sourceName": "本地整理截图（原始链接未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/1791364833804.jpg",
+        "alt": "中古毛绒陈列",
+        "group": "店铺内景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/1791435579075.jpg",
+        "alt": "中古周边展示柜",
+        "group": "店铺内景",
+        "sourceName": "作者直拍（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917234052.jpg",
+        "alt": "角色主题商品",
+        "group": "店铺内景",
+        "sourceName": "作者直拍（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917235203.jpg",
+        "alt": "店内周边货架",
+        "group": "店铺内景",
+        "sourceName": "作者直拍（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917235206.jpg",
+        "alt": "角色联动商品",
+        "group": "店铺内景",
+        "sourceName": "作者直拍（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/1791364417877.jpg",
+        "alt": "逛店间隙的冰淇淋",
+        "group": "额外活动",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/新世界城补充/new-world-merch-interior-official.webp",
+        "alt": "新世界城动漫周边柜台与货架（网图；2025-08-14报道，具体门店未确认）",
+        "group": "店铺内景",
+        "sourceName": "上海市政府日文网·图片来源上海黄浦（2025-08-14）",
+        "sourceUrl": "https://japanese.shanghai.gov.cn/ja-EditorsPick-ShopinShanghai/20250814/3b04fd3a7cee44088c354845b9b1030c.html"
+      },
+      {
+        "src": "images/places/Shanghai/新世界城补充/new-world-sanrio-2025.webp",
+        "alt": "新世界城三丽鸥门店外景（网图；2025-12-26报道，拍摄日期未标明）",
+        "group": "店铺外景",
+        "sourceName": "赢商网·熊舒苗／图片来源项目官方渠道（2025-12-26）",
+        "sourceUrl": "https://m.winshang.com/news737942.html"
+      }
+    ],
+    "visitedAt": "2026-08-02",
+    "updatedAt": "2026-10-18",
+    "published": true,
+    "location": {
+      "lat": 31.23704,
+      "lng": 121.469133,
+      "coordinateSystem": "wgs84",
+      "address": "上海市黄浦区南京西路2~68号新世界城"
+    }
+  },
+  "directory": {
+    "area": "新世界城 · 四楼 Fun肆街区为主",
+    "checkedAt": "2026-10-18",
+    "shops": [
+      {
+        "name": "CAPCOM STORE CHINA 喀普康中心",
+        "aliases": [
+          "卡普空",
+          "CAPCOM"
+        ],
+        "floor": "四层 · B08",
+        "kind": "游戏周边（CAPCOM）",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "CAPCOM 当前官网门店目录列出上海新世界城四楼 B08；小红书门店号发布上海中心上新与2025新年活动。具体到货以本店公告为准。",
+        "sources": [
+          {
+            "label": "CAPCOM 官网当前门店目录（上海店）",
+            "url": "https://www.capcom.co.jp/amusement/brands/capcomstore/"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "CAPCOM卡普空中心",
+            "handle": "9685517887",
+            "url": "https://www.xiaohongshu.com/user/profile/6481e8f2000000001001fb99",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "小小谷努咪",
+        "floor": "四层",
+        "kind": "毛绒周边（含明日方舟）",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "商场官方 10 月 17 日上新帖明确列出四楼门店；实际角色与库存以门店为准。",
+        "sources": [
+          {
+            "label": "上海新世界城官方微博（小小谷努咪上新）",
+            "url": "https://www.sina.cn/news/detail/5354964727628101.html",
+            "date": "2026-10-17"
+          }
+        ]
+      },
+      {
+        "name": "矿也 MiNE",
+        "aliases": [
+          "矿也",
+          "MiNE"
+        ],
+        "floor": "四层",
+        "kind": "原创 IP 周边、毛绒",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "商场官方2026年10月10日公告列出新世界城四楼门店；另核对矿也MiNE品牌号，近期绵绵玛咻上新帖明确列本店四层地址。首发及库存以当日门店为准。",
+        "sources": [
+          {
+            "label": "上海新世界城官方微博（矿也门店上新）",
+            "url": "https://www.sina.cn/media/2210057511",
+            "date": "2026-10-10"
+          },
+          {
+            "label": "矿也MiNE品牌号·绵绵玛咻线下首发与门店地址",
+            "url": "https://www.xiaohongshu.com/explore/6aca0e1f000000000a020a9f",
+            "dateLabel": "页面显示“编辑于7天前”（2026-10-18核对，未换算具体发帖日期）"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "矿也MiNE",
+            "handle": "KuangYeMiNE",
+            "url": "https://www.xiaohongshu.com/user/profile/65315a79000000002a034608",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "SNK 中心",
+        "aliases": [
+          "SNK"
+        ],
+        "kind": "游戏周边（SNK）",
+        "status": "recent",
+        "note": "已核对小红书官方授权店账号；2025年9月29日实际上新帖写明新世界城四楼 SNK 中心，补足此前只有开店预告的证据。",
+        "sources": [
+          {
+            "label": "SNK 中心官方授权店·国庆新品上架与门店地址",
+            "url": "https://www.xiaohongshu.com/explore/68db55be000000000402244c",
+            "date": "2025-09-29"
+          },
+          {
+            "label": "SNK 官方上海门店预告",
+            "url": "https://www.snkchina.com.cn/general/news/20250728/60112.html",
+            "date": "2025-07-21"
+          }
+        ],
+        "floor": "四层",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "SNK中心-官方授权店",
+            "handle": "18951356220",
+            "url": "https://www.xiaohongshu.com/user/profile/683d176c000000001d017a7d",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "新漫界",
+        "aliases": [
+          "新铛集",
+          "新鐺集"
+        ],
+        "floor": "四层",
+        "kind": "动漫周边",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "新世界公司管理层2026年5月27日明确：新铛集新世界店已更名为自有品牌“新漫界”，继续自主组织货源、丰富IP组合；旧名作为别名保留，未重复列店。",
+        "sources": [
+          {
+            "label": "新世界公司管理层·2025年度业绩说明会问答10",
+            "url": "https://roadshow.cnstock.com/fbh/xsj2025",
+            "date": "2026-05-27"
+          }
+        ]
+      },
+      {
+        "name": "三丽鸥 Sanrio Gift Gate",
+        "aliases": [
+          "三丽欧",
+          "Sanrio"
+        ],
+        "floor": "四层",
+        "kind": "角色周边（三丽鸥）",
+        "status": "listed",
+        "note": "三丽鸥当前官网门店目录列出“上海新世界商场”，地址为南京西路2—68号4F；以官方目录确认本分店营业。",
+        "sources": [
+          {
+            "label": "三丽鸥官网当前线下门店目录·上海新世界商场",
+            "url": "https://www.sanrio.com.cn/store.html"
+          }
+        ],
+        "operatingConfirmation": "official-listing"
+      },
+      {
+        "name": "IPSTAR 潮玩星球（零售店）",
+        "aliases": [
+          "潮玩星球",
+          "IPSTAR"
+        ],
+        "floor": "四层",
+        "kind": "动漫／游戏周边",
+        "status": "unverified",
+        "note": "2026年6月攻略列入新世界城四楼店单；本轮未确认零售门店官方账号，保留为营业线索。与轮换主题餐厅分别记录，已结束的主题不展示。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "GOODSLOVE 谷乐屋",
+        "aliases": [
+          "GOODS LOVE",
+          "GoodsLove"
+        ],
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入新世界城四楼店单；本轮未核对到本店官方账号或当前官方目录，保留为营业线索，未借用其他分店账号。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "漫魂 comic soul",
+        "aliases": [
+          "漫魂"
+        ],
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入新世界城四楼店单；本轮未核对到本店官方账号或当前官方目录，保留为营业线索，未借用其他分店账号。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "LCH 领潮汇 goods",
+        "aliases": [
+          "领潮汇",
+          "LCH"
+        ],
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入新世界城四楼店单；本轮未核对到本店官方账号或当前官方目录，保留为营业线索，未借用其他分店账号。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "芳香屋",
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入新世界城四楼店单；本轮未核对到本店官方账号或当前官方目录，保留为营业线索，未借用其他分店账号。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "二次三香",
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入新世界城四楼店单；本轮未核对到本店官方账号或当前官方目录，保留为营业线索，未借用其他分店账号。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "墟弥 Goods",
+        "aliases": [
+          "墟弥",
+          "墟弥goods"
+        ],
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2025年12月26日新世界城业态报道收录该店；尚未核对到本店官方账号或当前官网门店目录，保留为营业线索。",
+        "sources": [
+          {
+            "label": "赢商网·新世界城业态报道（熊舒苗）",
+            "url": "https://m.winshang.com/news737942.html",
+            "date": "2025-12-26"
+          }
+        ]
+      },
+      {
+        "name": "谷里谷气",
+        "floor": "四层",
+        "status": "closed",
+        "note": "新闻晨报2025年11月19日报道本店已发布闭店公告、11月15日起闭店清仓。2026年攻略仍列旧店名，不能覆盖明确闭店信息；本轮未取得重新营业公告，前台隐藏，最终撤店日期未独立核实。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          },
+          {
+            "label": "新闻晨报·记者王丽芳报道新世界城谷里谷气闭店公告",
+            "url": "https://ep.shxwcb.com/2025/11/19/20251119-02-2_20251118234808.html",
+            "date": "2025-11-19"
+          }
+        ]
+      },
+      {
+        "name": "IPSTAR 鸣潮主题店（2026 年夏季限定）",
+        "floor": "四层 · A18–19",
+        "kind": "联动餐饮、游戏周边（鸣潮）",
+        "status": "closed",
+        "note": "品牌 2026 年 7 月 8 日公告明确该期主题店于 7 月 12 日结束。仅指这一期主题活动结束，不代表潮玩星球零售店或其他主题店整体闭店。",
+        "sources": [
+          {
+            "label": "IPSTAR 官方鸣潮主题店闭店提醒",
+            "url": "https://www.sina.cn/news/detail/5318412382245813.html",
+            "date": "2026-07-08"
+          }
+        ]
+      }
+    ]
+  }
+}

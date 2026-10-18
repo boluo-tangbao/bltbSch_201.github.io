@@ -136,17 +136,35 @@
           "alt": "集市摊位",
           "group": "额外活动",
           "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/first-department-exterior.webp",
+          "alt": "第一百货建筑外观（网图；2026-01-20报道）",
+          "group": "商圈外部",
+          "sourceName": "人民网·金台资讯（新浪转载）（2026-01-20）",
+          "sourceUrl": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/first-department-market.webp",
+          "alt": "第一百货练摊现场（网图；2026-01-20报道，历史场景）",
+          "group": "额外活动",
+          "sourceName": "人民网·金台资讯（新浪转载）（2026-01-20）",
+          "sourceUrl": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html"
         }
       ],
       "visitedAt": "2026-07-13",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-18",
       "published": true,
       "location": {
         "lat": 31.237372,
         "lng": 121.470895,
         "coordinateSystem": "wgs84",
         "address": "上海市黄浦区南京东路800号第一百货C馆"
-      }
+      },
+      "aliases": [
+        "第一百货C馆",
+        "第一百货商业中心"
+      ]
     },
     {
       "id": "shanghai-shop-002",
@@ -257,10 +275,17 @@
           "alt": "主题展览",
           "group": "额外活动",
           "sourceName": "作者‘2025-09-27’直拍"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/nanjing-zx-exterior.webp",
+          "alt": "南京路百联ZX创趣场夜景（网图；2024-03-29报道）",
+          "group": "商圈外部",
+          "sourceName": "上海市国资委·百联集团（2024-03-29）",
+          "sourceUrl": "https://www.gzw.sh.gov.cn/shgzw_zxzx_gqdt/20240329/b9562716295841249822dd7e24769952.html"
         }
       ],
       "visitedAt": "2026-08-29",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-17",
       "published": true,
       "location": {
         "lat": 31.239113,
@@ -342,10 +367,24 @@
           "alt": "逛店间隙的冰淇淋",
           "group": "额外活动",
           "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/新世界城补充/new-world-merch-interior-official.webp",
+          "alt": "新世界城动漫周边柜台与货架（网图；2025-08-14报道，具体门店未确认）",
+          "group": "店铺内景",
+          "sourceName": "上海市政府日文网·图片来源上海黄浦（2025-08-14）",
+          "sourceUrl": "https://japanese.shanghai.gov.cn/ja-EditorsPick-ShopinShanghai/20250814/3b04fd3a7cee44088c354845b9b1030c.html"
+        },
+        {
+          "src": "images/places/Shanghai/新世界城补充/new-world-sanrio-2025.webp",
+          "alt": "新世界城三丽鸥门店外景（网图；2025-12-26报道，拍摄日期未标明）",
+          "group": "店铺外景",
+          "sourceName": "赢商网·熊舒苗／图片来源项目官方渠道（2025-12-26）",
+          "sourceUrl": "https://m.winshang.com/news737942.html"
         }
       ],
       "visitedAt": "2026-08-02",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-18",
       "published": true,
       "location": {
         "lat": 31.23704,
@@ -465,17 +504,36 @@
           "alt": "角色应援布置（视频截图）",
           "group": "额外活动",
           "sourceName": "本地整理截图（原始链接未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/huasheng-chaichai-front.webp",
+          "alt": "华盛小亭柴柴旺旺谷门面（网图；2025-08-22报道）",
+          "group": "店铺外景",
+          "sourceName": "新闻晨报·人民资讯（新浪转载）（2025-08-22）",
+          "sourceUrl": "https://k.sina.cn/article_7517400647_1c0126e4705907fyds.html?from=news"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/huasheng-consignment.webp",
+          "alt": "华盛小亭谷子寄售陈列（网图；2025-08-22报道）",
+          "group": "店铺内景",
+          "sourceName": "新闻晨报·人民资讯（新浪转载）（2025-08-22）",
+          "sourceUrl": "https://k.sina.cn/article_7517400647_1c0126e4705907fyds.html?from=news"
         }
       ],
       "visitedAt": "2026-09-09",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-18",
       "published": true,
       "location": {
         "lat": 31.236076,
         "lng": 121.469282,
         "coordinateSystem": "wgs84",
         "address": "上海市黄浦区南京西路19号人民广场地铁站7号口内"
-      }
+      },
+      "aliases": [
+        "华盛街",
+        "华盛漫趣集",
+        "华盛婚纱街"
+      ]
     },
     {
       "id": "shanghai-shop-005",
@@ -592,10 +650,17 @@
           "alt": "少女乐队角色立牌",
           "group": "额外活动",
           "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/baimi-anikigoods-interior.webp",
+          "alt": "百米香榭Anikigoods店内陈列（网图；2025-02-04报道）",
+          "group": "店铺内景",
+          "sourceName": "界面新闻·受访者供图（2025-02-04）",
+          "sourceUrl": "https://m.jiemian.com/article/12305072_microcontent.html"
         }
       ],
       "visitedAt": "2026-08-29",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-17",
       "published": true,
       "location": {
         "lat": 31.235439,
@@ -643,10 +708,17 @@
           "alt": "角色手办陈列",
           "group": "店铺内景",
           "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/wujiaochang-zx-shops.webp",
+          "alt": "五角场百联ZX造趣场店铺拼图（网图；2024-12开业报道）",
+          "group": "店铺外景",
+          "sourceName": "上海市国资委·百联集团（2024-12-31）",
+          "sourceUrl": "https://www.gzw.sh.gov.cn/shgzw_zxzx_gqdt/20241231/5727e9ec48814426a0e5667d1391c842.html"
         }
       ],
       "visitedAt": "2025-11-09",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-17",
       "published": true,
       "location": {
         "lat": 31.300361,
@@ -735,10 +807,24 @@
           "alt": "异时秘室入口",
           "group": "额外活动",
           "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/dimei-berryq-front.webp",
+          "alt": "迪美BerryQ痛包社门面拼图（网图；2024-07-03官方帖）",
+          "group": "店铺外景",
+          "sourceName": "BerryQ官方微博（新浪展示页）（2024-07-03）",
+          "sourceUrl": "https://www.sina.cn/news/detail/5052158275750380.html"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/dimei-berryq-display.webp",
+          "alt": "迪美BerryQ痛包陈列（网图；2024-07-03官方帖）",
+          "group": "店铺内景",
+          "sourceName": "BerryQ官方微博（新浪展示页）（2024-07-03）",
+          "sourceUrl": "https://www.sina.cn/news/detail/5052158275750380.html"
         }
       ],
       "visitedAt": "2026-06-27",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-17",
       "published": true,
       "location": {
         "lat": 31.230084,
@@ -833,10 +919,17 @@
           "alt": "角色立牌布置",
           "group": "额外活动",
           "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/jingan-chiikawa-2024.webp",
+          "alt": "静安大悦城Chiikawa×MINISO快闪（网图；2024年历史活动）",
+          "group": "额外活动",
+          "sourceName": "上海静安区融媒体中心·受访者供图（2024-08-29）",
+          "sourceUrl": "https://www.jingan.gov.cn/rmtzx/003001/20240830/cac351a7-28ab-4b4d-b340-66f1f95f8693.html"
         }
       ],
       "visitedAt": "2026-05-02",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-17",
       "published": true,
       "location": {
         "lat": 31.245608,
@@ -909,10 +1002,17 @@
           "alt": "商场内活动现场",
           "group": "额外活动",
           "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/wujiaochang-wanda-fgo-2026.webp",
+          "alt": "五角场万达FGO嘉年华（网图；2026-08-08历史活动）",
+          "group": "额外活动",
+          "sourceName": "万达集团官网（2026-08-12）",
+          "sourceUrl": "https://www.wanda.cn/2026/2026_0812/48374.html"
         }
       ],
       "visitedAt": "2025-11-02",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-17",
       "published": true,
       "location": {
         "lat": 31.304204,
@@ -969,10 +1069,24 @@
           "alt": "书店内部",
           "group": "店铺内景",
           "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/foreign-bookstore-exterior.webp",
+          "alt": "福州路上海外文书店外观（网图；2025-09-05报道）",
+          "group": "商圈外部",
+          "sourceName": "上海市文旅局·上海黄浦（2025-09-05）",
+          "sourceUrl": "https://whlyj.sh.gov.cn/gqfc/20250905/32ad6ff65a6345848f5429782d2a8959.html"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/foreign-bookstore-matsuzaka.webp",
+          "alt": "外文书店四楼松坂书屋陈列（网图；2025-09-05报道）",
+          "group": "店铺内景",
+          "sourceName": "上海市文旅局·上海黄浦（2025-09-05）",
+          "sourceUrl": "https://whlyj.sh.gov.cn/gqfc/20250905/32ad6ff65a6345848f5429782d2a8959.html"
         }
       ],
       "visitedAt": "2026-02-07",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-17",
       "published": true,
       "location": {
         "lat": 31.236032,
@@ -1046,10 +1160,24 @@
           "alt": "谷子陈列墙",
           "group": "店铺内景",
           "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/yuehui-exterior.webp",
+          "alt": "上海悦荟广场外观（网图；2025-05-02报道）",
+          "group": "商圈外部",
+          "sourceName": "上海黄浦·邹嘉（官方澎湃号）（2025-05-02）",
+          "sourceUrl": "https://m.thepaper.cn/newsDetail_forward_30762914"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/yuehui-rejet-counter.webp",
+          "alt": "悦荟恰恰谷Rejet Shop柜台（网图；2025-05-02报道）",
+          "group": "店铺内景",
+          "sourceName": "上海黄浦·邹嘉（官方澎湃号）（2025-05-02）",
+          "sourceUrl": "https://m.thepaper.cn/newsDetail_forward_30762914"
         }
       ],
       "visitedAt": "2026-04-18",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-17",
       "published": true,
       "location": {
         "lat": 31.238568,
@@ -1113,10 +1241,24 @@
           "alt": "间谍过家家主题快闪",
           "group": "额外活动",
           "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/tpy-tama-front.webp",
+          "alt": "TPY中心多摩万事屋门面（网图；2024-07-25报道）",
+          "group": "店铺外景",
+          "sourceName": "新浪财经·媒体滚动（2024-07-25）",
+          "sourceUrl": "https://finance.sina.com.cn/jjxw/2024-07-25/doc-incfiqva6232068.shtml"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/tpy-interior.webp",
+          "alt": "TPY中心谷店内景（网图；2024-07-25报道）",
+          "group": "店铺内景",
+          "sourceName": "新浪财经·媒体滚动（2024-07-25）",
+          "sourceUrl": "https://finance.sina.com.cn/jjxw/2024-07-25/doc-incfiqva6232068.shtml"
         }
       ],
       "visitedAt": "2026-09-18",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-17",
       "published": true,
       "location": {
         "lat": 31.194887,
@@ -1218,10 +1360,17 @@
           "alt": "主题公交车",
           "group": "额外活动",
           "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/xinyao-phase2-exterior.webp",
+          "alt": "鑫耀光环Live二期外观与巨嘴鸟装置（网图；2025-07-07报道）",
+          "group": "商圈外部",
+          "sourceName": "CircleME（2025-07-07）",
+          "sourceUrl": "https://www.circlemeculture.com/2025/07/07/001-16/"
         }
       ],
       "visitedAt": "2026-09-09",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-17",
       "published": true,
       "location": {
         "lat": 31.168415,
@@ -1282,10 +1431,17 @@
           "alt": "自由高达与模型合影",
           "group": "额外活动",
           "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/lalaport-freedom-gundam.webp",
+          "alt": "金桥LaLaport自由高达立像（网图；2021-05-28揭幕时期）",
+          "group": "商圈外部",
+          "sourceName": "万代南梦宫中国官网（2021-05-31）",
+          "sourceUrl": "https://www.bandainamcochina.cn/zh-cn/news/%E3%80%8C%E5%AE%9E%E7%89%A9%E5%A4%A7%E8%87%AA%E7%94%B1%E9%AB%98%E8%BE%BE%E7%AB%8B%E5%83%8F%E6%8F%AD%E5%B9%95%E5%BC%8F%E3%80%8D%E5%8D%8E%E4%B8%BD%E5%BC%80%E5%B9%95%EF%BC%81-%E3%80%8Cgundam-seed-project/"
         }
       ],
       "visitedAt": "2026-05-23",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-17",
       "published": true,
       "location": {
         "lat": 31.254933,
@@ -1324,10 +1480,24 @@
           "alt": "LoFt 店面",
           "group": "店铺外景",
           "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/metro-city-donguri-front.webp",
+          "alt": "美罗城橡子共和国门面（网图；2024-07-25报道）",
+          "group": "店铺外景",
+          "sourceName": "新浪财经·媒体滚动（2024-07-25）",
+          "sourceUrl": "https://finance.sina.com.cn/jjxw/2024-07-25/doc-incfiqva6232068.shtml"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/metro-city-line-friends-front.webp",
+          "alt": "美罗城LINE FRIENDS门面（网图；2024-07-25报道）",
+          "group": "店铺外景",
+          "sourceName": "新浪财经·媒体滚动（2024-07-25）",
+          "sourceUrl": "https://finance.sina.com.cn/jjxw/2024-07-25/doc-incfiqva6232068.shtml"
         }
       ],
       "visitedAt": "2026-09-18",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-17",
       "published": true,
       "location": {
         "lat": 31.19482,
@@ -1688,10 +1858,24 @@
           "alt": "角色主题展板",
           "group": "额外活动",
           "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/global-harbor-atrium.webp",
+          "alt": "上海环球港穹顶中庭（网图；2025-09-16报道）",
+          "group": "商圈外部",
+          "sourceName": "上海普陀（2025-09-16）",
+          "sourceUrl": "https://www.shpt.gov.cn/bm-ms/20250916/963621.html"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/global-harbor-shops.webp",
+          "alt": "上海环球港潮玩店铺（网图；2025-09-16报道）",
+          "group": "店铺外景",
+          "sourceName": "上海普陀（2025-09-16）",
+          "sourceUrl": "https://www.shpt.gov.cn/bm-ms/20250916/963621.html"
         }
       ],
       "visitedAt": "2026-07-08",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-17",
       "published": true,
       "location": {
         "lat": 31.235078,
@@ -1899,10 +2083,17 @@
           "alt": "HIPPIHO：主题乐器展示",
           "group": "店铺内景",
           "sourceName": "本地整理照片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/网图补充/hippiho-roland-display.webp",
+          "alt": "HIPPIHO乐器陈列（Roland官网网图；页面未标发布日期）",
+          "group": "店铺内景",
+          "sourceName": "Roland中国官网（页面未标发布日期）",
+          "sourceUrl": "https://www.roland-china.com/dealer/dealer_list2/shanghai/"
         }
       ],
       "visitedAt": null,
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-17",
       "published": true,
       "location": null
     }

@@ -1,0 +1,102 @@
+{
+  "place": {
+    "id": "shanghai-shop-003",
+    "name": "新世界城",
+    "tier": "top",
+    "order": 60,
+    "summary": "店够多、位置够好，最古中古+卡普空NHK",
+    "details": "新世界城的优势也是快闪。\n\n但相比于其他主打快闪的地方，这里的谷店质量明显更高。\n\n**那家中古店就值得一来了**，还有**NHK和Capcom的官店**。\n\n我觉得有明确目标时，它**非常值得一来！**",
+    "tags": [
+      "中古",
+      "galgame",
+      "快闪"
+    ],
+    "cover": "images/places/Shanghai/新世界城.jpg",
+    "gallery": [
+      {
+        "src": "images/places/Shanghai/新世界城.jpg",
+        "alt": "商场外观",
+        "group": "商圈外部",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917235214.jpg",
+        "alt": "IPSTAR 潮玩星球店面",
+        "group": "店铺外景",
+        "sourceName": "作者直拍（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917235804.jpg",
+        "alt": "谷店门头（视频截图）",
+        "group": "店铺外景",
+        "sourceName": "本地整理截图（原始链接未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917235911.jpg",
+        "alt": "CAPCOM STORE 店面（视频截图）",
+        "group": "店铺外景",
+        "sourceName": "本地整理截图（原始链接未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/1791364833804.jpg",
+        "alt": "中古毛绒陈列",
+        "group": "店铺内景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/1791435579075.jpg",
+        "alt": "中古周边展示柜",
+        "group": "店铺内景",
+        "sourceName": "作者直拍（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917234052.jpg",
+        "alt": "角色主题商品",
+        "group": "店铺内景",
+        "sourceName": "作者直拍（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917235203.jpg",
+        "alt": "店内周边货架",
+        "group": "店铺内景",
+        "sourceName": "作者直拍（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/QQ图片20250917235206.jpg",
+        "alt": "角色联动商品",
+        "group": "店铺内景",
+        "sourceName": "作者直拍（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/新世界城/1791364417877.jpg",
+        "alt": "逛店间隙的冰淇淋",
+        "group": "额外活动",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/网图补充/new-world-shindang-front.webp",
+        "alt": "新世界城新鐺集门面（网图；2024-02-12报道）",
+        "group": "店铺外景",
+        "sourceName": "上海黄浦·范煜昊（官方澎湃号）（2024-02-12）",
+        "sourceUrl": "https://m.thepaper.cn/newsDetail_forward_26350360"
+      },
+      {
+        "src": "images/places/Shanghai/网图补充/new-world-shindang-interior.webp",
+        "alt": "新世界城新鐺集店内陈列（网图；2024-02-12报道）",
+        "group": "店铺内景",
+        "sourceName": "上海黄浦·范煜昊（官方澎湃号）（2024-02-12）",
+        "sourceUrl": "https://m.thepaper.cn/newsDetail_forward_26350360"
+      }
+    ],
+    "visitedAt": "2026-08-02",
+    "updatedAt": "2026-10-17",
+    "published": true,
+    "location": {
+      "lat": 31.23704,
+      "lng": 121.469133,
+      "coordinateSystem": "wgs84",
+      "address": "上海市黄浦区南京西路2~68号新世界城"
+    }
+  },
+  "directory": null
+}

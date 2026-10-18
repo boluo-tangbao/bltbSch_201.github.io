@@ -1,0 +1,29 @@
+{
+  "placeId": "shanghai-shop-001",
+  "checkedAt": "2026-10-18",
+  "state": "阶段性结果",
+  "scope": "C馆四至六层为原范围；官方新店公告扩展到一层。不是全商场穷尽名单。",
+  "executed": [
+    {"platform":"小红书","mode":"内容","query":"第一百货C馆 谷店","range":"首批约18条，继续读取至约28条可见内容；不声称逐张读完配图","found":["商场官方公告","雪鱼町／雪鱼工作室"],"source":"https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3"},
+    {"platform":"小红书","mode":"用户","query":"第一百货","range":"前16项可见用户结果，打开匹配门店主页","found":["六柴谷屋上海第一百货c馆6楼"]},
+    {"platform":"小红书","mode":"用户","queries":["奶惜","谷的Time","棉花猫谷屋"],"range":"逐项读取匹配候选，打开本人主页及已列入来源的帖子","found":["奶惜 nice goods","谷的time 一百店","绵花猫谷屋（现址华盛街）"]},
+    {"platform":"抖音","mode":"内容／楼层补漏","query":"第一百货C馆 六楼 谷店","range":"约22项可见结果，反查店铺作者和用户简介","found":["铃夏学园","谷力全开（排除C馆）"]},
+    {"platform":"抖音","mode":"用户","queries":["托老师 谷店","次元站台","偶尔梦游","巫狐魔谷","Koi Tune","囍模屋","真谷","水豚小怪兽","CREAM CAFE 上海","HAPPY ZOO","萌樱 谷店"],"range":"匹配候选或前屏结果；未穷举全部用户。次元站台、囍模屋打开主页；萌樱无可归属商家结果","result":"除已记录候选外，未取得可确认C馆当前营业的账号"},
+    {"platform":"抖音","mode":"用户","queries":["铃夏学园","上海谷力全开谷子店"],"range":"铃夏打开品牌主页；谷力全开仅用用户结果明确的异地地址排除","result":"铃夏接入，谷力全开不接入C馆"},
+    {"platform":"报道／官方","mode":"读取正文","query":null,"sources":["https://www.shobserver.com/wx/detail.do?id=904356","https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3"],"found":["古典玩偶","阅文好物","雪鱼町","谷子集合·绘梦造物","FenzGoods慢闪店","Magic WOW","百人卡牌对战中心","蔷薇石英","次元无极","琉璃星"],"result":"官方公告用于确认新店；普通报道仅为有效线索，Koi Tune去重"},
+    {"platform":"抖音","mode":"用户／新增名单逐店补查","queries":["Magic WOW","百人卡牌对战中心","蔷薇石英","次元无极","琉璃星"],"range":"前屏约8至10项结果；强匹配蔷薇石英和次元无极第一百货实际打开主页","result":"蔷薇石英补入营业账号；次元无极0作品无简介，其余无本店充分证据，保持折叠"}
+  ],
+  "searchEngineSupplement": {
+    "mode":"外部查询，不替代站内内容／用户搜索",
+    "queries":["\"Mr.T\" \"第一百货\" 官方","\"次元站台\" \"第一百货\" 官方","\"偶尔梦游\" \"第一百货\" 官方","\"巫狐\" \"第一百货\" 官方","\"谷的Time\" \"第一百货\" 官方账号","\"Koi Tune\" \"第一百货\"","\"CREAM CAFE\" \"第一百货\" 官方","\"奶惜\" \"第一百货\" 小红书","\"第一百货\" \"囍模屋\"","\"第一百货\" \"棉花猫谷屋\"","\"第一百货\" \"真谷\"","\"第一百货\" \"水豚小怪兽\"","\"第一百货\" \"萌樱\" 官方账号","\"第一百货\" \"HAPPY ZOO\" 零售 小铺"]
+  },
+  "stopAudit": {
+    "bothPlatformsContent": true,
+    "officialChannelRead": true,
+    "floorGapPass": "已针对六楼补漏；一层仅有官方新店，二三层没有充分发现记录，不推断无店",
+    "latestPassHasNewStores": true,
+    "allAdoptedCandidatesDisposed": true,
+    "claimResearchComplete": false,
+    "remaining": ["摘要候选正文未核对，暂不接入","部分账号缺少有效日期／分店证明","需后续定向补漏取得末轮无新增结论"]
+  }
+}

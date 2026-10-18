@@ -164,6 +164,15 @@ export function validateShopDirectories(directories, places) {
       names.add(shop.name)
       if (!['recent', 'listed', 'older', 'unverified', 'closed'].includes(shop.status)) fail(id, `${shop.name} 核实状态无效`)
       if (shop.operatingConfirmation !== undefined && shop.operatingConfirmation !== 'official-listing') fail(id, `${shop.name} 营业确认依据无效`)
+      if (shop.limited !== undefined) {
+        const limited = shop.limited
+        if (!object(limited) || !['store', 'theme'].includes(limited.scope) || !text(limited.period)) fail(id, `${shop.name} 限时信息须注明 store/theme 范围与非空档期 period`)
+        else {
+          for (const key of ['startsOn', 'endsOn']) if (limited[key] !== undefined && !validDate(limited[key])) fail(id, `${shop.name} 限时 ${key} 必须是真实 YYYY-MM-DD 日期；未知年份请仅填 period`)
+          if (validDate(limited.startsOn) && validDate(limited.endsOn) && limited.startsOn > limited.endsOn) fail(id, `${shop.name} 限时开始日期不能晚于结束日期`)
+          if (validDate(limited.endsOn) && limited.endsOn < directory.checkedAt && shop.status !== 'closed') fail(id, `${shop.name} 已结束的限时条目必须标为 closed，仅留档`)
+        }
+      }
       if (shop.kind !== undefined && !text(shop.kind)) fail(id, `${shop.name} 主营必须为非空文字`)
       if (shop.kindSources !== undefined) {
         if (!text(shop.kind) || !Array.isArray(shop.kindSources) || !shop.kindSources.length) fail(id, `${shop.name} 主营依据需要非空主营与来源数组`)

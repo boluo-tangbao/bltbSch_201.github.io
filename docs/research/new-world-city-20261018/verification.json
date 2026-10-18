@@ -1,0 +1,42 @@
+{
+  "runtime": "v24.19.0",
+  "protectedFields": "unchanged",
+  "originalLocalGallery": "all 10 retained",
+  "expiredWebImages": "4 archived",
+  "results": [
+    {
+      "width": 1440,
+      "confirmed": 6,
+      "more": 7,
+      "accounts": 3,
+      "gallery": 12,
+      "closedShown": 0,
+      "overflow": false,
+      "refresh": "passed",
+      "lightbox": "passed"
+    },
+    {
+      "width": 390,
+      "confirmed": 6,
+      "more": 7,
+      "accounts": 3,
+      "gallery": 12,
+      "closedShown": 0,
+      "overflow": false,
+      "refresh": "passed",
+      "lightbox": "passed"
+    }
+  ],
+  "closureRegression": [
+    {
+      "id": "suzhou-shop-002",
+      "hidden": 1
+    },
+    {
+      "id": "shanghai-shop-003",
+      "hidden": 2
+    }
+  ],
+  "aliasSearch": "旧名新铛集找到新世界城",
+  "pageErrors": []
+}

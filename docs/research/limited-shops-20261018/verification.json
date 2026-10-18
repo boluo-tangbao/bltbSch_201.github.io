@@ -1,0 +1,69 @@
+{
+  "runtime": "v24.19.0",
+  "targetPlaceFields": "all unchanged",
+  "shopChanges": "limited metadata only; original sources, accounts and checkedAt unchanged",
+  "results": [
+    {
+      "id": "shanghai-shop-001",
+      "regular": 12,
+      "limited": 2,
+      "pending": 16,
+      "gallery": 21,
+      "accounts": 9,
+      "width": 1440,
+      "closedShown": 0,
+      "initialCollapsed": true,
+      "expanded": true,
+      "sourcesHiddenForOpen": true,
+      "overflow": false,
+      "refresh": "passed"
+    },
+    {
+      "id": "shanghai-shop-003",
+      "regular": 9,
+      "limited": 3,
+      "pending": 7,
+      "gallery": 12,
+      "accounts": 6,
+      "width": 1440,
+      "closedShown": 0,
+      "initialCollapsed": true,
+      "expanded": true,
+      "sourcesHiddenForOpen": true,
+      "overflow": false,
+      "refresh": "passed"
+    },
+    {
+      "id": "shanghai-shop-001",
+      "regular": 12,
+      "limited": 2,
+      "pending": 16,
+      "gallery": 21,
+      "accounts": 9,
+      "width": 390,
+      "closedShown": 0,
+      "initialCollapsed": true,
+      "expanded": true,
+      "sourcesHiddenForOpen": true,
+      "overflow": false,
+      "refresh": "passed"
+    },
+    {
+      "id": "shanghai-shop-003",
+      "regular": 9,
+      "limited": 3,
+      "pending": 7,
+      "gallery": 12,
+      "accounts": 6,
+      "width": 390,
+      "closedShown": 0,
+      "initialCollapsed": true,
+      "expanded": true,
+      "sourcesHiddenForOpen": true,
+      "overflow": false,
+      "refresh": "passed"
+    }
+  ],
+  "limitedSearchTarget": "passed",
+  "pageErrors": []
+}

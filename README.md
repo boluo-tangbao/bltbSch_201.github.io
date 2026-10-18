@@ -22,10 +22,11 @@
 | 想了解什么 | 文档 |
 | --- | --- |
 | 项目目录、原件、生成副本与清理方法 | [本地文件结构](本地文件结构.md) |
+| 新增城市的研究、谷店一览、现场图集与网图补充全流程 | [新增城市与商圈的完整工作方法](docs/city-expansion-workflow.md) · [研究工作单](docs/templates/city-research.md) |
 | 填写店铺、图集、地图和更新记录 | [城市归档填写指南](docs/city-data.md) |
 | 添加活动和维护相册 | [活动记录维护](docs/activities.md) |
 | 接入 B 站视频、章节定位与手动加载 | [B 站章节播放器实施说明](docs/bilibili-chapters.md) |
-| 店铺营业分类与原始依据保留要求 | [店铺一览固定维护规则](docs/shop-directory-rules.md) |
+| 店铺营业分类与原始依据保留要求 | [店铺一览固定维护规则](docs/shop-directory-rules.md) · [账号检索流程](docs/shop-account-research.md) |
 | 地图配置与 AK 使用 | [百度地图接入](docs/baidu-map-security.md) |
 | 访问统计、建议和留言管理 | [社区功能说明](docs/community.md) |
 | 角色、封面图片的来源与处理规范 | [页面素材说明](docs/visual-assets.md) |

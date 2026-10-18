@@ -1,0 +1,432 @@
+{
+  "reviewedAt": "2026-10-18",
+  "coverage": {
+    "visibleShops": 13,
+    "verifiedAccountShops": 3,
+    "accountLinks": 3,
+    "storeAccounts": 2,
+    "brandAccounts": 1,
+    "withoutVerifiedAccount": 10
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "method": "商圈／店铺外部搜索、官网及商场关联",
+      "result": "确认CAPCOM与三丽鸥当前门店目录；识别新铛集改名。"
+    },
+    {
+      "round": 2,
+      "method": "小红书站内用户、旧名／英文名、主页与经营帖核对",
+      "result": "确认CAPCOM、SNK两个门店号；排除IPSTAR北京分店，保留新铛集为未确认候选。"
+    },
+    {
+      "round": 3,
+      "method": "剩余门店闭店检索＋矿也简称站内用户补查",
+      "result": "发现谷里谷气闭店报道与新攻略冲突，隐藏；确认矿也品牌号及本店地址。"
+    }
+  ],
+  "entries": [
+    {
+      "shop": "CAPCOM STORE CHINA 喀普康中心",
+      "aliases": [
+        "卡普空",
+        "CAPCOM"
+      ],
+      "reviewedAt": "2026-10-18",
+      "result": "已确认",
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "CAPCOM卡普空中心",
+          "handle": "9685517887",
+          "url": "https://www.xiaohongshu.com/user/profile/6481e8f2000000001001fb99",
+          "scope": "store"
+        }
+      ],
+      "paths": {
+        "searchEngine": "已搜索，未将摘要当营业结论",
+        "platformUsers": "本轮已执行",
+        "recentAuthorReverse": "已读取账号主页及门店经营内容",
+        "officialBranch": "已确认官方门店／商场关联"
+      },
+      "nextStep": "后续复查本店关联及闭店冲突",
+      "profileHandle": "9685517887",
+      "addressEvidence": "官网当前门店目录列上海新世界城4F B08；账号经营帖明确上海卡普空中心。",
+      "recentPostUrl": "https://www.xiaohongshu.com/explore/678778520000000021003b19",
+      "recentPostDate": null,
+      "recentPostDateLabel": "标题明确2025新年活动；具体发布日期未独立读取。",
+      "suggestedQueries": [
+        "卡普空",
+        "CAPCOM卡普空中心",
+        "CAPCOM 新世界城 官方"
+      ],
+      "executedQueries": [
+        "卡普空",
+        "CAPCOM卡普空中心"
+      ]
+    },
+    {
+      "shop": "小小谷努咪",
+      "aliases": [],
+      "reviewedAt": "2026-10-18",
+      "result": "未取得可确认本店的社交主页",
+      "accounts": [],
+      "paths": {
+        "searchEngine": "已搜索，未将摘要当营业结论",
+        "platformUsers": "本轮未完成，不能声称已经穷尽",
+        "recentAuthorReverse": "未取得可确认的本店作者链路",
+        "officialBranch": "已确认官方门店／商场关联"
+      },
+      "nextStep": "下轮优先补查站内用户、官方提及及近期原帖作者；不用同名／异地账号兜底",
+      "suggestedQueries": [
+        "小小谷努咪 新世界城 小红书 官方",
+        "小小谷努咪 新世界城 闭店"
+      ],
+      "executedQueries": [
+        "\"小小谷努咪\" \"新世界\" 小红书",
+        "\"小小谷努咪\" \"官方\" 小红书 账号"
+      ]
+    },
+    {
+      "shop": "矿也 MiNE",
+      "aliases": [
+        "矿也",
+        "MiNE"
+      ],
+      "reviewedAt": "2026-10-18",
+      "result": "已确认",
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "矿也MiNE",
+          "handle": "KuangYeMiNE",
+          "url": "https://www.xiaohongshu.com/user/profile/65315a79000000002a034608",
+          "scope": "brand"
+        }
+      ],
+      "paths": {
+        "searchEngine": "已搜索，未将摘要当营业结论",
+        "platformUsers": "本轮已执行",
+        "recentAuthorReverse": "已读取账号主页及门店经营内容",
+        "officialBranch": "已确认官方门店／商场关联"
+      },
+      "nextStep": "后续复查本店关联及闭店冲突",
+      "profileHandle": "KuangYeMiNE",
+      "addressEvidence": "品牌号绵绵玛咻上新帖明确上海市黄浦区南京西路新世界城四层；与商场2026-10-10帖互相核对。",
+      "recentPostUrl": "https://www.xiaohongshu.com/explore/6aca0e1f000000000a020a9f",
+      "recentPostDate": null,
+      "recentPostDateLabel": "编辑于7天前（2026-10-18读取，不换算绝对发布日期）",
+      "suggestedQueries": [
+        "矿也 新世界城 小红书 官方",
+        "矿也",
+        "矿也MiNE"
+      ],
+      "executedQueries": [
+        "矿也",
+        "\"矿也\" \"新世界城\" 小红书 官方",
+        "\"新世界城\" \"矿也\" \"账号\""
+      ]
+    },
+    {
+      "shop": "SNK 中心",
+      "aliases": [
+        "SNK"
+      ],
+      "reviewedAt": "2026-10-18",
+      "result": "已确认",
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "SNK中心-官方授权店",
+          "handle": "18951356220",
+          "url": "https://www.xiaohongshu.com/user/profile/683d176c000000001d017a7d",
+          "scope": "store"
+        }
+      ],
+      "paths": {
+        "searchEngine": "已搜索，未将摘要当营业结论",
+        "platformUsers": "本轮已执行",
+        "recentAuthorReverse": "已读取账号主页及门店经营内容",
+        "officialBranch": "未取得当前官方目录"
+      },
+      "nextStep": "后续复查本店关联及闭店冲突",
+      "profileHandle": "18951356220",
+      "addressEvidence": "2025-09-29门店本人上新帖写明新世界城四楼SNK中心。",
+      "recentPostUrl": "https://www.xiaohongshu.com/explore/68db55be000000000402244c",
+      "recentPostDate": "2025-09-29",
+      "suggestedQueries": [
+        "SNK中心",
+        "SNK中心-官方授权店",
+        "SNK 新世界城"
+      ],
+      "executedQueries": [
+        "SNK中心",
+        "SNK中心-官方授权店"
+      ]
+    },
+    {
+      "shop": "新漫界",
+      "aliases": [
+        "新铛集",
+        "新鐺集"
+      ],
+      "reviewedAt": "2026-10-18",
+      "result": "未取得可确认本店的社交主页",
+      "accounts": [],
+      "paths": {
+        "searchEngine": "已搜索，未将摘要当营业结论",
+        "platformUsers": "本轮已执行",
+        "recentAuthorReverse": "未取得可确认的本店作者链路",
+        "officialBranch": "已确认官方门店／商场关联"
+      },
+      "nextStep": "下轮优先补查站内用户、官方提及及近期原帖作者；不用同名／异地账号兜底",
+      "suggestedQueries": [
+        "新漫界 新世界城 小红书 官方",
+        "新漫界 新世界城 闭店"
+      ],
+      "executedQueries": [
+        "新漫界",
+        "新铛集"
+      ]
+    },
+    {
+      "shop": "三丽鸥 Sanrio Gift Gate",
+      "aliases": [
+        "三丽欧",
+        "Sanrio"
+      ],
+      "reviewedAt": "2026-10-18",
+      "result": "未取得可确认本店的社交主页",
+      "accounts": [],
+      "paths": {
+        "searchEngine": "已搜索，未将摘要当营业结论",
+        "platformUsers": "本轮未完成，不能声称已经穷尽",
+        "recentAuthorReverse": "未取得可确认的本店作者链路",
+        "officialBranch": "已确认官方门店／商场关联"
+      },
+      "nextStep": "下轮优先补查站内用户、官方提及及近期原帖作者；不用同名／异地账号兜底",
+      "suggestedQueries": [
+        "三丽鸥 Sanrio Gift Gate 新世界城 小红书 官方",
+        "三丽鸥 Sanrio Gift Gate 新世界城 闭店"
+      ],
+      "executedQueries": [
+        "\"三丽鸥\" \"新世界城\" 小红书 官方 账号"
+      ]
+    },
+    {
+      "shop": "IPSTAR 潮玩星球（零售店）",
+      "aliases": [
+        "潮玩星球",
+        "IPSTAR"
+      ],
+      "reviewedAt": "2026-10-18",
+      "result": "未取得可确认本店的社交主页",
+      "accounts": [],
+      "paths": {
+        "searchEngine": "已搜索，未将摘要当营业结论",
+        "platformUsers": "本轮已执行",
+        "recentAuthorReverse": "未取得可确认的本店作者链路",
+        "officialBranch": "未取得当前官方目录"
+      },
+      "nextStep": "下轮优先补查站内用户、官方提及及近期原帖作者；不用同名／异地账号兜底",
+      "suggestedQueries": [
+        "IPSTAR 潮玩星球（零售店） 新世界城 小红书 官方",
+        "IPSTAR 潮玩星球（零售店） 新世界城 闭店"
+      ],
+      "executedQueries": [
+        "潮玩星球新世界"
+      ]
+    },
+    {
+      "shop": "GOODSLOVE 谷乐屋",
+      "aliases": [
+        "GOODS LOVE",
+        "GoodsLove"
+      ],
+      "reviewedAt": "2026-10-18",
+      "result": "未取得可确认本店的社交主页",
+      "accounts": [],
+      "paths": {
+        "searchEngine": "已搜索，未将摘要当营业结论",
+        "platformUsers": "本轮未完成，不能声称已经穷尽",
+        "recentAuthorReverse": "未取得可确认的本店作者链路",
+        "officialBranch": "未取得当前官方目录"
+      },
+      "nextStep": "下轮优先补查站内用户、官方提及及近期原帖作者；不用同名／异地账号兜底",
+      "suggestedQueries": [
+        "GOODSLOVE 谷乐屋 新世界城 小红书 官方",
+        "GOODSLOVE 谷乐屋 新世界城 闭店"
+      ],
+      "executedQueries": [
+        "\"新世界城\" \"GOODSLOVE\" 小红书 账号",
+        "\"新世界城\" \"GOODSLOVE\" 闭店 2025 2026"
+      ]
+    },
+    {
+      "shop": "漫魂 comic soul",
+      "aliases": [
+        "漫魂"
+      ],
+      "reviewedAt": "2026-10-18",
+      "result": "未取得可确认本店的社交主页",
+      "accounts": [],
+      "paths": {
+        "searchEngine": "已搜索，未将摘要当营业结论",
+        "platformUsers": "本轮未完成，不能声称已经穷尽",
+        "recentAuthorReverse": "未取得可确认的本店作者链路",
+        "officialBranch": "未取得当前官方目录"
+      },
+      "nextStep": "下轮优先补查站内用户、官方提及及近期原帖作者；不用同名／异地账号兜底",
+      "suggestedQueries": [
+        "漫魂 comic soul 新世界城 小红书 官方",
+        "漫魂 comic soul 新世界城 闭店"
+      ],
+      "executedQueries": [
+        "\"新世界城\" \"漫魂\" 小红书 官方",
+        "\"新世界城\" \"漫魂\" 闭店"
+      ]
+    },
+    {
+      "shop": "LCH 领潮汇 goods",
+      "aliases": [
+        "领潮汇",
+        "LCH"
+      ],
+      "reviewedAt": "2026-10-18",
+      "result": "未取得可确认本店的社交主页",
+      "accounts": [],
+      "paths": {
+        "searchEngine": "已搜索，未将摘要当营业结论",
+        "platformUsers": "本轮未完成，不能声称已经穷尽",
+        "recentAuthorReverse": "未取得可确认的本店作者链路",
+        "officialBranch": "未取得当前官方目录"
+      },
+      "nextStep": "下轮优先补查站内用户、官方提及及近期原帖作者；不用同名／异地账号兜底",
+      "suggestedQueries": [
+        "LCH 领潮汇 goods 新世界城 小红书 官方",
+        "LCH 领潮汇 goods 新世界城 闭店"
+      ],
+      "executedQueries": [
+        "\"新世界城\" \"领潮汇\" 小红书",
+        "\"新世界城\" \"领潮汇\" 闭店"
+      ]
+    },
+    {
+      "shop": "芳香屋",
+      "aliases": [],
+      "reviewedAt": "2026-10-18",
+      "result": "未取得可确认本店的社交主页",
+      "accounts": [],
+      "paths": {
+        "searchEngine": "已搜索，未将摘要当营业结论",
+        "platformUsers": "本轮未完成，不能声称已经穷尽",
+        "recentAuthorReverse": "未取得可确认的本店作者链路",
+        "officialBranch": "未取得当前官方目录"
+      },
+      "nextStep": "下轮优先补查站内用户、官方提及及近期原帖作者；不用同名／异地账号兜底",
+      "suggestedQueries": [
+        "芳香屋 新世界城 小红书 官方",
+        "芳香屋 新世界城 闭店"
+      ],
+      "executedQueries": [
+        "\"新世界城\" \"芳香屋\" 小红书",
+        "\"新世界城\" \"芳香屋\" 闭店"
+      ]
+    },
+    {
+      "shop": "二次三香",
+      "aliases": [],
+      "reviewedAt": "2026-10-18",
+      "result": "未取得可确认本店的社交主页",
+      "accounts": [],
+      "paths": {
+        "searchEngine": "已搜索，未将摘要当营业结论",
+        "platformUsers": "本轮未完成，不能声称已经穷尽",
+        "recentAuthorReverse": "未取得可确认的本店作者链路",
+        "officialBranch": "未取得当前官方目录"
+      },
+      "nextStep": "下轮优先补查站内用户、官方提及及近期原帖作者；不用同名／异地账号兜底",
+      "suggestedQueries": [
+        "二次三香 新世界城 小红书 官方",
+        "二次三香 新世界城 闭店"
+      ],
+      "executedQueries": [
+        "\"新世界城\" \"二次三香\" 小红书",
+        "\"新世界城\" \"二次三香\" 闭店"
+      ]
+    },
+    {
+      "shop": "墟弥 Goods",
+      "aliases": [
+        "墟弥",
+        "墟弥goods"
+      ],
+      "reviewedAt": "2026-10-18",
+      "result": "未取得可确认本店的社交主页",
+      "accounts": [],
+      "paths": {
+        "searchEngine": "已搜索，未将摘要当营业结论",
+        "platformUsers": "本轮未完成，不能声称已经穷尽",
+        "recentAuthorReverse": "未取得可确认的本店作者链路",
+        "officialBranch": "未取得当前官方目录"
+      },
+      "nextStep": "下轮优先补查站内用户、官方提及及近期原帖作者；不用同名／异地账号兜底",
+      "suggestedQueries": [
+        "墟弥 Goods 新世界城 小红书 官方",
+        "墟弥 Goods 新世界城 闭店"
+      ],
+      "executedQueries": [
+        "\"新世界城\" \"墟弥\" 小红书",
+        "\"新世界城\" \"墟弥\" 闭店"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "shop": "新漫界",
+      "profileName": "新铛集",
+      "url": "https://www.xiaohongshu.com/user/profile/67e23eae000000001b0328d5",
+      "profileHandle": "63017344953",
+      "result": "候选，未接入",
+      "reason": "旧名品牌号近期内容涉及美罗城、白玉兰，未能确认当前新漫界经营主体及新世界城分店关联。新漫界用户查询未取得匹配结果。"
+    },
+    {
+      "shop": "IPSTAR 潮玩星球（零售店）",
+      "profileName": "潮玩星球北京崇文新世界店",
+      "url": "https://www.xiaohongshu.com/user/profile/63e22582000000002702a83a",
+      "profileHandle": "cwxq13061796027",
+      "result": "排除",
+      "reason": "北京崇文新世界分店，不是上海新世界城。"
+    },
+    {
+      "shop": "IPSTAR 潮玩星球（零售店）",
+      "profileName": "IPSTAR潮玩星球",
+      "url": "https://www.sina.cn/media/6509826766",
+      "result": "已读品牌主页，未接入",
+      "reason": "身份可识别，但本轮主页未取得可确认上海零售店的近期经营帖；旧主题餐厅公告不能替代零售门店确认。"
+    },
+    {
+      "shop": "光荣特库摩中心",
+      "url": "https://www.sina.cn/media/7897848227",
+      "result": "失效候选",
+      "reason": "主页显示原账号停用；与闭店线索分别记录，停用本身不是实体闭店公告。小红书同名一粉丝用户未确认官方归属。"
+    },
+    {
+      "shop": "矿也 MiNE",
+      "profileName": "矿也MiNE(店铺版)",
+      "url": "https://www.xiaohongshu.com/user/profile/64af79700000000010036962",
+      "profileHandle": "9640654296",
+      "result": "候选，未接入",
+      "reason": "用户搜索见到，未读取该候选详情；已优先确认内容和分店地址完整的矿也MiNE品牌号，不把候选计入覆盖率。"
+    },
+    {
+      "shop": "矿也 MiNE",
+      "profileName": "矿也MiNE-官方客服",
+      "url": "https://www.xiaohongshu.com/user/profile/67d25d3f000000000e0118a1",
+      "profileHandle": "11571633126",
+      "result": "候选，未接入",
+      "reason": "仅见用户结果，未核对本店关联；不能因名称含官方就接入。"
+    }
+  ],
+  "limitations": "已增强并执行多轮；其余10家没有可接入的已核对账号，不等于网上不存在。逐店未完成路径已列明，未宣称完成全平台穷尽搜索。"
+}

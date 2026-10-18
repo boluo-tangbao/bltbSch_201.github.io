@@ -8,6 +8,7 @@ export interface DirectoryShop {
   name: string; floor?: string; kind?: string
   aliases?: string[]
   operatingConfirmation?: 'official-listing'
+  limited?: { scope: 'store' | 'theme'; period: string; startsOn?: string; endsOn?: string }
   status: 'recent' | 'listed' | 'older' | 'unverified' | 'closed'
   note: string; sources: ShopSource[]; kindSources?: ShopSource[]; accounts?: ShopAccount[]
 }

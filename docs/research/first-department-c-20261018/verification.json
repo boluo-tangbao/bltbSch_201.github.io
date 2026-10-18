@@ -1,0 +1,39 @@
+{
+  "runtime": "v24.19.0",
+  "originalAuthorFields": "unchanged",
+  "gallery": "all 21 unchanged",
+  "results": [
+    {
+      "width": 1440,
+      "open": 4,
+      "more": 14,
+      "accountLinks": 3,
+      "closedShown": 0,
+      "gallery": 21,
+      "initialCollapsed": true,
+      "overflow": false,
+      "lightbox": "passed",
+      "directRefresh": "passed"
+    },
+    {
+      "width": 390,
+      "open": 4,
+      "more": 14,
+      "accountLinks": 3,
+      "closedShown": 0,
+      "gallery": 21,
+      "initialCollapsed": true,
+      "overflow": false,
+      "lightbox": "passed",
+      "directRefresh": "passed"
+    }
+  ],
+  "searchAlias": "passed",
+  "pageErrors": [],
+  "breadCorrection": {
+    "aliasSearch": "面包谷找到第一百货",
+    "card": "默认营业列表可见",
+    "accountLink": "抖音认证店铺号KamiChaika链接正确",
+    "buildLog": "correction-checks.log"
+  }
+}
