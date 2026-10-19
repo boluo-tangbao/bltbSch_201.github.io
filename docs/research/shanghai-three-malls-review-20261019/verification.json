@@ -1,0 +1,69 @@
+{
+  "reviewedAt": "2026-10-19",
+  "commands": [
+    {
+      "cwd": "rank",
+      "command": "npm run validate:data",
+      "result": "通过：29地点、33更新"
+    },
+    {
+      "cwd": "rank",
+      "command": "npm test",
+      "result": "50通过、0失败"
+    },
+    {
+      "cwd": "rank",
+      "command": "npm run build",
+      "result": "vue-tsc及Vite通过"
+    }
+  ],
+  "log": "checks.log",
+  "browserObservations": "browser-observations.json",
+  "allThreeWidths": [
+    1440,
+    390
+  ],
+  "screenshots": [
+    "c-desktop-1440.png",
+    "c-mobile-390.png",
+    "new-world-desktop-1440.png",
+    "new-world-mobile-390.png",
+    "huasheng-desktop-1440.png",
+    "huasheng-mobile-390.png"
+  ],
+  "initialPendingCollapsed": true,
+  "limitedPendingEmptySectionHidden": true,
+  "confirmedSourceLists": 0,
+  "accounts": [
+    9,
+    7,
+    19
+  ],
+  "gallery": [
+    21,
+    12,
+    17
+  ],
+  "horizontalOverflow": false,
+  "search": {
+    "query": "ComicSoul",
+    "results": 1,
+    "place": "新世界城"
+  },
+  "expansion": {
+    "result": "未记通过",
+    "detail": "定位器点击、键盘、可访问展开和坐标点击均未能稳定核实展开；不冒充成功；共享组件未改，保留后续人工/稳定环境复核项。"
+  },
+  "map": {
+    "result": "不通过外部服务检查",
+    "detail": "百度APP Referer白名单错误弹窗，关闭后新标签可核数量与布局；未改地图配置。"
+  },
+  "reload": {
+    "result": "未完成本轮重复刷新验收",
+    "detail": "首次C馆标签同步超时，改新直达标签完成内容检查。"
+  },
+  "viewportReset": true,
+  "galleryInteraction": "数量保护通过，未重复全面放大/视频播放",
+  "publication": "本地完成，未发布、未推送",
+  "researchStatus": "已有内容日期/证据复核完成；完整商圈发现仍为阶段性结果"
+}

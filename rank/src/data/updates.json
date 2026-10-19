@@ -1,5 +1,27 @@
 [
   {
+    "id": "three-malls-date-evidence-review-20261019",
+    "date": "2026-10-19",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-001",
+      "shanghai-shop-003",
+      "shanghai-shop-004"
+    ],
+    "note": "按省年日期及本商圈证据新规则复核三处：新世界城漫魂核对品牌本人常驻回复后确认营业；C馆补全FenzGoods档期及谷回闭店年份，囍模屋/次元站台2024旧帖仍不作当前依据；华盛ANIKIGOODS按暂定截止日单列限时，UGOODS本年导览线索收进折叠。作者评价、到访与图集保留。"
+  },
+  {
+    "id": "jingan-joy-city-date-review-20261019",
+    "date": "2026-10-19",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-008"
+    ],
+    "note": "按平台省年日期规则重审静安大悦城：补全当年发表日期及本期档期，3条昨日期满记录转为已结束隐藏；复用本商场近年攻略与品牌分店关联，新增8条有效待核线索。现为12家常规确认、7条限时确认、14条常规待核、5条结束归档，保留原评价与图集。"
+  },
+  {
     "id": "jingan-joy-city-directory-20261018",
     "date": "2026-10-18",
     "type": "edited",

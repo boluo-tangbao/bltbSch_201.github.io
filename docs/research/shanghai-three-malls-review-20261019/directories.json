@@ -1,0 +1,1924 @@
+{
+  "shanghai-shop-001": {
+    "area": "C馆 · 一层、四至六层",
+    "checkedAt": "2026-10-19",
+    "shops": [
+      {
+        "name": "多摩万事屋（第一百货店）",
+        "aliases": [
+          "多摩万事屋",
+          "DOMO"
+        ],
+        "floor": "四层",
+        "kind": "动漫周边、授权同人周边",
+        "status": "listed",
+        "note": "已核对本分店小红书账号，主页明确列出第一百货C馆四楼地址；2026年1月报道也收录该店。账号同时提及静安大悦城分店，未混用其他分店的位置与货品。",
+        "sources": [
+          {
+            "label": "多摩第一百货店本人·地址与主营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/62fb4b19000000000f005c0d"
+          },
+          {
+            "label": "人民网·金台资讯（新浪转载）·第一百货商业中心实景介绍",
+            "url": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html",
+            "date": "2026-01-20"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "多摩万事屋（第一百货店）",
+            "handle": "Domo1008",
+            "url": "https://www.xiaohongshu.com/user/profile/62fb4b19000000000f005c0d",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "春日动漫中古店",
+        "aliases": [
+          "春日动漫周边",
+          "春日动漫"
+        ],
+        "floor": "六层",
+        "kind": "中古动漫周边",
+        "status": "recent",
+        "note": "已核对门店账号，当前简介列第一百货C栋六楼及线下经营；另读取09-17上新帖。置顶旧闭店帖指百米店，不是第一百货店，未把旧帖编辑时间当作新公告日期。",
+        "sources": [
+          {
+            "label": "春日门店本人·当前第一百货地址简介",
+            "url": "https://www.xiaohongshu.com/user/profile/5c62e10800000000120269f3"
+          },
+          {
+            "label": "春日门店号·博士招募周边上新",
+            "url": "https://www.xiaohongshu.com/explore/6aabaa37000000002900d5b5",
+            "date": "2026-09-17"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "春日动漫周边（中古）",
+            "handle": "550725626",
+            "url": "https://www.xiaohongshu.com/user/profile/5c62e10800000000120269f3",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "面包谷谷",
+        "aliases": [
+          "面包谷"
+        ],
+        "floor": "六层",
+        "kind": "动漫／游戏周边",
+        "status": "recent",
+        "note": "已核对抖音认证店铺账号，主页明确上海第一百货C馆六楼；账号展示2026年作品及多条写明本店地址的周边上新内容。面包店主题是概念风格，实际经营谷子；具体IP及库存以当日门店为准。",
+        "sources": [
+          {
+            "label": "面包谷谷抖音认证店铺号·当前地址与经营简介",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAKH7gNtMtBSr8IotvQjs3Xe2x9DgqnMf_BAWu2Uhx6Zg"
+          },
+          {
+            "label": "面包谷谷本人·超时空辉夜姬周边作品",
+            "url": "https://www.douyin.com/video/7600395171616515173",
+            "date": "2026-01-28"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "douyin",
+            "name": "面包谷谷（大脸猫版",
+            "handle": "KamiChaika",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAKH7gNtMtBSr8IotvQjs3Xe2x9DgqnMf_BAWu2Uhx6Zg",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "Sanrio Characters Cafe 三丽鸥家族主题餐厅",
+        "aliases": [
+          "三丽鸥家族主题餐厅",
+          "Sanrio Cafe"
+        ],
+        "floor": "四层",
+        "kind": "主题餐饮（三丽鸥）",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "品牌2026年9月15日公告明确本店地址，Hello Kitty sweet cafe主题期为2026年9月23日至2027年1月17日。仅说明这一期主题安排，不把限期菜单写成永久在售；与HAPPY ZOO小铺分开记录。",
+        "sources": [
+          {
+            "label": "Sanriocharacters_Cafe·Hello Kitty sweet cafe本店主题公告",
+            "url": "https://www.sina.cn/news/detail/5343493154930981.html",
+            "date": "2026-09-15"
+          }
+        ],
+        "limited": {
+          "scope": "theme",
+          "period": "Hello Kitty sweet cafe：2026-09-23 至 2027-01-17",
+          "startsOn": "2026-09-23",
+          "endsOn": "2027-01-17"
+        }
+      },
+      {
+        "name": "Mr.T 托老师の谷店",
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆四层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "次元站台",
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年攻略与旧研究已读品牌简介支持本商场关联。本轮重读品牌主页，上海站与南京站共用；最新已读作品显示2024-10-29，另一经营视频2024-08-22，均不改为今年或用作当前在营证据。当前分店有效经营原帖仍待核，不把南京或线上经营直接当C馆营业。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          },
+          {
+            "label": "次元站台品牌本人·上海/南京分店关联（旧研究与本轮主页核对）",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAao2NzevBvK00jY4u1JKTrPdevuUVDb_6IEECCLIMPvn3M65ocmNbdct7ds7b_7U6",
+            "dateLabel": "无主页发表日期；2026-10-18旧研究核本店关联，2026-10-19重读简介与作品年份"
+          }
+        ]
+      },
+      {
+        "name": "偶尔梦游",
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆四层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "HAPPY ZOO 小铺",
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆四层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。不以主题餐厅的活动公告替代零售小铺确认。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "巫狐魔谷店",
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆四层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "谷的Time",
+        "floor": "四层 · 10号铺",
+        "status": "recent",
+        "note": "一百店本人简介明确C馆四楼10号铺、线下到店经营；主页有周边上新内容，用户搜索显示“1天前更新”。该相对时间仅按原文保留，不换算发帖日期。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          },
+          {
+            "label": "谷的Time一百店本人·铺位、主营与线下经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/635a1cea00000000120257a6"
+          },
+          {
+            "label": "谷的Time一百店·舞萌新品（主页读取标题）",
+            "url": "https://www.xiaohongshu.com/explore/6ad223ec000000001b033b55",
+            "dateLabel": "帖子未取得明确日期；用户搜索显示1天前更新，2026-10-18读取"
+          }
+        ],
+        "aliases": [
+          "谷的time 一百店"
+        ],
+        "kind": "动漫／游戏周边、谷美",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "谷的time 一百店",
+            "handle": "5466814819",
+            "url": "https://www.xiaohongshu.com/user/profile/635a1cea00000000120257a6",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "Koi Tune",
+        "floor": "五层",
+        "status": "unverified",
+        "note": "2025年商场报道与2026年攻略均收录；站内检索找到杭州分店及未明确本分店地址的品牌候选，不能据此确认C馆店当前营业。 两条本商场跨年独立来源增强点位证据，不因未接账号忽略；仍不借杭州分店确认上海在营。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          },
+          {
+            "label": "新民晚报张钰芸·上观新闻（C馆4至6楼引进店铺）",
+            "url": "https://www.shobserver.com/wx/detail.do?id=904356",
+            "date": "2025-05-03"
+          }
+        ]
+      },
+      {
+        "name": "囍模屋",
+        "floor": "六层",
+        "status": "unverified",
+        "note": "2026-06-11本商场攻略与本人简介均支持C馆六楼点位。2026-10-19重读本人主页及原帖，模型教室活动实际发布于2024-10-01，另一帖2024-09-18；旧帖仅归档。分店关联较强，但未取得2025—2026本店经营原文，不接营业账号，不将旧帖改成今年。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          },
+          {
+            "label": "囍模屋本人·C馆六楼身份与地址简介（经营帖年份另核）",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAiI5QfEa9Jo9uDoooLNkadjVmLqPvJTIZ6SH2Aai9ZTcsr8nCtwCacfff1FF2jgsz",
+            "dateLabel": "主页无发表日期；2026-10-19实际读取，活动原帖为2024年，仅用于身份核对"
+          }
+        ]
+      },
+      {
+        "name": "棉花猫谷屋",
+        "floor": "六层",
+        "status": "unverified",
+        "note": "2026年6月攻略列C馆六层；检索到的近名“绵花猫谷屋”本人简介及2025年指路帖均指华盛街地下二层。尚未确认两者关系，不把华盛街账号作为C馆营业依据。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "真谷",
+        "floor": "六层",
+        "status": "unverified",
+        "note": "2026年6月攻略列C馆六层；本轮未匹配到可核实的门店账号。相近名称网店的争议或停业信息不能作为本实体店闭店结论，仍保留待核实。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "水豚小怪兽",
+        "floor": "六层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆六层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "CREAM CAFE",
+        "floor": "六层",
+        "status": "unverified",
+        "note": "2026年公告注明C馆六层cream cafe，素晴日联动期为7月20日至8月10日，现已结束；这不等于咖啡店闭店。抖音同名候选缺少分店关联，当前营业仍待确认，不展示已结束主题。 2026-07-01公告中的7/20—8/10明确解释为2026年已结束主题，店铺本身不据此闭店；当前排期仍待核。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          },
+          {
+            "label": "尼库漫肉包文化·素晴日联动地址公告（该期已结束）",
+            "url": "https://www.sina.cn/news/detail/5315848672648147.html",
+            "date": "2026-07-01"
+          }
+        ],
+        "kind": "主题餐饮"
+      },
+      {
+        "name": "奶惜 nicegoods",
+        "status": "recent",
+        "note": "门店本人简介列明第一百货C馆四楼地址；已读取到店选购与一番赏上新帖，账号与本店对应。具体货品以门店当日为准。",
+        "sources": [
+          {
+            "label": "人民网·金台资讯（新浪转载）·第一百货商业中心实景介绍",
+            "url": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html",
+            "date": "2026-01-20"
+          },
+          {
+            "label": "奶惜本人·当前C馆四楼地址简介",
+            "url": "https://www.xiaohongshu.com/user/profile/65378f040000000004009d05"
+          },
+          {
+            "label": "奶惜本人·世界之外一番赏来啦",
+            "url": "https://www.xiaohongshu.com/explore/69732a9c000000000c03545e",
+            "date": "2026-01-23"
+          }
+        ],
+        "aliases": [
+          "奶惜",
+          "奶惜 nice goods"
+        ],
+        "floor": "四层",
+        "kind": "游戏周边、一番赏（含恋与深空、光与夜之恋、世界之外）",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "奶惜 nice goods",
+            "handle": "5996182392",
+            "url": "https://www.xiaohongshu.com/user/profile/65378f040000000004009d05",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "萌樱",
+        "status": "unverified",
+        "note": "2026年1月报道收录于第一百货C馆二次元区域；未明确到单店楼层，本轮未确认当前营业，暂不猜填位置或主营。",
+        "sources": [
+          {
+            "label": "人民网·金台资讯（新浪转载）·第一百货商业中心实景介绍",
+            "url": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html",
+            "date": "2026-01-20"
+          }
+        ]
+      },
+      {
+        "name": "古典玩偶",
+        "floor": "一层",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "商场官方新店公告列明C馆L1新开门店；单店主营尚未独立核实，暂不猜填。",
+        "sources": [
+          {
+            "label": "第一百货商业中心官方·C馆新店与慢闪公告",
+            "url": "https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3",
+            "dateLabel": "2026-10-08（编辑时间；原页面“编辑于10-08”，不当原发表日）"
+          }
+        ]
+      },
+      {
+        "name": "阅文好物",
+        "floor": "四层",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "商场官方新店公告列明C馆L4新开门店；未把品牌其他分店或活动货品套用于本店。",
+        "sources": [
+          {
+            "label": "第一百货商业中心官方·C馆新店与慢闪公告",
+            "url": "https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3",
+            "dateLabel": "2026-10-08（编辑时间；原页面“编辑于10-08”，不当原发表日）"
+          }
+        ]
+      },
+      {
+        "name": "雪鱼町",
+        "floor": "四层",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "商场官方新店公告列C馆L4；雪鱼工作室本人简介亦列第一百货C馆四层，主页有动漫／游戏周边上新。旧大悦城搬迁或闭店内容不适用于现C馆店。",
+        "sources": [
+          {
+            "label": "第一百货商业中心官方·C馆新店与慢闪公告",
+            "url": "https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3",
+            "dateLabel": "2026-10-08（编辑时间；原页面“编辑于10-08”，不当原发表日）"
+          },
+          {
+            "label": "雪鱼工作室本人·当前C馆四层地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/667bb78a000000001c0005a1"
+          }
+        ],
+        "aliases": [
+          "雪鱼工作室"
+        ],
+        "kind": "动漫／游戏周边",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "雪鱼工作室",
+            "handle": "49321522910",
+            "url": "https://www.xiaohongshu.com/user/profile/667bb78a000000001c0005a1",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "谷子集合·绘梦造物",
+        "floor": "五层",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "商场官方新店公告列明C馆L5新开门店；单店主营及独立账号尚未确认。",
+        "sources": [
+          {
+            "label": "第一百货商业中心官方·C馆新店与慢闪公告",
+            "url": "https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3",
+            "dateLabel": "2026-10-08（编辑时间；原页面“编辑于10-08”，不当原发表日）"
+          }
+        ]
+      },
+      {
+        "name": "FenzGoods 慢闪店（非人哉·荒野俱乐部）",
+        "floor": "四层",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "复用2026-10-18已读商场官方本店公告，编辑时间10-08按平台规则解释为2026-10-08；文内9月30日至10月31日为同年本期慢闪。整店限时，结束后复核隐藏，不推断品牌永久闭店。",
+        "sources": [
+          {
+            "label": "第一百货商业中心官方·C馆新店与慢闪公告",
+            "url": "https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3",
+            "dateLabel": "2026-10-08（编辑时间；原页面“编辑于10-08”，不当原发表日）"
+          }
+        ],
+        "kind": "限时主题周边（非人哉）",
+        "limited": {
+          "scope": "store",
+          "period": "2026-09-30 至 2026-10-31",
+          "startsOn": "2026-09-30",
+          "endsOn": "2026-10-31"
+        }
+      },
+      {
+        "name": "六柴谷屋（第一百货店）",
+        "aliases": [
+          "六柴谷屋"
+        ],
+        "floor": "六层",
+        "kind": "动漫／游戏周边",
+        "status": "recent",
+        "note": "门店本人主页名明确上海第一百货C馆6楼，已读主页经营内容含周边上新及上海店地址帖；上海店地址帖04-23按原读取当年解释为2026-04-23，保留原标签与理由于本轮台账。",
+        "sources": [
+          {
+            "label": "六柴谷屋本人·当前上海第一百货C馆6楼主页",
+            "url": "https://www.xiaohongshu.com/user/profile/618d2992000000001000ec47"
+          },
+          {
+            "label": "六柴谷屋本人·上海店地址",
+            "url": "https://www.xiaohongshu.com/explore/69ea11e9000000001f006335",
+            "date": "2026-04-23"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "六柴谷屋上海第一百货c馆6楼",
+            "handle": "xxs0331",
+            "url": "https://www.xiaohongshu.com/user/profile/618d2992000000001000ec47",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "铃夏学园（上海店）",
+        "aliases": [
+          "铃夏学园"
+        ],
+        "floor": "六层",
+        "kind": "视觉小说／Galgame周边、中古周边",
+        "status": "recent",
+        "note": "品牌本人当前简介列上海第一百货C馆六楼，并有2025年12月新店开业指引。该账号同时服务武汉店，武汉经营内容不作为上海现货依据；旧TPY地址不再用于本店。",
+        "sources": [
+          {
+            "label": "铃夏学园本人·上海与武汉分店地址简介",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAMquuwI9GwVygSK8mUA9kZ7jYvm9SjaXyzppIOQFDChrV8sdVmlmIPgkQthk7DJS7"
+          },
+          {
+            "label": "铃夏学园本人·新店开业与新地址指引",
+            "url": "https://www.douyin.com/video/7589996999739526457",
+            "date": "2025-12-31"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "douyin",
+            "name": "铃夏学园",
+            "handle": "75225236295",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAMquuwI9GwVygSK8mUA9kZ7jYvm9SjaXyzppIOQFDChrV8sdVmlmIPgkQthk7DJS7",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "蔷薇石英",
+        "aliases": [
+          "蔷薇石英RoseQuartz"
+        ],
+        "kind": "同人周边、寄售周边、棉花娃娃",
+        "status": "recent",
+        "note": "同人社团本人主页明确门店位于第一百货C馆，有本店上新及明确写出2026年的到店活动内容；未取得单店楼层，不猜填。往期活动不代表当前仍可领取。",
+        "sources": [
+          {
+            "label": "新民晚报张钰芸·上观新闻（C馆4至6楼引进店铺）",
+            "url": "https://www.shobserver.com/wx/detail.do?id=904356",
+            "date": "2025-05-03"
+          },
+          {
+            "label": "蔷薇石英本人·C馆门店简介与上新作品",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAA191NHHtR3g0vVytffbXFFIf93DilXZSABRm-P3-Qa1MsnAy3lhczJoO2j4BRWXJN"
+          },
+          {
+            "label": "蔷薇石英本人·2026年1月店内活动（已结束，仅作经营依据）",
+            "url": "https://www.douyin.com/note/7592064894402283688",
+            "dateLabel": "正文活动从2026-01-07开启；未取得发帖日期"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "douyin",
+            "name": "蔷薇石英RoseQuartz",
+            "handle": "29278068705",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAA191NHHtR3g0vVytffbXFFIf93DilXZSABRm-P3-Qa1MsnAy3lhczJoO2j4BRWXJN",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "Magic WOW",
+        "status": "unverified",
+        "note": "2025年报道列入C馆4至6楼引进名单，未指明单店楼层；账号检索主要为外地分店，不能确认C馆当前营业。",
+        "sources": [
+          {
+            "label": "新民晚报张钰芸·上观新闻（C馆4至6楼引进店铺）",
+            "url": "https://www.shobserver.com/wx/detail.do?id=904356",
+            "date": "2025-05-03"
+          }
+        ]
+      },
+      {
+        "name": "百人卡牌对战中心",
+        "status": "unverified",
+        "note": "2025年报道以此名列入C馆4至6楼引进名单，未指明单店楼层；站内用户搜索未取得可关联本店的经营账号，店名仍待本店核对。",
+        "sources": [
+          {
+            "label": "新民晚报张钰芸·上观新闻（C馆4至6楼引进店铺）",
+            "url": "https://www.shobserver.com/wx/detail.do?id=904356",
+            "date": "2025-05-03"
+          }
+        ]
+      },
+      {
+        "name": "次元无极",
+        "status": "unverified",
+        "note": "2025年报道列入C馆4至6楼引进名单，未指明单店楼层；同名第一百货账号无简介、无作品，尚不足以确认本分店当前营业。",
+        "sources": [
+          {
+            "label": "新民晚报张钰芸·上观新闻（C馆4至6楼引进店铺）",
+            "url": "https://www.shobserver.com/wx/detail.do?id=904356",
+            "date": "2025-05-03"
+          }
+        ]
+      },
+      {
+        "name": "琉璃星",
+        "status": "unverified",
+        "note": "2025年报道列入C馆4至6楼引进名单，未指明单店楼层；检索到的品牌候选未明确关联本店，当前营业待核实。",
+        "sources": [
+          {
+            "label": "新民晚报张钰芸·上观新闻（C馆4至6楼引进店铺）",
+            "url": "https://www.shobserver.com/wx/detail.do?id=904356",
+            "date": "2025-05-03"
+          }
+        ]
+      },
+      {
+        "name": "谷回动漫中古店（第一百货店）",
+        "aliases": [
+          "谷回动漫中古店",
+          "谷回动漫一百店"
+        ],
+        "floor": "六层",
+        "kind": "中古动漫周边",
+        "status": "closed",
+        "note": "门店本人公告明确一百店10月8日正式闭店，线上仍经营、后续另开新店。账号近期上新和新店预告不作为第一百货旧店复业依据；本条从前台及展开计数中隐藏。公告编辑日09-24按原读取当年为2026-09-24；同一期预告10月8日正式闭店归属2026-10-08，仍不认线上上新为旧店复业。",
+        "sources": [
+          {
+            "label": "谷回门店本人·谷回动漫一百店闭店",
+            "url": "https://www.xiaohongshu.com/explore/6ab4ce8b0000000014003726",
+            "dateLabel": "2026-09-24（编辑时间；原页面“编辑于09-24”，不当原发表日）"
+          },
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "谷回动漫中古店",
+            "handle": "11602787116",
+            "url": "https://www.xiaohongshu.com/user/profile/661a56990000000007007000",
+            "scope": "brand"
+          }
+        ]
+      }
+    ]
+  },
+  "shanghai-shop-003": {
+    "area": "新世界城 · 四层Fun肆街区、八层主题餐饮",
+    "checkedAt": "2026-10-19",
+    "shops": [
+      {
+        "name": "CAPCOM STORE CHINA 喀普康中心",
+        "aliases": [
+          "卡普空",
+          "CAPCOM"
+        ],
+        "floor": "四层 · B08",
+        "kind": "游戏周边（CAPCOM）",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "CAPCOM 当前官网门店目录列出上海新世界城四楼 B08；小红书门店号发布上海中心上新与2025新年活动。具体到货以本店公告为准。",
+        "sources": [
+          {
+            "label": "CAPCOM 官网当前门店目录（上海店）",
+            "url": "https://www.capcom.co.jp/amusement/brands/capcomstore/"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "CAPCOM卡普空中心",
+            "handle": "9685517887",
+            "url": "https://www.xiaohongshu.com/user/profile/6481e8f2000000001001fb99",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "小小谷努咪",
+        "floor": "四层",
+        "kind": "毛绒周边（含明日方舟）",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "商场官方 10 月 17 日上新帖明确列出四楼门店；实际角色与库存以门店为准。",
+        "sources": [
+          {
+            "label": "上海新世界城官方微博（小小谷努咪上新）",
+            "url": "https://www.sina.cn/news/detail/5354964727628101.html",
+            "date": "2026-10-17"
+          }
+        ]
+      },
+      {
+        "name": "矿也 MiNE",
+        "aliases": [
+          "矿也",
+          "MiNE"
+        ],
+        "floor": "四层",
+        "kind": "原创 IP 周边、毛绒",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "商场官方2026年10月10日公告列出新世界城四楼门店；另核对矿也MiNE品牌号，近期绵绵玛咻上新帖明确列本店四层地址。首发及库存以当日门店为准。",
+        "sources": [
+          {
+            "label": "上海新世界城官方微博（矿也门店上新）",
+            "url": "https://www.sina.cn/media/2210057511",
+            "date": "2026-10-10"
+          },
+          {
+            "label": "矿也MiNE品牌号·绵绵玛咻线下首发与门店地址",
+            "url": "https://www.xiaohongshu.com/explore/6aca0e1f000000000a020a9f",
+            "dateLabel": "页面显示“编辑于7天前”（2026-10-18核对，未换算具体发帖日期）"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "矿也MiNE",
+            "handle": "KuangYeMiNE",
+            "url": "https://www.xiaohongshu.com/user/profile/65315a79000000002a034608",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "SNK 中心",
+        "aliases": [
+          "SNK"
+        ],
+        "kind": "游戏周边（SNK）",
+        "status": "recent",
+        "note": "已核对小红书官方授权店账号；2025年9月29日实际上新帖写明新世界城四楼 SNK 中心，补足此前只有开店预告的证据。",
+        "sources": [
+          {
+            "label": "SNK 中心官方授权店·国庆新品上架与门店地址",
+            "url": "https://www.xiaohongshu.com/explore/68db55be000000000402244c",
+            "date": "2025-09-29"
+          },
+          {
+            "label": "SNK 官方上海门店预告",
+            "url": "https://www.snkchina.com.cn/general/news/20250728/60112.html",
+            "date": "2025-07-21"
+          }
+        ],
+        "floor": "四层",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "SNK中心-官方授权店",
+            "handle": "18951356220",
+            "url": "https://www.xiaohongshu.com/user/profile/683d176c000000001d017a7d",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "新漫界",
+        "aliases": [
+          "新铛集",
+          "新鐺集"
+        ],
+        "floor": "四层",
+        "kind": "动漫周边",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "新世界公司管理层2026年5月27日明确：新铛集新世界店已更名为自有品牌“新漫界”，继续自主组织货源、丰富IP组合；旧名作为别名保留，未重复列店。",
+        "sources": [
+          {
+            "label": "新世界公司管理层·2025年度业绩说明会问答10",
+            "url": "https://roadshow.cnstock.com/fbh/xsj2025",
+            "date": "2026-05-27"
+          }
+        ]
+      },
+      {
+        "name": "三丽鸥 Sanrio Gift Gate",
+        "aliases": [
+          "三丽欧",
+          "Sanrio"
+        ],
+        "floor": "四层",
+        "kind": "角色周边（三丽鸥）",
+        "status": "listed",
+        "note": "当前官网目录确认本店；另核对“三丽鸥新世界城1”门店经营号，简介明确南京西路2—68号新世界城四楼，主页有店铺日常和新品上新。具体商品以当日门店为准。",
+        "sources": [
+          {
+            "label": "三丽鸥官网当前线下门店目录·上海新世界商场",
+            "url": "https://www.sanrio.com.cn/store.html"
+          },
+          {
+            "label": "三丽鸥新世界城门店经营号·当前地址与上新主页",
+            "url": "https://www.xiaohongshu.com/user/profile/561329f23f95a3652527ff53",
+            "dateLabel": "当前主页未标发布日期，2026-10-18读取；身份及地址与官网店单核对"
+          }
+        ],
+        "operatingConfirmation": "official-listing",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "三丽鸥新世界城1",
+            "handle": "63575637441",
+            "url": "https://www.xiaohongshu.com/user/profile/561329f23f95a3652527ff53",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "IPSTAR 潮玩星球（零售店）",
+        "aliases": [
+          "潮玩星球",
+          "IPSTAR"
+        ],
+        "floor": "四层",
+        "kind": "动漫／游戏周边",
+        "status": "unverified",
+        "note": "2026年6月攻略收录四楼零售店；本轮官方新公告确认的是不同铺位的主题餐厅，不能直接替代独立零售店营业核实。零售店继续保留为线索，主题店按各自档期另列。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "GOODSLOVE 谷乐屋",
+        "aliases": [
+          "GOODS LOVE",
+          "GoodsLove"
+        ],
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列新世界城四楼；本轮用户检索主要为五角场、焦作等分店及未明确本店的品牌候选，尚不足以确认该分店当前营业。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "漫魂 comic soul",
+        "aliases": [
+          "漫魂",
+          "ComicSoul",
+          "漫魂ComicSoul"
+        ],
+        "floor": "四层",
+        "status": "recent",
+        "note": "品牌本人2026-09-12多店上新正文涉及上海新世界，作者09-26明确新世界快闪已结束、4F漫魂门店常驻，10-05仍回复在漫魂门店；本轮核对品牌主页名称、号与经营简介，分店经营关联充分，升级营业确认。DIY是常驻上新，已结束快闪不等于常设店闭店；五角场闭店不套到本店。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          },
+          {
+            "label": "漫魂品牌本人·多店上新与新世界四楼常驻回复",
+            "url": "https://www.xiaohongshu.com/explore/6aa53b160000000027009c8e",
+            "date": "2026-09-12"
+          },
+          {
+            "label": "漫魂ComicSoul·品牌身份及经营主页",
+            "url": "https://www.xiaohongshu.com/user/profile/59acc6345e87e725d76d5a59",
+            "dateLabel": "无主页发表日期；2026-10-19实际读取品牌名、号及经营简介"
+          }
+        ],
+        "kind": "动漫／游戏周边、卡牌、不织布DIY",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "漫魂ComicSoul",
+            "handle": "27760645347",
+            "url": "https://www.xiaohongshu.com/user/profile/59acc6345e87e725d76d5a59",
+            "scope": "brand"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "漫魂本人·不织布DIY常驻上新与新世界店回复",
+            "url": "https://www.xiaohongshu.com/explore/6aa53b160000000027009c8e",
+            "date": "2026-09-12"
+          },
+          {
+            "label": "漫魂ComicSoul本人·手办卡牌谷子经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/59acc6345e87e725d76d5a59",
+            "dateLabel": "主页无发表日期；2026-10-19实际读取"
+          }
+        ]
+      },
+      {
+        "name": "LCH 领潮汇 goods",
+        "aliases": [
+          "领潮汇",
+          "LCH"
+        ],
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列新世界城四楼；已补查站内用户结果，本轮未取得能对应本分店的经营账号，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "芳香屋",
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列新世界城四楼；已补查站内用户结果，本轮未取得能对应本分店的经营账号，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "二次三香",
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列新世界城四楼；已补查站内用户结果，本轮未取得能对应本分店的经营账号，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "墟弥 Goods",
+        "aliases": [
+          "墟弥",
+          "墟弥goods"
+        ],
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2025年12月报道收录本店；本轮已找到认证品牌抖音号，但已读内容未取得新世界城分店当前营业确认。全国通贩及大悦城快闪不作为该分店确认依据。",
+        "sources": [
+          {
+            "label": "赢商网·新世界城业态报道（熊舒苗）",
+            "url": "https://m.winshang.com/news737942.html",
+            "date": "2025-12-26"
+          }
+        ]
+      },
+      {
+        "name": "谷力全开（新世界城店）",
+        "aliases": [
+          "谷力全开",
+          "上海谷力全开谷子店"
+        ],
+        "floor": "四层 · 4A21",
+        "kind": "动漫／游戏周边",
+        "status": "recent",
+        "note": "本人账号当前简介列人民广场新世界城四楼；开业指引写明4A21，2026年经营内容也明确本店。账号同时服务五角场店，不把另一分店货品直接套用于本店；旧“鸣潮餐厅旁”仅是当时路引。",
+        "sources": [
+          {
+            "label": "谷力全开本人·当前分店简介",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAn0KtLk4JJrIvB7f_zu_rO85cP_h7uOOx4BsrhYeZy0lDiZigPBbaMBgzb4_-RbGQ",
+            "dateLabel": "当前主页未标发布日期，2026-10-18读取"
+          },
+          {
+            "label": "谷力全开本人·新世界城路线指引",
+            "url": "https://www.douyin.com/video/7523190582504983843",
+            "date": "2025-07-04"
+          },
+          {
+            "label": "谷力全开本人·开业地址4A21（主页已读正文）",
+            "url": "https://www.douyin.com/video/7520564859622559028",
+            "dateLabel": "未独立取得发布日期，2026-10-18读取主页作品正文"
+          },
+          {
+            "label": "谷力全开本人·凹凸世界十周年新世界城首发（往期经营依据）",
+            "url": "https://www.douyin.com/note/7652344844216961204",
+            "dateLabel": "正文写开售时间2026-06-18；未取得发帖日期"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "douyin",
+            "name": "上海谷力全开谷子店",
+            "handle": "82429591376",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAn0KtLk4JJrIvB7f_zu_rO85cP_h7uOOx4BsrhYeZy0lDiZigPBbaMBgzb4_-RbGQ",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "星河动漫（新世界城店）",
+        "aliases": [
+          "星河动漫",
+          "XHDM"
+        ],
+        "kind": "动漫周边",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "品牌官方2026年9月公告将上海新世界城店列入同期经营门店，按官方确认接入。9月25日至10月7日的店庆优惠已结束，不代表门店关闭；单店楼层尚未独立核实。",
+        "sources": [
+          {
+            "label": "星河动漫XHDM官方·九店活动门店名单",
+            "url": "https://www.sina.cn/news/detail/5346280440333408.html",
+            "date": "2026-09-23"
+          }
+        ]
+      },
+      {
+        "name": "無限萌界（新世界城店）",
+        "aliases": [
+          "无限萌界",
+          "無限萌界",
+          "圣百合魔法学院"
+        ],
+        "floor": "八层",
+        "kind": "主题餐饮",
+        "status": "recent",
+        "note": "门店本人简介明确新世界城8F、点单时间及试营业信息；主页有10月17日至23日当值表和餐饮内容。作为主题餐饮收录，与四层“新漫界”是不同主体；往期联动不视为当前仍在开展。 结合2026年10月18日已读近期当值表，10.17—10.23解释为2026-10-17至10-23；排班不是整店限时。",
+        "sources": [
+          {
+            "label": "無限萌界本人·八楼地址、试营业与餐饮经营主页",
+            "url": "https://www.xiaohongshu.com/user/profile/65570708000000000802c1a5",
+            "dateLabel": "当前主页无发表日期；当值表2026-10-17至10-23（原文10.17～10.23，结合2026-10-18当期内容判断）"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "無限萌界_新世界城",
+            "handle": "7097281814",
+            "url": "https://www.xiaohongshu.com/user/profile/65570708000000000802c1a5",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "IPSTAR 怪物猎人：荒野主题店（2026年秋季限定）",
+        "floor": "四层 · A18–19（一店）",
+        "kind": "联动餐饮、游戏周边（怪物猎人：荒野）",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "品牌官方门店公告明确新世界城一店，营业期限为2026年9月19日至11月22日。仅收录这一期主题，到期应隐藏归档；不沿用已结束的鸣潮夏季主题。",
+        "sources": [
+          {
+            "label": "IPSTAR官方·主题店地址与营业期限一览",
+            "url": "https://www.sina.cn/news/detail/5346974813137260.html",
+            "date": "2026-09-25"
+          }
+        ],
+        "limited": {
+          "scope": "theme",
+          "period": "2026-09-19 至 2026-11-22",
+          "startsOn": "2026-09-19",
+          "endsOn": "2026-11-22"
+        }
+      },
+      {
+        "name": "IPSTAR 犬夜叉主题餐厅（2026年秋季限定）",
+        "floor": "四层 · B14–15（二店）",
+        "kind": "联动餐饮、动漫周边（犬夜叉）",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "品牌官方门店公告明确上海新世界城二店，营业期限为2026年9月25日至11月29日。与同主题广州店分开核对，到期应隐藏归档。",
+        "sources": [
+          {
+            "label": "IPSTAR官方·主题店地址与营业期限一览",
+            "url": "https://www.sina.cn/news/detail/5346974813137260.html",
+            "date": "2026-09-25"
+          }
+        ],
+        "limited": {
+          "scope": "theme",
+          "period": "2026-09-25 至 2026-11-29",
+          "startsOn": "2026-09-25",
+          "endsOn": "2026-11-29"
+        }
+      },
+      {
+        "name": "IPSTAR 加油吧！中村君！！主题店（2026年秋季限定）",
+        "floor": "四层 · 潮玩星球三店",
+        "kind": "主题餐饮（加油吧！中村君！！）",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "商场本人公告明确潮玩星球三店，档期为2026年10月1日至11月1日，供应主食、甜品和饮品。暂未核实零售周边，不猜填商品阵容；到期应隐藏归档。",
+        "sources": [
+          {
+            "label": "上海新世界城官方·中村君主题店地址及档期",
+            "url": "https://www.xiaohongshu.com/explore/6abcbc6e000000001802dcfb",
+            "dateLabel": "2026-09-30（编辑时间；原页面“编辑于09-30”，不当原发表日）"
+          }
+        ],
+        "limited": {
+          "scope": "theme",
+          "period": "2026-10-01 至 2026-11-01",
+          "startsOn": "2026-10-01",
+          "endsOn": "2026-11-01"
+        }
+      },
+      {
+        "name": "谷里谷气",
+        "floor": "四层",
+        "status": "closed",
+        "note": "新闻晨报2025年11月19日报道本店已发布闭店公告、11月15日起闭店清仓。2026年攻略仍列旧店名，不能覆盖明确闭店信息；本轮未取得重新营业公告，前台隐藏，最终撤店日期未独立核实。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          },
+          {
+            "label": "新闻晨报·记者王丽芳报道新世界城谷里谷气闭店公告",
+            "url": "https://ep.shxwcb.com/2025/11/19/20251119-02-2_20251118234808.html",
+            "date": "2025-11-19"
+          }
+        ]
+      },
+      {
+        "name": "IPSTAR 鸣潮主题店（2026 年夏季限定）",
+        "floor": "四层 · A18–19",
+        "kind": "联动餐饮、游戏周边（鸣潮）",
+        "status": "closed",
+        "note": "品牌 2026 年 7 月 8 日公告明确该期主题店于 7 月 12 日结束。仅指这一期主题活动结束，不代表潮玩星球零售店或其他主题店整体闭店。",
+        "sources": [
+          {
+            "label": "IPSTAR 官方鸣潮主题店闭店提醒",
+            "url": "https://www.sina.cn/news/detail/5318412382245813.html",
+            "date": "2026-07-08"
+          }
+        ],
+        "limited": {
+          "scope": "theme",
+          "period": "截至2026-07-12（开始日期未核实）",
+          "endsOn": "2026-07-12"
+        }
+      }
+    ]
+  },
+  "shanghai-shop-004": {
+    "area": "华盛街／漫趣集（阶段性整理）",
+    "checkedAt": "2026-10-19",
+    "shops": [
+      {
+        "name": "700谷玩铺",
+        "floor": "负一层B1号（7号口下方第一间）",
+        "kind": "动漫／游戏周边、中古",
+        "status": "recent",
+        "note": "本人简介明确华盛街B1层B1号；主页有中古整理、上新内容。开业置顶帖未独立取得发表日期，不将标题月日当发表日；周三定休以本人当日公告为准。",
+        "sources": [
+          {
+            "label": "700谷玩铺本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/6308a8d00000000012002ec0",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "10.18 一些中古整理—萤火虫之嫁（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/6ad48777000000002a004633",
+            "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "700谷玩铺本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/6308a8d00000000012002ec0",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "700谷玩铺",
+            "handle": "5456884873",
+            "url": "https://www.xiaohongshu.com/user/profile/6308a8d00000000012002ec0",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "ANIKIGOODS",
+        "floor": "负一层129—130号",
+        "kind": "动漫／游戏周边、中古（生化危机、女神异闻录）",
+        "status": "recent",
+        "note": "本人简介明确华盛小亭负一层129—130号及暂定营业至2026-12-31、后续计划待定；这是整店目前公布的营业期限，按新规则单列限时栏。仍在期限内，不提前关闭；到期或公告变更时复核，不视作已永久闭店。",
+        "sources": [
+          {
+            "label": "ANIKIGOODS本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/5cc83f4c00000000110172c7",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "生化危机趴趴上新（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/6ad48191000000001e034e2d",
+            "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "ANIKIGOODS本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/5cc83f4c00000000110172c7",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "ANIKIGOODS",
+            "handle": "649654187",
+            "url": "https://www.xiaohongshu.com/user/profile/5cc83f4c00000000110172c7",
+            "scope": "store"
+          }
+        ],
+        "aliases": [
+          "ANIKI GOODS"
+        ],
+        "limited": {
+          "scope": "store",
+          "period": "暂定营业至2026-12-31（开始日期未核实，后续计划待定）",
+          "endsOn": "2026-12-31"
+        }
+      },
+      {
+        "name": "白茶织梦屋",
+        "floor": "负一层BW137号",
+        "kind": "动漫／游戏周边、手作同人、寄售周边",
+        "status": "recent",
+        "note": "本人简介明确华盛小亭B1层BW137号及手作同人、格子铺经营；已读主页上新标题。2025年新闻晨报采访可作历史品类补充，不代替本人现址。",
+        "sources": [
+          {
+            "label": "白茶织梦屋本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/60c4650800000000010040fa",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "生化危机、剑风传奇上新（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/6ad49850000000002902fd77",
+            "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+          },
+          {
+            "label": "新闻晨报王丽芳·华盛谷店实地采访",
+            "url": "https://ep.shxwcb.com/2025/08/22/20250822-03-1_20250821235021.html",
+            "date": "2025-08-22"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "白茶织梦屋本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/60c4650800000000010040fa",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "白茶织梦屋",
+            "handle": "2629027411",
+            "url": "https://www.xiaohongshu.com/user/profile/60c4650800000000010040fa",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "邮差喵谷",
+        "floor": "负一层BE73—75号",
+        "kind": "动漫周边、中古、寄售周边",
+        "status": "recent",
+        "note": "本人简介列BE73—75号，已读本人B1寄售公告正文及主页中古寄售上新。公告只显示编辑月日，保留原文时间，不将当时招租价格写作当前优惠。",
+        "sources": [
+          {
+            "label": "邮差喵谷本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/68a2bc520000000019014040",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "华盛小亭 B1 寄售火热招募中！欢迎邮寄！（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/68d4f64d000000000e020d03",
+            "dateLabel": "2026-09-12（编辑时间；原页面“编辑于09-12”，不当原发表日）"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "邮差喵谷本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/68a2bc520000000019014040",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "邮差喵谷",
+            "handle": "42209956949",
+            "url": "https://www.xiaohongshu.com/user/profile/68a2bc520000000019014040",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "星星糖谷小屋",
+        "floor": "负一层BW126号（罗森后面第二家）",
+        "kind": "游戏周边、寄售周边（世界计划）",
+        "status": "recent",
+        "note": "本人简介明确华盛小亭B1 BW126，主页有格子余量、周边补货内容。2026年报道记述其从悦荟迁来，未把旧悦荟地址用于华盛店。",
+        "sources": [
+          {
+            "label": "星星糖谷小屋本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/674c3eba000000001d02c581",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "华盛小亭星星糖格子余量更新！（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/6acca0b3000000000200d247",
+            "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "星星糖谷小屋本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/674c3eba000000001d02c581",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "星星糖谷小屋",
+            "handle": "63019555556",
+            "url": "https://www.xiaohongshu.com/user/profile/674c3eba000000001d02c581",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "爪爪谷社",
+        "floor": "负一层BW105号",
+        "kind": "动漫／游戏周边（偶像梦幻祭、Love Live!）",
+        "status": "recent",
+        "note": "已打开本人抖音主页及2025-08-31营业原帖，正文和简介均明确华盛小亭B1 BW105、8号口罗森内方向；排除同名宠物等账号。",
+        "sources": [
+          {
+            "label": "爪爪谷社本人·当前地址与经营简介",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAA-OOPN3KS5DFZKIhMeqIA_3lYIPj9Em7hyvFAKMGDh86c8ydUJcwijhPIe_NiCUGY",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "华盛小亭B1 BW105营业帖",
+            "url": "https://www.douyin.com/note/7544667328983256380",
+            "date": "2025-08-31"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "爪爪谷社本人·当前地址与经营简介",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAA-OOPN3KS5DFZKIhMeqIA_3lYIPj9Em7hyvFAKMGDh86c8ydUJcwijhPIe_NiCUGY",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "douyin",
+            "name": "爪爪谷社",
+            "handle": "zhuazhuagushe",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAA-OOPN3KS5DFZKIhMeqIA_3lYIPj9Em7hyvFAKMGDh86c8ydUJcwijhPIe_NiCUGY",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "胖FuFu杂货铺",
+        "floor": "负一层A63-1号（近6号口）",
+        "kind": "毛绒、挂件（Chiikawa、轻松熊、角落生物）",
+        "status": "recent",
+        "note": "本人简介及2026-08-07原帖明确上海华盛街A63-1、地下一层；原帖列Chiikawa、轻松熊、角落生物。苏州筹店内容不作上海分店依据。",
+        "sources": [
+          {
+            "label": "胖FuFu杂货铺本人·当前地址与经营简介",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAdeDg6fWOQVWfnZKPxcdo92VKA_IsfCifIQhmMnBiS14",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "胖FuFu0807上海店内情况",
+            "url": "https://www.douyin.com/note/7671274264222305266",
+            "date": "2026-08-07"
+          },
+          {
+            "label": "新闻晨报王丽芳·华盛谷店实地采访",
+            "url": "https://ep.shxwcb.com/2025/08/22/20250822-03-1_20250821235021.html",
+            "date": "2025-08-22"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "胖FuFu杂货铺本人·当前地址与经营简介",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAdeDg6fWOQVWfnZKPxcdo92VKA_IsfCifIQhmMnBiS14",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "douyin",
+            "name": "胖FuFu杂货铺",
+            "handle": "FuFu0108_",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAdeDg6fWOQVWfnZKPxcdo92VKA_IsfCifIQhmMnBiS14",
+            "scope": "store"
+          }
+        ],
+        "aliases": [
+          "胖FUFU杂货铺"
+        ]
+      },
+      {
+        "name": "星物馆",
+        "floor": "负一层BE-56号",
+        "kind": "动漫／游戏周边",
+        "status": "recent",
+        "note": "本人用户结果明确华盛街B1 BE-56；已打开主页与2025-10-17理货作品，正文邀请到华盛小亭，未把平台AI章节概括用于扩充主营。",
+        "sources": [
+          {
+            "label": "星物馆本人·当前地址与经营简介",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAJJQyjX517JIC5mCnShs0ra40NfX11cxhDaG9jlve2zU",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "星物馆本人·华盛理货与到店指引",
+            "url": "https://www.douyin.com/video/7562206310272421170",
+            "date": "2025-10-17"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "星物馆本人·当前地址与经营简介",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAJJQyjX517JIC5mCnShs0ra40NfX11cxhDaG9jlve2zU",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "douyin",
+            "name": "星物馆",
+            "handle": "78799439439",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAJJQyjX517JIC5mCnShs0ra40NfX11cxhDaG9jlve2zU",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "香橙社-KiraGoods",
+        "floor": "负二层DW80号",
+        "kind": "音乐番周边、寄售周边（BanG Dream!）",
+        "status": "recent",
+        "note": "本人简介明确华盛小亭负二层DW80、音乐番及格子铺寄售，注明旧名Anon Tokyo；主页有标题写出2026年的经营内容。原评价中的香澄社保留为搜索别名，作者评价不改。",
+        "sources": [
+          {
+            "label": "香橙社-KiraGoods本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/666fae4a000000000700404a",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "香橙社 v26.9.27（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/6ab8cf5c0000000018004e95",
+            "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "香橙社-KiraGoods本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/666fae4a000000000700404a",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "香橙社-KiraGoods",
+            "handle": "63071594740",
+            "url": "https://www.xiaohongshu.com/user/profile/666fae4a000000000700404a",
+            "scope": "store"
+          }
+        ],
+        "aliases": [
+          "香橙社",
+          "香澄社",
+          "Anon Tokyo",
+          "KiraGoods"
+        ]
+      },
+      {
+        "name": "葱谷八",
+        "floor": "负二层DE-23号",
+        "kind": "日谷、寄售周边（BanG Dream!、Love Live!）",
+        "status": "recent",
+        "note": "本人简介明确华盛街B2 DE-23、主营日谷且仅线下经营，主页有当日上新及寄售更新。10/18为经营标题中的上新日，可结合当期经营判断2026-10-18，但标题不等于发表时间，作品与库存以门店当日为准。",
+        "sources": [
+          {
+            "label": "葱谷八本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/621efbe90000000021023459",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "10/18上新《Mujica》剧场版场贩（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/6ad472c300000000290148d3",
+            "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "葱谷八本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/621efbe90000000021023459",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "葱谷八",
+            "handle": "2845665936",
+            "url": "https://www.xiaohongshu.com/user/profile/621efbe90000000021023459",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "柴柴旺旺谷",
+        "floor": "负二层DE-26号",
+        "kind": "日谷、中古、寄售周边",
+        "status": "recent",
+        "note": "本人简介明确华盛小亭（漫趣集）地下二层DE-26，主页有中古及日谷上新。2025年采访与2026年报道另行保留；周一店休不能误判为闭店。",
+        "sources": [
+          {
+            "label": "柴柴旺旺谷本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/647341030000000011000683",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "10月17日中古宣宣（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/6ad24dc8000000001c00f088",
+            "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+          },
+          {
+            "label": "新闻晨报王丽芳·华盛谷店实地采访",
+            "url": "https://ep.shxwcb.com/2025/08/22/20250822-03-1_20250821235021.html",
+            "date": "2025-08-22"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "柴柴旺旺谷本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/647341030000000011000683",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "柴柴旺旺谷",
+            "handle": "wujing426",
+            "url": "https://www.xiaohongshu.com/user/profile/647341030000000011000683",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "绵花猫谷屋",
+        "floor": "负二层DW-38号",
+        "kind": "动漫／游戏周边、中古",
+        "status": "recent",
+        "note": "本轮读取本人主页，简介明确华盛街地下二层DW-38及营业时间，主页可见上新内容；2025-07-16指路依据复用同日第一百货研究台账。与C馆近名棉花猫的关系未确认，不合并其他分店。",
+        "sources": [
+          {
+            "label": "绵花猫谷屋本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/5c2b56b6000000000501d651",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "绵花猫本人·店铺指路（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/68781da50000000023005432",
+            "date": "2025-07-16"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "绵花猫谷屋本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/5c2b56b6000000000501d651",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "绵花猫谷屋",
+            "handle": "MHMGW01",
+            "url": "https://www.xiaohongshu.com/user/profile/5c2b56b6000000000501d651",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "玉见星间模玩谷铺",
+        "floor": "负二层（详见本人7／8号口指路帖）",
+        "kind": "游戏周边、通行证寄售",
+        "status": "recent",
+        "note": "已打开本人主页和2025年指路帖；正文说明华盛婚纱街出口，作者2025-10-25回复明确地下二层。主页有通行证寄售制度及游戏周边上新；周一闭店休息为定休。",
+        "sources": [
+          {
+            "label": "玉见星间模玩谷铺本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/6245ebeb0000000010004280",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "久等！迟来的店铺图片指引（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/681c877d00000000220374d8",
+            "dateLabel": "编辑于2025-05-12；作者2025-10-25回复确认地下二层"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "玉见星间模玩谷铺本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/6245ebeb0000000010004280",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "玉见星间模玩谷铺",
+            "handle": "2190120137",
+            "url": "https://www.xiaohongshu.com/user/profile/6245ebeb0000000010004280",
+            "scope": "store"
+          }
+        ],
+        "aliases": [
+          "玉见星间"
+        ]
+      },
+      {
+        "name": "Agoodz爱谷集",
+        "floor": "负二层DE35号",
+        "kind": "动漫周边、中古、寄售周边",
+        "status": "recent",
+        "note": "本人简介列华盛街B2 DE35和二号线到店路线，主页有抽屉寄售上新及店铺指路；线上交易功能不代替线下地址确认。Agoodz与导览上的UGOODS未证实同店，不合并。",
+        "sources": [
+          {
+            "label": "Agoodz爱谷集-线上下同步交易站本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/6807d350000000000a03d3d8",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "黑执事｜抽屉寄售上新———（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/6ad493b2000000000c00e33f",
+            "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "Agoodz爱谷集-线上下同步交易站本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/6807d350000000000a03d3d8",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "Agoodz爱谷集-线上下同步交易站",
+            "handle": "26734519098",
+            "url": "https://www.xiaohongshu.com/user/profile/6807d350000000000a03d3d8",
+            "scope": "store"
+          }
+        ],
+        "aliases": [
+          "Agoodz",
+          "爱谷集"
+        ]
+      },
+      {
+        "name": "蓝门LEMON GOODS",
+        "floor": "负二层DW69、71号",
+        "kind": "动漫／游戏周边（Chiikawa、明日方舟）",
+        "status": "recent",
+        "note": "本人简介明确华盛街B2 DW69、71，主页展示周边上新。保留本人地址，不将他处蓝门或同名内容作本店依据。",
+        "sources": [
+          {
+            "label": "蓝门LEMON GOODS本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/5b075a61e8ac2b244e328af5",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "【ckw上新】一大群小八攻打蓝门（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/6ad1cd62000000001402f52b",
+            "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "蓝门LEMON GOODS本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/5b075a61e8ac2b244e328af5",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "蓝门LEMON GOODS",
+            "handle": "490059053",
+            "url": "https://www.xiaohongshu.com/user/profile/5b075a61e8ac2b244e328af5",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "布丁喵",
+        "floor": "DW-52号",
+        "kind": "动漫／游戏周边、中古、寄售周边",
+        "status": "recent",
+        "note": "由华盛内容搜索反查本人；简介列华盛小亭DW-52和营业时间，主页有中古、格子铺上新。楼层未取得独立明确文字，不按DW编号推算。",
+        "sources": [
+          {
+            "label": "布丁喵o(^・x・^)o本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/68819a3f000000001e03baa2",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "美妙天堂中古上新（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/6ad4a094000000001d02ee22",
+            "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "布丁喵o(^・x・^)o本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/68819a3f000000001e03baa2",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "布丁喵o(^・x・^)o",
+            "handle": "budingshigepang",
+            "url": "https://www.xiaohongshu.com/user/profile/68819a3f000000001e03baa2",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "秘宝屋",
+        "floor": "BW106号",
+        "kind": "动漫／游戏周边、寄售周边",
+        "status": "recent",
+        "note": "本人简介明确人民广场地铁站华盛小亭BW106，主页有寄售招募及上新；2025-12-24经营帖日期由实际站内结果取得。没有将普通寄售主当店铺官方账号。",
+        "sources": [
+          {
+            "label": "秘宝屋本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/61c0c57d000000001000c263",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "店铺上新·明日方舟音律通行证与吧唧（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/694bb8bb000000001f004dc5",
+            "date": "2025-12-24"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "秘宝屋本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/61c0c57d000000001000c263",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "秘宝屋",
+            "handle": "6948710769",
+            "url": "https://www.xiaohongshu.com/user/profile/61c0c57d000000001000c263",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "树枝谷岛",
+        "floor": "BE-85号",
+        "kind": "游戏周边、中古（明日方舟、碧蓝航线）",
+        "status": "recent",
+        "note": "本人简介明确华盛街BE-85及中古仅到店翻，主页有明日方舟和碧蓝航线上新。楼层未独立核实，仅保留本人铺号。",
+        "sources": [
+          {
+            "label": "树枝谷岛本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/6681a0c0000000000d025793",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "明日方舟 通行证 上新（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/6ad20b82000000001203f08a",
+            "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "树枝谷岛本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/6681a0c0000000000d025793",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "树枝谷岛",
+            "handle": "11686668497",
+            "url": "https://www.xiaohongshu.com/user/profile/6681a0c0000000000d025793",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "鱼小铺（华盛店）",
+        "floor": "BE083号",
+        "kind": "动漫／游戏周边",
+        "status": "recent",
+        "note": "已读搬店帖与本人现址：当前简介列华盛小亭BE083，原迪美／悦荟鱼小铺；主页有明确华盛上新。搬店帖未写新址，不能据标题推断离开华盛或闭店；不复制旧分店地址。",
+        "sources": [
+          {
+            "label": "鱼小铺online（接dg版）本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/64a24782000000001f004e0a",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "华盛小亭上新 火影忍者宇智波家族杯垫（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/6ad43fa8000000002900acd2",
+            "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "鱼小铺online（接dg版）本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/64a24782000000001f004e0a",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "鱼小铺online（接dg版）",
+            "handle": "8936568830",
+            "url": "https://www.xiaohongshu.com/user/profile/64a24782000000001f004e0a",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "圆圆的ES二次元店",
+        "kind": "动漫周边（自嘲熊）",
+        "status": "listed",
+        "note": "2025年新闻晨报实地采访列出本店及自嘲熊挂件。近名账号“圆圆（手办周边es售卖）”有售卖内容，但已读主页没有华盛地址，尚未证实是同一门店；不接入该账号，不猜楼层。 本商圈实地采访是较可靠的历史经营证据，予以保留；近名个人售卖号身份缺口不被新闻内容自动消除。",
+        "sources": [
+          {
+            "label": "新闻晨报王丽芳·人民广场地下谷圈实地采访",
+            "url": "https://ep.shxwcb.com/2025/08/22/20250822-03-1_20250821235021.html",
+            "date": "2025-08-22"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "新闻晨报王丽芳·人民广场地下谷圈实地采访",
+            "url": "https://ep.shxwcb.com/2025/08/22/20250822-03-1_20250821235021.html",
+            "date": "2025-08-22"
+          }
+        ]
+      },
+      {
+        "name": "萌猫乐谷趣",
+        "kind": "动漫／游戏周边、寄售周边、缝纫自习",
+        "status": "listed",
+        "note": "上海黄浦2026-03-23报道实访华盛小亭本店，介绍周边陈列、闲置流转和缝纫自习。已打开抖音同名认证商家号，但主页无华盛地址且0作品，关联与当前营业仍待核实，暂不接入accounts。 该2026年政府媒体本店实访对本商圈经营与主营的证据较强；当前候选号缺地址/经营作品仍是独立缺口，未伪造官方店单确认。",
+        "sources": [
+          {
+            "label": "上海黄浦shhp·萌猫乐谷趣实地报道",
+            "url": "https://www.sohu.com/a/1000048429_121668715",
+            "date": "2026-03-23"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "上海黄浦shhp·店内品类与缝纫区介绍",
+            "url": "https://www.sohu.com/a/1000048429_121668715",
+            "date": "2026-03-23"
+          }
+        ]
+      },
+      {
+        "name": "亿加谷店",
+        "floor": "负一层（开业帖指罗森方向）",
+        "kind": "动漫周边、寄售周边",
+        "status": "listed",
+        "note": "已读2025年开业原帖，正文指负一层罗森方向并介绍格子铺；搜索结果显示的日期与原帖编辑日期不同，保留原文。原帖@亿加谷店的主页现显示“用户已注销”，不作为官方账号入口；账号注销不等于实体闭店，当前营业仍待核实。",
+        "sources": [
+          {
+            "label": "北国杂货铺·亿加谷店开业原帖",
+            "url": "https://www.xiaohongshu.com/explore/68a08149000000001b03dfe8",
+            "dateLabel": "编辑于2025-08-23（原帖）；搜索结果显示2025-08-24"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "北国杂货铺·格子铺与店内陈列说明",
+            "url": "https://www.xiaohongshu.com/explore/68a08149000000001b03dfe8",
+            "dateLabel": "编辑于2025-08-23（原帖）"
+          }
+        ]
+      },
+      {
+        "name": "UGOODS（华盛导览点位线索）",
+        "aliases": [
+          "UGOODS",
+          "ugoods"
+        ],
+        "floor": "负二层（2026导览线索）",
+        "status": "listed",
+        "note": "2026-10-18实际已读华盛B2导览正文/画面发现UGOODS，05-24省年按当年解释为2026-05-24，现为有效本商圈点位线索，收进展开更多。同名抖音号私密、无简介，不接作商家账号；与Agoodz未证同店，不合并，不猜主营或铺号。",
+        "sources": [
+          {
+            "label": "华盛B2谷店导览·UGOODS门店线索（已读正文与显示画面）",
+            "url": "https://www.xiaohongshu.com/explore/6a12f8d6000000003601e41b",
+            "date": "2026-05-24"
+          }
+        ]
+      }
+    ]
+  }
+}

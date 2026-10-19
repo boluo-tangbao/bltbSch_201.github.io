@@ -1,0 +1,185 @@
+{
+  "reviewedAt": "2026-10-19",
+  "decisions": [
+    {
+      "placeId": "shanghai-shop-001",
+      "shop": "春日动漫中古店",
+      "url": "https://www.xiaohongshu.com/explore/6aabaa37000000002900d5b5",
+      "originalLabel": "09-17（页面未显示年份，2026-10-18读取）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-09-17",
+      "type": "published",
+      "reason": "按用户平台省年规则，以原读取当年2026解释；保存归一化发表日，原标签在本台账保留。"
+    },
+    {
+      "placeId": "shanghai-shop-001",
+      "shop": "奶惜 nicegoods",
+      "url": "https://www.xiaohongshu.com/explore/69732a9c000000000c03545e",
+      "originalLabel": "01-23（页面未显示年份，2026-10-18读取）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-01-23",
+      "type": "published",
+      "reason": "按用户平台省年规则，以原读取当年2026解释；保存归一化发表日，原标签在本台账保留。"
+    },
+    {
+      "placeId": "shanghai-shop-001",
+      "shop": "古典玩偶",
+      "url": "https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3",
+      "originalLabel": "编辑于10-08（页面未显示年份，2026-10-18读取）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-10-08",
+      "type": "edited",
+      "reason": "按用户平台省年规则，以原读取当年2026解释；仅编辑时间，不冒充原发表日。"
+    },
+    {
+      "placeId": "shanghai-shop-001",
+      "shop": "阅文好物",
+      "url": "https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3",
+      "originalLabel": "编辑于10-08（页面未显示年份，2026-10-18读取）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-10-08",
+      "type": "edited",
+      "reason": "按用户平台省年规则，以原读取当年2026解释；仅编辑时间，不冒充原发表日。"
+    },
+    {
+      "placeId": "shanghai-shop-001",
+      "shop": "雪鱼町",
+      "url": "https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3",
+      "originalLabel": "编辑于10-08（页面未显示年份，2026-10-18读取）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-10-08",
+      "type": "edited",
+      "reason": "按用户平台省年规则，以原读取当年2026解释；仅编辑时间，不冒充原发表日。"
+    },
+    {
+      "placeId": "shanghai-shop-001",
+      "shop": "谷子集合·绘梦造物",
+      "url": "https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3",
+      "originalLabel": "编辑于10-08（页面未显示年份，2026-10-18读取）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-10-08",
+      "type": "edited",
+      "reason": "按用户平台省年规则，以原读取当年2026解释；仅编辑时间，不冒充原发表日。"
+    },
+    {
+      "placeId": "shanghai-shop-001",
+      "shop": "FenzGoods 慢闪店（非人哉·荒野俱乐部）",
+      "url": "https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3",
+      "originalLabel": "编辑于10-08（页面未显示年份，2026-10-18读取）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-10-08",
+      "type": "edited",
+      "reason": "按用户平台省年规则，以原读取当年2026解释；仅编辑时间，不冒充原发表日。"
+    },
+    {
+      "placeId": "shanghai-shop-001",
+      "shop": "六柴谷屋（第一百货店）",
+      "url": "https://www.xiaohongshu.com/explore/69ea11e9000000001f006335",
+      "originalLabel": "04-23（页面未显示年份，2026-10-18读取）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-04-23",
+      "type": "published",
+      "reason": "按用户平台省年规则，以原读取当年2026解释；保存归一化发表日，原标签在本台账保留。"
+    },
+    {
+      "placeId": "shanghai-shop-001",
+      "shop": "谷回动漫中古店（第一百货店）",
+      "url": "https://www.xiaohongshu.com/explore/6ab4ce8b0000000014003726",
+      "originalLabel": "编辑于09-24；公告写10月8日正式闭店（页面未显示年份）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-09-24",
+      "type": "edited",
+      "reason": "按用户平台省年规则，以原读取当年2026解释；仅编辑时间，不冒充原发表日。"
+    },
+    {
+      "placeId": "shanghai-shop-003",
+      "shop": "IPSTAR 加油吧！中村君！！主题店（2026年秋季限定）",
+      "url": "https://www.xiaohongshu.com/explore/6abcbc6e000000001802dcfb",
+      "originalLabel": "编辑于09-30；正文档期2026-10-01至2026-11-01，2026-10-18读取",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-09-30",
+      "type": "edited",
+      "reason": "按用户平台省年规则，以原读取当年2026解释；仅编辑时间，不冒充原发表日。"
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "shop": "邮差喵谷",
+      "url": "https://www.xiaohongshu.com/explore/68d4f64d000000000e020d03",
+      "originalLabel": "编辑于09-12（页面未显示年份）；2026-10-18读取正文",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-09-12",
+      "type": "edited",
+      "reason": "按用户平台省年规则，以原读取当年2026解释；仅编辑时间，不冒充原发表日。"
+    },
+    {
+      "placeId": "shanghai-shop-001",
+      "shop": "FenzGoods 慢闪店（非人哉·荒野俱乐部）",
+      "originalPeriod": "9月30日—10月31日（原文未标年份）",
+      "normalizedPeriod": {
+        "scope": "store",
+        "period": "2026-09-30 至 2026-10-31",
+        "startsOn": "2026-09-30",
+        "endsOn": "2026-10-31"
+      },
+      "reason": "10月8日当期商场新店/慢闪公告，9/30开期已发生、10/31尚未来到，同属2026；不是普通促销或排班。"
+    },
+    {
+      "placeId": "shanghai-shop-001",
+      "shop": "谷回动漫中古店（第一百货店）",
+      "originalBodyDate": "10月8日正式闭店",
+      "normalizedBodyDate": "2026-10-08",
+      "reason": "2026-09-24编辑的本店关闭公告预告紧接的10月8日，结合当年本期语境解释；关闭记录持续隐藏。"
+    },
+    {
+      "placeId": "shanghai-shop-003",
+      "shop": "漫魂 comic soul",
+      "originalLabel": "09-12；作者回复09-26、10-05",
+      "originalReadAt": "2026-10-19",
+      "normalizedDate": "2026-09-12",
+      "replyDates": [
+        "2026-09-26",
+        "2026-10-05"
+      ],
+      "reason": "平台省年按2026解释；已读正文/作者回复明确新世界4F常驻，品牌身份本轮主页再次核对。"
+    },
+    {
+      "placeId": "shanghai-shop-003",
+      "shop": "無限萌界（新世界城店）",
+      "originalPeriod": "当值表10.17～10.23",
+      "normalizedBodyPeriod": "2026-10-17 至 2026-10-23",
+      "reason": "原读取2026-10-18的当期排班，日期跨读取日前后，解释为2026；不是门店固定开放期，不填limited。"
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "shop": "ANIKIGOODS",
+      "originalReadAt": "2026-10-18",
+      "originalPeriod": "暂定营业至2026.12.31，后续计划待定",
+      "normalizedPeriod": {
+        "scope": "store",
+        "period": "暂定营业至2026-12-31（开始日期未核实，后续计划待定）",
+        "endsOn": "2026-12-31"
+      },
+      "reason": "本人明确整店暂定营业截止日，不是促销/轮班/每日营业时段；开始日未知仅填结束日，结束前继续确认营业。"
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "shop": "UGOODS",
+      "url": "https://www.xiaohongshu.com/explore/6a12f8d6000000003601e41b",
+      "originalLabel": "05-24",
+      "originalReadAt": "2026-10-18",
+      "normalizedDate": "2026-05-24",
+      "reason": "原已读本商圈B2导览画面明确候选名，发表日省年按2026解释；账号未确认只影响营业确认，不否定有效导览线索，不下载原图。"
+    }
+  ]
+}

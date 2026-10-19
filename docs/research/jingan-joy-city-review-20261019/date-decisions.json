@@ -1,0 +1,219 @@
+{
+  "placeId": "shanghai-shop-008",
+  "reviewedAt": "2026-10-19",
+  "rule": "用户2026-10-19：平台发表月日省年为原读取当年；正文对照发表时间、明确年份与语境判断。编辑时间不当发表时间。",
+  "decisions": [
+    {
+      "shop": "eeo Store by A3",
+      "url": "https://www.xiaohongshu.com/explore/6ab675140000000012037c33",
+      "originalLabel": "09-25（原文未标年份）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-09-25",
+      "dateType": "published",
+      "reason": "按用户2026-10-19说明，平台月日省年按原读取当年2026解释；归一化发表日，原标签保留于此"
+    },
+    {
+      "shop": "谷子快跑GOGOGOODS（旗舰店）",
+      "url": "https://www.xiaohongshu.com/explore/6ac8aede0000000018013b7b",
+      "originalLabel": "10-09（原文未标年份）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-10-09",
+      "dateType": "published",
+      "reason": "按用户2026-10-19说明，平台月日省年按原读取当年2026解释；归一化发表日，原标签保留于此"
+    },
+    {
+      "shop": "RE-MENT",
+      "url": "https://www.xiaohongshu.com/explore/6ab33fe300000000140016e9",
+      "originalLabel": "09-23（原文未标年份）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-09-23",
+      "dateType": "published",
+      "reason": "按用户2026-10-19说明，平台月日省年按原读取当年2026解释；归一化发表日，原标签保留于此"
+    },
+    {
+      "shop": "森雨漫",
+      "url": "https://www.xiaohongshu.com/explore/6ab4fa88000000001a022ace",
+      "originalLabel": "09-25（原文未标年份）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-09-25",
+      "dateType": "published",
+      "reason": "按用户2026-10-19说明，平台月日省年按原读取当年2026解释；归一化发表日，原标签保留于此"
+    },
+    {
+      "shop": "广博文创",
+      "url": "https://www.xiaohongshu.com/explore/6aaa6c3b000000000b037fc2",
+      "originalLabel": "09-16（原文未标年份）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-09-16",
+      "dateType": "published",
+      "reason": "按用户2026-10-19说明，平台月日省年按原读取当年2026解释；归一化发表日，原标签保留于此"
+    },
+    {
+      "shop": "三月兽（Love Live!本期主题）",
+      "url": "https://www.xiaohongshu.com/explore/6ab3a0090000000012036527",
+      "originalLabel": "09-23（原文未标年份；正文档期含2026年）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-09-23",
+      "dateType": "published",
+      "reason": "按用户2026-10-19说明，平台月日省年按原读取当年2026解释；归一化发表日，原标签保留于此"
+    },
+    {
+      "shop": "鸣潮×GLOBAL WORK联名快闪",
+      "url": "https://www.xiaohongshu.com/explore/6ab0f1f20000000034000465",
+      "originalLabel": "09-21（原文未标年份）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-09-21",
+      "dateType": "published",
+      "reason": "按用户2026-10-19说明，平台月日省年按原读取当年2026解释；归一化发表日，原标签保留于此"
+    },
+    {
+      "shop": "Gummy Puppy橡皮小狗快闪",
+      "url": "https://www.xiaohongshu.com/explore/6abb64680000000002013bb2",
+      "originalLabel": "09-29（原文未标年份）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-09-29",
+      "dateType": "published",
+      "reason": "按用户2026-10-19说明，平台月日省年按原读取当年2026解释；归一化发表日，原标签保留于此"
+    },
+    {
+      "shop": "吴大友「伤心便利店」快闪",
+      "url": "https://www.xiaohongshu.com/explore/6aaf89d70000000028036876",
+      "originalLabel": "编辑于09-20（原文未标年份）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedDate": "2026-09-20",
+      "dateType": "edited",
+      "reason": "按用户2026-10-19说明，平台月日省年按原读取当年2026解释；仅编辑时间，不冒充原发表日"
+    },
+    {
+      "shop": "微博×如鸢联动快闪",
+      "urls": [
+        "https://www.xiaohongshu.com/explore/6ad3330c000000001b0226ec"
+      ],
+      "originalPeriod": "9月25日—2026年10月25日（官方延期）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedPeriod": {
+        "scope": "store",
+        "period": "2026-09-25 至 2026-10-25（官方延期）",
+        "startsOn": "2026-09-25",
+        "endsOn": "2026-10-25"
+      },
+      "reason": "公告明确延期到2026-10-25；9月25日为同一期活动的起点，结合2026年当期公告，补足起始年份。"
+    },
+    {
+      "shop": "鸣潮×GLOBAL WORK联名快闪",
+      "urls": [
+        "https://www.xiaohongshu.com/explore/6ab0f1f20000000034000465"
+      ],
+      "originalPeriod": "10.1—10.25（开放期原文未标年份）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedPeriod": {
+        "scope": "store",
+        "period": "2026-10-01 至 2026-10-25",
+        "startsOn": "2026-10-01",
+        "endsOn": "2026-10-25"
+      },
+      "reason": "发表日09-21按平台规则为2026-09-21；正文明确2026-09-24开放预约、10月1日即将开启，属同年国庆，结束日10.25。"
+    },
+    {
+      "shop": "Gummy Puppy橡皮小狗快闪",
+      "urls": [
+        "https://www.xiaohongshu.com/explore/6abb64680000000002013bb2"
+      ],
+      "originalPeriod": "9.30—10.29（原文未标年份）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedPeriod": {
+        "scope": "store",
+        "period": "2026-09-30 至 2026-10-29",
+        "startsOn": "2026-09-30",
+        "endsOn": "2026-10-29"
+      },
+      "reason": "发表日09-29按平台规则为2026-09-29；正文秋天、十一活动及9.30—10.29为紧接发表日的本期，归属2026。"
+    },
+    {
+      "shop": "吴大友「伤心便利店」快闪",
+      "urls": [
+        "https://www.xiaohongshu.com/explore/6aaf89d70000000028036876"
+      ],
+      "originalPeriod": "9月24日—10月18日（原文未标年份）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedPeriod": {
+        "scope": "store",
+        "period": "2026-09-24 至 2026-10-18",
+        "startsOn": "2026-09-24",
+        "endsOn": "2026-10-18"
+      },
+      "reason": "页面编辑09-20解释为2026-09-20；正文预约9/24—26与即将开放档期相邻，无回顾旧活动语境，判断为2026本期；不将编辑日伪装原发表日。"
+    },
+    {
+      "shop": "文化乐谷（2026夏季快闪，已结束）",
+      "urls": [
+        "https://www.jingan.gov.cn/rmtzx/003001/20260806/8abd0f62-9fbc-48a3-9060-e3589e17d766.html"
+      ],
+      "originalPeriod": "7月30日起预热，至9月20日（2026-08-06报道，原文未写完整起止年月日）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedPeriod": {
+        "scope": "store",
+        "period": "2026-07-30 起预热，营业至2026-09-20",
+        "endsOn": "2026-09-20"
+      },
+      "reason": "原报道发表于2026-08-06，正文回顾7月30日预热并预告营业至9月20日，均属同年；预热日不充当正式开店日，因此不填startsOn。"
+    },
+    {
+      "shop": "谷子快跑春节限定快闪（已结束）",
+      "urls": [
+        "https://www.jingan.gov.cn/rmtzx/003001/20260205/c9365bd6-4a98-416f-9680-210e28049eca.html"
+      ],
+      "originalPeriod": "1月31日—3月8日（2026春节公告；原文档期写月日）",
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "normalizedPeriod": {
+        "scope": "store",
+        "period": "2026-01-31 至 2026-03-08",
+        "startsOn": "2026-01-31",
+        "endsOn": "2026-03-08"
+      },
+      "reason": "2026-02-05春节报道中的1/31—3/8，为当年春节同一期，补足2026。"
+    },
+    {
+      "shop": "静安拾谷本商场分布图",
+      "url": "https://www.xiaohongshu.com/explore/6a3d25ae000000002201483f",
+      "originalLabel": "06-25",
+      "originalReadAt": "2026-10-18",
+      "normalizedDate": "2026-06-25",
+      "reason": "用户明确的平台省年规则；原读取当年为2026。"
+    },
+    {
+      "shop": "凌曜本商场攻略",
+      "url": "https://www.xiaohongshu.com/explore/6a9179270000000026004e76",
+      "originalLabel": "08-28",
+      "originalReadAt": "2026-10-18",
+      "normalizedDate": "2026-08-28",
+      "reason": "平台发表省年规则；正文店名可作本年线索，个别楼层错误仍另核。"
+    },
+    {
+      "shop": "EVA The Night Of Fantasy",
+      "url": "https://www.xiaohongshu.com/explore/6acf48e90000000018015faa",
+      "originalLabel": "4天前（2026-10-18读取）",
+      "originalPeriod": "10.30—11.30",
+      "normalizedPeriod": {
+        "startsOn": "2026-10-30",
+        "endsOn": "2026-11-30"
+      },
+      "reason": "当年10月近期预告、即将开启，正文档期在发表后，归属2026；尚未开期，不接当前营业。"
+    }
+  ]
+}
