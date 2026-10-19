@@ -929,14 +929,19 @@
         }
       ],
       "visitedAt": "2026-05-02",
-      "updatedAt": "2026-10-17",
+      "updatedAt": "2026-10-18",
       "published": true,
       "location": {
         "lat": 31.245608,
         "lng": 121.467556,
         "coordinateSystem": "wgs84",
-        "address": "上海市黄浦区西藏北路166号"
-      }
+        "address": "上海市静安区西藏北路166号"
+      },
+      "aliases": [
+        "上海静安大悦城",
+        "上海大悦城",
+        "静安Joy City"
+      ]
     },
     {
       "id": "shanghai-shop-009",

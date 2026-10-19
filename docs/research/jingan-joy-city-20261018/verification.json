@@ -1,0 +1,90 @@
+{
+  "placeId": "shanghai-shop-008",
+  "checkedAt": "2026-10-18",
+  "runtime": "Node.js v24.19.0",
+  "commands": [
+    {
+      "command": "npm run validate:data",
+      "cwd": "rank",
+      "result": "通过，29地点、31条更新"
+    },
+    {
+      "command": "npm test",
+      "cwd": "rank",
+      "result": "50通过，0失败"
+    },
+    {
+      "command": "npm run build",
+      "cwd": "rank",
+      "result": "vue-tsc及Vite构建通过"
+    }
+  ],
+  "commandLog": "checks.log",
+  "dataVerification": "data-verification.json",
+  "browser": {
+    "url": "http://127.0.0.1:4186/bltbSch_201.github.io/rank/guide/#/place/shanghai-shop-008",
+    "desktop": {
+      "width": 1440,
+      "height": 1000,
+      "screenshot": "desktop-1440.png",
+      "horizontalOverflow": false
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "screenshot": "mobile-390.png",
+      "horizontalOverflow": false
+    },
+    "regularConfirmed": 12,
+    "limitedConfirmed": 8,
+    "regularPending": 6,
+    "limitedPending": 2,
+    "hiddenEndedRows": 0,
+    "defaultDetailsOpen": [
+      false,
+      false
+    ],
+    "afterExpand": [
+      true,
+      true
+    ],
+    "pendingSourceLinkCounts": [
+      11,
+      5
+    ],
+    "confirmedSourceListCount": 0,
+    "accountLinks": 7,
+    "gallery": 12,
+    "lightbox": {
+      "item": "Poooku 周边陈列",
+      "loaded": true,
+      "naturalWidth": 1280
+    },
+    "search": [
+      {
+        "query": "森雨漫",
+        "results": 1
+      },
+      {
+        "query": "静安Joy City",
+        "results": 1
+      }
+    ],
+    "directReload": {
+      "title": "静安大悦城 · 我的逛店体验榜",
+      "rows": 28,
+      "detailsOpen": [
+        false,
+        false
+      ]
+    },
+    "temporaryViewportReset": true,
+    "limitations": [
+      "外部百度地图曾出现WebGL/服务异常，未宣称地图服务通过；地址与导航坐标已核。",
+      "旧预览服务停止后已重启，新标签正常验证。",
+      "刷新后的章节滚动一次CDP超时；刷新及内容核对本身已返回成功。"
+    ]
+  },
+  "publication": "本地完成，未发布、未推送",
+  "researchCompletion": "阶段性结果，未满足查找完成停止条件"
+}

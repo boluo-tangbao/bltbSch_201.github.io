@@ -1,0 +1,573 @@
+{
+  "placeId": "shanghai-shop-008",
+  "checkedAt": "2026-10-18",
+  "status": "阶段性结果",
+  "confirmedShopRecords": 7,
+  "accountEntries": 7,
+  "uniqueAccountUrls": 7,
+  "platformEntries": {
+    "xiaohongshu": 7,
+    "douyin": 0
+  },
+  "confirmedWithoutAccount": 13,
+  "otherRecordsWithoutAccount": 10,
+  "rows": [
+    {
+      "name": "三丽鸥 Sanrio Gift Gate",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "三丽鸥官网·当前门店目录",
+          "url": "https://www.sanrio.com.cn/store.html",
+          "dateLabel": "官网未标发布日期；2026-10-18实际读取"
+        }
+      ],
+      "result": "已读官方本店目录／公告确认，未另核得可接社交号",
+      "next": null
+    },
+    {
+      "name": "GiGO（静安大悦城店）",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "GiGO官网·静安大悦城店",
+          "url": "https://www.gigo.co.jp/zh-tw/shops/sh-jingan-xizangbei",
+          "dateLabel": "官网未标发布日期；2026-10-18实际读取"
+        }
+      ],
+      "result": "已读官方本店目录／公告确认，未另核得可接社交号",
+      "next": null
+    },
+    {
+      "name": "eeo Store by A3",
+      "query": "商场名或店名用户／经营帖反查，见discovery.json、profiles.ndjson、evidence.ndjson",
+      "candidate": null,
+      "matchedAccounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "eeo Store by A3",
+          "handle": "63083706366",
+          "url": "https://www.xiaohongshu.com/user/profile/6a1f725d000000000103f400",
+          "scope": "brand"
+        }
+      ],
+      "addressEvidence": [
+        {
+          "label": "eeo Store本人·本店上新与地址",
+          "url": "https://www.xiaohongshu.com/explore/6ab675140000000012037c33",
+          "dateLabel": "09-25（原文未标年份）"
+        },
+        {
+          "label": "eeo Store by A3·品牌简介",
+          "url": "https://www.xiaohongshu.com/user/profile/6a1f725d000000000103f400"
+        }
+      ],
+      "result": "已核主体、本店关联与经营；品牌号标scope",
+      "next": null
+    },
+    {
+      "name": "谷子快跑GOGOGOODS（旗舰店）",
+      "query": "商场名或店名用户／经营帖反查，见discovery.json、profiles.ndjson、evidence.ndjson",
+      "candidate": null,
+      "matchedAccounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "谷子快跑（静安大悦城店）",
+          "handle": "49919533458",
+          "url": "https://www.xiaohongshu.com/user/profile/69e70b7e0000000002002800",
+          "scope": "store"
+        }
+      ],
+      "addressEvidence": [
+        {
+          "label": "谷子快跑本人·近期到店上新与铺位",
+          "url": "https://www.xiaohongshu.com/explore/6ac8aede0000000018013b7b",
+          "dateLabel": "10-09（原文未标年份）"
+        },
+        {
+          "label": "谷子快跑静安大悦城店·主页",
+          "url": "https://www.xiaohongshu.com/user/profile/69e70b7e0000000002002800"
+        }
+      ],
+      "result": "已核主体、本店关联与经营；品牌号标scope",
+      "next": null
+    },
+    {
+      "name": "RE-MENT",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "上海静安大悦城官方·RE-MENT新店公告",
+          "url": "https://www.xiaohongshu.com/explore/6ab33fe300000000140016e9",
+          "dateLabel": "09-23（原文未标年份）"
+        }
+      ],
+      "result": "已读官方本店目录／公告确认，未另核得可接社交号",
+      "next": null
+    },
+    {
+      "name": "森雨漫",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "上海静安大悦城官方·森雨漫入驻公告",
+          "url": "https://www.xiaohongshu.com/explore/6ab4fa88000000001a022ace",
+          "dateLabel": "09-25（原文未标年份）"
+        }
+      ],
+      "result": "已读官方本店目录／公告确认，未另核得可接社交号",
+      "next": null
+    },
+    {
+      "name": "广博文创",
+      "query": "商场名或店名用户／经营帖反查，见discovery.json、profiles.ndjson、evidence.ndjson",
+      "candidate": null,
+      "matchedAccounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "广博-上海静安大悦城旗舰",
+          "handle": "2779684652",
+          "url": "https://www.xiaohongshu.com/user/profile/613aa3b50000000002022e0c",
+          "scope": "store"
+        }
+      ],
+      "addressEvidence": [
+        {
+          "label": "广博本人·线下逛店与南座四楼地址",
+          "url": "https://www.xiaohongshu.com/explore/6aaa6c3b000000000b037fc2",
+          "dateLabel": "09-16（原文未标年份）"
+        },
+        {
+          "label": "广博大悦城旗舰·主页",
+          "url": "https://www.xiaohongshu.com/user/profile/613aa3b50000000002022e0c"
+        }
+      ],
+      "result": "已核主体、本店关联与经营；品牌号标scope",
+      "next": null
+    },
+    {
+      "name": "JOYCODE",
+      "query": "商场名或店名用户／经营帖反查，见discovery.json、profiles.ndjson、evidence.ndjson",
+      "candidate": null,
+      "matchedAccounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "JOYCODE静安大悦城店",
+          "handle": "49321435520",
+          "url": "https://www.xiaohongshu.com/user/profile/60993f3a0000000001005142",
+          "scope": "store"
+        }
+      ],
+      "addressEvidence": [
+        {
+          "label": "JOYCODE静安大悦城店·本人简介与本店上新",
+          "url": "https://www.xiaohongshu.com/user/profile/60993f3a0000000001005142"
+        }
+      ],
+      "result": "已核主体、本店关联与经营；品牌号标scope",
+      "next": null
+    },
+    {
+      "name": "摩多摩多",
+      "query": "商场名或店名用户／经营帖反查，见discovery.json、profiles.ndjson、evidence.ndjson",
+      "candidate": null,
+      "matchedAccounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "摩多摩多-静安大悦城店",
+          "handle": "5684451494",
+          "url": "https://www.xiaohongshu.com/user/profile/62d4072f00000000020038e6",
+          "scope": "store"
+        }
+      ],
+      "addressEvidence": [
+        {
+          "label": "摩多摩多静安大悦城店·本人地址与经营主页",
+          "url": "https://www.xiaohongshu.com/user/profile/62d4072f00000000020038e6"
+        }
+      ],
+      "result": "已核主体、本店关联与经营；品牌号标scope",
+      "next": null
+    },
+    {
+      "name": "FUN MAGNET",
+      "query": "商场名或店名用户／经营帖反查，见discovery.json、profiles.ndjson、evidence.ndjson",
+      "candidate": null,
+      "matchedAccounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "Fun Magnet",
+          "handle": "1060515999",
+          "url": "https://www.xiaohongshu.com/user/profile/5f9a639a0000000001005f33",
+          "scope": "brand"
+        }
+      ],
+      "addressEvidence": [
+        {
+          "label": "Fun Magnet本人·分店地址与主营主页",
+          "url": "https://www.xiaohongshu.com/user/profile/5f9a639a0000000001005f33"
+        }
+      ],
+      "result": "已核主体、本店关联与经营；品牌号标scope",
+      "next": null
+    },
+    {
+      "name": "LOFT",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "大悦城控股官网·当前主力店",
+          "url": "https://www.grandjoy.com/detail/343.html",
+          "dateLabel": "官网未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "存知己·楼层与文创品类线索",
+          "url": "https://www.sohu.com/a/871536818_120556790",
+          "date": "2025-03-15"
+        }
+      ],
+      "result": "已读官方本店目录／公告确认，未另核得可接社交号",
+      "next": null
+    },
+    {
+      "name": "得力上海品牌旗舰店",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "大悦城控股官网·当前主力店",
+          "url": "https://www.grandjoy.com/detail/343.html",
+          "dateLabel": "官网未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "上海静安·得力旗舰店文具活动介绍",
+          "url": "https://www.jingan.gov.cn/rmtzx/003001/20260205/c9365bd6-4a98-416f-9680-210e28049eca.html",
+          "date": "2026-02-05"
+        }
+      ],
+      "result": "已读官方本店目录／公告确认，未另核得可接社交号",
+      "next": null
+    },
+    {
+      "name": "三月兽（Love Live!本期主题）",
+      "query": "商场名或店名用户／经营帖反查，见discovery.json、profiles.ndjson、evidence.ndjson",
+      "candidate": null,
+      "matchedAccounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "三月兽上海静安大悦城店",
+          "handle": "8701917237",
+          "url": "https://www.xiaohongshu.com/user/profile/65434dbd000000000600626e",
+          "scope": "store"
+        }
+      ],
+      "addressEvidence": [
+        {
+          "label": "三月兽本人·Love Live!主题详情",
+          "url": "https://www.xiaohongshu.com/explore/6ab3a0090000000012036527",
+          "dateLabel": "09-23（原文未标年份；正文档期含2026年）"
+        },
+        {
+          "label": "三月兽大悦城店·当前地址主页",
+          "url": "https://www.xiaohongshu.com/user/profile/65434dbd000000000600626e"
+        }
+      ],
+      "result": "已核主体、本店关联与经营；品牌号标scope",
+      "next": null
+    },
+    {
+      "name": "animate cafe（全知读者视角主题）",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "上海静安大悦城官方微博·上海本店主题公告",
+          "url": "https://www.sina.cn/news/detail/5338033876634572.html",
+          "date": "2026-08-31"
+        }
+      ],
+      "result": "已读官方本店目录／公告确认，未另核得可接社交号",
+      "next": null
+    },
+    {
+      "name": "微博×如鸢联动快闪",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "上海静安大悦城官方·如鸢延期公告",
+          "url": "https://www.xiaohongshu.com/explore/6ad3330c000000001b0226ec",
+          "dateLabel": "10小时前（2026-10-18读取；不换算发帖日期）"
+        }
+      ],
+      "result": "已读官方本店目录／公告确认，未另核得可接社交号",
+      "next": null
+    },
+    {
+      "name": "鸣潮×GLOBAL WORK联名快闪",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "上海静安大悦城官方·鸣潮联名活动指南",
+          "url": "https://www.xiaohongshu.com/explore/6ab0f1f20000000034000465",
+          "dateLabel": "09-21（原文未标年份）"
+        }
+      ],
+      "result": "已读官方本店目录／公告确认，未另核得可接社交号",
+      "next": null
+    },
+    {
+      "name": "狂赌之渊·私立百花王学园快闪",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "ComeFor运营方·主题快闪公告",
+          "url": "https://www.sina.cn/news/detail/5344830684136771.html",
+          "date": "2026-09-19"
+        }
+      ],
+      "result": "已读官方本店目录／公告确认，未另核得可接社交号",
+      "next": null
+    },
+    {
+      "name": "文豪野犬快闪（上海站）",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "天闻角川官方·三地快闪店公告",
+          "url": "https://sina.cn/news/detail/5346075385005821.html",
+          "date": "2026-09-22"
+        }
+      ],
+      "result": "已读官方本店目录／公告确认，未另核得可接社交号",
+      "next": null
+    },
+    {
+      "name": "Gummy Puppy橡皮小狗快闪",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "上海静安大悦城官方·橡皮小狗快闪公告",
+          "url": "https://www.xiaohongshu.com/explore/6abb64680000000002013bb2",
+          "dateLabel": "09-29（原文未标年份）"
+        }
+      ],
+      "result": "已读官方本店目录／公告确认，未另核得可接社交号",
+      "next": null
+    },
+    {
+      "name": "吴大友「伤心便利店」快闪",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "上海静安大悦城官方·伤心便利店预约与档期",
+          "url": "https://www.xiaohongshu.com/explore/6aaf89d70000000028036876",
+          "dateLabel": "编辑于09-20（原文未标年份）"
+        }
+      ],
+      "result": "已读官方本店目录／公告确认，未另核得可接社交号",
+      "next": null
+    },
+    {
+      "name": "JUST GOODS",
+      "query": "JUSTGOODS（内容＋用户2项）",
+      "candidate": {
+        "name": "Justgoods",
+        "url": "https://www.xiaohongshu.com/user/profile/68635af1000000001b020a63",
+        "handle": "94380617429"
+      },
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "存知己·大悦城谷店楼层线索",
+          "url": "https://www.sohu.com/a/871536818_120556790",
+          "date": "2025-03-15"
+        }
+      ],
+      "result": "已打开主页0帖无简介地址，无本商场关联或有效经营，不接账号",
+      "next": "沿本店经营帖或商场提及补查"
+    },
+    {
+      "name": "PM TOYS",
+      "query": "PM TOYS用户14项",
+      "candidate": {
+        "name": "PM TOYS",
+        "url": "https://www.xiaohongshu.com/user/profile/6452c42c000000002901772e",
+        "handle": "5534835994"
+      },
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "存知己·PM TOYS宝可梦道馆线索",
+          "url": "https://www.sohu.com/a/871536818_120556790",
+          "date": "2025-03-15"
+        }
+      ],
+      "result": "主页无地址；经营帖实际2024-01-29，过期不确认本店",
+      "next": "查2025—2026本店经营／搬迁／闭店"
+    },
+    {
+      "name": "暴蒙BOOMCOMIC",
+      "query": "六楼缺口内容→原帖作者",
+      "candidate": {
+        "name": "暴蒙BOOMCOMIC上海百联ZX创趣场店",
+        "url": "https://www.xiaohongshu.com/user/profile/64e6dd8d000000000100c42d",
+        "handle": null
+      },
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "暴蒙品牌分店发布·大悦城开店原帖",
+          "url": "https://www.xiaohongshu.com/explore/686cbc31000000002201e6e6",
+          "date": "2025-07-08"
+        }
+      ],
+      "result": "已读2025本商场开业帖；作者当前名属百联ZX，未另打开主页，不接其他分店账号",
+      "next": "查大悦城分店当前经营及迁移"
+    },
+    {
+      "name": "玩具反斗城（静安大悦城店）",
+      "query": "静安大悦城用户",
+      "candidate": {
+        "name": "玩具反斗城",
+        "url": "https://www.xiaohongshu.com/user/profile/69647908000000003702c367",
+        "handle": "95152125239"
+      },
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "玩具反斗城本店候选号·经营内容待核",
+          "url": "https://www.xiaohongshu.com/user/profile/69647908000000003702c367",
+          "dateLabel": "主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "result": "主页有相关经营标题但无简介地址，主体及分店关联未完整确认",
+      "next": "查本商场经营原文与官方关联"
+    },
+    {
+      "name": "漫魂",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "存知己·漫魂楼层线索",
+          "url": "https://www.sohu.com/a/871536818_120556790",
+          "date": "2025-03-15"
+        }
+      ],
+      "result": "近两年攻略已读；逐店用户搜索未执行，不写未找到账号",
+      "next": "补站内用户和本店经营、闭店冲突"
+    },
+    {
+      "name": "IPSTAR潮玩星球（常设点位线索）",
+      "query": "IPSTAR潮玩星球用户13项＋商场内容",
+      "candidate": {
+        "name": "IPSTAR潮玩星球",
+        "url": "https://www.xiaohongshu.com/user/profile/61b1ad4b0000000010007076",
+        "handle": "49313385424"
+      },
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "存知己·本商场IPSTAR点位线索",
+          "url": "https://www.sohu.com/a/871536818_120556790",
+          "date": "2025-03-15"
+        }
+      ],
+      "result": "品牌主页和促销正文已读，无本商场地址；不借其他商场主题",
+      "next": "核本店点位类型、地址和本期主题"
+    },
+    {
+      "name": "animate cafe STAND（本期饮品线索）",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "这周搞什么二次元·本商场本期活动汇总",
+          "url": "https://acgland.cn/stores/30250bb0-4321-4fe0-b8e1-788ec3e99255",
+          "dateLabel": "第三方页面未标发布日期；2026-10-18读取，活动期含2026年"
+        }
+      ],
+      "result": "未核得可接账号，保留有效线索或结束归档",
+      "next": null
+    },
+    {
+      "name": "无畏契约「全球冠军赛」快闪",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "上海静安报道转载·中秋国庆快闪介绍",
+          "url": "https://www.sohu.com/a/1080354113_121117454",
+          "date": "2026-09-24"
+        },
+        {
+          "label": "这周搞什么二次元·本期活动汇总",
+          "url": "https://acgland.cn/stores/30250bb0-4321-4fe0-b8e1-788ec3e99255"
+        }
+      ],
+      "result": "未核得可接账号，保留有效线索或结束归档",
+      "next": null
+    },
+    {
+      "name": "文化乐谷（2026夏季快闪，已结束）",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "上海静安·文化广场快闪原报道",
+          "url": "https://www.jingan.gov.cn/rmtzx/003001/20260806/8abd0f62-9fbc-48a3-9060-e3589e17d766.html",
+          "date": "2026-08-06"
+        }
+      ],
+      "result": "未核得可接账号，保留有效线索或结束归档",
+      "next": null
+    },
+    {
+      "name": "谷子快跑春节限定快闪（已结束）",
+      "query": null,
+      "candidate": null,
+      "matchedAccounts": [],
+      "addressEvidence": [
+        {
+          "label": "上海静安·2026春节快闪清单",
+          "url": "https://www.jingan.gov.cn/rmtzx/003001/20260205/c9365bd6-4a98-416f-9680-210e28049eca.html",
+          "date": "2026-02-05"
+        }
+      ],
+      "result": "未核得可接账号，保留有效线索或结束归档",
+      "next": null
+    }
+  ],
+  "notes": [
+    "无账号不等于未营业；官方目录确认不强求账号。",
+    "其余候选的未执行核实见candidates.json。"
+  ]
+}
