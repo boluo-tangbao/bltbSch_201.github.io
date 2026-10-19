@@ -1,0 +1,106 @@
+- heading "✨Hall One登陆苏州｜宝可梦&风火轮玩家集合" [level=1]
+- text: ⏰正式开业：8.28 ✅宝可梦专区｜卡牌、手办、盲盒、毛绒全覆盖！ ✅风火轮专区｜合金小车、保时捷收藏款，车迷狂喜！ 宝可梦、三丽鸥打卡墙🩵拍照巨出片！ 开业期间到店还有惊喜福利🎁 📍【星悦汇3层301a铺（靠近苏州中心连廊）】 ⏰营业时间：10:00-22:00
+- link "#HallOne":
+  - /url: /search_result?keyword=HallOne&type=54&source=web_note_detail_r10
+- link "#潮玩新店开业":
+  - /url: /search_result?keyword=%25E6%25BD%25AE%25E7%258E%25A9%25E6%2596%25B0%25E5%25BA%2597%25E5%25BC%2580%25E4%25B8%259A&type=54&source=web_note_detail_r10
+- link "#宝可梦":
+  - /url: /search_result?keyword=%25E5%25AE%259D%25E5%258F%25AF%25E6%25A2%25A6&type=54&source=web_note_detail_r10
+- link "#风火轮":
+  - /url: /search_result?keyword=%25E9%25A3%258E%25E7%2581%25AB%25E8%25BD%25AE&type=54&source=web_note_detail_r10
+- link "#大人也要玩玩具":
+  - /url: /search_result?keyword=%25E5%25A4%25A7%25E4%25BA%25BA%25E4%25B9%259F%25E8%25A6%2581%25E7%258E%25A9%25E7%258E%25A9%25E5%2585%25B7&type=54&source=web_note_detail_r10
+- link "#潮玩探店":
+  - /url: /search_result?keyword=%25E6%25BD%25AE%25E7%258E%25A9%25E6%258E%25A2%25E5%25BA%2597&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: hallone潮玩店
+- generic: 08-24
+- generic: 共 10 条评论
+- link:
+  - /url: /user/profile/60d5c52100000000010040a4?channel_type=web_profile_page
+- link "0.0":
+  - /url: /user/profile/60d5c52100000000010040a4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 有精灵球吗
+- generic: 08-24江苏
+- generic: "1"
+- generic: 回复
+- link:
+  - /url: /user/profile/5eb75ba20000000001002d64?channel_type=web_profile_page
+- link "杭州迪迦奥特曼":
+  - /url: /user/profile/5eb75ba20000000001002d64?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 在广州见过这个品牌店
+- text: 好逛的
+- generic: 08-27江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/61a33da6000000001000958d?channel_type=web_profile_page
+- link "糯糯":
+  - /url: /user/profile/61a33da6000000001000958d?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 来支持了
+- generic: 08-24江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/56124ec43f0f3c30a16bc599?channel_type=web_profile_page
+- link "在呢":
+  - /url: /user/profile/56124ec43f0f3c30a16bc599?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 风火轮有新批次吗？
+- text: 苏州好多地方都没有
+- generic: 08-25江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5aa69cac11be1077b660e846?channel_type=web_profile_page
+- link "废物小点心":
+  - /url: /user/profile/5aa69cac11be1077b660e846?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 来支持了
+- generic: 08-24江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5c66c98b0000000010035b7e?channel_type=web_profile_page
+- link "noah":
+  - /url: /user/profile/5c66c98b0000000010035b7e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 很期待！
+- generic: 08-24江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/633f7c30000000001802dcdd?channel_type=web_profile_page
+- link "冷冰冰":
+  - /url: /user/profile/633f7c30000000001802dcdd?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 有宝可梦psa10卡嘛
+- generic: 08-24江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/667aa93a0000000003031c71?channel_type=web_profile_page
+- link "不买翼豹不改名":
+  - /url: /user/profile/667aa93a0000000003031c71?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 啧期待一手
+- generic: 08-24江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5f2cee030000000001009fbe?channel_type=web_profile_page
+- link "今天也困困了":
+  - /url: /user/profile/5f2cee030000000001009fbe?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: wow！我要来玩
+- generic: 08-24江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/6079b68c000000000101d5c7?channel_type=web_profile_page
+- link "水母":
+  - /url: /user/profile/6079b68c000000000101d5c7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 08-24江苏
+- generic: 赞
+- generic: 回复
+- paragraph
+- generic: 说点什么...
+- generic: "31"
+- generic: "9"
+- generic: "10"
+- button "发送" [disabled]
+- button "取消"

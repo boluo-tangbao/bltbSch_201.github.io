@@ -1,0 +1,430 @@
+{
+  "status": "阶段性结果",
+  "readAt": "2026-10-19",
+  "queries": [
+    {
+      "platform": "小红书",
+      "query": "苏州相城天街谷店",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "scope": "首批已加载结果，未遍历全部结果",
+      "result": "发现并逐店核对FOT LIFE、OuO、独角星、蛋屋B馆；A馆2025快闪单独保留缺口",
+      "links": [
+        "https://www.xiaohongshu.com/explore/6890a82400000000040048fd",
+        "https://www.xiaohongshu.com/explore/69847d20000000001a01e255"
+      ],
+      "rawFiles": []
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州星悦汇谷店",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "scope": "首批已加载结果",
+      "result": "复用4月攻略作起始名单，另查经营帖；小潭山等是发帖者／摊位内容，不算新独立商户",
+      "links": [
+        "https://www.xiaohongshu.com/explore/69ea1ef9000000001e00fcf7",
+        "https://www.xiaohongshu.com/explore/6ab603ec000000001800409a"
+      ],
+      "rawFiles": []
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州金地广场谷店",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "scope": "首批已加载结果",
+      "result": "发现萌祺撤店、趣捡屋、金地9月楼层探店；按后续分店帖补FOT LIFE、LIKEGOODS",
+      "links": [
+        "https://www.xiaohongshu.com/explore/6a2d17be000000001700bdc0",
+        "https://www.xiaohongshu.com/explore/6ab33f45000000001a0270d8"
+      ],
+      "rawFiles": []
+    },
+    {
+      "platform": "抖音",
+      "query": "苏州相城天街谷店",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "scope": "站内首批已加载结果",
+      "result": "读到2025-04-22 OuO与相城天街官方账号关联内容；异地商场未移用",
+      "links": [],
+      "rawFiles": []
+    },
+    {
+      "platform": "抖音",
+      "query": "苏州星悦汇谷店",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "scope": "站内首批已加载结果",
+      "result": "查看2025—2026顾客内容；2024热帖排除当前依据；MAGICWOW实际归金地",
+      "links": [],
+      "rawFiles": []
+    },
+    {
+      "platform": "抖音",
+      "query": "苏州金地广场谷店",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "scope": "站内首批已加载结果及匹配经营者主页／帖子",
+      "result": "找到幽默猫、MAGICWOW；8点10分书店和漫库旧拍摄仍有主体／时效缺口",
+      "links": [
+        "https://www.douyin.com/note/7532390717056224539",
+        "https://www.douyin.com/video/7631165833322065274"
+      ],
+      "rawFiles": []
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州 相城天街 A馆 玩集萌",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "scope": "首批已加载结果",
+      "result": "当时按旧误标检索，未落实匹配；后复看实拍纠正玩聚猫，确认B馆，不将该查询算A馆已覆盖",
+      "links": [],
+      "rawFiles": []
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州独角星MiNi 天街 闭店",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "scope": "首批已加载结果",
+      "result": "异地上海独角星搬迁未作为本店关闭；未取得本分店关闭公告",
+      "links": [],
+      "rawFiles": []
+    },
+    {
+      "platform": "小红书",
+      "query": "幽默猫 苏州金地",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "scope": "首批已加载结果",
+      "result": "2025—2026顾客到店与盖章线索补强抖音本店，不猜楼层",
+      "links": [],
+      "rawFiles": []
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州星悦汇 三楼 上新",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载结果，见原始摘录",
+      "result": "最后一轮以摆摊／娃展／活动为主，未新增可确认独立商店；Hall One已按其本店开业帖核实",
+      "links": [
+        "https://www.xiaohongshu.com/explore/6ab7d7e10000000015004820"
+      ],
+      "rawFiles": [
+        "gap-xingyue-3f.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州金地 图益拼图",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载结果",
+      "result": "排除2024盘点；转用户检索找到TOi金地分店；阿雪手帐贩售未当独立固定商户",
+      "links": [
+        "https://www.xiaohongshu.com/explore/6ab33f45000000001a0270d8"
+      ],
+      "rawFiles": [
+        "search-toi-content.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州金地 漫魂",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载结果",
+      "result": "未匹配本店；原上海研究品牌经营内容未列苏州，不能跨店确认",
+      "links": [],
+      "rawFiles": []
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州星悦汇 万代拼装模型店",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-bandai.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州金地 CARD",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-card.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "星悦汇 飞社长",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-fei.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州金地 GOODSlove",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-goodslove-jindi.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州金地 谷东",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-gudong.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "谷乐屋 苏州金地",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-gulewu.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "星悦汇 次元过家家",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-guojiajia.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "星悦汇 卡游",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-kayou.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州金地 灵智谷",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-lingzhigu.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "星悦汇 栗汀",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-liting.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "萌谷子 苏州金地",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-mengguzi.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "星悦汇 扭扭城",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-niuniu.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州金地 恰谷恰谷",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-qiagu.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州金地 图益拼图",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-toi.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "相城天街 玩聚猫",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-wanjumao.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州金地 墟弥",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-xumi.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州星悦汇 yooo shop",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-yooo.txt"
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "苏州星悦汇 追星馆",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "首屏已加载用户结果；原始范围见摘录",
+      "result": "逐店匹配／排除结果见accounts.json、candidates.json",
+      "links": [],
+      "rawFiles": [
+        "user-zhuixingguan.txt"
+      ]
+    }
+  ],
+  "official": [
+    {
+      "url": "https://www.bandaihobbysite.cn/gbase/su_zhou",
+      "readAt": "2026-10-19",
+      "type": "当前官网目录",
+      "result": "高达基地星悦汇L124—125，确认当前门店；不代表步行街模型店同一铺位"
+    },
+    {
+      "url": "https://www.toptoyglobal.com/store/15.html",
+      "readAt": "2026-10-19",
+      "type": "当前官网目录",
+      "result": "苏州金地LG-4，确认TOP TOY；未标发表日，记录读取日"
+    },
+    {
+      "url": "https://goods.fun/stores?language=zh_cn",
+      "readAt": "2026-10-19",
+      "type": "品牌门店页",
+      "result": "已打开；本店经营确认实际采用森罗万象星悦汇号及9月30日到货声明，不将未提取的目录内容写成已确认"
+    },
+    {
+      "url": "https://www.sipac.gov.cn/szgyyq/dthg202503/202503/744c007a12ff42adb12748829a912386.shtml",
+      "readAt": "2026-10-19",
+      "publishedAt": "2025-03-30",
+      "type": "园区报道",
+      "result": "万代拼装模型店2025-03-29星悦汇步行街开业；历史报道支持线索，不等于当前目录"
+    },
+    {
+      "url": "https://www.sipac.gov.cn/szgyyq/dthg202512/202512/96628d336c444d42b33f85e86eb3ae83.shtml",
+      "readAt": "2026-10-19",
+      "publishedAt": "2025-12-25",
+      "type": "园区本商场报道",
+      "result": "本商场三月兽、栗汀、追星馆经营线索；栗汀及追星馆保留有效待核实"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6aba08d400000000010096f1",
+      "originalReadAt": "2026-10-05",
+      "attemptedRereadAt": "2026-10-19",
+      "type": "星悦汇官方国庆公告",
+      "result": "本次原路径无法浏览，复用先前实际已读档案：CAFE 10月1日开业L102b、萌谷子快闪截至10月18日，不伪装重读成功"
+    },
+    {
+      "url": "https://www.weibo.com/gundaminfo?tabtype=home",
+      "readAt": "2026-10-19",
+      "type": "品牌微博搜索结果",
+      "result": "检索结果见2026-06-29编辑、暑期7月1日至8月31日星悦汇步行街地址；直接页无法读取，明确只用搜索摘要辅助线索，不作当前营业确认"
+    }
+  ],
+  "stopCondition": {
+    "crossPlatformDiscovery": true,
+    "officialChecked": true,
+    "targetedGapRound": true,
+    "lastXingyue3fRoundAddedIndependentStores": false,
+    "allMallAreasCovered": false,
+    "allExtraCandidatesFullyResolved": false,
+    "reason": "相城A馆旧快闪正文、未识别卡牌柜台，以及金地书店／漫库主体时效仍有缺口；不声称全商场无遗漏"
+  },
+  "notExecuted": [
+    "相城A馆旧快闪正文与当前档期完整核对",
+    "相城卡牌柜台正式店名识别及账号反查",
+    "8点10分书店当前谷子品类与独立经营主体核对",
+    "漫库金地本店关闭／复业公告核对"
+  ],
+  "failures": [
+    "星悦汇原国庆公告重读无法浏览，复用2026-10-05实际读取档案",
+    "万代微博直接页无法读取，仅检索摘要",
+    "飞社长原媒体链接无法读取",
+    "本地页面响应与视口设置超时，页面验收见qa.json"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "query": "苏州金地 谷东",
+  "mode": "用户",
+  "readAt": "2026-10-19",
+  "scope": "首屏已加载用户结果"
+}
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- link "GoGo谷东（铁西兴华汇店） 9天前更新 小红书号：95171050067 粉丝・93 笔记・64 关注":
+  - /url: /user/profile/6a0966810000000002001805
+  - generic: GoGo谷东（铁西兴华汇店）
+  - generic: 9天前更新
+  - generic: 小红书号：95171050067
+  - generic: 粉丝・93
+  - generic: 笔记・64
+  - button "关注":
+    - generic: 关注
+- link "Naruko 小红书号：427600018 粉丝・19 笔记・38 关注":
+  - /url: /user/profile/58ba648450c4b467646f7bfe
+  - generic: Naruko
+  - generic: 小红书号：427600018
+  - generic: 粉丝・19
+  - generic: 笔记・38
+  - button "关注":
+    - generic: 关注
+- link "GoGo谷东（开谷店版 1小时前更新 小红书号：5558160082 粉丝・1万 笔记・2606 关注":
+  - /url: /user/profile/64706ae70000000011002e1b
+  - generic: GoGo谷东（开谷店版
+  - generic: 1小时前更新
+  - generic: 小红书号：5558160082
+  - generic: 粉丝・1万
+  - generic: 笔记・2606
+  - button "关注":
+    - generic: 关注
+- generic: "- THE END -"
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

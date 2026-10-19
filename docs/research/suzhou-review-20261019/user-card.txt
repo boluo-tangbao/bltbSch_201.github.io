@@ -1,0 +1,132 @@
+{
+  "query": "苏州金地 CARD",
+  "mode": "用户",
+  "scope": "首屏已加载用户结果",
+  "readAt": "2026-10-19"
+}
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- link "POP card 小红书号：95319529107 粉丝・410 笔记・144 关注":
+  - /url: /user/profile/6804fe0f000000000e011fd4
+  - generic: POP card
+  - generic: 小红书号：95319529107
+  - generic: 粉丝・410
+  - generic: 笔记・144
+  - button "关注":
+    - generic: 关注
+- link "COCO card（接上拍 收卡） 小红书号：26840981187 粉丝・55 笔记・1 关注":
+  - /url: /user/profile/68c2eb78000000001902212f
+  - generic: COCO card（接上拍 收卡）
+  - generic: 小红书号：26840981187
+  - generic: 粉丝・55
+  - generic: 笔记・1
+  - button "关注":
+    - generic: 关注
+- link "怪有趣card 小红书号：726704551 粉丝・35 关注":
+  - /url: /user/profile/5cc72c67000000001601b4bb
+  - generic: 怪有趣card
+  - generic: 小红书号：726704551
+  - generic: 粉丝・35
+  - button "关注":
+    - generic: 关注
+- link "Card 小红书号：42031374734 笔记・1 关注":
+  - /url: /user/profile/692f0bd7000000000300cb67
+  - generic: Card
+  - generic: 小红书号：42031374734
+  - generic: 笔记・1
+  - button "关注":
+    - generic: 关注
+- link "珊瑚红Tide Card小店 小红书号：189916086 粉丝・26 笔记・11 关注":
+  - /url: /user/profile/5a04eca44eacab6255a9ecdc
+  - generic: 珊瑚红Tide Card小店
+  - generic: 小红书号：189916086
+  - generic: 粉丝・26
+  - generic: 笔记・11
+  - button "关注":
+    - generic: 关注
+- link "灰卡 Gray Card Vision 小红书号：26445892788 粉丝・22 笔记・28 关注":
+  - /url: /user/profile/649afd91000000001c02832f
+  - generic: 灰卡 Gray Card Vision
+  - generic: 小红书号：26445892788
+  - generic: 粉丝・22
+  - generic: 笔记・28
+  - button "关注":
+    - generic: 关注
+- link "Ripsium 卡牌博物馆 1天前更新 小红书号：49260974173 粉丝・2 笔记・5 关注":
+  - /url: /user/profile/6a491092000000000f03b400
+  - generic: Ripsium 卡牌博物馆
+  - generic: 1天前更新
+  - generic: 小红书号：49260974173
+  - generic: 粉丝・2
+  - generic: 笔记・5
+  - button "关注":
+    - generic: 关注
+- link "万蕾~蕾蕾子 小红书号：26801382158 粉丝・47 笔记・40 关注":
+  - /url: /user/profile/5c74d16d0000000011032e3f
+  - generic: 万蕾~蕾蕾子
+  - generic: 小红书号：26801382158
+  - generic: 粉丝・47
+  - generic: 笔记・40
+  - button "关注":
+    - generic: 关注
+- link "美卡第一深情 小红书号：493644360 粉丝・28 笔记・17 关注":
+  - /url: /user/profile/5a7aaa2de8ac2b488f8be884
+  - generic: 美卡第一深情
+  - generic: 小红书号：493644360
+  - generic: 粉丝・28
+  - generic: 笔记・17
+  - button "关注":
+    - generic: 关注
+- link "Bess.card贝丝卡环保床垫 小红书号：94915026401 笔记・2 关注":
+  - /url: /user/profile/65eaa94d000000000500b3c0
+  - generic: Bess.card贝丝卡环保床垫
+  - generic: 小红书号：94915026401
+  - generic: 笔记・2
+  - button "关注":
+    - generic: 关注
+- link "lk路 小红书号：4971601436 笔记・4 关注":
+  - /url: /user/profile/6120e6140000000001006859
+  - generic: lk路
+  - generic: 小红书号：4971601436
+  - generic: 笔记・4
+  - button "关注":
+    - generic: 关注
+- link "MJClub 小红书号：9965443835 粉丝・223 笔记・81 关注":
+  - /url: /user/profile/64eec7220000000001004de7
+  - generic: MJClub
+  - generic: 小红书号：9965443835
+  - generic: 粉丝・223
+  - generic: 笔记・81
+  - button "关注":
+    - generic: 关注
+- link "Tide card 小红书号：605462516 粉丝・32 关注":
+  - /url: /user/profile/5b6fa1bdd1ffff0001919edb
+  - generic: Tide card
+  - generic: 小红书号：605462516
+  - generic: 粉丝・32
+  - button "关注":
+    - generic: 关注
+- link "Card卡片 小红书号：6917738350 粉丝・1.6万 笔记・53 关注":
+  - /url: /user/profile/623a64a8000000002102917c
+  - generic: Card卡片
+  - generic: 小红书号：6917738350
+  - generic: 粉丝・1.6万
+  - generic: 笔记・53
+  - button "关注":
+    - generic: 关注
+- link "陈米知多少 2天前更新 小红书号：537346116 粉丝・1364 笔记・294 关注":
+  - /url: /user/profile/5c314676000000000700fdb3
+  - generic: 陈米知多少
+  - generic: 2天前更新
+  - generic: 小红书号：537346116
+  - generic: 粉丝・1364
+  - generic: 笔记・294
+  - button "关注":
+    - generic: 关注
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

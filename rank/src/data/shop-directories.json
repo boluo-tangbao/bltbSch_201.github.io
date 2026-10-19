@@ -1808,7 +1808,7 @@
   },
   "suzhou-shop-003": {
     "area": "SUONE金地广场",
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-19",
     "shops": [
       {
         "name": "模玩熊",
@@ -1839,7 +1839,7 @@
             "scope": "store"
           }
         ],
-        "kind": "动漫周边、手办、好物赏",
+        "kind": "动漫周边、模型、好物赏",
         "kindSources": [
           {
             "label": "已核对的门店商品或经营记录（主营依据）",
@@ -1850,13 +1850,43 @@
       {
         "name": "萌谷子",
         "floor": "负一层",
-        "status": "listed",
-        "note": "2026 年 9 月 22 日楼层探店记录收录。",
+        "status": "recent",
+        "note": "经营者主页明确金地B1-27，最新补货帖标签亦明确苏州金地店。与星悦汇一楼中庭已结束快闪分别判断，不共用结束日期。",
         "sources": [
           {
             "label": "商优楼层探店记录",
             "url": "https://www.xiaohongshu.com/explore/6ab33f45000000001a0270d8",
             "date": "2026-09-22"
+          },
+          {
+            "label": "焦糖-萌谷子苏州版主页（未标发表日）",
+            "url": "https://www.xiaohongshu.com/user/profile/69e355090000000002002005"
+          },
+          {
+            "label": "焦糖-萌谷子苏州版：今日补货上新",
+            "url": "https://www.xiaohongshu.com/explore/6ad22a21000000001500b5d0",
+            "dateLabel": "2026-10-19读取：2天前 江苏"
+          }
+        ],
+        "kind": "小说周边",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "焦糖-萌谷子苏州版",
+            "url": "https://www.xiaohongshu.com/user/profile/69e355090000000002002005",
+            "handle": "63579507473",
+            "scope": "store"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "焦糖-萌谷子苏州版主营／商品介绍",
+            "url": "https://www.xiaohongshu.com/user/profile/69e355090000000002002005"
+          },
+          {
+            "label": "焦糖-萌谷子苏州版：今日补货上新",
+            "url": "https://www.xiaohongshu.com/explore/6ad22a21000000001500b5d0",
+            "dateLabel": "2026-10-19读取：2天前 江苏"
           }
         ]
       },
@@ -1889,7 +1919,7 @@
             "scope": "store"
           }
         ],
-        "kind": "动漫周边、手办、模型",
+        "kind": "动漫周边、模型",
         "kindSources": [
           {
             "label": "星悦汇三月兽商品品类介绍",
@@ -1926,7 +1956,7 @@
             "scope": "store"
           }
         ],
-        "kind": "动漫周边、手办、一番赏",
+        "kind": "动漫周边、模型、一番赏",
         "kindSources": [
           {
             "label": "已核对的门店商品或经营记录（主营依据）",
@@ -1970,20 +2000,43 @@
       {
         "name": "图益拼图",
         "floor": "负一层",
-        "status": "listed",
-        "note": "2026 年 9 月 22 日楼层探店记录收录。",
+        "status": "recent",
+        "note": "本店主页明确金地B1楼、欢迎到店选购，并有近期拼图经营内容。此前缺年份／正文的展会品牌介绍已移出生产来源，本轮改用已读本分店证据。",
         "sources": [
           {
             "label": "商优楼层探店记录",
             "url": "https://www.xiaohongshu.com/explore/6ab33f45000000001a0270d8",
             "date": "2026-09-22"
+          },
+          {
+            "label": "TOi图益拼图-苏州金地店主页（未标发表日）",
+            "url": "https://www.xiaohongshu.com/user/profile/65bb2aa7000000000903f981"
+          },
+          {
+            "label": "TOi图益拼图-苏州金地店：被这个恐龙博物馆硬控了！",
+            "url": "https://www.xiaohongshu.com/explore/6ad1a15a000000001b01f38a",
+            "dateLabel": "2026-10-19读取：3天前 江苏"
           }
         ],
-        "kind": "拼图、益智玩具",
+        "kind": "拼图",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "TOi图益拼图-苏州金地店",
+            "url": "https://www.xiaohongshu.com/user/profile/65bb2aa7000000000903f981",
+            "handle": "26805461898",
+            "scope": "store"
+          }
+        ],
         "kindSources": [
           {
-            "label": "图益品牌产品介绍",
-            "url": "https://www.china-toy-expo.com/media_center/12719"
+            "label": "TOi图益拼图-苏州金地店主营／商品介绍",
+            "url": "https://www.xiaohongshu.com/user/profile/65bb2aa7000000000903f981"
+          },
+          {
+            "label": "TOi图益拼图-苏州金地店：被这个恐龙博物馆硬控了！",
+            "url": "https://www.xiaohongshu.com/explore/6ad1a15a000000001b01f38a",
+            "dateLabel": "2026-10-19读取：3天前 江苏"
           }
         ]
       },
@@ -2004,12 +2057,17 @@
         "name": "恰谷恰谷",
         "floor": "LG",
         "status": "listed",
-        "note": "2026 年 9 月 22 日楼层探店记录收录。 主营依据：作者2026-09-19直拍照片（本站图集SUONE/photo-03.webp）可见日谷货架与寄售区标牌。",
+        "note": "2026 年 9 月 22 日楼层探店记录收录。 主营依据：作者2026-09-19直拍照片（本站图集SUONE/photo-03.webp）可见日谷货架与寄售区标牌。 作者实拍与本商圈楼层记录相互印证，店名、寄售品类及历史在店事实证据较强；尚无官方当前营业确认。",
         "sources": [
           {
             "label": "商优楼层探店记录",
             "url": "https://www.xiaohongshu.com/explore/6ab33f45000000001a0270d8",
             "date": "2026-09-22"
+          },
+          {
+            "label": "作者2026-09-19实拍：恰谷恰谷门头及寄售区",
+            "url": "https://boluo-tangbao.github.io/bltbSch_201.github.io/rank/images/places/Suzhou/SUONE/photo-03.webp",
+            "dateLabel": "作者拍摄于2026-09-19（非发帖日）"
           }
         ],
         "kind": "日谷、寄售动漫周边"
@@ -2044,22 +2102,27 @@
       {
         "name": "TOP TOY",
         "floor": "LG",
-        "status": "listed",
-        "note": "2026 年 9 月 22 日楼层探店记录收录。",
+        "status": "recent",
+        "note": "2026-10-19实际读取TOP TOY当前官网门店目录，明确苏州金地广场LG-4；按官方目录确认营业。目录未标发布日期，读取时间不当发表时间。",
         "sources": [
           {
             "label": "商优楼层探店记录",
             "url": "https://www.xiaohongshu.com/explore/6ab33f45000000001a0270d8",
             "date": "2026-09-22"
+          },
+          {
+            "label": "TOP TOY官网当前线下门店目录（2026-10-19读取）",
+            "url": "https://www.toptoyglobal.com/store/15.html"
           }
         ],
-        "kind": "盲盒、积木、手办、拼装模型",
+        "kind": "盲盒、积木、模型",
         "kindSources": [
           {
             "label": "TOP TOY官网核心品类说明",
             "url": "https://www.toptoyglobal.com/"
           }
-        ]
+        ],
+        "operatingConfirmation": "official-listing"
       },
       {
         "name": "CARD",
@@ -2090,26 +2153,57 @@
       {
         "name": "谷东",
         "floor": "LG",
-        "status": "listed",
-        "note": "2026 年 9 月 22 日楼层探店记录收录。",
+        "status": "recent",
+        "note": "共用经营号当前简介明确苏州金地LG-30；2025年苏州开店帖与原9月楼层记录相互印证，属于有效窗口。沈阳店内容不当作苏州到货或库存确认。",
         "sources": [
           {
             "label": "商优楼层探店记录",
             "url": "https://www.xiaohongshu.com/explore/6ab33f45000000001a0270d8",
             "date": "2026-09-22"
+          },
+          {
+            "label": "GoGo谷东（开谷店版主页（未标发表日）",
+            "url": "https://www.xiaohongshu.com/user/profile/64706ae70000000011002e1b"
+          },
+          {
+            "label": "GoGo谷东（开谷店版：2025.1.20 我们苏州见！真的是我喜欢的样子",
+            "url": "https://www.xiaohongshu.com/explore/678d433c0000000016020835",
+            "date": "2025-01-19"
+          }
+        ],
+        "kind": "日谷、寄售周边",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "GoGo谷东（开谷店版",
+            "url": "https://www.xiaohongshu.com/user/profile/64706ae70000000011002e1b",
+            "handle": "5558160082",
+            "scope": "brand"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "GoGo谷东（开谷店版主营／商品介绍",
+            "url": "https://www.xiaohongshu.com/user/profile/64706ae70000000011002e1b"
+          },
+          {
+            "label": "GoGo谷东（开谷店版：2025.1.20 我们苏州见！真的是我喜欢的样子",
+            "url": "https://www.xiaohongshu.com/explore/678d433c0000000016020835",
+            "date": "2025-01-19"
           }
         ]
       },
       {
         "name": "耀卡盒子",
         "floor": "LG",
-        "status": "recent",
+        "status": "closed",
         "kind": "卡牌（含宝可梦）",
-        "note": "当前金地地址为LG-53。门店公告称金地原址营业截至2026年10月10日，随后迁往苏州万象天地，预计2027年1月开业。10月5日仍属原址营业期，出发前请查看搬迁进度。",
+        "note": "本轮重读搬迁通知：金地原址LG-53营业截止10月10日，结合2026年10月2日编辑时间及新址预计2027年1月开业，判断原址截止2026-10-10。期限已过，本分店隐藏；没有把搬迁后的新址预告视为已营业，也不把原常设店关店日期当快闪档期。",
         "sources": [
           {
             "label": "金地门店搬迁通知",
-            "url": "https://www.xiaohongshu.com/explore/6abf46f50000000018012520"
+            "url": "https://www.xiaohongshu.com/explore/6abf46f50000000018012520",
+            "dateLabel": "2026-10-02 编辑时间（原发表日未记录）"
           },
           {
             "label": "门店简介与新帖",
@@ -2154,9 +2248,14 @@
       {
         "name": "多摩万事屋",
         "floor": "负一层",
-        "status": "unverified",
-        "note": "门店官方账号简介标注 B1-13。",
+        "status": "recent",
+        "note": "本轮核对本店号明确B1-13，并读到1月17日本店年终促销／春节不打烊经营帖，足以补齐原来仅有主页的依据。促销本身不是限时店；未见明确关闭公告。",
         "sources": [
+          {
+            "label": "本分店经营促销帖",
+            "url": "https://www.xiaohongshu.com/explore/696b2235000000002103dbf7",
+            "date": "2026-01-17"
+          },
           {
             "label": "门店号及地址简介",
             "url": "https://www.xiaohongshu.com/user/profile/66f68155000000000d025aa7"
@@ -2176,7 +2275,7 @@
         "name": "趣捡屋",
         "floor": "LG",
         "status": "unverified",
-        "note": "6月顾客帖和7月13日品牌帖有金地店线索；账号近期内容涉及其他城市，尚未独立确认金地店当前营业。",
+        "note": "本商圈依据较强：2026年6月顾客现场反馈明确金地LG层，7月13日品牌经营帖含苏州金地标签。品牌主页未列当前苏州地址，最新已读帖子明确西安，不能借异地活跃确认金地当前营业；原品牌号移入研究台账，前台保留有效线索与原文。",
         "sources": [
           {
             "label": "顾客探店及楼层评论",
@@ -2189,15 +2288,6 @@
             "date": "2026-07-13"
           }
         ],
-        "accounts": [
-          {
-            "platform": "xiaohongshu",
-            "name": "趣捡屋",
-            "handle": "95413066403",
-            "url": "https://www.xiaohongshu.com/user/profile/67454b940000000008009460",
-            "scope": "brand"
-          }
-        ],
         "kind": "动漫／游戏周边、盲抽",
         "kindSources": [
           {
@@ -2205,12 +2295,167 @@
             "url": "https://www.xiaohongshu.com/explore/6a377ce700000000070273b9"
           }
         ]
+      },
+      {
+        "name": "FOT LIFE",
+        "aliases": [
+          "FOTLIFE金地店"
+        ],
+        "floor": "LG",
+        "status": "recent",
+        "kind": "动漫／游戏周边、一番赏、卡牌（宝可梦）",
+        "note": "店长经营号简介明确金地LG-33，并有10月3日编辑的本店上新。相城与金地分别记录，未以相城经营帖代替金地证据。",
+        "sources": [
+          {
+            "label": "本店火影一番赏上新",
+            "url": "https://www.xiaohongshu.com/explore/6ac0856c000000000b0040e0",
+            "dateLabel": "2026-10-03 编辑时间（原发表日未记录）"
+          },
+          {
+            "label": "已核对主体与分店简介",
+            "url": "https://www.xiaohongshu.com/user/profile/676dacc60000000018016ad4",
+            "dateLabel": "2026-10-19读取主页，未标发表日"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "FOTLIFE金地店小鹿店长",
+            "handle": "11546540285",
+            "url": "https://www.xiaohongshu.com/user/profile/676dacc60000000018016ad4",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "幽默猫",
+        "aliases": [
+          "幽默猫-苏州金地店"
+        ],
+        "status": "recent",
+        "kind": "动漫／游戏周边、一番赏",
+        "note": "抖音主页明确苏州金地分店，2025年7月29日上新正文明确本店；2025—2026年仍有顾客吃谷与盖章线索。本店开业优惠与商品活动不构成整店限时档期；未核实铺位，不猜楼层。",
+        "sources": [
+          {
+            "label": "本分店经营上新帖",
+            "url": "https://www.douyin.com/note/7532390717056224539",
+            "date": "2025-07-29"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "douyin",
+            "name": "幽默猫-苏州金地店",
+            "handle": "70901825577",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAjgTchTt9P1E_779zjVNBcnDDBhW_FGD8OVn9ReH4sbs",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "MAGICWOW",
+        "aliases": [
+          "MAGICWOW苏州金地店"
+        ],
+        "status": "recent",
+        "kind": "动漫／游戏周边",
+        "note": "抖音分店号名称与苏州金地关联一致，有本店到店上新及2026年4月21日经营帖；原名单没有该名称，本轮按独立店铺收录，未猜中文译名或楼层。",
+        "sources": [
+          {
+            "label": "金地分店本店经营上新",
+            "url": "https://www.douyin.com/video/7631165833322065274",
+            "date": "2026-04-21"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "douyin",
+            "name": "MAGICWOW苏州金地店",
+            "handle": "68054104887",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAA8F1kr1lPFk0-SlLKz5Sg_NC4iqVimdwhOU7GzQcMK6m3pyBjltxfuZ3otEO6of_E",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "煰物社 LIKEGOODS",
+        "aliases": [
+          "LIKEGOODS",
+          "煰物社"
+        ],
+        "floor": "LG",
+        "status": "recent",
+        "kind": "动漫／游戏周边",
+        "note": "已核对的煰物社经营号虽名为星悦汇店，3月13日自发活动正文明确金地LG层LIKEGOODS和B1舞台。按正文实际分店归属补强本店经营，标共用品牌范围；一日店长活动结束不等于常设零售店关闭。",
+        "sources": [
+          {
+            "label": "经营主体自发金地本店活动及地址",
+            "url": "https://www.xiaohongshu.com/explore/69b39a6f0000000022028b3b",
+            "date": "2026-03-13"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "煰物社星悦汇店（金地活动共用号）",
+            "handle": "26217704041",
+            "url": "https://www.xiaohongshu.com/user/profile/67317060000000001c018593",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "萌祺 GOODS",
+        "aliases": [
+          "萌祺GOODS（苏州店）"
+        ],
+        "floor": "LG",
+        "status": "closed",
+        "note": "本店号简介仍写LG-54，但最新已读帖明确“撤店撤货最后几个小时”，页面编辑于2026年6月13日。按明确撤店记录隐藏，编辑日不作原发表日，也不补造最后撤店时刻。",
+        "sources": [
+          {
+            "label": "本店撤店撤货公告",
+            "url": "https://www.xiaohongshu.com/explore/6a2d17be000000001700bdc0",
+            "dateLabel": "2026-06-13 编辑时间（原发表日未记录）"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "萌祺GOODS（苏州店）",
+            "handle": "2747858381",
+            "url": "https://www.xiaohongshu.com/user/profile/61065c2d00000000010012a8",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "三月兽 CAFE（金地旧店）",
+        "floor": "LG",
+        "status": "closed",
+        "note": "金地店自发公告明确“将于2025年10月16日起结束营业”；未取得本址复业依据。仅归档旧CAFE，与仍在经营的三月兽零售店、星悦汇新CAFE分开，不推断为直接迁店。",
+        "sources": [
+          {
+            "label": "金地CAFE焕新升级／结束营业公告",
+            "url": "https://www.xiaohongshu.com/explore/68ec79860000000005012bbc",
+            "date": "2025-10-13"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "三月兽CAFE苏州金地店",
+            "handle": "11388986847",
+            "url": "https://www.xiaohongshu.com/user/profile/66625ff4000000000700451a",
+            "scope": "store"
+          }
+        ]
       }
     ]
   },
   "suzhou-shop-002": {
     "area": "星悦汇",
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-19",
     "shops": [
       {
         "name": "三月兽",
@@ -2241,7 +2486,7 @@
             "scope": "store"
           }
         ],
-        "kind": "动漫周边、模型、手办、玩偶",
+        "kind": "动漫周边、模型、玩偶",
         "kindSources": [
           {
             "label": "星悦汇三月兽商品品类介绍",
@@ -2252,33 +2497,79 @@
       {
         "name": "次元贩售",
         "floor": "一层",
-        "status": "unverified",
-        "note": "2026 年 4 月 23 日楼层店单收录，位置沿用该篇记录。",
+        "status": "recent",
+        "note": "本分店号与9月30日补货帖均明确苏州星悦汇，足以补强4月楼层记录；包含多IP商品，不保证今日库存。",
         "sources": [
           {
-            "label": "牧野星凪楼层店单",
-            "url": "https://www.xiaohongshu.com/explore/69ea1ef9000000001e00fcf7",
-            "date": "2026-04-23"
-          }
-        ]
-      },
-      {
-        "name": "卡游",
-        "floor": "一层",
-        "status": "unverified",
-        "note": "2026 年 4 月 23 日楼层店单收录，位置沿用该篇记录。",
-        "sources": [
+            "label": "本分店补货上新",
+            "url": "https://www.xiaohongshu.com/explore/6abcf6f6000000000a026d39",
+            "date": "2026-09-30"
+          },
+          {
+            "label": "已核对主体与分店简介",
+            "url": "https://www.xiaohongshu.com/user/profile/66816f920000000003033b0f",
+            "dateLabel": "2026-10-19读取主页，未标发表日"
+          },
           {
             "label": "牧野星凪楼层店单",
             "url": "https://www.xiaohongshu.com/explore/69ea1ef9000000001e00fcf7",
             "date": "2026-04-23"
           }
         ],
-        "kind": "IP 卡牌、收藏周边",
+        "aliases": [
+          "MTS次元贩售"
+        ],
+        "kind": "动漫／游戏周边、一番赏",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "Mts次元贩售-苏州星悦汇",
+            "handle": "26964416382",
+            "url": "https://www.xiaohongshu.com/user/profile/66816f920000000003033b0f",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "卡游",
+        "floor": "一层",
+        "status": "recent",
+        "note": "主页明确北区一层112、服务台旁麦当劳对面；本店一番赏上新与4月楼层店单相互印证。商品余量不作今日库存承诺。",
+        "sources": [
+          {
+            "label": "牧野星凪楼层店单",
+            "url": "https://www.xiaohongshu.com/explore/69ea1ef9000000001e00fcf7",
+            "date": "2026-04-23"
+          },
+          {
+            "label": "卡游苏州星悦汇店主页（未标发表日）",
+            "url": "https://www.xiaohongshu.com/user/profile/660f7ee2000000000b00c70b"
+          },
+          {
+            "label": "卡游苏州星悦汇店：仅剩22抽的银魂赏",
+            "url": "https://www.xiaohongshu.com/explore/6acb5606000000001303c720",
+            "dateLabel": "2026-10-19读取：7天前 江苏"
+          }
+        ],
+        "kind": "卡牌、动漫周边、一番赏、文具",
         "kindSources": [
           {
-            "label": "卡游官方应用商品介绍（品牌范围）",
-            "url": "https://apps.apple.com/cn/app/id6449245023"
+            "label": "卡游苏州星悦汇店：仅剩22抽的银魂赏",
+            "url": "https://www.xiaohongshu.com/explore/6acb5606000000001303c720",
+            "dateLabel": "2026-10-19读取：7天前 江苏"
+          },
+          {
+            "label": "卡游苏州星悦汇店主营简介（未标发表日）",
+            "url": "https://www.xiaohongshu.com/user/profile/660f7ee2000000000b00c70b"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "卡游苏州星悦汇店",
+            "handle": "95848856324",
+            "url": "https://www.xiaohongshu.com/user/profile/660f7ee2000000000b00c70b",
+            "scope": "store"
           }
         ]
       },
@@ -2323,19 +2614,25 @@
         "name": "飞社长",
         "floor": "一层",
         "status": "unverified",
-        "note": "2026 年 4 月 23 日楼层店单收录，位置沿用该篇记录。",
+        "note": "4月楼层店单与作者9月19日实拍的本店门头、周边货架相互印证，本商圈位置、当时经营及品类证据较强；仍缺匹配官方账号／当前官网确认，保留折叠线索。原无法核验日期的品牌采访只归档。",
         "sources": [
           {
             "label": "牧野星凪楼层店单",
             "url": "https://www.xiaohongshu.com/explore/69ea1ef9000000001e00fcf7",
             "date": "2026-04-23"
+          },
+          {
+            "label": "作者2026-09-19实拍：飞社长门头与周边陈列",
+            "url": "https://boluo-tangbao.github.io/bltbSch_201.github.io/rank/images/places/Suzhou/Xingyuehui/photo-07.webp",
+            "dateLabel": "作者拍摄于2026-09-19（非发帖日）"
           }
         ],
-        "kind": "日谷、手办、动漫周边",
+        "kind": "动漫周边",
         "kindSources": [
           {
-            "label": "飞社长经营者受访品类介绍（品牌范围）",
-            "url": "https://www.tmtpost.com/7106535.html"
+            "label": "作者2026-09-19实拍：飞社长门头与周边陈列",
+            "url": "https://boluo-tangbao.github.io/bltbSch_201.github.io/rank/images/places/Suzhou/Xingyuehui/photo-07.webp",
+            "dateLabel": "作者拍摄于2026-09-19（非发帖日）"
           }
         ]
       },
@@ -2343,12 +2640,22 @@
         "name": "模玩熊",
         "floor": "一层",
         "status": "recent",
-        "note": "9月26日寄售者更新韩漫寄售库存，9月顾客有购买反馈；寄售者为个人账号，不作为官方门店号标注。1F位置沿用4月店单，请现场确认。",
+        "note": "本轮补到星悦汇分店号及本店一番赏更新，原9月26日寄售记录与顾客现场反馈提高了本店经营线索强度。寄售者为个人，不作为官方号；一层位置沿用4月店单。",
         "sources": [
+          {
+            "label": "本分店一番赏上新",
+            "url": "https://www.xiaohongshu.com/explore/6ad31c57000000001a0266a4",
+            "dateLabel": "1天前（2026-10-19读取）"
+          },
+          {
+            "label": "已核对主体与分店简介",
+            "url": "https://www.xiaohongshu.com/user/profile/67566182000000001d02f4d7",
+            "dateLabel": "2026-10-19读取主页，未标发表日"
+          },
           {
             "label": "寄售者9月26日库存更新",
             "url": "https://www.xiaohongshu.com/explore/6a50e9470000000011011c04",
-            "date": "2026-09-26"
+            "dateLabel": "正文0926更新（按2026年9月上下文判断）；原页面编辑于2026-09-26，非原发表日"
           },
           {
             "label": "牧野星凪楼层店单",
@@ -2356,20 +2663,34 @@
             "date": "2026-04-23"
           }
         ],
-        "kind": "动漫周边、寄售周边（含韩漫）",
+        "kind": "动漫／游戏周边、模型、一番赏、寄售周边（含韩漫）",
         "kindSources": [
           {
             "label": "已核对的门店商品或经营记录（主营依据）",
             "url": "https://www.xiaohongshu.com/explore/6a50e9470000000011011c04"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "模玩熊苏州星悦汇店",
+            "handle": "95386945164",
+            "url": "https://www.xiaohongshu.com/user/profile/67566182000000001d02f4d7",
+            "scope": "store"
           }
         ]
       },
       {
         "name": "COMIPLUS",
         "floor": "一层",
-        "status": "unverified",
-        "note": "2026 年 4 月 23 日楼层店单收录，位置沿用该篇记录。",
+        "status": "closed",
+        "note": "本店号简介明确已闭店；7月8日公告正文确认苏州店7月5日正式闭店。4月店单与品牌仍上新均不能覆盖本分店关闭依据。",
         "sources": [
+          {
+            "label": "本分店关闭公告",
+            "url": "https://www.xiaohongshu.com/explore/6a4e35f90000000016027dd4",
+            "date": "2026-07-08"
+          },
           {
             "label": "牧野星凪楼层店单",
             "url": "https://www.xiaohongshu.com/explore/69ea1ef9000000001e00fcf7",
@@ -2382,38 +2703,89 @@
             "label": "COMIPLUS品牌周边介绍（非门店库存）",
             "url": "https://www.sina.cn/media/2589574104"
           }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "COMIPLUS+苏州星悦汇店",
+            "handle": "63806341667",
+            "url": "https://www.xiaohongshu.com/user/profile/66f27194000000001d022996",
+            "scope": "store"
+          }
         ]
       },
       {
         "name": "煰物社",
         "floor": "一层",
-        "status": "unverified",
-        "note": "2026 年 4 月 23 日楼层店单收录，位置沿用该篇记录。",
+        "status": "recent",
+        "note": "主页明确星悦汇一楼109，2026年3月7日有上新，4月23日楼层攻略独立收录。另有3月13日金地活动，为另一分店线索，单独归属金地，未当作星悦汇的到店活动。",
         "sources": [
           {
-            "label": "牧野星凪楼层店单",
-            "url": "https://www.xiaohongshu.com/explore/69ea1ef9000000001e00fcf7",
-            "date": "2026-04-23"
-          }
-        ]
-      },
-      {
-        "name": "扭扭城",
-        "floor": "二层",
-        "status": "unverified",
-        "note": "2026 年 4 月 23 日楼层店单收录，位置沿用该篇记录。",
-        "sources": [
+            "label": "门店上新及品类",
+            "url": "https://www.xiaohongshu.com/explore/69ac0ef2000000001a0376af",
+            "date": "2026-03-07"
+          },
+          {
+            "label": "已核对主体与分店简介",
+            "url": "https://www.xiaohongshu.com/user/profile/67317060000000001c018593",
+            "dateLabel": "2026-10-19读取主页，未标发表日"
+          },
           {
             "label": "牧野星凪楼层店单",
             "url": "https://www.xiaohongshu.com/explore/69ea1ef9000000001e00fcf7",
             "date": "2026-04-23"
           }
         ],
-        "kind": "扭蛋、盲盒、手办",
+        "aliases": [
+          "LIKEGOODS"
+        ],
+        "kind": "动漫周边、模型、一番赏",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "煰物社星悦汇店",
+            "handle": "26217704041",
+            "url": "https://www.xiaohongshu.com/user/profile/67317060000000001c018593",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "扭扭城",
+        "floor": "二层",
+        "status": "recent",
+        "note": "本店主页明确星悦汇二层，最新已读Hello Kitty扭蛋上新支持本店经营。商品限时返场不是整家店限时开放。",
+        "sources": [
+          {
+            "label": "牧野星凪楼层店单",
+            "url": "https://www.xiaohongshu.com/explore/69ea1ef9000000001e00fcf7",
+            "date": "2026-04-23"
+          },
+          {
+            "label": "苏州扭扭城主页（未标发表日）",
+            "url": "https://www.xiaohongshu.com/user/profile/6757cf86000000000800afb8"
+          },
+          {
+            "label": "苏州扭扭城：梦屋Hello Kitty毛绒指偶扭蛋上新",
+            "url": "https://www.xiaohongshu.com/explore/6ad3438800000000180168eb",
+            "dateLabel": "2026-10-19读取：1天前 江苏"
+          }
+        ],
+        "kind": "扭蛋、盲盒、模型",
         "kindSources": [
           {
-            "label": "星悦汇三月兽商品品类介绍",
-            "url": "https://www.sipac.gov.cn/szgyyq/dthg202506/202506/e585f55089fe480f8126517eef1d25bb.shtml"
+            "label": "苏州扭扭城：梦屋Hello Kitty毛绒指偶扭蛋上新",
+            "url": "https://www.xiaohongshu.com/explore/6ad3438800000000180168eb",
+            "dateLabel": "2026-10-19读取：1天前 江苏"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "苏州扭扭城",
+            "handle": "sznnt201",
+            "url": "https://www.xiaohongshu.com/user/profile/6757cf86000000000800afb8",
+            "scope": "store"
           }
         ]
       },
@@ -2440,13 +2812,39 @@
       {
         "name": "多番鱼",
         "floor": "二层",
-        "status": "unverified",
-        "note": "2026 年 4 月 23 日楼层店单收录，位置沿用该篇记录。",
+        "status": "recent",
+        "note": "主页明确星悦汇二层、一番赏和Hello Kitty集店；9月25日本店上新与原楼层店单相互印证。",
         "sources": [
           {
             "label": "牧野星凪楼层店单",
             "url": "https://www.xiaohongshu.com/explore/69ea1ef9000000001e00fcf7",
             "date": "2026-04-23"
+          },
+          {
+            "label": "苏州多番鱼主页（未标发表日）",
+            "url": "https://www.xiaohongshu.com/user/profile/6a1533960000000001007400"
+          },
+          {
+            "label": "苏州多番鱼：宝可梦卡牌自制一番赏上新",
+            "url": "https://www.xiaohongshu.com/explore/6ab62324000000001c00fbee",
+            "date": "2026-09-25"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "苏州多番鱼",
+            "handle": "49311641562",
+            "url": "https://www.xiaohongshu.com/user/profile/6a1533960000000001007400",
+            "scope": "store"
+          }
+        ],
+        "kind": "一番赏、卡牌、周边（Hello Kitty）",
+        "kindSources": [
+          {
+            "label": "苏州多番鱼：宝可梦卡牌自制一番赏上新",
+            "url": "https://www.xiaohongshu.com/explore/6ab62324000000001c00fbee",
+            "date": "2026-09-25"
           }
         ]
       },
@@ -2490,27 +2888,85 @@
       {
         "name": "AKIBA",
         "floor": "二层",
-        "status": "unverified",
-        "note": "2026 年 4 月 23 日楼层店单收录，位置沿用该篇记录。",
+        "status": "recent",
+        "note": "本店主页明确星悦汇二层；最新已读帖子为本店10月18日上新。商品上新日不是整家门店限时开放期。",
         "sources": [
           {
             "label": "牧野星凪楼层店单",
             "url": "https://www.xiaohongshu.com/explore/69ea1ef9000000001e00fcf7",
             "date": "2026-04-23"
+          },
+          {
+            "label": "AKIBA GO苏州星悦汇店主页（未标发表日）",
+            "url": "https://www.xiaohongshu.com/user/profile/67160deb000000001e0078f7"
+          },
+          {
+            "label": "AKIBA GO苏州星悦汇店：明日方舟终末地｜春晓栖亭10月18日上新",
+            "url": "https://www.xiaohongshu.com/explore/6ad47f23000000000c00dda6",
+            "dateLabel": "2026-10-19读取：昨天04:11 江苏"
           }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "AKIBA GO苏州星悦汇店",
+            "handle": "95026767652",
+            "url": "https://www.xiaohongshu.com/user/profile/67160deb000000001e0078f7",
+            "scope": "store"
+          }
+        ],
+        "kind": "动漫／游戏周边",
+        "kindSources": [
+          {
+            "label": "AKIBA GO苏州星悦汇店：明日方舟终末地｜春晓栖亭10月18日上新",
+            "url": "https://www.xiaohongshu.com/explore/6ad47f23000000000c00dda6",
+            "dateLabel": "2026-10-19读取：昨天04:11 江苏"
+          }
+        ],
+        "aliases": [
+          "AKIBA GO"
         ]
       },
       {
         "name": "次元过家家",
         "floor": "二层",
-        "status": "unverified",
-        "note": "2026 年 4 月 23 日楼层店单收录，位置沿用该篇记录。",
+        "status": "recent",
+        "note": "本店主页明确星悦汇二层，并有近期Re：0经营更新；与旧楼层名单为同一分店。",
         "sources": [
           {
             "label": "牧野星凪楼层店单",
             "url": "https://www.xiaohongshu.com/explore/69ea1ef9000000001e00fcf7",
             "date": "2026-04-23"
+          },
+          {
+            "label": "KURO次元过家家星悦汇店主页（未标发表日）",
+            "url": "https://www.xiaohongshu.com/user/profile/68616344000000001b01b436"
+          },
+          {
+            "label": "KURO次元过家家星悦汇店：Re：0 上新啦！｜次元过家家｜星悦汇",
+            "url": "https://www.xiaohongshu.com/explore/6ad0b4c60000000015013f79",
+            "dateLabel": "2026-10-19读取：3天前 江苏"
           }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "KURO次元过家家星悦汇店",
+            "handle": "27730261431",
+            "url": "https://www.xiaohongshu.com/user/profile/68616344000000001b01b436",
+            "scope": "store"
+          }
+        ],
+        "kind": "动漫周边、模型、一番赏",
+        "kindSources": [
+          {
+            "label": "KURO次元过家家星悦汇店：Re：0 上新啦！｜次元过家家｜星悦汇",
+            "url": "https://www.xiaohongshu.com/explore/6ad0b4c60000000015013f79",
+            "dateLabel": "2026-10-19读取：3天前 江苏"
+          }
+        ],
+        "aliases": [
+          "KURO次元过家家"
         ]
       },
       {
@@ -2524,105 +2980,122 @@
             "url": "https://www.xiaohongshu.com/explore/69ea1ef9000000001e00fcf7",
             "date": "2026-04-23"
           }
-        ],
-        "kind": "影视／动漫周边、潮玩",
-        "kindSources": [
-          {
-            "label": "星悦汇招商资料中的YOOOO SHOP品牌品类",
-            "url": "https://m.winshang.com/news725325.html"
-          }
         ]
       },
       {
         "name": "ONE TWO GOODS",
         "floor": "三层",
-        "status": "unverified",
-        "note": "2026 年 4 月 23 日楼层店单收录，位置沿用该篇记录。",
+        "status": "recent",
+        "note": "玩兔谷本店经营帖正文明确“苏州星悦汇三楼One Two Goods”，确认旧名单与新账号为同一家，合并别名不重复计店。",
         "sources": [
           {
             "label": "牧野星凪楼层店单",
             "url": "https://www.xiaohongshu.com/explore/69ea1ef9000000001e00fcf7",
             "date": "2026-04-23"
+          },
+          {
+            "label": "OTG玩兔谷苏州星悦汇店主页（未标发表日）",
+            "url": "https://www.xiaohongshu.com/user/profile/6059e6f70000000001009646"
+          },
+          {
+            "label": "OTG玩兔谷苏州星悦汇店：BX，CX，UX系列陀螺上新——",
+            "url": "https://www.xiaohongshu.com/explore/6aaceb060000000027016201",
+            "date": "2026-09-18"
           }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "OTG玩兔谷 苏州星悦汇店",
+            "handle": "4215214152",
+            "url": "https://www.xiaohongshu.com/user/profile/6059e6f70000000001009646",
+            "scope": "store"
+          }
+        ],
+        "kind": "动漫／游戏周边、卡牌、陀螺",
+        "kindSources": [
+          {
+            "label": "OTG玩兔谷苏州星悦汇店：BX，CX，UX系列陀螺上新——",
+            "url": "https://www.xiaohongshu.com/explore/6aaceb060000000027016201",
+            "date": "2026-09-18"
+          }
+        ],
+        "aliases": [
+          "OTG玩兔谷",
+          "玩兔谷"
         ]
       },
       {
         "name": "捣谷社",
         "floor": "三层",
-        "status": "unverified",
-        "note": "2026 年 4 月 23 日楼层店单收录，位置沿用该篇记录。",
+        "status": "closed",
+        "note": "本店公告发表于2026年8月17日，明确8月23日营业结束后正式闭店；主页仍列L301不覆盖关闭公告。保留旧4月楼层线索归档，不再进入展开更多。",
         "sources": [
+          {
+            "label": "本店正式闭店公告",
+            "url": "https://www.xiaohongshu.com/explore/6a83d3230000000005022701",
+            "date": "2026-08-17"
+          },
           {
             "label": "牧野星凪楼层店单",
             "url": "https://www.xiaohongshu.com/explore/69ea1ef9000000001e00fcf7",
             "date": "2026-04-23"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "苏州捣谷社",
+            "handle": "95695480417",
+            "url": "https://www.xiaohongshu.com/user/profile/66fb9aed000000000b0310b1",
+            "scope": "store"
           }
         ]
       },
       {
         "name": "萌谷子快闪",
         "floor": "一层",
-        "status": "recent",
+        "status": "closed",
         "kind": "限时快闪",
-        "note": "商场国庆公告列出一楼中庭萌谷子快闪，期限至2026年10月18日。属于临时活动，不作永久门店。",
+        "note": "复用2026-10-05实际读取的商场公告：一楼中庭快闪截至10月18日，本轮已过期，从前台及展开更多隐藏；不据此判定金地萌谷子常设店关闭。",
         "sources": [
           {
             "label": "商场国庆活动公告",
             "url": "https://www.xiaohongshu.com/explore/6aba08d400000000010096f1",
             "dateLabel": "2026 年国庆活动"
           }
-        ]
+        ],
+        "limited": {
+          "scope": "store",
+          "period": "截至2026年10月18日（商场国庆公告）",
+          "endsOn": "2026-10-18"
+        }
       },
       {
         "name": "三月兽 CAFE",
         "floor": "一层",
         "status": "recent",
         "kind": "联动咖啡、周边",
-        "note": "商场国庆公告公布10月1日开业，位置L102b。与三月兽零售店分开记录；主题及可购周边看当期公告。",
+        "note": "商场官方2026年国庆公告明确10月1日开业、铺位L102b；据官方店单确认营业。与三月兽零售店分开，不把开业日或普通联动促销当整家咖啡店限时档期；未核实特定本期主题，故不编造主题结束日。",
         "sources": [
           {
             "label": "商场公布开业及铺位",
             "url": "https://www.xiaohongshu.com/explore/6aba08d400000000010096f1",
             "dateLabel": "2026 年国庆活动"
           }
-        ]
-      },
-      {
-        "name": "暴蒙 BOOMCOMIC",
-        "floor": "一层",
-        "status": "unverified",
-        "note": "2024年店铺指路和账号简介定位一楼麦当劳对面；可见新帖仍较早，不能据简介“已开业”确认如今仍营业。",
-        "sources": [
-          {
-            "label": "门店旧指路帖",
-            "url": "https://www.xiaohongshu.com/explore/67107ba3000000002100547e",
-            "date": "2024-10-17"
-          },
-          {
-            "label": "门店账号",
-            "url": "https://www.xiaohongshu.com/user/profile/66a8794a000000000d02459e"
-          }
         ],
-        "accounts": [
-          {
-            "platform": "xiaohongshu",
-            "name": "暴蒙BOOMCOMIC 苏州星悦汇",
-            "handle": "94102497049",
-            "url": "https://www.xiaohongshu.com/user/profile/66a8794a000000000d02459e",
-            "scope": "store"
-          }
-        ]
+        "operatingConfirmation": "official-listing"
       },
       {
         "name": "元气喜乐会",
         "floor": "三层",
         "status": "closed",
-        "note": "商家6月29日宣布三楼店闭店清仓，7月5日回复清仓到7月31日。作为闭店记录保留，最终撤店日未独立核实；旧折扣不作为现行优惠。",
+        "note": "原研究已读商家闭店清仓帖，页面为2026年6月29日编辑时间，7月5日回复清仓“到731”；继续作为已公布闭店记录隐藏，不能将编辑日当原发表日或补造最终撤店日。",
         "sources": [
           {
             "label": "商家闭店清仓公告及回复",
             "url": "https://www.xiaohongshu.com/explore/6a421f29000000000803c841",
-            "date": "2026-06-29"
+            "dateLabel": "2026-06-29 编辑时间（原发表日未记录）"
           }
         ],
         "accounts": [
@@ -2682,6 +3155,137 @@
             "name": "Yetimall苏州店",
             "handle": "23908761737",
             "url": "https://www.douyin.com/user/MS4wLjABAAAA8tnJY_EcXlDY8Olk1wXLAxf8g02-f3t3nJt-Fh_fYf46E8koASJwL8OizZtStD8l",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "高达基地",
+        "aliases": [
+          "THE GUNDAM BASE",
+          "苏州高达基地"
+        ],
+        "floor": "一层",
+        "kind": "模型（高达）",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "本轮实际读取万代当前官网门店目录，列星悦汇L124—125；按官方目录确认营业。与步行街万代拼装模型店分开记，营业时段不构成限时店。",
+        "sources": [
+          {
+            "label": "万代当前官网苏州门店页",
+            "url": "https://www.bandaihobbysite.cn/gbase/su_zhou",
+            "dateLabel": "当前官网目录，2026-10-19实际读取（未标发表日）"
+          }
+        ]
+      },
+      {
+        "name": "万代拼装模型店",
+        "floor": "步行街",
+        "kind": "模型",
+        "status": "unverified",
+        "note": "2025年3月30日园区报道明确3月29日在星悦汇步行街开业；品牌2026年暑期活动再提该地址。本店有明确经营线索，但未取得当前独立门店目录／匹配社交账号，不因同属万代就借用高达基地营业确认。",
+        "sources": [
+          {
+            "label": "园区万代拼装模型店开业报道",
+            "url": "https://www.sipac.gov.cn/szgyyq/dthg202503/202503/744c007a12ff42adb12748829a912386.shtml",
+            "date": "2025-03-30"
+          },
+          {
+            "label": "万代模型2026年暑期活动（品牌微博）",
+            "url": "https://www.weibo.com/gundaminfo?tabtype=home",
+            "dateLabel": "2026年6月29日已编辑；活动期2026-07-01至08-31，非整店档期"
+          }
+        ]
+      },
+      {
+        "name": "栗汀",
+        "status": "unverified",
+        "note": "2025年12月25日园区报道明确本商场栗汀的周边首发经营；2026年9月25日顾客帖评论用“栗汀对面”定位萌谷子摊位，分店关联较强，仍缺匹配账号及当前营业确认。",
+        "sources": [
+          {
+            "label": "园区星悦汇本商场经营报道",
+            "url": "https://www.sipac.gov.cn/szgyyq/dthg202512/202512/96628d336c444d42b33f85e86eb3ae83.shtml",
+            "date": "2025-12-25"
+          },
+          {
+            "label": "顾客评论明确栗汀对面为萌谷子摊位",
+            "url": "https://www.xiaohongshu.com/explore/6ab603ec000000001800409a",
+            "dateLabel": "2026-09-25编辑与评论，非原发表日"
+          }
+        ]
+      },
+      {
+        "name": "追星馆",
+        "status": "unverified",
+        "note": "2025年12月25日园区本商场报道点名在店经营；有明确本商圈线索，缺独立门店账号与当前经营复核，保留待核实，不从名称猜主营。",
+        "sources": [
+          {
+            "label": "园区星悦汇本商场经营报道",
+            "url": "https://www.sipac.gov.cn/szgyyq/dthg202512/202512/96628d336c444d42b33f85e86eb3ae83.shtml",
+            "date": "2025-12-25"
+          }
+        ]
+      },
+      {
+        "name": "森罗万象 GOODSFUN",
+        "aliases": [
+          "森罗万象"
+        ],
+        "floor": "一层",
+        "kind": "动漫／游戏周边、卡牌",
+        "status": "recent",
+        "note": "本店主页明确苏州中心星悦汇一楼；9月30日本店到货声明及10月1日作者到货回复明确可到店。临时物流延误不是门店停业，商品主题月活动不作整家门店限时开放期。",
+        "sources": [
+          {
+            "label": "森罗万象苏州星悦汇店主页（未标发表日）",
+            "url": "https://www.xiaohongshu.com/user/profile/64d3b245000000001c029e9e"
+          },
+          {
+            "label": "一则来自苏州星悦汇店的到货声明，请查收",
+            "url": "https://www.xiaohongshu.com/explore/6abd1a17000000000a024f83",
+            "date": "2026-09-30"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "森罗万象-苏州星悦汇店",
+            "handle": "2038485756",
+            "url": "https://www.xiaohongshu.com/user/profile/64d3b245000000001c029e9e",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "Hall One",
+        "floor": "三层",
+        "kind": "卡牌、模型、盲盒、毛绒（宝可梦、风火轮）",
+        "status": "recent",
+        "note": "分店主页与开业帖均明确星悦汇三层301a、靠近苏州中心连廊；8月24日预告8月28日开业，后续仍有新品经营内容。每日10:00—22:00是营业时段，不是限时店。",
+        "sources": [
+          {
+            "label": "Hall One星悦汇店主页（未标发表日）",
+            "url": "https://www.xiaohongshu.com/user/profile/695e13680000000019034a2c"
+          },
+          {
+            "label": "Hall One本店开业公告",
+            "url": "https://www.xiaohongshu.com/explore/6a8c1325000000002802e9b2",
+            "date": "2026-08-24"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "Hall One本店开业公告",
+            "url": "https://www.xiaohongshu.com/explore/6a8c1325000000002802e9b2",
+            "date": "2026-08-24"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "Hall One（苏州星悦汇店）",
+            "handle": "26473349436",
+            "url": "https://www.xiaohongshu.com/user/profile/695e13680000000019034a2c",
             "scope": "store"
           }
         ]
@@ -5657,6 +6261,174 @@
           "DOMO"
         ],
         "status": "listed"
+      }
+    ]
+  },
+  "suzhou-shop-001": {
+    "area": "龙湖相城天街",
+    "checkedAt": "2026-10-19",
+    "shops": [
+      {
+        "name": "FOT LIFE",
+        "aliases": [
+          "FOT Life苏州相城店"
+        ],
+        "floor": "B馆二层",
+        "status": "recent",
+        "kind": "日谷、国谷、一番赏",
+        "note": "本店号明确B馆二层；2025年12月经营帖仍在本轮2025—2026资料窗口内，不能按旧“近半年”口径排除。编辑时间不作发表日。",
+        "sources": [
+          {
+            "label": "本分店一番赏进度",
+            "url": "https://www.xiaohongshu.com/explore/69396ecc000000000d03f6fe",
+            "dateLabel": "2025-12-10 编辑时间（原发表日未记录）"
+          },
+          {
+            "label": "已核对主体与分店简介",
+            "url": "https://www.xiaohongshu.com/user/profile/5ddf1fc60000000001000376",
+            "dateLabel": "2026-10-19读取主页，未标发表日"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "FOT Life苏州相城店",
+            "handle": "911228132",
+            "url": "https://www.xiaohongshu.com/user/profile/5ddf1fc60000000001000376",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "OuO鸥店",
+        "aliases": [
+          "OuO鸥店.谷子手作电玩咖啡"
+        ],
+        "floor": "B馆二层",
+        "status": "recent",
+        "kind": "动漫周边、谷美手作、电玩、咖啡",
+        "note": "本店号简介明确B馆2F-15a，持续发布店内拼豆、痛扇及咖啡内容；最新已读经营视频显示“6天前”，保留相对时间，不补造精确发表日。",
+        "sources": [
+          {
+            "label": "本店立体拼豆经营视频",
+            "url": "https://www.xiaohongshu.com/explore/6accb803000000001800665d",
+            "dateLabel": "6天前（2026-10-19读取）"
+          },
+          {
+            "label": "已核对主体与分店简介",
+            "url": "https://www.xiaohongshu.com/user/profile/657cb4b9000000001902eac1",
+            "dateLabel": "2026-10-19读取主页，未标发表日"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "OuO鸥店.谷子手作电玩咖啡",
+            "handle": "5705508911",
+            "url": "https://www.xiaohongshu.com/user/profile/657cb4b9000000001902eac1",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "独角星MiNi",
+        "aliases": [
+          "苏州独角星MiNi"
+        ],
+        "floor": "B馆二层",
+        "status": "recent",
+        "kind": "小说周边、广播剧周边",
+        "note": "本店自发领取活动明确“苏州相城天街B馆2楼独角星MiNi”；2025年资料属于有效窗口。主页现介绍月见川小卖部与相关作品，不能把线上内容或这次资料复核当作重新实地到访。",
+        "sources": [
+          {
+            "label": "本店到店活动与明确地址",
+            "url": "https://www.xiaohongshu.com/explore/6890a82400000000040048fd",
+            "date": "2025-08-04"
+          },
+          {
+            "label": "已核对主体与分店简介",
+            "url": "https://www.xiaohongshu.com/user/profile/681dc158000000000601e393",
+            "dateLabel": "2026-10-19读取主页，未标发表日"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "苏州独角星MiNi",
+            "handle": "95035965181",
+            "url": "https://www.xiaohongshu.com/user/profile/681dc158000000000601e393",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "蛋屋 GACHAROOM（B馆）",
+        "floor": "B馆二层",
+        "status": "closed",
+        "kind": "扭蛋、一番赏",
+        "note": "B馆经营帖评论中，顾客07-18问“天街店关了？”，商家本人答“对哒宝子”。按2026年读取判断为2026-07-18已确认关闭，不据此补造具体撤店日；主页仍保留旧址不能覆盖关闭回复。A馆旧快闪另列研究缺口，不与B馆合并判断。",
+        "sources": [
+          {
+            "label": "B馆经营帖内商家本人关闭回复",
+            "url": "https://www.xiaohongshu.com/explore/69847d20000000001a01e255",
+            "dateLabel": "2026-07-18商家回复；主帖编辑于2026-02-05"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "苏州蛋屋",
+            "handle": "5559107374",
+            "url": "https://www.xiaohongshu.com/user/profile/64758b1d0000000011001d5e",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "玩聚猫 PURRJOY",
+        "aliases": [
+          "玩聚猫"
+        ],
+        "floor": "B馆二层",
+        "kind": "模型、中古玩具、桌游、饮品",
+        "status": "recent",
+        "note": "作者实拍门头实际写“玩聚猫”，纠正旧图注“玩集萌”；主页地址为相城天街B馆二层，国庆有本店经营更新。模型／中古品类由实拍陈列印证，桌游与饮品由本店简介印证；未把桌游活动或促销当限时店。",
+        "sources": [
+          {
+            "label": "作者2026-09-19实拍：玩聚猫模型、特摄及中古陈列",
+            "url": "https://boluo-tangbao.github.io/bltbSch_201.github.io/rank/images/places/Suzhou/XiangchengTianjie/photo-03.webp",
+            "dateLabel": "作者拍摄于2026-09-19（非发帖日）"
+          },
+          {
+            "label": "玩聚猫本店主页（未标发表日）",
+            "url": "https://www.xiaohongshu.com/user/profile/648830fb000000001003508b"
+          },
+          {
+            "label": "玩聚猫本店国庆桌游经营帖",
+            "url": "https://www.xiaohongshu.com/explore/6abe1ae8000000000b007c96",
+            "date": "2026-10-01"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "作者2026-09-19实拍：玩聚猫模型、特摄及中古陈列",
+            "url": "https://boluo-tangbao.github.io/bltbSch_201.github.io/rank/images/places/Suzhou/XiangchengTianjie/photo-03.webp",
+            "dateLabel": "作者拍摄于2026-09-19（非发帖日）"
+          },
+          {
+            "label": "玩聚猫本店主营介绍",
+            "url": "https://www.xiaohongshu.com/user/profile/648830fb000000001003508b"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "玩聚猫PURRJOY",
+            "handle": "2202238410",
+            "url": "https://www.xiaohongshu.com/user/profile/648830fb000000001003508b",
+            "scope": "store"
+          }
+        ]
       }
     ]
   }

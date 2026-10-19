@@ -1,0 +1,34 @@
+{
+  "otherPlacesUnchanged": true,
+  "otherDirectoriesUnchanged": true,
+  "priorUpdatesUnchanged": true,
+  "places": [
+    {
+      "id": "suzhou-shop-001",
+      "preservedExceptUpdatedAtAndDocumentedCaption": true,
+      "visitedAt": "2026-09-19",
+      "tier": "bad",
+      "order": 20,
+      "gallery": 4,
+      "sourcePathsUnchanged": true
+    },
+    {
+      "id": "suzhou-shop-002",
+      "preservedExceptUpdatedAtAndDocumentedCaption": true,
+      "visitedAt": "2026-09-19",
+      "tier": "top",
+      "order": 70,
+      "gallery": 20,
+      "sourcePathsUnchanged": true
+    },
+    {
+      "id": "suzhou-shop-003",
+      "preservedExceptUpdatedAtAndDocumentedCaption": true,
+      "visitedAt": "2026-09-19",
+      "tier": "above",
+      "order": 35,
+      "gallery": 13,
+      "sourcePathsUnchanged": true
+    }
+  ]
+}

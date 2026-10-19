@@ -1,0 +1,92 @@
+{
+  "removedFromProduction": [
+    {
+      "placeId": "suzhou-shop-002",
+      "shop": {
+        "name": "暴蒙 BOOMCOMIC",
+        "floor": "一层",
+        "status": "unverified",
+        "note": "2024年店铺指路和账号简介定位一楼麦当劳对面；可见新帖仍较早，不能据简介“已开业”确认如今仍营业。",
+        "sources": [
+          {
+            "label": "门店旧指路帖",
+            "url": "https://www.xiaohongshu.com/explore/67107ba3000000002100547e",
+            "date": "2024-10-17"
+          },
+          {
+            "label": "门店账号",
+            "url": "https://www.xiaohongshu.com/user/profile/66a8794a000000000d02459e"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "暴蒙BOOMCOMIC 苏州星悦汇",
+            "handle": "94102497049",
+            "url": "https://www.xiaohongshu.com/user/profile/66a8794a000000000d02459e",
+            "scope": "store"
+          }
+        ]
+      },
+      "reason": "现有指路2024-10-17；本轮主页最前非置顶帖2024-11-22，未取得2025—2026本店经营依据。仅归档，不宣称已闭店。",
+      "newlyRead": {
+        "url": "https://www.xiaohongshu.com/explore/674013200000000008007bbd",
+        "date": "2024-11-22"
+      }
+    }
+  ],
+  "kindArchive": [
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "飞社长",
+      "kind": "日谷、手办、动漫周边",
+      "kindSources": [
+        {
+          "label": "飞社长经营者受访品类介绍（品牌范围）",
+          "url": "https://www.tmtpost.com/7106535.html"
+        }
+      ],
+      "reason": "本轮原媒体链接无法读取，未核实2025—2026品类资料，暂归档原受访说明。"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "yooo shop",
+      "kind": "影视／动漫周边、潮玩",
+      "kindSources": [
+        {
+          "label": "星悦汇招商资料中的YOOOO SHOP品牌品类",
+          "url": "https://m.winshang.com/news725325.html"
+        }
+      ],
+      "reason": "原品类资料明确发表于2024-07-01，超窗口，不能支持本轮当前品类。"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "图益拼图",
+      "kind": "拼图、益智玩具",
+      "kindSources": [
+        {
+          "label": "图益品牌产品介绍",
+          "url": "https://www.china-toy-expo.com/media_center/12719"
+        }
+      ],
+      "reason": "原参展页当前未返回图益正文及有效日期，不以读取日期伪装发表时间。"
+    }
+  ],
+  "accountsWithUnresolvedBranch": [
+    {
+      "placeId": "suzhou-shop-003",
+      "shop": "趣捡屋",
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "趣捡屋",
+          "handle": "95413066403",
+          "url": "https://www.xiaohongshu.com/user/profile/67454b940000000008009460",
+          "scope": "brand"
+        }
+      ],
+      "reason": "2026-10-19实际核对主页与最新帖指西安；品牌帖07-13含苏州金地及郑州，保留金地较强线索，不能仅因异地账号活跃默认营业。"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "query": "星悦汇 卡游",
+  "mode": "用户",
+  "readAt": "2026-10-19",
+  "scope": "本次首屏加载全部用户结果，未滚动补取"
+}
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- link "卡游苏州星悦汇店 7天前更新 小红书号：95848856324 粉丝・353 笔记・120 关注":
+  - /url: /user/profile/660f7ee2000000000b00c70b
+  - generic: 卡游苏州星悦汇店
+  - generic: 7天前更新
+  - generic: 小红书号：95848856324
+  - generic: 粉丝・353
+  - generic: 笔记・120
+  - button "关注":
+    - generic: 关注
+- generic: "- THE END -"

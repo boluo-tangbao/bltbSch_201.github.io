@@ -1,0 +1,42 @@
+{
+  "dataValidation": {
+    "passed": true,
+    "log": "validate.log"
+  },
+  "tests": {
+    "passed": 50,
+    "failed": 0,
+    "log": "tests.log"
+  },
+  "build": {
+    "passed": true,
+    "node": "24",
+    "log": "build.log"
+  },
+  "browser": {
+    "requestedWidths": [
+      1440,
+      390
+    ],
+    "status": "未完成，浏览器响应超时",
+    "attempts": [
+      "已启动4186构建预览，打开星悦汇直达链接",
+      "设置1440px后同步超时；尝试重连、恢复默认视口和截图均未成功",
+      "收起研究临时页，另开相城直达页，仍无法读取页面"
+    ],
+    "confirmed": [],
+    "notVerified": [
+      "1440px／390px完整页面",
+      "默认折叠的点击展开与长链接排版",
+      "页面闭店隐藏和数量的浏览器实测",
+      "地图详情页面与图集交互"
+    ],
+    "screenshots": [],
+    "note": "数据与组件单元检查通过不等于实际页面验收通过；未生成或冒用旧截图。视口恢复调用亦超时，未确认恢复结果。"
+  },
+  "publication": "本地完成，未发布；未提交或推送",
+  "actualDataChecks": {
+    "passed": true,
+    "log": "actual-data-checks.json"
+  }
+}

@@ -1,0 +1,124 @@
+pc_note
+  - generic: 三月兽CAFE苏州金地店
+- generic: "7"
+- link:
+  - /url: /user/profile/66625ff4000000000700451a/685a22c300000000230059e1
+- link "坂本日常 × 三月兽CAFE 主题活动重磅来袭！":
+  - /url: /user/profile/66625ff4000000000700451a/685a22c300000000230059e1
+- link "三月兽CAFE苏州金地店":
+  - /url: /user/profile/66625ff4000000000700451a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 三月兽CAFE苏州金地店
+- generic: "22"
+- generic: 笔记・4
+- generic: 专辑・0
+- generic: 文件・0
+- generic: TA 还没有收藏任何内容哦
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe
+- link:
+  - /url: /user/profile/66625ff4000000000700451a?channel_type=web_profile_page
+- link "三月兽CAFE苏州金地店":
+  - /url: /user/profile/66625ff4000000000700451a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 三月兽CAFE苏州金地店
+- button "关注":
+  - generic: 关注
+- generic: 三月兽CAFE苏州金地店 焕新升级，敬请期待 亲爱的顾客朋友： 非常感谢您一直以来对三月兽CAFE苏州金地店的关注与支持。 由于业务调整，三月兽CAFE苏州金地店将于2025年10月16日起结束营业。16号前，继续欢迎大家来店相聚，选到心仪的限定商品！ ps.三月兽CAFE的其余门店与商品企划均正常运营中～ 此次“充电”是为了长远地、更好地为大家服务。再次感谢大家支持！敬请期待我们展开新的篇章～
+- generic: 猜你想搜
+- generic: 三月兽苏州金地广场店
+- generic: 2025-10-13
+- generic: 共 10 条评论
+- link:
+  - /url: /user/profile/60583b280000000001005d8f?channel_type=web_profile_page
+- link "莫方7":
+  - /url: /user/profile/60583b280000000001005d8f?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 那以后找谁[呃R]
+- generic: 置顶评论
+- generic: 2025-10-13浙江
+- generic: 赞
+- generic: "1"
+- link:
+  - /url: /user/profile/66625ff4000000000700451a?channel_type=web_profile_page
+- link "三月兽CAFE苏州金地店":
+  - /url: /user/profile/66625ff4000000000700451a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 相关事宜可以find 三月兽CAFE
+- generic: 2025-10-13江苏
+- generic: "1"
+- generic: 回复
+- link:
+  - /url: /user/profile/6520f74b000000002302700a?channel_type=web_profile_page
+- link "momo":
+  - /url: /user/profile/6520f74b000000002302700a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 是不是要改餐饮了像北京一样
+- generic: 2025-10-13江苏
+- generic: "6"
+- generic: 回复
+- link:
+  - /url: /user/profile/5f3be1e2000000000101d5e0?channel_type=web_profile_page
+- link "夏日邮箱":
+  - /url: /user/profile/5f3be1e2000000000101d5e0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 还回来吗
+- text: 为啥说焕新升级，现在已经变成什么折扣店了
+- generic: 04-14江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5d26d2ab000000001003752c?channel_type=web_profile_page
+- link "夜空菌":
+  - /url: /user/profile/5d26d2ab000000001003752c?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 苏州还会开cafe吗
+- generic: 03-06江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5b72b70ea282220001216478?channel_type=web_profile_page
+- link "cia":
+  - /url: /user/profile/5b72b70ea282220001216478?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 什么时候开业很着急
+- generic: 2025-11-02江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5e47c8d20000000001003532?channel_type=web_profile_page
+- link "公铁两用大桥":
+  - /url: /user/profile/5e47c8d20000000001003532?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 国庆来过一趟
+- generic: 2025-10-31江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/63f4bea0000000001001c510?channel_type=web_profile_page
+- link "睦月muki":
+  - /url: /user/profile/63f4bea0000000001001c510?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 你是[呃R]跑路了吗
+- text: ，我看东西全没了
+- generic: 2025-10-29江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/620101ae0000000010008046?channel_type=web_profile_page
+- link "被甜罗夏了一跳":
+  - /url: /user/profile/620101ae0000000010008046?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 升级的意思是很快会重新开业嘛
+- generic: 2025-10-22江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5e799ba20000000001006493?channel_type=web_profile_page
+- link "FAN":
+  - /url: /user/profile/5e799ba20000000001006493?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 还会回来吗
+- generic: 2025-10-13江苏
+- generic: 赞
+- generic: 回复
+- generic: "- THE END -"
+- paragraph
+- generic: 说点什么...
+- generic: "20"
+- generic: 收藏
+- generic: "10"
+- button "发送" [disabled]
+- button "取消"

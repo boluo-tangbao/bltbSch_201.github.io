@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "aliasSearch": [
+    {
+      "query": "玩兔谷",
+      "expected": "suzhou-shop-002",
+      "passed": true
+    },
+    {
+      "query": "AKIBA GO",
+      "expected": "suzhou-shop-002",
+      "passed": true
+    },
+    {
+      "query": "Hall One",
+      "expected": "suzhou-shop-002",
+      "passed": true
+    },
+    {
+      "query": "森罗万象",
+      "expected": "suzhou-shop-002",
+      "passed": true
+    },
+    {
+      "query": "玩聚猫",
+      "expected": "suzhou-shop-001",
+      "passed": true
+    },
+    {
+      "query": "MAGICWOW",
+      "expected": "suzhou-shop-003",
+      "passed": true
+    },
+    {
+      "query": "幽默猫",
+      "expected": "suzhou-shop-003",
+      "passed": true
+    }
+  ],
+  "groupCounts": "4、24、21；合计49",
+  "closedVisible": 0,
+  "endedLimitedVisible": 0,
+  "scope": "实际生产数据与现有分组／搜索函数验证；不是浏览器实测"
+}

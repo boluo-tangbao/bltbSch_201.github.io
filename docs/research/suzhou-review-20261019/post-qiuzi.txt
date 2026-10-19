@@ -1,0 +1,62 @@
+- heading "兄弟们再见👋" [level=1]
+- generic: 猜你想搜
+- generic: 谷子店倒闭原因
+- generic: 2025-03-02
+- generic: 共 7 条评论
+- link:
+  - /url: /user/profile/66bc9309000000001d021493?channel_type=web_profile_page
+- link "alt":
+  - /url: /user/profile/66bc9309000000001d021493?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 补药啊
+- generic: 2025-03-22江苏
+- generic: 赞
+- generic: "2"
+- link:
+  - /url: /user/profile/6267de450000000021026777?channel_type=web_profile_page
+- link "蘭":
+  - /url: /user/profile/6267de450000000021026777?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 伤感啥呀，苏州的谷子店那么多，又不缺他们一家超级大嗨价，不仅超级大嗨价，还都是别的出烂的东西，稀有的一点不卖，他们还压榨员工
+- generic: 2025-04-11江苏
+- generic: "2"
+- generic: 回复
+- generic: 展开 1 条回复
+- link:
+  - /url: /user/profile/64636e4b0000000029013322?channel_type=web_profile_page
+- link "狗腿子银月":
+  - /url: /user/profile/64636e4b0000000029013322?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 是换其他地方了还是直接关了
+- generic: 2025-03-02江苏
+- generic: 赞
+- generic: "1"
+- link:
+  - /url: /user/profile/6267de450000000021026777?channel_type=web_profile_page
+- link "蘭":
+  - /url: /user/profile/6267de450000000021026777?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 关了，笑死我了
+- generic: 2025-04-11江苏
+- generic: "2"
+- generic: 回复
+- link:
+  - /url: /user/profile/5ff4965f000000000101c1a1?channel_type=web_profile_page
+- link "努力攒钱的小郑":
+  - /url: /user/profile/5ff4965f000000000101c1a1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 啊？
+- generic: 2025-03-17浙江
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/66974b1d000000000f037f61?channel_type=web_profile_page
+- link "Riley":
+  - /url: /user/profile/66974b1d000000000f037f61?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 要走了吗
+- generic: 2025-03-03江苏
+- generic: 赞
+- generic: 回复
+- generic: "- THE END -"
+- paragraph
+- generic: 说点什么...
+- generic: "5"
+- generic: 收藏
+- generic: "7"
+- button "发送" [disabled]
+- button "取消"

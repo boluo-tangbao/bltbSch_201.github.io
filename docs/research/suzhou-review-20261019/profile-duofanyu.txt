@@ -1,0 +1,130 @@
+- generic: 苏州多番鱼
+- generic: 小红书号：49311641562
+- generic: IP属地：江苏
+- generic: 📍苏州二楼星悦汇多番鱼 一家一番赏和hello kitty的集合店.|･з･)｡ 只卖正版kitty. 官套一番赏和自制一番赏都有哦！ 🫧请斯xin.
+- generic: "10"
+- generic: 关注
+- generic: "11"
+- generic: 粉丝
+- generic: "43"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link:
+  - /url: /user/profile/6a1533960000000001007400/6ab62324000000001c00fbee
+- link "宝可梦卡牌自制一番赏上新":
+  - /url: /user/profile/6a1533960000000001007400/6ab62324000000001c00fbee
+- link "苏州多番鱼":
+  - /url: /user/profile/6a1533960000000001007400?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州多番鱼
+- generic: "3"
+- link:
+  - /url: /user/profile/6a1533960000000001007400/6aafa4c600000000290111ed
+- link "那么可爱的大耳狗耳机，谁还没有！":
+  - /url: /user/profile/6a1533960000000001007400/6aafa4c600000000290111ed
+- link "苏州多番鱼":
+  - /url: /user/profile/6a1533960000000001007400?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州多番鱼
+- generic: "2"
+- link:
+  - /url: /user/profile/6a1533960000000001007400/6aafa2fa00000000120001e7
+- link "鬼灭上弦之二到货！":
+  - /url: /user/profile/6a1533960000000001007400/6aafa2fa00000000120001e7
+- link "苏州多番鱼":
+  - /url: /user/profile/6a1533960000000001007400?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州多番鱼
+- generic: "1"
+- link:
+  - /url: /user/profile/6a1533960000000001007400/6aa13a910000000029011822
+- link "三丽鸥丑鱼一番赏｜上新啦！":
+  - /url: /user/profile/6a1533960000000001007400/6aa13a910000000029011822
+- link "苏州多番鱼":
+  - /url: /user/profile/6a1533960000000001007400?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州多番鱼
+- generic: "3"
+- link:
+  - /url: /user/profile/6a1533960000000001007400/6a9155490000000024007238
+- link "夯中之夯！！银魂一番赏第二弹来啦！":
+  - /url: /user/profile/6a1533960000000001007400/6a9155490000000024007238
+- link "苏州多番鱼":
+  - /url: /user/profile/6a1533960000000001007400?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州多番鱼
+- generic: "1"
+- link:
+  - /url: /user/profile/6a1533960000000001007400/6a7ee29400000000270206b3
+- link "海贼埃鲁巴夫篇第二弹来啦！":
+  - /url: /user/profile/6a1533960000000001007400/6a7ee29400000000270206b3
+- link "苏州多番鱼":
+  - /url: /user/profile/6a1533960000000001007400?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州多番鱼
+- generic: "1"
+- link:
+  - /url: /user/profile/6a1533960000000001007400/6a6ee538000000002c006831
+- link "Chiikawa夏日一番赏风铃🎐":
+  - /url: /user/profile/6a1533960000000001007400/6a6ee538000000002c006831
+- link "苏州多番鱼":
+  - /url: /user/profile/6a1533960000000001007400?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州多番鱼
+- generic: "2"
+- link:
+  - /url: /user/profile/6a1533960000000001007400/6a6ee4390000000029030954
+- link "假面骑士一番赏｜款款都是名场面🔥":
+  - /url: /user/profile/6a1533960000000001007400/6a6ee4390000000029030954
+- link "苏州多番鱼":
+  - /url: /user/profile/6a1533960000000001007400?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州多番鱼
+- generic: "1"
+- link:
+  - /url: /user/profile/6a1533960000000001007400/6a6b269600000000220136fd
+- link "谁懂啊！哥斯拉一番赏来袭":
+  - /url: /user/profile/6a1533960000000001007400/6a6b269600000000220136fd
+- link "苏州多番鱼":
+  - /url: /user/profile/6a1533960000000001007400?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州多番鱼
+- generic: "7"
+- link:
+  - /url: /user/profile/6a1533960000000001007400/6a69e5a00000000011005f12
+- link "期待已久的龙珠终于到货了":
+  - /url: /user/profile/6a1533960000000001007400/6a69e5a00000000011005f12
+- link "苏州多番鱼":
+  - /url: /user/profile/6a1533960000000001007400?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州多番鱼
+- generic: "1"
+- link:
+  - /url: /user/profile/6a1533960000000001007400/6a5cabc9000000001003ecde
+- link "三丽鸥一番赏！大批量上新啦！":
+  - /url: /user/profile/6a1533960000000001007400/6a5cabc9000000001003ecde
+- link "苏州多番鱼":
+  - /url: /user/profile/6a1533960000000001007400?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州多番鱼
+- link:
+  - /url: /user/profile/6a1533960000000001007400/6a324940000000000f016bd3
+- link "夏日可爱毛绒套！":
+  - /url: /user/profile/6a1533960000000001007400/6a324940000000000f016bd3
+- link "苏州多番鱼":
+  - /url: /user/profile/6a1533960000000001007400?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州多番鱼
+- generic: "1"
+- link:
+  - /url: /user/profile/6a1533960000000001007400/6a2e7844000000002202d50c
+- link "死亡笔记官套上新啦！":
+  - /url: /user/profile/6a1533960000000001007400/6a2e7844000000002202d50c
+- link "苏州多番鱼":
+  - /url: /user/profile/6a1533960000000001007400?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州多番鱼
+- generic: "2"
+- link:
+  - /url: /user/profile/6a1533960000000001007400/6a2bad7e0000000035026a1c
+- link "不是这家店怎么…":
+  - /url: /user/profile/6a1533960000000001007400/6a2bad7e0000000035026a1c
+- link "苏州多番鱼":
+  - /url: /user/profile/6a1533960000000001007400?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州多番鱼
+- generic: "7"
+- generic: 笔记・0
+- generic: 专辑・0
+- generic: 文件・0
+- generic: TA 还没有收藏任何内容哦

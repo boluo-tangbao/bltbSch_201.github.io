@@ -1,0 +1,146 @@
+{
+  "query": "谷乐屋 苏州金地",
+  "mode": "用户",
+  "scope": "首屏已加载用户结果",
+  "readAt": "2026-10-19"
+}
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- link "苏州SUONE金地广场 3天前更新 小红书号：8097802920 百货商超 粉丝・1.5万 笔记・908 关注":
+  - /url: /user/profile/61a58bcf0000000010004724
+  - text: 苏州SUONE金地广场
+  - generic: 3天前更新
+  - generic: 小红书号：8097802920
+  - generic: 百货商超
+  - generic: 粉丝・1.5万
+  - generic: 笔记・908
+  - button "关注":
+    - generic: 关注
+- link "焦糖-萌谷子苏州版 2天前更新 小红书号：63579507473 粉丝・517 笔记・79 关注":
+  - /url: /user/profile/69e355090000000002002005
+  - generic: 焦糖-萌谷子苏州版
+  - generic: 2天前更新
+  - generic: 小红书号：63579507473
+  - generic: 粉丝・517
+  - generic: 笔记・79
+  - button "关注":
+    - generic: 关注
+- link "苏州Cosp Kosp 10天前更新 小红书号：ck13451557997 粉丝・1349 笔记・432 关注":
+  - /url: /user/profile/65fd2a57000000000b00ccf2
+  - generic: 苏州Cosp Kosp
+  - generic: 10天前更新
+  - generic: 小红书号：ck13451557997
+  - generic: 粉丝・1349
+  - generic: 笔记・432
+  - button "关注":
+    - generic: 关注
+- link "中集美兰湖金地广场 3天前更新 小红书号：11427932159 粉丝・511 笔记・166 关注":
+  - /url: /user/profile/660a52a5000000000b00c337
+  - generic: 中集美兰湖金地广场
+  - generic: 3天前更新
+  - generic: 小红书号：11427932159
+  - generic: 粉丝・511
+  - generic: 笔记・166
+  - button "关注":
+    - generic: 关注
+- link "FOTLIFE金地店小鹿店长 16天前更新 小红书号：11546540285 粉丝・453 笔记・410 关注":
+  - /url: /user/profile/676dacc60000000018016ad4
+  - generic: FOTLIFE金地店小鹿店长
+  - generic: 16天前更新
+  - generic: 小红书号：11546540285
+  - generic: 粉丝・453
+  - generic: 笔记・410
+  - button "关注":
+    - generic: 关注
+- link "模玩熊苏州金地店 3天前更新 小红书号：3433075308 粉丝・2317 笔记・614 关注":
+  - /url: /user/profile/65ac8548000000000e026eb9
+  - generic: 模玩熊苏州金地店
+  - generic: 3天前更新
+  - generic: 小红书号：3433075308
+  - generic: 粉丝・2317
+  - generic: 笔记・614
+  - button "关注":
+    - generic: 关注
+- link "金地智慧服务 2分钟前更新 小红书号：Gemdale_1993 粉丝・2588 笔记・1190 关注":
+  - /url: /user/profile/62beab60000000001b025981
+  - generic: 金地智慧服务
+  - generic: 2分钟前更新
+  - generic: 小红书号：Gemdale_1993
+  - generic: 粉丝・2588
+  - generic: 笔记・1190
+  - button "关注":
+    - generic: 关注
+- link "QTOOLS苏州金地 5天前更新 小红书号：95468930366 粉丝・1623 笔记・65 关注":
+  - /url: /user/profile/66ee3e02000000001d0237a8
+  - generic: QTOOLS苏州金地
+  - generic: 5天前更新
+  - generic: 小红书号：95468930366
+  - generic: 粉丝・1623
+  - generic: 笔记・65
+  - button "关注":
+    - generic: 关注
+- link "三月兽CAFE苏州金地店 小红书号：11388986847 粉丝・2348 笔记・107 关注":
+  - /url: /user/profile/66625ff4000000000700451a
+  - generic: 三月兽CAFE苏州金地店
+  - generic: 小红书号：11388986847
+  - generic: 粉丝・2348
+  - generic: 笔记・107
+  - button "关注":
+    - generic: 关注
+- link "幽默猫-苏州金地店 小红书号：95483221334 粉丝・1245 笔记・219 关注":
+  - /url: /user/profile/67d045d8000000000e013780
+  - generic: 幽默猫-苏州金地店
+  - generic: 小红书号：95483221334
+  - generic: 粉丝・1245
+  - generic: 笔记・219
+  - button "关注":
+    - generic: 关注
+- link "薇薇.眉型设计 小红书号：8941249626 粉丝・471 笔记・189 关注":
+  - /url: /user/profile/63f729ec000000001001cdd8
+  - generic: 薇薇.眉型设计
+  - generic: 小红书号：8941249626
+  - generic: 粉丝・471
+  - generic: 笔记・189
+  - button "关注":
+    - generic: 关注
+- link "喜时XI SHI-Nail 5天前更新 小红书号：XISHI3680 粉丝・680 笔记・250 关注":
+  - /url: /user/profile/58f8a6ef50c4b45018347685
+  - generic: 喜时XI SHI-Nail
+  - generic: 5天前更新
+  - generic: 小红书号：XISHI3680
+  - generic: 粉丝・680
+  - generic: 笔记・250
+  - button "关注":
+    - generic: 关注
+- link "多摩万事屋（苏州金地店） 小红书号：63809055933 粉丝・1062 笔记・365 关注":
+  - /url: /user/profile/66f68155000000000d025aa7
+  - generic: 多摩万事屋（苏州金地店）
+  - generic: 小红书号：63809055933
+  - generic: 粉丝・1062
+  - generic: 笔记・365
+  - button "关注":
+    - generic: 关注
+- link "MT fitness studio 1天前更新 小红书号：MT17818470048 粉丝・841 笔记・187 关注":
+  - /url: /user/profile/67ea4675000000000e01e972
+  - generic: MT fitness studio
+  - generic: 1天前更新
+  - generic: 小红书号：MT17818470048
+  - generic: 粉丝・841
+  - generic: 笔记・187
+  - button "关注":
+    - generic: 关注
+- link "寻找veinard的房子丨金地 小红书号：5847436072 粉丝・497 笔记・86 关注":
+  - /url: /user/profile/64fc78d600000000040272ab
+  - generic: 寻找veinard的房子丨金地
+  - generic: 小红书号：5847436072
+  - generic: 粉丝・497
+  - generic: 笔记・86
+  - button "关注":
+    - generic: 关注
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

@@ -1,0 +1,138 @@
+{
+  "query": "星悦汇 飞社长",
+  "mode": "用户",
+  "readAt": "2026-10-19",
+  "scope": "本次首屏加载全部用户结果，未滚动补取"
+}
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- link "苏州星悦汇商场 4小时前更新 小红书号：9411859422 粉丝・3.4万 笔记・1373 关注":
+  - /url: /user/profile/60af3944000000000101f6ec
+  - generic: 苏州星悦汇商场
+  - generic: 4小时前更新
+  - generic: 小红书号：9411859422
+  - generic: 粉丝・3.4万
+  - generic: 笔记・1373
+  - button "关注":
+    - generic: 关注
+- link "三月兽苏州星悦汇店 1天前更新 小红书号：95207257680 粉丝・3829 笔记・936 关注":
+  - /url: /user/profile/668e7cb2000000000f0364de
+  - generic: 三月兽苏州星悦汇店
+  - generic: 1天前更新
+  - generic: 小红书号：95207257680
+  - generic: 粉丝・3829
+  - generic: 笔记・936
+  - button "关注":
+    - generic: 关注
+- link "模玩熊苏州星悦汇店 10分钟前更新 小红书号：95386945164 粉丝・947 笔记・521 关注":
+  - /url: /user/profile/67566182000000001d02f4d7
+  - generic: 模玩熊苏州星悦汇店
+  - generic: 10分钟前更新
+  - generic: 小红书号：95386945164
+  - generic: 粉丝・947
+  - generic: 笔记・521
+  - button "关注":
+    - generic: 关注
+- link "Mts次元贩售-苏州星悦汇 5天前更新 小红书号：26964416382 粉丝・55 笔记・39 关注":
+  - /url: /user/profile/66816f920000000003033b0f
+  - generic: Mts次元贩售-苏州星悦汇
+  - generic: 5天前更新
+  - generic: 小红书号：26964416382
+  - generic: 粉丝・55
+  - generic: 笔记・39
+  - button "关注":
+    - generic: 关注
+- link "星悦汇店长-周媛媛-泰合玺苏州 小红书号：1804338953 粉丝・1 关注":
+  - /url: /user/profile/603dadee0000000001005f03
+  - generic: 星悦汇店长-周媛媛-泰合玺苏州
+  - generic: 小红书号：1804338953
+  - generic: 粉丝・1
+  - button "关注":
+    - generic: 关注
+- link "煰物社星悦汇店 小红书号：26217704041 粉丝・82 笔记・93 关注":
+  - /url: /user/profile/67317060000000001c018593
+  - generic: 煰物社星悦汇店
+  - generic: 小红书号：26217704041
+  - generic: 粉丝・82
+  - generic: 笔记・93
+  - button "关注":
+    - generic: 关注
+- link "上座电竞馆星悦汇店长 小红书号：szdj666 粉丝・5 笔记・45 关注":
+  - /url: /user/profile/66d81b9c000000001d020bac
+  - generic: 上座电竞馆星悦汇店长
+  - generic: 小红书号：szdj666
+  - generic: 粉丝・5
+  - generic: 笔记・45
+  - button "关注":
+    - generic: 关注
+- link "AKIBA GO苏州星悦汇店 21小时前更新 小红书号：95026767652 粉丝・2224 笔记・300 关注":
+  - /url: /user/profile/67160deb000000001e0078f7
+  - generic: AKIBA GO苏州星悦汇店
+  - generic: 21小时前更新
+  - generic: 小红书号：95026767652
+  - generic: 粉丝・2224
+  - generic: 笔记・300
+  - button "关注":
+    - generic: 关注
+- link "猫受屋苏州星悦汇店 18天前更新 小红书号：26806717478 粉丝・832 笔记・45 关注":
+  - /url: /user/profile/62c007f2000000001b02447a
+  - generic: 猫受屋苏州星悦汇店
+  - generic: 18天前更新
+  - generic: 小红书号：26806717478
+  - generic: 粉丝・832
+  - generic: 笔记・45
+  - button "关注":
+    - generic: 关注
+- link "OTG玩兔谷 苏州星悦汇店 小红书号：4215214152 粉丝・384 笔记・102 关注":
+  - /url: /user/profile/6059e6f70000000001009646
+  - generic: OTG玩兔谷 苏州星悦汇店
+  - generic: 小红书号：4215214152
+  - generic: 粉丝・384
+  - generic: 笔记・102
+  - button "关注":
+    - generic: 关注
+- link "星悦汇 飞飞 小红书号：7527721207 粉丝・1 关注":
+  - /url: /user/profile/65601e6700000000100083c6
+  - generic: 星悦汇 飞飞
+  - generic: 小红书号：7527721207
+  - generic: 粉丝・1
+  - button "关注":
+    - generic: 关注
+- link "易乐谷-苏州星悦汇店 2天前更新 小红书号：26567342785 粉丝・3429 笔记・350 关注":
+  - /url: /user/profile/66370ed800000000070059d9
+  - generic: 易乐谷-苏州星悦汇店
+  - generic: 2天前更新
+  - generic: 小红书号：26567342785
+  - generic: 粉丝・3429
+  - generic: 笔记・350
+  - button "关注":
+    - generic: 关注
+- link "苏州多番鱼 23天前更新 小红书号：49311641562 粉丝・11 笔记・14 关注":
+  - /url: /user/profile/6a1533960000000001007400
+  - generic: 苏州多番鱼
+  - generic: 23天前更新
+  - generic: 小红书号：49311641562
+  - generic: 粉丝・11
+  - generic: 笔记・14
+  - button "关注":
+    - generic: 关注
+- link "YMM苏州星悦汇 猴子老师 小红书号：1473609338 关注":
+  - /url: /user/profile/61dc0ddd0000000021023054
+  - generic: YMM苏州星悦汇 猴子老师
+  - generic: 小红书号：1473609338
+  - button "关注":
+    - generic: 关注
+- link "苏州星悦汇猫受屋 小红书号：11520450247 粉丝・4 关注":
+  - /url: /user/profile/6718a4b2000000001d02358a
+  - generic: 苏州星悦汇猫受屋
+  - generic: 小红书号：11520450247
+  - generic: 粉丝・4
+  - button "关注":
+    - generic: 关注
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

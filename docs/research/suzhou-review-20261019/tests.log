@@ -1,0 +1,68 @@
+✔ real video metadata is shared, all clips reference existing places and independently checked times (10.6316ms)
+✔ only validated IDs, page numbers and integer seconds can construct fixed-host URLs (0.6321ms)
+✔ malformed, duplicated, missing and ungrounded configuration fails closed (12.7516ms)
+✔ verified lead-in before chapter marker must have an explicit explanation (1.1187ms)
+✔ confirmed no-chapters, unreadable chapters and pending clips are distinct; P2 time is relative (0.9542ms)
+✔ city groups inherit their names without mutating source entries (3.6312ms)
+✔ authoring format rejects legacy fields and duplicate IDs or ranks across cities (4.6382ms)
+✔ text addresses are retained and can open address-based navigation without coordinates (0.7892ms)
+✔ empty board is valid, and real dates are checked (0.3929ms)
+✔ bad data blocks publication with file and ID (0.7872ms)
+✔ update references and tier transitions must be valid (0.3899ms)
+✔ updates support compact batches while retaining the single-place form (1.1295ms)
+✔ search composes with city and preserves published tier/order (0.5891ms)
+✔ hidden updates stay hidden and future records are not marked recent (0.2493ms)
+✔ city colors are fixed, unique and required for published cities (0.4616ms)
+✔ location uses explicit WGS84 and navigation preserves lon/lat order (0.4288ms)
+✔ WGS84 coordinates are converted locally to Baidu BD-09 (0.4727ms)
+✔ coordinate-backed places never call Baidu online conversion (0.4061ms)
+✔ published Suzhou locations work when online address resolution is unavailable (2.7256ms)
+✔ export waiting can be cancelled promptly and preserves the abort reason (2.4428ms)
+✔ export checkpoints yield and normal promises still settle (4.1993ms)
+✔ filter links preserve Unicode, spaces and literal punctuation without including a selected place (4.81ms)
+✔ explicit empty filters override saved state while unrelated URL parameters do not (0.4186ms)
+✔ updating shared filters keeps route, history metadata parameters and a single copy of each filter (1.3312ms)
+媒体预览：1 个素材，原素材 0.0 MB → 320px 预览 0.00 MB。
+媒体预览：1 个素材，原素材 0.0 MB → 320px 预览 0.00 MB。
+媒体预览：1 个素材，原素材 0.0 MB → 320px 预览 0.00 MB。
+✔ previews preserve originals, ignore drafts, reuse outputs and invalidate changed media (285.5806ms)
+像素头像：2 KB → 0 KB。
+像素头像：2 KB → 0 KB。
+✔ character thumbnails preserve source artwork, framing and pixel dimensions (105.8503ms)
+生成在线播放视频：images/video.mp4
+媒体预览：1 个素材，原素材 0.0 MB → 320px 预览 0.00 MB。
+在线播放视频：0.01 MB → 0.01 MB。
+媒体预览：1 个素材，原素材 0.0 MB → 320px 预览 0.00 MB。
+在线播放视频：0.01 MB → 0.01 MB。
+✔ video playback copies have a front index and preserve original files (440.4871ms)
+✔ publication retains every live original, video, poster, map and generated preview (2.1176ms)
+✔ current portraits, variants, homepage artwork and unrelated public URLs stay available (0.4141ms)
+✔ all currently published originals remain deployable without needing generated caches (119.94ms)
+✔ nested emphasis preserves text, color and font size together (2.0742ms)
+✔ offline rich text escapes HTML and leaves unsupported markers as text (0.726ms)
+✔ search handles aliases, introductions and visit notes with case, width and whitespace normalization (3.0044ms)
+✔ verified shop names and aliases are indexed but closed and uncertain shops and evidence are not (0.5249ms)
+✔ enhanced matching composes with city and tag filters without changing published rank order (22.8558ms)
+✔ snippets stay bounded, preserve visible text and highlight literal metacharacters safely (0.6374ms)
+✔ actual HIPPIHO and animate queries find their parent places without requiring new data (4.8581ms)
+✔ optional place and shop aliases reject malformed or duplicate entries (4.7717ms)
+✔ search targets identify exact visible paragraphs, notes and verified shop aliases (0.8253ms)
+✔ explicit search navigation round trips special characters without changing ordinary detail routes (0.4637ms)
+✔ only verified account entries are shown as open; closed notices override accounts (1.3705ms)
+✔ explicit official listings confirm operation without social accounts; closure still wins (2.6055ms)
+✔ author visit annotation uses latest evidence and excludes equal, newer or unknown dates (0.416ms)
+✔ limited stores and themes have their own groups without promoting unverified or closed records (0.4015ms)
+✔ limited periods preserve unknown years and reject impossible dates, reversed ranges and ended active themes (0.487ms)
+✔ published shop directories reference actual places and carry source evidence (3.1543ms)
+✔ business evidence is allowed without a social account and does not replace operating evidence (0.277ms)
+✔ unknown operating status does not prevent attaching a verified store account (0.1715ms)
+✔ allow omitted floors and source time ranges without inventing exact dates (0.3085ms)
+✔ reject unsupported accounts, spoofed platform URLs, missing sources and duplicate shops (0.4119ms)
+ℹ tests 50
+ℹ suites 0
+ℹ pass 50
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1179.1879

@@ -1,0 +1,184 @@
+- generic: 森罗万象-苏州星悦汇店
+- generic: 小红书号：2038485756
+- generic: IP属地：江苏
+- generic: 🧡森罗万象邀请你和我们一起快乐吃谷～ 📍苏州金鸡湖中央商务区商圈苏州中心星悦汇一楼 ✨卡牌上新请看@集卡社 ✨周边上新请看@森罗万象GOODSFUN
+- generic: "4"
+- generic: 关注
+- generic: "115"
+- generic: 粉丝
+- generic: "272"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link "置顶":
+  - /url: /user/profile/64d3b245000000001c029e9e/6a76d164000000000503159c
+  - generic: 置顶
+- link "苏州吃谷人集合！森罗万象终于开到苏州啦！":
+  - /url: /user/profile/64d3b245000000001c029e9e/6a76d164000000000503159c
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "58"
+- link "置顶":
+  - /url: /user/profile/64d3b245000000001c029e9e/6aba252000000000180042bb
+  - generic: 置顶
+- link "一人之下 | 快递上门！新品将登陆森罗万象":
+  - /url: /user/profile/64d3b245000000001c029e9e/6aba252000000000180042bb
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "6"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6ad3317300000000180127df
+- link "新品到店活动加码！一人之下主题月活动开启":
+  - /url: /user/profile/64d3b245000000001c029e9e/6ad3317300000000180127df
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "2"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6acdd0110000000018006fa5
+- link "《鸣潮》 爱弥斯飞行雪绒EP实体CD专辑上新✨":
+  - /url: /user/profile/64d3b245000000001c029e9e/6acdd0110000000018006fa5
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "5"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6ac06417000000000b0049a2
+- link "《小绿和小蓝》森罗万象GOODSFUN门店线下即将首发开启！":
+  - /url: /user/profile/64d3b245000000001c029e9e/6ac06417000000000b0049a2
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "7"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6abe2abb000000000a022664
+- link "【破云】三期新品上线活动来啦❗":
+  - /url: /user/profile/64d3b245000000001c029e9e/6abe2abb000000000a022664
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6abd1a17000000000a024f83
+- link "一则来自苏州星悦汇店的到货声明，请查收":
+  - /url: /user/profile/64d3b245000000001c029e9e/6abd1a17000000000a024f83
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "11"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6abc8cb700000000140015d7
+- link "仙逆动画剧场版弑仙之战主题限定新品发售情报大公开":
+  - /url: /user/profile/64d3b245000000001c029e9e/6abc8cb700000000140015d7
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "5"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6aba42b00000000014038966
+- link "「经以山海」线下主题活动即将开启！":
+  - /url: /user/profile/64d3b245000000001c029e9e/6aba42b00000000014038966
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "6"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6ab4f123000000000a0274f3
+- link "说谎小狗双系列即将登陆森罗万象线下各大门店🐶":
+  - /url: /user/profile/64d3b245000000001c029e9e/6ab4f123000000000a0274f3
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "1"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6ab200190000000031012d14
+- link "🌟今日上新｜《八仙！》收藏卡":
+  - /url: /user/profile/64d3b245000000001c029e9e/6ab200190000000031012d14
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "4"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6ab10269000000003302c391
+- link "新品预告 | 恋与制作人拉链娃娃即将登陆森罗万象线下门店💖":
+  - /url: /user/profile/64d3b245000000001c029e9e/6ab10269000000003302c391
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "6"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6aacf8120000000011035112
+- link "《一人之下》🍃匠韵长系列｜新品上新":
+  - /url: /user/profile/64d3b245000000001c029e9e/6aacf8120000000011035112
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "20"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6aacf7d6000000000d02703c
+- link "《全职高手》阈限空间第二弹来袭💫":
+  - /url: /user/profile/64d3b245000000001c029e9e/6aacf7d6000000000d02703c
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "3"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6a9938cc00000000250375cf
+- link "鸣潮丨予世新声系列周边森罗万象通贩开启":
+  - /url: /user/profile/64d3b245000000001c029e9e/6a9938cc00000000250375cf
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "12"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6a90fcbb00000000210313ab
+- link "仙逆动画逆影千程系列胶片卡盲盒即将线下开售🔥":
+  - /url: /user/profile/64d3b245000000001c029e9e/6a90fcbb00000000210313ab
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "21"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6a858af1000000002402c94f
+- link "企划开启|《魔道祖师》动画「重逢礼-下卷」腾讯视频|潮品集 联合出品——":
+  - /url: /user/profile/64d3b245000000001c029e9e/6a858af1000000002402c94f
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "33"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6a8004fa000000002402c905
+- link "萌谷子破云二期线下首发上线啦！！🥳🥳":
+  - /url: /user/profile/64d3b245000000001c029e9e/6a8004fa000000002402c905
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "7"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6a7ed7db000000002403c7d2
+- link "兄坑夏日系列森罗万象门店通贩活动公开！✨":
+  - /url: /user/profile/64d3b245000000001c029e9e/6a7ed7db000000002403c7d2
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: "25"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e/6a76d5a40000000006006beb
+- link "《凡人》动画系列周边即将登陆森罗万象GOODSFUN线下各大门店！":
+  - /url: /user/profile/64d3b245000000001c029e9e/6a76d5a40000000006006beb
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 森罗万象-苏州星悦汇店
+- generic: 笔记・0
+- generic: 专辑・0
+- generic: 文件・0
+- generic: TA 还没有收藏任何内容哦
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

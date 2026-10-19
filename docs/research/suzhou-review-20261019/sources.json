@@ -1,0 +1,377 @@
+{
+  "newWebImages": 0,
+  "newPhotos": 0,
+  "media": [
+    {
+      "placeId": "suzhou-shop-001",
+      "src": "images/places/Suzhou/XiangchengTianjie/photo-01.webp",
+      "alt": "商场外观",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-001",
+      "src": "images/places/Suzhou/XiangchengTianjie/photo-03.webp",
+      "alt": "玩聚猫",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-001",
+      "src": "images/places/Suzhou/XiangchengTianjie/photo-04.webp",
+      "alt": "卡牌店",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-001",
+      "src": "images/places/Suzhou/XiangchengTianjie/photo-02.webp",
+      "alt": "二次元留言墙",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-01.webp",
+      "alt": "商场外观",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-02.webp",
+      "alt": "谷店楼层",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-04.webp",
+      "alt": "浮游猫",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-05.webp",
+      "alt": "AKIBA GO",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-06.webp",
+      "alt": "三月兽",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-07.webp",
+      "alt": "飞社长",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-11.webp",
+      "alt": "ONE TWO GOODS",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-15.webp",
+      "alt": "K-pop 店铺",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-16.webp",
+      "alt": "JK 店铺",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/video-01.mp4",
+      "alt": "二次元电梯",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-08.webp",
+      "alt": "日谷货架",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-09.webp",
+      "alt": "日谷陈列",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-10.webp",
+      "alt": "作品清单",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-12.webp",
+      "alt": "模玩熊",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-13.webp",
+      "alt": "扭扭城",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/官方账号补充/xingyue-fuyuu-01.webp",
+      "alt": "星悦汇浮游猫痛包展示墙（官方图）",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "浮游猫苏州星悦汇店官方小红书",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/6a73eef2000000000502b7c7",
+      "capturedAt": null,
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/官方账号补充/xingyue-fuyuu-02.webp",
+      "alt": "星悦汇浮游猫店内痛包货架（官方图）",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "浮游猫苏州星悦汇店官方小红书",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/6a73eef2000000000502b7c7",
+      "capturedAt": null,
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-03.webp",
+      "alt": "商场角色装置",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-14.webp",
+      "alt": "同好留言墙",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "src": "images/places/Suzhou/Xingyuehui/photo-17.webp",
+      "alt": "作品投票墙",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "src": "images/places/Suzhou/SUONE/photo-01.webp",
+      "alt": "谷店街区",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "src": "images/places/Suzhou/SUONE/photo-03.webp",
+      "alt": "恰谷恰谷",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "src": "images/places/Suzhou/SUONE/video-01.mp4",
+      "alt": "逛店通道",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "src": "images/places/Suzhou/SUONE/photo-04.webp",
+      "alt": "切页陈列",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "src": "images/places/Suzhou/SUONE/photo-05.webp",
+      "alt": "切页近景",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "src": "images/places/Suzhou/SUONE/photo-06.webp",
+      "alt": "中古店",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "src": "images/places/Suzhou/SUONE/photo-07.webp",
+      "alt": "手动一番赏",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "src": "images/places/Suzhou/官方账号补充/jindi-mwx-01.webp",
+      "alt": "金地模玩熊店内奥特曼好物赏展示板（官方图）",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "模玩熊苏州金地店官方小红书",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/6ac1e8640000000014038db5",
+      "capturedAt": null,
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "src": "images/places/Suzhou/SUONE/photo-02.webp",
+      "alt": "谷子集市",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "src": "images/places/Suzhou/SUONE/photo-08.webp",
+      "alt": "签名墙",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "src": "images/places/Suzhou/SUONE/photo-09.webp",
+      "alt": "随舞全景",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "src": "images/places/Suzhou/SUONE/photo-10.webp",
+      "alt": "随舞近景",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "src": "images/places/Suzhou/SUONE/video-02.mp4",
+      "alt": "随舞现场",
+      "action": "原素材保留，本轮未下载新图",
+      "sourceName": "作者‘2026-09-19’直拍",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-19",
+      "reviewedAt": null
+    }
+  ],
+  "note": "本轮仅复用已有实拍与原官方素材；未重复下载。新店来源见directories.json和candidates.json。照片日期不当发帖日期。"
+}

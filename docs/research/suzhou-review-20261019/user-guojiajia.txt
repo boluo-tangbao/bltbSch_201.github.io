@@ -1,0 +1,25 @@
+{
+  "query": "星悦汇 次元过家家",
+  "mode": "用户",
+  "readAt": "2026-10-19",
+  "scope": "本次首屏加载全部用户结果，未滚动补取"
+}
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- link "KURO次元过家家星悦汇店 3天前更新 小红书号：27730261431 粉丝・280 笔记・1631 关注":
+  - /url: /user/profile/68616344000000001b01b436
+  - generic: KURO次元过家家星悦汇店
+  - generic: 3天前更新
+  - generic: 小红书号：27730261431
+  - generic: 粉丝・280
+  - generic: 笔记・1631
+  - button "关注":
+    - generic: 关注
+- generic: "- THE END -"
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe
