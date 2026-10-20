@@ -11,6 +11,7 @@ export interface BilibiliVideo {
 export interface BilibiliClip {
   id: string; placeId: string; videoId: string; chapterId?: string; page: number
   status: 'verified' | 'pending'; startSeconds?: number
+  startSource?: 'independent-review'
   evidence: string; method?: 'video-frames' | 'direct-viewing' | 'subtitles' | 'transcript'
   checkedAt: string; reviewUrl?: string; chapterOverlapNote?: string; evidenceFrames?: number[]
 }

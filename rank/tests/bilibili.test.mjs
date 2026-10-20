@@ -10,13 +10,50 @@ const placeIds = Object.values(groups).flat().map(p => p.id)
 
 test('real video metadata is shared, all clips reference existing places and independently checked times', () => {
   assert.deepEqual(validateBilibiliCatalog(catalog, placeIds), [])
-  assert.equal(catalog.videos.length, 1)
+  assert.equal(catalog.videos.length, 3)
   assert.equal(catalog.videos[0].bvid, 'BV1uUWizfEvv')
-  assert.equal(catalog.clips.length, 17)
-  assert.equal(new Set(catalog.clips.map(c => c.placeId)).size, 17)
+  assert.equal(catalog.clips.length, 25)
+  assert.equal(new Set(catalog.clips.map(c => c.placeId)).size, 25)
   const before = JSON.stringify(catalog)
   assert.notEqual(placeClips(catalog, 'shanghai-shop-007')[0].clip.startSeconds, placeClips(catalog, 'shanghai-shop-003')[0].clip.startSeconds)
   assert.equal(JSON.stringify(catalog), before)
+})
+
+test('Guangzhou maps east, west and the Beijing Road side trip independently and preserves complete lead-ins', () => {
+  const video = catalog.videos.find(v => v.bvid === 'BV1EFfJBwEjh')
+  assert.ok(video)
+  assert.equal(video.pages[0].durationSeconds, 678)
+  assert.deepEqual(video.chapters.map(c => c.startSeconds), [0, 26, 176, 287, 345, 501])
+  const expected = [
+    ['guangzhou-shop-003', 'p1-26', 22],
+    ['guangzhou-shop-002', 'p1-176', 175],
+    ['guangzhou-shop-005', 'p1-287', 286],
+    ['guangzhou-shop-001', 'p1-345', 342],
+    ['guangzhou-shop-004', 'p1-501', 499],
+  ]
+  assert.deepEqual(catalog.clips.filter(c => c.videoId === video.id).map(c => [c.placeId, c.chapterId, c.startSeconds]), expected)
+  for (const [placeId] of expected) {
+    const [{ clip }] = placeClips(catalog, placeId)
+    assert.equal(clip.status, 'verified')
+    assert.ok(clip.chapterOverlapNote)
+    assert.equal(clip.reviewUrl, bilibiliUrl(video.bvid, 1, clip.startSeconds))
+  }
+})
+
+test('Suzhou keeps absent source chapters distinct from three independently reviewed introductions', () => {
+  const video = catalog.videos.find(v => v.bvid === 'BV1Ykho6fEKd')
+  assert.ok(video)
+  assert.equal(video.chapterStatus, 'none')
+  assert.deepEqual(video.chapters, [])
+  assert.equal(video.pages[0].durationSeconds, 123)
+  assert.deepEqual(catalog.clips.filter(c => c.videoId === video.id).map(c => [c.placeId, c.startSeconds]), [
+    ['suzhou-shop-001', 12], ['suzhou-shop-002', 31], ['suzhou-shop-003', 82],
+  ])
+  for (const entry of catalog.clips.filter(c => c.videoId === video.id)) {
+    assert.equal(entry.startSource, 'independent-review')
+    assert.equal(entry.chapterId, undefined)
+    assert.ok(entry.evidenceFrames.length >= 2)
+  }
 })
 
 test('only validated IDs, page numbers and integer seconds can construct fixed-host URLs', () => {
@@ -65,6 +102,13 @@ test('confirmed no-chapters, unreadable chapters and pending clips are distinct;
   d.clips = [c]; v.chapters = []; v.chapterStatus = 'none'; delete c.chapterId
   c.startSeconds = 0; c.reviewUrl = bilibiliUrl(v.bvid, c.page, 0)
   assert.deepEqual(validateBilibiliCatalog(d), [])
+  c.startSeconds = 15; c.reviewUrl = bilibiliUrl(v.bvid, c.page, 15)
+  assert.ok(validateBilibiliCatalog(d).length)
+  c.startSource = 'independent-review'
+  assert.deepEqual(validateBilibiliCatalog(d), [])
+  c.startSource = 'guessed'
+  assert.ok(validateBilibiliCatalog(d).length)
+  c.startSource = 'independent-review'
   v.chapterStatus = 'unavailable'
   assert.ok(validateBilibiliCatalog(d).length)
   c.status = 'pending'; delete c.startSeconds; delete c.reviewUrl

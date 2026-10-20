@@ -1,5 +1,31 @@
 [
   {
+    "id": "suzhou-bilibili-clips-20261020",
+    "date": "2026-10-20",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "suzhou-shop-001",
+      "suzhou-shop-002",
+      "suzhou-shop-003"
+    ],
+    "note": "苏州3处商圈介绍补入BV1Ykho6fEKd视频入口：龙湖相城天街、星悦汇、SUONE金地广场。原站未设置作者章节，按实际画面逐点核实完整介绍起点；点击后才加载播放器。"
+  },
+  {
+    "id": "guangzhou-bilibili-chapters-20261020",
+    "date": "2026-10-20",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "guangzhou-shop-001",
+      "guangzhou-shop-002",
+      "guangzhou-shop-003",
+      "guangzhou-shop-004",
+      "guangzhou-shop-005"
+    ],
+    "note": "广州5处商圈介绍补入作者BV1EFfJBwEjh视频入口：分别对应动漫星城东区、西区、北京路谷店、地王广场和时尚天河；读取真实章节并逐段核对完整引入，点击后才加载播放器。"
+  },
+  {
     "id": "guangzhou-diwang-increment-20261020",
     "date": "2026-10-20",
     "type": "edited",

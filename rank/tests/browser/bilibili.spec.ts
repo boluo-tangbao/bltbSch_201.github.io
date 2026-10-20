@@ -9,7 +9,43 @@ const directories = JSON.parse(readFileSync('src/data/shop-directories.json', 'u
 const thirdParty = (url: string) => /(^|\.)(bilibili\.com|bilivideo\.com|hdslb\.com|biliimg\.com)$/.test(new URL(url).hostname)
 mkdirSync('test-results/evidence', { recursive: true })
 
-test('all 17 real entries sit after the place introduction and never load Bilibili by opening or navigating', async ({ page }) => {
+for (const [city, videoId, bvid, count] of [
+  ['Guangzhou', 'guangzhou-ranking-bv1effjbwejh', 'BV1EFfJBwEjh', 5],
+  ['Suzhou', 'suzhou-ranking-bv1ykho6fekd', 'BV1Ykho6fEKd', 3],
+] as const) test(`${city} clips link every place and load only on explicit action at desktop and mobile widths`, async ({ page }) => {
+  const clips = catalog.clips.filter((clip: any) => clip.videoId === videoId)
+  expect(clips).toHaveLength(count)
+  const requests: string[] = []
+  page.on('request', r => { if (thirdParty(r.url())) requests.push(r.url()) })
+  // Check the site's lifecycle separately from real third-party playback.
+  await page.route('https://player.bilibili.com/**', route => route.fulfill({ contentType: 'text/html', body: '<title>Player lifecycle test stub</title>' }))
+  for (const width of [1440, 390]) {
+    await page.setViewportSize({ width, height: 950 })
+    for (const clip of clips) {
+      const before = requests.length
+      await page.goto(`${base}guide/?video=${clip.videoId}&p=1&t=${clip.startSeconds}#/place/${clip.placeId}`)
+      const widget = page.locator('.bilibili-clips')
+      await expect(widget).toHaveCount(1)
+      expect(await widget.evaluate(el => el.previousElementSibling?.classList.contains('detail-review'))).toBe(true)
+      await expect(page.locator('.shop-directory .bilibili-clips')).toHaveCount(0)
+      await expect(widget.locator('iframe, select, h3, .clip-video-title, .clip-selection')).toHaveCount(0)
+      await expect(widget.getByRole('link', { name: '去 B 站观看 ↗' })).toHaveAttribute('href', clip.reviewUrl)
+      expect(requests.length).toBe(before)
+      const load = widget.getByRole('button', { name: '加载此片段播放器' })
+      await load.focus(); await load.press('Enter')
+      await expect(widget.locator('iframe')).toHaveAttribute('src', bilibiliUrl(bvid, 1, clip.startSeconds, true)!)
+      await expect(widget.locator('iframe')).toHaveAttribute('allow', 'fullscreen')
+      expect(await widget.evaluate(el => el.scrollWidth <= el.clientWidth)).toBe(true)
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+      await widget.getByRole('button', { name: '关闭播放器' }).click()
+      await expect(widget.locator('iframe')).toHaveCount(0)
+      await page.reload()
+      await expect(page.locator('iframe[src*="bilibili"]')).toHaveCount(0)
+    }
+  }
+})
+
+test('all real entries sit after the place introduction and never load Bilibili by opening or navigating', async ({ page }) => {
   const requests: string[] = []
   page.on('request', r => { if (thirdParty(r.url())) requests.push(r.url()) })
   await page.goto(base)

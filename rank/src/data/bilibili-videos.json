@@ -89,6 +89,87 @@
           "endSeconds": 734
         }
       ]
+    },
+    {
+      "id": "guangzhou-ranking-bv1effjbwejh",
+      "bvid": "BV1EFfJBwEjh",
+      "title": "沪人主观横评妖都广州三大二次元商圈对比从夯到拉",
+      "sourceUrl": "https://www.bilibili.com/video/BV1EFfJBwEjh/",
+      "retrievedAt": "2026-10-20",
+      "metadataSource": "https://api.bilibili.com/x/web-interface/view?bvid=BV1EFfJBwEjh",
+      "chapterSource": "https://api.bilibili.com/x/player/v2?bvid=BV1EFfJBwEjh&cid=36191209034",
+      "chapterStatus": "available",
+      "pages": [
+        {
+          "page": 1,
+          "cid": 36191209034,
+          "title": "沪人主观横评妖都广州三大二次元商圈对比从夯到拉",
+          "durationSeconds": 678
+        }
+      ],
+      "chapters": [
+        {
+          "id": "p1-0",
+          "title": "引言",
+          "page": 1,
+          "startSeconds": 0,
+          "endSeconds": 26
+        },
+        {
+          "id": "p1-26",
+          "title": "动漫星城（东）",
+          "page": 1,
+          "startSeconds": 26,
+          "endSeconds": 176
+        },
+        {
+          "id": "p1-176",
+          "title": "动漫星城（西）",
+          "page": 1,
+          "startSeconds": 176,
+          "endSeconds": 287
+        },
+        {
+          "id": "p1-287",
+          "title": "北京路个人发现的小店",
+          "page": 1,
+          "startSeconds": 287,
+          "endSeconds": 345
+        },
+        {
+          "id": "p1-345",
+          "title": "地王广场",
+          "page": 1,
+          "startSeconds": 345,
+          "endSeconds": 501
+        },
+        {
+          "id": "p1-501",
+          "title": "时尚天河",
+          "page": 1,
+          "startSeconds": 501,
+          "endSeconds": 678
+        }
+      ]
+    },
+    {
+      "id": "suzhou-ranking-bv1ykho6fekd",
+      "bvid": "BV1Ykho6fEKd",
+      "title": "沪人主观探店苏州二次元商圈对比从夯到拉",
+      "sourceUrl": "https://www.bilibili.com/video/BV1Ykho6fEKd/",
+      "retrievedAt": "2026-10-20",
+      "metadataSource": "https://api.bilibili.com/x/web-interface/view?bvid=BV1Ykho6fEKd",
+      "chapterSource": "https://api.bilibili.com/x/player/v2?bvid=BV1Ykho6fEKd&cid=42223339311",
+      "chapterStatus": "none",
+      "pages": [
+        {
+          "page": 1,
+          "cid": 42223339311,
+          "title": "沪人主观探店苏州二次元商圈对比从夯到拉",
+          "durationSeconds": 123
+        }
+      ],
+      "chapters": []
     }
   ],
   "clips": [
@@ -412,6 +493,172 @@
       ],
       "checkedAt": "2026-10-17",
       "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=680"
+    },
+    {
+      "id": "guangzhou-shop-003-bv1effjbwejh",
+      "placeId": "guangzhou-shop-003",
+      "videoId": "guangzhou-ranking-bv1effjbwejh",
+      "chapterId": "p1-26",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 22,
+      "method": "video-frames",
+      "evidence": "22秒仍是系列视频说明，22.5秒字幕开始“本期我们先聚焦于流量最大的动漫星城”，25秒切动漫星城外观，26秒续述其设计，29秒进入公园前东西分区说明；本段随后专门介绍东区，保留完整聚焦开句。",
+      "evidenceFrames": [
+        22,
+        22.5,
+        25,
+        26,
+        29
+      ],
+      "checkedAt": "2026-10-20",
+      "reviewUrl": "https://www.bilibili.com/video/BV1EFfJBwEjh/?p=1&t=22",
+      "chapterOverlapNote": "实际完整引入早于作者章节标记（26秒），已逐项检查浏览器原视频画面与画内字幕，保留22秒起的完整开句／必要转场；章节原始时间不改写。"
+    },
+    {
+      "id": "guangzhou-shop-002-bv1effjbwejh",
+      "placeId": "guangzhou-shop-002",
+      "videoId": "guangzhou-ranking-bv1effjbwejh",
+      "chapterId": "p1-176",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 175,
+      "method": "video-frames",
+      "evidence": "175秒仍为东区评价，175.5秒转入西区现场并以“接着上期的视角，让我们转向动星西区”开始完整引入，179秒介绍星大馆；对应网站西区条目。",
+      "evidenceFrames": [
+        175,
+        175.5,
+        176,
+        179
+      ],
+      "checkedAt": "2026-10-20",
+      "reviewUrl": "https://www.bilibili.com/video/BV1EFfJBwEjh/?p=1&t=175",
+      "chapterOverlapNote": "实际完整引入早于作者章节标记（176秒），已逐项检查浏览器原视频画面与画内字幕，保留175秒起的完整开句／必要转场；章节原始时间不改写。"
+    },
+    {
+      "id": "guangzhou-shop-005-bv1effjbwejh",
+      "placeId": "guangzhou-shop-005",
+      "videoId": "guangzhou-ranking-bv1effjbwejh",
+      "chapterId": "p1-287",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 286,
+      "method": "video-frames",
+      "evidence": "286.25秒仍为西区总结，286.5秒切北京路附近地图，字幕从“此外，过了中山路，在北京路步行街旁”引入附近小店；与网站北京路谷店的点状小店语境一致，不引用西区总结。",
+      "evidenceFrames": [
+        286,
+        286.25,
+        286.5,
+        287,
+        290
+      ],
+      "checkedAt": "2026-10-20",
+      "reviewUrl": "https://www.bilibili.com/video/BV1EFfJBwEjh/?p=1&t=286",
+      "chapterOverlapNote": "实际完整引入早于作者章节标记（287秒），已逐项检查浏览器原视频画面与画内字幕，保留286秒起的完整开句／必要转场；章节原始时间不改写。"
+    },
+    {
+      "id": "guangzhou-shop-001-bv1effjbwejh",
+      "placeId": "guangzhou-shop-001",
+      "videoId": "guangzhou-ranking-bv1effjbwejh",
+      "chapterId": "p1-345",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 342,
+      "method": "video-frames",
+      "evidence": "342秒仍为北京路结束语，343秒字幕开始“接下来我们将进入下一章”，345秒以“前两期主观介绍完了北京路谷店，那将视角微微向东移动”接续路线引入，348秒地图定位地王广场；从前一整数秒保留整段转场与路线开句。",
+      "evidenceFrames": [
+        342,
+        343,
+        344,
+        345,
+        348
+      ],
+      "checkedAt": "2026-10-20",
+      "reviewUrl": "https://www.bilibili.com/video/BV1EFfJBwEjh/?p=1&t=342",
+      "chapterOverlapNote": "实际完整引入早于作者章节标记（345秒），已逐项检查浏览器原视频画面与画内字幕，保留342秒起的完整开句／必要转场；章节原始时间不改写。"
+    },
+    {
+      "id": "guangzhou-shop-004-bv1effjbwejh",
+      "placeId": "guangzhou-shop-004",
+      "videoId": "guangzhou-ranking-bv1effjbwejh",
+      "chapterId": "p1-501",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 499,
+      "method": "video-frames",
+      "evidence": "499.5秒仍为地王广场总结，500秒切时尚天河入口并开始“最后一期介绍时尚天河，具有远离那两的特殊区位优势”；保留外景与完整开句，对应网站时尚天河。",
+      "evidenceFrames": [
+        499,
+        499.5,
+        500,
+        501,
+        504
+      ],
+      "checkedAt": "2026-10-20",
+      "reviewUrl": "https://www.bilibili.com/video/BV1EFfJBwEjh/?p=1&t=499",
+      "chapterOverlapNote": "实际完整引入早于作者章节标记（501秒），已逐项检查浏览器原视频画面与画内字幕，保留499秒起的完整开句／必要转场；章节原始时间不改写。"
+    },
+    {
+      "id": "suzhou-shop-001-bv1ykho6fekd",
+      "placeId": "suzhou-shop-001",
+      "videoId": "suzhou-ranking-bv1ykho6fekd",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 12,
+      "startSource": "independent-review",
+      "method": "video-frames",
+      "evidence": "12秒仍为三地预告，13秒切回相城天街外观，字幕从“首先是相城天街，据说是新兴的二次元商圈”正式开始；20秒转入实际体验。保留完整外观与开句，不使用10秒的三地预告。 原站无作者章节，本时间由原视频画面与画内字幕独立核实。",
+      "evidenceFrames": [
+        10,
+        12,
+        13,
+        14,
+        14.5,
+        20
+      ],
+      "checkedAt": "2026-10-20",
+      "reviewUrl": "https://www.bilibili.com/video/BV1Ykho6fEKd/?p=1&t=12"
+    },
+    {
+      "id": "suzhou-shop-002-bv1ykho6fekd",
+      "placeId": "suzhou-shop-002",
+      "videoId": "suzhou-ranking-bv1ykho6fekd",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 31,
+      "startSource": "independent-review",
+      "method": "video-frames",
+      "evidence": "31秒仍为相城天街总结，32秒切星悦汇外观并开始“下一站是星悦汇，位于苏州中心隔壁”；34秒续接外景，40秒进入内部介绍。按32秒之前的整数秒保留完整转场。 原站无作者章节，本时间由原视频画面与画内字幕独立核实。",
+      "evidenceFrames": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        40
+      ],
+      "checkedAt": "2026-10-20",
+      "reviewUrl": "https://www.bilibili.com/video/BV1Ykho6fEKd/?p=1&t=31"
+    },
+    {
+      "id": "suzhou-shop-003-bv1ykho6fekd",
+      "placeId": "suzhou-shop-003",
+      "videoId": "suzhou-ranking-bv1ykho6fekd",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 82,
+      "startSource": "independent-review",
+      "method": "video-frames",
+      "evidence": "82秒仍为星悦汇评级，83秒切金地广场外景，字幕为“SUONE金地是本期最后一个商圈”，84秒转入谷店品质，85秒为商场内随舞现场；与网站SUONE金地广场对应，保留完整开句。 原站无作者章节，本时间由原视频画面与画内字幕独立核实。",
+      "evidenceFrames": [
+        80,
+        82,
+        83,
+        84,
+        85
+      ],
+      "checkedAt": "2026-10-20",
+      "reviewUrl": "https://www.bilibili.com/video/BV1Ykho6fEKd/?p=1&t=82"
     }
   ]
 }

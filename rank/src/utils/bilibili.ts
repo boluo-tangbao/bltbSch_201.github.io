@@ -54,6 +54,7 @@ export function clipErrors(c: unknown, video: BilibiliVideo | undefined): string
   if (!part) errors.push('关联分 P 不存在')
   const chapter = video.chapters.find(ch => ch.id === c.chapterId)
   if (c.chapterId !== undefined && (!chapter || chapter.page !== c.page)) errors.push('所属章节不存在或分 P 不符')
+  if (c.startSource !== undefined && c.startSource !== 'independent-review') errors.push('片段起点来源无效')
   if (c.status === 'verified') {
     if (!seconds(c.startSeconds) || !part || c.startSeconds >= part.durationSeconds) errors.push('片段起始秒数无效')
     if (!['video-frames', 'direct-viewing', 'subtitles', 'transcript'].includes(c.method)) errors.push('缺少明确核查方式')
@@ -61,7 +62,9 @@ export function clipErrors(c: unknown, video: BilibiliVideo | undefined): string
     // Authored chapter markers can lag behind the actual introduction. Keep the
     // verified lead-in only when the evidence explicitly explains that overlap.
     if (video.chapterStatus === 'available' && (!chapter || c.startSeconds >= chapter.endSeconds || (c.startSeconds < chapter.startSeconds && !text(c.chapterOverlapNote)))) errors.push('片段起点不在所属章节范围内，或缺少保留引入的说明')
-    if (video.chapterStatus === 'none' && c.startSeconds !== 0) errors.push('确认无章节的视频应从整段 0 秒开始')
+    // Without authored chapters, default to the whole video. A separately
+    // reviewed place introduction may opt into a documented, nonzero start.
+    if (video.chapterStatus === 'none' && c.startSeconds !== 0 && c.startSource !== 'independent-review') errors.push('无章节视频默认从 0 秒开始，独立核实的片段须注明起点来源')
     if (c.reviewUrl !== bilibiliUrl(video.bvid, c.page, c.startSeconds)) errors.push('复查链接与片段时间不符')
   } else if (c.startSeconds !== undefined || c.reviewUrl !== undefined) errors.push('待确认片段不能填写估算时间或带时间复查链接')
   return errors
