@@ -2842,7 +2842,7 @@
   },
   "guangzhou-shop-001": {
     "area": "地王广场",
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-20",
     "shops": [
       {
         "name": "二阶堂谷屋",
@@ -2987,23 +2987,52 @@
       },
       {
         "name": "星之所集",
-        "status": "older",
-        "kind": "猫咪主题潮玩、动漫周边",
-        "note": "运营方 5 月 8 日宣布地王广场店开业，5 月 9 日报道收录。",
+        "status": "recent",
+        "kind": "动漫／游戏周边（含非人哉）",
+        "note": "品牌本人09-29公告明确地王广场店及10月活动，确认本分店；满赠促销不作为限时店。楼层待核。",
         "sources": [
           {
             "label": "广百展贸开店公告",
             "url": "https://news.10jqka.com.cn/20260509/c676564673.shtml",
             "date": "2026-05-09"
+          },
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/683ae6c9000000001d00aff4"
+          },
+          {
+            "label": "非人哉国风季特别企划",
+            "url": "https://www.xiaohongshu.com/explore/6abb384d000000001b020eb4",
+            "date": "2026-09-29"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "星之所集",
+            "handle": "27769857451",
+            "url": "https://www.xiaohongshu.com/user/profile/683ae6c9000000001d00aff4",
+            "scope": "brand"
           }
         ]
       },
       {
         "name": "潮玩星球 IPSTAR",
-        "floor": "负一层",
-        "status": "unverified",
-        "note": "2025 年品牌探店文章列 B1 店铺，用户现场图集也留有记录；暂未取得更近的营业依据。",
+        "floor": "负一层 1022 号",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "品牌2026年9月4日店铺名单明确列出地王广场B1层1022号专柜，8月商品公告也关联本店。此条为常规零售店；时尚天河主题餐厅9月13日结束不适用于地王店，主题专柜的当期陈列仍需另核。",
         "sources": [
+          {
+            "label": "品牌本人店铺名单：地王广场1022号",
+            "url": "https://www.sina.cn/news/detail/5339485463644575.html",
+            "date": "2026-09-04"
+          },
+          {
+            "label": "品牌原神新品公告关联地王店及B2自拍机",
+            "url": "https://www.sina.cn/news/detail/5329627786511735.html",
+            "date": "2026-08-08"
+          },
           {
             "label": "品牌广州地王店探店",
             "url": "https://www.sohu.com/a/914156719_121123945",
@@ -3032,13 +3061,28 @@
       },
       {
         "name": "再吃一口小谷仓",
-        "status": "older",
-        "note": "2026 年 4 月 10 日实拍探店收录。",
+        "status": "closed",
+        "note": "2026-10-20读取本人账号现名“再吃一口小谷仓（闭店清仓中）”，简介称陆续上新清仓商品；本人路线与活动帖关联地王。按已公布闭店隐藏，最终撤店日未核实。",
         "sources": [
           {
             "label": "2026 年实拍探店",
             "url": "https://www.bilibili.com/video/BV1yLQwBrEZE/",
             "date": "2026-04-10"
+          },
+          {
+            "label": "本人主页现名“闭店清仓中”及清仓简介",
+            "url": "https://www.xiaohongshu.com/user/profile/62014b35000000000201e459",
+            "dateLabel": "2026-10-20读取；未显示更名或撤店日期"
+          },
+          {
+            "label": "路线图来惹",
+            "url": "https://www.xiaohongshu.com/explore/68818e78000000001201518c",
+            "date": "2025-07-24"
+          },
+          {
+            "label": "活动截止至9.10",
+            "url": "https://www.xiaohongshu.com/explore/6a9bd0b20000000027009d48",
+            "date": "2026-09-05"
           }
         ]
       },
@@ -3068,13 +3112,33 @@
       },
       {
         "name": "猫妮社",
-        "status": "older",
-        "note": "2026 年 4 月 10 日实拍探店收录。",
+        "status": "recent",
+        "note": "本人主页明确地王2320铺，并发布到店一番赏，沿用原店记录。",
         "sources": [
           {
             "label": "2026 年实拍探店",
             "url": "https://www.bilibili.com/video/BV1yLQwBrEZE/",
             "date": "2026-04-10"
+          },
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/638471a5000000001f01b82a"
+          },
+          {
+            "label": "原神一番赏到啦",
+            "url": "https://www.xiaohongshu.com/explore/6aae4bea0000000026009e1d",
+            "date": "2026-09-19"
+          }
+        ],
+        "floor": "负二层 2320 铺",
+        "kind": "动漫周边、一番赏",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "猫妮社",
+            "handle": "5316522666",
+            "url": "https://www.xiaohongshu.com/user/profile/638471a5000000001f01b82a",
+            "scope": "store"
           }
         ]
       },
@@ -3092,117 +3156,358 @@
       },
       {
         "name": "空气谷",
+        "aliases": [
+          "空気谷"
+        ],
+        "floor": "负二层 2308 室（发售名单所列）",
         "status": "older",
-        "note": "2026 年 4 月 10 日实拍探店收录。",
+        "note": "万代《明日方舟 巡海蚀光》发售名单使用“空気谷”，列地王广场负二层2308室，补强原店名与位置对应；该商品2025年已发售，不将仍可读取的历史名单当作当前营业确认。原2026年探店线索保留，当前营业待核实。",
         "sources": [
+          {
+            "label": "万代一番赏发售名单（历史商品，读取于2026-10-20）",
+            "url": "https://wechat.bandainamcotoyshobbysh.com/H5/store.php?id=471",
+            "dateLabel": "2025年发售商品名单，页面未标发布日期"
+          },
           {
             "label": "2026 年实拍探店",
             "url": "https://www.bilibili.com/video/BV1yLQwBrEZE/",
             "date": "2026-04-10"
           }
+        ]
+      },
+      {
+        "name": "梦幻潮玩（2106—2108铺）",
+        "floor": "负二层 2106—2108 铺",
+        "status": "recent",
+        "kind": "一番赏周边、毛绒（角落生物、轻松熊）",
+        "note": "本人主页列地王2106—2108铺，近期发布毛绒上新。原万代历史名单写2016—2018，本轮采用本人地址，不能据旧名单推断占用谷物集2016铺。另一个寄售号列2006铺，与猫谷2006C的经营边界待核，不重复计店。",
+        "sources": [
+          {
+            "label": "万代一番赏本分店发售名单（历史商品）",
+            "url": "https://wechat.bandainamcotoyshobbysh.com/H5/store.php?id=471",
+            "dateLabel": "2025年发售商品名单，页面未标发布日期"
+          },
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/62cec0680000000002003104"
+          },
+          {
+            "label": "角落生物 轻松熊",
+            "url": "https://www.xiaohongshu.com/explore/6acdce1d000000001a02042c",
+            "dateLabel": "编辑于 6天前 广东（2026-10-20读取）"
+          },
+          {
+            "label": "小圆是不会原谅你们的",
+            "url": "https://www.xiaohongshu.com/explore/6accb01b000000001500832e",
+            "dateLabel": "7天前 广东（2026-10-20读取）"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "梦幻潮玩",
+            "handle": "6220742338",
+            "url": "https://www.xiaohongshu.com/user/profile/62cec0680000000002003104",
+            "scope": "store"
+          }
+        ],
+        "aliases": [
+          "梦幻潮玩（地王1店）"
         ]
       },
       {
         "name": "喵咕喵谷",
-        "status": "older",
-        "note": "2026 年 4 月 10 日实拍探店收录。",
+        "status": "recent",
+        "note": "本人主页列地王2300铺并继续招呼到店；寄售者明确门头“次元喵”。与2006C猫谷分开记录，不把不明异名自动并入。",
         "sources": [
           {
             "label": "2026 年实拍探店",
             "url": "https://www.bilibili.com/video/BV1yLQwBrEZE/",
             "date": "2026-04-10"
+          },
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/672b8800000000001c0190bc"
+          },
+          {
+            "label": "寄售up",
+            "url": "https://www.xiaohongshu.com/explore/6ad1c4da000000001203bd89",
+            "dateLabel": "编辑于 3天前 广东（2026-10-20读取）"
+          },
+          {
+            "label": "新款up",
+            "url": "https://www.xiaohongshu.com/explore/6ac75d0e000000001802c389",
+            "dateLabel": "编辑于 10-08 广东（2026-10-20读取）"
+          },
+          {
+            "label": "地王广场负二喵咕喵谷寄售谷子IP更新",
+            "url": "https://www.xiaohongshu.com/explore/695ce36f000000001a03597d",
+            "dateLabel": "编辑于 01-17（2026-10-20读取）"
           }
+        ],
+        "floor": "负二层 2300 铺",
+        "kind": "中古寄售、动漫周边",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "喵咕喵谷（接寄售）",
+            "handle": "94166434470",
+            "url": "https://www.xiaohongshu.com/user/profile/672b8800000000001c0190bc",
+            "scope": "store"
+          }
+        ],
+        "aliases": [
+          "次元喵"
         ]
       },
       {
         "name": "谷叽谷叽",
-        "status": "unverified",
-        "note": "2025 年 9 月 29 日探店总览或评论收录。",
+        "status": "closed",
+        "note": "本人账号明确标注“已闭店”，置顶闭店清仓公告，关联地王B2层2376铺；2026-10-20实际读取。保留原2025攻略，未核实最终撤店日，不因简介仍有旧营业时间恢复展示。",
         "sources": [
           {
             "label": "地王历史探店总览",
             "url": "https://www.xiaohongshu.com/explore/68d8b190000000001300aecb",
             "date": "2025-09-29"
+          },
+          {
+            "label": "本人主页明确已闭店",
+            "url": "https://www.xiaohongshu.com/user/profile/62a374d100000000210263e1"
+          },
+          {
+            "label": "闭店清仓",
+            "url": "https://www.xiaohongshu.com/explore/69ad2e40000000002203ab3f",
+            "dateLabel": "编辑于 03-08（2026-10-20读取）"
           }
-        ]
+        ],
+        "floor": "负二层 2376 铺（原址）"
       },
       {
         "name": "煎柄谷子",
-        "status": "unverified",
-        "note": "2025 年 9 月 29 日探店总览或评论收录。",
+        "status": "recent",
+        "note": "本人主页明确地王2661铺，原文介绍线下店及同人寄售；只保留编辑时间，不将其冒充首次发表时间。",
         "sources": [
           {
             "label": "地王历史探店总览",
             "url": "https://www.xiaohongshu.com/explore/68d8b190000000001300aecb",
             "date": "2025-09-29"
+          },
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/64d508950000000001005986"
+          },
+          {
+            "label": "6🈷️同人上新",
+            "url": "https://www.xiaohongshu.com/explore/6a33af60000000000f005b34",
+            "dateLabel": "编辑于 06-18（2026-10-20读取）"
+          },
+          {
+            "label": "一家兼顾",
+            "url": "https://www.xiaohongshu.com/explore/67e1627c000000001c006a78",
+            "dateLabel": "编辑于 2025-12-03（2026-10-20读取）"
+          }
+        ],
+        "floor": "负二层 2661 铺",
+        "kind": "画师授权同人周边、日谷、官谷、中古寄售",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "煎柄谷子",
+            "handle": "2086998625",
+            "url": "https://www.xiaohongshu.com/user/profile/64d508950000000001005986",
+            "scope": "store"
           }
         ]
       },
       {
         "name": "Pekopeko",
-        "status": "unverified",
-        "note": "2025 年 9 月 29 日探店总览或评论收录。",
+        "status": "recent",
+        "note": "广州分店本人明确地王负二层，近期持续上新；沈阳店有独立账号，不混入本店。",
         "sources": [
           {
             "label": "地王历史探店总览",
             "url": "https://www.xiaohongshu.com/explore/68d8b190000000001300aecb",
             "date": "2025-09-29"
+          },
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/668d2698000000000f034a41"
+          },
+          {
+            "label": "一起进入秋天",
+            "url": "https://www.xiaohongshu.com/explore/6ab0859c000000002a0062a4",
+            "date": "2026-09-21"
           }
+        ],
+        "floor": "负二层",
+        "kind": "画师授权制品、日谷、中古",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "Pekopeko贩谷工场（广州店）（连赞关黑屋）",
+            "handle": "11431726103",
+            "url": "https://www.xiaohongshu.com/user/profile/668d2698000000000f034a41",
+            "scope": "store"
+          }
+        ],
+        "aliases": [
+          "Pekopeko贩谷工场"
         ]
       },
       {
         "name": "TMT Outlet",
-        "status": "unverified",
-        "note": "2025 年 9 月 29 日探店总览或评论收录。",
+        "status": "recent",
+        "note": "品牌共用号列地王2716铺，地王开业帖评论中2026年5月26日本人回复“地王店在的”，7月13日回复仍开门。丽影分店关闭不适用于地王；开业正文属于历史，编辑时间不冒充开业年。",
         "sources": [
           {
             "label": "地王历史探店总览",
             "url": "https://www.xiaohongshu.com/explore/68d8b190000000001300aecb",
             "date": "2025-09-29"
+          },
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/67fc82c80000000008014690"
+          },
+          {
+            "label": "TMT潮玩奥特莱斯地王店",
+            "url": "https://www.xiaohongshu.com/explore/683b170f000000000f03064c",
+            "dateLabel": "编辑于 01-06（2026-10-20读取）"
+          },
+          {
+            "label": "国庆不摸鱼",
+            "url": "https://www.xiaohongshu.com/explore/6abcc3e40000000014000cbb",
+            "date": "2026-10-01"
           }
+        ],
+        "floor": "负二层 2716 铺",
+        "kind": "潮玩、盲盒、扭蛋、动漫周边",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "TMToutlet潮玩奥特莱斯",
+            "handle": "63090711475",
+            "url": "https://www.xiaohongshu.com/user/profile/67fc82c80000000008014690",
+            "scope": "brand"
+          }
+        ],
+        "aliases": [
+          "TMToutlet潮玩奥特莱斯"
         ]
       },
       {
         "name": "星音社",
-        "status": "unverified",
-        "note": "2025 年 9 月 29 日探店总览或评论收录。",
+        "status": "recent",
+        "note": "本人主页明确地王2268铺，近期发布2026年第41周榜单；不把预售或快闪商品名称当作本店限时主题。",
         "sources": [
           {
             "label": "地王历史探店总览",
             "url": "https://www.xiaohongshu.com/explore/68d8b190000000001300aecb",
             "date": "2025-09-29"
+          },
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/5f373339000000000100038d"
+          },
+          {
+            "label": "星音2026年第41周",
+            "url": "https://www.xiaohongshu.com/explore/6ad5bedf0000000028026e30",
+            "dateLabel": "昨天 14:55 广东（2026-10-20读取）"
           }
+        ],
+        "floor": "负二层 2268 铺",
+        "kind": "音企、动画周边",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "星音の社",
+            "handle": "767332876",
+            "url": "https://www.xiaohongshu.com/user/profile/5f373339000000000100038d",
+            "scope": "store"
+          }
+        ],
+        "aliases": [
+          "星音の社"
         ]
       },
       {
         "name": "VC TOY",
-        "status": "unverified",
-        "note": "2025 年 9 月 29 日探店总览或评论收录。",
+        "status": "recent",
+        "note": "本店账号列2008铺，品牌账号互相关联且有地王国庆经营原文；品牌另列2732扭蛋店，暂不额外计店，也不与TOY MARKET合并。",
         "sources": [
           {
             "label": "地王历史探店总览",
             "url": "https://www.xiaohongshu.com/explore/68d8b190000000001300aecb",
             "date": "2025-09-29"
+          },
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/6197b5ae000000001000eef8"
+          },
+          {
+            "label": "国庆节日不打烊",
+            "url": "https://www.xiaohongshu.com/explore/6abf7ec9000000001500b025",
+            "date": "2026-10-02"
+          },
+          {
+            "label": "VCTOY品牌主页（本部2008／扭蛋店2732）",
+            "url": "https://www.xiaohongshu.com/user/profile/6182533a0000000010007197"
           }
+        ],
+        "floor": "负二层 2008 铺（本部）",
+        "kind": "扭蛋、动漫周边、毛绒",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "VCTOY地王广场店",
+            "handle": "49924237685",
+            "url": "https://www.xiaohongshu.com/user/profile/6197b5ae000000001000eef8",
+            "scope": "store"
+          }
+        ],
+        "aliases": [
+          "VCTOY"
         ]
       },
       {
         "name": "旮旯",
-        "status": "unverified",
-        "note": "2025 年 9 月 29 日探店总览或评论收录。",
+        "status": "recent",
+        "note": "本人“0721号旮旯小屋”明确地王负二层，10-06继续上新；周年及国庆活动不构成限时店。",
         "sources": [
           {
             "label": "地王历史探店总览",
             "url": "https://www.xiaohongshu.com/explore/68d8b190000000001300aecb",
             "date": "2025-09-29"
+          },
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/65355d51000000000301e5d6"
+          },
+          {
+            "label": "10.6幸运星",
+            "url": "https://www.xiaohongshu.com/explore/6ac4a0090000000014002946",
+            "date": "2026-10-06"
           }
         ],
-        "kind": "游戏周边（galgame）",
+        "kind": "Galgame、动漫周边",
         "kindSources": [
           {
             "label": "地王负二层旮旯小屋店主开店介绍与galgame标签",
             "url": "https://www.bilibili.com/video/BV13VtseJEYg/"
           }
+        ],
+        "floor": "负二层",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "0721号旮旯小屋",
+            "handle": "9205561695",
+            "url": "https://www.xiaohongshu.com/user/profile/65355d51000000000301e5d6",
+            "scope": "store"
+          }
+        ],
+        "aliases": [
+          "0721号旮旯小屋",
+          "旮旯小屋"
         ]
       },
       {
@@ -3231,13 +3536,507 @@
       },
       {
         "name": "橙堆堆",
-        "status": "unverified",
-        "note": "2025 年 9 月 29 日探店总览或评论收录。",
+        "status": "recent",
+        "note": "本人简介列2112铺及寄售业务，2026年10月9日继续发布地王上新；普通促销不构成限时店。",
         "sources": [
           {
             "label": "地王历史探店总览",
             "url": "https://www.xiaohongshu.com/explore/68d8b190000000001300aecb",
             "date": "2025-09-29"
+          },
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/672a1e7b000000001c019035"
+          },
+          {
+            "label": "国庆结束也要",
+            "url": "https://www.xiaohongshu.com/explore/6ac83f9d00000000140382a0",
+            "date": "2026-10-09"
+          }
+        ],
+        "floor": "负二层 2112 铺",
+        "kind": "寄售周边",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "橙堆堆",
+            "handle": "63078728014",
+            "url": "https://www.xiaohongshu.com/user/profile/672a1e7b000000001c019035",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "飞购谷子铺",
+        "floor": "负二层 2318 铺",
+        "status": "recent",
+        "kind": "动漫／游戏周边、寄售周边（含Fate／FGO）",
+        "note": "本人主页列地王2318铺，经营帖带地王标签；近期本店探店也明确常上新和寄售，未与飞社长合并。",
+        "sources": [
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/666040190000000007007595"
+          },
+          {
+            "label": "一些fate",
+            "url": "https://www.xiaohongshu.com/explore/6a6dbe860000000028001ef1",
+            "date": "2026-08-01"
+          },
+          {
+            "label": "MAX地王Fate／FGO梳理（本人2026年10月2日探店，编辑于10-07）",
+            "url": "https://www.xiaohongshu.com/explore/69f82186000000003601e01a",
+            "dateLabel": "编辑于10-07（2026-10-20读取；原发表日未显示）"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "飞购谷子铺",
+            "handle": "11624254209",
+            "url": "https://www.xiaohongshu.com/user/profile/666040190000000007007595",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "小转家杂货铺",
+        "floor": "负二层 2113 铺",
+        "status": "recent",
+        "kind": "动漫／游戏周边（含立牌、徽章、亚克力小卡）",
+        "note": "本人简介明确地王2113铺及正常营业，上新帖关联本店；作者2026-01-20照片门头和2113铺位一致，原“小林家”图注据此纠正。",
+        "sources": [
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/6637633500000000070052be"
+          },
+          {
+            "label": "9.21今日上新",
+            "url": "https://www.xiaohongshu.com/explore/6ab0e12f000000003400e2a9",
+            "date": "2026-09-21"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "小转家杂货铺",
+            "handle": "42150965943",
+            "url": "https://www.xiaohongshu.com/user/profile/6637633500000000070052be",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "狸谷狸谷",
+        "floor": "负三层 3690 铺",
+        "status": "recent",
+        "kind": "同人周边、中古寄售（含明日方舟、恋人不行）",
+        "note": "本人主页、指路及寄售公告一致列地王负三层3690铺；商品和寄售范围有经营原文，不将旧“新店”措辞当作今年开业。",
+        "sources": [
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/66e7e6e9000000001d03242e"
+          },
+          {
+            "label": "狸谷狸谷指路",
+            "url": "https://www.xiaohongshu.com/explore/697c6e8f000000000a02aa08",
+            "date": "2026-01-30"
+          },
+          {
+            "label": "『恋人不行』",
+            "url": "https://www.xiaohongshu.com/explore/6a71b5750000000032021576",
+            "date": "2026-08-04"
+          },
+          {
+            "label": "提供，线上/线下寄售",
+            "url": "https://www.xiaohongshu.com/explore/68fda9c60000000007003a1f",
+            "dateLabel": "编辑于 2025-10-26（2026-10-20读取）"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "狸谷狸谷",
+            "handle": "26278572568",
+            "url": "https://www.xiaohongshu.com/user/profile/66e7e6e9000000001d03242e",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "TiZ",
+        "floor": "负二层 2322 铺",
+        "status": "recent",
+        "kind": "动漫／游戏周边、寄售周边",
+        "note": "本人主页列地王2322铺，2026年10月11日继续接寄售；“回归地王”帖正文说明“实则没有离开”，不据标题推断搬迁或复业。",
+        "sources": [
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/635b7421000000001802dee9"
+          },
+          {
+            "label": "TiZ持续接寄售",
+            "url": "https://www.xiaohongshu.com/explore/6acb5533000000000200f8b5",
+            "date": "2026-10-11"
+          },
+          {
+            "label": "TiZ回归地王啦",
+            "url": "https://www.xiaohongshu.com/explore/6aacc3d6000000000b037587",
+            "dateLabel": "编辑于 09-20 广东（2026-10-20读取）"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "TiZ",
+            "handle": "TiZgoods",
+            "url": "https://www.xiaohongshu.com/user/profile/635b7421000000001802dee9",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "猫谷动漫店",
+        "floor": "负二层 2006C 铺",
+        "status": "recent",
+        "kind": "寄售周边、动漫／游戏周边",
+        "note": "地王本人账号国庆营业帖明确2006C；不与喵咕喵谷、猫妮社按近似名字合并，也不把2006铺梦幻寄售号当作同一主体。",
+        "sources": [
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/694bbe9b0000000037008dfa"
+          },
+          {
+            "label": "欢庆国庆",
+            "url": "https://www.xiaohongshu.com/explore/6abdca2e000000001203a0bd",
+            "date": "2026-10-01"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "地王-猫谷动漫店(接谷子寄售)",
+            "handle": "gd9288y",
+            "url": "https://www.xiaohongshu.com/user/profile/694bbe9b0000000037008dfa",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "队长长古谷屋",
+        "floor": "负二层 2668 铺",
+        "status": "recent",
+        "kind": "中古周边（含日乙、动漫纸片）",
+        "note": "本人主页及2026年1月20日经营帖均列2668铺；主页明确不接寄售、不回收。",
+        "sources": [
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/67e2638b000000000a03c4cb"
+          },
+          {
+            "label": "鬼灭之刃纸片上新",
+            "url": "https://www.xiaohongshu.com/explore/696f184b000000000a02bfc0",
+            "date": "2026-01-20"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "队长长古谷屋",
+            "handle": "lideguguwu",
+            "url": "https://www.xiaohongshu.com/user/profile/67e2638b000000000a03c4cb",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "梦趣谷社",
+        "floor": "负三层（舞台斜对面）",
+        "status": "recent",
+        "kind": "动漫／游戏周边",
+        "note": "品牌共用号明确地王店在负三层舞台斜对面，并发布本店打卡和路线；不把番禺、佛山分店上新直接当成本店库存。",
+        "sources": [
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/66cd06a6000000001d033430"
+          },
+          {
+            "label": "来地王广场打卡啦",
+            "url": "https://www.xiaohongshu.com/explore/69f5dad10000000020038045",
+            "date": "2026-05-02"
+          },
+          {
+            "label": "沉浸式寻找地王",
+            "url": "https://www.xiaohongshu.com/explore/688209e9000000002201e409",
+            "dateLabel": "编辑于 09-05（2026-10-20读取）"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "梦趣谷社",
+            "handle": "42958178881",
+            "url": "https://www.xiaohongshu.com/user/profile/66cd06a6000000001d033430",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "捣谷社 DGS",
+        "floor": "负二层",
+        "status": "recent",
+        "kind": "动漫／游戏周边、娃包（含世界计划、海贼王）",
+        "note": "本人简介、分店名和近期地王上新一致；与时尚天河旧店分别记录，不套用异店关闭公告。",
+        "sources": [
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/67fb92d9000000000e01018d"
+          },
+          {
+            "label": "广州地王捣谷社今日上新通知",
+            "url": "https://www.xiaohongshu.com/explore/6ad082840000000014030d6e",
+            "dateLabel": "4天前 广东（2026-10-20读取）"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "广州捣谷社（地王广场店）",
+            "handle": "94196847308",
+            "url": "https://www.xiaohongshu.com/user/profile/67fb92d9000000000e01018d",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "扭谷 NeewGoodz",
+        "floor": "负二层 2671 铺",
+        "status": "recent",
+        "kind": "日谷、一番赏周边",
+        "note": "本人地王路线列2671铺，近期仍有上新；作者实拍门头“扭谷 NEEWGOODZ”及2671铺位一致，纠正原NEWGOODZ图注并与攻略扭谷合并，不重复计店。",
+        "sources": [
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/663b23bb000000000700791f"
+          },
+          {
+            "label": "飞鼠大王指路贴",
+            "url": "https://www.xiaohongshu.com/explore/68904c9c00000000250287ef",
+            "date": "2025-08-04"
+          },
+          {
+            "label": "今日上新｜SAN- X",
+            "url": "https://www.xiaohongshu.com/explore/6aaa19f90000000028000c25",
+            "date": "2026-09-16"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "扭谷NeewGoodz",
+            "handle": "NeewGoodz",
+            "url": "https://www.xiaohongshu.com/user/profile/663b23bb000000000700791f",
+            "scope": "store"
+          }
+        ],
+        "aliases": [
+          "NEWGOODZ",
+          "扭谷NeewGoodz"
+        ]
+      },
+      {
+        "name": "星梦动漫屋",
+        "floor": "负三层 3225 铺",
+        "status": "recent",
+        "kind": "游戏周边（明日方舟通行证、名札）",
+        "note": "本人上新两次明确地王负三层3225铺；采用原帖10月1日国庆到货，不以标题内商品年份当发表年份。",
+        "sources": [
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/5cb2ad8e0000000010030e11"
+          },
+          {
+            "label": "国庆最新到货",
+            "url": "https://www.xiaohongshu.com/explore/6abdeb0800000000140389ed",
+            "date": "2026-10-01"
+          },
+          {
+            "label": "明日方舟通行证！！！地王广场5.1",
+            "url": "https://www.xiaohongshu.com/explore/69f1b83a0000000038020de2",
+            "date": "2026-04-29"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "星梦动漫屋",
+            "handle": "27256865848",
+            "url": "https://www.xiaohongshu.com/user/profile/5cb2ad8e0000000010030e11",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "粤拆谷子店",
+        "floor": "负二层 2666 铺",
+        "status": "recent",
+        "kind": "日谷、动漫周边（含珍珠少年、Unsleep）",
+        "note": "本人主页关联地王2666铺，已读本分店经营帖为2025年10月19日；保留原年份，不把标题10.19当成2026年。",
+        "sources": [
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/5f13eed30000000001002d5e"
+          },
+          {
+            "label": "地王10.19上新",
+            "url": "https://www.xiaohongshu.com/explore/68f4636c0000000004020e1e",
+            "date": "2025-10-19"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "粤拆谷子店（地王广场店）",
+            "handle": "401734257",
+            "url": "https://www.xiaohongshu.com/user/profile/5f13eed30000000001002d5e",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "灵感谷",
+        "floor": "负二层 2672 铺",
+        "status": "recent",
+        "kind": "日谷、国谷、一番赏周边",
+        "note": "本人主页注明地王2672铺且无分店，并有2026年8月12日一番赏上新；异名“灵感谷哩”等账号未采用。",
+        "sources": [
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/61a18d830000000010004d3b"
+          },
+          {
+            "label": "刀剑乱舞 全新",
+            "url": "https://www.xiaohongshu.com/explore/6a7b5333000000002701d23a",
+            "date": "2026-08-12"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "灵感谷",
+            "handle": "8003722317",
+            "url": "https://www.xiaohongshu.com/user/profile/61a18d830000000010004d3b",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "狂狂卡牌",
+        "floor": "负三层 3623 铺",
+        "status": "recent",
+        "kind": "集换式卡牌、卡牌对战（数码宝贝）",
+        "note": "本人主页列地王3623铺，2026年9月22日公告本店10月4日数码宝贝赛事；旧宝可梦PDF摘要3625未读且不同，本轮不采用旧铺位，也不将赛事日当作限时店开放期。",
+        "sources": [
+          {
+            "label": "门店本人主页与地址",
+            "url": "https://www.xiaohongshu.com/user/profile/66124dd3000000000700558d"
+          },
+          {
+            "label": "10月4日，狂狂杯",
+            "url": "https://www.xiaohongshu.com/explore/6ab207a000000000310112da",
+            "date": "2026-09-22"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "狂狂卡牌",
+            "handle": "42169788982",
+            "url": "https://www.xiaohongshu.com/user/profile/66124dd3000000000700558d",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "型月",
+        "status": "unverified",
+        "kind": "游戏周边（Fate／FGO）",
+        "note": "已读本商圈原始攻略有经营线索；站内名称／别名核实仍未找到能确认本店的账号，位置、当前营业及独立主体待核。原攻略楼层与本人分店资料有错位，故不照抄楼层。",
+        "sources": [
+          {
+            "label": "MAX地王Fate／FGO梳理（本人2026年10月2日探店，编辑于10-07）",
+            "url": "https://www.xiaohongshu.com/explore/69f82186000000003601e01a",
+            "dateLabel": "编辑于10-07（2026-10-20读取；原发表日未显示）"
+          },
+          {
+            "label": "牧野星澈地王谷店攻略（原文楼层有错位）",
+            "url": "https://www.douyin.com/video/7561378092352376123",
+            "date": "2025-10-15"
+          }
+        ]
+      },
+      {
+        "name": "果冻谷咚",
+        "status": "unverified",
+        "kind": "中古周边",
+        "note": "已读本商圈原始攻略有经营线索；站内名称／别名核实仍未找到能确认本店的账号，位置、当前营业及独立主体待核。原攻略楼层与本人分店资料有错位，故不照抄楼层。",
+        "sources": [
+          {
+            "label": "牧野星澈地王谷店攻略（原文楼层有错位）",
+            "url": "https://www.douyin.com/video/7561378092352376123",
+            "date": "2025-10-15"
+          }
+        ]
+      },
+      {
+        "name": "联合谷屋",
+        "status": "unverified",
+        "kind": "日谷（含Fate／FGO）",
+        "note": "已读本商圈原始攻略有经营线索；站内名称／别名核实仍未找到能确认本店的账号，位置、当前营业及独立主体待核。原攻略楼层与本人分店资料有错位，故不照抄楼层。",
+        "sources": [
+          {
+            "label": "MAX地王Fate／FGO梳理（本人2026年10月2日探店，编辑于10-07）",
+            "url": "https://www.xiaohongshu.com/explore/69f82186000000003601e01a",
+            "dateLabel": "编辑于10-07（2026-10-20读取；原发表日未显示）"
+          },
+          {
+            "label": "牧野星澈地王谷店攻略（原文楼层有错位）",
+            "url": "https://www.douyin.com/video/7561378092352376123",
+            "date": "2025-10-15"
+          }
+        ],
+        "aliases": [
+          "联合谷店"
+        ]
+      },
+      {
+        "name": "潮玩熊",
+        "status": "unverified",
+        "kind": "动漫周边（含鬼灭之刃）",
+        "note": "已读本商圈原始攻略有经营线索；站内名称／别名核实仍未找到能确认本店的账号，位置、当前营业及独立主体待核。原攻略楼层与本人分店资料有错位，故不照抄楼层。",
+        "sources": [
+          {
+            "label": "牧野星澈地王谷店攻略（原文楼层有错位）",
+            "url": "https://www.douyin.com/video/7561378092352376123",
+            "date": "2025-10-15"
+          }
+        ]
+      },
+      {
+        "name": "物华弥新·冬谷欢聚快闪",
+        "status": "closed",
+        "kind": "游戏周边（物华弥新）",
+        "limited": {
+          "scope": "store",
+          "period": "2026-10-03 至 2026-10-05，每日12:00—20:00",
+          "startsOn": "2026-10-03",
+          "endsOn": "2026-10-05"
+        },
+        "note": "商场本人2026年9月25日预告地王广场限定贩售，正文10月3日至5日与当年国庆上下文一致；本轮已结束，仅归档，不进入常规或限时前台。",
+        "sources": [
+          {
+            "label": "《物华弥新》全新线下快闪",
+            "url": "https://www.xiaohongshu.com/explore/6ab51819000000001802f5b8",
+            "date": "2026-09-25"
           }
         ]
       }
