@@ -1,0 +1,158 @@
+- heading "豆泥赏“泥的天气变变变”线下店 ⑤" [level=1]
+- text: ❗ 每间线下店具体上架时间稍有不同 ❗ 前往门店前可先咨询门店官方账号或致电门店 ❗ 以免跑空 ■ 外图厦门书城 厦门市思明区湖滨南路809号 ■ 扶光书店 阳江市江城区百利广场三楼 ■ 夹机占 北京市东城区王府井喜悦购物中心北门货梯B2层 ■ 谷子集合 上海市黄浦区第一百货c馆6楼 ■ 星辰动漫 上海市黄浦区浙江中路229号百米香榭308室 ■ 赛高卡牌 成都市青羊区天府广场负一楼今站购物中心盐市口路10号 ■ 奇乐MAX 上海市杨浦区四平路百联ZX造趣场2楼 ■ 王的宝库 北京市东城区北京市东城区国瑞购物中心LG-30 ■ 趣稚星球 广州市越秀区动漫星城西区负三楼bw329 ■ 青禾动漫 上海市黄浦区浙江中路229号2楼平台 ■ 谷GO 上海市徐汇区TPY中心B2层09-11 ■ 谷语社 广州市越秀区地王广场负二层谷语社2110店 ■ JOJO STORE 南京市秦淮区鹏欣水游城3楼 ■ 次元零件库 南通市海门区熙悦花苑20幢114室 ■ 易乐谷 北京市东城区王府井喜悦商城B2-P014 ■ 漫谷玩具 湖州市安吉县地铺镇九州广场万象世界4楼4009 ■ 桃园动漫 上海市黄浦区浙江中路229号百米香榭118室 ■ ANIMORE 武汉市江岸区X118商场三层L306号铺位 ■ Ufo Center 广州市从化区欣荣时尚广场a区b栋2楼218 219铺 ■ 晶臣玩物 广州市越秀区粤海动漫星城西区夹层WM041,042 ■ 潮玩次元 上海市黄浦区浙江中路229号百米香榭商业街内106号 ■ upgame 厦门市思明区嘉禾路401SM三期三楼324铺 ■ 777Trendy Play潮玩 上海市黄浦区迪美购物中心地下一层50-2# ■ 欧赏集 东莞市南城区东实Cpark购物中心1栋204 ■ 零号站台 沈阳市大东区大悦城购物中心D馆3楼 ■ 鹈鹕GOODs 杭州市上城区湖滨88商场一楼 ■ 木星兽 宁波市海曙区东门银泰二次元街区二楼 ■ 欧谷 成都市锦江区天府红负一楼 ■ 黑猫游戏 南京市建邺区河西金地广场3F
+- link "#暹罗猫小豆泥":
+  - /url: /search_result?keyword=%25E6%259A%25B9%25E7%25BD%2597%25E7%258C%25AB%25E5%25B0%258F%25E8%25B1%2586%25E6%25B3%25A5&type=54&source=web_note_detail_r10
+- link "#豆泥赏":
+  - /url: /search_result?keyword=%25E8%25B1%2586%25E6%25B3%25A5%25E8%25B5%258F&type=54&source=web_note_detail_r10
+- link "#泥的天气变变变":
+  - /url: /search_result?keyword=%25E6%25B3%25A5%25E7%259A%2584%25E5%25A4%25A9%25E6%25B0%2594%25E5%258F%2598%25E5%258F%2598%25E5%258F%2598&type=54&source=web_note_detail_r10
+- link "#天闻角川":
+  - /url: /search_result?keyword=%25E5%25A4%25A9%25E9%2597%25BB%25E8%25A7%2592%25E5%25B7%259D&type=54&source=web_note_detail_r10
+- link "#天角制造":
+  - /url: /search_result?keyword=%25E5%25A4%25A9%25E8%25A7%2592%25E5%2588%25B6%25E9%2580%25A0&type=54&source=web_note_detail_r10
+- generic: 编辑于 04-03
+- generic: 共 21 条评论
+- link:
+  - /url: /user/profile/56c5ae2c4775a70a5e4137a1?channel_type=web_search_result_notes
+- link ":)":
+  - /url: /user/profile/56c5ae2c4775a70a5e4137a1?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 可恶！广西没有
+- generic: 04-03广西
+- generic: 赞
+- generic: "1"
+- link:
+  - /url: /user/profile/5b83c24eb8dca500016a02fd?channel_type=web_search_result_notes
+- link "天闻角川":
+  - /url: /user/profile/5b83c24eb8dca500016a02fd?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- text: 豆泥赏“泥的天气变变变”线下...
+- generic: 04-04广东
+- generic: "1"
+- generic: 回复
+- link:
+  - /url: /user/profile/62844eb00000000021027323?channel_type=web_search_result_notes
+- link "墨鱼oneeee":
+  - /url: /user/profile/62844eb00000000021027323?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 天津什么都没有！
+- generic: 04-04天津
+- generic: "1"
+- generic: "1"
+- link:
+  - /url: /user/profile/5b83c24eb8dca500016a02fd?channel_type=web_search_result_notes
+- link "天闻角川":
+  - /url: /user/profile/5b83c24eb8dca500016a02fd?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- text: 豆泥赏“泥的天气变变变”线下...
+- generic: 04-04广东
+- generic: "2"
+- generic: 回复
+- link:
+  - /url: /user/profile/60a133b300000000010059e4?channel_type=web_search_result_notes
+- link "RTX air":
+  - /url: /user/profile/60a133b300000000010059e4?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 活动持续到什么时候哇
+- generic: 04-07上海
+- generic: 赞
+- generic: "1"
+- link:
+  - /url: /user/profile/5b83c24eb8dca500016a02fd?channel_type=web_search_result_notes
+- link "天闻角川":
+  - /url: /user/profile/5b83c24eb8dca500016a02fd?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- text: 抽完为止
+- generic: 04-07广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/634c21170000000018028503?channel_type=web_search_result_notes
+- link "呆呆得白粥（只互置顶即可）":
+  - /url: /user/profile/634c21170000000018028503?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 又不带西安玩儿[抽泣R]
+- generic: 04-03陕西
+- generic: 赞
+- generic: "1"
+- link:
+  - /url: /user/profile/5b83c24eb8dca500016a02fd?channel_type=web_search_result_notes
+- link "天闻角川":
+  - /url: /user/profile/5b83c24eb8dca500016a02fd?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- text: 豆泥赏“泥的天气变变变”线下...
+- generic: 04-04广东
+- generic: "2"
+- generic: 回复
+- link:
+  - /url: /user/profile/64e04ea2000000000100643b?channel_type=web_search_result_notes
+- link "阿君（窃取313大结果中）":
+  - /url: /user/profile/64e04ea2000000000100643b?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 三四被吞了吗角川
+- generic: 04-03河北
+- generic: 赞
+- generic: "1"
+- link:
+  - /url: /user/profile/5b83c24eb8dca500016a02fd?channel_type=web_search_result_notes
+- link "天闻角川":
+  - /url: /user/profile/5b83c24eb8dca500016a02fd?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 又有了
+- generic: 04-03广东
+- generic: "2"
+- generic: 回复
+- link:
+  - /url: /user/profile/6396d2ad00000000260108b8?channel_type=web_search_result_notes
+- link "满满很忙":
+  - /url: /user/profile/6396d2ad00000000260108b8?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- link "@点点":
+  - /url: /user/profile/68944c1e0000000028001164
+- text: 请帮我整理小豆泥赏在上海市浙江中路的售卖信息
+- generic: 04-06上海
+- generic: 赞
+- generic: "1"
+- link:
+  - /url: /user/profile/68944c1e0000000028001164?channel_type=web_search_result_notes
+- link "点点":
+  - /url: /user/profile/68944c1e0000000028001164?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 好的，已为你整理好上海市浙江中路的售卖信息： 根据笔记内容，上海市黄浦区浙江中路229号百米香榭内有多家门店在售，具体如下： 星辰动漫：位于308室 青禾动漫：位于2楼平台 桃园动漫：位于118室 潮玩次元：位于商业街内106号 温馨提示： 笔记中提到每间门店的具体上架时间可能稍有不同，建议你前往前先咨询门店，以免跑空哦
+- text: 。
+- generic: ...展开
+- generic: 04-06
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/693ab8980000000037006a30?channel_type=web_search_result_notes
+- link "欧赏集":
+  - /url: /user/profile/693ab8980000000037006a30?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 广东东莞想抽赏的老师们看我这里
+- generic: 04-07广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/6128e4730000000001005717?channel_type=web_search_result_notes
+- link "🐈":
+  - /url: /user/profile/6128e4730000000001005717?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 海口呢
+- generic: 04-04广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5b5dc6974eacab4658a1b770?channel_type=web_search_result_notes
+- link "_xixixiX":
+  - /url: /user/profile/5b5dc6974eacab4658a1b770?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 好萌🥹
+- generic: 04-03上海
+- generic: "1"
+- generic: 回复
+- link:
+  - /url: /user/profile/5f068758000000000101e6db?channel_type=web_search_result_notes
+- link "芝麻的麻":
+  - /url: /user/profile/5f068758000000000101e6db?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 沈阳零号站台没有[泪崩R]
+- generic: 04-06辽宁
+- generic: 赞
+- generic: 回复
+- paragraph
+- generic: 说点什么...
+- generic: "89"
+- generic: "16"
+- generic: "21"
+- button "发送" [disabled]
+- button "取消"

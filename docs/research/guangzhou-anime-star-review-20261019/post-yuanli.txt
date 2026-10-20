@@ -1,0 +1,130 @@
+- heading "时空中的绘旅人新品已上架门店啦～" [level=1]
+- text: "【上新/时空中的绘旅人】 本次上新的是「代号：归零/前行者恒常前行」系列、「与你的杯间漫游」系列、「心动天使」系列周边！ ⏰ 上架时间: 9月25日 10:00 ✦ 「代号：归零/前行者恒常前行」系列 代号：归零/前行者恒常前行系列-“帝国注视”马口铁徽章 代号：归零/前行者恒常前行系列-马口铁徽章 代号：归零/前行者恒常前行系列-不锈钢金属挂牌 代号：归零/前行者恒常前行系列-帝国打工套组 代号：归零/前行者恒常前行系列-人物立牌 代号：归零/前行者恒常前行系列-亚克力摆件 代号：归零/前行者恒常前行系列-印象卡 代号：归零/前行者恒常前行系列-猫眼纪念卡 圆圆的星球主题磁吸悬浮立牌 ✦ 「与你的杯间漫游」系列 与你的杯间漫游系列-“不睦之邀”马口铁徽章 与你的杯间漫游系列-印象卡 与你的杯间漫游系列-人物立牌 与你的杯间漫游系列-多功能亚克力摆件 与你的杯间漫游系列-亚克力条挂件 ✦ 「心动天使」系列 心动天使系列护照夹 📸 具体样式请浏览图片内容~ 🔖 满赠特典：新增满赠「帝国之心小卡-全员」 满赠标准: 168/1份、336/2份、504/3份、672/4份、840/5份 ※ 每人最多领取5份赠品，超出限制数量则不可重复领取！ ※ 分单无效，赠品款式可选，数量有限，赠完即止！ ❗ 部分商品到货数量较少，如售罄即无库存"
+- link "#元理核心":
+  - /url: /search_result?keyword=%25E5%2585%2583%25E7%2590%2586%25E6%25A0%25B8%25E5%25BF%2583&type=54&source=web_note_detail_r10
+- link "#动漫星城":
+  - /url: /search_result?keyword=%25E5%258A%25A8%25E6%25BC%25AB%25E6%2598%259F%25E5%259F%258E&type=54&source=web_note_detail_r10
+- link "#时空绘旅人":
+  - /url: /search_result?keyword=%25E6%2597%25B6%25E7%25A9%25BA%25E7%25BB%2598%25E6%2597%2585%25E4%25BA%25BA&type=54&source=web_note_detail_r10
+- link "#路辰":
+  - /url: /search_result?keyword=%25E8%25B7%25AF%25E8%25BE%25B0&type=54&source=web_note_detail_r10
+- link "#艾因":
+  - /url: /search_result?keyword=%25E8%2589%25BE%25E5%259B%25A0&type=54&source=web_note_detail_r10
+- link "#罗夏":
+  - /url: /search_result?keyword=%25E7%25BD%2597%25E5%25A4%258F&type=54&source=web_note_detail_r10
+- link "#司岚":
+  - /url: /search_result?keyword=%25E5%258F%25B8%25E5%25B2%259A&type=54&source=web_note_detail_r10
+- link "#叶瑄":
+  - /url: /search_result?keyword=%25E5%258F%25B6%25E7%2591%2584&type=54&source=web_note_detail_r10
+- link "#线下吃谷":
+  - /url: /search_result?keyword=%25E7%25BA%25BF%25E4%25B8%258B%25E5%2590%2583%25E8%25B0%25B7&type=54&source=web_note_detail_r10
+- text: "#"
+- generic: 猜你想搜
+- generic: 时空中的绘旅人线下周边购买地点
+- generic: 09-24 广东
+- generic: 共 22 条评论
+- link:
+  - /url: /user/profile/68a020ed000000001900e442?channel_type=web_profile_page
+- link "七十二枼":
+  - /url: /user/profile/68a020ed000000001900e442?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 眼睛条五款都全吗！
+- generic: 09-27广东
+- generic: 赞
+- generic: "2"
+- link:
+  - /url: /user/profile/64a038e70000000025034cd2?channel_type=web_profile_page
+- link "别睡。":
+  - /url: /user/profile/64a038e70000000025034cd2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 刚去看只有司岚的了
+- generic: 09-28广东
+- generic: 赞
+- generic: 回复
+- generic: 展开 1 条回复
+- link:
+  - /url: /user/profile/66bde212000000001d0227a6?channel_type=web_profile_page
+- link "用户0214":
+  - /url: /user/profile/66bde212000000001d0227a6?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 眼睛条和立牌还有吗
+- generic: 09-26广东
+- generic: 赞
+- generic: "1"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_profile_page
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 还有的
+- generic: 09-26广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/670a118d000000001d023848?channel_type=web_profile_page
+- link "好运光意🌟":
+  - /url: /user/profile/670a118d000000001d023848?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 您好，请问艾因的这款还有吗？
+- generic: 09-26广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/641f03cc0000000011020881?channel_type=web_profile_page
+- link "苦瓜蒸肉饼好美味":
+  - /url: /user/profile/641f03cc0000000011020881?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 有这个吗
+- generic: 10-02广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5b2079ad11be107e8e9ecf47?channel_type=web_profile_page
+- link "鱼头":
+  - /url: /user/profile/5b2079ad11be107e8e9ecf47?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 路辰， 罗夏帝国立牌 还有吗，
+- generic: 09-30广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5b2079ad11be107e8e9ecf47?channel_type=web_profile_page
+- link "鱼头":
+  - /url: /user/profile/5b2079ad11be107e8e9ecf47?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 路辰，罗夏帝国立牌还有吗，
+- generic: 09-29广西
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5f5d7ef20000000001002002?channel_type=web_profile_page
+- link "山风":
+  - /url: /user/profile/5f5d7ef20000000001002002?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 蹲代购
+- generic: 10-02宁夏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/651f7d8b0000000024016592?channel_type=web_profile_page
+- link "12":
+  - /url: /user/profile/651f7d8b0000000024016592?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 蹲个代购
+- generic: 09-29广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5b2079ad11be107e8e9ecf47?channel_type=web_profile_page
+- link "鱼头":
+  - /url: /user/profile/5b2079ad11be107e8e9ecf47?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 求代购，路辰， 罗夏帝国立牌
+- generic: 09-30广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/6178159000000000020256e1?channel_type=web_profile_page
+- link "没有你谁在乎明天":
+  - /url: /user/profile/6178159000000000020256e1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 求代购罗夏路辰帝国立牌[抽泣R]
+- generic: 10-03安徽
+- generic: 赞
+- generic: 回复
+- paragraph
+- generic: 说点什么...
+- generic: "114"
+- generic: "12"
+- generic: "22"
+- button "发送" [disabled]
+- button "取消"

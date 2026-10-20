@@ -1,0 +1,263 @@
+- generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: 小红书号：95319333896
+- generic: IP属地：浙江
+- generic: 🌟 正版授权 • 专注国谷 👀 🧸 谷子+ 毛绒 + 盲盒机 👀 新品速递｜福利派发｜线下活动 📍 动漫星城东区负三层
+- generic: 广东广州
+- generic: "11"
+- generic: 关注
+- generic: "1181"
+- generic: 粉丝
+- generic: "4811"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link "置顶":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6778ff0400000000140219d7
+  - generic: 置顶
+- link "广州暴蒙｜动漫星城店 吃谷路线指引💙":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6778ff0400000000140219d7
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "199"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6ad3507b000000001b01e94a
+- link "鸣潮新品｜鸣乐之时、潮声信笺🪉":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6ad3507b000000001b01e94a
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "4"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6ad1baf4000000001402f959
+- link "鸣潮新品｜墨韵游湖系列🌊":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6ad1baf4000000001402f959
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "38"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6ad0717900000000150118b3
+- link "马克杯👀现在的是哪一个多闻?! 💗":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6ad0717900000000150118b3
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "5"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6acf6353000000001802a62e
+- link "上新预告｜鸣潮墨韵游湖系列🔥":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6acf6353000000001802a62e
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "70"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6acdc7ef000000001c01f64b
+- link "『鸣潮』3.1爱弥斯CD礼盒今日开售！":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6acdc7ef000000001c01f64b
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "24"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6acb48ec00000000180147e8
+- link "想要成为影之实力者💪":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6acb48ec00000000180147e8
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "11"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6aca0072000000001402f424
+- link "💕《主播女孩重度依赖》火热发售":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6aca0072000000001402f424
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "2"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6ac8b234000000001c02e03a
+- link "黑色小本本📔巅峰对决":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6ac8b234000000001c02e03a
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "3"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6ac075c1000000001402d206
+- link "鸣潮新品已到🔥":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6ac075c1000000001402d206
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "65"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6abcfd24000000001b033e11
+- link "暴蒙国庆上新合集🔥":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6abcfd24000000001b033e11
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "3"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6aba1a19000000000200c0ca
+- link "暴蒙上新｜第五人格":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6aba1a19000000000200c0ca
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "4"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6aba0406000000001801755f
+- link "新品到货｜鸣潮 3.1 <赠予雪中的你>":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6aba0406000000001801755f
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "10"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6ab605f30000000015005e9f
+- link "《名侦探柯南》灰度构界已上架！":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6ab605f30000000015005e9f
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "8"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6aa7bb770000000028029dd3
+- link "新品上架｜《鸣潮》予世新生系列🪽":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6aa7bb770000000028029dd3
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "6"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6aa4fb6f000000000b036e1d
+- link "新品上架｜《鸣潮》3.1":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6aa4fb6f000000000b036e1d
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "10"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6aa2809d000000002a0243fe
+- link "💗上新预告｜EVA 初醒之境系列":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6aa2809d000000002a0243fe
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "8"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a9be0f6000000002a02e294
+- link "新品到货｜《鸣潮》坠梦奇镜系列🪞":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a9be0f6000000002a02e294
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "11"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a8fe94c00000000250274f6
+- link "新品到货｜《明日方舟》一番赏第四弹❄️":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a8fe94c00000000250274f6
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "5"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a8d40e4000000003302bc63
+- link "新品上架｜二十世纪电气目录":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a8d40e4000000003302bc63
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "4"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a8a9f5c00000000140255c9
+- link "新品上架｜《现在的是哪一个多闻?!》💗":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a8a9f5c00000000140255c9
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "15"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a8942dd000000003400c18c
+- link "名侦探柯南侦探手记毛绒实物图来啦！":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a8942dd000000003400c18c
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "6"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a884796000000000902d8a9
+- link "🩷暴蒙上新｜《现在的是哪一个多闻?! 》":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a884796000000000902d8a9
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "50"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a869c430000000022032b25
+- link "《剑网3》「双星承溯」联名系列":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a869c430000000022032b25
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "10"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a8430ae000000002501628a
+- link "❤️ChinaJoy×剑网3“双星承溯”将开启通贩！":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a8430ae000000002501628a
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "9"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a82a92c00000000330369d6
+- link "新品到货｜鸣潮《玄鸟赋图系列》📜":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a82a92c00000000330369d6
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "11"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a8195d9000000002500bc99
+- link "新品上架｜POTEPOTTE 文豪野犬坐姿毛绒玩偶":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a8195d9000000002500bc99
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "7"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a81831500000000280003f1
+- link "🎂暴蒙生日赠礼（08.17-08.23）🎊🎁":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a81831500000000280003f1
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "12"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a80189500000000330093db
+- link "【鸣潮】潮声信笺系列周边即将开售‼️💌":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a80189500000000330093db
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "11"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a7c20a20000000033013084
+- link "新品到店｜《明日方舟》《世界计划》🩵":
+  - /url: /user/profile/5606455667bc65574b1a50f0/6a7c20a20000000033013084
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 暴蒙BOOMCOMIC广州动漫星城
+- generic: "7"
+- generic: 该用户已设置收藏内容不可见
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

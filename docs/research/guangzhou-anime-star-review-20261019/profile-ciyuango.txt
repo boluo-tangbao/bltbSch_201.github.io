@@ -1,0 +1,261 @@
+- generic: 次元GO广州
+- generic: 小红书号：8947501837
+- generic: IP属地：广东
+- generic: 动漫星城西区
+- generic: "47"
+- generic: 关注
+- generic: "4026"
+- generic: 粉丝
+- generic: 1.2万
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6ad229e8000000001803ad89
+- link "⭐上新预告 | 明日方舟：终末地":
+  - /url: /user/profile/63f30c29000000001001fd0b/6ad229e8000000001803ad89
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "14"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6acf834a000000001a020fd8
+- link "凹凸世界 | 街头行者系列上新✨":
+  - /url: /user/profile/63f30c29000000001001fd0b/6acf834a000000001a020fd8
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "6"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6aca1360000000001c00d038
+- link "上新来了| 无畏契约":
+  - /url: /user/profile/63f30c29000000001001fd0b/6aca1360000000001c00d038
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "1"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6ac87ba2000000001803b75a
+- link "📢抽赏上新 | 火影忍者休闲时光":
+  - /url: /user/profile/63f30c29000000001001fd0b/6ac87ba2000000001803b75a
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "5"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6ac4ad59000000001403b443
+- link "报告管理员，货到了。":
+  - /url: /user/profile/63f30c29000000001001fd0b/6ac4ad59000000001403b443
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "7"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6ac4a00f000000000b0079a1
+- link "十日终焉多个系列到店！！":
+  - /url: /user/profile/63f30c29000000001001fd0b/6ac4a00f000000000b0079a1
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "1"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6ac49407000000000a0232da
+- link "刺客伍六七 | 小鸡岛音乐派对2026":
+  - /url: /user/profile/63f30c29000000001001fd0b/6ac49407000000000a0232da
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "2"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6ac1f4c3000000001403975b
+- link "抽赏上新 | 奥特曼午后小憩系列":
+  - /url: /user/profile/63f30c29000000001001fd0b/6ac1f4c3000000001403975b
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "6"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6abf47b4000000000a022c39
+- link "怪物猎人盲盒补货啦！！":
+  - /url: /user/profile/63f30c29000000001001fd0b/6abf47b4000000000a022c39
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "3"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6abf46040000000014001657
+- link "⭐宝可梦30周年一番赏":
+  - /url: /user/profile/63f30c29000000001001fd0b/6abf46040000000014001657
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "1"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6abe0027000000000a021f17
+- link "⭐凹凸世界「捡秋集趣」系列":
+  - /url: /user/profile/63f30c29000000001001fd0b/6abe0027000000000a021f17
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "11"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6abcc550000000001303df8f
+- link "【上新】王者荣耀x遇意 长条吧唧（云影篇）":
+  - /url: /user/profile/63f30c29000000001001fd0b/6abcc550000000001303df8f
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "14"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6abb47b4000000000a023d42
+- link "超辉夜姬万画赏上新！":
+  - /url: /user/profile/63f30c29000000001001fd0b/6abb47b4000000000a023d42
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "6"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6ab9dcde00000000180102b2
+- link "PJSK上新！色纸＆细闪吧唧":
+  - /url: /user/profile/63f30c29000000001001fd0b/6ab9dcde00000000180102b2
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "2"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6ab9d352000000000b0045c0
+- link "终末地万代食玩来咯(*╹▽╹*)":
+  - /url: /user/profile/63f30c29000000001001fd0b/6ab9d352000000000b0045c0
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "10"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6ab8975e000000001303cdee
+- link "【一人之下】未完的故事系列第二弹":
+  - /url: /user/profile/63f30c29000000001001fd0b/6ab8975e000000001303cdee
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "16"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6ab653aa000000000b006aec
+- link "记忆管理局补货啦~":
+  - /url: /user/profile/63f30c29000000001001fd0b/6ab653aa000000000b006aec
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "35"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6ab61262000000001403906f
+- link "《偶像梦幻祭2》通贩圆＆信息卡":
+  - /url: /user/profile/63f30c29000000001001fd0b/6ab61262000000001403906f
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "5"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6ab4fd2b000000001403b3bc
+- link "明日方舟 | 拾光萌绘收藏卡到啦~":
+  - /url: /user/profile/63f30c29000000001001fd0b/6ab4fd2b000000001403b3bc
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "4"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6ab48c8c000000001303cf66
+- link "全职高手 | 宅家时间次元礼":
+  - /url: /user/profile/63f30c29000000001001fd0b/6ab48c8c000000001303cf66
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "16"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6ab37223000000001303e9e7
+- link "东方Project一番赏到店！":
+  - /url: /user/profile/63f30c29000000001001fd0b/6ab37223000000001303e9e7
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "3"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6aae1214000000002900f6d8
+- link "原神一番赏上新！！！":
+  - /url: /user/profile/63f30c29000000001001fd0b/6aae1214000000002900f6d8
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "5"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6aacea7000000000120017d8
+- link "《一人之下》电波故障系列来啦！！":
+  - /url: /user/profile/63f30c29000000001001fd0b/6aacea7000000000120017d8
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "2"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6aaa4397000000002902da10
+- link "一番赏上新 | 鬼灭之刃上弦之二":
+  - /url: /user/profile/63f30c29000000001001fd0b/6aaa4397000000002902da10
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "1"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6aa8c465000000001203fb8a
+- link "哇塞！竟然补货了！！！":
+  - /url: /user/profile/63f30c29000000001001fd0b/6aa8c465000000001203fb8a
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "3"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6aa7df2c000000002502ff89
+- link "绝区零 | 百味王国系列":
+  - /url: /user/profile/63f30c29000000001001fd0b/6aa7df2c000000002502ff89
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "2"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6aa7da81000000002802e4a4
+- link "一人之下海棠系列补货啦!!":
+  - /url: /user/profile/63f30c29000000001001fd0b/6aa7da81000000002802e4a4
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "1"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6aa79fb1000000002502f7f6
+- link "初音未来清凉幻想曲福赏":
+  - /url: /user/profile/63f30c29000000001001fd0b/6aa79fb1000000002502f7f6
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "11"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6aa21651000000002802ce67
+- link "明日方舟 | 山山兔&苹果乐":
+  - /url: /user/profile/63f30c29000000001001fd0b/6aa21651000000002802ce67
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "11"
+- link:
+  - /url: /user/profile/63f30c29000000001001fd0b/6a9fd868000000002802c4a2
+- link "初音未来 | 百变音乐节":
+  - /url: /user/profile/63f30c29000000001001fd0b/6a9fd868000000002802c4a2
+- link "次元GO广州":
+  - /url: /user/profile/63f30c29000000001001fd0b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 次元GO广州
+- generic: "2"
+- generic: 该用户已设置收藏内容不可见
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

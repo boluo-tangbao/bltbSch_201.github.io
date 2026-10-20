@@ -1,0 +1,209 @@
+- heading "广州动漫新城GOODSLOVE" [level=1]
+- text: 2026.10.13 4:30 ❗️二编 前三张是今天14号12:20拍的
+- link "#光与夜之恋":
+  - /url: /search_result?keyword=%25E5%2585%2589%25E4%25B8%258E%25E5%25A4%259C%25E4%25B9%258B%25E6%2581%258B&type=54&source=web_note_detail_r10
+- link "#GOODSLOVE":
+  - /url: /search_result?keyword=GOODSLOVE&type=54&source=web_note_detail_r10
+- link "#光夜三丽鸥联名":
+  - /url: /search_result?keyword=%25E5%2585%2589%25E5%25A4%259C%25E4%25B8%2589%25E4%25B8%25BD%25E9%25B8%25A5%25E8%2581%2594%25E5%2590%258D&type=54&source=web_note_detail_r10
+- link "#萧逸":
+  - /url: /search_result?keyword=%25E8%2590%25A7%25E9%2580%25B8&type=54&source=web_note_detail_r10
+- link "#陆沉":
+  - /url: /search_result?keyword=%25E9%2599%2586%25E6%25B2%2589&type=54&source=web_note_detail_r10
+- link "#齐司礼":
+  - /url: /search_result?keyword=%25E9%25BD%2590%25E5%258F%25B8%25E7%25A4%25BC&type=54&source=web_note_detail_r10
+- link "#夏鸣星":
+  - /url: /search_result?keyword=%25E5%25A4%258F%25E9%25B8%25A3%25E6%2598%259F&type=54&source=web_note_detail_r10
+- link "#查理苏":
+  - /url: /search_result?keyword=%25E6%259F%25A5%25E7%2590%2586%25E8%258B%258F&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 广州goodslove线下店
+- generic: 编辑于 5天前 广东
+- generic: 共 81 条评论
+- link:
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes
+- link "无敌幸运星":
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 女孩萌 我五点多就走啦 有什么想问的抓紧呀
+- generic: 置顶评论
+- generic: 6天前广东
+- generic: 赞
+- generic: "4"
+- link:
+  - /url: /user/profile/6808c3c5000000000e0126e9?channel_type=web_search_result_notes
+- link "小红薯68092701":
+  - /url: /user/profile/6808c3c5000000000e0126e9?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 宝贝问问接dg吗
+- generic: 6天前湖南
+- generic: 赞
+- generic: 回复
+- generic: 展开 3 条回复
+- link:
+  - /url: /user/profile/62e8ea42000000001f0156f6?channel_type=web_search_result_notes
+- link "明祈":
+  - /url: /user/profile/62e8ea42000000001f0156f6?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 宝宝宝宝，我想问问查理苏校园谷的小狮子玩偶有嘛！
+- generic: 4天前广东
+- generic: 赞
+- generic: "3"
+- link:
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes
+- link "无敌幸运星":
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 中午看到有五六只 现在不知道啦
+- generic: 4天前广东
+- generic: 赞
+- generic: 回复
+- generic: 展开 2 条回复
+- link:
+  - /url: /user/profile/6245b2f7000000001000bbb6?channel_type=web_search_result_notes
+- link "夜语无意.":
+  - /url: /user/profile/6245b2f7000000001000bbb6?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 燥候下班过去！宝宝请问下现在人多吗
+- generic: 6天前广东
+- generic: 赞
+- generic: "3"
+- link:
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes
+- link "无敌幸运星":
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 还好不算多 四五个这样^-^
+- generic: 6天前广东
+- generic: "1"
+- generic: 回复
+- generic: 展开 2 条回复
+- link:
+  - /url: /user/profile/6366208f000000001f01f927?channel_type=web_search_result_notes
+- link "齊.":
+  - /url: /user/profile/6366208f000000001f01f927?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 老师方便问问这次三丽鸥线下时间是卖完为止还是有截止时间呀
+- generic: 5天前广东
+- generic: 赞
+- generic: "2"
+- link:
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes
+- link "无敌幸运星":
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 我认为是售完为止
+- generic: 5天前广东
+- generic: 赞
+- generic: 回复
+- generic: 展开 1 条回复
+- link:
+  - /url: /user/profile/5895887b50c4b459d3025bd7?channel_type=web_search_result_notes
+- link "美味大酱":
+  - /url: /user/profile/5895887b50c4b459d3025bd7?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 现在赶过去还来得及吗
+- generic: 6天前广东
+- generic: 赞
+- generic: "7"
+- link:
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes
+- link "无敌幸运星":
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 你要什么呀 应该可以的 我快六点走还挺齐
+- generic: 6天前广东
+- generic: 赞
+- generic: 回复
+- generic: 展开 6 条回复
+- link:
+  - /url: /user/profile/5e27063f000000000100204d?channel_type=web_search_result_notes
+- link "momo":
+  - /url: /user/profile/5e27063f000000000100204d?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 宝请问你有这家店vx么
+- text: 明天想去怕跑空
+- generic: 6天前广东
+- generic: 赞
+- generic: "8"
+- link:
+  - /url: /user/profile/5e27063f000000000100204d?channel_type=web_search_result_notes
+- link "momo":
+  - /url: /user/profile/5e27063f000000000100204d?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: omg宝你的回复好像被毙了
+- text: 俺这里看不到内容
+- generic: 6天前广东
+- generic: 赞
+- generic: 回复
+- generic: 展开 7 条回复
+- link:
+  - /url: /user/profile/697795d60000000021026c6d?channel_type=web_search_result_notes
+- link "泡泡":
+  - /url: /user/profile/697795d60000000021026c6d?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 宝宝想问问这个店营业到几点啊
+- generic: 6天前广东
+- generic: 赞
+- generic: "3"
+- link:
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes
+- link "无敌幸运星":
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 刚刚问了 九点半
+- generic: 6天前广东
+- generic: 赞
+- generic: 回复
+- generic: 展开 2 条回复
+- link:
+  - /url: /user/profile/5f9a323d000000000101f807?channel_type=web_search_result_notes
+- link "momo":
+  - /url: /user/profile/5f9a323d000000000101f807?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 请问有杯子吗
+- generic: 5天前广东
+- generic: 赞
+- generic: "4"
+- link:
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes
+- link "无敌幸运星":
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 看这个宝宝发出来的 66的杯子没有啦
+- generic: 5天前广东
+- generic: 赞
+- generic: 回复
+- generic: 展开 3 条回复
+- link:
+  - /url: /user/profile/5a800b9d4eacab4e8feb4212?channel_type=web_search_result_notes
+- link "momo":
+  - /url: /user/profile/5a800b9d4eacab4e8feb4212?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 老师还有50手机挂绳吗？
+- generic: 6天前广东
+- generic: 赞
+- generic: "4"
+- link:
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes
+- link "无敌幸运星":
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 6天前广东
+- generic: 赞
+- generic: 回复
+- generic: 展开 3 条回复
+- link:
+  - /url: /user/profile/5f004d19000000000101ee6e?channel_type=web_search_result_notes
+- link "捞月亮的狐狸":
+  - /url: /user/profile/5f004d19000000000101ee6e?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 待会送棉去洗澡，顺便去看看
+- generic: 6天前广东
+- generic: 赞
+- generic: "8"
+- link:
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes
+- link "无敌幸运星":
+  - /url: /user/profile/5e159f81000000000100ab73?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 6天前广东
+- generic: 赞
+- generic: 回复
+- generic: 展开 7 条回复
+- paragraph
+- generic: 说点什么...
+- generic: "64"
+- generic: "2"
+- generic: "81"
+- button "发送" [disabled]
+- button "取消"

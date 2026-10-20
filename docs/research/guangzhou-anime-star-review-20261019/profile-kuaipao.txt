@@ -1,0 +1,135 @@
+- generic: 谷子快跑（广州动漫星城店）
+- generic: 小红书号：95608081226
+- generic: IP属地：广东
+- generic: 谷子快跑 快乐就好✨ 📍广东省越秀区吉祥路1号 动漫星城东区负二层E2007
+- generic: "11"
+- generic: 关注
+- generic: "42"
+- generic: 粉丝
+- generic: "45"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link:
+  - /url: /user/profile/67371072000000001c0196eb/6abf4801000000001303dbe9
+- link "谷子快跑广州动星店《缎带英雄》新品到店啦✨":
+  - /url: /user/profile/67371072000000001c0196eb/6abf4801000000001303dbe9
+- link "谷子快跑（广州动漫星城店）":
+  - /url: /user/profile/67371072000000001c0196eb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 谷子快跑（广州动漫星城店）
+- link:
+  - /url: /user/profile/67371072000000001c0196eb/6ab223a2000000003302d91e
+- link "⚾️广州动漫星城中秋一日店长情报公开！":
+  - /url: /user/profile/67371072000000001c0196eb/6ab223a2000000003302d91e
+- link "谷子快跑（广州动漫星城店）":
+  - /url: /user/profile/67371072000000001c0196eb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 谷子快跑（广州动漫星城店）
+- generic: "2"
+- link:
+  - /url: /user/profile/67371072000000001c0196eb/6aaa0c64000000001001d3b7
+- link "✨《钻石王牌》新品到店":
+  - /url: /user/profile/67371072000000001c0196eb/6aaa0c64000000001001d3b7
+- link "谷子快跑（广州动漫星城店）":
+  - /url: /user/profile/67371072000000001c0196eb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 谷子快跑（广州动漫星城店）
+- generic: "1"
+- link:
+  - /url: /user/profile/67371072000000001c0196eb/6a9fae400000000026016a04
+- link "谷子快跑动漫星城店上新啦～！":
+  - /url: /user/profile/67371072000000001c0196eb/6a9fae400000000026016a04
+- link "谷子快跑（广州动漫星城店）":
+  - /url: /user/profile/67371072000000001c0196eb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 谷子快跑（广州动漫星城店）
+- generic: "2"
+- link:
+  - /url: /user/profile/67371072000000001c0196eb/6a9ba8eb0000000011037880
+- link "新吊带袜天使🪽新品到店～💗":
+  - /url: /user/profile/67371072000000001c0196eb/6a9ba8eb0000000011037880
+- link "谷子快跑（广州动漫星城店）":
+  - /url: /user/profile/67371072000000001c0196eb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 谷子快跑（广州动漫星城店）
+- generic: "1"
+- link:
+  - /url: /user/profile/67371072000000001c0196eb/6a953bd200000000210324bb
+- link "✨萌物来袭！光美小精灵毛绒指偶上新啦！":
+  - /url: /user/profile/67371072000000001c0196eb/6a953bd200000000210324bb
+- link "谷子快跑（广州动漫星城店）":
+  - /url: /user/profile/67371072000000001c0196eb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 谷子快跑（广州动漫星城店）
+- generic: "1"
+- link:
+  - /url: /user/profile/67371072000000001c0196eb/6a9246c90000000025019fd4
+- link "明日方舟一番赏「雪域破晓」今日到店！":
+  - /url: /user/profile/67371072000000001c0196eb/6a9246c90000000025019fd4
+- link "谷子快跑（广州动漫星城店）":
+  - /url: /user/profile/67371072000000001c0196eb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 谷子快跑（广州动漫星城店）
+- generic: "1"
+- link:
+  - /url: /user/profile/67371072000000001c0196eb/6a8c1775000000001600ac55
+- link "✨《尖帽子的魔法工坊》新品到店！":
+  - /url: /user/profile/67371072000000001c0196eb/6a8c1775000000001600ac55
+- link "谷子快跑（广州动漫星城店）":
+  - /url: /user/profile/67371072000000001c0196eb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 谷子快跑（广州动漫星城店）
+- generic: "3"
+- link:
+  - /url: /user/profile/67371072000000001c0196eb/6a8aaeba0000000028002d01
+- link "一番赏上新啦✨":
+  - /url: /user/profile/67371072000000001c0196eb/6a8aaeba0000000028002d01
+- link "谷子快跑（广州动漫星城店）":
+  - /url: /user/profile/67371072000000001c0196eb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 谷子快跑（广州动漫星城店）
+- generic: "2"
+- link:
+  - /url: /user/profile/67371072000000001c0196eb/6a7d4c74000000000502840d
+- link "🔮谷子快跑动漫星城店！奇弗利闪耀登场！":
+  - /url: /user/profile/67371072000000001c0196eb/6a7d4c74000000000502840d
+- link "谷子快跑（广州动漫星城店）":
+  - /url: /user/profile/67371072000000001c0196eb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 谷子快跑（广州动漫星城店）
+- generic: "3"
+- link:
+  - /url: /user/profile/67371072000000001c0196eb/6a771035000000002402eae8
+- link "GBC丹宁女孩系列新品上架💙":
+  - /url: /user/profile/67371072000000001c0196eb/6a771035000000002402eae8
+- link "谷子快跑（广州动漫星城店）":
+  - /url: /user/profile/67371072000000001c0196eb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 谷子快跑（广州动漫星城店）
+- generic: "6"
+- link:
+  - /url: /user/profile/67371072000000001c0196eb/6a74408d000000002203121c
+- link "数码宝贝04指偶娃娃上新啦！":
+  - /url: /user/profile/67371072000000001c0196eb/6a74408d000000002203121c
+- link "谷子快跑（广州动漫星城店）":
+  - /url: /user/profile/67371072000000001c0196eb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 谷子快跑（广州动漫星城店）
+- generic: "4"
+- link:
+  - /url: /user/profile/67371072000000001c0196eb/6a74268b0000000005033b77
+- link "谷子快跑广州站！一日店长公开！":
+  - /url: /user/profile/67371072000000001c0196eb/6a74268b0000000005033b77
+- link "谷子快跑（广州动漫星城店）":
+  - /url: /user/profile/67371072000000001c0196eb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 谷子快跑（广州动漫星城店）
+- generic: "5"
+- link:
+  - /url: /user/profile/67371072000000001c0196eb/6a72e43d00000000060049ee
+- link "💓惊喜空降！光美大偶即将现身":
+  - /url: /user/profile/67371072000000001c0196eb/6a72e43d00000000060049ee
+- link "谷子快跑（广州动漫星城店）":
+  - /url: /user/profile/67371072000000001c0196eb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 谷子快跑（广州动漫星城店）
+- generic: "12"
+- generic: 笔记・1
+- generic: 专辑・0
+- generic: 文件・0
+- generic: TA 还没有收藏任何内容哦
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

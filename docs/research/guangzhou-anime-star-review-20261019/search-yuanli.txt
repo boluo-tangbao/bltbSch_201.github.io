@@ -1,0 +1,192 @@
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- generic: 筛选
+- button "综合"
+- button "减肥"
+- button "考研"
+- button "笔记"
+- link:
+  - /url: /search_result/6a4d464d000000001702eaa8
+- link "大模型基础知识（一）":
+  - /url: /search_result/6a4d464d000000001702eaa8
+- link "小小研究僧 10-06":
+  - /url: /user/profile/6790d75f000000000e011b68?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 小小研究僧
+  - generic: 10-06
+- generic: "125"
+- link:
+  - /url: /search_result/6a75aa010000000005029d91
+- link "大模型推理优化：8个核心技巧与底层原理":
+  - /url: /search_result/6a75aa010000000005029d91
+- link "chao人不会飞 08-07":
+  - /url: /user/profile/695331390000000037000812?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: chao人不会飞
+  - generic: 08-07
+- generic: "1079"
+- link:
+  - /url: /search_result/6accffdd0000000015005f12
+- link "REA为什么火了？3张图看懂核心原理":
+  - /url: /search_result/6accffdd0000000015005f12
+- link "AI_Story 6天前":
+  - /url: /user/profile/63ad42f90000000026004bf9?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: AI_Story
+  - generic: 6天前
+- generic: "12"
+- link:
+  - /url: /search_result/6ad588d400000000290177e2
+- link "人工智能数学基础:流形理论基础！":
+  - /url: /search_result/6ad588d400000000290177e2
+- link "momo 10小时前":
+  - /url: /user/profile/67b5976a000000000e01d0f1?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: momo
+  - generic: 10小时前
+- generic: "51"
+- link:
+  - /url: /search_result/694b74de000000001e03279a
+- link "个人看法：不要过度关注LLM的底层原理推导":
+  - /url: /search_result/694b74de000000001e03279a
+- link "阿东玩AI 2025-12-24":
+  - /url: /user/profile/5f310fd50000000001009df5?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 阿东玩AI
+  - generic: 2025-12-24
+- generic: "539"
+- link:
+  - /url: /search_result/6a8d60340000000016021fd3
+- link "深度学习原理，神经网络原理":
+  - /url: /search_result/6a8d60340000000016021fd3
+- link "chao人不会飞 08-25":
+  - /url: /user/profile/695331390000000037000812?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: chao人不会飞
+  - generic: 08-25
+- generic: "1650"
+- link:
+  - /url: /search_result/6a4e343c000000001c024866
+- link "大模型推理：5大核心技术原理拆解":
+  - /url: /search_result/6a4e343c000000001c024866
+- link "端妃你不要再喝红花了 07-08":
+  - /url: /user/profile/6727b371000000001d02c315?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 端妃你不要再喝红花了
+  - generic: 07-08
+- generic: "12"
+- link:
+  - /url: /search_result/6a4267c30000000016027bdb
+- link "Codex应用小技巧(1)底层逻辑篇":
+  - /url: /search_result/6a4267c30000000016027bdb
+- link "Zake 06-29":
+  - /url: /user/profile/5a0c812d4eacab5cd797b4e8?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: Zake
+  - generic: 06-29
+- generic: "159"
+- link:
+  - /url: /search_result/6aa920ec000000002503410d
+- link "深度学习原理：卷积神经网络":
+  - /url: /search_result/6aa920ec000000002503410d
+- link "chao人不会飞 09-15":
+  - /url: /user/profile/695331390000000037000812?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: chao人不会飞
+  - generic: 09-15
+- generic: "2746"
+- link:
+  - /url: /search_result/6a11beb1000000003701f593
+- link "大模型不是魔法：7 个数学机制讲透 LLM":
+  - /url: /search_result/6a11beb1000000003701f593
+- link "新物种日记 05-24":
+  - /url: /user/profile/63a044940000000026012be4?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 新物种日记
+  - generic: 05-24
+- generic: "140"
+- link:
+  - /url: /search_result/6a0ec01a0000000008003604
+- link "不许喝奶茶！ 05-21":
+  - /url: /user/profile/5b598ba64eacab41626cfc35?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 不许喝奶茶！
+  - generic: 05-21
+- generic: "1840"
+- link:
+  - /url: /search_result/6aa5222f000000002a0057b1
+- link "🤖一图看懂Agent原理":
+  - /url: /search_result/6aa5222f000000002a0057b1
+- link "Snow不太冷 09-12":
+  - /url: /user/profile/5c0e392b44363b1e78c25730?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: Snow不太冷
+  - generic: 09-12
+- generic: "11"
+- link:
+  - /url: /search_result/697c5e00000000000e03c04a
+- link "看懂第一性原理核心结构：FAST四步拆解法":
+  - /url: /search_result/697c5e00000000000e03c04a
+- link "Warm Logic理性温度 01-30":
+  - /url: /user/profile/631f002b0000000023039780?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: Warm Logic理性温度
+  - generic: 01-30
+- generic: "9"
+- link:
+  - /url: /search_result/6ac9dd8200000000150059dd
+- link "🔥大模型开发：LLM底层技术原理":
+  - /url: /search_result/6ac9dd8200000000150059dd
+- link "跟着汀月学AI 10-10":
+  - /url: /user/profile/64f940a5000000000603215d?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 跟着汀月学AI
+  - generic: 10-10
+- generic: "21"
+- link:
+  - /url: /search_result/6a264abc000000001702abfe
+- link "为什么你学东西一定要搞懂原理？":
+  - /url: /search_result/6a264abc000000001702abfe
+- link "Manto冲啊💫 06-08":
+  - /url: /user/profile/68b31140000000001900d1c6?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: Manto冲啊💫
+  - generic: 06-08
+- generic: "2043"
+- link:
+  - /url: /search_result/6a9401a7000000001803eab2
+- link "深度学习神经网络原理：逐步数学推导":
+  - /url: /search_result/6a9401a7000000001803eab2
+- link "chao人不会飞 08-30":
+  - /url: /user/profile/695331390000000037000812?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: chao人不会飞
+  - generic: 08-30
+- generic: "489"
+- link:
+  - /url: /search_result/6a05d0c40000000006030c4b
+- link "一文看懂控制理论里的传递函数":
+  - /url: /search_result/6a05d0c40000000006030c4b
+- link "isaacmmm 6天前":
+  - /url: /user/profile/662a673000000000030303c5?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: isaacmmm
+  - generic: 6天前
+- generic: "1058"
+- link:
+  - /url: /search_result/6a59e024000000001302cd4b
+- link "核心是什么？到底怎么收":
+  - /url: /search_result/6a59e024000000001302cd4b
+- link "椰子 07-17":
+  - /url: /user/profile/5b5c4aedf7e8b921528dd642?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 椰子
+  - generic: 07-17
+- generic: "1106"
+- link:
+  - /url: /search_result/69698fe6000000002103105b
+- link "浅谈爬虫原理":
+  - /url: /search_result/69698fe6000000002103105b
+- link "流浪的达芬奇 01-16":
+  - /url: /user/profile/63d1c1eb00000000270296d6?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 流浪的达芬奇
+  - generic: 01-16
+- generic: "240"
+- link:
+  - /url: /search_result/69fde8cd000000003601cbf4
+- link "别再死磕鱼书，带你秒懂神经网络":
+  - /url: /search_result/69fde8cd000000003601cbf4
+- link "Avi 05-08":
+  - /url: /user/profile/68791a4a000000001d00a373?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: Avi
+  - generic: 05-08
+- generic: "99"
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

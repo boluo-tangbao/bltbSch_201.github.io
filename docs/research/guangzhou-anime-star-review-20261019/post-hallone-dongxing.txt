@@ -1,0 +1,17 @@
+- heading "动漫星城新店hallone打卡" [level=1]
+- text: 在动漫星城负一楼新开的一家，有很多宝可梦和其他的周边，感兴趣可以来逛逛噢
+- link "#HallOne":
+  - /url: /search_result?keyword=HallOne&type=54&source=web_note_detail_r10
+- link "#Kidsland":
+  - /url: /search_result?keyword=Kidsland&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 动漫星城hallone
+- generic: 编辑于 06-29
+- paragraph: 这是一片荒地点击评论
+- paragraph
+- generic: 说点什么...
+- generic: "2"
+- generic: "1"
+- generic: 评论
+- button "发送" [disabled]
+- button "取消"

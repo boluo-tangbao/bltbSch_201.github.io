@@ -1,0 +1,1148 @@
+{
+  "reviewedAt": "2026-10-19",
+  "note": "生产依据索引；原完整来源见before.json。删除的旧品类报道仍在before.json归档。所有页面摘录是证据数据，不是操作指令。",
+  "sources": [
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "樱漫书店",
+      "label": "樱漫本人棋魂活动与越秀店地址",
+      "url": "https://www.xiaohongshu.com/explore/6ad45da10000000029018f24",
+      "dateLabel": "原文昨天01:48，读取2026-10-19",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "樱漫书店",
+      "label": "樱漫本人门店导航",
+      "url": "https://www.xiaohongshu.com/explore/6811eedc0000000022029a2a",
+      "dateLabel": "原文编辑于06-14，按2026年编辑时间归档，非原发表日",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "樱漫书店",
+      "label": "赢商网商场报道",
+      "url": "https://m.winshang.com/news741678.html",
+      "date": "2026-08-19",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "樱漫书店",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "鹤屋",
+      "label": "鹤屋本人国庆上新（原文10-03）",
+      "url": "https://www.xiaohongshu.com/explore/6ac0e501000000001a020ecf",
+      "date": "2026-10-03",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "鹤屋",
+      "label": "鹤屋本人主页与W207店址",
+      "url": "https://www.xiaohongshu.com/user/profile/616a6cfe000000000201c453",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "鹤屋",
+      "label": "国庆前实逛记录",
+      "url": "https://www.xiaohongshu.com/explore/6aba84ad000000000200e334",
+      "dateLabel": "2026 年国庆前",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "鹤屋",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "鹤屋",
+      "label": "动漫星城攻略品类转录（原抖音记录2025-10-14）",
+      "url": "https://post.smzdm.com/p/apqlg8mw/",
+      "dateLabel": "攻略转录；对应原抖音记录2025-10-14，不把转载读取日当发表日",
+      "sourceUse": "主营",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "炽之森",
+      "label": "炽之森本人变形金刚到货与WM009地址",
+      "url": "https://www.xiaohongshu.com/explore/6ad452480000000026033ceb",
+      "dateLabel": "原文昨天00:59，读取2026-10-19",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "炽之森",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "梦晴社",
+      "label": "邦邦／GBC探店",
+      "url": "https://www.xiaohongshu.com/explore/6a61fe09000000000f010cf5",
+      "date": "2026-07-23",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "梦晴社",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "梦晴社",
+      "label": "已核对的门店商品或经营记录（主营依据）",
+      "url": "https://www.xiaohongshu.com/explore/6a61fe09000000000f010cf5",
+      "sourceUse": "主营",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "飞社长",
+      "label": "广州店本人一番赏上新",
+      "url": "https://www.xiaohongshu.com/explore/6ad1a6e9000000000100bdcd",
+      "dateLabel": "原文3天前，读取2026-10-19",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "飞社长",
+      "label": "品牌焕新公告直接关联广州分店",
+      "url": "https://www.xiaohongshu.com/explore/6abcccb6000000001c00c769",
+      "dateLabel": "原文编辑于09-30，按2026年编辑时间归档，非原发表日",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "飞社长",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "飞社长",
+      "label": "广州店本人一番赏上新",
+      "url": "https://www.xiaohongshu.com/explore/6ad1a6e9000000000100bdcd",
+      "dateLabel": "原文3天前，读取2026-10-19",
+      "sourceUse": "主营",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "GOODSLOVE",
+      "label": "本店顾客现场记录，正文明确2026年10月拍摄",
+      "url": "https://www.xiaohongshu.com/explore/6acdef19000000001a031cf8",
+      "dateLabel": "编辑于5天前，读取2026-10-19；拍摄日期2026-10-13及14，不冒充发表日",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "GOODSLOVE",
+      "label": "品牌直接关联的零售主页",
+      "url": "https://www.xiaohongshu.com/user/profile/67c662ad000000000e01295a",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "GOODSLOVE",
+      "label": "赢商网商场报道",
+      "url": "https://m.winshang.com/news741678.html",
+      "date": "2026-08-19",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "GOODSLOVE",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "GOODSLOVE",
+      "label": "GOODSLOVE品牌品类介绍（非门店库存）",
+      "url": "https://www.sina.cn/media/8004243464",
+      "sourceUse": "主营",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "乌丸屋 Karasumaya",
+      "label": "Melonbooks 合作公告",
+      "url": "https://www.xiaohongshu.com/explore/6a56241b0000000008009c01",
+      "date": "2026-07-14",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "乌丸屋 Karasumaya",
+      "label": "已核对的门店商品或经营记录（主营依据）",
+      "url": "https://www.xiaohongshu.com/explore/6a56241b0000000008009c01",
+      "sourceUse": "主营",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "PaaaKu Shop",
+      "label": "赢商网商场报道",
+      "url": "https://m.winshang.com/news741678.html",
+      "date": "2026-08-19",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "PaaaKu Shop",
+      "label": "邦邦／GBC探店",
+      "url": "https://www.xiaohongshu.com/explore/6a61fe09000000000f010cf5",
+      "date": "2026-07-23",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "AOYEOWL",
+      "label": "动漫星城店主页",
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAkBUbJXcLq7EhA8NF0T_N92Zj6fdal3dvLn1x7XDZfjhcjD3y8GwLmp0pgj2CbcXK",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "AOYEOWL",
+      "label": "潮玩谷本人主页明确广州二店AOYEOWL与W2A032–34",
+      "url": "https://www.xiaohongshu.com/user/profile/683add95000000001d009ee2",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "卡游",
+      "label": "广州店主页",
+      "url": "https://www.xiaohongshu.com/user/profile/669e275400000000240217f2",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "卡游",
+      "label": "门店指路",
+      "url": "https://www.douyin.com/video/7546430601688288569",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "谷巷 goods 主题咖啡",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "手办童萌会",
+      "label": "本人广州分店地址",
+      "url": "https://www.xiaohongshu.com/user/profile/63e9fb6c000000002702b124",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "手办童萌会",
+      "label": "本人国庆上新（编辑时间非发表日）",
+      "url": "https://www.xiaohongshu.com/explore/6ac37bd6000000001c02c53c",
+      "dateLabel": "编辑于10-05，读取2026-10-19；按2026年编辑时间保留",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "手办童萌会",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "璃初记",
+      "label": "本人非人哉、万圣街上新（原文09-24）",
+      "url": "https://www.xiaohongshu.com/explore/6ab4c527000000001a027a9e",
+      "date": "2026-09-24",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "璃初记",
+      "label": "本人主页与WM049地址",
+      "url": "https://www.xiaohongshu.com/user/profile/6107ed2a000000000101cbf1",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "璃初记",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "璃初记",
+      "label": "动漫星城攻略品类转录（原抖音记录2025-10-14）",
+      "url": "https://post.smzdm.com/p/apqlg8mw/",
+      "dateLabel": "攻略转录；对应原抖音记录2025-10-14，不把转载读取日当发表日",
+      "sourceUse": "主营",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "美幸杂货店",
+      "label": "店铺主页",
+      "url": "https://www.xiaohongshu.com/user/profile/5af48ef611be1070f1731c2a",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "美幸杂货店",
+      "label": "10.5 GBC 中古上新",
+      "url": "https://www.xiaohongshu.com/explore/6ac386d5000000001a02ad1f",
+      "date": "2026-10-05",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "晶臣玩物",
+      "label": "天闻角川本人合作售卖名单明确WM041、042",
+      "url": "https://www.xiaohongshu.com/explore/69cf927800000001b0010eb",
+      "dateLabel": "编辑于04-03，读取2026-10-19；非原发表日",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "晶臣玩物",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "晶臣玩物",
+      "label": "作者本店门头与商品实拍",
+      "url": "https://boluo-tangbao.github.io/bltbSch_201.github.io/rank/images/places/Guangzhou/dmxc/%E8%A5%BF/QQ%E5%9B%BE%E7%89%8720260124193853.jpg",
+      "dateLabel": "作者到访／实拍2026-01-21，非帖子发表日",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "818 吃谷怪",
+      "label": "818本人当前店址列表",
+      "url": "https://www.xiaohongshu.com/user/profile/607696d70000000001000591",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "818 吃谷怪",
+      "label": "同号现货到货（原文09-22，具体库存询店）",
+      "url": "https://www.xiaohongshu.com/explore/6ab22b6b000000003302c665",
+      "date": "2026-09-22",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "818 吃谷怪",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "YOOOOSHOP",
+      "label": "品牌最新门店公告",
+      "url": "https://www.xiaohongshu.com/explore/6abb9a75000000001203f47a",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "YOOOOSHOP",
+      "label": "广州店主页",
+      "url": "https://www.xiaohongshu.com/user/profile/66ab4434000000001d020e1d",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "YOOOOSHOP",
+      "label": "广州分店本人洛天依门面及装置（复用原已读资料）",
+      "url": "https://www.xiaohongshu.com/explore/6983292d000000001a035794",
+      "dateLabel": "原读取2026-10-05，未记录完整发表日；非本次新读",
+      "sourceUse": "主营",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "模玩熊",
+      "label": "广州店主页",
+      "url": "https://www.xiaohongshu.com/user/profile/653d54460000000006004fe9",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "模玩熊",
+      "label": "近期门店上新",
+      "url": "https://www.xiaohongshu.com/explore/6ac38d1a000000001501101c",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "次元 GO",
+      "label": "次元GO广州本人到货（原文10-06）",
+      "url": "https://www.xiaohongshu.com/explore/6ac4ad59000000001403b443",
+      "date": "2026-10-06",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "次元 GO",
+      "label": "广州分店主页",
+      "url": "https://www.xiaohongshu.com/user/profile/63f30c29000000001001fd0b",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "次元 GO",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "童梦 TOY DREAM",
+      "label": "广州店本人卡包到货（原文08-07）",
+      "url": "https://www.xiaohongshu.com/explore/6a756e7c000000003301d612",
+      "date": "2026-08-07",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "童梦 TOY DREAM",
+      "label": "广州店本人主页",
+      "url": "https://www.xiaohongshu.com/user/profile/675e9caf0000000018014487",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "童梦 TOY DREAM",
+      "label": "邦邦／GBC探店",
+      "url": "https://www.xiaohongshu.com/explore/6a61fe09000000000f010cf5",
+      "date": "2026-07-23",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "JP-FANS",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "小小谷努咪",
+      "label": "赢商网商场报道",
+      "url": "https://m.winshang.com/news741678.html",
+      "date": "2026-08-19",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "小小谷努咪",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "萌购",
+      "label": "广州店主页",
+      "url": "https://www.xiaohongshu.com/user/profile/63e48da1000000002702ad77",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "萌购",
+      "label": "近期鸣潮上新",
+      "url": "https://www.xiaohongshu.com/explore/6abfc452000000001400223e",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "萌购",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "萌购",
+      "label": "已核对的门店商品或经营记录（主营依据）",
+      "url": "https://www.xiaohongshu.com/user/profile/63e48da1000000002702ad77",
+      "sourceUse": "主营",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "新野",
+      "label": "店铺主页",
+      "url": "https://www.xiaohongshu.com/user/profile/5e0a066d00000000010091e1",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "新野",
+      "label": "中秋国庆门店优惠",
+      "url": "https://www.xiaohongshu.com/explore/6ab4d4f8000000001301bc4f",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "新野",
+      "label": "近期 P3／P4 到货",
+      "url": "https://www.xiaohongshu.com/explore/6ac32929000000001803bf4c",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "新野",
+      "label": "已核对的门店商品或经营记录（主营依据）",
+      "url": "https://www.xiaohongshu.com/user/profile/5e0a066d00000000010091e1",
+      "sourceUse": "主营",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "万代魂 TAMASHII SPOT",
+      "label": "TAMASHII NATIONS广州官方店铺目录",
+      "url": "https://tamashiiweb.com/store/spot/guangzhou/",
+      "dateLabel": "当前官方门店目录，实际读取2026-10-19（非发布日期）",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "樱漫周边部",
+      "label": "樱漫本人门店导航明确夹层周边部",
+      "url": "https://www.xiaohongshu.com/explore/6811eedc0000000022029a2a",
+      "dateLabel": "原文编辑于06-14，读取2026-10-19；原发表日未明",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "Polaroid × Pokémon 联名快闪",
+      "label": "商场本人快闪公告（原文09-22）",
+      "url": "https://www.xiaohongshu.com/explore/6ab21e9c000000003a0231b4",
+      "date": "2026-09-22",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "元理核心",
+      "label": "本人绘旅人新品上架（原文09-24）",
+      "url": "https://www.xiaohongshu.com/explore/6ab52b73000000001b02db1f",
+      "date": "2026-09-24",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "元理核心",
+      "label": "广州店本人主页与西区B3地址",
+      "url": "https://www.xiaohongshu.com/user/profile/6a3f3059000000000f038c02",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "潮玩谷",
+      "label": "经营主页与BW335–336地址",
+      "url": "https://www.xiaohongshu.com/user/profile/683add95000000001d009ee2",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "潮玩谷",
+      "label": "广州经营号绝区零上新",
+      "url": "https://www.xiaohongshu.com/explore/6ad34a85000000001c00ddf1",
+      "dateLabel": "原文2天前，读取2026-10-19",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "animate 广州店",
+      "label": "animate 官方门店页",
+      "url": "https://www.animate.co.jp/zh-sc/shop/guangzhou/",
+      "dateLabel": "当前官方门店目录，实际读取2026-10-19（非发布日期）",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "animate 广州店",
+      "label": "animate广州官方门店介绍与店内商品照片",
+      "url": "https://www.animate.co.jp/zh-sc/shop/guangzhou/",
+      "sourceUse": "主营",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "粤拆谷子店",
+      "label": "广州店主页",
+      "url": "https://www.xiaohongshu.com/user/profile/64faa9150000000005000172",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "粤拆谷子店",
+      "label": "广州店《奇怪的梦境》二期到货",
+      "url": "https://www.xiaohongshu.com/explore/6926c317000000001e02d6fc",
+      "date": "2025-11-26",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "粤拆谷子店",
+      "label": "动漫星城攻略品类转录（原抖音记录2025-10-14）",
+      "url": "https://post.smzdm.com/p/apqlg8mw/",
+      "dateLabel": "攻略转录；对应原抖音记录2025-10-14，不把转载读取日当发表日",
+      "sourceUse": "主营",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "阅文好物",
+      "label": "阅文官方门店与账号",
+      "url": "https://www.yuewen.com/ip/surrounding",
+      "dateLabel": "当前官方门店目录，实际读取2026-10-19（非发布日期）",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "阅文好物",
+      "label": "已核对的门店商品或经营记录（主营依据）",
+      "url": "https://www.yuewen.com/ip/surrounding",
+      "sourceUse": "主营",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "森罗万象 GOODSFUN",
+      "label": "森罗万象官方门店页",
+      "url": "https://goods.fun/stores?language=zh_cn",
+      "dateLabel": "当前官方门店目录，实际读取2026-10-19（非发布日期）",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "森罗万象 GOODSFUN",
+      "label": "品牌官网门店品类说明",
+      "url": "https://goods.fun/stores?language=zh_cn",
+      "sourceUse": "主营",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "BUSHIROAD 武士道",
+      "label": "赢商网商场报道",
+      "url": "https://m.winshang.com/news741678.html",
+      "date": "2026-08-19",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "BUSHIROAD 武士道",
+      "label": "邦邦／GBC探店",
+      "url": "https://www.xiaohongshu.com/explore/6a61fe09000000000f010cf5",
+      "date": "2026-07-23",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "三月兽",
+      "label": "广州店主页",
+      "url": "https://www.xiaohongshu.com/user/profile/6a2bdeb30000000010000c02",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "三月兽",
+      "label": "国庆上新",
+      "url": "https://www.xiaohongshu.com/explore/6ac1b847000000001500cfff",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "三月兽",
+      "label": "已核对的门店商品或经营记录（主营依据）",
+      "url": "https://www.xiaohongshu.com/user/profile/6a2bdeb30000000010000c02",
+      "sourceUse": "主营",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "ComeFor",
+      "label": "ComeFor本人P3R余量线下贩售（原文04-18）",
+      "url": "https://www.xiaohongshu.com/explore/69e22702000000002103a5d2",
+      "date": "2026-04-18",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "ComeFor",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "ComeFor",
+      "label": "动漫星城攻略品类转录（原抖音记录2025-10-14）",
+      "url": "https://post.smzdm.com/p/apqlg8mw/",
+      "dateLabel": "攻略转录；对应原抖音记录2025-10-14，不把转载读取日当发表日",
+      "sourceUse": "主营",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "甘乐屋",
+      "label": "店铺主页",
+      "url": "https://www.xiaohongshu.com/user/profile/632ab4500000000023024ceb",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "甘乐屋",
+      "label": "近期上新",
+      "url": "https://www.xiaohongshu.com/explore/6ac31f6f000000001a025e22",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "甘乐屋",
+      "label": "商场活动公告",
+      "url": "https://www.sina.cn/media/3175058297",
+      "date": "2026-08-27",
+      "sourceUse": "营业／位置",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "甘乐屋",
+      "label": "已核对的门店商品或经营记录（主营依据）",
+      "url": "https://www.xiaohongshu.com/user/profile/632ab4500000000023024ceb",
+      "sourceUse": "主营",
+      "reading": "复用原读取2026-10-05，未将本轮日期改成发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "奇想漫玩",
+      "label": "本人命运石之门上新与东区B2夹层地址",
+      "url": "https://www.xiaohongshu.com/explore/6ad3286b0000000018005ded",
+      "dateLabel": "原文2天前，读取2026-10-19",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "奇想漫玩",
+      "label": "动漫星城店本人主页与夹层地址",
+      "url": "https://www.xiaohongshu.com/user/profile/61e6877b00000000210242d2",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "奇想漫玩",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "气球暖暖星",
+      "label": "品牌本人现行实体店指南（图中第8项广州）",
+      "url": "https://www.xiaohongshu.com/explore/67b58e82000000002803d4ad",
+      "dateLabel": "原文编辑于09-05，读取2026-10-19；编辑时间非发表日",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "气球暖暖星",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "暮色星球",
+      "label": "本人国庆促销与E3070地址",
+      "url": "https://www.xiaohongshu.com/explore/6abb2e610000000015003f6b",
+      "dateLabel": "编辑于09-28，读取2026-10-19；正文国庆9.30—10.11结合当年语境判断，非原发表日",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "暮色星球",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "墟弥 Goods",
+      "label": "顾客本店实拍库存与店标",
+      "url": "https://www.xiaohongshu.com/explore/6ad30a61000000000200def8",
+      "dateLabel": "原文2天前，读取2026-10-19；正文10.17结合当年发表语境判断拍摄于2026-10-17",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "墟弥 Goods",
+      "label": "已核品牌本人主页",
+      "url": "https://www.xiaohongshu.com/user/profile/655c6b9d000000000802e2c2",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "墟弥 Goods",
+      "label": "赢商网商场报道",
+      "url": "https://m.winshang.com/news741678.html",
+      "date": "2026-08-19",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "墟弥 Goods",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "暴蒙 BOOMCOMIC",
+      "label": "广州店鸣潮新品到货",
+      "url": "https://www.xiaohongshu.com/explore/6ad3507b000000001b01e94a",
+      "dateLabel": "原文2天前，读取2026-10-19",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "暴蒙 BOOMCOMIC",
+      "label": "广州分店本人主页",
+      "url": "https://www.xiaohongshu.com/user/profile/5606455667bc65574b1a50f0",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "暴蒙 BOOMCOMIC",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "嗷呜 mini",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "嗷呜 mini",
+      "label": "动漫星城攻略品类转录（原抖音记录2025-10-14）",
+      "url": "https://post.smzdm.com/p/apqlg8mw/",
+      "dateLabel": "攻略转录；对应原抖音记录2025-10-14，不把转载读取日当发表日",
+      "sourceUse": "主营",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "漫序",
+      "label": "楼层攻略",
+      "url": "https://www.douyin.com/note/7560928394512223547",
+      "date": "2025-10-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "谷物猫",
+      "label": "广州店本人游戏周边上新",
+      "url": "https://www.xiaohongshu.com/explore/6ad0ded40000000015010d6b",
+      "dateLabel": "原文3天前，读取2026-10-19",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "谷物猫",
+      "label": "广州分店本人主页",
+      "url": "https://www.xiaohongshu.com/user/profile/6715e257000000000d025a71",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "谷物猫",
+      "label": "邦邦／GBC探店",
+      "url": "https://www.xiaohongshu.com/explore/6a61fe09000000000f010cf5",
+      "date": "2026-07-23",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "万代魂 TAMASHII SPOT",
+      "label": "TAMASHII NATIONS广州官方店铺目录",
+      "url": "https://tamashiiweb.com/store/spot/guangzhou/",
+      "dateLabel": "当前官方门店目录，实际读取2026-10-19（非发布日期）",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "Nullset",
+      "label": "Nullset广州本人开业公告（原文07-24）",
+      "url": "https://www.xiaohongshu.com/explore/6a63477d000000000f0091be",
+      "date": "2026-07-24",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "Nullset",
+      "label": "同址游戏入侵店内活动（原文09-04，活动已结束）",
+      "url": "https://www.xiaohongshu.com/explore/6a9ab71a00000000280303c4",
+      "date": "2026-09-04",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "animate cafe｜全知读者视角主题",
+      "label": "商场本人全知读者视角主题公告（原文08-31）",
+      "url": "https://www.xiaohongshu.com/explore/6a954e12000000002903eb01",
+      "date": "2026-08-31",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "谷星漫游",
+      "label": "本人动漫星城上新与东区B3地址（原文10-06）",
+      "url": "https://www.xiaohongshu.com/explore/6ac49e9e000000001c01e504",
+      "date": "2026-10-06",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "SweetDoDo 甜物嗒嗒",
+      "label": "本人主页与E2028地址",
+      "url": "https://www.xiaohongshu.com/user/profile/67c55ab900000000180221b4",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "SweetDoDo 甜物嗒嗒",
+      "label": "本人娃衣上新与到店服务",
+      "url": "https://www.xiaohongshu.com/explore/6ad59cb50000000025036d32",
+      "dateLabel": "原文编辑于9小时前，读取2026-10-19；非原发表日",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "SweetDoDo 甜物嗒嗒",
+      "label": "商场本人升级重开公告",
+      "url": "https://www.sina.cn/news/detail/5320528047901324.html",
+      "date": "2026-07-14",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "谷子快跑 GOGOGOODS",
+      "label": "动漫星城店本人新品到店与E2007地址（原文10-02）",
+      "url": "https://www.xiaohongshu.com/explore/6abf4801000000001303dbe9",
+      "date": "2026-10-02",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "谷子快跑 GOGOGOODS",
+      "label": "动漫星城店本人主页",
+      "url": "https://www.xiaohongshu.com/user/profile/67371072000000001c0196eb",
+      "sourceUse": "营业／位置",
+      "reading": "本轮新核与原已读资料并存，详见对应摘录及日期台账"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "TOYS STAR迅合行",
+      "label": "品牌本人国庆到店经营与BW361–362地址（原文09-28）",
+      "url": "https://www.xiaohongshu.com/explore/6aba1c9100000000020136da",
+      "date": "2026-09-28",
+      "sourceUse": "营业／位置",
+      "reading": "2026-10-19浏览器重试实际补读；原标签与理由见追加研究结果"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "TOYS STAR迅合行",
+      "label": "TOYS STAR迅合行品牌本人主页",
+      "url": "https://www.xiaohongshu.com/user/profile/607902c7000000000100115e",
+      "sourceUse": "营业／位置",
+      "reading": "2026-10-19浏览器重试实际补读；原标签与理由见追加研究结果"
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "shop": "TOYS STAR迅合行",
+      "label": "作者原本店门头与商品实拍",
+      "url": "https://boluo-tangbao.github.io/bltbSch_201.github.io/rank/images/places/Guangzhou/dmxc/%E8%A5%BF/QQ%E5%9B%BE%E7%89%8720260124193847.jpg",
+      "dateLabel": "作者到访／实拍2026-01-21，非帖子发表日",
+      "sourceUse": "主营",
+      "reading": "复用原作者有效实拍，不将拍摄日当帖子发表日"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "新樂屋",
+      "label": "本店经营工作号中古寄售公告与E3067–3069地址",
+      "url": "https://www.xiaohongshu.com/explore/6ad193960000000018007bd8",
+      "dateLabel": "原文3天前，读取2026-10-19",
+      "sourceUse": "营业／位置",
+      "reading": "2026-10-19浏览器重试实际补读；原标签与理由见追加研究结果"
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "shop": "新樂屋",
+      "label": "本店经营工作号主页与地址",
+      "url": "https://www.xiaohongshu.com/user/profile/68b8fce800000000190158e6",
+      "sourceUse": "营业／位置",
+      "reading": "2026-10-19浏览器重试实际补读；原标签与理由见追加研究结果"
+    }
+  ]
+}

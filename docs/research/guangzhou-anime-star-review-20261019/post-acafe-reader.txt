@@ -1,0 +1,37 @@
+- heading "A咖新主题！全知读者视角" [level=1]
+- text: 【广州•动漫星城】全知读者视角 「全知读者视角 × animate cafe」in animate cafe广州店——主题情报公布！ [隐藏任务已开启。] 【主题时间：2026年9月19日- 10月19日 】 【🎫→见/评/论】 ✦广州店✦广州市动漫星城广场东区负二层 E2017-2018铺 *该主题所有门店（除上海本店＆深圳店外）情报一致。 期待您的到来——
+- link "#全知读者视角":
+  - /url: /search_result?keyword=%25E5%2585%25A8%25E7%259F%25A5%25E8%25AF%25BB%25E8%2580%2585%25E8%25A7%2586%25E8%25A7%2592&type=54&source=web_note_detail_r10
+- link "#animatecafe":
+  - /url: /search_result?keyword=animatecafe&type=54&source=web_note_detail_r10
+- link "#金独子":
+  - /url: /search_result?keyword=%25E9%2587%2591%25E7%258B%25AC%25E5%25AD%2590&type=54&source=web_note_detail_r10
+- link "#orv":
+  - /url: /search_result?keyword=orv&type=54&source=web_note_detail_r10
+- link "#韩漫":
+  - /url: /search_result?keyword=%25E9%259F%25A9%25E6%25BC%25AB&type=54&source=web_note_detail_r10
+- link "#全知读者视角漫画":
+  - /url: /search_result?keyword=%25E5%2585%25A8%25E7%259F%25A5%25E8%25AF%25BB%25E8%2580%2585%25E8%25A7%2586%25E8%25A7%2592%25E6%25BC%25AB%25E7%2594%25BB&type=54&source=web_note_detail_r10
+- link "#线下吃谷":
+  - /url: /search_result?keyword=%25E7%25BA%25BF%25E4%25B8%258B%25E5%2590%2583%25E8%25B0%25B7&type=54&source=web_note_detail_r10
+- generic: 08-31
+- generic: 共 1 条评论
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_profile_page
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 作者
+- text: 详情请咨询官方
+- link "@animatecafe官方":
+  - /url: /user/profile/620a1509000000001000a455
+- generic: 08-31广东
+- generic: 赞
+- generic: 回复
+- generic: "- THE END -"
+- paragraph
+- generic: 说点什么...
+- generic: "8"
+- generic: 收藏
+- generic: "1"
+- button "发送" [disabled]
+- button "取消"

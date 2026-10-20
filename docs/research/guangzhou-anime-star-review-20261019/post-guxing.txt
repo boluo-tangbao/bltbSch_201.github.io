@@ -1,0 +1,49 @@
+- heading "📢谷星漫游广州动星店 上新&补货" [level=1]
+- text: 【盗墓笔记】 ✨命途赴我系列冰箱贴套组 ✨命途赴我系列无边色纸 ✨命途赴我系列书签卡 ✨命途赴我系列明信片透卡套组 【盗墓笔记｜2026书舟拾年 八一七稻米节纪念】 春庭秀影-霍秀秀：吧唧、拍立得、亚克力色纸 落花观局-解雨臣：屏风色纸、亚克力挂件、吧唧、纪念卡 覆目闲弈-黑眼镜：屏风色纸、亚克力挂件 【第五人格】彩蓬乐园Q版徽章第三弹 【伪装学渣｜栗汀】 毕业签系列方形徽章 毕业签系列夏日汽水方形徽章 💡补货 【绝区零】收藏卡 第二弹 - 仲夏欢梦 【盗墓笔记｜2026书舟拾年 八一七稻米节纪念】 表情打卡棒：吴邪、张起灵、解雨臣、黑眼镜 光影同途：名言条（吴邪/张起灵）、吧唧套组（张起灵款） 【魔道祖师】 ✨冷泉戏语系列餐垫 ✨冷泉戏语系列明信片透卡套组 ✨冷泉戏语系列超大立牌
+- text: 广州市越秀区动漫星城东区B3扶梯右侧谷星漫游
+- link "#谷星漫游":
+  - /url: /search_result?keyword=%25E8%25B0%25B7%25E6%2598%259F%25E6%25BC%25AB%25E6%25B8%25B8&type=54&source=web_note_detail_r10
+- link "#动漫星城":
+  - /url: /search_result?keyword=%25E5%258A%25A8%25E6%25BC%25AB%25E6%2598%259F%25E5%259F%258E&type=54&source=web_note_detail_r10
+- link "#广州吃谷":
+  - /url: /search_result?keyword=%25E5%25B9%25BF%25E5%25B7%259E%25E5%2590%2583%25E8%25B0%25B7&type=54&source=web_note_detail_r10
+- link "#盗墓笔记":
+  - /url: /search_result?keyword=%25E7%259B%2597%25E5%25A2%2593%25E7%25AC%2594%25E8%25AE%25B0&type=54&source=web_note_detail_r10
+- link "#魔道祖师忘羡":
+  - /url: /search_result?keyword=%25E9%25AD%2594%25E9%2581%2593%25E7%25A5%2596%25E5%25B8%2588%25E5%25BF%2598%25E7%25BE%25A1&type=54&source=web_note_detail_r10
+- link "#绝区零":
+  - /url: /search_result?keyword=%25E7%25BB%259D%25E5%258C%25BA%25E9%259B%25B6&type=54&source=web_note_detail_r10
+- link "#第五人格":
+  - /url: /search_result?keyword=%25E7%25AC%25AC%25E4%25BA%2594%25E4%25BA%25BA%25E6%25A0%25BC&type=54&source=web_note_detail_r10
+- link "#伪装学渣":
+  - /url: /search_result?keyword=%25E4%25BC%25AA%25E8%25A3%2585%25E5%25AD%25A6%25E6%25B8%25A3&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 广州谷星漫游谷子店地址
+- generic: 10-06 广东
+- generic: 共 3 条评论
+- link:
+  - /url: /user/profile/6a60ed540000000010000803?channel_type=web_profile_page
+- link "seven":
+  - /url: /user/profile/6a60ed540000000010000803?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 魔道现在还有什么呀
+- generic: 10-07广东
+- generic: 赞
+- generic: "2"
+- link:
+  - /url: /user/profile/610121c0000000000100ae47?channel_type=web_profile_page
+- link "谷星漫游广州店":
+  - /url: /user/profile/610121c0000000000100ae47?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 目前超大立牌、餐垫、亚克力色纸、徽章都还有货，满赠海报和杯垫还有最后的一点余量
+- generic: 10-07广东
+- generic: 赞
+- generic: 回复
+- generic: 展开 1 条回复
+- generic: "- THE END -"
+- paragraph
+- generic: 说点什么...
+- generic: "19"
+- generic: "2"
+- generic: "3"
+- button "发送" [disabled]
+- button "取消"

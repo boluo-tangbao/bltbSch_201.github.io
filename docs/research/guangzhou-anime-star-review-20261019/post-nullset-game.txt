@@ -1,0 +1,134 @@
+- heading "动漫星城《游戏入侵》线下打卡活动开启啦" [level=1]
+- text: "《游戏入侵》线下打卡活动空降广州动漫星城！ 超大 IP 气模、留言签名墙、主题大屏、角色人形立牌全部就位。 是命运造就了你，还是你的本能早已为你写下结局？ ⏰活动时间：9.6~10.7 门店地址：广州市越秀区动漫星城东负二层 E2025\x1e2026 打卡点位以及详细规则见图"
+- link "#nullset":
+  - /url: /search_result?keyword=nullset&type=54&source=web_note_detail_r10
+- link "#吃谷":
+  - /url: /search_result?keyword=%25E5%2590%2583%25E8%25B0%25B7&type=54&source=web_note_detail_r10
+- link "#快乐吃谷":
+  - /url: /search_result?keyword=%25E5%25BF%25AB%25E4%25B9%2590%25E5%2590%2583%25E8%25B0%25B7&type=54&source=web_note_detail_r10
+- link "#线下吃谷":
+  - /url: /search_result?keyword=%25E7%25BA%25BF%25E4%25B8%258B%25E5%2590%2583%25E8%25B0%25B7&type=54&source=web_note_detail_r10
+- link "#广州吃谷":
+  - /url: /search_result?keyword=%25E5%25B9%25BF%25E5%25B7%259E%25E5%2590%2583%25E8%25B0%25B7&type=54&source=web_note_detail_r10
+- link "#游戏入侵":
+  - /url: /search_result?keyword=%25E6%25B8%25B8%25E6%2588%258F%25E5%2585%25A5%25E4%25BE%25B5&type=54&source=web_note_detail_r10
+- link "#游戏入侵周边":
+  - /url: /search_result?keyword=%25E6%25B8%25B8%25E6%2588%258F%25E5%2585%25A5%25E4%25BE%25B5%25E5%2591%25A8%25E8%25BE%25B9&type=54&source=web_note_detail_r10
+- link "#动漫星城":
+  - /url: /search_result?keyword=%25E5%258A%25A8%25E6%25BC%25AB%25E6%2598%259F%25E5%259F%258E&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 游戏入侵广州线下活动
+- generic: 09-04
+- generic: 共 37 条评论
+- link:
+  - /url: /user/profile/656b16fe000000001c0180f1?channel_type=web_profile_page
+- link "凇铃":
+  - /url: /user/profile/656b16fe000000001c0180f1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 敢不敢来深圳
+- generic: 09-04广东
+- generic: "11"
+- generic: "4"
+- link:
+  - /url: /user/profile/620cd17e00000000100051fd?channel_type=web_profile_page
+- link "浔离水":
+  - /url: /user/profile/620cd17e00000000100051fd?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 敢不敢来深圳
+- generic: 09-04广东
+- generic: "1"
+- generic: 回复
+- generic: 展开 3 条回复
+- link:
+  - /url: /user/profile/64468b21000000000f0073cb?channel_type=web_profile_page
+- link "猫猫不秃":
+  - /url: /user/profile/64468b21000000000f0073cb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 啊啊啊啊啊是广州？！
+- generic: 09-04广东
+- generic: "3"
+- generic: "1"
+- link:
+  - /url: /user/profile/64468b21000000000f0073cb?channel_type=web_profile_page
+- link "猫猫不秃":
+  - /url: /user/profile/64468b21000000000f0073cb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 我要哭了终于来广东了
+- generic: 09-04广东
+- generic: "1"
+- generic: 回复
+- link:
+  - /url: /user/profile/64c7bfc3000000000b007829?channel_type=web_profile_page
+- link "我在阴山村很想你":
+  - /url: /user/profile/64c7bfc3000000000b007829?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: ip依旧错误
+- generic: 09-04福建
+- generic: "3"
+- generic: 回复
+- link:
+  - /url: /user/profile/6811c36e000000000e01fb8e?channel_type=web_profile_page
+- link "载酒小灵通（带五娃版）":
+  - /url: /user/profile/6811c36e000000000e01fb8e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: ip错误
+- generic: 09-04贵州
+- generic: "1"
+- generic: 回复
+- link:
+  - /url: /user/profile/5fb8288b0000000001008acb?channel_type=web_profile_page
+- link "wowo":
+  - /url: /user/profile/5fb8288b0000000001008acb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 还没公布中奖名单吗[呃R]
+- generic: 昨天 10:03广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5e3a7d5800000000010027b9?channel_type=web_profile_page
+- link "7788":
+  - /url: /user/profile/5e3a7d5800000000010027b9?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 我晕了…不在广州了你就来广州了
+- generic: 09-04广东
+- generic: 赞
+- generic: "1"
+- link:
+  - /url: /user/profile/5e3a7d5800000000010027b9?channel_type=web_profile_page
+- link "7788":
+  - /url: /user/profile/5e3a7d5800000000010027b9?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 所以我来广州了
+- generic: 09-12广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/67b06b1d000000000e0126ec?channel_type=web_profile_page
+- link "载酒载歌":
+  - /url: /user/profile/67b06b1d000000000e0126ec?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 敢不敢来青岛
+- generic: 09-04山东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/676689dc000000001801f3e4?channel_type=web_profile_page
+- link "芒果椰椰":
+  - /url: /user/profile/676689dc000000001801f3e4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 好好好好好好好
+- generic: 09-04广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/625120be000000002102a87b?channel_type=web_profile_page
+- link "ddlttszbs":
+  - /url: /user/profile/625120be000000002102a87b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 啊啊啊怎么这样
+- generic: 09-04广西
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5fa7d6a2000000000100725a?channel_type=web_profile_page
+- link "momo":
+  - /url: /user/profile/5fa7d6a2000000000100725a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 啊，不是广州就是上海
+- generic: 09-04贵州
+- generic: 赞
+- generic: 回复
+- paragraph
+- generic: 说点什么...
+- generic: "278"
+- generic: "83"
+- generic: "37"
+- button "发送" [disabled]
+- button "取消"

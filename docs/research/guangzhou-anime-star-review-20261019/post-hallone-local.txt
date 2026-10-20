@@ -1,0 +1,16 @@
+- heading "打卡广州HallOne 首店，超多二次元动漫周边" [level=1]
+- link "#HallOne":
+  - /url: /search_result?keyword=HallOne&type=54&source=web_note_detail_r10
+- link "#kisland":
+  - /url: /search_result?keyword=kisland&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: HallOne广州首店
+- generic: 编辑于 06-21
+- paragraph: 这是一片荒地点击评论
+- paragraph
+- generic: 说点什么...
+- generic: "1"
+- generic: 收藏
+- generic: 评论
+- button "发送" [disabled]
+- button "取消"

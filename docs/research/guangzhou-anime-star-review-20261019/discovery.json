@@ -1,0 +1,651 @@
+{
+  "reviewedAt": "2026-10-19",
+  "state": "阶段性结果",
+  "queries": [
+    {
+      "file": "discovery-dy-east.txt",
+      "platform": "douyin",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串",
+      "query": "广州动漫星城 东区 谷店"
+    },
+    {
+      "file": "discovery-dy-west.txt",
+      "platform": "douyin",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串",
+      "query": "广州动漫星城 西区 谷店"
+    },
+    {
+      "file": "discovery-mengqing.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "discovery-xhs-east.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串",
+      "query": "广州动漫星城 东区 谷店"
+    },
+    {
+      "file": "discovery-xhs-west.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串",
+      "query": "广州动漫星城 西区 谷店"
+    },
+    {
+      "file": "search-818.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-aowumini.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-chaowangu.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-chizhi.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-comefor-guangzhou.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-fei-guangzhou.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-goodslove-local.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-goodslove.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-gunumi.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-guwumao.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-guxiang.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-guxing.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-hallone-alias.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-hallone-local-gap.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-hallone.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-jingchen.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-jpfans.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-kuaipao.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-lichuji.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-manxu.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-muse.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-qiqiu.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-qixiang.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-shanhun.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-tongmenghui.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-toysstar.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-xinle-closure.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-xinlewu.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-xumi-guangzhou.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-yuanli-correct.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-yuanli-local.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "search-yuanli.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-818.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-aowumini.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-chaowangu.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-chizhi.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-gunumi.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-guwumao.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-guxiang.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-guxing.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-hallone.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-hewu.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-jingchen.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-jpfans.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-kuaipao.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-lichuji.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-manxu-alias.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-manxu.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-mengqing-alias.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-mengqing-exact.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串",
+      "query": "梦晴社"
+    },
+    {
+      "file": "users-mengqing.txt",
+      "platform": "xiaohongshu",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-muse.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-paaaku-exact.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串",
+      "query": "PaaaKu Shop"
+    },
+    {
+      "file": "users-paaaku.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-qiqiu.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-qixiang.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-sweetdodo.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-tongmeng.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-tongmenghui.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-xinlewu.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-yingman.json",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-yuanli-correct.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    },
+    {
+      "file": "users-yuanli.txt",
+      "platform": "xiaohongshu",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "extent": "已加载首批可见结果；不是全站统计",
+      "queryNote": "查询对应文件名所记店名／别名；部分精确输入未保留，不补造完整查询串"
+    }
+  ],
+  "blockedReads": [
+    {
+      "query": "TOYS STAR广州",
+      "mode": "用户",
+      "state": "已切换用户，结果未读取",
+      "reason": "浏览器额度／权限门禁拒绝"
+    },
+    {
+      "query": "闪魂集卡社",
+      "mode": "用户",
+      "state": "已切换用户，结果未读取",
+      "reason": "浏览器额度／权限门禁拒绝"
+    },
+    {
+      "query": "FunFun Studio广州",
+      "mode": "内容",
+      "state": "未保存结果；用户检索未完成",
+      "reason": "同上"
+    },
+    {
+      "query": "新樂屋的小伙计置顶中古寄售帖",
+      "mode": "正文",
+      "url": "https://www.xiaohongshu.com/explore/6ad193960000000018007bd8",
+      "state": "主页已读取，正文与发表日未读取",
+      "reason": "同上"
+    }
+  ],
+  "officialChannels": [
+    {
+      "url": "https://tamashiiweb.com/store/spot/guangzhou/",
+      "result": "已实际读取当前目录：东B1 E1167–1169/E1159–1163；西B2 W247；另W233官方展示，不重复计店"
+    },
+    {
+      "url": "https://www.animate.co.jp/zh-sc/shop/guangzhou/",
+      "result": "已实际读取当前广州店页"
+    },
+    {
+      "url": "https://goods.fun/stores?language=zh_cn",
+      "result": "已实际读取当前门店目录"
+    },
+    {
+      "url": "https://www.yuewen.com/ip/surrounding",
+      "result": "已实际读取当前线下渠道"
+    },
+    {
+      "url": "https://www.comefor.com.cn",
+      "result": "证书／读取失败，未绕过警告；使用已读品牌分店经营帖"
+    },
+    {
+      "url": "https://www.toysstar.cn/col.jsp?id=104",
+      "result": "读取失败／证书阻断，不以搜索摘要替代当前店单"
+    }
+  ],
+  "retry": {
+    "date": "2026-10-19",
+    "priorGateRecovered": true,
+    "results": [
+      {
+        "query": "TOYS STAR 广州",
+        "mode": "用户＋主页＋正文",
+        "result": "实际打开品牌主页；9/28本店经营明确西区B3 BW361–362。用户结果5天前更新不是发表日。",
+        "files": [
+          "toys-users.txt",
+          "toys-profile.txt",
+          "toys-business.txt"
+        ]
+      },
+      {
+        "query": "新樂屋的小伙计",
+        "mode": "主页＋中古寄售正文",
+        "result": "本店工作号经营帖明确东B3 E3067–3069，原文3天前，不强算精确日期。",
+        "files": [
+          "xinle-profile.txt",
+          "xinle-post.txt"
+        ]
+      },
+      {
+        "query": "闪魂集卡社",
+        "mode": "用户",
+        "result": "首批只有卡牌经销／收藏类名称，未匹配本商圈经营主体；检索步骤已完成，身份缺口继续待核。",
+        "files": [
+          "flash-users.txt"
+        ]
+      },
+      {
+        "query": "FunFun Studio 广州",
+        "mode": "用户",
+        "result": "首批未匹配本店本人；不把fan fun或FUN4YEAH近似名称当同主体，娃店主体关系继续待核。",
+        "files": [
+          "funfun-users.txt"
+        ]
+      }
+    ],
+    "note": "实际读取与未匹配的区别保留；验收结果并入本目录qa.json与report.md"
+  }
+}

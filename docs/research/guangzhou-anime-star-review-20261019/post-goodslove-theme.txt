@@ -1,0 +1,144 @@
+- heading "🎥时光代理人｜主题零售门店即将上新！" [level=1]
+- text: BlingBling~✨时光学院的招新分会场闪亮登场！ 10月16日，GOODSLOVE将携手《时光代理人》同步推出「社团大作战」官方授权主题零售门店！委托人们，上新情报和门店地址都整理好啦，快来看看吧～📍 ⏳【上新时间】 10月16日起 📍【主题门店地址】 「上海五角场万达旗舰店」：上海市杨浦区政通路189号上海五角场万达广场C栋2楼2F-A-5 「北京BOM嘻番里店」：北京市海淀区学清路38号BOM嘻番里B座2楼2F-37号 「西安IDS创世岛小寨店」：陕西省西安市雁塔区小寨西路26号IDS创世岛小寨店1楼1015号 「长沙海信广场店」：湖南省长沙市天心区湘江中路36号海信广场2楼203号 「成都天府红店」：四川省成都市锦江区东御大街18号1栋成都天府红4层04018-04017号 🔖更多情报，敬请期待
+- link "@GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7
+- link "@GOODSLOVE CAFE":
+  - /url: /user/profile/63169fda000000001501c39d
+- text: 和
+- link "@GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a
+- text: 的后续发布~
+- link "#GOODSLOVE":
+  - /url: /search_result?keyword=GOODSLOVE&type=54&source=web_note_detail_r10
+- link "#时光代理人":
+  - /url: /search_result?keyword=%25E6%2597%25B6%25E5%2585%2589%25E4%25BB%25A3%25E7%2590%2586%25E4%25BA%25BA&type=54&source=web_note_detail_r10
+- link "#时光代理人主题餐厅":
+  - /url: /search_result?keyword=%25E6%2597%25B6%25E5%2585%2589%25E4%25BB%25A3%25E7%2590%2586%25E4%25BA%25BA%25E4%25B8%25BB%25E9%25A2%2598%25E9%25A4%2590%25E5%258E%2585&type=54&source=web_note_detail_r10
+- link "#社团大作战":
+  - /url: /search_result?keyword=%25E7%25A4%25BE%25E5%259B%25A2%25E5%25A4%25A7%25E4%25BD%259C%25E6%2588%2598&type=54&source=web_note_detail_r10
+- link "#主题餐厅":
+  - /url: /search_result?keyword=%25E4%25B8%25BB%25E9%25A2%2598%25E9%25A4%2590%25E5%258E%2585&type=54&source=web_note_detail_r10
+- link "#二次元":
+  - /url: /search_result?keyword=%25E4%25BA%258C%25E6%25AC%25A1%25E5%2585%2583&type=54&source=web_note_detail_r10
+- link "#谷子":
+  - /url: /search_result?keyword=%25E8%25B0%25B7%25E5%25AD%2590&type=54&source=web_note_detail_r10
+- generic: 4天前 上海
+- generic: 共 152 条评论
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_profile_page
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 亲爱的委托人们，因门店空间限制，原定在成都天府红店上线的拍报机已取消，给大家带来的不便深感抱歉（狐狐鞠躬～🍎1位委托人get【 时光代理人主题随机周边li包 】*1
+- generic: 置顶评论
+- generic: 3天前上海
+- generic: "1"
+- generic: "16"
+- link:
+  - /url: /user/profile/618f238d0000000021021086?channel_type=web_profile_page
+- link "🍡🍡(出物版)":
+  - /url: /user/profile/618f238d0000000021021086?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 蹲蹲
+- generic: 3天前天津
+- generic: 赞
+- generic: 回复
+- generic: 展开 15 条回复
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_profile_page
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 🍎1位委托人get【时光代理人主题随机周边li包】*1
+- generic: 4天前上海
+- generic: "5"
+- generic: "43"
+- link:
+  - /url: /user/profile/69b1983a0000000033038dca?channel_type=web_profile_page
+- link "烟雨稠":
+  - /url: /user/profile/69b1983a0000000033038dca?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 蹲蹲
+- generic: 4天前湖北
+- generic: 赞
+- generic: 回复
+- generic: 展开 42 条回复
+- link:
+  - /url: /user/profile/6454f23d000000001400f4b9?channel_type=web_profile_page
+- link "Ghost":
+  - /url: /user/profile/6454f23d000000001400f4b9?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 蹲蹲，来了来了
+- text: 萌！！！！已四，老粉来了
+- text: 我的天！？你竟然也在小红书里，真的好久不见了！！你还记得我吗？我们从小就不认识！小时候我在我家玩，你在你家玩，你那时候还说要啾我，你还记得吗
+- generic: 2天前河北
+- generic: 赞
+- generic: "7"
+- link:
+  - /url: /user/profile/6454f23d000000001400f4b9?channel_type=web_profile_page
+- link "Ghost":
+  - /url: /user/profile/6454f23d000000001400f4b9?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 2天前河北
+- generic: 赞
+- generic: 回复
+- generic: 展开 6 条回复
+- link:
+  - /url: /user/profile/597ba6535e87e706c3a2e8ff?channel_type=web_profile_page
+- link "阅读理解":
+  - /url: /user/profile/597ba6535e87e706c3a2e8ff?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 超萌陆光！！！！
+- generic: 2天前广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/64cb1b1d000000000e026c6e?channel_type=web_profile_page
+- link "L.":
+  - /url: /user/profile/64cb1b1d000000000e026c6e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 蹲蹲
+- generic: 昨天 08:41北京
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/637a280e000000001f01e06a?channel_type=web_profile_page
+- link "这手不能要了":
+  - /url: /user/profile/637a280e000000001f01e06a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 蹲蹲
+- generic: 3天前河南
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/66acccf9000000001d03182d?channel_type=web_profile_page
+- link "17":
+  - /url: /user/profile/66acccf9000000001d03182d?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 怎么主题店没有广州
+- generic: 昨天 12:19广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/6a0d8f1c0000000002002802?channel_type=web_profile_page
+- link "Eternity":
+  - /url: /user/profile/6a0d8f1c0000000002002802?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 蹲蹲，已四连，求中奖[完啦R]
+- generic: 3天前浙江
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/686e634f000000001e00acd0?channel_type=web_profile_page
+- link "O.o":
+  - /url: /user/profile/686e634f000000001e00acd0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 后期会线上通贩吗？
+- generic: 1天前山东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/619b7c030000000010007a92?channel_type=web_profile_page
+- link "Seliber":
+  - /url: /user/profile/619b7c030000000010007a92?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 太好了居然有主题门店！
+- generic: 3天前上海
+- generic: 赞
+- generic: 回复
+- paragraph
+- generic: 说点什么...
+- generic: "363"
+- generic: "110"
+- generic: "152"
+- button "发送" [disabled]
+- button "取消"

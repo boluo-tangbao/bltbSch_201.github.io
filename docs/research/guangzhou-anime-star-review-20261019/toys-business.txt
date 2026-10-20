@@ -1,0 +1,13 @@
+- heading "国庆节假期，来Toysstar做欧皇！" [level=1]
+- text: 我们又来回馈粉丝啦！
+- text: 趁老板国庆节出去玩，我们从仓库偷偷运了一批好东西给大家继续抽奖！ 老规矩到门店消费满269即可参与抽奖！ 门店地址：广州市越秀区动漫星城西区负三层BW361-362
+- generic: 猜你想搜
+- generic: 广州toysstar门店抽奖
+- generic: 09-28 广东
+- paragraph: 这是一片荒地点击评论
+- paragraph
+- generic: 说点什么...
+- generic: 收藏
+- generic: 评论
+- button "发送" [disabled]
+- button "取消"

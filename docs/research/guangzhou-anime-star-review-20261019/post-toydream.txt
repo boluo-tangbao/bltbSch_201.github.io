@@ -1,0 +1,21 @@
+- iframe
+- generic: 1/2
+- link:
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_profile_page
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- button "关注":
+  - generic: 关注
+- generic: "[今日上新] WS黑白双翼日文补充包：我推的孩子Vol.3 WS黑白双翼简中补充包：少女前线系列"
+- generic: 猜你想搜
+- generic: WS黑白双翼日文补充包
+- generic: 08-07
+- paragraph: 这是一片荒地点击评论
+- paragraph
+- generic: 说点什么...
+- generic: "12"
+- generic: "5"
+- generic: 评论
+- button "发送" [disabled]
+- button "取消"

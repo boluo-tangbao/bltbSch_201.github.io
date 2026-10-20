@@ -1,0 +1,29 @@
+{
+  "otherPlacesUnchanged": true,
+  "otherDirectoriesUnchanged": true,
+  "priorUpdatesUnchanged": true,
+  "places": [
+    {
+      "placeId": "guangzhou-shop-002",
+      "authorAndOtherFieldsUnchanged": true,
+      "gallerySrcsAndOrderUnchanged": true,
+      "allowedCaptionChanges": [
+        {
+          "src": "images/places/Guangzhou/dmxc/西/QQ图片20260124194006.jpg",
+          "alt": "飞社长店内与非人哉陈列（作者2026-01-21实拍，海报为历史活动）"
+        }
+      ]
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "authorAndOtherFieldsUnchanged": true,
+      "gallerySrcsAndOrderUnchanged": true,
+      "allowedCaptionChanges": [
+        {
+          "src": "images/places/Guangzhou/dmxc/东/QQ图片20260124165714.jpg",
+          "alt": "趣玩+ 门头与商品陈列（E2015–2016，作者实拍）"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+- heading "樱漫｜《棋魂》漫画主题活动来啦！🎉" [level=1]
+- text: "🎁【免费赠送】海报 前往樱漫活动门店，拍摄棋魂相关美陈，带话题 #棋魂 #樱漫书店 并 @柒海图书，分享到🍠/🧣/B站（任选其一），即可获得海报×1！ ⚠️每人每天仅限参加一次 🌟【买赠】原画小卡 在樱漫活动门店购买《棋魂》漫画单行本任意一本，即可获得原画小卡×1（三款任选一张）！精美小卡，收藏党狂喜～ ⚠️ 赠品数量有限，赠完为止 --------------------------- ⬇️活动门店：⬇️ ▪️樱漫 · 越秀店 地址：广州市越秀区吉祥路1号动漫星城广场西区负二层自编W203AB-CD号樱漫书店 ▪️樱漫 · 深圳宝安店（壹方城店） 地址：深圳市宝安区新安街道新湖路99号壹方城B2层B2-075A-075B号樱漫书店 ▪️樱漫 · 深圳福田店（大中华店） 地址：深圳市福田区大中华•Bitcity次元小镇GF-098~101号樱漫书店 ▪️樱漫 · 武汉店 地址：湖北省武汉市江汉路X118商场一楼L106-L108号樱漫书店 ▪️樱漫 · 成都店 地址：四川省成都市锦江区东御街18号天府红购物中心负一层B1017号樱漫书店 ▪️樱漫 · 上海店 地址：上海市静安区西藏北路198号静安大悦城购物中心北座六楼N601-N602号樱漫书店 ▪️樱漫 · 重庆店 地址：重庆市两江新区观音桥方圆LIVE B1层B1067b号樱漫书店 ▪️樱漫 · 福州店 地址：福建省福州市鼓楼区八一七路东街口大洋商业负一楼L118号樱漫书店 ▪️樱漫 · 杭州店 地址：杭州市上城区学士路31号工联CC次元站B2层217-220号樱漫书店 ▪️樱漫 · 长沙店 地址：湖南省长沙市天心区坡子街216号悦方idmall购物中心B111+112号樱漫书店 ▪️樱漫 · 北京店 地址：北京市东城区王府井大街301号王府井喜悦购物中心G-B2-D060-D065号樱漫书店"
+- link "#樱漫书店":
+  - /url: /search_result?keyword=%25E6%25A8%25B1%25E6%25BC%25AB%25E4%25B9%25A6%25E5%25BA%2597&type=54&source=web_note_detail_r10
+- link "#棋魂":
+  - /url: /search_result?keyword=%25E6%25A3%258B%25E9%25AD%2582&type=54&source=web_note_detail_r10
+- link "#图书":
+  - /url: /search_result?keyword=%25E5%259B%25BE%25E4%25B9%25A6&type=54&source=web_note_detail_r10
+- generic: 昨天 01:48 广东
+- generic: 共 12 条评论
+- link:
+  - /url: /user/profile/60177e1f000000000101ddb6?channel_type=web_profile_page
+- link "重生之我在成都做财税":
+  - /url: /user/profile/60177e1f000000000101ddb6?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 今天就开始吗？
+- generic: 昨天 02:13四川
+- generic: 赞
+- generic: "1"
+- link:
+  - /url: /user/profile/65f3d148000000000500fbd1?channel_type=web_profile_page
+- link "Lacus YYDS":
+  - /url: /user/profile/65f3d148000000000500fbd1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 天府红此时此刻还木有
+- generic: 3小时前四川
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/648af824000000002a036fc8?channel_type=web_profile_page
+- link "拉面馆蹦极师傅":
+  - /url: /user/profile/648af824000000002a036fc8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 特别美！狠狠拿到了！
+- generic: 昨天 23:45广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/64c50e2e000000000b00541a?channel_type=web_profile_page
+- link "阿戈尔鲜蒸海嗣":
+  - /url: /user/profile/64c50e2e000000000b00541a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 什么时候开始哇
+- generic: 昨天 02:21福建
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5f081f6e000000000101db17?channel_type=web_profile_page
+- link "南宫":
+  - /url: /user/profile/5f081f6e000000000101db17?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 什么时候开始
+- generic: 昨天 02:14浙江
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/63dc98c00000000026004f05?channel_type=web_profile_page
+- link "琳":
+  - /url: /user/profile/63dc98c00000000026004f05?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- link "@卖卖瓜":
+  - /url: /user/profile/5c324b980000000007011715
+- text: 美颜暴击[棒R]
+- generic: 昨天 02:31广东
+- generic: 赞
+- generic: "6"
+- link:
+  - /url: /user/profile/5c324b980000000007011715?channel_type=web_profile_page
+- link "卖卖瓜":
+  - /url: /user/profile/5c324b980000000007011715?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: gogogo
+- generic: 昨天 03:27广东
+- generic: 赞
+- generic: 回复
+- generic: 展开 5 条回复
+- generic: "- THE END -"
+- paragraph
+- generic: 说点什么...
+- generic: "63"
+- generic: "18"
+- generic: "12"
+- button "发送" [disabled]
+- button "取消"

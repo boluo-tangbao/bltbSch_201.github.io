@@ -1,0 +1,21 @@
+- heading "🔥新樂屋开放中古寄售啦！" [level=1]
+- text: 📣新樂屋开放寄售啦！ ✅抽成10%，无阶梯加价，无任何额外费用 囤谷太多，想淡坑回血？ 二手平台拍照、打包、应付小刀真的心累🥺 不想折腾，就交给新樂屋线下门店帮你售卖！ 谷子也想遇见新主人，不用压箱底蒙尘✨ 新樂屋线下中古寄售开放接单 实体店托管，帮您省心出谷，不用自己折腾！ 📦可寄售品类 正版吧唧｜立牌｜色纸｜镭射票｜挂件｜纸片周边 冷门IP、古早谷、复数囤货均可咨询 我们负责：拍照陈列｜接待买家｜定期结算 📍广州动漫星城东区负三层E3067-3069 👉私信咨询寄售
+- link "#新樂屋":
+  - /url: /search_result?keyword=%25E6%2596%25B0%25E6%25A8%2582%25E5%25B1%258B&type=54&source=web_note_detail_r10
+- link "#动漫星城":
+  - /url: /search_result?keyword=%25E5%258A%25A8%25E6%25BC%25AB%25E6%2598%259F%25E5%259F%258E&type=54&source=web_note_detail_r10
+- link "#中古寄售":
+  - /url: /search_result?keyword=%25E4%25B8%25AD%25E5%258F%25A4%25E5%25AF%2584%25E5%2594%25AE&type=54&source=web_note_detail_r10
+- link "#广州谷子店":
+  - /url: /search_result?keyword=%25E5%25B9%25BF%25E5%25B7%259E%25E8%25B0%25B7%25E5%25AD%2590%25E5%25BA%2597&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 广州动漫星城
+- generic: 3天前 广东
+- paragraph: 这是一片荒地点击评论
+- paragraph
+- generic: 说点什么...
+- generic: "6"
+- generic: "3"
+- generic: 评论
+- button "发送" [disabled]
+- button "取消"

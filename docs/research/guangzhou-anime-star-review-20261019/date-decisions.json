@@ -1,0 +1,271 @@
+{
+  "rule": "省年发表日按原读取当年解释；正文事件日期独立判断；编辑时间、拍摄、到访和读取时间不混填。",
+  "decisions": [
+    {
+      "file": "post-hewu.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "10-03",
+      "publicationDate": "2026-10-03",
+      "reason": "发表日省年，按原读取2026年补年；正文国庆促销不是限时店"
+    },
+    {
+      "file": "post-yuanli.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "09-24",
+      "publicationDate": "2026-09-24",
+      "reason": "发表日省年；正文9/25为即将上架，按2026年，同店正常上新"
+    },
+    {
+      "file": "post-yuanli-local.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "07-04",
+      "publicationDate": "2026-07-04",
+      "reason": "发表日省年；门头用于正式名，不保证实时库存"
+    },
+    {
+      "file": "post-kuaipao.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "10-02",
+      "publicationDate": "2026-10-02",
+      "reason": "发表日省年；正文E2007明确本分店"
+    },
+    {
+      "file": "post-ciyuango.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "10-06",
+      "publicationDate": "2026-10-06",
+      "reason": "发表日省年"
+    },
+    {
+      "file": "post-lichuji.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "09-24",
+      "publicationDate": "2026-09-24",
+      "reason": "发表日省年"
+    },
+    {
+      "file": "post-818.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "09-22",
+      "publicationDate": "2026-09-22",
+      "reason": "发表日省年；帖为共用号商品内容，具体本商圈经营还复用分店资料，不把别处库存移植"
+    },
+    {
+      "file": "post-toydream.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "08-07",
+      "publicationDate": "2026-08-07",
+      "reason": "发表日省年；原始摘录的正文不一定采用heading标记，保留相关可见DOM"
+    },
+    {
+      "file": "post-comefor-p3r.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "04-18",
+      "publicationDate": "2026-04-18",
+      "reason": "发表日省年；正文广州东区现货，本分店经营有效"
+    },
+    {
+      "file": "post-comefor-closure.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "10-11",
+      "publicationDate": "2026-10-11",
+      "reason": "发表日省年；明确正佳快闪8/7—10/11，与动漫星城店不同"
+    },
+    {
+      "file": "post-nullset.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "07-24",
+      "publicationDate": "2026-07-24",
+      "reason": "发表日省年；正文明确2026/7/28开业"
+    },
+    {
+      "file": "post-nullset-game.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "09-04",
+      "publicationDate": "2026-09-04",
+      "reason": "发表日省年；9/6—10/7为店内活动，不是整店期限"
+    },
+    {
+      "file": "post-guxing.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "10-06",
+      "publicationDate": "2026-10-06",
+      "reason": "发表日省年，正文东区负三层明确"
+    },
+    {
+      "file": "post-polaroid.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "09-22",
+      "publicationDate": "2026-09-22",
+      "reason": "发表日省年，正文9/28起预告顺序合理，判2026-09-28；未公布结束日，不补造"
+    },
+    {
+      "file": "post-acafe-reader.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "08-31",
+      "publicationDate": "2026-08-31",
+      "reason": "发表日省年；正文明确2026-09-19—10-19，本轮10/19仍是最后一天"
+    },
+    {
+      "file": "post-yuechai.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "2025-11-26",
+      "publicationDate": "2025-11-26",
+      "reason": "显式年份直接保留，仍在有效窗口"
+    },
+    {
+      "file": "post-chaowangu.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "2天前",
+      "publicationDate": null,
+      "reason": "保留相对标签，不强行换算某日"
+    },
+    {
+      "file": "post-chizhi-latest.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "昨天00:59",
+      "publicationDate": null,
+      "reason": "保留相对时间；不把读取日设为发表日"
+    },
+    {
+      "file": "post-fei-latest.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "3天前",
+      "publicationDate": null,
+      "reason": "保留相对标签"
+    },
+    {
+      "file": "post-yingman-qihun.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "昨天01:48",
+      "publicationDate": null,
+      "reason": "保留相对标签，当前本店棋魂活动只支持经营，不假定整店限时"
+    },
+    {
+      "file": "post-guwumao.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "3天前",
+      "publicationDate": null,
+      "reason": "保留相对标签"
+    },
+    {
+      "file": "post-qixiang.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "2天前",
+      "publicationDate": null,
+      "reason": "保留相对标签；正文东区B2夹层明确"
+    },
+    {
+      "file": "post-boom-latest.json",
+      "readAt": "2026-10-19",
+      "rawLabel": "2天前",
+      "publicationDate": null,
+      "reason": "保留相对标签"
+    },
+    {
+      "file": "post-xumi-local.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "2天前；正文拍摄于10.17 13:30",
+      "publicationDate": null,
+      "reason": "发表相对时间不造具体日；正文拍摄日在本年上下文判断为2026-10-17；不代表当前余量"
+    },
+    {
+      "file": "post-goodslove-local.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "编辑于5天前；正文2026.10.13，二编14日",
+      "publicationDate": null,
+      "reason": "明确拍摄2026-10-13/14；编辑时间不冒充发表日，顾客本店照片加强分店经营证据"
+    },
+    {
+      "file": "post-fei-guangzhou.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "编辑于09-30",
+      "publicationDate": null,
+      "reason": "2026编辑时间，不作为原发表时间；与门店本人及近期经营交叉"
+    },
+    {
+      "file": "post-tongmenghui.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "编辑于10-05",
+      "publicationDate": null,
+      "reason": "2026编辑时间，不假设原发表日；正文广州与现行分店地址交叉"
+    },
+    {
+      "file": "post-jingchen-partner.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "编辑于04-03",
+      "publicationDate": null,
+      "reason": "2026编辑时间；合作售卖名录支持铺位身份，不单独证明持续库存"
+    },
+    {
+      "file": "post-qiqiu-stores.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "编辑于09-05",
+      "publicationDate": null,
+      "reason": "2026编辑时间非原发表时间；实际核对现行官方门店指南第8项广州，不套其他城咖啡业务"
+    },
+    {
+      "file": "post-yingman-stores.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "编辑于06-14",
+      "publicationDate": null,
+      "reason": "2026编辑年份，不填发表日；原帖可见2025评论，仍保留原始时序；现行官方分店指南核对两个铺位"
+    },
+    {
+      "file": "post-muse-notice.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "编辑于09-28；正文9.30—10.11",
+      "publicationDate": null,
+      "reason": "2026编辑时间；国庆正文结合当年上下文判断为2026促销期，优惠结束不关闭整店"
+    },
+    {
+      "file": "post-sweetdodo.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "编辑于9小时前",
+      "publicationDate": null,
+      "reason": "非发表日；本店身份、2026-07-14商场重开公告与当前到店上新交叉"
+    },
+    {
+      "file": "post-route2026.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "编辑于05-03",
+      "publicationDate": null,
+      "reason": "编辑非发表；抖音对应路线1月17日单独归档，不借更新标签复活旧名单"
+    },
+    {
+      "file": "post-xinlewu.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "04-26",
+      "publicationDate": "2026-04-26",
+      "reason": "发表省年；正文标签钻汇星城，不能据此确认动漫星城分店"
+    },
+    {
+      "file": "post-xinle-closure.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "编辑于06-04",
+      "publicationDate": null,
+      "reason": "未明确动漫星城东B3整店关闭，柜台/二楼寄售线索不能扩大为本店闭店"
+    },
+    {
+      "file": "profile-xinle-worker.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "主页未标发帖日期",
+      "publicationDate": null,
+      "reason": "读取日只核身份与E3067—3069地址；新帖标题不是已读正文，留缺口"
+    },
+    {
+      "file": "toys-business.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "09-28 广东",
+      "publicationDate": "2026-09-28",
+      "reason": "本人发表日省年按原读取当年补年；正文明确西区B3 BW361–362，国庆普通消费抽奖不作整店限时。"
+    },
+    {
+      "file": "xinle-post.txt",
+      "readAt": "2026-10-19",
+      "rawLabel": "3天前 广东",
+      "publicationDate": null,
+      "reason": "保留相对发表标签；正文同店E3067—3069经营确证，非主页更新日。此前未读取正文的缺口在此次补齐。"
+    }
+  ]
+}

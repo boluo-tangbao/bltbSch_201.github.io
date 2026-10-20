@@ -1,0 +1,211 @@
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- generic: 筛选
+- button "综合"
+- button "店铺路线"
+- button "广州"
+- button "开门时间"
+- button "动漫星城"
+- button "照片"
+- button "b2"
+- button "东区"
+- button "谷子集市"
+- button "北京路"
+- button "周边"
+- button "亚克力"
+- button "二次元"
+- button "攻略"
+- button "指南"
+- button "扭蛋"
+- link:
+  - /url: /search_result/699564a3000000000a03e8a7
+- link "孩子们，路过这家店走不动道了..":
+  - /url: /search_result/699564a3000000000a03e8a7
+- link "T.K 02-18":
+  - /url: /user/profile/5c9391430000000016028af2?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: T.K
+  - generic: 02-18
+- generic: "524"
+- link:
+  - /url: /search_result/68d021bd00000000130104ba
+- link "这年头想吃点非鸡狗，太难了":
+  - /url: /search_result/68d021bd00000000130104ba
+- link "李仙升 2025-09-23":
+  - /url: /user/profile/61ddc7c0000000001000c63f?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 李仙升
+  - generic: 2025-09-23
+- generic: "101"
+- link:
+  - /url: /search_result/6a6f407d000000002500b74a
+- link "Roselia10周年墙、梦晴社、武士道官店打卡":
+  - /url: /search_result/6a6f407d000000002500b74a
+- link "远山.绮 08-02":
+  - /url: /user/profile/65ab757a0000000013009bfb?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 远山.绮
+  - generic: 08-02
+- generic: "42"
+- link:
+  - /url: /search_result/68e28266000000000702324f
+- link "广州动星偶遇宝藏邦邦谷店（?）":
+  - /url: /search_result/68e28266000000000702324f
+- link "户山有咲 2025-10-07":
+  - /url: /user/profile/67f67f77000000000e01d2fa?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 户山有咲
+  - generic: 2025-10-07
+- generic: "239"
+- link:
+  - /url: /search_result/6a73fcd90000000035015f40
+- link "整理了一些广州动漫星城烤谷的售卖店":
+  - /url: /search_result/6a73fcd90000000035015f40
+- link "樱岛奇货市集 08-06":
+  - /url: /user/profile/6a37b432000000000e03d401?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 樱岛奇货市集
+  - generic: 08-06
+- generic: "149"
+- link:
+  - /url: /search_result/676ba53c0000000013008eeb
+- link "又发现一家邦店":
+  - /url: /search_result/676ba53c0000000013008eeb
+- link "吃尽世界的谷 2024-12-25":
+  - /url: /user/profile/65333d32000000002a019592?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 吃尽世界的谷
+  - generic: 2024-12-25
+- generic: "480"
+- generic: 大家都在搜
+- generic: 动漫星城梦晴社
+- generic: 广州梦晴社
+- generic: 梦晴社店员评价
+- generic: 梦晴社店
+- link:
+  - /url: /search_result/69f68d42000000001e00edb4
+- link "简单的广州二次元一日游":
+  - /url: /search_result/69f68d42000000001e00edb4
+- link "幽霊茶 05-03":
+  - /url: /user/profile/5ca5a106000000001202acfb?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 幽霊茶
+  - generic: 05-03
+- generic: "8"
+- link:
+  - /url: /search_result/69687386000000000a03d0d4
+- link "广州动漫星城烤贴纸记录":
+  - /url: /search_result/69687386000000000a03d0d4
+- link "咩咩姐你好美 01-15":
+  - /url: /user/profile/68426b44000000001d009d14?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 咩咩姐你好美
+  - generic: 01-15
+- generic: "13"
+- link:
+  - /url: /search_result/6814c3780000000023003918
+- link "2025广州吃谷指南2.1：动星西区探店指南":
+  - /url: /search_result/6814c3780000000023003918
+- link "Syaniki原真纱 2025-09-29":
+  - /url: /user/profile/65648f7e000000003c00f8b1?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: Syaniki原真纱
+  - generic: 2025-09-29
+- generic: "881"
+- link:
+  - /url: /search_result/6ab2550f0000000034018def
+- link "店里IP及角色一览图":
+  - /url: /search_result/6ab2550f0000000034018def
+- link "星音の社 09-22":
+  - /url: /user/profile/5f373339000000000100038d?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 星音の社
+  - generic: 09-22
+- generic: "195"
+- link:
+  - /url: /search_result/69d1c269000000002200c70b
+- link "无敌仓库大王":
+  - /url: /search_result/69d1c269000000002200c70b
+- link "排骨 04-05":
+  - /url: /user/profile/5ad1cc004eacab02cca5dca4?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 排骨
+  - generic: 04-05
+- generic: "1363"
+- link:
+  - /url: /search_result/6abd10d3000000001c00dd3b
+- link "上海最新10月吃谷攻略":
+  - /url: /search_result/6abd10d3000000001c00dd3b
+- link "笺 10-01":
+  - /url: /user/profile/623838f60000000010005992?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 笺
+  - generic: 10-01
+- generic: "220"
+- link:
+  - /url: /search_result/6a54b7530000000017009b7b
+- link "香澄社":
+  - /url: /search_result/6a54b7530000000017009b7b
+- link "4455 07-13":
+  - /url: /user/profile/66c0ae18000000001d02364e?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: "4455"
+  - generic: 07-13
+- generic: "26"
+- link:
+  - /url: /search_result/69e8c9ee000000002301cd4a
+- link "户山香澄汁，，，是什么味道":
+  - /url: /search_result/69e8c9ee000000002301cd4a
+- link "Udd 04-22":
+  - /url: /user/profile/6299831a0000000021027ecd?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: Udd
+  - generic: 04-22
+- generic: "31"
+- link:
+  - /url: /search_result/6aaa40550000000025037a3d
+- link "香橙社 v26.9.16":
+  - /url: /search_result/6aaa40550000000025037a3d
+- link "香橙社-KiraGoods 09-16":
+  - /url: /user/profile/666fae4a000000000700404a?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 香橙社-KiraGoods
+  - generic: 09-16
+- generic: "64"
+- link:
+  - /url: /search_result/6908d1ec000000000301f37e
+- link "周末碎碎念":
+  - /url: /search_result/6908d1ec000000000301f37e
+- link "李仙升 2025-11-04":
+  - /url: /user/profile/61ddc7c0000000001000c63f?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 李仙升
+  - generic: 2025-11-04
+- generic: "417"
+- link:
+  - /url: /search_result/692fb4b6000000001e03a5d1
+- link "🍑晴空社生日谷不会再订":
+  - /url: /search_result/692fb4b6000000001e03a5d1
+- link "momo（健康版） 2025-12-03":
+  - /url: /user/profile/59bd0b1f44363b08b3c8f8fd?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: momo（健康版）
+  - generic: 2025-12-03
+- generic: 赞
+- link:
+  - /url: /search_result/68ec9de9000000000402b6ab
+- link "一份简单的邦邦人上海吃谷手册✉️":
+  - /url: /search_result/68ec9de9000000000402b6ab
+- link "棉花头 2025-10-13":
+  - /url: /user/profile/5daadeae000000000100b907?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 棉花头
+  - generic: 2025-10-13
+- generic: "814"
+- link:
+  - /url: /search_result/69eb4eef000000001a02fc36
+- link "【7月已更新】上海邦邦打卡一日游最佳路线":
+  - /url: /search_result/69eb4eef000000001a02fc36
+- link "豪猫要乐奈 07-14":
+  - /url: /user/profile/5f850c7c0000000001005e68?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 豪猫要乐奈
+  - generic: 07-14
+- generic: "487"
+- link:
+  - /url: /search_result/692187f8000000001f00e3f5
+- link "我们香橙社有自己的木谷高明．jpg2":
+  - /url: /search_result/692187f8000000001f00e3f5
+- link "七夏Chika 2025-11-22":
+  - /url: /user/profile/6400b2a3000000001f032a1f?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 七夏Chika
+  - generic: 2025-11-22
+- generic: "113"
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

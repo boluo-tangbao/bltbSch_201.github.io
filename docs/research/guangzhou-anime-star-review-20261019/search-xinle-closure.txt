@@ -1,0 +1,188 @@
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- generic: 筛选
+- link:
+  - /url: /search_result/6a1273ac00000000360306cc
+- link "撤柜了！":
+  - /url: /search_result/6a1273ac00000000360306cc
+- link "-lcmrk- 06-04":
+  - /url: /user/profile/5f7bf776000000000101f045?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: "-lcmrk-"
+  - generic: 06-04
+- generic: "28"
+- link:
+  - /url: /search_result/6ab3652e00000000120386dd
+- link "从大悦城看谷子经济下行":
+  - /url: /search_result/6ab3652e00000000120386dd
+- link "Cytzle 09-23":
+  - /url: /user/profile/54e7583cd39ea217d0fc1cbf?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: Cytzle
+  - generic: 09-23
+- generic: "496"
+- link:
+  - /url: /search_result/6ab38cee000000000d0213c6
+- link "日本中古店book off优惠及店铺选择的经验":
+  - /url: /search_result/6ab38cee000000000d0213c6
+- link "celesti 09-24":
+  - /url: /user/profile/5e4268ba00000000010081f9?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: celesti
+  - generic: 09-24
+- generic: "239"
+- link:
+  - /url: /search_result/6a7f3f3b000000002c006841
+- link "在特价区翻到爱城华恋亲签":
+  - /url: /search_result/6a7f3f3b000000002c006841
+- link "魔法钥匙 08-15":
+  - /url: /user/profile/6654a2610000000007005dca?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 魔法钥匙
+  - generic: 08-15
+- generic: "755"
+- link:
+  - /url: /search_result/6ab736c2000000000b0062aa
+- link "繁花谷 第一百货店 闭店清仓活动开启":
+  - /url: /search_result/6ab736c2000000000b0062aa
+- link "繁花很绚烂 09-26":
+  - /url: /user/profile/660e4409000000000600fee8?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 繁花很绚烂
+  - generic: 09-26
+- generic: "113"
+- link:
+  - /url: /search_result/6ac8dd790000000018012138
+- link "2026年了还能碰到这种一番赏店铺啊？？？":
+  - /url: /search_result/6ac8dd790000000018012138
+- link "无糖乌龙茶 10-09":
+  - /url: /user/profile/55b6eb73e4b1cf232563a2a7?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 无糖乌龙茶
+  - generic: 10-09
+- generic: "56"
+- link:
+  - /url: /search_result/6a081e5500000000070116ca
+- link "避雷上海新世界谷店！！！":
+  - /url: /search_result/6a081e5500000000070116ca
+- link "yuyu 05-16":
+  - /url: /user/profile/63d922c00000000026011ac8?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: yuyu
+  - generic: 05-16
+- generic: "44"
+- link:
+  - /url: /search_result/6ace0179000000001b02fed1
+- link "打卡上海少女乐队店家":
+  - /url: /search_result/6ace0179000000001b02fed1
+- link "Aquilops 6天前":
+  - /url: /user/profile/6447cfc400000000100274f1?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: Aquilops
+  - generic: 6天前
+- generic: "6"
+- link:
+  - /url: /search_result/6a95608a000000002102f2f8
+- link "天府红新店探访-宅吉柯德":
+  - /url: /search_result/6a95608a000000002102f2f8
+- link "Moe-Danai 08-31":
+  - /url: /user/profile/6559b147000000000802fc44?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: Moe-Danai
+  - generic: 08-31
+- generic: "164"
+- link:
+  - /url: /search_result/6acb1a02000000000a01d8de
+- link "夸脏哦，这都有无料拿":
+  - /url: /search_result/6acb1a02000000000a01d8de
+- link "咸豆浆COYS 10-11":
+  - /url: /user/profile/64916f78000000001f007a84?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 咸豆浆COYS
+  - generic: 10-11
+- generic: "67"
+- link:
+  - /url: /search_result/6a042c37000000003701cc85
+- link "那些跑路的日淘🏬":
+  - /url: /search_result/6a042c37000000003701cc85
+- link "乐淘君 05-13":
+  - /url: /user/profile/64be2b2b0000000014039bdb?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 乐淘君
+  - generic: 05-13
+- generic: "719"
+- link:
+  - /url: /search_result/6aa9562e000000000b03707f
+- link "39News 09-15":
+  - /url: /user/profile/64d0cfb2000000000b006685?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 39News
+  - generic: 09-15
+- generic: "742"
+- link:
+  - /url: /search_result/6ad30208000000001c02c9a4
+- link "打卡上海快闪":
+  - /url: /search_result/6ad30208000000001c02c9a4
+- link "Lizzzzzzzz 2天前":
+  - /url: /user/profile/5e6458e80000000001001079?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: Lizzzzzzzz
+  - generic: 2天前
+- generic: "1"
+- link:
+  - /url: /search_result/6a86ba7e0000000024026fb8
+- link "秋叶原animate楼顶这半个头像是谁？":
+  - /url: /search_result/6a86ba7e0000000024026fb8
+- link "冲浪检查官 08-20":
+  - /url: /user/profile/614ef86400000000020256f0?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 冲浪检查官
+  - generic: 08-20
+- generic: "332"
+- link:
+  - /url: /search_result/6ad34a8100000000020136b2
+- link "上海二次元扫货":
+  - /url: /search_result/6ad34a8100000000020136b2
+- link "我丝瓜汤呢 2天前":
+  - /url: /user/profile/5e19b6460000000001009c6f?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 我丝瓜汤呢
+  - generic: 2天前
+- generic: "14"
+- link:
+  - /url: /search_result/6a06aba9000000000803369f
+- link "秋叶原2发捡漏nikke最终赏":
+  - /url: /search_result/6a06aba9000000000803369f
+- link "All is well 05-15":
+  - /url: /user/profile/5fac030f00000000010028a4?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: All is well
+  - generic: 05-15
+- generic: "121"
+- link:
+  - /url: /search_result/68e34031000000000700852f
+- link "后续：杭州骏河屋实锤为假店 已火速闭店":
+  - /url: /search_result/68e34031000000000700852f
+- link "鼠鼠芽芽 2025-10-08":
+  - /url: /user/profile/672b91c20000000001001cc7?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 鼠鼠芽芽
+  - generic: 2025-10-08
+- generic: "944"
+- link:
+  - /url: /search_result/6a380d0c000000001003f0a8
+- link "谁懂啊，EVA Store 上海真的闭店了😭":
+  - /url: /search_result/6a380d0c000000001003f0a8
+- link "MinkeS 06-22":
+  - /url: /user/profile/5b6ece2dd3dfe20001e03547?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: MinkeS
+  - generic: 06-22
+- generic: "49"
+- link:
+  - /url: /search_result/6992bfae0000000015032787
+- link "爱娜娜淘货！":
+  - /url: /search_result/6992bfae0000000015032787
+- link "毒蘑菇dokukinoko 02-17":
+  - /url: /user/profile/62092613000000001000bf18?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 毒蘑菇dokukinoko
+  - generic: 02-17
+- generic: "75"
+- link:
+  - /url: /search_result/6785266d0000000020029d1c
+- link "池袋ゲーマーズ永久停业-闭店前录像":
+  - /url: /search_result/6785266d0000000020029d1c
+- link "小火狐啊灰啊灰～ 2025-01-15":
+  - /url: /user/profile/617016c600000000020190ea?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 小火狐啊灰啊灰～
+  - generic: 2025-01-15
+- generic: "202"
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

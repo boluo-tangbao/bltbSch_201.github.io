@@ -1,0 +1,68 @@
+- heading "广州动漫星城墟弥代号鸢库存" [level=1]
+- text: 拍摄于10.17 13:30 除了左慈的正比吧唧和亚克力色纸都有挺多的
+- link "#代号鸢":
+  - /url: /search_result?keyword=%25E4%25BB%25A3%25E5%258F%25B7%25E9%25B8%25A2&type=54&source=web_note_detail_r10
+- link "#如鸢":
+  - /url: /search_result?keyword=%25E5%25A6%2582%25E9%25B8%25A2&type=54&source=web_note_detail_r10
+- link "#谷子":
+  - /url: /search_result?keyword=%25E8%25B0%25B7%25E5%25AD%2590&type=54&source=web_note_detail_r10
+- link "#周边":
+  - /url: /search_result?keyword=%25E5%2591%25A8%25E8%25BE%25B9&type=54&source=web_note_detail_r10
+- link "#就这个代号鸢爽":
+  - /url: /search_result?keyword=%25E5%25B0%25B1%25E8%25BF%2599%25E4%25B8%25AA%25E4%25BB%25A3%25E5%258F%25B7%25E9%25B8%25A2%25E7%2588%25BD&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 动漫星城墟弥goods怎么走
+- generic: 2天前 广东
+- generic: 共 8 条评论
+- link:
+  - /url: /user/profile/679244c9000000000a03cb40?channel_type=web_search_result_notes
+- link "白栀子":
+  - /url: /user/profile/679244c9000000000a03cb40?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 这个是常驻还是限定呀
+- generic: 2天前广东
+- generic: 赞
+- generic: "3"
+- link:
+  - /url: /user/profile/65d0e5430000000005030e2f?channel_type=web_search_result_notes
+- link "紫荆FA":
+  - /url: /user/profile/65d0e5430000000005030e2f?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 常驻吧
+- generic: 2天前广东
+- generic: 赞
+- generic: 回复
+- generic: 展开 2 条回复
+- link:
+  - /url: /user/profile/5ab8438adb2e6008a747c4ca?channel_type=web_search_result_notes
+- link "天线得得A":
+  - /url: /user/profile/5ab8438adb2e6008a747c4ca?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 令牌没缺货吧？
+- generic: 2天前广东
+- generic: 赞
+- generic: "2"
+- link:
+  - /url: /user/profile/65d0e5430000000005030e2f?channel_type=web_search_result_notes
+- link "紫荆FA":
+  - /url: /user/profile/65d0e5430000000005030e2f?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 令牌不是这家宝宝，令牌是goodslove的
+- generic: 2天前广东
+- generic: "1"
+- generic: 回复
+- generic: 展开 1 条回复
+- link:
+  - /url: /user/profile/5714f0f71c07df31b32a91de?channel_type=web_search_result_notes
+- link "手可拍🌙":
+  - /url: /user/profile/5714f0f71c07df31b32a91de?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 罗森都降价了 这里等等也要骨折 另外 这个游戏只有4个男主吗
+- generic: 1天前广东
+- generic: 赞
+- generic: 回复
+- generic: "- THE END -"
+- paragraph
+- generic: 说点什么...
+- generic: "32"
+- generic: "3"
+- generic: "8"
+- button "发送" [disabled]
+- button "取消"

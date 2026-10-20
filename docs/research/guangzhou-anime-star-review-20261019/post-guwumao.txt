@@ -1,0 +1,18 @@
+- heading "上新！原神｜鸣潮｜绝区零｜第五人格等" [level=1]
+- text: 本次上新的IP有： ☁️终末地 ☁️鸣潮 ☁️绝区零 ☁️P30 ☁️原神 ☁️第五人格 ☁️非人哉 ☁️有兽焉
+- link "#广州谷店":
+  - /url: /search_result?keyword=%25E5%25B9%25BF%25E5%25B7%259E%25E8%25B0%25B7%25E5%25BA%2597&type=54&source=web_note_detail_r10
+- link "#谷店上新":
+  - /url: /search_result?keyword=%25E8%25B0%25B7%25E5%25BA%2597%25E4%25B8%258A%25E6%2596%25B0&type=54&source=web_note_detail_r10
+- link "#吃谷好去处":
+  - /url: /search_result?keyword=%25E5%2590%2583%25E8%25B0%25B7%25E5%25A5%25BD%25E5%258E%25BB%25E5%25A4%2584&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 绝区零新谷上线时间
+- generic: 3天前 广东
+- paragraph: 这是一片荒地点击评论
+- paragraph
+- generic: 说点什么...
+- generic: 收藏
+- generic: 评论
+- button "发送" [disabled]
+- button "取消"

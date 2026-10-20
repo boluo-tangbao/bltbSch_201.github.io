@@ -1,0 +1,204 @@
+- button "开启读屏标签"
+- generic: 读屏标签已关闭
+- link "精选":
+  - generic: 精选
+- link "推荐":
+  - generic: 推荐
+- link "AI抖音":
+  - generic: AI抖音
+- link "关注":
+  - generic: 关注
+- link "朋友 29":
+  - generic: 朋友
+  - generic: "29"
+- link "我的":
+  - generic: 我的
+- link "直播":
+  - generic: 直播
+- link "放映厅":
+  - generic: 放映厅
+- link "短剧":
+  - generic: 短剧
+- link "小游戏":
+  - generic: 小游戏
+- generic: 下载抖音精选
+- generic: 2026 © 抖音
+- link "京ICP备16016397号-3":
+- contentinfo:
+  - link "icon京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+    - img "icon"
+    - text: 京公网安备11010802050006号
+  - link "icon电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+    - img "icon"
+    - text: 电子营业执照
+  - generic: 信息网络传播视听节目许可证 0126733
+  - generic: 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: 增值电信业务经营许可证 京B2-20170846
+  - generic: 网络文化经营许可证 京网文〔2025〕0181-061号
+  - generic: 互联网宗教信息服务许可证 京（2025）0000017
+  - generic: 药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号
+  - generic: 互联网新闻信息服务许可证 11220230001
+  - link "（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - link "网络谣言曝光台":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: 违法和不良信息举报 400-140-2108 feedback@douyin.com
+  - generic: 算法推荐专项举报 sfjubao@bytedance.com
+  - generic: 体育饭圈专项举报 tyfq@bytedance.com
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+- banner:
+  - textbox "搜索你感兴趣的内容": 广州动漫星城 西区 谷店
+  - button "搜索":
+    - generic: 搜索
+  - paragraph: 充钻石
+  - link "客户端":
+    - /url: https://www.douyin.com/download/pc/obj/douyin-pc-web/douyin-pc-client/7044145585217083655/releases/495279540/8.7.0/win32-ia32/douyin-downloader-v8.7.0-win32-ia32-douyincold.exe
+    - paragraph: 客户端
+  - generic: 壁纸
+  - list:
+    - paragraph: 通知
+  - list:
+    - paragraph: 消息
+  - paragraph: 投稿
+  - link:
+    - /url: //www.douyin.com/user/self
+- generic: 综合
+- generic: 视频
+- generic: 用户
+- generic: 直播
+- generic: 多列
+- generic: 单列
+- text: 筛选
+- text: 为你找到以下结果，问问AI智能总结内容
+- generic: 问问AI
+- generic: 04:05
+- generic: "2195"
+- generic: "保姆级广州吃谷攻略第二篇之『动漫星城』指路 🈶分东区西区注意标志 公园前地铁站🚇是很大很多出口的换乘中心 视频从H口进入直达西区 Ps：素材是错峰去拍的 平时周末很热闹的人非常多噢（参见封面）#广州吃谷 #广州吃谷攻略 #线下吃谷 #动漫星城 #广州二次元"
+- generic: "@9000跨时代sis"
+- generic: · 1月17日
+- generic: 03:04
+- generic: 2.8万
+- generic: "广州完全是吃谷人好价圣地来的吧…！ 如果在广州逛到腿软，那不是人太菜了，而是广州的谷子店真的太多了……特种兵可以尝试一天逛完，正常人可以两天逛掉，甚至慢悠悠淘三天也可以，完全丰俭由人😎 #二次元 #吃谷 #广州旅游 #线下吃谷 #vlog日常"
+- generic: "@花酱有点甜"
+- generic: · 5月20日
+- generic: 图文
+- generic: "122"
+- generic: "广州动漫星城谷子店攻略。广州动漫星城谷子店攻略 动星地下分为西区和东区，通过地铁站连接。🌸西区 ⚡️负二层 樱漫 （漫画 书店+谷子） 鹤屋（日谷多） 炽之森 梦晴社 谷巷 goods主题咖啡（世界之外、1999、fgo、d5、全职高手等） 飞社长 goods love 乌丸屋 娃店： funfun studio、2d doll 手办同萌会（模型） 扭蛋人 三坑： to alice、次元生活馆、puppet bomb ⚡️负二层夹层 手办同萌会（ip多分好几个店） 樱toys（国谷多） 璃初记（ip多日谷多） 晶臣玩物（手办多） jr（有杰尼斯） 美幸 咔咔星球（娃店） ⚡️负三层 818吃谷怪 yooo shop（gbc、海贼、数码宝贝等） 模玩熊 次元go 童梦（邦、ll卡牌等） jp-fans（日杂、日漫） 小小谷努咪（努努店） 萌购 🌸东区 ⚡️负一层 tamashispot ⚡️负二层 animate和a店咖啡 粤拆（日谷多) com for（圣少女） bushiroad（邦 ⚡️夹层 甘乐屋 奇思漫想 ⚡️负三层 气球暖暖屋（谷美） 暮色星球 墟弥 暴萌 嗷呜mini（日谷） 漫序 谷物猫 🌸地址：广州越秀区动漫星城（地铁【公园前】） 🌸时间：10-22（不同店铺会有所不同） #动漫星城 #广州动漫星城 #广州谷子店 #广州谷店 #广州吃谷"
+- generic: "@牧野星澈"
+- generic: · 2025年10月14日
+- generic: 01:59
+- generic: "9629"
+- generic: "暑假想来广州玩的二次元看这里！这是一条超详细广州吃谷攻略！ 动漫星城、地王广场、时尚天河#暑假 #二次元 #吃谷日常 #广州 #谷子"
+- generic: "@薯条太子"
+- generic: · 2025年6月12日
+- generic: 20:44
+- generic: "108"
+- generic: "谷子之动漫星城篇 #谷子 #吃谷 #动漫星城广州 #吃谷日常 #二次元"
+- generic: "@小白大吃特吃（出谷中）"
+- generic: · 2024年1月15日
+- generic: 03:27
+- generic: "3509"
+- generic: "广州越秀的二次元天堂你都去过吗？详细版） #二次元 #广州 #谷子"
+- generic: "@薇薇学姐"
+- generic: · 1月15日
+- generic: 图文
+- generic: "1242"
+- generic: "谷子！追星！DIY娃娃！广州这里全有😭 #广州动漫星城 #动漫星城西区 #广州谷子店 #广州周末去哪儿 #二次元"
+- generic: "@爱溜达的🐶"
+- generic: · 4天前
+- paragraph: 相关搜索
+- paragraph: 广州动漫星城西区在哪
+- paragraph: 动漫星城西区分布图
+- paragraph: 动漫星城f入口怎么去
+- paragraph: 广州动漫星城门店
+- paragraph: 动漫星城西区负三层
+- paragraph: 星巴克动漫星城西区
+- paragraph: 广州动漫星城附近美食
+- paragraph: 争鲜回转寿司动漫星城
+- generic: 06:05
+- generic: "59"
+- generic: "挑战一口气逛完时尚天河全部谷店 体育西路和动漫星城谷店还是略有不同的都值得一逛～（出cos的话还是首选动星 氛围很足） 时尚天河地势复杂，人也比较杂有很多做推广搭话的，大家注意安全～ [打卡R]广州市体育西路 时尚天河 想在这里找齐全部谷店 真的是太难为人 不过所有街铺旁边都有电子地图，大家记得用手机看地图哦 #广州吃谷 #线下吃谷 #体育西路 #广州二次元 #广州探店"
+- generic: "@夏醚酱"
+- generic: · 2024年3月29日
+- generic: 01:42
+- generic: "651"
+- generic: "美味谷子吃吃吃~地铁直达下雨也不怕#广州 #吃谷 #二次元 #吃谷人 #周末去哪儿"
+- generic: "@红烧fish"
+- generic: · 7月12日
+- generic: 02:11
+- generic: "6841"
+- generic: "vlog💕｜广州动漫星城｜a店｜樱漫🤩🤩🥳🥳 开始想买漫画了👀 #文豪野犬 #排球少年 #蓝色监狱 #广州 #吃谷"
+- generic: "@一团蘑菇"
+- generic: · 2023年5月20日
+- generic: 图文
+- generic: "1421"
+- generic: "广州吃谷｜动漫星城全攻略 🌸东区 ⭐️b1:tamashi ⭐️b2夹层：中古一番街、奇想漫玩、壹喜夹、拾柴小铺、甘乐屋 ⭐️b3:animate、粤拆 🌸西区 ⭐️b2:樱漫书屋 手办童萌会 鹤屋 梦晴社 大游行（游戏卡带）扭蛋人 2ddoll ufdoll us 模玩菌 兵模 铸魂社 机迷会 818吃谷怪 ps t-station toalice（三坑）次元生活馆（三坑）puppet bombs（主要是地蕾服）pmtoys ⭐️夹层：樱toys、jr杰尼斯小屋、臣玩物、咔咔星球、手办童萌会、璃初记等 三坑：仙踪秘境 ⭐️b3:模玩熊、yooooshop、jp-fans、toysstar、次元go、万事屋、萌购、818hobby、次元空间、童梦等 🌸有小黄帽研磨等人物立牌打卡点位于西区b3层818hobby店铺门口。 🌸交通：地铁【公园前】站f口 🌸地址：广东省广州市越秀区吉祥路1号 🌸时间：10:00-21:30（周一-周四） 10:00-22:00（周五、六、日） #动漫星城 #广州动漫星城 #广州二次元 #吃谷日常 #广州谷子店"
+- generic: "@牧野星澈"
+- generic: · 2024年2月1日
+- generic: 01:03
+- generic: "143"
+- generic: "#动漫星城 #打卡攻略 这里应该是广州比较有名的，二次元聚集地了，节假日有好多cos老师，谷子周边.手办应有尽有 #广州动漫星城"
+- generic: "@忍者之路"
+- generic: · 4月11日
+- generic: 06:58
+- generic: "100"
+- generic: "【二次元探店】广州二次元最多的地方——动漫星城 #广州 #动漫星城 #二次元 #谷店 #吃谷"
+- generic: "@大神乔克"
+- generic: · 2025年12月9日
+- generic: 01:44
+- generic: "664"
+- generic: "有个小女孩努力的搞了#动漫星城 #吃谷 #二次元"
+- generic: "@轻孝女"
+- generic: · 2023年8月30日
+- generic: 图文
+- generic: "49"
+- generic: "二次元广州旅游攻略🥳扫谷圣地动漫星城！ 。 🎀来广州旅游发现一个二次元必打卡的好地方🥰 . 📍广州市越秀区中山五路 219 号 （地铁公园前站 F 出口） 🚇交通：地铁 1 号线或 2 号线公园前站 F 出口，出来就是动漫星城啦！ 🕙营业时间：10:00-22:00 —— 🌟吃谷路线： ✅西区负二层和西区夹层： 动漫周边类：万代、樱漫书店、手办童萌会、专业兵模等 谷子类：Goodslove、818吃谷怪、PM TOY、多美卡等 游戏类：Play Station、机迷会、猫本桌游 . ✅西区负三层： 动漫周边：TOYSSTAR、万事屋、JP-FANS书店等 谷子类：萌购、次元go、模玩熊、yoooo shop、818HOBBY等 . ✅东区负二层和夹层 谷子类：ANIMATE、粤拆、甘乐屋等 动漫周边类：中古一番街 . ✅东区负三层 谷子类：潮前汇、墟弥goods、暮色星球 —— 🎈吃谷小贴士： 💕除了吃谷，动漫星城还有很多其他好玩的地方： 🥰有很多平价衣服，女生可以在这里尽情买买买🛍️ 🍔有很多吃的，比如大快活、遇见小面、百利家、赛百味、和府捞面、CoCo都可、茶救星球、星巴克、瑞幸、猴古功夫、Potato Corner、Shego icecream等 📸有很多拍照打卡的地方 如樱漫书店、萌购、次元go、九龙冰室、遇见小面、阿婆牛等 —— 总之，广州动漫星城是一个非常适合吃谷和逛街的地方，喜欢二次元的朋友来广州的时候可以去打卡哦！🎉 #广州动漫星城 #吃谷攻略 #广州旅游 #出门探路去 #遇见青森系夏日@出片情报局"
+- generic: "@帝都逛吃逛吃研究生"
+- generic: · 2024年8月15日
+- generic: 00:40
+- generic: "4"
+- generic: "ILOVETOY广州动漫星城店开业首日#二次元 #动漫周边 #模型 #手办 #吃谷 @ILOVETOY"
+- generic: "@ILOVETOY动漫周边"
+- generic: · 2025年7月27日
+- generic: 01:20
+- generic: 3.9万
+- generic: "#广州二次元 #动漫星城 #广州吃谷 #线下吃谷 #盲抽"
+- generic: "@Toknow"
+- generic: · 2023年8月17日
+- generic: 01:17
+- generic: "261"
+- generic: "动漫星城打卡攻略 来跟着我一起打卡吧~#漫展 #周末去哪玩 #手办 #萤火虫漫展 #好物推荐🔥"
+- generic: "@半口芝士。"
+- generic: · 2025年11月21日
+- paragraph: 相关搜索
+- paragraph: 广州动漫星城西区在哪
+- paragraph: 动漫星城西区分布图
+- paragraph: 动漫星城f入口怎么去
+- paragraph: 广州动漫星城门店
+- paragraph: 动漫星城西区负三层
+- paragraph: 星巴克动漫星城西区
+- paragraph: 广州动漫星城附近美食
+- paragraph: 争鲜回转寿司动漫星城

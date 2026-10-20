@@ -1,0 +1,265 @@
+- generic: 潮玩谷广州店
+- generic: 小红书号：18955975369
+- generic: IP属地：广东
+- generic: "工作日：10:00-21:40 节假日：10:00-22:00 广州店：动漫星城西区负三层BW335-336潮玩谷 广州二店：动漫星城西区负二层W2A032-34 AOYEOWL熬夜猫头鹰 长沙店：天心区坡子街悦方负一层绮丽14号潮玩谷#@AOYEOWL熬夜猫头鹰 #@潮玩谷长沙店 #@潮玩谷扭蛋屋"
+- generic: "6"
+- generic: 关注
+- generic: "1557"
+- generic: 粉丝
+- generic: "552"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link "置顶":
+  - /url: /user/profile/683add95000000001d009ee2/6ab64ca3000000001203a3c1
+  - generic: 置顶
+- link "潮玩谷|双节福袋活动🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6ab64ca3000000001203a3c1
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "4"
+- link "置顶":
+  - /url: /user/profile/683add95000000001d009ee2/6ab5cfc5000000001203e8bd
+  - generic: 置顶
+- link "潮玩谷|双节狂欢🎉":
+  - /url: /user/profile/683add95000000001d009ee2/6ab5cfc5000000001203e8bd
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "2"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6ad34a85000000001c00ddf1
+- link "潮玩谷|绝区零上新🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6ad34a85000000001c00ddf1
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6ace1f20000000001803bc2c
+- link "急！第五人格吃谷推荐!":
+  - /url: /user/profile/683add95000000001d009ee2/6ace1f20000000001803bc2c
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "2"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6ac77ba800000000130180f7
+- link "潮玩谷|石纪元上新🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6ac77ba800000000130180f7
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "3"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6abe2b9a0000000013019fe2
+- link "潮玩谷|千粉福利🎁":
+  - /url: /user/profile/683add95000000001d009ee2/6abe2b9a0000000013019fe2
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "24"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6abde3de000000001803ba40
+- link "潮玩谷|终末地上新🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6abde3de000000001803ba40
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "5"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6abcc113000000001501740b
+- link "潮玩谷|鸣潮上新🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6abcc113000000001501740b
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "1"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6ab8da45000000001b02d077
+- link "潮玩谷|放学等我广播剧上新🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6ab8da45000000001b02d077
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "4"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6ab5dbf90000000012034e3a
+- link "小潭山没有天文台|铜雀锁金钗 首发活动!":
+  - /url: /user/profile/683add95000000001d009ee2/6ab5dbf90000000012034e3a
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "41"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6ab4b26f000000001500fcb0
+- link "✨重磅上新潮品集第三弹宅家时间来咯！":
+  - /url: /user/profile/683add95000000001d009ee2/6ab4b26f000000001500fcb0
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "1"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6aae0f12000000002900ec07
+- link "潮玩谷|每周福利时刻❣️":
+  - /url: /user/profile/683add95000000001d009ee2/6aae0f12000000002900ec07
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "3"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6aa5162700000000270086c4
+- link "潮玩谷|弹丸论破上新🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6aa5162700000000270086c4
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "15"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a9ffb7600000000280027a8
+- link "潮玩谷|鸣潮上新🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6a9ffb7600000000280027a8
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "12"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a9bb4cf00000000280346df
+- link "潮玩谷|稻米吃谷好去处🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6a9bb4cf00000000280346df
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "6"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a9813d7000000002900c17f
+- link "潮玩谷|盗墓笔记上新🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6a9813d7000000002900c17f
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "2"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a9528d2000000000a00a916
+- link "潮玩谷|鸣潮坠梦奇境上新🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6a9528d2000000000a00a916
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "1"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a9128f300000000280061bc
+- link "潮玩谷|明日方舟一番赏上新🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6a9128f300000000280061bc
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "1"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a8d2644000000001a029668
+- link "全职高手|永恒荣光上新":
+  - /url: /user/profile/683add95000000001d009ee2/6a8d2644000000001a029668
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "1"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a8ad6830000000038000493
+- link "潮玩谷|崩坏星穹铁道上新🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6a8ad6830000000038000493
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "5"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a8abe7b0000000022023905
+- link "潮玩谷|世界计划上新🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6a8abe7b0000000022023905
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "1"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a89636a000000002202ff66
+- link "潮玩谷|崩铁活动🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6a89636a000000002202ff66
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "10"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a8843680000000022022319
+- link "潮玩谷|火影忍者上新🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6a8843680000000022022319
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "1"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a86ee7c0000000033013787
+- link "潮玩谷|鸣潮上新🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6a86ee7c0000000033013787
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "3"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a855eac000000002102177d
+- link "潮玩谷|暑期活动🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6a855eac000000002102177d
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "4"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a8547c500000000320235c0
+- link "潮玩谷|王者荣耀立牌补货🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6a8547c500000000320235c0
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "22"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a8408dc0000000026036dcb
+- link "潮玩谷|原神璀夜华宴毛绒上新🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6a8408dc0000000026036dcb
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "1"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a801b2400000000270232ed
+- link "潮玩谷|白楚年生日活动🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6a801b2400000000270232ed
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "26"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a79c2b600000000320309ec
+- link "潮玩谷|黄少天生日活动🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6a79c2b600000000320309ec
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "31"
+- link:
+  - /url: /user/profile/683add95000000001d009ee2/6a785e460000000024027d42
+- link "潮玩谷|原神上新🌟":
+  - /url: /user/profile/683add95000000001d009ee2/6a785e460000000024027d42
+- link "潮玩谷广州店":
+  - /url: /user/profile/683add95000000001d009ee2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 潮玩谷广州店
+- generic: "2"
+- generic: 笔记・7
+- generic: 专辑・0
+- generic: 文件・0
+- generic: TA 还没有收藏任何内容哦
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

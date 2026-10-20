@@ -1,0 +1,30 @@
+- heading "潮玩谷|绝区零上新🌟" [level=1]
+- text: "💕今日上新: ✨【绝区零】「妄想天使·绳网精选」影像收藏礼盒 ✨【绝区零】妄想绮梦系列第二弹 徽章&小卡套组 千夏/爱芮/南宫羽款"
+- link "#绝区零":
+  - /url: /search_result?keyword=%25E7%25BB%259D%25E5%258C%25BA%25E9%259B%25B6&type=54&source=web_note_detail_r10
+- link "#妄想天使":
+  - /url: /search_result?keyword=%25E5%25A6%2584%25E6%2583%25B3%25E5%25A4%25A9%25E4%25BD%25BF&type=54&source=web_note_detail_r10
+- link "#千夏":
+  - /url: /search_result?keyword=%25E5%258D%2583%25E5%25A4%258F&type=54&source=web_note_detail_r10
+- link "#爱芮":
+  - /url: /search_result?keyword=%25E7%2588%25B1%25E8%258A%25AE&type=54&source=web_note_detail_r10
+- link "#南宫羽":
+  - /url: /search_result?keyword=%25E5%258D%2597%25E5%25AE%25AB%25E7%25BE%25BD&type=54&source=web_note_detail_r10
+- link "#动漫星城":
+  - /url: /search_result?keyword=%25E5%258A%25A8%25E6%25BC%25AB%25E6%2598%259F%25E5%259F%258E&type=54&source=web_note_detail_r10
+- link "#潮玩谷广州店":
+  - /url: /search_result?keyword=%25E6%25BD%25AE%25E7%258E%25A9%25E8%25B0%25B7%25E5%25B9%25BF%25E5%25B7%259E%25E5%25BA%2597&type=54&source=web_note_detail_r10
+- link "#线下吃谷":
+  - /url: /search_result?keyword=%25E7%25BA%25BF%25E4%25B8%258B%25E5%2590%2583%25E8%25B0%25B7&type=54&source=web_note_detail_r10
+- link "#米哈游":
+  - /url: /search_result?keyword=%25E7%25B1%25B3%25E5%2593%2588%25E6%25B8%25B8&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 潮玩谷广州店
+- generic: 2天前 广东
+- paragraph: 这是一片荒地点击评论
+- paragraph
+- generic: 说点什么...
+- generic: 收藏
+- generic: 评论
+- button "发送" [disabled]
+- button "取消"

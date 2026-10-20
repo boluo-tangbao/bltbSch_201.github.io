@@ -1,0 +1,201 @@
+{
+  "date": "2026-10-19",
+  "environment": "独立无登录Microsoft Edge／项目Playwright，保留正式地图配置",
+  "code": {
+    "node": 24,
+    "dataValidation": true,
+    "tests": {
+      "passed": 50,
+      "failed": 0
+    },
+    "types": true,
+    "productionBuild": true
+  },
+  "details": [
+    {
+      "placeId": "guangzhou-shop-002",
+      "width": 1440,
+      "passed": true,
+      "checks": [
+        "标题、常规／限时数量、来源隐藏、闭店隐藏、图集数量、无横向溢出",
+        "待核默认折叠、点击展开、来源链接、收起",
+        "照片载入、翻页、返回、放大、复原、关闭、焦点恢复",
+        "详情直达和刷新"
+      ],
+      "videos": [],
+      "sourceLinkCount": 12,
+      "mapFallback": true
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "width": 1440,
+      "passed": true,
+      "checks": [
+        "标题、常规／限时数量、来源隐藏、闭店隐藏、图集数量、无横向溢出",
+        "待核默认折叠、点击展开、来源链接、收起",
+        "照片载入、翻页、返回、放大、复原、关闭、焦点恢复",
+        "详情直达和刷新"
+      ],
+      "videos": [],
+      "sourceLinkCount": 3,
+      "mapFallback": true
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "width": 390,
+      "passed": true,
+      "checks": [
+        "标题、常规／限时数量、来源隐藏、闭店隐藏、图集数量、无横向溢出",
+        "待核默认折叠、点击展开、来源链接、收起",
+        "照片载入、翻页、返回、放大、复原、关闭、焦点恢复",
+        "详情直达和刷新"
+      ],
+      "videos": [],
+      "sourceLinkCount": 12,
+      "mapFallback": true
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "width": 390,
+      "passed": true,
+      "checks": [
+        "标题、常规／限时数量、来源隐藏、闭店隐藏、图集数量、无横向溢出",
+        "待核默认折叠、点击展开、来源链接、收起",
+        "照片载入、翻页、返回、放大、复原、关闭、焦点恢复",
+        "详情直达和刷新"
+      ],
+      "videos": [],
+      "sourceLinkCount": 3,
+      "mapFallback": true
+    }
+  ],
+  "guide": [
+    {
+      "id": "guangzhou-shop-002",
+      "width": 1440,
+      "passed": true,
+      "checks": [
+        "点击地点列表后从目录选择",
+        "路由、选中态、详情标题、店单和图集关联",
+        "刷新后详情保持",
+        "无横向溢出"
+      ]
+    },
+    {
+      "id": "guangzhou-shop-003",
+      "width": 1440,
+      "passed": true,
+      "checks": [
+        "点击地点列表后从目录选择",
+        "路由、选中态、详情标题、店单和图集关联",
+        "刷新后详情保持",
+        "无横向溢出"
+      ]
+    },
+    {
+      "id": "guangzhou-shop-002",
+      "width": 390,
+      "passed": true,
+      "checks": [
+        "点击地点列表后从目录选择",
+        "路由、选中态、详情标题、店单和图集关联",
+        "刷新后详情保持",
+        "无横向溢出"
+      ]
+    },
+    {
+      "id": "guangzhou-shop-003",
+      "width": 390,
+      "passed": true,
+      "checks": [
+        "点击地点列表后从目录选择",
+        "路由、选中态、详情标题、店单和图集关联",
+        "刷新后详情保持",
+        "无横向溢出"
+      ]
+    }
+  ],
+  "mapFallback": [
+    {
+      "placeId": "guangzhou-shop-002",
+      "width": 1440,
+      "passed": true,
+      "address": "广东省广州市吉祥路1号动漫星城西区",
+      "navigationLinkCount": 3
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "width": 1440,
+      "passed": true,
+      "address": "广东省广州市吉祥路1号动漫星城东区",
+      "navigationLinkCount": 3
+    },
+    {
+      "placeId": "guangzhou-shop-002",
+      "width": 390,
+      "passed": true,
+      "address": "广东省广州市吉祥路1号动漫星城西区",
+      "navigationLinkCount": 3
+    },
+    {
+      "placeId": "guangzhou-shop-003",
+      "width": 390,
+      "passed": true,
+      "address": "广东省广州市吉祥路1号动漫星城东区",
+      "navigationLinkCount": 3
+    }
+  ],
+  "onlineMap": {
+    "passed": false,
+    "reason": "网络拒绝时地址回退通过；独立连接重试收到APP Referer校验失败，关闭提示后空白，该状态回退亦未通过",
+    "sharedConnectivityRetry": {
+      "count": 4,
+      "widths": [
+        1440,
+        390
+      ],
+      "observedOn": "相城详情及分层地图",
+      "fallback": false,
+      "mapTiles": 0
+    }
+  },
+  "pageErrors": 0,
+  "localFailures": 0,
+  "initialFailure": "内置浏览器点击与同步超时；Playwright初次遗漏展开地点列表或城市分组，已纠正操作，不作为页面缺陷",
+  "publication": "本地更新，未发布",
+  "preservation": {
+    "otherPlacesUnchanged": true,
+    "otherDirectoriesUnchanged": true,
+    "priorUpdatesUnchanged": true,
+    "places": [
+      {
+        "placeId": "guangzhou-shop-002",
+        "authorAndOtherFieldsUnchanged": true,
+        "gallerySrcsAndOrderUnchanged": true,
+        "allowedCaptionChanges": [
+          {
+            "src": "images/places/Guangzhou/dmxc/西/QQ图片20260124194006.jpg",
+            "alt": "飞社长店内与非人哉陈列（作者2026-01-21实拍，海报为历史活动）"
+          }
+        ]
+      },
+      {
+        "placeId": "guangzhou-shop-003",
+        "authorAndOtherFieldsUnchanged": true,
+        "gallerySrcsAndOrderUnchanged": true,
+        "allowedCaptionChanges": [
+          {
+            "src": "images/places/Guangzhou/dmxc/东/QQ图片20260124165714.jpg",
+            "alt": "趣玩+ 门头与商品陈列（E2015–2016，作者实拍）"
+          }
+        ]
+      }
+    ],
+    "suzhouUnchanged": true,
+    "existingGuangzhouRowsUnchanged": true
+  },
+  "screenshots": [
+    "qa-west-mobile.png",
+    "qa-east-desktop.png"
+  ]
+}
