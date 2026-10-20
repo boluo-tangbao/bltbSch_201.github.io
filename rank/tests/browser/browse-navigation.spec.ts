@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test'
 import { readFileSync, mkdirSync } from 'node:fs'
+import { openMobileTools } from './browse-tools'
 
 const base = process.env.BROWSE_TEST_BASE || 'http://127.0.0.1:4173/bltbSch_201.github.io/rank/'
 const groups = JSON.parse(readFileSync('src/data/places.json', 'utf8'))
@@ -9,9 +10,13 @@ mkdirSync('test-results/evidence', { recursive: true })
 
 const preferredTags = ['扭蛋', '同人', '中古', '寄售', '手办模型', 'lolita']
 
-test('common tags stay visible while other tags collapse; filters compose and restore', async ({ page }) => {
+test('mobile tools start collapsed; tags compose and restore after opening', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 950 })
   await page.goto(base)
+  await expect(page.locator('.mobile-tools-toggle')).toHaveAttribute('aria-expanded', 'false')
+  await expect(page.locator('.board-tools-content')).not.toBeVisible()
+  expect((await page.locator('.card-photo').first().boundingBox())!.y).toBeLessThan(600)
+  await openMobileTools(page)
   const drawer = page.locator('.browse-tags')
   const toggle = page.locator('.more-tags-toggle')
   await expect(toggle).toHaveAttribute('aria-expanded', 'false')
@@ -38,6 +43,9 @@ test('common tags stay visible while other tags collapse; filters compose and re
   await expect(page.getByRole('button', { name: '移除标签：' + tag, exact: true })).toBeVisible()
   await expect(page.locator('.place-card')).toHaveCount(places.filter(p => p.city === place.city && p.tags.includes(tag)).length)
   await page.reload()
+  await expect(page.locator('.mobile-tools-toggle')).toContainText('# ' + tag)
+  await expect(page.locator('.board-tools-content')).not.toBeVisible()
+  await openMobileTools(page)
   await expect(toggle).toHaveAttribute('aria-expanded', 'false')
   await expect(page.getByRole('button', { name: '移除标签：' + tag, exact: true })).toBeVisible()
   await page.getByRole('button', { name: '移除标签：' + tag, exact: true }).click()
@@ -52,12 +60,13 @@ test('common tags stay visible while other tags collapse; filters compose and re
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
 })
 
-test('all tags remain accessible once and common tags do not disappear on resize or on the guide', async ({ page }) => {
+test('all tags remain accessible once through mobile tools and on the guide', async ({ page }) => {
   const tags = [...new Set(places.flatMap(p => p.tags))]
   for (const route of ['', 'guide/']) {
     await page.goto(base + route)
     for (const width of [1440, 390, 768]) {
       await page.setViewportSize({ width, height: 950 })
+      await openMobileTools(page)
       await expect(page.locator('.common-tags .tag-filter')).toBeVisible()
       await expect(page.locator('.more-tags-toggle')).toBeVisible()
       await expect(page.locator('.common-tags .tag-filter > button:not(.more-tags-toggle)')).toHaveText(['全部标签', ...preferredTags.map(tag => '# ' + tag)])
@@ -72,6 +81,7 @@ test('comfortable view preserves every rank and city color, improves mobile read
   for (const width of [320, 390, 768, 1440]) {
     await page.setViewportSize({ width, height: 950 })
     await page.goto(base)
+    await openMobileTools(page)
     await page.getByRole('button', { name: '紧凑', exact: true }).click()
     const compactPhotoWidth = (await page.locator('.card-photo').first().boundingBox())!.width
     const links = await page.locator('.place-card .card-link').evaluateAll(elements => elements.map(e => [e.getAttribute('href'), e.getAttribute('aria-label'), getComputedStyle(e).borderTopColor]))
@@ -95,6 +105,7 @@ test('comfortable view preserves every rank and city color, improves mobile read
     await firstCard.scrollIntoViewIfNeeded()
     await page.screenshot({ path: 'test-results/evidence/board-comfortable-' + width + '.png' })
     await page.reload()
+    await openMobileTools(page)
     await expect(page.getByRole('button', { name: '舒适', exact: true })).toHaveAttribute('aria-pressed', 'true')
   }
   const place = places.find(p => p.id === 'shanghai-shop-015')

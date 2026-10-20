@@ -38,6 +38,7 @@ const { city, tag, query, reset, linkTo } = useStoredFilters()
 const route = ref(location.hash)
 const main = ref<HTMLElement>()
 const exportOpen = ref(false)
+const toolsOpen = ref(false)
 let restoreFrame = 0
 function restoreBoardFocus() {
   if (restoreFrame) window.cancelAnimationFrame(restoreFrame)
@@ -103,22 +104,28 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
       </section>
 
       <section class="board-section" aria-labelledby="board-title">
-        <div class="section-heading"><div><span class="section-number">01</span><h2 id="board-title">图片总榜</h2><span class="desktop-note">{{ site.rankWithinTier ? '同档按顺序排名' : '同档不分先后' }}</span></div><button class="button dark" @click="exportOpen = true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 15v5h16v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>导出榜单</button></div>
+        <div class="section-heading"><div><span class="section-number">01</span><h2 id="board-title">图片总榜</h2><span class="desktop-note">{{ site.rankWithinTier ? '同档按顺序排名' : '同档不分先后' }}</span></div><button class="button dark desktop-export" @click="exportOpen = true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 15v5h16v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>导出榜单</button></div>
         <div class="filter-bar">
           <label class="city-filter"><span class="sr-only">城市筛选</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 10c0 5-6 10-6 10S6 15 6 10a6 6 0 1 1 12 0Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2" stroke="currentColor" stroke-width="1.5"/></svg><select v-model="city" aria-label="城市筛选"><option value="">全部城市</option><option v-if="city && !cities.includes(city)" :value="city">{{ city }}（暂无条目）</option><option v-for="c in cities" :key="c">{{ c }}</option></select></label>
           <label class="search-filter"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.5"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.5"/></svg><input v-model="query" type="search" placeholder="搜索店名、城市或标签…" aria-label="关键词搜索" /></label>
           <div class="filter-result"><span role="status" aria-live="polite">{{ filtered.length }} 个结果</span><button class="text-button" :disabled="!hasFilters" @click="reset">重置</button></div>
         </div>
-        <BrowseFilters :cities="cities" :colors="colors" :tags="tags" :city="city" :tag="tag" :query="query" @city="city = $event" @tag="tag = $event" @query="query = $event" />
-        <div class="photo-options">
-          <div class="board-view-controls" role="group" aria-label="榜单视图">
-            <span>榜单视图</span>
-            <button type="button" :aria-pressed="boardView === 'compact'" @click="boardView = 'compact'">紧凑</button>
-            <button type="button" :aria-pressed="boardView === 'comfortable'" @click="boardView = 'comfortable'">舒适</button>
+        <div class="board-tools">
+          <button type="button" class="mobile-tools-toggle" :aria-expanded="toolsOpen" aria-controls="board-tools-content" @click="toolsOpen = !toolsOpen"><span>{{ toolsOpen ? '收起筛选与工具' : '筛选与工具' }}<small v-if="tag"> · # {{ tag }}</small></span><span aria-hidden="true">{{ toolsOpen ? '−' : '+' }}</span></button>
+          <div id="board-tools-content" class="board-tools-content" :class="{ 'is-open': toolsOpen }">
+            <BrowseFilters :cities="cities" :colors="colors" :tags="tags" :city="city" :tag="tag" :query="query" @city="city = $event" @tag="tag = $event" @query="query = $event" />
+            <div class="photo-options">
+              <div class="board-view-controls" role="group" aria-label="榜单视图">
+                <span>榜单视图</span>
+                <button type="button" :aria-pressed="boardView === 'compact'" @click="boardView = 'compact'">紧凑</button>
+                <button type="button" :aria-pressed="boardView === 'comfortable'" @click="boardView = 'comfortable'">舒适</button>
+              </div>
+              <label v-if="boardView === 'compact'"><input v-model="showLabels" type="checkbox" />显示名称与城市</label>
+              <ShareFilters :city="city" :tag="tag" :query="query" />
+              <button type="button" class="button mobile-export" @click="exportOpen = true">导出榜单</button>
+              <span class="board-view-hint">点击卡片查看详情<span v-if="boardView === 'compact'" class="compact-hover-hint"> · 悬停隐藏店名</span><span v-else> · 图片下方显示店名与城市</span></span>
+            </div>
           </div>
-          <label v-if="boardView === 'compact'"><input v-model="showLabels" type="checkbox" />显示名称与城市</label>
-          <ShareFilters :city="city" :tag="tag" :query="query" />
-          <span class="board-view-hint">点击卡片查看详情<span v-if="boardView === 'compact'" class="compact-hover-hint"> · 悬停隐藏店名</span><span v-else> · 图片下方显示店名与城市</span></span>
         </div>
         <div v-if="!all.length && !hasFilters" class="empty-intro"><span class="empty-icon" aria-hidden="true">＋</span><div><strong>规划中，还在路上待访问</strong><p>等亲自来，再写~</p></div><span class="empty-pill">待填充</span></div>
         <div v-if="hasFilters && !filtered.length" class="no-results" role="status"><strong>没有找到匹配的条目</strong><span>试试其他关键词、城市或标签。</span><button class="text-button" @click="reset">重置筛选 ↗</button></div>

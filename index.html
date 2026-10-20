@@ -7,12 +7,13 @@
   <title>业余生活 | Life Gallery</title>
 
   <link rel="stylesheet" href="assets/css/style.css?v=6" />
+  <link rel="stylesheet" href="assets/css/home.css?v=1" />
 </head>
 
 <body>
   <div class="click-layer" id="clickLayer"></div>
 
-  <header class="hero">
+  <header class="hero home-hero">
     <nav class="navbar">
       <div class="logo">Life Gallery</div>
       <div class="nav-links">
@@ -26,22 +27,35 @@
       </div>
     </nav>
 
-    <div class="hero-content">
-      <p class="eyebrow">My After-Class Life</p>
-      <h1>我的业余生活</h1>
-      <p class="hero-text">
-        这里记录我除了工作、学习之外的生活切面：运动带来的满足感，艺术带来的沉浸式审美体验，
-        二次元带来的快乐与想象，以及旅行带来的释放自己。
-      </p>
+    <div class="home-introduction">
+      <div class="hero-content">
+        <p class="eyebrow">My After-Class Life</p>
+        <h1>我的业余生活</h1>
+        <p class="hero-text">
+          逛过的店、到场的活动，还有运动、艺术与旅行。把喜欢的事，慢慢记在这里。
+        </p>
 
-      <div class="hero-buttons">
-        <a href="#sports" class="btn primary">开始浏览</a>
-        <a href="#gallery" class="btn secondary">生活相册</a>
-        <a href="#pixel-gallery" class="btn secondary">看看我的动画老婆们</a>
+        <div class="hero-buttons">
+          <a href="#sports" class="home-text-link">认识我的生活 ↓</a>
+          <a href="#pixel-gallery" class="home-text-link">看看我的动画老婆们 ↓</a>
+        </div>
       </div>
-    </div>
 
-    <div class="scroll-hint">点击卡片进入独立页面</div>
+      <nav class="home-entries" aria-label="精选内容">
+        <a class="home-entry" href="rank/">
+          <img src="images/anime.webp" alt="苏州相城天街的玩聚猫店面" width="960" height="640" fetchpriority="high" decoding="async" />
+          <span class="home-entry-copy"><small>PLACES / 逛店手记</small><strong>逛店榜单 <span aria-hidden="true">↗</span></strong><span>亲自逛过，再聊值不值得去</span></span>
+        </a>
+        <a class="home-entry" id="home-latest-event" href="activities.html">
+          <img src="images/art.webp" alt="钢琴与乐谱" width="960" height="640" decoding="async" />
+          <span class="home-entry-copy"><small>EVENTS / 到场记录</small><strong>最近活动 <span aria-hidden="true">↗</span></strong><span id="home-latest-event-caption">翻开现场照片与视频</span></span>
+        </a>
+        <a class="home-entry" href="#sports">
+          <img src="images/travel.webp" alt="苏州相城天街外观" width="960" height="640" decoding="async" />
+          <span class="home-entry-copy"><small>LIFE / 日常切面</small><strong>生活记录 <span aria-hidden="true">↓</span></strong><span>运动、艺术、二次元和旅行</span></span>
+        </a>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -128,17 +142,6 @@
       </div>
     </section>
 
-    <section id="pixel-gallery" class="pixel-gallery card" aria-labelledby="pixel-gallery-title">
-      <div class="pixel-gallery-heading">
-        <div><span class="section-label">Anime Favorites</span><h2 id="pixel-gallery-title">我的动画老婆们</h2></div>
-        <a href="rank/" class="pixel-rank-link">去看看城市榜单 ↗</a>
-      </div>
-      <p class="pixel-gallery-intro">把喜欢的角色留在生活里。原画半身取景，点击看看她的故事和素材出处。</p>
-      <p id="pixel-gallery-status" role="status">角色相册加载中…</p>
-      <ul id="pixel-characters" class="pixel-characters" aria-label="我的动画老婆们相册"></ul>
-      <noscript><p>启用 JavaScript 可以浏览角色相册。</p></noscript>
-    </section>
-
     <section id="travel" class="life-section reverse" data-link="travel.html" tabindex="0" role="link" aria-label="进入旅游页面">
       <div class="section-text">
         <span class="section-label">04 / Travel</span>
@@ -162,6 +165,18 @@
       <div class="image-card">
         <img src="images/travel.webp" alt="苏州相城天街外观" width="960" height="640" loading="lazy" decoding="async" /><small class="photo-credit">照片：城市手记 · 苏州相城天街</small>
       </div>
+    </section>
+
+    <section id="pixel-gallery" class="pixel-gallery card" aria-labelledby="pixel-gallery-title">
+      <div class="pixel-gallery-heading">
+        <div><span class="section-label">Anime Favorites</span><h2 id="pixel-gallery-title">我的动画老婆们</h2></div>
+        <a href="rank/" class="pixel-rank-link">去看看城市榜单 ↗</a>
+      </div>
+      <p class="pixel-gallery-intro">把喜欢的角色留在生活里。原画半身取景，点击看看她的故事和素材出处。</p>
+      <p id="pixel-gallery-status" role="status">角色相册加载中…</p>
+      <ul id="pixel-characters" class="pixel-characters" aria-label="我的动画老婆们相册"></ul>
+      <button id="pixel-gallery-toggle" class="pixel-gallery-toggle" type="button" aria-expanded="false" aria-controls="pixel-characters" hidden>展开全部角色</button>
+      <noscript><p>启用 JavaScript 可以浏览角色相册。</p></noscript>
     </section>
 
     <section id="gallery" class="gallery-section">
@@ -188,6 +203,7 @@
       <div class="pixel-dialog-copy"><span class="section-label">Anime Favorites</span><h2 id="pixel-character-name"></h2><p id="pixel-character-description"></p><p id="pixel-character-debut" class="pixel-character-debut"></p><a id="pixel-character-source" class="pixel-character-source" target="_blank" rel="noopener noreferrer" hidden></a><div class="pixel-dialog-controls"><button type="button" id="pixel-previous" aria-label="上一位角色">← 上一位</button><span id="pixel-character-position" aria-live="polite"></span><button type="button" id="pixel-next" aria-label="下一位角色">下一位 →</button></div></div>
     </div>
   </dialog>
-  <script src="assets/js/script.js?v=7"></script>
+  <script src="assets/js/script.js?v=8"></script>
+  <script src="assets/js/home.js?v=1"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 import { test, expect, type Page } from '@playwright/test'
 import { readFileSync, mkdirSync } from 'node:fs'
+import { openMobileTools } from './browse-tools'
 const base = process.env.BROWSE_TEST_BASE || 'http://127.0.0.1:4173/bltbSch_201.github.io/rank/'
 const groups = JSON.parse(readFileSync('src/data/places.json', 'utf8'))
 const places = Object.entries(groups).flatMap(([city, entries]) => (entries as any[]).filter(p => p.published).map(p => ({ ...p, city })))
@@ -26,6 +27,7 @@ test('filtered board hides empty tiers without renumbering or changing ranks and
   await expect(page.locator('.tier-index')).toHaveText('04')
   await expect(page.locator('#place-card-' + hipp.id + ' a')).toHaveAttribute('aria-label', rank!)
   await expect(page.locator('.tier-empty')).toHaveCount(0)
+  await openMobileTools(page)
   await page.getByRole('button', { name: '舒适', exact: true }).click()
   await expect(page.locator('.tier-row')).toHaveCount(1)
   await page.locator('#place-card-' + hipp.id).scrollIntoViewIfNeeded()
@@ -169,6 +171,7 @@ test('sharing and result controls fit small and wide viewports', async ({ page }
     await page.goto(base + route + '?filters=1&city=上海&q=HIPPIHO')
     for (const width of [320, 390, 768, 1440]) {
       await page.setViewportSize({ width, height: 950 })
+      await openMobileTools(page)
       const share = page.getByRole('button', { name: '分享筛选', exact: true })
       const box = (await share.boundingBox())!
       expect(box.height).toBeGreaterThanOrEqual(44)
@@ -190,6 +193,7 @@ test('search stays free of repeated labels and share uses an accessible irregula
     await expect(share).toHaveClass(/is-share/)
     expect(await share.evaluate(el => getComputedStyle(el, '::after').clipPath)).toContain('polygon(')
     await page.setViewportSize({ width: 390, height: 1100 })
+    await openMobileTools(page)
     if (!route) await page.getByRole('button', { name: '舒适', exact: true }).click()
     await page.evaluate(() => document.fonts.ready)
     await share.scrollIntoViewIfNeeded()

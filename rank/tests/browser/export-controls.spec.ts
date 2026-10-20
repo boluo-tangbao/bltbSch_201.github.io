@@ -1,5 +1,6 @@
 import { test, expect, type Page } from '@playwright/test'
 import { mkdirSync, readFileSync } from 'node:fs'
+import { openMobileTools } from './browse-tools'
 
 const base = process.env.BROWSE_TEST_BASE || 'http://127.0.0.1:4173/bltbSch_201.github.io/rank/'
 const groups = JSON.parse(readFileSync('src/data/places.json', 'utf8'))
@@ -12,6 +13,7 @@ mkdirSync('test-results/evidence', { recursive: true })
 
 async function openExport(page: Page) {
   await page.goto(base + '?filters=1&q=HIPPIHO')
+  await openMobileTools(page)
   await page.getByRole('button', { name: '导出榜单', exact: true }).click()
   return page.getByRole('dialog')
 }

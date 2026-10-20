@@ -42,6 +42,7 @@ test('photo-only board, fixed city colors, written detail and complete offline c
   await page.reload()
   await expect(page.locator('.guide-detail h1')).toBeInViewport()
   await page.goto(base + '?q=很长')
+  await page.locator('.mobile-tools-toggle').click()
   await page.getByRole('button', { name: '导出榜单' }).click()
   await page.getByLabel('完整内容 · HTML 图文存档').check()
   await page.getByRole('button', { name: '生成完整内容' }).click()

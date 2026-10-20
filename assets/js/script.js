@@ -33,6 +33,8 @@ async function initializePixelGallery() {
     const response = await fetch("rank/characters.json");
     if (!response.ok) throw new Error("Character gallery unavailable");
     const characters = await response.json();
+    const toggle = document.getElementById("pixel-gallery-toggle");
+    const previewCount = toggle ? 6 : characters.length;
     function framePortrait(stage, character) {
       stage.classList.toggle("original-art", !!character.frame);
       const frame = character.frame || { width: 100, left: 0, top: 0 };
@@ -59,6 +61,7 @@ async function initializePixelGallery() {
     }
     characters.forEach((character, index) => {
       const item = document.createElement("li");
+      item.hidden = index >= previewCount;
       const button = document.createElement("button");
       button.type = "button";
       button.className = "pixel-character";
@@ -86,6 +89,17 @@ async function initializePixelGallery() {
       item.append(button);
       gallery.append(item);
     });
+    if (toggle && characters.length > previewCount) {
+      toggle.hidden = false;
+      toggle.textContent = `展开全部 ${characters.length} 位角色`;
+      toggle.addEventListener("click", () => {
+        const expanded = toggle.getAttribute("aria-expanded") !== "true";
+        toggle.setAttribute("aria-expanded", String(expanded));
+        Array.from(gallery.children).forEach((item, index) => { item.hidden = !expanded && index >= previewCount; });
+        toggle.textContent = expanded ? "收起角色相册" : `展开全部 ${characters.length} 位角色`;
+        if (!expanded) document.getElementById("pixel-gallery-title").scrollIntoView({ block: "start" });
+      });
+    }
     status.hidden = true;
     dialog.querySelector(".pixel-dialog-close").addEventListener("click", () => dialog.close());
     dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
