@@ -32,7 +32,7 @@ test('all 17 real entries sit after the place introduction and never load Bilibi
     if (directories[clip.placeId]) {
       await expect(page.locator('.shop-directory .shop-row')).toHaveCount(directories[clip.placeId].shops.filter((shop: { status: string }) => shop.status !== 'closed').length)
       await expect(page.locator('.shop-directory .is-closed')).toHaveCount(0)
-      await expect(page.locator('.shop-directory-confirmed .is-closed, .shop-directory-confirmed .shop-sources, .shop-directory-confirmed .shop-kind-evidence')).toHaveCount(0)
+      await expect(page.locator('.shop-directory-confirmed .is-closed, .shop-directory-confirmed .shop-row:has(.shop-accounts) .shop-sources, .shop-directory-confirmed .shop-row:has(.shop-accounts) .shop-kind-evidence')).toHaveCount(0)
       const more = page.locator('.shop-directory-more')
       if (await more.count()) {
         await expect(more).toHaveJSProperty('open', false)

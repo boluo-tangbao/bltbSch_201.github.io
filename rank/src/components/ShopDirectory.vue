@@ -46,8 +46,8 @@ const platformLabel = { xiaohongshu: '小红书', douyin: '抖音' }
         </dl>
         <p v-if="shop.displayStatus === 'evidence'" class="shop-time"><template v-if="shop.sourceTime">线索更新：{{ shop.sourceTime }}</template><template v-else>来源核对：<time :datetime="directory.checkedAt">{{ directory.checkedAt }}</time></template></p>
         <p v-if="shop.authorVisited" class="shop-author-visit">作者到访记录<time v-if="visitedAt" :datetime="visitedAt">（{{ visitedAt }}）</time></p>
-        <p v-if="shop.note" class="shop-evidence-note"><b>依据说明</b>{{ shop.note }}</p>
-        <template v-if="shop.displayStatus !== 'open'">
+        <p v-if="shop.note && (shop.limited || !shop.accounts?.length)" class="shop-evidence-note"><b>依据说明</b>{{ shop.note }}</p>
+        <template v-if="shop.limited ? shop.displayStatus !== 'open' : !shop.accounts?.length">
         <p class="shop-source-label">营业／位置来源</p>
         <ul class="shop-sources" :aria-label="shop.name + '的营业与位置依据'">
           <li v-for="source in shop.sources" :key="source.url + source.label"><a :href="source.url" target="_blank" rel="noopener noreferrer">{{ source.label }} ↗</a><span v-if="source.date || source.dateLabel"> · {{ source.dateLabel || source.date }}</span></li>
