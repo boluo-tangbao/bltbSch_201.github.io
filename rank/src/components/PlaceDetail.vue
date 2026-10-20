@@ -17,6 +17,7 @@ const address = computed(() => placeAddress(props.place))
 const detailParagraphs = computed(() => props.place.details.split(/\r?\n+/).map(paragraph => paragraph.trim()).filter(Boolean).map(paragraph => parseRichText(paragraph)))
 const visitNotes = computed(() => (props.place.visitNotes ?? []).map(note => parseRichText(note)))
 const shopDirectory = computed(() => (shopDirectories as Record<string, ShopDirectoryData>)[props.place.id])
+const shopDirectoryView = ref<InstanceType<typeof ShopDirectory>>()
 const chapterNav = ref<HTMLElement>()
 const activeChapter = ref('overview')
 const chapterId = (key: string) => `place-${props.place.id}-${key}`
@@ -37,11 +38,14 @@ function locateSearchMatch() {
     searchFrame = 0
     const index = createPlaceSearchIndex([props.place], shopDirectory.value ? { [props.place.id]: shopDirectory.value } : {})
     const target = matchPlaces(index, props.searchQuery!).get(props.place.id)?.target
-    const element = target ? document.getElementById(targetId(target)) : null
-    if (!element) return
-    element.focus({ preventScroll: true })
-    element.scrollIntoView({ behavior: 'instant', block: 'start' })
-    updateChapter()
+    if (target?.kind === 'shop') shopDirectoryView.value?.revealShop(target.name)
+    nextTick(() => {
+      const element = target ? document.getElementById(targetId(target)) : null
+      if (!element) return
+      element.focus({ preventScroll: true })
+      element.scrollIntoView({ behavior: 'instant', block: 'start' })
+      updateChapter()
+    })
   })
 }
 watch(() => props.searchQuery, () => nextTick(locateSearchMatch))
@@ -107,7 +111,7 @@ onBeforeUnmount(() => {
       </aside>
     </section>
     <BilibiliClips :key="place.id" :place-id="place.id" :place-name="place.name" />
-    <ShopDirectory v-if="shopDirectory" :id="chapterId('shops')" class="detail-chapter" :place-id="place.id" :directory="shopDirectory" :visited-at="place.visitedAt" />
+    <ShopDirectory v-if="shopDirectory" ref="shopDirectoryView" :id="chapterId('shops')" class="detail-chapter" :place-id="place.id" :directory="shopDirectory" :visited-at="place.visitedAt" />
     <div v-if="place.gallery.length" :id="chapterId('gallery')" class="detail-chapter"><PlaceGallery :images="place.gallery" :color="color" /></div>
     <section v-if="address" :id="chapterId('nearby')" class="place-mini-map detail-chapter" aria-labelledby="nearby-map-heading">
       <div class="place-mini-map-heading"><div><p class="section-label">AROUND HERE</p><h2 id="nearby-map-heading">店铺周边</h2></div><span>百度地图 · 无需访客登录 · 可拖动、缩放</span></div>

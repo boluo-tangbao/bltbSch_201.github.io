@@ -1,5 +1,20 @@
 import type { DirectoryShop, ShopSource } from '../types/index.ts'
 
+export function mergeShopSources(shop: Pick<DirectoryShop, 'sources' | 'kindSources'>) {
+  const merged = new Map<string, { url: string; labels: string[]; dates: string[]; roles: string[] }>()
+  for (const [role, sources] of [['营业／位置', shop.sources], ['主营', shop.kindSources ?? []]] as const) {
+    for (const source of sources) {
+      const entry = merged.get(source.url) ?? { url: source.url, labels: [], dates: [], roles: [] }
+      if (!entry.labels.includes(source.label)) entry.labels.push(source.label)
+      const date = source.dateLabel || source.date
+      if (date && !entry.dates.includes(date)) entry.dates.push(date)
+      if (!entry.roles.includes(role)) entry.roles.push(role)
+      merged.set(source.url, entry)
+    }
+  }
+  return [...merged.values()]
+}
+
 export function shopDisplayStatus(shop: DirectoryShop): 'open' | 'evidence' | 'closed' {
   if (shop.status === 'closed') return 'closed'
   return shop.operatingConfirmation === 'official-listing' || shop.accounts?.length ? 'open' : 'evidence'

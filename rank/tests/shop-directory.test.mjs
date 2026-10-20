@@ -2,12 +2,23 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { validateShopDirectories } from '../scripts/validate-data.mjs'
-import { shopDisplayStatus, shopDirectoryGroups, sourcePredatesVisit } from '../src/utils/shopDirectory.ts'
+import { mergeShopSources, shopDisplayStatus, shopDirectoryGroups, sourcePredatesVisit } from '../src/utils/shopDirectory.ts'
 
 const directories = JSON.parse(readFileSync(new URL('../src/data/shop-directories.json', import.meta.url), 'utf8'))
 const groups = JSON.parse(readFileSync(new URL('../src/data/places.json', import.meta.url), 'utf8'))
 const places = Object.values(groups).flat()
 const fixture = () => ({ test: { area: '东区', checkedAt: '2026-10-05', shops: [{ name: '测试店', floor: '负二层', status: 'unverified', note: '保留旧线索', sources: [{ label: '来源', url: 'https://example.com/source' }] }] } })
+
+test('shared evidence URLs appear once while retaining roles, dates and independent merchandise sources', () => {
+  const source = { label: '官网门店目录', url: 'https://example.com/store', dateLabel: '2026-10-20读取' }
+  const shop = { sources: [source, source], kindSources: [source, { ...source, dateLabel: '2026-10-18读取' }, { label: '商品说明', url: 'https://example.com/products' }] }
+  const before = JSON.stringify(shop)
+  assert.deepEqual(mergeShopSources(shop), [
+    { url: source.url, labels: [source.label], dates: ['2026-10-20读取', '2026-10-18读取'], roles: ['营业／位置', '主营'] },
+    { url: 'https://example.com/products', labels: ['商品说明'], dates: [], roles: ['主营'] },
+  ])
+  assert.equal(JSON.stringify(shop), before)
+})
 
 test('only verified account entries are shown as open; closed notices override accounts', () => {
   const shop = fixture().test.shops[0]
