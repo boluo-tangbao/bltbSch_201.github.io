@@ -1,0 +1,44 @@
+- heading "飞社长广州动漫星城店版本更新成功！" [level=1]
+- link "@飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577
+- text: 版本更新成功 焕新赴约 星城相见！ 老师们快来寻宝吧～
+- link "#飞社长二次元广州店":
+  - /url: /search_result?keyword=%25E9%25A3%259E%25E7%25A4%25BE%25E9%2595%25BF%25E4%25BA%258C%25E6%25AC%25A1%25E5%2585%2583%25E5%25B9%25BF%25E5%25B7%259E%25E5%25BA%2597&type=54&source=web_note_detail_r10
+- link "#焕新开业":
+  - /url: /search_result?keyword=%25E7%2584%2595%25E6%2596%25B0%25E5%25BC%2580%25E4%25B8%259A&type=54&source=web_note_detail_r10
+- link "#飞社长二次元":
+  - /url: /search_result?keyword=%25E9%25A3%259E%25E7%25A4%25BE%25E9%2595%25BF%25E4%25BA%258C%25E6%25AC%25A1%25E5%2585%2583&type=54&source=web_note_detail_r10
+- generic: 编辑于 09-30 广东
+- generic: 共 3 条评论
+- link:
+  - /url: /user/profile/61eb4af5000000001000f297?channel_type=web_search_result_notes
+- link "偏安逸雨🐾":
+  - /url: /user/profile/61eb4af5000000001000f297?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 有绿泡泡或者企鹅群吗，上新通知什么的
+- generic: 09-30广东
+- generic: "2"
+- generic: "1"
+- link:
+  - /url: /user/profile/6858cf12000000001b0201f2?channel_type=web_search_result_notes
+- link "装可爱好累":
+  - /url: /user/profile/6858cf12000000001b0201f2?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 帖子艾特的主页有群哦 或者可以私聊广州店官号~
+- generic: 09-30
+- generic: "3"
+- generic: 回复
+- link:
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_search_result_notes
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 芜湖[打招呼][打招呼]
+- generic: 10-08广东
+- generic: 赞
+- generic: 回复
+- generic: "- THE END -"
+- paragraph
+- generic: 说点什么...
+- generic: "4"
+- generic: 收藏
+- generic: "3"
+- button "发送" [disabled]
+- button "取消"

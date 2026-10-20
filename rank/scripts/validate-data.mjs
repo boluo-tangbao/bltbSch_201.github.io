@@ -1,6 +1,7 @@
 import { readFileSync, existsSync, statSync } from 'node:fs'
 import { resolve, relative, isAbsolute, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { validateBilibiliCatalog } from '../src/utils/bilibili.ts'
 
 const TIERS = ['hang', 'top', 'above', 'npc', 'bad']
 function validAliases(aliases) {
@@ -163,6 +164,15 @@ export function validateShopDirectories(directories, places) {
       names.add(shop.name)
       if (!['recent', 'listed', 'older', 'unverified', 'closed'].includes(shop.status)) fail(id, `${shop.name} 核实状态无效`)
       if (shop.operatingConfirmation !== undefined && shop.operatingConfirmation !== 'official-listing') fail(id, `${shop.name} 营业确认依据无效`)
+      if (shop.limited !== undefined) {
+        const limited = shop.limited
+        if (!object(limited) || !['store', 'theme'].includes(limited.scope) || !text(limited.period)) fail(id, `${shop.name} 限时信息须注明 store/theme 范围与非空档期 period`)
+        else {
+          for (const key of ['startsOn', 'endsOn']) if (limited[key] !== undefined && !validDate(limited[key])) fail(id, `${shop.name} 限时 ${key} 必须是真实 YYYY-MM-DD 日期；未知年份请仅填 period`)
+          if (validDate(limited.startsOn) && validDate(limited.endsOn) && limited.startsOn > limited.endsOn) fail(id, `${shop.name} 限时开始日期不能晚于结束日期`)
+          if (validDate(limited.endsOn) && limited.endsOn < directory.checkedAt && shop.status !== 'closed') fail(id, `${shop.name} 已结束的限时条目必须标为 closed，仅留档`)
+        }
+      }
       if (shop.kind !== undefined && !text(shop.kind)) fail(id, `${shop.name} 主营必须为非空文字`)
       if (shop.kindSources !== undefined) {
         if (!text(shop.kind) || !Array.isArray(shop.kindSources) || !shop.kindSources.length) fail(id, `${shop.name} 主营依据需要非空主营与来源数组`)
@@ -197,7 +207,7 @@ export function validateShopDirectories(directories, places) {
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const root = fileURLToPath(new URL('../', import.meta.url)), data = {}
   try {
-    for (const name of ['site', 'places', 'updates', 'shop-directories']) {
+    for (const name of ['site', 'places', 'updates', 'shop-directories', 'bilibili-videos']) {
       try { data[name] = JSON.parse(readFileSync(resolve(root, `src/data/${name}.json`), 'utf8')) }
       catch (error) { throw new Error(`${name}.json 无法解析：${error.message}`) }
     }
@@ -206,6 +216,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       const target = resolve(publicRoot, path), rel = relative(publicRoot, target)
       return !rel.startsWith('..') && !isAbsolute(rel) && existsSync(target) && statSync(target).isFile() && !!extname(target)
     }, data['shop-directories'])
+    errors.push(...validateBilibiliCatalog(data['bilibili-videos'], Object.values(data.places).flat().map(p => p.id)))
     if (errors.length) throw new Error(errors.join('\n'))
     console.log(`数据校验通过：${Object.values(data.places).reduce((n, entries) => n + entries.length, 0)} 个条目，${data.updates.length} 条更新。`)
   } catch (error) { console.error(error.message); process.exitCode = 1 }

@@ -1,0 +1,43 @@
+- heading "鸣潮新品已到🔥" [level=1]
+- text: ✨鸣潮西格莉卡春野觅羽主题礼盒西格莉卡款 ✨鸣潮共鸣回溯主题套组今汐、长离、守岸人、椿款 ✨鸣潮共鸣者主题漂泊者毛绒玩偶 星炬学院Ver. 女漂泊者款 ✨鸣潮像素共鸣者主题仿吸塑挂件千咲、达妮娅、莫宁、琳奈款 ✨鸣潮共鸣者主题鼠标垫仇远、千咲、莫宁、爱弥斯、西格莉卡款 ✨鸣潮共鸣者主题场景立绘立牌 西格莉卡款
+- link "#鸣潮":
+  - /url: /search_result?keyword=%25E9%25B8%25A3%25E6%25BD%25AE&type=54&source=web_note_detail_r10
+- link "#动漫周边":
+  - /url: /search_result?keyword=%25E5%258A%25A8%25E6%25BC%25AB%25E5%2591%25A8%25E8%25BE%25B9&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 鸣潮共鸣回溯主题套组
+- generic: 编辑于 10-02 上海
+- generic: 共 3 条评论
+- link:
+  - /url: /user/profile/66692c7b0000000003033ad9?channel_type=web_profile_page
+- link "柒":
+  - /url: /user/profile/66692c7b0000000003033ad9?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 问问鼠标垫可以线上买吗
+- generic: 10-03江苏
+- generic: "1"
+- generic: "1"
+- link:
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_profile_page
+- link "暴蒙BOOMCOMIC广州动漫星城":
+  - /url: /user/profile/5606455667bc65574b1a50f0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 可以 运费自理
+- generic: 10-03上海
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/69aebead000000003302a9de?channel_type=web_profile_page
+- link "星炬学院预科一年级---琳奈":
+  - /url: /user/profile/69aebead000000003302a9de?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 请问这个有琳奈款的吗？
+- generic: 10-04广东
+- generic: 赞
+- generic: 回复
+- generic: "- THE END -"
+- paragraph
+- generic: 说点什么...
+- generic: "65"
+- generic: "14"
+- generic: "3"
+- button "发送" [disabled]
+- button "取消"

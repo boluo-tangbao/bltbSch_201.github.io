@@ -1,0 +1,417 @@
+{
+  "videos": [
+    {
+      "id": "shanghai-ranking-bv1uuwizfevv",
+      "bvid": "BV1uUWizfEvv",
+      "title": "纯主观锐评魔都上海所有二次元商圈从夯到拉",
+      "sourceUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/",
+      "retrievedAt": "2026-10-17",
+      "metadataSource": "https://api.bilibili.com/x/web-interface/view?bvid=BV1uUWizfEvv",
+      "chapterSource": "https://api.bilibili.com/x/player/v2?bvid=BV1uUWizfEvv&cid=33131596631",
+      "chapterStatus": "available",
+      "pages": [
+        {
+          "page": 1,
+          "cid": 33131596631,
+          "title": "纯主观锐评魔都上海所有二次元商圈从夯到拉",
+          "durationSeconds": 735
+        }
+      ],
+      "chapters": [
+        {
+          "id": "p1-0",
+          "title": "引言",
+          "page": 1,
+          "startSeconds": 0,
+          "endSeconds": 38
+        },
+        {
+          "id": "p1-38",
+          "title": "区域划分",
+          "page": 1,
+          "startSeconds": 38,
+          "endSeconds": 89
+        },
+        {
+          "id": "p1-89",
+          "title": "迪美+新世界城",
+          "page": 1,
+          "startSeconds": 89,
+          "endSeconds": 170
+        },
+        {
+          "id": "p1-170",
+          "title": "第一百货+华盛小亭",
+          "page": 1,
+          "startSeconds": 170,
+          "endSeconds": 250
+        },
+        {
+          "id": "p1-250",
+          "title": "南京路百联+百米香榭+静安大悦城",
+          "page": 1,
+          "startSeconds": 250,
+          "endSeconds": 404
+        },
+        {
+          "id": "p1-404",
+          "title": "五角场百联+五角场万达",
+          "page": 1,
+          "startSeconds": 404,
+          "endSeconds": 498
+        },
+        {
+          "id": "p1-498",
+          "title": "美罗城+TPY+米角+鑫耀二期",
+          "page": 1,
+          "startSeconds": 498,
+          "endSeconds": 551
+        },
+        {
+          "id": "p1-551",
+          "title": "普陀HIPPIHO+环球港",
+          "page": 1,
+          "startSeconds": 551,
+          "endSeconds": 623
+        },
+        {
+          "id": "p1-623",
+          "title": "浦东lalaport+正大广场",
+          "page": 1,
+          "startSeconds": 623,
+          "endSeconds": 650
+        },
+        {
+          "id": "p1-650",
+          "title": "外文书店+悦荟广场",
+          "page": 1,
+          "startSeconds": 650,
+          "endSeconds": 734
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "id": "shanghai-shop-007-bv1uuwizfevv",
+      "placeId": "shanghai-shop-007",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-89",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 89,
+      "method": "video-frames",
+      "evidence": "迪美购物中心外观在89.5秒已出现，随后画内字幕以“首先是迪美购物中心”展开介绍；保留外观引入。",
+      "evidenceFrames": [
+        89,
+        89.5,
+        93
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=89"
+    },
+    {
+      "id": "shanghai-shop-003-bv1uuwizfevv",
+      "placeId": "shanghai-shop-003",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-89",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 131,
+      "method": "video-frames",
+      "evidence": "131.75秒仍为迪美总结，132秒切新世界城外观，随后字幕介绍本城四楼谷子店；从转场前的整数秒保留完整开头。",
+      "evidenceFrames": [
+        131.75,
+        132,
+        135
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=131"
+    },
+    {
+      "id": "shanghai-shop-001-bv1uuwizfevv",
+      "placeId": "shanghai-shop-001",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-170",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 169,
+      "method": "video-frames",
+      "evidence": "169秒仍为前段榜单，169.5秒切第一百货外观，172秒字幕以“逛完新世界城可以走后门”开始路线引入。",
+      "evidenceFrames": [
+        169,
+        169.5,
+        172
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=169",
+      "chapterOverlapNote": "实际视频引入早于章节标记（170 秒），按相邻原始视频帧及画内字幕核查后保留169秒起的完整引入；不是回退至章节开头。"
+    },
+    {
+      "id": "shanghai-shop-004-bv1uuwizfevv",
+      "placeId": "shanghai-shop-004",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-170",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 207,
+      "method": "video-frames",
+      "evidence": "207秒仍为第一百货总结，207.5秒切“上海华盛街”入口，211秒字幕从走新世界城地下、刚进地铁站介绍华盛小亭；上海地点及后文别名一致。",
+      "evidenceFrames": [
+        207,
+        207.5,
+        211
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=207"
+    },
+    {
+      "id": "shanghai-shop-002-bv1uuwizfevv",
+      "placeId": "shanghai-shop-002",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-250",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 248,
+      "method": "video-frames",
+      "evidence": "248秒仍为华盛小亭总结，248.5秒切百联ZX外观，252秒字幕开始“无需多言的夯，上海SKP”；ZX与网站南京路百联对应。",
+      "evidenceFrames": [
+        248,
+        248.5,
+        252
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=248",
+      "chapterOverlapNote": "实际视频引入早于章节标记（250 秒），按相邻原始视频帧及画内字幕核查后保留248秒起的完整引入；不是回退至章节开头。"
+    },
+    {
+      "id": "shanghai-shop-005-bv1uuwizfevv",
+      "placeId": "shanghai-shop-005",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-250",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 287,
+      "method": "video-frames",
+      "evidence": "287秒仍为百联ZX尾句，287.5秒切百米香榭标题及通道，291秒字幕介绍其在汉口路、近中福城的位置。",
+      "evidenceFrames": [
+        287,
+        287.5,
+        288,
+        291
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=287"
+    },
+    {
+      "id": "shanghai-shop-008-bv1uuwizfevv",
+      "placeId": "shanghai-shop-008",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-250",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 325,
+      "method": "video-frames",
+      "evidence": "325.5秒仍为香榭榜单，325.75秒开始切大悦城外观，331秒字幕介绍其位于四行仓库对面；保留外观开头。",
+      "evidenceFrames": [
+        325.5,
+        325.75,
+        326,
+        331
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=325"
+    },
+    {
+      "id": "shanghai-shop-006-bv1uuwizfevv",
+      "placeId": "shanghai-shop-006",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-404",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 403,
+      "method": "video-frames",
+      "evidence": "403.75秒仍为五角场区域地图，404秒切五角场百联ZX外观，后文开始与南京路百联比较；选择本商圈外观引入，不复用整段区域概述。",
+      "evidenceFrames": [
+        403.75,
+        404,
+        410
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=403",
+      "chapterOverlapNote": "实际视频引入早于章节标记（404 秒），按相邻原始视频帧及画内字幕核查后保留403秒起的完整引入；不是回退至章节开头。"
+    },
+    {
+      "id": "shanghai-shop-009-bv1uuwizfevv",
+      "placeId": "shanghai-shop-009",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-404",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 443,
+      "method": "video-frames",
+      "evidence": "443秒仍为五角场百联总结，443.5秒切“五角场万达”标题，446秒字幕开始“我最近发现的一个宝藏商场”。",
+      "evidenceFrames": [
+        443,
+        443.5,
+        444,
+        446
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=443"
+    },
+    {
+      "id": "shanghai-shop-015-bv1uuwizfevv",
+      "placeId": "shanghai-shop-015",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-498",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 487,
+      "method": "video-frames",
+      "evidence": "487秒仍为徐汇两公里圈概述，487.5秒字幕正式转入“徐家汇主要就美罗城和tpy中心，它们俩挺难评”；保留共同引入及其后评价，498秒已是美罗城具体店铺清单。",
+      "evidenceFrames": [
+        487,
+        487.5,
+        489,
+        493,
+        498
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=487",
+      "chapterOverlapNote": "实际视频引入早于章节标记（498 秒），按相邻原始视频帧及画内字幕核查后保留487秒起的完整引入；不是回退至章节开头。"
+    },
+    {
+      "id": "shanghai-shop-012-bv1uuwizfevv",
+      "placeId": "shanghai-shop-012",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-498",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 507,
+      "method": "video-frames",
+      "evidence": "507秒仍为美罗城尾句，507.5秒画面与字幕转为“而隔壁的tpy中心只在最下面一层有谷店”，介绍开始；保留完整转折句。",
+      "evidenceFrames": [
+        507,
+        507.5,
+        508
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=507"
+    },
+    {
+      "id": "shanghai-shop-013-bv1uuwizfevv",
+      "placeId": "shanghai-shop-013",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-498",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 529,
+      "method": "video-frames",
+      "evidence": "529秒仍在游戏公司周边概述，530秒起“如果你是它们的忠实粉丝”是下一句的条件引入，532秒字幕接“可以参观过后去1公里外的鑫耀二期”，画面与网站夜景、雕像语境对应。",
+      "evidenceFrames": [
+        529,
+        530,
+        532,
+        533
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=529"
+    },
+    {
+      "id": "shanghai-shop-021-bv1uuwizfevv",
+      "placeId": "shanghai-shop-021",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-551",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 551,
+      "method": "video-frames",
+      "evidence": "551.5秒仍为鑫耀总结，552秒切HIPPIHO招牌及吉他墙，555秒字幕介绍其在普陀区、近长寿路；网站“少女乐队乐器店”正文和图集明确以HIPPIHO为代表，只引用这个代表案例。",
+      "evidenceFrames": [
+        551.5,
+        552,
+        555
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=551"
+    },
+    {
+      "id": "shanghai-shop-018-bv1uuwizfevv",
+      "placeId": "shanghai-shop-018",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-551",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 595,
+      "method": "video-frames",
+      "evidence": "595秒仍为HIPPIHO总结，595.5秒切环球港中庭，598秒字幕以“环球港只去过一次”开始正式评价；保留中庭引入。",
+      "evidenceFrames": [
+        595,
+        595.5,
+        596,
+        598
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=595"
+    },
+    {
+      "id": "shanghai-shop-014-bv1uuwizfevv",
+      "placeId": "shanghai-shop-014",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-623",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 622,
+      "method": "video-frames",
+      "evidence": "622.75秒仍为环球港总结，623秒切正大广场与自由高达的并列引入图，随后在浦东语境介绍两商场；金桥LaLaport由自由高达画面与后文高达特色唯一对应，保留完整共同引入。",
+      "evidenceFrames": [
+        622.75,
+        623,
+        626,
+        630
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=622",
+      "chapterOverlapNote": "实际视频引入早于章节标记（623 秒），按相邻原始视频帧及画内字幕核查后保留622秒起的完整引入；不是回退至章节开头。"
+    },
+    {
+      "id": "shanghai-shop-010-bv1uuwizfevv",
+      "placeId": "shanghai-shop-010",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-650",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 650,
+      "method": "video-frames",
+      "evidence": "650秒仍为浦东段结论，650.5秒切福州路390号外文书店门头，654秒字幕明确“外文书店位于福州路上”；保留门头引入。",
+      "evidenceFrames": [
+        650,
+        650.5,
+        651,
+        654
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=650"
+    },
+    {
+      "id": "shanghai-shop-011-bv1uuwizfevv",
+      "placeId": "shanghai-shop-011",
+      "videoId": "shanghai-ranking-bv1uuwizfevv",
+      "chapterId": "p1-650",
+      "page": 1,
+      "status": "verified",
+      "startSeconds": 680,
+      "method": "video-frames",
+      "evidence": "680秒仍为外文书店结论，680.5秒切悦荟广场门店画面，682秒显示“悦荟广场”标题，684秒字幕介绍其在百联ZX对面；保留外景引入。",
+      "evidenceFrames": [
+        680,
+        680.5,
+        682,
+        684
+      ],
+      "checkedAt": "2026-10-17",
+      "reviewUrl": "https://www.bilibili.com/video/BV1uUWizfEvv/?p=1&t=680"
+    }
+  ]
+}

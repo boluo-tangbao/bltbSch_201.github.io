@@ -1,0 +1,178 @@
+{
+  "placeId": "shanghai-shop-004",
+  "checkedAt": "2026-10-18",
+  "status": "阶段性结果",
+  "pending": [
+    {
+      "name": "圆圆的ES二次元店",
+      "kind": "动漫周边（自嘲熊）",
+      "status": "listed",
+      "note": "2025年新闻晨报实地采访列出本店及自嘲熊挂件。近名账号“圆圆（手办周边es售卖）”有售卖内容，但已读主页没有华盛地址，尚未证实是同一门店；不接入该账号，不猜楼层。",
+      "sources": [
+        {
+          "label": "新闻晨报王丽芳·人民广场地下谷圈实地采访",
+          "url": "https://ep.shxwcb.com/2025/08/22/20250822-03-1_20250821235021.html",
+          "date": "2025-08-22"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "新闻晨报王丽芳·人民广场地下谷圈实地采访",
+          "url": "https://ep.shxwcb.com/2025/08/22/20250822-03-1_20250821235021.html",
+          "date": "2025-08-22"
+        }
+      ],
+      "result": "有效线索待核",
+      "query": "圆圆的ES二次元店",
+      "mode": "小红书内容反查主页；抖音用户异名搜索",
+      "candidateAccount": {
+        "name": "圆圆（手办周边es售卖）",
+        "handle": "2290626801",
+        "url": "https://www.xiaohongshu.com/user/profile/644fde82000000002a008e35",
+        "scope": null
+      },
+      "next": "补核与华盛本店关联的近期本人经营依据"
+    },
+    {
+      "name": "萌猫乐谷趣",
+      "kind": "动漫／游戏周边、寄售周边、缝纫自习",
+      "status": "listed",
+      "note": "上海黄浦2026-03-23报道实访华盛小亭本店，介绍周边陈列、闲置流转和缝纫自习。已打开抖音同名认证商家号，但主页无华盛地址且0作品，关联与当前营业仍待核实，暂不接入accounts。",
+      "sources": [
+        {
+          "label": "上海黄浦shhp·萌猫乐谷趣实地报道",
+          "url": "https://www.sohu.com/a/1000048429_121668715",
+          "date": "2026-03-23"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "上海黄浦shhp·店内品类与缝纫区介绍",
+          "url": "https://www.sohu.com/a/1000048429_121668715",
+          "date": "2026-03-23"
+        }
+      ],
+      "result": "有效线索待核",
+      "query": "萌猫乐谷趣",
+      "mode": "抖音用户及主页",
+      "candidateAccount": {
+        "name": "萌猫乐谷趣手作屋官方号",
+        "handle": "42277614374",
+        "url": "https://www.douyin.com/user/MS4wLjABAAAACLNdDBM7GYyOs5IYIVRs_B1ythOhfPamMTFXlcJX5efLkdHwrf4OY2eA9MXL0Mhx",
+        "scope": null
+      },
+      "next": "补核与华盛本店关联的近期本人经营依据"
+    },
+    {
+      "name": "亿加谷店",
+      "floor": "负一层（开业帖指罗森方向）",
+      "kind": "动漫周边、寄售周边",
+      "status": "listed",
+      "note": "已读2025年开业原帖，正文指负一层罗森方向并介绍格子铺；搜索结果显示的日期与原帖编辑日期不同，保留原文。原帖@亿加谷店的主页现显示“用户已注销”，不作为官方账号入口；账号注销不等于实体闭店，当前营业仍待核实。",
+      "sources": [
+        {
+          "label": "北国杂货铺·亿加谷店开业原帖",
+          "url": "https://www.xiaohongshu.com/explore/68a08149000000001b03dfe8",
+          "dateLabel": "编辑于2025-08-23（原帖）；搜索结果显示2025-08-24"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "北国杂货铺·格子铺与店内陈列说明",
+          "url": "https://www.xiaohongshu.com/explore/68a08149000000001b03dfe8",
+          "dateLabel": "编辑于2025-08-23（原帖）"
+        }
+      ],
+      "result": "有效线索待核",
+      "query": "亿加谷店",
+      "mode": "抖音用户；小红书开业帖@本人",
+      "candidateAccount": {
+        "name": "用户已注销",
+        "handle": "95177333367",
+        "url": "https://www.xiaohongshu.com/user/profile/650f1b390000000017020be8",
+        "scope": null
+      },
+      "next": "核实新的本人经营号及当前铺位"
+    }
+  ],
+  "excluded": [
+    {
+      "name": "UGOODS",
+      "aliases": [
+        "ugoods"
+      ],
+      "discoveredBy": "小红书B2导览图片；抖音日乙攻略结果",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/6a12f8d6000000003601e41b",
+      "sourceDate": null,
+      "query": "UGOODS",
+      "mode": "抖音用户",
+      "accountUrl": "https://www.douyin.com/user/MS4wLjABAAAA4Ex3Jj4BPjmIvWOCC50t1eWAUjb5XqPJhwj-hDl_r5o",
+      "result": "暂不接入",
+      "reason": "同名抖音号为私密账号、无简介，未核实华盛关联；不是已确认的商家主页。不能与Agoodz合并。",
+      "next": "站内用户补查及原始导览时间、门头核实"
+    },
+    {
+      "name": "小哈house",
+      "aliases": [],
+      "discoveredBy": "抖音热猩市民攻略内容结果",
+      "sourceUrl": "https://www.douyin.com/search/%E4%B8%8A%E6%B5%B7%20%E5%8D%8E%E7%9B%9B%E5%B0%8F%E4%BA%AD%20%E8%B0%B7%E5%BA%97",
+      "sourceDate": null,
+      "dateLabel": "6月27日（结果未显示年份）",
+      "query": "小哈house",
+      "mode": "抖音用户",
+      "accountUrl": null,
+      "result": "暂不接入",
+      "reason": "检查结果主要为演员、个人及电池品牌，无本店匹配账号；原始攻略详情未核实，结果页仅用于发现，不直接投入店单。",
+      "next": "小红书用户与原帖作者补查"
+    },
+    {
+      "name": "自嘲熊窝",
+      "aliases": [],
+      "discoveredBy": "抖音商圈闭店／搬迁检索结果",
+      "sourceUrl": "https://www.douyin.com/search/%E5%8D%8E%E7%9B%9B%E5%B0%8F%E4%BA%AD%20%E9%97%AD%E5%BA%97%20%E6%90%AC%E8%BF%81",
+      "sourceDate": null,
+      "dateLabel": "4月25日（结果未显示年份）",
+      "query": "自嘲熊窝 华盛",
+      "mode": "抖音用户",
+      "accountUrl": null,
+      "result": "关联不明暂不接入",
+      "reason": "结果为其他个人／资讯账号；无法判断“自嘲熊窝”是独立店名还是商品描述，不能与圆圆或胖FuFu合并。",
+      "next": "读取原帖门头和名称"
+    },
+    {
+      "name": "两三谷屋",
+      "aliases": [],
+      "discoveredBy": "抖音芋圆小卷2024年旧攻略",
+      "sourceUrl": "https://www.douyin.com/search/%E4%B8%8A%E6%B5%B7%20%E5%8D%8E%E7%9B%9B%E5%B0%8F%E4%BA%AD%20%E8%B0%B7%E5%BA%97",
+      "sourceDate": "2024-12-01",
+      "query": "上海 华盛小亭 谷店",
+      "mode": "抖音内容",
+      "accountUrl": null,
+      "result": "过期线索仅归档",
+      "reason": "本轮取得的独立华盛线索早于2025，未取得可用的新来源，不放入展开更多。",
+      "next": "有2025—2026新线索后再核实"
+    },
+    {
+      "name": "六柴谷屋（华盛旧线索）",
+      "aliases": [],
+      "discoveredBy": "抖音芋圆小卷2024年旧攻略",
+      "sourceUrl": "https://www.douyin.com/search/%E4%B8%8A%E6%B5%B7%20%E5%8D%8E%E7%9B%9B%E5%B0%8F%E4%BA%AD%20%E8%B0%B7%E5%BA%97",
+      "sourceDate": "2024-12-01",
+      "query": "上海 华盛小亭 谷店",
+      "mode": "抖音内容",
+      "accountUrl": null,
+      "result": "过期线索仅归档",
+      "reason": "不把第一百货C馆本人账号或其2025年新址用于确认华盛旧店；本轮无有效华盛新依据。",
+      "next": "华盛分店独立新依据"
+    }
+  ],
+  "statistics": {
+    "namedCandidates": 27,
+    "confirmed": 19,
+    "pending": 3,
+    "associationUnresolved": 3,
+    "outdated": 2,
+    "closed": 0
+  }
+}
+

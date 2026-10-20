@@ -1,0 +1,20 @@
+- generic: 新樂屋的小伙计
+- generic: 小红书号：27458690611
+- generic: IP属地：广东
+- generic: 平平无奇吃谷小能手一枚，欢迎各位二次元小伙伴随时光临～ 🈺10:00~22:00全年无休 广州市动漫星城东区负三层E3067-3069
+- generic: "70"
+- generic: 关注
+- generic: "72"
+- generic: 粉丝
+- generic: "146"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link "置顶":
+  - /url: /user/profile/68b8fce800000000190158e6/6ad193960000000018007bd8
+  - generic: 置顶
+- link "🔥新樂屋开放中古寄售啦！":
+  - /url: /user/profile/68b8fce800000000190158e6/6ad193960000000018007bd8

@@ -1,0 +1,330 @@
+{
+  "date": "2026-10-19",
+  "environment": "独立无登录Microsoft Edge／项目Playwright，保留正式地图配置",
+  "code": {
+    "node": 24,
+    "dataValidation": true,
+    "tests": {
+      "passed": 50,
+      "failed": 0
+    },
+    "types": true,
+    "productionBuild": true
+  },
+  "details": [
+    {
+      "placeId": "suzhou-shop-001",
+      "width": 1440,
+      "passed": true,
+      "checks": [
+        "标题、常规／限时数量、来源隐藏、闭店隐藏、图集数量、无横向溢出",
+        "照片载入、翻页、返回、放大、复原、关闭、焦点恢复",
+        "详情直达和刷新"
+      ],
+      "videos": [],
+      "sourceLinkCount": 0,
+      "mapFallback": true
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "width": 1440,
+      "passed": true,
+      "checks": [
+        "标题、常规／限时数量、来源隐藏、闭店隐藏、图集数量、无横向溢出",
+        "待核默认折叠、点击展开、来源链接、收起",
+        "照片载入、翻页、返回、放大、复原、关闭、焦点恢复",
+        "视频打开后自动载入并实际播放",
+        "详情直达和刷新"
+      ],
+      "videos": [
+        {
+          "alt": "二次元电梯",
+          "readyState": 4,
+          "duration": 11.042,
+          "currentTime": 0.391084,
+          "paused": false,
+          "error": null
+        }
+      ],
+      "sourceLinkCount": 11,
+      "mapFallback": true
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "width": 1440,
+      "passed": true,
+      "checks": [
+        "标题、常规／限时数量、来源隐藏、闭店隐藏、图集数量、无横向溢出",
+        "待核默认折叠、点击展开、来源链接、收起",
+        "照片载入、翻页、返回、放大、复原、关闭、焦点恢复",
+        "视频打开后自动载入并实际播放",
+        "详情直达和刷新"
+      ],
+      "videos": [
+        {
+          "alt": "逛店通道",
+          "readyState": 4,
+          "duration": 22.362,
+          "currentTime": 0.380115,
+          "paused": false,
+          "error": null
+        },
+        {
+          "alt": "随舞现场",
+          "readyState": 4,
+          "duration": 11.549,
+          "currentTime": 0.404592,
+          "paused": false,
+          "error": null
+        }
+      ],
+      "sourceLinkCount": 11,
+      "mapFallback": true
+    },
+    {
+      "placeId": "suzhou-shop-001",
+      "width": 390,
+      "passed": true,
+      "checks": [
+        "标题、常规／限时数量、来源隐藏、闭店隐藏、图集数量、无横向溢出",
+        "照片载入、翻页、返回、放大、复原、关闭、焦点恢复",
+        "详情直达和刷新"
+      ],
+      "videos": [],
+      "sourceLinkCount": 0,
+      "mapFallback": true
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "width": 390,
+      "passed": true,
+      "checks": [
+        "标题、常规／限时数量、来源隐藏、闭店隐藏、图集数量、无横向溢出",
+        "待核默认折叠、点击展开、来源链接、收起",
+        "照片载入、翻页、返回、放大、复原、关闭、焦点恢复",
+        "视频打开后自动载入并实际播放",
+        "详情直达和刷新"
+      ],
+      "videos": [
+        {
+          "alt": "二次元电梯",
+          "readyState": 4,
+          "duration": 11.042,
+          "currentTime": 0.367357,
+          "paused": false,
+          "error": null
+        }
+      ],
+      "sourceLinkCount": 11,
+      "mapFallback": true
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "width": 390,
+      "passed": true,
+      "checks": [
+        "标题、常规／限时数量、来源隐藏、闭店隐藏、图集数量、无横向溢出",
+        "待核默认折叠、点击展开、来源链接、收起",
+        "照片载入、翻页、返回、放大、复原、关闭、焦点恢复",
+        "视频打开后自动载入并实际播放",
+        "详情直达和刷新"
+      ],
+      "videos": [
+        {
+          "alt": "逛店通道",
+          "readyState": 4,
+          "duration": 22.362,
+          "currentTime": 0.373046,
+          "paused": false,
+          "error": null
+        },
+        {
+          "alt": "随舞现场",
+          "readyState": 4,
+          "duration": 11.549,
+          "currentTime": 0.376331,
+          "paused": false,
+          "error": null
+        }
+      ],
+      "sourceLinkCount": 11,
+      "mapFallback": true
+    }
+  ],
+  "guide": [
+    {
+      "id": "suzhou-shop-001",
+      "width": 1440,
+      "passed": true,
+      "checks": [
+        "点击地点列表后从目录选择",
+        "路由、选中态、详情标题、店单和图集关联",
+        "刷新后详情保持",
+        "无横向溢出"
+      ]
+    },
+    {
+      "id": "suzhou-shop-002",
+      "width": 1440,
+      "passed": true,
+      "checks": [
+        "点击地点列表后从目录选择",
+        "路由、选中态、详情标题、店单和图集关联",
+        "刷新后详情保持",
+        "无横向溢出"
+      ]
+    },
+    {
+      "id": "suzhou-shop-003",
+      "width": 1440,
+      "passed": true,
+      "checks": [
+        "点击地点列表后从目录选择",
+        "路由、选中态、详情标题、店单和图集关联",
+        "刷新后详情保持",
+        "无横向溢出"
+      ]
+    },
+    {
+      "id": "suzhou-shop-001",
+      "width": 390,
+      "passed": true,
+      "checks": [
+        "点击地点列表后从目录选择",
+        "路由、选中态、详情标题、店单和图集关联",
+        "刷新后详情保持",
+        "无横向溢出"
+      ]
+    },
+    {
+      "id": "suzhou-shop-002",
+      "width": 390,
+      "passed": true,
+      "checks": [
+        "点击地点列表后从目录选择",
+        "路由、选中态、详情标题、店单和图集关联",
+        "刷新后详情保持",
+        "无横向溢出"
+      ]
+    },
+    {
+      "id": "suzhou-shop-003",
+      "width": 390,
+      "passed": true,
+      "checks": [
+        "点击地点列表后从目录选择",
+        "路由、选中态、详情标题、店单和图集关联",
+        "刷新后详情保持",
+        "无横向溢出"
+      ]
+    }
+  ],
+  "mapFallback": [
+    {
+      "placeId": "suzhou-shop-001",
+      "width": 1440,
+      "passed": true,
+      "address": "江苏省苏州市相城区相城大道1399号龙湖相城天街",
+      "retry": "实际点击重试后仍回退",
+      "navigationLinkCount": 3
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "width": 1440,
+      "passed": true,
+      "address": "江苏省苏州市工业园区苏州中心广场68幢星悦汇",
+      "navigationLinkCount": 3
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "width": 1440,
+      "passed": true,
+      "address": "江苏省苏州市姑苏区新市路1号SUONE金地广场",
+      "navigationLinkCount": 3
+    },
+    {
+      "placeId": "suzhou-shop-001",
+      "width": 390,
+      "passed": true,
+      "address": "江苏省苏州市相城区相城大道1399号龙湖相城天街",
+      "retry": "实际点击重试后仍回退",
+      "navigationLinkCount": 3
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "width": 390,
+      "passed": true,
+      "address": "江苏省苏州市工业园区苏州中心广场68幢星悦汇",
+      "navigationLinkCount": 3
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "width": 390,
+      "passed": true,
+      "address": "江苏省苏州市姑苏区新市路1号SUONE金地广场",
+      "navigationLinkCount": 3
+    }
+  ],
+  "onlineMap": {
+    "passed": false,
+    "reason": "网络拒绝时地址回退通过；独立连接重试收到APP Referer校验失败，关闭提示后空白，该状态回退亦未通过",
+    "sharedConnectivityRetry": {
+      "count": 4,
+      "widths": [
+        1440,
+        390
+      ],
+      "observedOn": "相城详情及分层地图",
+      "fallback": false,
+      "mapTiles": 0
+    }
+  },
+  "pageErrors": 0,
+  "localFailures": 0,
+  "initialFailure": "内置浏览器点击与同步超时；Playwright初次遗漏展开地点列表或城市分组，已纠正操作，不作为页面缺陷",
+  "publication": "本地更新，未发布",
+  "preservation": {
+    "otherPlacesUnchanged": true,
+    "otherDirectoriesUnchanged": true,
+    "priorUpdatesUnchanged": true,
+    "places": [
+      {
+        "id": "suzhou-shop-001",
+        "preservedExceptUpdatedAtAndDocumentedCaption": true,
+        "visitedAt": "2026-09-19",
+        "tier": "bad",
+        "order": 20,
+        "gallery": 4,
+        "sourcePathsUnchanged": true
+      },
+      {
+        "id": "suzhou-shop-002",
+        "preservedExceptUpdatedAtAndDocumentedCaption": true,
+        "visitedAt": "2026-09-19",
+        "tier": "top",
+        "order": 70,
+        "gallery": 20,
+        "sourcePathsUnchanged": true
+      },
+      {
+        "id": "suzhou-shop-003",
+        "preservedExceptUpdatedAtAndDocumentedCaption": true,
+        "visitedAt": "2026-09-19",
+        "tier": "above",
+        "order": 35,
+        "gallery": 13,
+        "sourcePathsUnchanged": true
+      }
+    ]
+  },
+  "sourceRetry": {
+    "url": "https://www.xiaohongshu.com/explore/6aba08d400000000010096f1",
+    "readAt": "2026-10-19",
+    "result": "原文仍无法浏览，继续复用2026-10-05读取证据",
+    "rawFile": "suzhou-notice-retry.txt"
+  },
+  "screenshots": [
+    "qa-mobile.png",
+    "qa-video-desktop.png"
+  ]
+}

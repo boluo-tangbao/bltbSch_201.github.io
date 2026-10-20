@@ -1,0 +1,168 @@
+{
+  "reviewedAt": "2026-10-18",
+  "coverage": {
+    "visibleShops": 18,
+    "confirmedOpen": 4,
+    "uncertain": 14,
+    "visibleAccountShops": 3,
+    "visibleAccountLinks": 3,
+    "closureAccount": 1
+  },
+  "rounds": [
+    {
+      "method": "外部搜索＋已有2026攻略和图集来源",
+      "result": "建立C馆分层候选，找到三丽鸥本店当前官方主题公告。"
+    },
+    {
+      "method": "小红书用户搜索：多摩万事屋／谷回／春日动漫中古店；打开匹配主页及必要经营／冲突帖",
+      "result": "核对2个在营门店号、1个旧店闭店号。排除贵阳同名春日，分清百米旧闭店帖和第一百货。"
+    },
+    {
+      "method": "作者补漏面包谷→抖音站内搜索面包谷谷→进入认证主页及作品",
+      "result": "确认C馆六楼账号KamiChaika及2026-01-28作品；同时排除漳州同名烘焙店。"
+    }
+  ],
+  "verified": [
+    {
+      "shop": "多摩万事屋（第一百货店）",
+      "platform": "xiaohongshu",
+      "name": "多摩万事屋（第一百货店）",
+      "handle": "Domo1008",
+      "url": "https://www.xiaohongshu.com/user/profile/62fb4b19000000000f005c0d",
+      "scope": "store",
+      "addressEvidence": "主页明确上海总店第一百货C馆4楼",
+      "recentPostUrl": null,
+      "recentPostDate": null,
+      "identitySource": "https://www.xiaohongshu.com/user/profile/62fb4b19000000000f005c0d",
+      "operatingCrossCheck": {
+        "label": "人民网·金台资讯（新浪转载）·第一百货商业中心实景介绍",
+        "url": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html",
+        "date": "2026-01-20"
+      }
+    },
+    {
+      "shop": "春日动漫中古店",
+      "platform": "xiaohongshu",
+      "name": "春日动漫周边（中古）",
+      "handle": "550725626",
+      "url": "https://www.xiaohongshu.com/user/profile/5c62e10800000000120269f3",
+      "scope": "store",
+      "addressEvidence": "当前简介第一百货C栋六楼，仅线下经营",
+      "recentPostUrl": "https://www.xiaohongshu.com/explore/6aabaa37000000002900d5b5",
+      "recentPostDate": null,
+      "dateLabel": "09-17（页面未显示年份，2026-10-18读取）"
+    },
+    {
+      "shop": "谷回动漫中古店（第一百货店）",
+      "platform": "xiaohongshu",
+      "name": "谷回动漫中古店",
+      "handle": "11602787116",
+      "url": "https://www.xiaohongshu.com/user/profile/661a56990000000007007000",
+      "scope": "brand",
+      "result": "已公布闭店，后台保留，前台不显示",
+      "recentPostUrl": "https://www.xiaohongshu.com/explore/6ab4ce8b0000000014003726",
+      "recentPostDate": null,
+      "dateLabel": "编辑于09-24；公告写10月8日正式闭店（页面未显示年份）"
+    },
+    {
+      "shop": "面包谷谷",
+      "platform": "douyin",
+      "name": "面包谷谷（大脸猫版",
+      "handle": "KamiChaika",
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAKH7gNtMtBSr8IotvQjs3Xe2x9DgqnMf_BAWu2Uhx6Zg",
+      "scope": "store",
+      "addressEvidence": "抖音认证店铺主页明确：面包谷谷 上海第一百货C馆6楼；多条上新文案重复同一地址",
+      "recentPostUrl": "https://www.douyin.com/video/7600395171616515173",
+      "recentPostDate": "2026-01-28"
+    }
+  ],
+  "excluded": [
+    {
+      "name": "春日中古",
+      "url": "https://www.xiaohongshu.com/user/profile/5d5ad1e800000000010088d1",
+      "handle": "49312267489",
+      "reason": "实际读取主页为贵阳服装vintage店，非上海动漫店。"
+    },
+    {
+      "name": "多摩万事屋其他分店",
+      "reason": "用户搜索见成都、厦门、徐家汇等，不替代第一百货分店。"
+    }
+  ],
+  "historicalConflict": {
+    "url": "https://www.xiaohongshu.com/explore/672ec7ad000000001901ac44",
+    "reason": "春日置顶帖虽编辑于2025-07-27，评论可见原帖始于2024-11；闭的是百米店。仅用于消解冲突，未刷新旧帖时效或作为本轮在营证据。"
+  },
+  "pending": [
+    {
+      "shop": "Mr.T 托老师の谷店",
+      "result": "未取得可接入账号；未完成逐店站内核对",
+      "nextStep": "补查正式名／别名站内用户及本分店官方地址；取得新依据后再升级营业状态"
+    },
+    {
+      "shop": "次元站台",
+      "result": "未取得可接入账号；未完成逐店站内核对",
+      "nextStep": "补查正式名／别名站内用户及本分店官方地址；取得新依据后再升级营业状态"
+    },
+    {
+      "shop": "偶尔梦游",
+      "result": "未取得可接入账号；未完成逐店站内核对",
+      "nextStep": "补查正式名／别名站内用户及本分店官方地址；取得新依据后再升级营业状态"
+    },
+    {
+      "shop": "HAPPY ZOO 小铺",
+      "result": "未取得可接入账号；未完成逐店站内核对",
+      "nextStep": "补查正式名／别名站内用户及本分店官方地址；取得新依据后再升级营业状态"
+    },
+    {
+      "shop": "巫狐魔谷店",
+      "result": "未取得可接入账号；未完成逐店站内核对",
+      "nextStep": "补查正式名／别名站内用户及本分店官方地址；取得新依据后再升级营业状态"
+    },
+    {
+      "shop": "谷的Time",
+      "result": "未取得可接入账号；未完成逐店站内核对",
+      "nextStep": "补查正式名／别名站内用户及本分店官方地址；取得新依据后再升级营业状态"
+    },
+    {
+      "shop": "Koi Tune",
+      "result": "未取得可接入账号；未完成逐店站内核对",
+      "nextStep": "补查正式名／别名站内用户及本分店官方地址；取得新依据后再升级营业状态"
+    },
+    {
+      "shop": "囍模屋",
+      "result": "未取得可接入账号；未完成逐店站内核对",
+      "nextStep": "补查正式名／别名站内用户及本分店官方地址；取得新依据后再升级营业状态"
+    },
+    {
+      "shop": "棉花猫谷屋",
+      "result": "未取得可接入账号；未完成逐店站内核对",
+      "nextStep": "补查正式名／别名站内用户及本分店官方地址；取得新依据后再升级营业状态"
+    },
+    {
+      "shop": "真谷",
+      "result": "未取得可接入账号；未完成逐店站内核对",
+      "nextStep": "补查正式名／别名站内用户及本分店官方地址；取得新依据后再升级营业状态"
+    },
+    {
+      "shop": "水豚小怪兽",
+      "result": "未取得可接入账号；未完成逐店站内核对",
+      "nextStep": "补查正式名／别名站内用户及本分店官方地址；取得新依据后再升级营业状态"
+    },
+    {
+      "shop": "CREAM CAFE",
+      "result": "未取得可接入账号；未完成逐店站内核对",
+      "nextStep": "补查正式名／别名站内用户及本分店官方地址；取得新依据后再升级营业状态"
+    },
+    {
+      "shop": "奶惜 nicegoods",
+      "result": "未取得可接入账号；未完成逐店站内核对",
+      "nextStep": "补查正式名／别名站内用户及本分店官方地址；取得新依据后再升级营业状态"
+    },
+    {
+      "shop": "萌樱",
+      "result": "未取得可接入账号；未完成逐店站内核对",
+      "nextStep": "补查正式名／别名站内用户及本分店官方地址；取得新依据后再升级营业状态"
+    }
+  ],
+  "readFailure": "春日近期帖无token的直达链接提示无法浏览；已从已核对主页正常打开并读取，研究记录使用不含token的标准链接。"
+}

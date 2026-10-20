@@ -1,0 +1,143 @@
+{
+  "query": "相城天街 玩聚猫",
+  "mode": "用户",
+  "scope": "首屏已加载用户结果",
+  "readAt": "2026-10-19"
+}
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- link "玩聚猫PURRJOY 18天前更新 小红书号：2202238410 粉丝・136 笔记・53 关注":
+  - /url: /user/profile/648830fb000000001003508b
+  - generic: 玩聚猫PURRJOY
+  - generic: 18天前更新
+  - generic: 小红书号：2202238410
+  - generic: 粉丝・136
+  - generic: 笔记・53
+  - button "关注":
+    - generic: 关注
+- link "昼日【已黑化】 小红书号：5518413053 粉丝・3 关注":
+  - /url: /user/profile/648eff280000000012036a48
+  - generic: 昼日【已黑化】
+  - generic: 小红书号：5518413053
+  - generic: 粉丝・3
+  - button "关注":
+    - generic: 关注
+- link "Anansi的玩聚库 小红书号：5546680468 粉丝・23 笔记・2 关注":
+  - /url: /user/profile/62c1476d00000000190209ec
+  - generic: Anansi的玩聚库
+  - generic: 小红书号：5546680468
+  - generic: 粉丝・23
+  - generic: 笔记・2
+  - button "关注":
+    - generic: 关注
+- link "徐老师😊对了这就是我 小红书号：SuperduperXu 粉丝・55 笔记・3 关注":
+  - /url: /user/profile/5e185d3a0000000001003bee
+  - generic: 徐老师😊对了这就是我
+  - generic: 小红书号：SuperduperXu
+  - generic: 粉丝・55
+  - generic: 笔记・3
+  - button "关注":
+    - generic: 关注
+- link "努力装修中 小红书号：417717269 粉丝・27 笔记・3 关注":
+  - /url: /user/profile/554cd6c2b203d904129a4d3d
+  - generic: 努力装修中
+  - generic: 小红书号：417717269
+  - generic: 粉丝・27
+  - generic: 笔记・3
+  - button "关注":
+    - generic: 关注
+- link "乐天玩聚馆 2天前更新 小红书号：2270987128 粉丝・45 笔记・40 关注":
+  - /url: /user/profile/640221fb0000000010028cfa
+  - generic: 乐天玩聚馆
+  - generic: 2天前更新
+  - generic: 小红书号：2270987128
+  - generic: 粉丝・45
+  - generic: 笔记・40
+  - button "关注":
+    - generic: 关注
+- link "阿力 - 藏玩聚 23天前更新 小红书号：606677436 粉丝・102 笔记・63 关注":
+  - /url: /user/profile/5b76e423ad4ba9000124e9ed
+  - generic: 阿力 - 藏玩聚
+  - generic: 23天前更新
+  - generic: 小红书号：606677436
+  - generic: 粉丝・102
+  - generic: 笔记・63
+  - button "关注":
+    - generic: 关注
+- link "Joyin玩聚星球 1小时前更新 小红书号：27760146869 文具玩具 粉丝・953 笔记・76 关注":
+  - /url: /user/profile/5b3b2dfd11be1067f1ae3037
+  - text: Joyin玩聚星球
+  - generic: 1小时前更新
+  - generic: 小红书号：27760146869
+  - generic: 文具玩具
+  - generic: 粉丝・953
+  - generic: 笔记・76
+  - button "关注":
+    - generic: 关注
+- link "玩聚城 小红书号：684631885 粉丝・46 笔记・11 关注":
+  - /url: /user/profile/5c83aa4b000000001601341c
+  - generic: 玩聚城
+  - generic: 小红书号：684631885
+  - generic: 粉丝・46
+  - generic: 笔记・11
+  - button "关注":
+    - generic: 关注
+- link "鸿楷H16商业广场 2天前更新 小红书号：18776469477 粉丝・83 笔记・5 关注":
+  - /url: /user/profile/6aacb3c30000000013031801
+  - generic: 鸿楷H16商业广场
+  - generic: 2天前更新
+  - generic: 小红书号：18776469477
+  - generic: 粉丝・83
+  - generic: 笔记・5
+  - button "关注":
+    - generic: 关注
+- link "Lorna.玩聚社 10天前更新 小红书号：26484621924 粉丝・5 笔记・3 关注":
+  - /url: /user/profile/69e2dde20000000002001006
+  - generic: Lorna.玩聚社
+  - generic: 10天前更新
+  - generic: 小红书号：26484621924
+  - generic: 粉丝・5
+  - generic: 笔记・3
+  - button "关注":
+    - generic: 关注
+- link "玩聚空间主机游戏（洪家楼店） 小红书号：27212001029 粉丝・5 笔记・7 关注":
+  - /url: /user/profile/69574b6b000000003201fef9
+  - generic: 玩聚空间主机游戏（洪家楼店）
+  - generic: 小红书号：27212001029
+  - generic: 粉丝・5
+  - generic: 笔记・7
+  - button "关注":
+    - generic: 关注
+- link "门城玩聚社 3小时前更新 小红书号：27400195055 粉丝・17 笔记・78 关注":
+  - /url: /user/profile/68fde188000000003700b4bf
+  - generic: 门城玩聚社
+  - generic: 3小时前更新
+  - generic: 小红书号：27400195055
+  - generic: 粉丝・17
+  - generic: 笔记・78
+  - button "关注":
+    - generic: 关注
+- link "玩聚牌Like pai 25天前更新 小红书号：5882451016 粉丝・8 笔记・33 关注":
+  - /url: /user/profile/651516d900000000230244eb
+  - generic: 玩聚牌Like pai
+  - generic: 25天前更新
+  - generic: 小红书号：5882451016
+  - generic: 粉丝・8
+  - generic: 笔记・33
+  - button "关注":
+    - generic: 关注
+- link "叶子玩聚🍃云 小红书号：5357689470 粉丝・46 笔记・57 关注":
+  - /url: /user/profile/62f7b47a000000001e01d265
+  - generic: 叶子玩聚🍃云
+  - generic: 小红书号：5357689470
+  - generic: 粉丝・46
+  - generic: 笔记・57
+  - button "关注":
+    - generic: 关注
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

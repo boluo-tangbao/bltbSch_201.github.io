@@ -1,0 +1,497 @@
+{
+  "place": {
+    "id": "shanghai-shop-001",
+    "name": "第一百货",
+    "tier": "hang",
+    "order": 10,
+    "summary": "位置好、门类全，南京路上最夯选择。",
+    "details": "**谷子集市、寄售、同人谷、galgame、K-pop**应有尽有。\n\n再加上地理位置的bonus，它不一定每一项都做到最强，但胜在无敌的全面性。",
+    "visitNotes": [
+      "留意活动档期：这里会有地偶表演、小型漫展和快闪咖啡等活动。"
+    ],
+    "tags": [
+      "谷子集市",
+      "galgame",
+      "地偶",
+      "寄售",
+      "同人",
+      "中古",
+      "快闪",
+      "Kpop",
+      "欧美"
+    ],
+    "cover": "images/places/Shanghai/第一百货.jpg",
+    "gallery": [
+      {
+        "src": "images/places/Shanghai/第一百货.jpg",
+        "alt": "商场外观",
+        "group": "商圈外部",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/1791366115951.jpg",
+        "alt": "楼层导览",
+        "group": "店铺外景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/1791366104590.jpg",
+        "alt": "Lola 店面",
+        "group": "店铺外景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/1791366104610.jpg",
+        "alt": "谷店街区",
+        "group": "店铺外景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/1791366104654.jpg",
+        "alt": "Lolita 店铺街区",
+        "group": "店铺外景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/1791366115898.jpg",
+        "alt": "FONZ GOODS 店面",
+        "group": "店铺外景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322606.jpg",
+        "alt": "潮趣店面",
+        "group": "店铺外景",
+        "sourceName": "作者‘2025-09-27’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322311.jpg",
+        "alt": "少女乐队周边",
+        "group": "店铺内景",
+        "sourceName": "作者‘2025-09-27’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322430.jpg",
+        "alt": "角色周边陈列",
+        "group": "店铺内景",
+        "sourceName": "作者‘2025-09-27’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322494.jpg",
+        "alt": "亚克力周边",
+        "group": "店铺内景",
+        "sourceName": "作者‘2025-09-27’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322668.jpg",
+        "alt": "谷子展示台",
+        "group": "店铺内景",
+        "sourceName": "作者‘2025-09-27’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322738.jpg",
+        "alt": "角色周边近景",
+        "group": "店铺内景",
+        "sourceName": "作者‘2025-09-27’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/image.png",
+        "alt": "主题店内布置",
+        "group": "店铺内景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/live_1b9cb1d5eb5aa1ee7a261eaa698e50d114596466.jpg",
+        "alt": "周边货架",
+        "group": "店铺内景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/QQ图片20250921192736.jpg",
+        "alt": "角色海报陈列",
+        "group": "店铺内景",
+        "sourceName": "作者直拍（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/1791366104491.jpg",
+        "alt": "角色立牌合影区",
+        "group": "额外活动",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/1791366104693.jpg",
+        "alt": "角色主题通道",
+        "group": "额外活动",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/ac3c4fd4-25eb-456c-868f-15a052ce9616.jpg",
+        "alt": "谷子集市现场",
+        "group": "额外活动",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/faadd134-fb6e-4ce5-b325-b8245ecb8356.jpg",
+        "alt": "集市摊位",
+        "group": "额外活动",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/网图补充/first-department-exterior.webp",
+        "alt": "第一百货建筑外观（网图；2026-01-20报道）",
+        "group": "商圈外部",
+        "sourceName": "人民网·金台资讯（新浪转载）（2026-01-20）",
+        "sourceUrl": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html"
+      },
+      {
+        "src": "images/places/Shanghai/网图补充/first-department-market.webp",
+        "alt": "第一百货练摊现场（网图；2026-01-20报道，历史场景）",
+        "group": "额外活动",
+        "sourceName": "人民网·金台资讯（新浪转载）（2026-01-20）",
+        "sourceUrl": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html"
+      }
+    ],
+    "visitedAt": "2026-07-13",
+    "updatedAt": "2026-10-18",
+    "published": true,
+    "location": {
+      "lat": 31.237372,
+      "lng": 121.470895,
+      "coordinateSystem": "wgs84",
+      "address": "上海市黄浦区南京东路800号第一百货C馆"
+    },
+    "aliases": [
+      "第一百货C馆",
+      "第一百货商业中心"
+    ]
+  },
+  "directory": {
+    "area": "C馆 · 四至六层",
+    "checkedAt": "2026-10-18",
+    "shops": [
+      {
+        "name": "多摩万事屋（第一百货店）",
+        "aliases": [
+          "多摩万事屋",
+          "DOMO"
+        ],
+        "floor": "四层",
+        "kind": "动漫周边、授权同人周边",
+        "status": "listed",
+        "note": "已核对本分店小红书账号，主页明确列出第一百货C馆四楼地址；2026年1月报道也收录该店。账号同时提及静安大悦城分店，未混用其他分店的位置与货品。",
+        "sources": [
+          {
+            "label": "多摩第一百货店本人·地址与主营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/62fb4b19000000000f005c0d"
+          },
+          {
+            "label": "人民网·金台资讯（新浪转载）·第一百货商业中心实景介绍",
+            "url": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html",
+            "date": "2026-01-20"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "多摩万事屋（第一百货店）",
+            "handle": "Domo1008",
+            "url": "https://www.xiaohongshu.com/user/profile/62fb4b19000000000f005c0d",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "春日动漫中古店",
+        "aliases": [
+          "春日动漫周边",
+          "春日动漫"
+        ],
+        "floor": "六层",
+        "kind": "中古动漫周边",
+        "status": "recent",
+        "note": "已核对门店账号，当前简介列第一百货C栋六楼及线下经营；另读取09-17上新帖。置顶旧闭店帖指百米店，不是第一百货店，未把旧帖编辑时间当作新公告日期。",
+        "sources": [
+          {
+            "label": "春日门店本人·当前第一百货地址简介",
+            "url": "https://www.xiaohongshu.com/user/profile/5c62e10800000000120269f3"
+          },
+          {
+            "label": "春日门店号·博士招募周边上新",
+            "url": "https://www.xiaohongshu.com/explore/6aabaa37000000002900d5b5",
+            "dateLabel": "09-17（页面未显示年份，2026-10-18读取）"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "春日动漫周边（中古）",
+            "handle": "550725626",
+            "url": "https://www.xiaohongshu.com/user/profile/5c62e10800000000120269f3",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "面包谷谷",
+        "aliases": [
+          "面包谷"
+        ],
+        "floor": "六层",
+        "kind": "动漫／游戏周边",
+        "status": "recent",
+        "note": "已核对抖音认证店铺账号，主页明确上海第一百货C馆六楼；账号展示2026年作品及多条写明本店地址的周边上新内容。面包店主题是概念风格，实际经营谷子；具体IP及库存以当日门店为准。",
+        "sources": [
+          {
+            "label": "面包谷谷抖音认证店铺号·当前地址与经营简介",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAKH7gNtMtBSr8IotvQjs3Xe2x9DgqnMf_BAWu2Uhx6Zg"
+          },
+          {
+            "label": "面包谷谷本人·超时空辉夜姬周边作品",
+            "url": "https://www.douyin.com/video/7600395171616515173",
+            "date": "2026-01-28"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "douyin",
+            "name": "面包谷谷（大脸猫版",
+            "handle": "KamiChaika",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAKH7gNtMtBSr8IotvQjs3Xe2x9DgqnMf_BAWu2Uhx6Zg",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "Sanrio Characters Cafe 三丽鸥家族主题餐厅",
+        "aliases": [
+          "三丽鸥家族主题餐厅",
+          "Sanrio Cafe"
+        ],
+        "floor": "四层",
+        "kind": "主题餐饮（三丽鸥）",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "品牌2026年9月15日公告明确本店地址，Hello Kitty sweet cafe主题期为2026年9月23日至2027年1月17日。仅说明这一期主题安排，不把限期菜单写成永久在售；与HAPPY ZOO小铺分开记录。",
+        "sources": [
+          {
+            "label": "Sanriocharacters_Cafe·Hello Kitty sweet cafe本店主题公告",
+            "url": "https://www.sina.cn/news/detail/5343493154930981.html",
+            "date": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "name": "Mr.T 托老师の谷店",
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆四层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "次元站台",
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆四层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "偶尔梦游",
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆四层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "HAPPY ZOO 小铺",
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆四层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。不以主题餐厅的活动公告替代零售小铺确认。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "巫狐魔谷店",
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆四层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "谷的Time",
+        "floor": "四层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆四层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "Koi Tune",
+        "floor": "五层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆五层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "囍模屋",
+        "floor": "六层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆六层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "棉花猫谷屋",
+        "floor": "六层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆六层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "真谷",
+        "floor": "六层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆六层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "水豚小怪兽",
+        "floor": "六层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆六层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "CREAM CAFE",
+        "floor": "六层",
+        "status": "unverified",
+        "note": "2026年6月攻略列入第一百货C馆六层店单；本轮尚未取得可确认该分店当前营业的官方账号或官网目录，保留为营业线索。",
+        "sources": [
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "name": "奶惜 nicegoods",
+        "status": "unverified",
+        "note": "2026年1月报道收录于第一百货C馆二次元区域；未明确到单店楼层，本轮未确认当前营业，暂不猜填位置或主营。",
+        "sources": [
+          {
+            "label": "人民网·金台资讯（新浪转载）·第一百货商业中心实景介绍",
+            "url": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html",
+            "date": "2026-01-20"
+          }
+        ]
+      },
+      {
+        "name": "萌樱",
+        "status": "unverified",
+        "note": "2026年1月报道收录于第一百货C馆二次元区域；未明确到单店楼层，本轮未确认当前营业，暂不猜填位置或主营。",
+        "sources": [
+          {
+            "label": "人民网·金台资讯（新浪转载）·第一百货商业中心实景介绍",
+            "url": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html",
+            "date": "2026-01-20"
+          }
+        ]
+      },
+      {
+        "name": "谷回动漫中古店（第一百货店）",
+        "aliases": [
+          "谷回动漫中古店",
+          "谷回动漫一百店"
+        ],
+        "floor": "六层",
+        "kind": "中古动漫周边",
+        "status": "closed",
+        "note": "门店本人公告明确一百店10月8日正式闭店，线上仍经营、后续另开新店。账号近期上新和新店预告不作为第一百货旧店复业依据；本条从前台及展开计数中隐藏。公告相对月日原样保留，不补造年份。",
+        "sources": [
+          {
+            "label": "谷回门店本人·谷回动漫一百店闭店",
+            "url": "https://www.xiaohongshu.com/explore/6ab4ce8b0000000014003726",
+            "dateLabel": "编辑于09-24；公告写10月8日正式闭店（页面未显示年份）"
+          },
+          {
+            "label": "焦糖小谷包·上海吃谷攻略",
+            "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+            "date": "2026-06-11"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "谷回动漫中古店",
+            "handle": "11602787116",
+            "url": "https://www.xiaohongshu.com/user/profile/661a56990000000007007000",
+            "scope": "brand"
+          }
+        ]
+      }
+    ]
+  }
+}

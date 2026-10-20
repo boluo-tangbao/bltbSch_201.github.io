@@ -1,0 +1,148 @@
+{
+  "reviewedAt": "2026-10-17",
+  "scope": [
+    "shanghai-shop-003"
+  ],
+  "policy": "仅确认已实际核对的官方门店与近期商场公告；历史图不证明当前营业。作者评价、档位、排名、到访日期与原12张图集均保留。",
+  "shopSources": [
+    {
+      "label": "CAPCOM 官网当前门店目录（上海店）",
+      "url": "https://www.capcom.co.jp/amusement/brands/capcomstore/"
+    },
+    {
+      "label": "CAPCOM 官方开业公告（历史资料）",
+      "url": "https://www.capcom.co.jp/amusement/capcomstore/2023/06/capcom-store-china628.html",
+      "date": "2023-06-28"
+    },
+    {
+      "label": "上海新世界城官方微博（小小谷努咪上新）",
+      "url": "https://www.sina.cn/news/detail/5354964727628101.html",
+      "date": "2026-10-17"
+    },
+    {
+      "label": "上海新世界城官方微博（矿也门店上新）",
+      "url": "https://www.sina.cn/media/2210057511",
+      "date": "2026-10-10"
+    },
+    {
+      "label": "上海商务·新世界 Fun 肆街区案例",
+      "url": "https://sww.sh.gov.cn/swdt/20240830/fd6aa86f3f1e45e4b748726b071c12b3.html",
+      "date": "2024-08-29"
+    },
+    {
+      "label": "SNK 官方上海门店预告",
+      "url": "https://www.snkchina.com.cn/general/news/20250728/60112.html",
+      "date": "2025-07-21"
+    },
+    {
+      "label": "焦糖小谷包·上海吃谷攻略",
+      "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+      "date": "2026-06-11"
+    },
+    {
+      "label": "上海黄浦·新鐺集开业实访",
+      "url": "https://m.thepaper.cn/newsDetail_forward_26350360",
+      "date": "2024-02-12"
+    },
+    {
+      "label": "IPSTAR 官方鸣潮主题店闭店提醒",
+      "url": "https://www.sina.cn/news/detail/5318412382245813.html",
+      "date": "2026-07-08"
+    }
+  ],
+  "images": [
+    {
+      "placeId": "shanghai-shop-003",
+      "src": "images/places/Shanghai/新世界城补充/new-world-exterior-official.webp",
+      "file": "fun-street-original.jpg",
+      "filename": "new-world-exterior-official.webp",
+      "alt": "新世界城沿街外观与皮卡丘装置（网图；2024-08-29报道，历史场景）",
+      "group": "商圈外部",
+      "sourceName": "上海商务（2024-08-29）",
+      "sourceUrl": "https://sww.sh.gov.cn/swdt/20240830/fd6aa86f3f1e45e4b748726b071c12b3.html",
+      "sourceDate": "2024-08-29",
+      "originalImageUrl": "https://sww.sh.gov.cn/cmsres/6a/6ab61a792fc442bab3bfd0ec93508f9c/c4ca4238a0b923820dcc509a6f75849b.jpg",
+      "evidence": "门头可见新世界城及英文标识；来源全文对应本商圈。",
+      "capturedAt": null,
+      "eventDate": null,
+      "reviewedAt": "2026-10-17",
+      "reviewMethod": "读取原文与图注，并逐张查看原图核对",
+      "originalSize": {
+        "width": 1067,
+        "height": 1600,
+        "bytes": 422701
+      },
+      "originalSha256": "b2bae35c96e245524cfe47fd5ab59b874250cdb761cc5ae06df6c9a6822e6954",
+      "localSha256": "35a64d99d637ac39859d749b8ad9c89a912561dbeb2ea6f98b08fa379682fd8b",
+      "localBytes": 430600,
+      "processing": "保留完整画面与署名，等比例缩小到最长边不超过1600px，WebP quality=85；未裁切、未放大、未重绘。"
+    },
+    {
+      "placeId": "shanghai-shop-003",
+      "src": "images/places/Shanghai/新世界城补充/new-world-merch-interior-official.webp",
+      "file": "brand-fronts-original.png",
+      "filename": "new-world-merch-interior-official.webp",
+      "alt": "新世界城动漫周边柜台与货架（网图；2025-08-14报道，具体门店未确认）",
+      "group": "店铺内景",
+      "sourceName": "上海市政府日文网·图片来源上海黄浦（2025-08-14）",
+      "sourceUrl": "https://japanese.shanghai.gov.cn/ja-EditorsPick-ShopinShanghai/20250814/3b04fd3a7cee44088c354845b9b1030c.html",
+      "sourceDate": "2025-08-14",
+      "originalImageUrl": "https://japanese.shanghai.gov.cn/cmsres/56/56b838b02db84c13b1a2757b59ad1789/5bc55541b176ff164ba64ee905af97bb.png",
+      "evidence": "官方正文图注明确为新世界城内二次元品牌店铺；画面为周边柜台，不强行归给某一品牌。",
+      "capturedAt": null,
+      "eventDate": null,
+      "reviewedAt": "2026-10-17",
+      "reviewMethod": "读取原文与图注，并逐张查看原图核对",
+      "originalSize": {
+        "width": 600,
+        "height": 337,
+        "bytes": 615115
+      },
+      "originalSha256": "e889d13200f76ffd173418a2f2c837ef34c514c0530e6a84877d9d9e438773ad",
+      "localSha256": "12613d8b2a1012473336a2858ee6b38ee183a1d160a518902a99adb1fb015782",
+      "localBytes": 63230,
+      "processing": "保留完整画面与署名，等比例缩小到最长边不超过1600px，WebP quality=85；未裁切、未放大、未重绘。"
+    },
+    {
+      "placeId": "shanghai-shop-003",
+      "src": "images/places/Shanghai/新世界城补充/new-world-atrium-history.webp",
+      "file": "shop-scene-original.jpg",
+      "filename": "new-world-atrium-history.webp",
+      "alt": "新世界城中庭攀岩空间与逛展人流（网图；2024-08-29报道，历史场景）",
+      "group": "额外活动",
+      "sourceName": "上海商务（2024-08-29）",
+      "sourceUrl": "https://sww.sh.gov.cn/swdt/20240830/fd6aa86f3f1e45e4b748726b071c12b3.html",
+      "sourceDate": "2024-08-29",
+      "originalImageUrl": "https://sww.sh.gov.cn/cmsres/03/0333d4bb23c74358bc4037854f5efb02/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg",
+      "evidence": "来源为新世界 Fun肆街区案例；画面可见中庭攀岩及文豪野犬展板，仅说明当时场景。",
+      "capturedAt": null,
+      "eventDate": null,
+      "reviewedAt": "2026-10-17",
+      "reviewMethod": "读取原文与图注，并逐张查看原图核对",
+      "originalSize": {
+        "width": 1080,
+        "height": 810,
+        "bytes": 173528
+      },
+      "originalSha256": "9801d645e110592184f51aee45bf32b4ea19fdb9b471d9ee490e8d4f837673df",
+      "localSha256": "634e1abb08e420a62ba8fa9ebd4470e31850be8b3c35fa29b130f4386d65db2d",
+      "localBytes": 153922,
+      "processing": "保留完整画面与署名，等比例缩小到最长边不超过1600px，WebP quality=85；未裁切、未放大、未重绘。"
+    }
+  ],
+  "excluded": [
+    {
+      "file": "capcom-store-original.jpg",
+      "url": "https://www.capcom.co.jp/amusement/brands/capcomstore/",
+      "reason": "官网图为店面效果图，未用作现场实景图。"
+    },
+    {
+      "url": "https://www.gamecity.ne.jp/news/17057.html",
+      "reason": "能取得标题与静态骨架，正文依赖加载且本轮未成功读取；未用其摘要作当前营业确认。"
+    },
+    {
+      "url": "https://www.sina.cn/media/7897848227",
+      "reason": "原光荣特库摩账号页显示用户已停用，不能用旧账号备份作当前营业确认，也不能据此推断门店闭店。"
+    }
+  ]
+}

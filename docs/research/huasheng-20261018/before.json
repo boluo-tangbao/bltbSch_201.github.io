@@ -1,0 +1,143 @@
+{
+  "place": {
+    "id": "shanghai-shop-004",
+    "name": "华盛小亭",
+    "tier": "top",
+    "order": 10,
+    "summary": "寄售浓度拉满，粥批、日谷和少女乐队爱好者别错过。",
+    "details": "店铺偏小，但店铺多；开在地铁站里。\n\n[large]**寄售**[/large]**毫无疑问是华盛的代名词**，你高兴甚至能泡一天。\n\n除此之外，主日谷、少女乐队和明日方舟通行证的店铺都很有存在感，香澄社、玉见星间、葱谷八等等。",
+    "visitNotes": [
+      "对于愿意耐心淘货的人，想找稀有物或比价可以多停一会儿；偏好整洁大店体验的话，建议降低预期。"
+    ],
+    "tags": [
+      "中古",
+      "寄售",
+      "CD",
+      "最速通行证",
+      "BJD娃娃",
+      "少女乐队",
+      "欧美",
+      "同人"
+    ],
+    "cover": "images/places/Shanghai/华盛.jpg",
+    "gallery": [
+      {
+        "src": "images/places/Shanghai/华盛.jpg",
+        "alt": "华盛街入口",
+        "group": "商圈外部",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/华盛/1791364833763.jpg",
+        "alt": "华盛漫趣集入口",
+        "group": "店铺外景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/华盛/2025-9-10/1791462921482.jpg",
+        "alt": "谷店通道",
+        "group": "店铺外景",
+        "sourceName": "作者‘2025-09-10’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/华盛/2025-9-10/1791462921708.jpg",
+        "alt": "谷店门头与陈列",
+        "group": "店铺外景",
+        "sourceName": "作者‘2025-09-10’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/华盛/2025-9-10/QQ图片20250918115954.jpg",
+        "alt": "谷店橱窗",
+        "group": "店铺外景",
+        "sourceName": "作者‘2025-09-10’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/华盛/641.jpg",
+        "alt": "店铺门头",
+        "group": "店铺外景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/华盛/QQ图片20250918120034.jpg",
+        "alt": "红色店面通道",
+        "group": "店铺外景",
+        "sourceName": "作者直拍（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/华盛/无标题3.png",
+        "alt": "逛店通道（视频截图）",
+        "group": "店铺外景",
+        "sourceName": "本地整理截图（原始链接未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/华盛/1791366052632.jpg",
+        "alt": "初音未来周边橱窗",
+        "group": "店铺内景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/华盛/2025-9-10/1791462921662.jpg",
+        "alt": "寄售篮中的角色毛绒",
+        "group": "店铺内景",
+        "sourceName": "作者‘2025-09-10’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/华盛/2025-9-10/QQ图片20250918120037.jpg",
+        "alt": "角色卡片陈列",
+        "group": "店铺内景",
+        "sourceName": "作者‘2025-09-10’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/华盛/641 (1).jpg",
+        "alt": "日谷与毛绒陈列",
+        "group": "店铺内景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/华盛/1791364833900.jpg",
+        "alt": "少女乐队角色立牌",
+        "group": "额外活动",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/华盛/1791366052608.jpg",
+        "alt": "角色立牌合影区",
+        "group": "额外活动",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/华盛/无标题2.png",
+        "alt": "角色应援布置（视频截图）",
+        "group": "额外活动",
+        "sourceName": "本地整理截图（原始链接未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/网图补充/huasheng-chaichai-front.webp",
+        "alt": "华盛小亭柴柴旺旺谷门面（网图；2025-08-22报道）",
+        "group": "店铺外景",
+        "sourceName": "新闻晨报·人民资讯（新浪转载）（2025-08-22）",
+        "sourceUrl": "https://k.sina.cn/article_7517400647_1c0126e4705907fyds.html?from=news"
+      },
+      {
+        "src": "images/places/Shanghai/网图补充/huasheng-consignment.webp",
+        "alt": "华盛小亭谷子寄售陈列（网图；2025-08-22报道）",
+        "group": "店铺内景",
+        "sourceName": "新闻晨报·人民资讯（新浪转载）（2025-08-22）",
+        "sourceUrl": "https://k.sina.cn/article_7517400647_1c0126e4705907fyds.html?from=news"
+      }
+    ],
+    "visitedAt": "2026-09-09",
+    "updatedAt": "2026-10-17",
+    "published": true,
+    "location": {
+      "lat": 31.236076,
+      "lng": 121.469282,
+      "coordinateSystem": "wgs84",
+      "address": "上海市黄浦区南京西路19号人民广场地铁站7号口内"
+    }
+  },
+  "directory": null,
+  "otherDirectoriesHash": "5f1fdcf41ad206705da57be5ace34d83c892c1935f6a00040b6b568242fb5e88",
+  "otherPlacesHash": "ed5ed5be00385e7c177ed8d5bdebc1c42141af8ee8b1908e0a0be3e624770436",
+  "updatesHash": "faa20a3e29d1859c36e32c308a694f70fe2b7f188218e8e40d96e9a49d30e4b6"
+}

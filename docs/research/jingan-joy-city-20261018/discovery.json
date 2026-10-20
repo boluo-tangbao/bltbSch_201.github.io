@@ -1,0 +1,139 @@
+{
+  "placeId": "shanghai-shop-008",
+  "checkedAt": "2026-10-18",
+  "status": "阶段性结果",
+  "queries": [
+    {
+      "platform": "小红书",
+      "query": "上海 静安大悦城 谷店",
+      "mode": "内容",
+      "range": "首批约20项，追加已加载约40项；读地图正文、两图、首条评论",
+      "result": "南北座候选。地图仅06-25不补年，只作起点"
+    },
+    {
+      "platform": "抖音",
+      "query": "上海 静安大悦城 谷店",
+      "mode": "综合内容",
+      "range": "首批8项及后续已加载约20项",
+      "result": "2026指南、市集区域。小Mia分层图片未读全；不用AI攻略或邻接视频代替原帖"
+    },
+    {
+      "platform": "小红书",
+      "query": "静安大悦城 闭店",
+      "mode": "内容",
+      "range": "首批约20项；读谷子爱、无畏契约关门帖",
+      "result": "微店Park/caster仅标题未读全；无畏契约正文是当天提前关门，不是整期结束"
+    },
+    {
+      "platform": "小红书",
+      "query": "静安大悦城",
+      "mode": "用户",
+      "range": "首批约15项；打开匹配主页",
+      "result": "商场官方、三月兽、JOYCODE、摩多摩多、玩具反斗城"
+    },
+    {
+      "platform": "小红书",
+      "query": "静安大悦城 谷子",
+      "mode": "内容",
+      "range": "首批约20项",
+      "result": "沿经营内容反查谷子快跑"
+    },
+    {
+      "platform": "小红书",
+      "query": "谷子快跑",
+      "mode": "用户",
+      "range": "匹配主页",
+      "result": "已确认本分店"
+    },
+    {
+      "platform": "小红书",
+      "query": "JUSTGOODS",
+      "mode": "内容",
+      "range": "约20项",
+      "result": "提交曾重置模式；另执行用户查询"
+    },
+    {
+      "platform": "小红书",
+      "query": "JUSTGOODS",
+      "mode": "用户",
+      "range": "2项；最匹配主页",
+      "result": "0帖无简介地址，不能关联本店"
+    },
+    {
+      "platform": "小红书",
+      "query": "静安大悦城 IPSTAR",
+      "mode": "内容",
+      "range": "首批约20项及追加攻略；读凌曜正文",
+      "result": "旧名单混合楼层；无年份不补年，旧IPSTAR结果未完整打开"
+    },
+    {
+      "platform": "小红书",
+      "query": "静安大悦城 北座 六楼 谷店",
+      "mode": "内容",
+      "range": "首批约20项；读广博、暴蒙原文",
+      "result": "新增广博文创、暴蒙；最新补漏仍有新店，不满足无新增停止轮"
+    },
+    {
+      "platform": "小红书",
+      "query": "FUN MAGNET",
+      "mode": "用户",
+      "range": "1项匹配主页",
+      "result": "品牌简介列本商场八楼，未写座别"
+    },
+    {
+      "platform": "小红书",
+      "query": "PM TOYS",
+      "mode": "用户",
+      "range": "14项；主页及非置顶原帖",
+      "result": "打开帖实际2024-01-29，仅归档，不确认当前营业"
+    },
+    {
+      "platform": "小红书",
+      "query": "IPSTAR潮玩星球",
+      "mode": "用户",
+      "range": "13项；品牌主页及新网球王子帖",
+      "result": "无本商场地址；8/16—9/20是福利期，不是主题营业期"
+    },
+    {
+      "platform": "小红书",
+      "query": "Poooku",
+      "mode": "用户",
+      "range": "14项",
+      "result": "相近个人拼法，无可关联商家强候选，不认定闭店"
+    }
+  ],
+  "officialChannels": [
+    {
+      "name": "上海静安大悦城",
+      "url": "https://www.xiaohongshu.com/user/profile/61bf1bae000000001000ef66",
+      "result": "主页约30条标题，8条公告实际读取，见evidence.ndjson"
+    },
+    {
+      "name": "大悦城控股",
+      "url": "https://www.grandjoy.com/detail/343.html",
+      "result": "当前主力店列表已读，非完整目录"
+    },
+    {
+      "name": "三丽鸥",
+      "url": "https://www.sanrio.com.cn/store.html",
+      "result": "当前目录已读"
+    },
+    {
+      "name": "GiGO",
+      "url": "https://www.gigo.co.jp/zh-tw/shops/sh-jingan-xizangbei",
+      "result": "当前门店页已读"
+    }
+  ],
+  "stoppingConditionMet": false,
+  "gaps": [
+    "抖音分层图文未完整读取",
+    "漫魂、樱漫、新智集、阅文好物等逐店用户／原帖核验未全部执行",
+    "北座九层等缺独立经营依据",
+    "最近补漏新增广博和暴蒙，已处置但尚无后续无新增轮"
+  ],
+  "notes": [
+    "范围约数不等于有效门店数或总结果数。",
+    "早期浏览器连接失败后恢复，两平台均已实际站内搜索。",
+    "未执行和无法读取分别列明，不冒充已搜无结果。"
+  ]
+}

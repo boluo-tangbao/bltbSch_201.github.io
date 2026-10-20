@@ -1,0 +1,18 @@
+{
+  "placeId": "shanghai-shop-003",
+  "readAt": "2026-10-18",
+  "state": "阶段性结果",
+  "reused": {"readAt":"2026-10-18","report":"../new-world-city-20261018/report.md","shops":["CAPCOM","矿也","SNK","新漫界","小小谷努咪","三丽鸥官网目录"],"closureArchive":"../new-world-city-20261018/archive.json"},
+  "executed": [
+    {"platform":"小红书","mode":"内容","query":"上海新世界城 谷店","range":"首批约20项；打开笔记后又加载更多结果，未逐张读所有配图","found":["商圈探店","邦邦快闪与香澄社线索"],"readNote":{"title":"打卡探索之新世界城","author":"1222Chanel","dateLabel":"编辑于09-23；正文实际四月底到访，未标年份"},"result":"探店正文主要为既有品牌，不当最新阵容确认"},
+    {"platform":"抖音","mode":"内容","query":"上海新世界城 谷店","range":"约20项可见结果，提取作者、正文及日期，不把2024年帖子作为当前依据","found":["谷力全开","星河动漫","聚次元Goods","魔伊岛","小红石头电玩","the Green Party"],"sourceDates":["谷力全开路线指引2025-07-04","紫儿攻略2025-09-08","星河试营业6月12日（未取得年份）"],"result":"谷力全开反查本人；星河转官方公告确认；其他名称待核归属／当前经营"},
+    {"platform":"小红书","mode":"用户","query":"新世界城","range":"前15项可见用户","found":["上海新世界城49321375430","無限萌界_新世界城7097281814","新世界城FUN肆街区782728975","三丽鸥新世界城1 63575637441"],"opened":["https://www.xiaohongshu.com/user/profile/5f6d9db3000000000100363c","https://www.xiaohongshu.com/user/profile/65570708000000000802c1a5","https://www.xiaohongshu.com/user/profile/561329f23f95a3652527ff53"],"result":"商场主页及中村君公告已读；無限萌界、三丽鸥本人主页已读。FUN肆街区只见候选未打开"},
+    {"platform":"抖音","mode":"本人主页","query":null,"url":"https://www.douyin.com/user/MS4wLjABAAAAn0KtLk4JJrIvB7f_zu_rO85cP_h7uOOx4BsrhYeZy0lDiZigPBbaMBgzb4_-RbGQ","range":"本人简介、置顶路线、开业地址及2026年经营正文","result":"确认谷力全开新世界城分店；同号五角场范围标品牌号"},
+    {"platform":"抖音","mode":"用户","queries":["GOODSLOVE 新世界","漫魂","领潮汇","芳香屋 谷店","二次三香","墟弥","IPSTAR 上海 新世界"],"range":"每项前屏约8—10项匹配结果；缺失加载时另读一次，未穷举全站用户","strongCandidateOpened":"https://www.douyin.com/user/MS4wLjABAAAABbP8IzFlflOevnqFGDvId7bXjoHHD24ezsGnprT0ek2yRVkB0fcrkvEFFSb-EINo","result":"墟弥确认品牌但未确认本分店；其他结果无充分本店关联，7家继续折叠"},
+    {"platform":"官方渠道","mode":"已读公告正文","sources":["https://www.sina.cn/news/detail/5346280440333408.html","https://www.sina.cn/news/detail/5346974813137260.html","https://www.xiaohongshu.com/explore/6abcbc6e000000001802dcfb"],"result":"星河动漫本店列入2026经营名单；三期IPSTAR主题有本店地址和当前有效档期，分开接入"},
+    {"platform":"抖音","mode":"楼层定向内容补漏","query":"新世界城 八楼 谷店","result":"502 Bad Gateway，无法读取，未重复重试，不记作无结果"},
+    {"platform":"小红书","mode":"楼层定向内容补漏","query":"新世界城 八楼 谷店","range":"前20项；打开折扣店笔记后加载更多结果","readNote":{"title":"新世界城8楼谷子折扣店","author":"逃生今天播了吗","dateLabel":"02-17（详情）；搜索卡02-18，未标年份，保留差异"},"result":"正文仅地点及潮玩开仓节标签，无独立店名，暂不接入；香澄社、葱谷八归属未核实"}
+  ],
+  "limits": ["打卡探索笔记点击后读取超时一次；恢复后已读正文","墟弥地址合集提取超时，未声称已核完目录","八楼抖音定向查询网关错误","万代目录读取仅模板，摘要不算官网当前店单核验"],
+  "stopAudit": {"bothPlatformsContent":true,"officialChannelRead":true,"floorGapAttempted":true,"lastPassDirectlyAdoptableNewShop":false,"unresolvedCandidates":true,"claimSearchComplete":false,"next":"核对GETOY及其他待归属名称；恢复八楼渠道后继续补漏"}
+}

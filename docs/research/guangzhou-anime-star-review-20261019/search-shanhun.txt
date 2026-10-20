@@ -1,0 +1,200 @@
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- generic: 筛选
+- link:
+  - /url: /search_result/6acce47b000000001a028eb2
+- link "闪魂绝区零 第二弹金属卡测评":
+  - /url: /search_result/6acce47b000000001a028eb2
+- link "玉羽御钰 6天前":
+  - /url: /user/profile/59c2579744363b2c908605fb?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 玉羽御钰
+  - generic: 6天前
+- generic: "13"
+- link:
+  - /url: /search_result/6aa7b656000000001001d327
+- link "阴阳师x闪魂开箱！2盒追梦SE卡能成功吗？":
+  - /url: /search_result/6aa7b656000000001001d327
+- link "鸽海成路 09-14":
+  - /url: /user/profile/62e7f856000000001f017c73?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 鸽海成路
+  - generic: 09-14
+- generic: "259"
+- link:
+  - /url: /search_result/6aa574640000000027008000
+- link "抽卡抽high了怎么办":
+  - /url: /search_result/6aa574640000000027008000
+- link "鹤书 09-12":
+  - /url: /user/profile/6124c06e000000002002acb9?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 鹤书
+  - generic: 09-12
+- generic: "202"
+- link:
+  - /url: /search_result/6aa3ed6a000000002601bf72
+- link "仲夏欢梦2026高校快闪（上海站）情报公开":
+  - /url: /search_result/6aa3ed6a000000002601bf72
+- link "闪魂ShiningSoul 09-14":
+  - /url: /user/profile/64be22f6000000002b00b37a?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 闪魂ShiningSoul
+  - generic: 09-14
+- generic: "576"
+- link:
+  - /url: /search_result/6a8515fa000000002500a437
+- link "绝区零闪魂两千多张都在这里了":
+  - /url: /search_result/6a8515fa000000002500a437
+- link "浮樱月桃 08-19":
+  - /url: /user/profile/69c27476000000003402d921?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 浮樱月桃
+  - generic: 08-19
+- generic: "16"
+- link:
+  - /url: /search_result/6ac783c8000000001802a6b5
+- link "仲夏欢梦2026高校快闪（上海站）进度更新":
+  - /url: /search_result/6ac783c8000000001802a6b5
+- link "闪魂ShiningSoul 10-08":
+  - /url: /user/profile/64be22f6000000002b00b37a?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 闪魂ShiningSoul
+  - generic: 10-08
+- generic: "83"
+- generic: 大家都在搜
+- generic: 闪魂卡集卡社正版授权
+- generic: 卡游集卡社闪魂怎么买
+- generic: 闪魂集卡活动
+- generic: 闪魂卡牌集卡社
+- link:
+  - /url: /search_result/6ac489e6000000001b01e04a
+- link "避雷店铺":
+  - /url: /search_result/6ac489e6000000001b01e04a
+- link "我美式谢谢 10-11":
+  - /url: /user/profile/5ba525bff2eb490001ca9435?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 我美式谢谢
+  - generic: 10-11
+- generic: "15"
+- link:
+  - /url: /search_result/6aa543d40000000012024677
+- link "阴阳师闪魂卡背部图":
+  - /url: /search_result/6aa543d40000000012024677
+- link "来玩捉迷藏吧（摆烂了） 09-12":
+  - /url: /user/profile/5d4e21660000000012026b8e?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 来玩捉迷藏吧（摆烂了）
+  - generic: 09-12
+- generic: "52"
+- link:
+  - /url: /search_result/6a3d5302000000002003a249
+- link "闪魂你干得好啊":
+  - /url: /search_result/6a3d5302000000002003a249
+- link "没有suga怎么活 08-24":
+  - /url: /user/profile/5cf22cb50000000016032507?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 没有suga怎么活
+  - generic: 08-24
+- generic: "22"
+- link:
+  - /url: /search_result/6aa22fff000000000b003365
+- link "阴阳师二弹首拆":
+  - /url: /search_result/6aa22fff000000000b003365
+- link "伊斯穆柯 09-10":
+  - /url: /user/profile/5c919287000000001601c16b?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 伊斯穆柯
+  - generic: 09-10
+- generic: "116"
+- link:
+  - /url: /search_result/6ad58e220000000027037b17
+- link "贤达来了！":
+  - /url: /search_result/6ad58e220000000027037b17
+- link "momomokukuka 10小时前":
+  - /url: /user/profile/602506ba000000000101e4e0?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: momomokukuka
+  - generic: 10小时前
+- generic: "1"
+- link:
+  - /url: /search_result/6a2d221000000000210151b7
+- link "闪魂积分多的老师都去换这个卡框！":
+  - /url: /search_result/6a2d221000000000210151b7
+- link "维拉（吃谷日常发疯版） 06-16":
+  - /url: /user/profile/5b9bd3016f0daf0001f33382?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 维拉（吃谷日常发疯版）
+  - generic: 06-16
+- generic: "39"
+- link:
+  - /url: /search_result/6aa7dcbc000000000b003a91
+- link "感觉被马扁了。。。":
+  - /url: /search_result/6aa7dcbc000000000b003a91
+- link "白（好运来） 09-15":
+  - /url: /user/profile/629f0e2f00000000210299ce?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 白（好运来）
+  - generic: 09-15
+- generic: "11"
+- link:
+  - /url: /search_result/69b6c2d0000000001b0037c1
+- link "关于绝区零x闪魂现阶段卡价的一些个人看法":
+  - /url: /search_result/69b6c2d0000000001b0037c1
+- link "糯米年GAO 03-16":
+  - /url: /user/profile/6555f96b000000000403bff6?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 糯米年GAO
+  - generic: 03-16
+- generic: "147"
+- link:
+  - /url: /search_result/6a7217e4000000002403feec
+- link "看到第四弹现状真的绷不住":
+  - /url: /search_result/6a7217e4000000002403feec
+- link "一夜长风起 08-05":
+  - /url: /user/profile/65c74eca000000001302c179?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 一夜长风起
+  - generic: 08-05
+- generic: "33"
+- generic: 大家都在搜
+- generic: 闪魂卡游集卡社
+- generic: 闪魂1999活动卡价格
+- generic: 闪魂抽卡机包邮吗
+- generic: 闪魂线下活动卡
+- link:
+  - /url: /search_result/6a674cb50000000009037a50
+- link "在商场捡了一千块。":
+  - /url: /search_result/6a674cb50000000009037a50
+- link "茶茶茶 07-28":
+  - /url: /user/profile/66dbffcc000000001d032c1a?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 茶茶茶
+  - generic: 07-28
+- generic: "4018"
+- link:
+  - /url: /search_result/6aca1315000000000a022b25
+- link "明日方舟新卡开拆！看看六盒能出几张我推":
+  - /url: /search_result/6aca1315000000000a022b25
+- link "进局子 10-10":
+  - /url: /user/profile/60144f98000000000100563e?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 进局子
+  - generic: 10-10
+- generic: "8098"
+- link:
+  - /url: /search_result/6a927b5f000000002c03ef61
+- link "摸包可以滚吗":
+  - /url: /search_result/6a927b5f000000002c03ef61
+- link "💩 08-29":
+  - /url: /user/profile/5f60106b000000000101ff4f?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 💩
+  - generic: 08-29
+- generic: "523"
+- link:
+  - /url: /search_result/6a562136000000001702a778
+- link "有人懂吗":
+  - /url: /search_result/6a562136000000001702a778
+- link "划水闺秀 07-14":
+  - /url: /user/profile/61fa2367000000001000f819?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 划水闺秀
+  - generic: 07-14
+- generic: "428"
+- link:
+  - /url: /search_result/6ad04c05000000000200dd1b
+- link "能省一点是一点吧":
+  - /url: /search_result/6ad04c05000000000200dd1b
+- link "我想喝可乐（坚决戒d版） 4天前":
+  - /url: /user/profile/6906c98d000000003702c452?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 我想喝可乐（坚决戒d版）
+  - generic: 4天前
+- generic: "34"
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

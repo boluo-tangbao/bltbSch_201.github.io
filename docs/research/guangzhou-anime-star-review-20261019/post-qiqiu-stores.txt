@@ -1,0 +1,185 @@
+- heading "气球暖暖星线下实体店指南📍" [level=1]
+- text: 各店铺营业时间均和商场营业时间相同，大家不要跑空哦~
+- link "#气球暖暖星":
+  - /url: /search_result?keyword=%25E6%25B0%2594%25E7%2590%2583%25E6%259A%2596%25E6%259A%2596%25E6%2598%259F&type=54&source=web_note_detail_r10
+- link "#谷子店":
+  - /url: /search_result?keyword=%25E8%25B0%25B7%25E5%25AD%2590%25E5%25BA%2597&type=54&source=web_note_detail_r10
+- link "#二次元":
+  - /url: /search_result?keyword=%25E4%25BA%258C%25E6%25AC%25A1%25E5%2585%2583&type=54&source=web_note_detail_r10
+- link "#谷美":
+  - /url: /search_result?keyword=%25E8%25B0%25B7%25E7%25BE%258E&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 气球暖暖星线下门店汇总
+- generic: 编辑于 09-05
+- generic: 共 1643 条评论
+- link:
+  - /url: /user/profile/62babcbf000000001902b1f8?channel_type=web_profile_page
+- link "用户已注销":
+  - /url: /user/profile/62babcbf000000001902b1f8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 快来我们深圳吧
+- generic: 2025-05-16广东
+- generic: "293"
+- generic: "18"
+- link:
+  - /url: /user/profile/62babcbf000000001902b1f8?channel_type=web_profile_page
+- link "用户已注销":
+  - /url: /user/profile/62babcbf000000001902b1f8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 深圳需要你
+- generic: 2025-05-16广东
+- generic: "36"
+- generic: 回复
+- generic: 展开 17 条回复
+- link:
+  - /url: /user/profile/5f9bed4900000000010061f9?channel_type=web_profile_page
+- link "画船听雨眠":
+  - /url: /user/profile/5f9bed4900000000010061f9?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 合肥
+- generic: 2025-08-25安徽
+- generic: "28"
+- generic: "22"
+- link:
+  - /url: /user/profile/6501accb0000000005001e0c?channel_type=web_profile_page
+- link "晓络依依":
+  - /url: /user/profile/6501accb0000000005001e0c?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 同意同意，安徽竟然一家都没有，赶紧来合肥开一家
+- generic: 2025-08-25安徽
+- generic: "10"
+- generic: 回复
+- generic: 展开 21 条回复
+- link:
+  - /url: /user/profile/633bbfb3000000001801db6c?channel_type=web_profile_page
+- link "吃脆脆青椒":
+  - /url: /user/profile/633bbfb3000000001801db6c?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 能不能在福州开一家
+- generic: 2025-02-19福建
+- generic: "250"
+- generic: "55"
+- link:
+  - /url: /user/profile/5de61cc000000000010030ab?channel_type=web_profile_page
+- link "小红薯5DE758B6":
+  - /url: /user/profile/5de61cc000000000010030ab?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 支持
+- generic: 2025-02-19福建
+- generic: "3"
+- generic: 回复
+- generic: 展开 54 条回复
+- link:
+  - /url: /user/profile/6014d397000000000101ce28?channel_type=web_profile_page
+- link "云雾山":
+  - /url: /user/profile/6014d397000000000101ce28?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 厦门呢
+- generic: 2025-06-17福建
+- generic: "50"
+- generic: "14"
+- link:
+  - /url: /user/profile/5e36521800000000010035dc?channel_type=web_profile_page
+- link "她天真难解":
+  - /url: /user/profile/5e36521800000000010035dc?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: upup
+- generic: 2025-06-18福建
+- generic: "3"
+- generic: 回复
+- generic: 展开 13 条回复
+- link:
+  - /url: /user/profile/6847e76f000000001d008365?channel_type=web_profile_page
+- link "啦啦啦啦lls":
+  - /url: /user/profile/6847e76f000000001d008365?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 北京的店可以一直开吗
+- generic: 昨天 05:10北京
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/663f49e3000000000b031290?channel_type=web_profile_page
+- link "易青巍":
+  - /url: /user/profile/663f49e3000000000b031290?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 选手请听题:广州
+- generic: 2025-02-19广东
+- generic: "156"
+- generic: "26"
+- link:
+  - /url: /user/profile/61174d930000000001007dc9?channel_type=web_profile_page
+- link "气球暖暖星":
+  - /url: /user/profile/61174d930000000001007dc9?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 在谈了老大
+- generic: 2025-02-19上海
+- generic: "63"
+- generic: 回复
+- generic: 展开 25 条回复
+- link:
+  - /url: /user/profile/5f7089d100000000010054cf?channel_type=web_profile_page
+- link "晚函逢霖":
+  - /url: /user/profile/5f7089d100000000010054cf?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 能在山东开一家店吗？最好是济南济南！！！
+- generic: 2025-10-24山东
+- generic: "16"
+- generic: "7"
+- link:
+  - /url: /user/profile/5f7089d100000000010054cf?channel_type=web_profile_page
+- link "晚函逢霖":
+  - /url: /user/profile/5f7089d100000000010054cf?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 济南
+- generic: 2025-10-24山东
+- generic: "6"
+- generic: 回复
+- generic: 展开 6 条回复
+- link:
+  - /url: /user/profile/674a5669000000001d02d9fd?channel_type=web_profile_page
+- link "檀岁":
+  - /url: /user/profile/674a5669000000001d02d9fd?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 真的不考虑一下深圳吗[抽泣R]
+- generic: 2025-07-23广东
+- generic: "58"
+- generic: "11"
+- link:
+  - /url: /user/profile/674a5669000000001d02d9fd?channel_type=web_profile_page
+- link "檀岁":
+  - /url: /user/profile/674a5669000000001d02d9fd?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 深圳深圳
+- link "@momo":
+  - /url: /user/profile/680b6f74000000000601fe9f
+- generic: 2025-07-23广东
+- generic: "5"
+- generic: 回复
+- generic: 展开 10 条回复
+- link:
+  - /url: /user/profile/5ce28b74000000001000f29f?channel_type=web_profile_page
+- link "安吉丽娜朱嘴":
+  - /url: /user/profile/5ce28b74000000001000f29f?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 沈阳开一家吧
+- generic: 2025-10-14辽宁
+- generic: "8"
+- generic: "6"
+- link:
+  - /url: /user/profile/5ce28b74000000001000f29f?channel_type=web_profile_page
+- link "安吉丽娜朱嘴":
+  - /url: /user/profile/5ce28b74000000001000f29f?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 沈阳中街大悦城D馆3楼4楼，以及旁边的 吾悦广场2楼3楼5楼。漫库 萌谷子等都在这里。
+- generic: 2025-10-14辽宁
+- generic: "3"
+- generic: 回复
+- generic: 展开 5 条回复
+- link:
+  - /url: /user/profile/62b687e3000000001b029f18?channel_type=web_profile_page
+- link "Ubebrew.":
+  - /url: /user/profile/62b687e3000000001b029f18?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 来天津...
+- generic: 2025-08-22天津
+- generic: "23"
+- generic: "15"
+- link:
+  - /url: /user/profile/6263df95000000001000a7da?channel_type=web_profile_page
+- link "梦亦念卿":
+  - /url: /user/profile/6263df95000000001000a7da?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 来天津...
+- generic: 2025-08-22重庆
+- generic: 赞
+- generic: 回复
+- generic: 展开 14 条回复
+- paragraph
+- generic: 评论
+- generic: "4747"
+- generic: "1819"
+- generic: "1643"
+- button "发送" [disabled]
+- button "取消"

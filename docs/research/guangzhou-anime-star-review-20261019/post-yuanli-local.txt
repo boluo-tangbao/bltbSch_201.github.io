@@ -1,0 +1,13 @@
+- heading "动漫星城元理核心" [level=1]
+- link "#元理核心":
+  - /url: /search_result?keyword=%25E5%2585%2583%25E7%2590%2586%25E6%25A0%25B8%25E5%25BF%2583&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 元理核心
+- generic: 07-04
+- paragraph: 这是一片荒地点击评论
+- paragraph
+- generic: 说点什么...
+- generic: 收藏
+- generic: 评论
+- button "发送" [disabled]
+- button "取消"

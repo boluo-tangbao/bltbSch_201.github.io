@@ -1,0 +1,262 @@
+- text: 广州动漫星城广场
+- generic: 小红书号：49321431511
+- generic: IP属地：广东
+- generic: 广州二次元朝圣地来啦！潮玩店、动漫周边、主题形象店沉浸式打卡，承包你的次元热爱～ 还有应援活动、LED投屏！和同好一起打破次元壁，解锁二次元专属快乐✨
+- generic: 广东广州
+- generic: "63"
+- generic: 关注
+- generic: 2.4万
+- generic: 粉丝
+- generic: 5.9万
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6aba1338000000001b022771
+- link "小小谷努咪 新品✨ 崩坏：星穹铁道 vol.2":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6aba1338000000001b022771
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "27"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab9db09000000001a024913
+- link "谁还没发现动漫星城de遇见小面上新了‼️":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab9db09000000001a024913
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "5"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab9c0fa000000001a02413a
+- link "抽CICF门票啦！！！抽5张！送1张！":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab9c0fa000000001a02413a
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "196"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab4e07800000000180182c7
+- link "恭贺原神六周年~打卡有福利哦！":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab4e07800000000180182c7
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "723"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab4cddd0000000015001837
+- link "跃动青春🌷花漾茶会主题店情报公开":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab4cddd0000000015001837
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "70"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab38591000000001c02ef2a
+- link "超大大大大大大大大杯小珍珠冬瓜奶茶来了！":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab38591000000001c02ef2a
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "10"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab21e9c000000003a0231b4
+- link "Polaroid × Pokémon!广州快闪即将开启" [active]:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab21e9c000000003a0231b4
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "306"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab1ea02000000003501841e
+- link "星喵也要拍综艺！街头采访第一弹~":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab1ea02000000003501841e
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "20"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab0df500000000035011ec7
+- link "陈墨瞳生日大屏点亮计划":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab0df500000000035011ec7
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "339"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab0df20000000003400dc24
+- link "小小谷努咪 新品✨明日方舟:终末地 vol.1":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6ab0df20000000003400dc24
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "2"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6aadf58200000000260201a9
+- link "怪物大师×魔力卡周末打卡活动":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6aadf58200000000260201a9
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "168"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6aab486a0000000027016016
+- link "星×星相遇，🌟好店发生🌟":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6aab486a0000000027016016
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "19"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6aa8e8ff000000000b00c695
+- link "皮卡相伴，共庆30！宝可梦30周年商品速报":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6aa8e8ff000000000b00c695
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "9"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6aa3ed4600000000120011b0
+- link "✨爱蜜莉雅生日大屏解锁ing":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6aa3ed4600000000120011b0
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "78"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a9f7890000000002600b42e
+- link "战双帕弥什丨「于频率中相汇」主题活动":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a9f7890000000002600b42e
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "54"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a9e3d41000000002b013b46
+- link "阴阳师x闪魂 百鬼绮谭主题店活动":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a9e3d41000000002b013b46
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "35"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a9a70b2000000000b00f97f
+- link "周末特别活动预告|上电视领礼品":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a9a70b2000000000b00f97f
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "12"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a98dc35000000000b00f354
+- link "粤澳同频・秋启白露线下狂欢✨评论区有福利":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a98dc35000000000b00f354
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "173"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a967ef1000000002600b202
+- link "小小谷努咪 新品一窝蜂来啦✨萌力超标":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a967ef1000000002600b202
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "24"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a9679310000000026031ee1
+- link "恭喜 @只此浮生是梦中":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a9679310000000026031ee1
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "9"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a96297a000000002a007fb9
+- link "开学季！次元餐饮季~全新主题餐饮现已就绪":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a96297a000000002a007fb9
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "207"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a962894000000002a007de7
+- link "开学季！购物季！宝藏店铺探秘~":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a962894000000002a007de7
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "12"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a9627f2000000002a02e340
+- link "开学季！打卡季~动漫星城隐藏打卡点一览~":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a9627f2000000002a02e340
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "639"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a954e12000000002903eb01
+- link "A咖新主题！全知读者视角":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a954e12000000002903eb01
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "8"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a951d0b000000002003f6cf
+- link "次元开学礼！星喵请你喝开学的第一杯奶茶~":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a951d0b000000002003f6cf
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "4"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a951c2a000000002501d73b
+- link "赶紧收藏！遇见小面门店优惠系列分享~":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a951c2a000000002501d73b
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "2"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a90f401000000002a03d816
+- link "🎤洛天依广州演唱会冲鸭✨抽广州限定礼盒":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a90f401000000002a03d816
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "458"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a8f8f170000000004008877
+- link "来动漫星城打卡大屏！领贺闲无料哦~":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a8f8f170000000004008877
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "73"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a8f8d9b000000002902a0ea
+- link "晓山瑞希生日快乐~今日开始大屏打卡有无料":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a8f8d9b000000002902a0ea
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "26"
+- link:
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a8c003c000000003400c768
+- link "宝可梦见面会 来到动漫星城":
+  - /url: /user/profile/6566dd7f000000003c00c72b/6a8c003c000000003400c768
+- link "广州动漫星城广场":
+  - /url: /user/profile/6566dd7f000000003c00c72b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州动漫星城广场
+- generic: "56"
+- generic: 该用户已设置收藏内容不可见
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

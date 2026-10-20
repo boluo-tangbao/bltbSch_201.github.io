@@ -1,0 +1,1473 @@
+{
+  "placeId": "shanghai-shop-008",
+  "reviewedAt": "2026-10-19",
+  "status": "阶段性复核",
+  "priorLedger": "../jingan-joy-city-20261018/candidates.json",
+  "trackedEntities": 52,
+  "productionRecords": 38,
+  "outsideEntities": 14,
+  "addedToProduction": 8,
+  "notes": [
+    "复核此前51个追踪实体，并补记已读攻略中的次元波板糖，共52个追踪实体；含主题/区域/预告，不是独立在营门店总数。",
+    "不编造统一置信度百分比，按本商圈关联、当前营业与冲突分别说明。",
+    "新增加的8条均为原实际读过来源中被省年或分店关联保守处理的有效线索；不等于8个新账号或8家营业确认。"
+  ],
+  "rows": [
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "三丽鸥 Sanrio Gift Gate",
+      "aliases": [
+        "三丽鸥",
+        "Sanrio"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "三丽鸥官网·当前门店目录",
+          "url": "https://www.sanrio.com.cn/store.html",
+          "dateLabel": "官网未标发布日期；2026-10-18实际读取"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "已确认",
+        "reason": "三丽鸥当前官网门店目录仍列上海静安大悦城北座六楼；2026-10-18实际读取。这里是零售门店，不把其他商圈的主题餐厅档期套到本店。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "GiGO（静安大悦城店）",
+      "aliases": [],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "GiGO官网·静安大悦城店",
+          "url": "https://www.gigo.co.jp/zh-tw/shops/sh-jingan-xizangbei",
+          "dateLabel": "官网未标发布日期；2026-10-18实际读取"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "已确认",
+        "reason": "品牌当前门店页列本店、营业时间、扭蛋及物贩区域；2026-10-18实际读取。普通营业时段和限定商品本身不构成整店限时开放。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "eeo Store by A3",
+      "aliases": [
+        "A3",
+        "eeoStore"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "eeo Store本人·本店上新与地址",
+          "url": "https://www.xiaohongshu.com/explore/6ab675140000000012037c33",
+          "date": "2026-09-25"
+        },
+        {
+          "label": "eeo Store by A3·品牌简介",
+          "url": "https://www.xiaohongshu.com/user/profile/6a1f725d000000000103f400"
+        }
+      ],
+      "limited": null,
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "eeo Store by A3",
+          "handle": "63083706366",
+          "url": "https://www.xiaohongshu.com/user/profile/6a1f725d000000000103f400",
+          "scope": "brand"
+        }
+      ],
+      "confidence": {
+        "shopAssociation": "较强：多条本商场来源",
+        "currentOperation": "已确认",
+        "reason": "已读A3品牌账号与本店梦色蛋糕师上新正文，原帖明确本商场S529、日常营业及全年无休。开业活动、满赠和线上上架不当成门店限时属性。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "谷子快跑GOGOGOODS（旗舰店）",
+      "aliases": [
+        "谷子快跑",
+        "GOGOGOODS"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "谷子快跑本人·近期到店上新与铺位",
+          "url": "https://www.xiaohongshu.com/explore/6ac8aede0000000018013b7b",
+          "date": "2026-10-09"
+        },
+        {
+          "label": "谷子快跑静安大悦城店·主页",
+          "url": "https://www.xiaohongshu.com/user/profile/69e70b7e0000000002002800"
+        }
+      ],
+      "limited": null,
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "谷子快跑（静安大悦城店）",
+          "handle": "49919533458",
+          "url": "https://www.xiaohongshu.com/user/profile/69e70b7e0000000002002800",
+          "scope": "store"
+        }
+      ],
+      "confidence": {
+        "shopAssociation": "较强：多条本商场来源",
+        "currentOperation": "已确认",
+        "reason": "已核对本店账号及近期上新原帖，正文列南座S501-10、邀请到店。此前春节南座一层S108快闪已结束，不能与本旗舰店合并；国庆促销与迷宫饭上新不构成整店限时。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "RE-MENT",
+      "aliases": [
+        "ReMent"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "上海静安大悦城官方·RE-MENT新店公告",
+          "url": "https://www.xiaohongshu.com/explore/6ab33fe300000000140016e9",
+          "date": "2026-09-23"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "已确认",
+        "reason": "2026-09-23商场官方公告列南座五层、9月25日开业及品类。发表日省年按平台规则为2026年，同期9月25日开业也据此判断；开业福利不构成整店限时。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "森雨漫",
+      "aliases": [
+        "森雨漫CAFE",
+        "森雨漫谷仓"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "上海静安大悦城官方·森雨漫入驻公告",
+          "url": "https://www.xiaohongshu.com/explore/6ab4fa88000000001a022ace",
+          "date": "2026-09-25"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "已确认",
+        "reason": "商场官方入驻公告列南座五层S506，说明门店上新、新谷与后续快闪。公告中的快闪预告不等于常设门店整体限时；未核实的本期主题不另建记录。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "广博文创",
+      "aliases": [
+        "广博潮玩",
+        "广博潮玩集合店"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "广博本人·线下逛店与南座四楼地址",
+          "url": "https://www.xiaohongshu.com/explore/6aaa6c3b000000000b037fc2",
+          "date": "2026-09-16"
+        },
+        {
+          "label": "广博大悦城旗舰·主页",
+          "url": "https://www.xiaohongshu.com/user/profile/613aa3b50000000002022e0c"
+        }
+      ],
+      "limited": null,
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "广博-上海静安大悦城旗舰",
+          "handle": "2779684652",
+          "url": "https://www.xiaohongshu.com/user/profile/613aa3b50000000002022e0c",
+          "scope": "store"
+        }
+      ],
+      "confidence": {
+        "shopAssociation": "较强：多条本商场来源",
+        "currentOperation": "已确认",
+        "reason": "本人主页明确本商场实体经营；已读线下逛店原帖，地址为南座四楼，采用本人地址替代攻略的北座六楼。未按主页上新外推专营或实时库存。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "JOYCODE",
+      "aliases": [
+        "Joycode",
+        "Jellycat"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "JOYCODE静安大悦城店·本人简介与本店上新",
+          "url": "https://www.xiaohongshu.com/user/profile/60993f3a0000000001005142"
+        }
+      ],
+      "limited": null,
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "JOYCODE静安大悦城店",
+          "handle": "49321435520",
+          "url": "https://www.xiaohongshu.com/user/profile/60993f3a0000000001005142",
+          "scope": "store"
+        }
+      ],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "已确认",
+        "reason": "本人主页列静安大悦城北座一层及Jellycat等品牌授权经营，主页有本店补货、货柜实拍与刺绣内容；不采用旧攻略的三楼连廊位置。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "摩多摩多",
+      "aliases": [],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "摩多摩多静安大悦城店·本人地址与经营主页",
+          "url": "https://www.xiaohongshu.com/user/profile/62d4072f00000000020038e6"
+        }
+      ],
+      "limited": null,
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "摩多摩多-静安大悦城店",
+          "handle": "5684451494",
+          "url": "https://www.xiaohongshu.com/user/profile/62d4072f00000000020038e6",
+          "scope": "store"
+        }
+      ],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "已确认",
+        "reason": "本人主页明确本商场北座八楼，持续展示周边上新。普通促销、商品快闪上架不自动表示整店限时。未与名称不同的多摩万事屋合并。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "FUN MAGNET",
+      "aliases": [
+        "Fun Magnet"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "Fun Magnet本人·分店地址与主营主页",
+          "url": "https://www.xiaohongshu.com/user/profile/5f9a639a0000000001005f33"
+        }
+      ],
+      "limited": null,
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "Fun Magnet",
+          "handle": "1060515999",
+          "url": "https://www.xiaohongshu.com/user/profile/5f9a639a0000000001005f33",
+          "scope": "brand"
+        }
+      ],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "已确认",
+        "reason": "本人品牌号简介明确静安大悦城八楼，主页有抽赏及周边经营内容。替代旧攻略的六楼位置；另列悦荟、LCM的地址不用于本店。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "LOFT",
+      "aliases": [],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "大悦城控股官网·当前主力店",
+          "url": "https://www.grandjoy.com/detail/343.html",
+          "dateLabel": "官网未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "存知己·楼层与文创品类线索",
+          "url": "https://www.sohu.com/a/871536818_120556790",
+          "date": "2025-03-15"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "较强：多条本商场来源",
+        "currentOperation": "已确认",
+        "reason": "大悦城控股当前项目页仍列LOFT为主力店；2025攻略可支持南座三楼及日漫文创范围，不作为营业确认。普通商品首发和文具促销不将整店划入限时栏。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "得力上海品牌旗舰店",
+      "aliases": [],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "大悦城控股官网·当前主力店",
+          "url": "https://www.grandjoy.com/detail/343.html",
+          "dateLabel": "官网未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "上海静安·得力旗舰店文具活动介绍",
+          "url": "https://www.jingan.gov.cn/rmtzx/003001/20260205/c9365bd6-4a98-416f-9680-210e28049eca.html",
+          "date": "2026-02-05"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "较强：多条本商场来源",
+        "currentOperation": "已确认",
+        "reason": "大悦城控股当前项目页仍列得力旗舰店；2026年报道说明北座二楼及联名文具。已结束的超级文具节是促销活动，不把常设旗舰店作为限时店或据此关闭。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "三月兽（Love Live!本期主题）",
+      "aliases": [
+        "三月兽",
+        "三月兽CAFE",
+        "MARCHMONSTER"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "三月兽本人·Love Live!主题详情",
+          "url": "https://www.xiaohongshu.com/explore/6ab3a0090000000012036527",
+          "date": "2026-09-23"
+        },
+        {
+          "label": "三月兽大悦城店·当前地址主页",
+          "url": "https://www.xiaohongshu.com/user/profile/65434dbd000000000600626e"
+        }
+      ],
+      "limited": {
+        "scope": "theme",
+        "period": "2026-10-01 至 2026-10-31",
+        "startsOn": "2026-10-01",
+        "endsOn": "2026-10-31"
+      },
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "三月兽上海静安大悦城店",
+          "handle": "8701917237",
+          "url": "https://www.xiaohongshu.com/user/profile/65434dbd000000000600626e",
+          "scope": "store"
+        }
+      ],
+      "confidence": {
+        "shopAssociation": "较强：多条本商场来源",
+        "currentOperation": "已确认",
+        "reason": "已核对本店账号和主题原帖，明确本期完整档期。限时属性仅指Love Live!主题；不另把同一铺位重复列成常规店，也不推断主题结束后整店闭店。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "animate cafe（全知读者视角主题）",
+      "aliases": [
+        "animate cafe上海本店",
+        "全知读者视角"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "上海静安大悦城官方微博·上海本店主题公告",
+          "url": "https://www.sina.cn/news/detail/5338033876634572.html",
+          "date": "2026-08-31"
+        }
+      ],
+      "limited": {
+        "scope": "theme",
+        "period": "2026-09-19 至 2026-10-19",
+        "startsOn": "2026-09-19",
+        "endsOn": "2026-10-19"
+      },
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "已确认",
+        "reason": "商场官方公告明确上海本店、本期主题与完整档期。不与百联ZX的animate零售店或隔壁STAND饮品点合并；仅本期主题限时。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "微博×如鸢联动快闪",
+      "aliases": [
+        "如鸢",
+        "两载鸢途，再赴风云"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "上海静安大悦城官方·如鸢延期公告",
+          "url": "https://www.xiaohongshu.com/explore/6ad3330c000000001b0226ec",
+          "dateLabel": "10小时前（2026-10-18读取；不换算发帖日期）"
+        }
+      ],
+      "limited": {
+        "scope": "store",
+        "period": "2026-09-25 至 2026-10-25（官方延期）",
+        "startsOn": "2026-09-25",
+        "endsOn": "2026-10-25"
+      },
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "已确认",
+        "reason": "商场官方最新延期公告将结束日延至2026-10-25，覆盖第三方仍列10-18的旧档期。公告不保证当日库存及满赠余量；同一期起点9月25日结合官方2026年延期公告补足年份。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "鸣潮×GLOBAL WORK联名快闪",
+      "aliases": [
+        "鸣潮",
+        "GLOBALWORK"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "上海静安大悦城官方·鸣潮联名活动指南",
+          "url": "https://www.xiaohongshu.com/explore/6ab0f1f20000000034000465",
+          "date": "2026-09-21"
+        }
+      ],
+      "limited": {
+        "scope": "store",
+        "period": "2026-10-01 至 2026-10-25",
+        "startsOn": "2026-10-01",
+        "endsOn": "2026-10-25"
+      },
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "已确认",
+        "reason": "已读商场官方本期活动指南，发表日与正文2026年预约时间共同确认2026-10-01至10-25开放；首周预约期不当整期结束日。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "狂赌之渊·私立百花王学园快闪",
+      "aliases": [
+        "狂赌之渊",
+        "私立百花王学园"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "ComeFor运营方·主题快闪公告",
+          "url": "https://www.sina.cn/news/detail/5344830684136771.html",
+          "date": "2026-09-19"
+        }
+      ],
+      "limited": {
+        "scope": "store",
+        "period": "2026-10-01 至 2026-10-25",
+        "startsOn": "2026-10-01",
+        "endsOn": "2026-10-25"
+      },
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "已确认",
+        "reason": "运营方ComeFor公告明确2026年10月1日至25日及本商场南座三层次中庭，另有商场近期快闪公告关联；不是普通门店的促销期。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "文豪野犬快闪（上海站）",
+      "aliases": [
+        "文豪野犬"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "天闻角川官方·三地快闪店公告",
+          "url": "https://sina.cn/news/detail/5346075385005821.html",
+          "date": "2026-09-22"
+        }
+      ],
+      "limited": {
+        "scope": "store",
+        "period": "2026-09-25 至 2026-10-19",
+        "startsOn": "2026-09-25",
+        "endsOn": "2026-10-19"
+      },
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "已确认",
+        "reason": "已读天闻角川官方三地公告，上海场为9月25日至10月19日，北京场结束日不同，未混用；主题摩天轮单晚活动不等同快闪店的完整期限。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "Gummy Puppy橡皮小狗快闪",
+      "aliases": [
+        "橡皮小狗",
+        "Gummy Puppy"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "确认营业",
+      "sources": [
+        {
+          "label": "上海静安大悦城官方·橡皮小狗快闪公告",
+          "url": "https://www.xiaohongshu.com/explore/6abb64680000000002013bb2",
+          "date": "2026-09-29"
+        }
+      ],
+      "limited": {
+        "scope": "store",
+        "period": "2026-09-30 至 2026-10-29",
+        "startsOn": "2026-09-30",
+        "endsOn": "2026-10-29"
+      },
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "已确认",
+        "reason": "2026-09-29商场原帖明确本店、品类及9.30—10.29；结合发表日、秋季与十一语境判断同为2026年。DIY是快闪内活动，不另计门店。"
+      },
+      "next": "后续复核变化"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "吴大友「伤心便利店」快闪",
+      "aliases": [
+        "吴大友",
+        "伤心便利店"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "已结束隐藏",
+      "sources": [
+        {
+          "label": "上海静安大悦城官方·伤心便利店预约与档期",
+          "url": "https://www.xiaohongshu.com/explore/6aaf89d70000000028036876",
+          "dateLabel": "2026-09-20（编辑时间；页面“编辑于09-20”，原始发表日未独立取得）"
+        }
+      ],
+      "limited": {
+        "scope": "store",
+        "period": "2026-09-24 至 2026-10-18",
+        "startsOn": "2026-09-24",
+        "endsOn": "2026-10-18"
+      },
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "档期已结束",
+        "reason": "已读商场原帖确认快闪、位置及9月24日至10月18日；预约仅覆盖首三天，不误当成全期结束日。周边具体品类未取得充分文字证据，未猜填。 2026-10-19复核：本期档期已于2026-10-18结束，前台隐藏；不推断常设主体永久闭店。"
+      },
+      "next": "如有新主题或复业，另核原始依据"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "JUST GOODS",
+      "aliases": [],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "有效线索待核实",
+      "sources": [
+        {
+          "label": "存知己·大悦城谷店楼层线索",
+          "url": "https://www.sohu.com/a/871536818_120556790",
+          "date": "2025-03-15"
+        },
+        {
+          "label": "静安拾谷·本商场南北座分布图（本年线索）",
+          "url": "https://www.xiaohongshu.com/explore/6a3d25ae000000002201483f",
+          "date": "2026-06-25"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "较强：多条本商场来源",
+        "currentOperation": "待核：本商场线索有效，但无充分本店当前经营确认",
+        "reason": "2025攻略列本店及楼层。已执行JUSTGOODS站内用户检索并打开最接近的Just goods号，0笔记、无地址，不能确认本店，不接入账号；当前营业与位置仍待复查。 复用2026-06-25本商场分布图，提高本商场点位线索强度；匹配账号不足或旧经营帖过期仍不冒充当前确认。"
+      },
+      "next": "补本分店经营/账号或官方关联，检查闭店/搬迁/本期主题冲突"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "PM TOYS",
+      "aliases": [],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "有效线索待核实",
+      "sources": [
+        {
+          "label": "存知己·PM TOYS宝可梦道馆线索",
+          "url": "https://www.sohu.com/a/871536818_120556790",
+          "date": "2025-03-15"
+        },
+        {
+          "label": "静安拾谷·本商场南北座分布图（本年线索）",
+          "url": "https://www.xiaohongshu.com/explore/6a3d25ae000000002201483f",
+          "date": "2026-06-25"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "较强：多条本商场来源",
+        "currentOperation": "未确认：经营原帖过期",
+        "reason": "已执行站内用户检索并打开本店旧号；最新非置顶经营帖实际为2024-01-29，早于窗口，旧号与旧排班不作当前营业确认。2025攻略仍有本店线索，仅收待核。 复用2026-06-25本商场分布图，提高本商场点位线索强度；匹配账号不足或旧经营帖过期仍不冒充当前确认。"
+      },
+      "next": "补本分店经营/账号或官方关联，检查闭店/搬迁/本期主题冲突"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "暴蒙BOOMCOMIC",
+      "aliases": [
+        "暴蒙",
+        "BOOM COMIC"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "有效线索待核实",
+      "sources": [
+        {
+          "label": "暴蒙品牌分店发布·大悦城开店原帖",
+          "url": "https://www.xiaohongshu.com/explore/686cbc31000000002201e6e6",
+          "date": "2025-07-08"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "待核：本商场线索有效，但无充分本店当前经营确认",
+        "reason": "已读2025-07-08开店原帖，明确本商场N627。发布者主页名为百联ZX分店，不能将其他分店号直接接为本店官方账号；现址与当前营业尚待进一步核实。"
+      },
+      "next": "补本分店经营/账号或官方关联，检查闭店/搬迁/本期主题冲突"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "玩具反斗城（静安大悦城店）",
+      "aliases": [],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "有效线索待核实",
+      "sources": [
+        {
+          "label": "玩具反斗城本店候选号·经营内容待核",
+          "url": "https://www.xiaohongshu.com/user/profile/69647908000000003702c367",
+          "dateLabel": "主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "未确认：主体/分店身份未完整关联",
+        "reason": "已打开同名本店候选主页，可见本商场上新标题及模型、抽赏经营内容，但无简介与独立铺位，尚未充分完成主体和分店地址确认，不接入账号、不升级营业。"
+      },
+      "next": "补本分店经营/账号或官方关联，检查闭店/搬迁/本期主题冲突"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "漫魂",
+      "aliases": [],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "有效线索待核实",
+      "sources": [
+        {
+          "label": "存知己·漫魂楼层线索",
+          "url": "https://www.sohu.com/a/871536818_120556790",
+          "date": "2025-03-15"
+        },
+        {
+          "label": "静安拾谷·本商场南北座分布图（本年现场线索）",
+          "url": "https://www.xiaohongshu.com/explore/6a3d25ae000000002201483f",
+          "date": "2026-06-25"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "较强：多条本商场来源",
+        "currentOperation": "待核：本商场线索有效，但无充分本店当前经营确认",
+        "reason": "2025攻略与2026-06-25本商场分布图均有漫魂，较单一旧攻略更能支持本商场点位。本轮另读2026-09-12品牌上新正文及作者回复，支持的是新世界城等其他分店，不能套成本店当前营业；本店账号和关闭冲突仍待核。"
+      },
+      "next": "补本分店经营/账号或官方关联，检查闭店/搬迁/本期主题冲突"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "IPSTAR潮玩星球（常设点位线索）",
+      "aliases": [
+        "IPSTAR",
+        "潮玩星球"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "有效线索待核实",
+      "sources": [
+        {
+          "label": "存知己·本商场IPSTAR点位线索",
+          "url": "https://www.sohu.com/a/871536818_120556790",
+          "date": "2025-03-15"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "待核：本商场线索有效，但无充分本店当前经营确认",
+        "reason": "已读品牌官方主页，但新世界城等主题不能套到大悦城；现有2025楼层线索与现场门头仅支持本商场点位，尚未确认独立常设零售与本期餐饮安排。品牌帖8.16—9.20是周边福利期，不误判为本店主题期或闭店日期。"
+      },
+      "next": "补本分店经营/账号或官方关联，检查闭店/搬迁/本期主题冲突"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "animate cafe STAND（本期饮品线索）",
+      "aliases": [
+        "animate cafe STAND",
+        "初音未来主题饮品",
+        "妖精的尾巴主题饮品"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "已结束隐藏",
+      "sources": [
+        {
+          "label": "这周搞什么二次元·本商场本期活动汇总",
+          "url": "https://acgland.cn/stores/30250bb0-4321-4fe0-b8e1-788ec3e99255",
+          "dateLabel": "第三方页面未标发布日期；2026-10-18读取，活动期含2026年"
+        }
+      ],
+      "limited": {
+        "scope": "theme",
+        "period": "2026-09-16 至 2026-10-18",
+        "startsOn": "2026-09-16",
+        "endsOn": "2026-10-18"
+      },
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "档期已结束",
+        "reason": "第三方活动页列同一STAND点位的两种本期饮品，合为一个点位不重复计店。尚未取得可读取的品牌原公告与本期主体确认，默认折叠；不把10月21日之后的下一期预告当当前营业。 2026-10-19复核：本期档期已于2026-10-18结束，前台隐藏；不推断常设主体永久闭店。"
+      },
+      "next": "如有新主题或复业，另核原始依据"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "无畏契约「全球冠军赛」快闪",
+      "aliases": [
+        "无畏契约",
+        "瓦快闪"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "已结束隐藏",
+      "sources": [
+        {
+          "label": "上海静安报道转载·中秋国庆快闪介绍",
+          "url": "https://www.sohu.com/a/1080354113_121117454",
+          "date": "2026-09-24"
+        },
+        {
+          "label": "这周搞什么二次元·本期活动汇总",
+          "url": "https://acgland.cn/stores/30250bb0-4321-4fe0-b8e1-788ec3e99255"
+        }
+      ],
+      "limited": {
+        "scope": "store",
+        "period": "2026-09-24 至 2026-10-18",
+        "startsOn": "2026-09-24",
+        "endsOn": "2026-10-18"
+      },
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "较强：多条本商场来源",
+        "currentOperation": "档期已结束",
+        "reason": "2026年报道与第三方活动汇总列本商场9月24日至10月18日。已读“关门”原帖，指当天提前打烊，不能据此判永久闭店；尚未读取完整官方本期入场公告，因此暂收限时待核。 2026-10-19复核：本期档期已于2026-10-18结束，前台隐藏；不推断常设主体永久闭店。"
+      },
+      "next": "如有新主题或复业，另核原始依据"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "文化乐谷（2026夏季快闪，已结束）",
+      "aliases": [],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "已结束隐藏",
+      "sources": [
+        {
+          "label": "上海静安·文化广场快闪原报道",
+          "url": "https://www.jingan.gov.cn/rmtzx/003001/20260806/8abd0f62-9fbc-48a3-9060-e3589e17d766.html",
+          "date": "2026-08-06"
+        }
+      ],
+      "limited": {
+        "scope": "store",
+        "period": "2026-07-30 起预热，营业至2026-09-20",
+        "endsOn": "2026-09-20"
+      },
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "档期已结束",
+        "reason": "2026年报道明确持续营业至9月20日，本轮已超过档期，仅留档；不作为当前常规店或展开更多条目。"
+      },
+      "next": "如有新主题或复业，另核原始依据"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "谷子快跑春节限定快闪（已结束）",
+      "aliases": [],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "已结束隐藏",
+      "sources": [
+        {
+          "label": "上海静安·2026春节快闪清单",
+          "url": "https://www.jingan.gov.cn/rmtzx/003001/20260205/c9365bd6-4a98-416f-9680-210e28049eca.html",
+          "date": "2026-02-05"
+        }
+      ],
+      "limited": {
+        "scope": "store",
+        "period": "2026-01-31 至 2026-03-08",
+        "startsOn": "2026-01-31",
+        "endsOn": "2026-03-08"
+      },
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "档期已结束",
+        "reason": "2026春节快闪已结束，仅留档；南座五层的新旗舰店有独立本人经营依据，不将旧快闪关闭套到新旗舰店。"
+      },
+      "next": "如有新主题或复业，另核原始依据"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "新智集",
+      "aliases": [],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "有效线索待核实",
+      "sources": [
+        {
+          "label": "静安拾谷·静安大悦城南北座店铺分布图",
+          "url": "https://www.xiaohongshu.com/explore/6a3d25ae000000002201483f",
+          "date": "2026-06-25"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "待核：本商场线索有效，但无充分本店当前经营确认",
+        "reason": "复用已读本商场分布图；06-25省年按原读取当年解释为2026-06-25，现属于有效窗口，不再因省年排除。支持本商场点位；主营、账号及当前营业未独立确认。"
+      },
+      "next": "补本分店经营/账号或官方关联，检查闭店/搬迁/本期主题冲突"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "阅文好物（静安大悦城点位线索）",
+      "aliases": [
+        "阅文好物"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "有效线索待核实",
+      "sources": [
+        {
+          "label": "静安拾谷·静安大悦城南北座店铺分布图",
+          "url": "https://www.xiaohongshu.com/explore/6a3d25ae000000002201483f",
+          "date": "2026-06-25"
+        },
+        {
+          "label": "凌曜·上海静安大悦城二次元店铺攻略",
+          "url": "https://www.xiaohongshu.com/explore/6a9179270000000026004e76",
+          "date": "2026-08-28"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "较强：多条本商场来源",
+        "currentOperation": "待核：本商场线索有效，但无充分本店当前经营确认",
+        "reason": "本商场分布图与2026-08-28攻略共同支持北座九层点位及品类，线索强于单一旧名单；没有把第一百货C馆店的官方确认转成本店确认。当前楼层及经营主体待原始经营帖补核。"
+      },
+      "next": "补本分店经营/账号或官方关联，检查闭店/搬迁/本期主题冲突"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "HEYZAKKA黑扎咔潮玩谷社",
+      "aliases": [
+        "HEYZAKKA",
+        "黑扎咔"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "有效线索待核实",
+      "sources": [
+        {
+          "label": "凌曜·上海静安大悦城二次元店铺攻略",
+          "url": "https://www.xiaohongshu.com/explore/6a9179270000000026004e76",
+          "date": "2026-08-28"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "待核：本商场线索有效，但无充分本店当前经营确认",
+        "reason": "2026-08-28本商场攻略明确店名、南座四层和周边品类；发表日期省年已按平台规则归入有效窗口，保留为可追溯待核线索。该攻略其他店有楼层错误，不据此官方确认本店或保证现址。"
+      },
+      "next": "补本分店经营/账号或官方关联，检查闭店/搬迁/本期主题冲突"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "墟弥Goods（常设点位线索）",
+      "aliases": [
+        "墟弥",
+        "墟弥Goods"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "有效线索待核实",
+      "sources": [
+        {
+          "label": "凌曜·上海静安大悦城二次元店铺攻略",
+          "url": "https://www.xiaohongshu.com/explore/6a9179270000000026004e76",
+          "date": "2026-08-28"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "待核：本商场线索有效，但无充分本店当前经营确认",
+        "reason": "本商场2026-08-28攻略有常设点位及乙游现货线索；旧新世界研究还读过墟弥品牌号大悦城活动，属本商场关联线索，可复用但不能将旧快闪等同当前常设店。档期、分店关联和现址待核，未套用品牌号自动升级。"
+      },
+      "next": "补本分店经营/账号或官方关联，检查闭店/搬迁/本期主题冲突"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "樱漫书店（静安大悦城线索）",
+      "aliases": [
+        "樱漫"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "有效线索待核实",
+      "sources": [
+        {
+          "label": "凌曜·上海静安大悦城二次元店铺攻略",
+          "url": "https://www.xiaohongshu.com/explore/6a9179270000000026004e76",
+          "date": "2026-08-28"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "待核：本商场线索有效，但无充分本店当前经营确认",
+        "reason": "已读2026-08-28本商场攻略，明确樱漫书店、漫画小说及少量周边，现为有效待核线索；此前其他原文打不开不否定这一条已读来源，但也不把失败原文铺号当已核。"
+      },
+      "next": "补本分店经营/账号或官方关联，检查闭店/搬迁/本期主题冲突"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "MoiMoiaKira偶像主题餐厅（本店线索）",
+      "aliases": [
+        "Moi Moi aKira",
+        "MoiMoiaKira"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "有效线索待核实",
+      "sources": [
+        {
+          "label": "凌曜·上海静安大悦城二次元店铺攻略",
+          "url": "https://www.xiaohongshu.com/explore/6a9179270000000026004e76",
+          "date": "2026-08-28"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "待核：本商场线索有效，但无充分本店当前经营确认",
+        "reason": "2026-08-28本商场攻略列本店、楼层与主题餐饮线索。没有取得本期限时主题或整店固定开放期，不凭“主题餐厅”名称推断限时；当前分店主体及经营待核。"
+      },
+      "next": "补本分店经营/账号或官方关联，检查闭店/搬迁/本期主题冲突"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "次元波板糖（本店线索）",
+      "aliases": [
+        "次元波板糖"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "有效线索待核实",
+      "sources": [
+        {
+          "label": "凌曜·上海静安大悦城二次元店铺攻略",
+          "url": "https://www.xiaohongshu.com/explore/6a9179270000000026004e76",
+          "date": "2026-08-28"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "有明确本商场线索",
+        "currentOperation": "待核：本商场线索有效，但无充分本店当前经营确认",
+        "reason": "2026-08-28本商场攻略正文列本店及轮换IP餐饮、周边。日期可归属今年后保留为待核线索；未取得本期主题和完整开放期，不将举例作品或旧主题当当前主题。"
+      },
+      "next": "补本分店经营/账号或官方关联，检查闭店/搬迁/本期主题冲突"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "多摩万事屋（静安大悦城分店线索）",
+      "aliases": [
+        "多摩万事屋",
+        "DOMO"
+      ],
+      "originalReadAt": "2026-10-18",
+      "reviewedAt": "2026-10-19",
+      "production": true,
+      "result": "有效线索待核实",
+      "sources": [
+        {
+          "label": "多摩第一百货店本人·已读主页提及静安大悦城分店",
+          "url": "https://www.xiaohongshu.com/user/profile/62fb4b19000000000f005c0d",
+          "dateLabel": "主页无发表日期；2026-10-18旧研究实际读取，本轮复核关联"
+        }
+      ],
+      "limited": null,
+      "accounts": [],
+      "confidence": {
+        "shopAssociation": "较强：品牌本人已提及本分店",
+        "currentOperation": "待核：本商场线索有效，但无充分本店当前经营确认",
+        "reason": "复用第一百货研究已读本人主页：明确另提静安大悦城分店，属可靠品牌经营关联，不能仅因来源采集于另一商圈而忽略。未把第一百货店号作为本店号，未借其楼层、货品或闭店结论；本店精确位置与现况仍待核。"
+      },
+      "next": "补本分店经营/账号或官方关联，检查闭店/搬迁/本期主题冲突"
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "GOODSLOVE／谷子爱",
+      "aliases": [
+        "GL",
+        "GOODS LOVE",
+        "谷子爱"
+      ],
+      "type": "疑似撤店冲突",
+      "discoveredFrom": [
+        "https://www.xiaohongshu.com/explore/6a3d25ae000000002201483f",
+        "https://www.xiaohongshu.com/explore/6a8c43f400000000380018b6",
+        "https://www.xiaohongshu.com/explore/6a9179270000000026004e76"
+      ],
+      "checkedAt": "2026-10-18",
+      "production": false,
+      "result": "原08-24闭店探店按平台省年规则为2026-08-24；与2026-08-28攻略旧名单冲突，闭店线索优先保留，未据攻略恢复。未补官方撤店日期。",
+      "next": "查官方关闭／复业与当前本店经营",
+      "accountUrl": null,
+      "reviewedAt": "2026-10-19",
+      "originalReadAt": "2026-10-18",
+      "confidence": {
+        "shopAssociation": "按既有本商场线索保留",
+        "currentOperation": "不接当前店单",
+        "reason": "已读闭店探店正文与评论，和攻略旧名单冲突；无官方撤店日期，暂不恢复"
+      }
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "微店Park",
+      "aliases": [],
+      "type": "闭店标题线索",
+      "discoveredFrom": [
+        "https://www.xiaohongshu.com/explore/6a9179270000000026004e76",
+        "https://www.xiaohongshu.com/explore/6ac6222200000000140033a0"
+      ],
+      "checkedAt": "2026-10-18",
+      "production": false,
+      "result": "10-07结果标题按今年解释为2026-10-07，但未读全文，仍只作闭店冲突线索，不假装已核官方原文。",
+      "next": "读原文核范围与时间",
+      "accountUrl": null,
+      "reviewedAt": "2026-10-19",
+      "originalReadAt": "2026-10-18",
+      "confidence": {
+        "shopAssociation": "按既有本商场线索保留",
+        "currentOperation": "不接当前店单",
+        "reason": "只见10-07闭店结果标题，未读全；不当官方闭店确认"
+      }
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "caster",
+      "aliases": [],
+      "type": "闭店标题线索",
+      "discoveredFrom": [
+        "https://www.xiaohongshu.com/explore/6a841d93000000002701c8cf"
+      ],
+      "checkedAt": "2026-10-18",
+      "production": false,
+      "result": "08-18结果标题按今年解释为2026-08-18，但未读全文，仍待核闭店范围。",
+      "next": "核正式名与本分店原文",
+      "accountUrl": null,
+      "reviewedAt": "2026-10-19",
+      "originalReadAt": "2026-10-18",
+      "confidence": {
+        "shopAssociation": "按既有本商场线索保留",
+        "currentOperation": "不接当前店单",
+        "reason": "只见08-18闭店结果标题，未读全；不接当前店单"
+      }
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "Poooku",
+      "aliases": [
+        "Pooooku",
+        "pookun"
+      ],
+      "type": "原图集线索",
+      "discoveredFrom": [],
+      "checkedAt": "2026-10-18",
+      "production": false,
+      "result": "保留2025-09-10作者图注；用户查询14项无可关联商家强候选，不认定闭店",
+      "next": "由门头补查别名及经营",
+      "accountUrl": null,
+      "reviewedAt": "2026-10-19",
+      "originalReadAt": "2026-10-18",
+      "confidence": {
+        "shopAssociation": "按既有本商场线索保留",
+        "currentOperation": "不接当前店单",
+        "reason": "保留2025-09-10作者图注；用户查询14项无可关联商家强候选，不认定闭店"
+      }
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "雪鱼",
+      "aliases": [],
+      "type": "分店待核",
+      "discoveredFrom": [],
+      "checkedAt": "2026-10-18",
+      "production": false,
+      "result": "既有证据指向其他商场分店，不据此确认大悦城营业或闭店",
+      "next": "查本商场旧点位迁移／关闭／复业",
+      "accountUrl": null,
+      "reviewedAt": "2026-10-19",
+      "originalReadAt": "2026-10-18",
+      "confidence": {
+        "shopAssociation": "按既有本商场线索保留",
+        "currentOperation": "不接当前店单",
+        "reason": "既有证据指向其他商场分店，不据此确认大悦城营业或闭店"
+      }
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "LoveStar追星馆",
+      "aliases": [],
+      "type": "范围待核",
+      "discoveredFrom": [
+        "https://www.xiaohongshu.com/explore/6a3d25ae000000002201483f"
+      ],
+      "checkedAt": "2026-10-18",
+      "production": false,
+      "result": "南座三层地图线索，未核主体与收录范围",
+      "next": "核经营品类和本店关联",
+      "accountUrl": null,
+      "reviewedAt": "2026-10-19",
+      "originalReadAt": "2026-10-18",
+      "confidence": {
+        "shopAssociation": "按既有本商场线索保留",
+        "currentOperation": "不接当前店单",
+        "reason": "南座三层地图线索，未核主体与收录范围"
+      }
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "万代一番赏",
+      "aliases": [],
+      "type": "独立主体待核",
+      "discoveredFrom": [
+        "https://www.xiaohongshu.com/explore/6a9179270000000026004e76"
+      ],
+      "checkedAt": "2026-10-18",
+      "production": false,
+      "result": "南座入口可能是区域／柜位，未核独立店",
+      "next": "核店中店关联，避免重复计店",
+      "accountUrl": null,
+      "reviewedAt": "2026-10-19",
+      "originalReadAt": "2026-10-18",
+      "confidence": {
+        "shopAssociation": "按既有本商场线索保留",
+        "currentOperation": "不接当前店单",
+        "reason": "南座入口可能是区域／柜位，未核独立店"
+      }
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "八吉岛i-LAND",
+      "aliases": [],
+      "type": "区域",
+      "discoveredFrom": [
+        "https://www.xiaohongshu.com/explore/6a9179270000000026004e76"
+      ],
+      "checkedAt": "2026-10-18",
+      "production": false,
+      "result": "区域，不计独立门店",
+      "next": "逐主体核对",
+      "accountUrl": null,
+      "reviewedAt": "2026-10-19",
+      "originalReadAt": "2026-10-18",
+      "confidence": {
+        "shopAssociation": "区域，不计独立店",
+        "currentOperation": "不接当前店单",
+        "reason": "区域，不计独立门店"
+      }
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "摩坊166",
+      "aliases": [],
+      "type": "区域",
+      "discoveredFrom": [
+        "https://www.xiaohongshu.com/explore/6a9179270000000026004e76"
+      ],
+      "checkedAt": "2026-10-18",
+      "production": false,
+      "result": "区域／活动空间，不计独立门店",
+      "next": "核内部经营主体",
+      "accountUrl": null,
+      "reviewedAt": "2026-10-19",
+      "originalReadAt": "2026-10-18",
+      "confidence": {
+        "shopAssociation": "区域，不计独立店",
+        "currentOperation": "不接当前店单",
+        "reason": "区域／活动空间，不计独立门店"
+      }
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "十月泡漫星云谷子市集",
+      "aliases": [],
+      "type": "市集",
+      "discoveredFrom": [
+        "https://www.douyin.com/search/%E4%B8%8A%E6%B5%B7%20%E9%9D%99%E5%AE%89%E5%A4%A7%E6%82%A6%E5%9F%8E%20%E8%B0%B7%E5%BA%97"
+      ],
+      "checkedAt": "2026-10-18",
+      "production": false,
+      "result": "抖音内容发现的市集，不当独立常设店",
+      "next": "需要时逐摊位核日期与主体",
+      "accountUrl": null,
+      "reviewedAt": "2026-10-19",
+      "originalReadAt": "2026-10-18",
+      "confidence": {
+        "shopAssociation": "区域，不计独立店",
+        "currentOperation": "不接当前店单",
+        "reason": "抖音内容发现的市集，不当独立常设店"
+      }
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "KKV",
+      "aliases": [],
+      "type": "收录范围待核",
+      "discoveredFrom": [
+        "https://www.grandjoy.com/detail/343.html",
+        "https://www.xiaohongshu.com/explore/6a3d25ae000000002201483f"
+      ],
+      "checkedAt": "2026-10-18",
+      "production": false,
+      "result": "当前官网确认营业，谷店品类和位置冲突未核，暂不接；不表示未营业",
+      "next": "核本店主营范围与地址",
+      "accountUrl": null,
+      "reviewedAt": "2026-10-19",
+      "originalReadAt": "2026-10-18",
+      "confidence": {
+        "shopAssociation": "按既有本商场线索保留",
+        "currentOperation": "不接当前店单",
+        "reason": "当前官网确认营业，谷店品类和位置冲突未核，暂不接；不表示未营业"
+      }
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "EVA The Night Of Fantasy",
+      "aliases": [],
+      "type": "尚未开始",
+      "discoveredFrom": [
+        "https://www.xiaohongshu.com/explore/6acf48e90000000018015faa"
+      ],
+      "checkedAt": "2026-10-18",
+      "production": false,
+      "result": "发表“4天前”是2026年10月近期预告，正文10.30—11.30判断为2026-10-30至11-30，尚未开始；不接当前营业。",
+      "next": "开放后核本期",
+      "accountUrl": null,
+      "reviewedAt": "2026-10-19",
+      "originalReadAt": "2026-10-18",
+      "confidence": {
+        "shopAssociation": "按既有本商场线索保留",
+        "currentOperation": "不接当前店单",
+        "reason": "已读商场公告10.30—11.30北座三层中庭，未标年不补年，当前不计营业"
+      },
+      "normalizedPeriod": {
+        "startsOn": "2026-10-30",
+        "endsOn": "2026-11-30"
+      }
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "animate cafe阴阳师后续主题",
+      "aliases": [],
+      "type": "未来预告",
+      "discoveredFrom": [
+        "https://acgland.cn/stores/30250bb0-4321-4fe0-b8e1-788ec3e99255"
+      ],
+      "checkedAt": "2026-10-18",
+      "production": false,
+      "result": "第三方10/22—11/23，官方原文未核，当前不接",
+      "next": "核官方完整主题期与本店",
+      "accountUrl": null,
+      "reviewedAt": "2026-10-19",
+      "originalReadAt": "2026-10-18",
+      "confidence": {
+        "shopAssociation": "按既有本商场线索保留",
+        "currentOperation": "不接当前店单",
+        "reason": "第三方10/22—11/23，官方原文未核，当前不接"
+      }
+    },
+    {
+      "placeId": "shanghai-shop-008",
+      "name": "animate cafe STAND神奇数字后续主题",
+      "aliases": [],
+      "type": "未来预告",
+      "discoveredFrom": [
+        "https://acgland.cn/stores/30250bb0-4321-4fe0-b8e1-788ec3e99255"
+      ],
+      "checkedAt": "2026-10-18",
+      "production": false,
+      "result": "第三方10/21—11/17，官方原文未核，当前不接",
+      "next": "核官方；不重复计STAND点位",
+      "accountUrl": null,
+      "reviewedAt": "2026-10-19",
+      "originalReadAt": "2026-10-18",
+      "confidence": {
+        "shopAssociation": "按既有本商场线索保留",
+        "currentOperation": "不接当前店单",
+        "reason": "第三方10/21—11/17，官方原文未核，当前不接"
+      }
+    }
+  ]
+}

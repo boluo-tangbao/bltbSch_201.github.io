@@ -1,0 +1,258 @@
+- generic: 飞社长二次元club广州店
+- generic: 小红书号：95295377663
+- generic: IP属地：广东
+- generic: 📍广州动漫星城西区负二层飞社长二次元club 🕤营业时间上午10:00至晚上9:30
+- generic: "25"
+- generic: 关注
+- generic: "2003"
+- generic: 粉丝
+- generic: "7228"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link "置顶":
+  - /url: /user/profile/6624e6550000000007004577/6aa28df9000000002b01db13
+  - generic: 置顶
+- link "‼️不敢相信……":
+  - /url: /user/profile/6624e6550000000007004577/6aa28df9000000002b01db13
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "29"
+- link "置顶":
+  - /url: /user/profile/6624e6550000000007004577/6aa0ef3a000000000b00efc8
+  - generic: 置顶
+- link "《薰香花朵凛然绽放》原画周边来啦✨":
+  - /url: /user/profile/6624e6550000000007004577/6aa0ef3a000000000b00efc8
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "14"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6ad1a6e9000000000100bdcd
+- link "一番赏上新！✨三丽鸥库洛米豹纹黑裙系列✨":
+  - /url: /user/profile/6624e6550000000007004577/6ad1a6e9000000000100bdcd
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "1"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6acf1957000000000a01f0a2
+- link "上新两个字":
+  - /url: /user/profile/6624e6550000000007004577/6acf1957000000000a01f0a2
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "1"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6ac9a48b0000000002010632
+- link "新世界狂欢一番赏上新✨":
+  - /url: /user/profile/6624e6550000000007004577/6ac9a48b0000000002010632
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "6"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6ac77ef0000000000100b383
+- link "惊喜吉伊卡哇毛绒驾到通通闪开！":
+  - /url: /user/profile/6624e6550000000007004577/6ac77ef0000000000100b383
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "3"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6ac4cdb5000000001b01c770
+- link "花薰凛然原画柄一眼沦陷":
+  - /url: /user/profile/6624e6550000000007004577/6ac4cdb5000000001b01c770
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "9"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6ac1c4bf0000000001008591
+- link "芙莉莲原画抽赏":
+  - /url: /user/profile/6624e6550000000007004577/6ac1c4bf0000000001008591
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "10"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6ac08c7100000000020105e6
+- link "上新！🔥鬼灭之刃宇髓天元一番赏🔥":
+  - /url: /user/profile/6624e6550000000007004577/6ac08c7100000000020105e6
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "1"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6ac07644000000001b020d61
+- link "全职高手 宅家时间系列 开新套啦❗❗":
+  - /url: /user/profile/6624e6550000000007004577/6ac07644000000001b020d61
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6abf74d3000000001a031653
+- link "吉伊卡哇的派对时光抽赏":
+  - /url: /user/profile/6624e6550000000007004577/6abf74d3000000001a031653
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6abf60c4000000001b01dae0
+- link "🔥芙莉莲原画抽赏火热进行中🔥":
+  - /url: /user/profile/6624e6550000000007004577/6abf60c4000000001b01dae0
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "2"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6abf4b910000000014032919
+- link "宝可梦30周年vol.2一番赏":
+  - /url: /user/profile/6624e6550000000007004577/6abf4b910000000014032919
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6abf1731000000001801a594
+- link "火影忍者睡衣派对":
+  - /url: /user/profile/6624e6550000000007004577/6abf1731000000001801a594
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6abf0d27000000000202a5bb
+- link "剑风传奇宿命的双极一番赏":
+  - /url: /user/profile/6624e6550000000007004577/6abf0d27000000000202a5bb
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6abe344a0000000018018f60
+- link "上新！ 妖尾20周年 Medicos快闪！":
+  - /url: /user/profile/6624e6550000000007004577/6abe344a0000000018018f60
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "7"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6abddd9f000000001c02c21c
+- link "✨芙莉莲一番赏到货啦！":
+  - /url: /user/profile/6624e6550000000007004577/6abddd9f000000001c02c21c
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "5"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6abca0250000000015003cb2
+- link "动漫星城店版本更新成功！":
+  - /url: /user/profile/6624e6550000000007004577/6abca0250000000015003cb2
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "5"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6abc93eb000000001a0252e8
+- link "电锯人一番赏蕾塞篇第二弹":
+  - /url: /user/profile/6624e6550000000007004577/6abc93eb000000001a0252e8
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "1"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6abb8eec000000001a031bdc
+- link "这波双节同欢，我先冲了～":
+  - /url: /user/profile/6624e6550000000007004577/6abb8eec000000001a031bdc
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "5"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6abb327d0000000015005cb8
+- link "上新《全职高手》宅家时间系列次元礼":
+  - /url: /user/profile/6624e6550000000007004577/6abb327d0000000015005cb8
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "1"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6aae2821000000002600a141
+- link "鬼灭之刃上弦之贰一番赏":
+  - /url: /user/profile/6624e6550000000007004577/6aae2821000000002600a141
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "3"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6aaa2dc80000000027016d77
+- link "来啦！从零开始的异世界生活":
+  - /url: /user/profile/6624e6550000000007004577/6aaa2dc80000000027016d77
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "9"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6aa8c414000000002b012183
+- link "广州飞社长装修升级公告":
+  - /url: /user/profile/6624e6550000000007004577/6aa8c414000000002b012183
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "12"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6aa4bc500000000027015f88
+- link "9月12日广州动漫星城店上新":
+  - /url: /user/profile/6624e6550000000007004577/6aa4bc500000000027015f88
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "4"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6aa3a4cd000000002b010fa8
+- link "🪄上新✨":
+  - /url: /user/profile/6624e6550000000007004577/6aa3a4cd000000002b010fa8
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "1"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6aa3775f000000000b00d339
+- link "广州也有新世界狂欢一番赏上新🆕":
+  - /url: /user/profile/6624e6550000000007004577/6aa3775f000000000b00d339
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "13"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6aa254bb000000002802a3cc
+- link "花薰 |实拍🌸":
+  - /url: /user/profile/6624e6550000000007004577/6aa254bb000000002802a3cc
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "8"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6a98fae9000000002b01edda
+- link "居然等到EVA剧场版序一番赏上新":
+  - /url: /user/profile/6624e6550000000007004577/6a98fae9000000002b01edda
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "2"
+- link:
+  - /url: /user/profile/6624e6550000000007004577/6a9824d8000000002a02da15
+- link "小点声 折扣活动还在……":
+  - /url: /user/profile/6624e6550000000007004577/6a9824d8000000002a02da15
+- link "飞社长二次元club广州店":
+  - /url: /user/profile/6624e6550000000007004577?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 飞社长二次元club广州店
+- generic: "8"
+- generic: 该用户已设置收藏内容不可见
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

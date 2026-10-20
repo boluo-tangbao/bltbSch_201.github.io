@@ -1,0 +1,19 @@
+- heading "一番赏上新！✨三丽鸥库洛米豹纹黑裙系列✨" [level=1]
+- text: 🥳以下是商品内容： ①赏：毛毯 ②赏：化妆收纳包 ③赏：库洛米耳朵头戴帽 ④赏：小物收纳盒 ⑤-⑥赏：收纳包（共两款） ⑦-⑧赏：库洛米毛绒挂件一个（共两款） ⑨-⑩赏：化妆镜一个（共两款） 11 赏：毛绒包包一个 12 赏：文件收纳盒一个
+- link "#广州飞社长二次元club":
+  - /url: /search_result?keyword=%25E5%25B9%25BF%25E5%25B7%259E%25E9%25A3%259E%25E7%25A4%25BE%25E9%2595%25BF%25E4%25BA%258C%25E6%25AC%25A1%25E5%2585%2583club&type=54&source=web_note_detail_r10
+- link "#库洛米":
+  - /url: /search_result?keyword=%25E5%25BA%2593%25E6%25B4%259B%25E7%25B1%25B3&type=54&source=web_note_detail_r10
+- link "#三丽鸥":
+  - /url: /search_result?keyword=%25E4%25B8%2589%25E4%25B8%25BD%25E9%25B8%25A5&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 三丽鸥库洛米豹纹黑裙系列
+- generic: 3天前 广东
+- paragraph: 这是一片荒地点击评论
+- paragraph
+- generic: 说点什么...
+- generic: "1"
+- generic: 收藏
+- generic: 评论
+- button "发送" [disabled]
+- button "取消"

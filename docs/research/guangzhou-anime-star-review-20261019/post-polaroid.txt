@@ -1,0 +1,121 @@
+- heading "Polaroid × Pokémon!广州快闪即将开启" [level=1]
+- text: 各位训练家准备好了吗？ 9月28日起， Polaroid × Pokémon 联名广州快闪正式开启！ 广州动漫星城 西区负三层W3T007号 （广东省广州市越秀区吉祥路1号） 属于我们的冒险，即将开始。 定格冒险瞬间，Polaroid × Pokémon!
+- link "#动漫星城":
+  - /url: /search_result?keyword=%25E5%258A%25A8%25E6%25BC%25AB%25E6%2598%259F%25E5%259F%258E&type=54&source=web_note_detail_r10
+- link "#宝可梦":
+  - /url: /search_result?keyword=%25E5%25AE%259D%25E5%258F%25AF%25E6%25A2%25A6&type=54&source=web_note_detail_r10
+- link "#二次元":
+  - /url: /search_result?keyword=%25E4%25BA%258C%25E6%25AC%25A1%25E5%2585%2583&type=54&source=web_note_detail_r10
+- link "#宝丽来":
+  - /url: /search_result?keyword=%25E5%25AE%259D%25E4%25B8%25BD%25E6%259D%25A5&type=54&source=web_note_detail_r10
+- link "#Polaroid":
+  - /url: /search_result?keyword=Polaroid&type=54&source=web_note_detail_r10
+- link "#皮卡丘":
+  - /url: /search_result?keyword=%25E7%259A%25AE%25E5%258D%25A1%25E4%25B8%2598&type=54&source=web_note_detail_r10
+- link "#仙子伊布":
+  - /url: /search_result?keyword=%25E4%25BB%2599%25E5%25AD%2590%25E4%25BC%258A%25E5%25B8%2583&type=54&source=web_note_detail_r10
+- generic: 09-22 广东
+- generic: 共 17 条评论
+- link:
+  - /url: /user/profile/58ca76a750c4b46b10056902?channel_type=web_profile_page
+- link "卡夫卡戴珊":
+  - /url: /user/profile/58ca76a750c4b46b10056902?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 原来线下也是预售啊，那我就放心了。
+- generic: 09-23四川
+- generic: "8"
+- generic: "1"
+- link:
+  - /url: /user/profile/65c43fe000000000110149f3?channel_type=web_profile_page
+- link "Verna":
+  - /url: /user/profile/65c43fe000000000110149f3?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 好像提前在小程序预约线下就能提货了
+- generic: 09-24广东
+- generic: "1"
+- generic: 回复
+- link:
+  - /url: /user/profile/5dc51d3d000000000100a656?channel_type=web_profile_page
+- link "Jim":
+  - /url: /user/profile/5dc51d3d000000000100a656?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 之前淘宝买的啥都没，背刺啊
+- generic: 09-23广东
+- generic: "6"
+- generic: "1"
+- link:
+  - /url: /user/profile/620a137d0000000010005cde?channel_type=web_profile_page
+- link "並贈你璀璨的自由":
+  - /url: /user/profile/620a137d0000000010005cde?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 淘宝还得等十月份才能补款🤗
+- generic: 09-23北京
+- generic: "1"
+- generic: 回复
+- link:
+  - /url: /user/profile/5b6926c81972c60001fbecdb?channel_type=web_profile_page
+- link "谁是肥瑜啊":
+  - /url: /user/profile/5b6926c81972c60001fbecdb?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 之前就在小程序买了预售的有没有限定礼物呀
+- generic: 09-22广东
+- generic: "3"
+- generic: 回复
+- link:
+  - /url: /user/profile/5979b1435e87e77ebfdbfa79?channel_type=web_profile_page
+- link "哈哈的小狗":
+  - /url: /user/profile/5979b1435e87e77ebfdbfa79?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 哪个小程序？
+- generic: 09-23广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/593a4e61b1da146c7afb2fa0?channel_type=web_profile_page
+- link "野生麻辣糯米糍":
+  - /url: /user/profile/593a4e61b1da146c7afb2fa0?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 线下的预售限定礼品是什么啊
+- generic: 09-22广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5f8d3c4d0000000001002886?channel_type=web_profile_page
+- link "尤里卡":
+  - /url: /user/profile/5f8d3c4d0000000001002886?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 这个店开到啥时候啊
+- generic: 09-23上海
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5abfa40be8ac2b300b3156f7?channel_type=web_profile_page
+- link "菜菜菜-":
+  - /url: /user/profile/5abfa40be8ac2b300b3156f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 哪个小程序
+- generic: 09-22广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5a155a00e8ac2b69dbe7fb6b?channel_type=web_profile_page
+- link "Maohuaaa":
+  - /url: /user/profile/5a155a00e8ac2b69dbe7fb6b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 会卖相纸吗 还是要跟机子一起买
+- generic: 09-24广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/53362c21b4c4d67494fe2989?channel_type=web_profile_page
+- link "Gagagoodgdd":
+  - /url: /user/profile/53362c21b4c4d67494fe2989?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 哇啊啊啊
+- generic: 09-23广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/639353ef0000000027028946?channel_type=web_profile_page
+- link "斯托贾诺维奇":
+  - /url: /user/profile/639353ef0000000027028946?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 去哪里预约
+- generic: 09-23广东
+- generic: 赞
+- generic: 回复
+- paragraph
+- generic: 说点什么...
+- generic: "306"
+- generic: "76"
+- generic: "17"
+- button "发送" [disabled]
+- button "取消"

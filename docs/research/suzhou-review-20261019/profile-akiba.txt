@@ -1,0 +1,255 @@
+- generic: AKIBA GO苏州星悦汇店
+- generic: 小红书号：95026767652
+- generic: IP属地：江苏
+- generic: 地址:苏州中心星悦汇2楼 营业时间:10:00-22:00 评论容易被吞，有问题请私信 店内高峰期可能回复不及时请见谅 不论是上新补货还是有活动都会及时发布，欢迎关注～暂时无法邮寄，无法线上预留
+- generic: "14"
+- generic: 关注
+- generic: "2224"
+- generic: 粉丝
+- generic: "3429"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6ad47f23000000000c00dda6
+- link "明日方舟终末地|春晓栖亭10月18日上新!":
+  - /url: /user/profile/67160deb000000001e0078f7/6ad47f23000000000c00dda6
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "1"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6ad08ccd0000000018006de6
+- link "[爱心R]":
+  - /url: /user/profile/67160deb000000001e0078f7/6ad08ccd0000000018006de6
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6ad08c3000000000180137ba
+- link "[两颗心R]":
+  - /url: /user/profile/67160deb000000001e0078f7/6ad08c3000000000180137ba
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "1"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6ac739f5000000001303cd09
+- link "十日终焉-桂亭逢秋系列上新啦！":
+  - /url: /user/profile/67160deb000000001e0078f7/6ac739f5000000001303cd09
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "1"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6ac4ad550000000018010945
+- link "一则到货小通知":
+  - /url: /user/profile/67160deb000000001e0078f7/6ac4ad550000000018010945
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "10"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6ac35cea0000000018006c98
+- link "龙泡泡走走已上新！":
+  - /url: /user/profile/67160deb000000001e0078f7/6ac35cea0000000018006c98
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "18"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6ac310d50000000018006a42
+- link "关于兔没有嘴巴这件事你们两有什么头猪吗":
+  - /url: /user/profile/67160deb000000001e0078f7/6ac310d50000000018006a42
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "29"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6ac1f5520000000018012d32
+- link "龙泡泡走走上新啦！":
+  - /url: /user/profile/67160deb000000001e0078f7/6ac1f5520000000018012d32
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "20"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6ac07350000000001403bfd5
+- link "明日方舟|覆雪于冬系列与米米子和博士士系":
+  - /url: /user/profile/67160deb000000001e0078f7/6ac07350000000001403bfd5
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "7"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6abf669a0000000014038c74
+- link "年，夕，黍已严肃补货":
+  - /url: /user/profile/67160deb000000001e0078f7/6abf669a0000000014038c74
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "20"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6abf196400000000180127e7
+- link "今日上新":
+  - /url: /user/profile/67160deb000000001e0078f7/6abf196400000000180127e7
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "6"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6abe33a90000000018007d8a
+- link "《龙族：最后的旅行》线下打卡活动开启":
+  - /url: /user/profile/67160deb000000001e0078f7/6abe33a90000000018007d8a
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "7"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6abceb0f000000001800554c
+- link "零创游戏×龙族｜异世来信，鸿声未远，龙族":
+  - /url: /user/profile/67160deb000000001e0078f7/6abceb0f000000001800554c
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "7"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6abb8d80000000001303d888
+- link "已严肃备战国庆！":
+  - /url: /user/profile/67160deb000000001e0078f7/6abb8d80000000001303d888
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "371"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6abb8c78000000000b005bd7
+- link "一屉小笼泡补货啦！":
+  - /url: /user/profile/67160deb000000001e0078f7/6abb8c78000000000b005bd7
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "3"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6abb5a5e0000000018004534
+- link "初音未来水族馆一番赏来啦！":
+  - /url: /user/profile/67160deb000000001e0078f7/6abb5a5e0000000018004534
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "6"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6ab6306d00000000140003db
+- link "山山兔卡住了龙泡泡转转来咯！":
+  - /url: /user/profile/67160deb000000001e0078f7/6ab6306d00000000140003db
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "18"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6ab630060000000018007e88
+- link "明日方舟巡游派对系列复刻！":
+  - /url: /user/profile/67160deb000000001e0078f7/6ab630060000000018007e88
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "20"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6ab4a982000000001303f407
+- link "游戏入侵上新预告":
+  - /url: /user/profile/67160deb000000001e0078f7/6ab4a982000000001303f407
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "1"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6aae691c00000000250375a1
+- link "哀鸿×AKIBA GO二期联动定档～":
+  - /url: /user/profile/67160deb000000001e0078f7/6aae691c00000000250375a1
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "2"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6aab6cef00000000110336ab
+- link "三丽鸥丑鱼一番赏上新啦":
+  - /url: /user/profile/67160deb000000001e0078f7/6aab6cef00000000110336ab
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "3"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6aab6c7b000000001001e929
+- link "轻松熊十周年一番赏上新啦":
+  - /url: /user/profile/67160deb000000001e0078f7/6aab6c7b000000001001e929
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "1"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6aab6c2a0000000011037ce4
+- link "原神一番赏上新啦":
+  - /url: /user/profile/67160deb000000001e0078f7/6aab6c2a0000000011037ce4
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "5"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6aa365f9000000000d02628f
+- link "👽啵哔哔哔啵哔——":
+  - /url: /user/profile/67160deb000000001e0078f7/6aa365f9000000000d02628f
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "7"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6aa362f30000000026017552
+- link "勤勤恳恳干了一年终于结果嘞":
+  - /url: /user/profile/67160deb000000001e0078f7/6aa362f30000000026017552
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "17"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6aa3629200000000250369a9
+- link "你掉的是哪只兔兔":
+  - /url: /user/profile/67160deb000000001e0078f7/6aa3629200000000250369a9
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "11"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6aa3601e000000002502fcb8
+- link "终末地新潮驿站系列上新！":
+  - /url: /user/profile/67160deb000000001e0078f7/6aa3601e000000002502fcb8
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "7"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6aa35f63000000002802f8c8
+- link "明日方舟歧路同归系列上新！":
+  - /url: /user/profile/67160deb000000001e0078f7/6aa35f63000000002802f8c8
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "11"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6a9e2c94000000000d027a05
+- link "咒回幻影夜行系列上新样品一览":
+  - /url: /user/profile/67160deb000000001e0078f7/6a9e2c94000000000d027a05
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "2"
+- link:
+  - /url: /user/profile/67160deb000000001e0078f7/6a9a5219000000000d0242f2
+- link "原神-魈-湖光入画系列周边上新！":
+  - /url: /user/profile/67160deb000000001e0078f7/6a9a5219000000000d0242f2
+- link "AKIBA GO苏州星悦汇店":
+  - /url: /user/profile/67160deb000000001e0078f7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: AKIBA GO苏州星悦汇店
+- generic: "1"
+- generic: 该用户已设置收藏内容不可见

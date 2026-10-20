@@ -1,0 +1,265 @@
+- generic: 元理核心（广州店）
+- generic: 小红书号：63037456253
+- generic: IP属地：广东
+- generic: 请多指教(⁎⁍̴̛ᴗ⁍̴̛⁎) 📍地址：广州市越秀区吉祥路1号动漫星城西区负三层元理核心 🈺业时间：全年无休 10:00-21:30
+- generic: "0"
+- generic: 关注
+- generic: "346"
+- generic: 粉丝
+- generic: "1249"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link "置顶":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a432de7000000001101aca9
+  - generic: 置顶
+- link "新店开业🔥时空中的绘旅人谷子一站式拿下！":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a432de7000000001101aca9
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "212"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6ad374cd000000001b02fc86
+- link "哇！是谁的娃！？":
+  - /url: /user/profile/6a3f3059000000000f038c02/6ad374cd000000001b02fc86
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "2"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6abe50c60000000012034eda
+- link "🌟重返未来1999新品速报！":
+  - /url: /user/profile/6a3f3059000000000f038c02/6abe50c60000000012034eda
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "8"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6abcb9d0000000001c00fafe
+- link "应援启动！启动！🍡🤩🥖":
+  - /url: /user/profile/6a3f3059000000000f038c02/6abcb9d0000000001c00fafe
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "2"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6ab8d66b000000001203d575
+- link "补货啦！超可爱努努！":
+  - /url: /user/profile/6a3f3059000000000f038c02/6ab8d66b000000001203d575
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "6"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6ab52b73000000001b02db1f
+- link "时空中的绘旅人新品已上架门店啦～":
+  - /url: /user/profile/6a3f3059000000000f038c02/6ab52b73000000001b02db1f
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "114"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6aafab98000000002902ed6d
+- link "✨时空中的绘旅人系列上新～":
+  - /url: /user/profile/6a3f3059000000000f038c02/6aafab98000000002902ed6d
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "53"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6ab111ba00000000360171a5
+- link "十周年封神📸偶像梦幻祭上新终于来了！":
+  - /url: /user/profile/6a3f3059000000000f038c02/6ab111ba00000000360171a5
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "4"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6aae560400000000280004b2
+- link "蔚蓝档案上新终于来啦！！！":
+  - /url: /user/profile/6a3f3059000000000f038c02/6aae560400000000280004b2
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "3"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6aa3ddc500000000270083b2
+- link "神奇数字马戏团上新来咯！":
+  - /url: /user/profile/6a3f3059000000000f038c02/6aa3ddc500000000270083b2
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "17"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6aa3dd7c000000002700828b
+- link "蔚蓝档案萌萌来袭":
+  - /url: /user/profile/6a3f3059000000000f038c02/6aa3dd7c000000002700828b
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "16"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a9a21fd00000000280029a2
+- link "偶像梦幻祭上新啦～":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a9a21fd00000000280029a2
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "3"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a97a8cf0000000028000af1
+- link "偶像梦幻祭来咯！！":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a97a8cf0000000028000af1
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "4"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a923e27000000001f0030ba
+- link "52.0终于来啦":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a923e27000000001f0030ba
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "3"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a842ad80000000027023241
+- link "重返未来上新🎉":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a842ad80000000027023241
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "5"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a7c6e220000000026036952
+- link "新品来袭～物华弥新上新啦🎊":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a7c6e220000000026036952
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "11"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a7c423f0000000032033ac7
+- link "🎉 满赠福利焕新，一大波周边等你来挑～":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a7c423f0000000032033ac7
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "26"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a7c20600000000033019903
+- link "萌萌的初音玩偶来啦～":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a7c20600000000033019903
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "4"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a75d2c60000000033019799
+- link "蔚蓝档案上新🎉":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a75d2c60000000033019799
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "15"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a7454360000000029031a21
+- link "重返未来1999上新来啦！":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a7454360000000029031a21
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "26"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a5df4bd00000000110045cf
+- link "物华弥新上新啦":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a5df4bd00000000110045cf
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "17"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a5a063a000000002201ae29
+- link "【若梦熄】“躺在草地上”新品实拍图来啦～":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a5a063a000000002201ae29
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "42"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a5a059e000000000f030187
+- link "✨【若梦熄】系列“永恒之爱”新品实拍图来啦～":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a5a059e000000000f030187
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "12"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a5a044c000000000f033bc2
+- link "【若梦熄】系列新品实拍图来啦✨":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a5a044c000000000f033bc2
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "15"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a5749d0000000001101b248
+- link "全知读者视角｜新品上新❕":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a5749d0000000001101b248
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "6"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a564134000000000f032a0f
+- link "若梦熄系列已上架～":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a564134000000000f032a0f
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "22"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a538e88000000001101f636
+- link "若梦将熄，此爱永恒——若梦熄系列上新✨":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a538e88000000001101f636
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "17"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a4bacc80000000011018e5c
+- link "神奇数字马戏团🎪新品驾到！":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a4bacc80000000011018e5c
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "86"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a474e18000000001101960d
+- link "元理核心新店开业活动来啦！":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a474e18000000001101960d
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "8"
+- link:
+  - /url: /user/profile/6a3f3059000000000f038c02/6a46620e000000000f0042e3
+- link "博士集合！卡游明日方舟全新系列终于来了✨":
+  - /url: /user/profile/6a3f3059000000000f038c02/6a46620e000000000f0042e3
+- link "元理核心（广州店）":
+  - /url: /user/profile/6a3f3059000000000f038c02?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 元理核心（广州店）
+- generic: "2"
+- generic: 笔记・3
+- generic: 专辑・0
+- generic: 文件・0
+- generic: TA 还没有收藏任何内容哦
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

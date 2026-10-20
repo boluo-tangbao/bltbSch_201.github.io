@@ -1,0 +1,265 @@
+- text: SweetDoDo甜物嗒嗒
+- generic: 小红书号：63071556589
+- generic: IP属地：广东
+- generic: 💖💖BJD官方授权店💖💖 BJD~MJD品类集合店 周一至周四10：30-21：30 周五至周日10：00-22：00 地址：动漫星城东区负二层E2028甜物嗒嗒
+- generic: "7"
+- generic: 关注
+- generic: "3447"
+- generic: 粉丝
+- generic: "6897"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link "置顶":
+  - /url: /user/profile/67c55ab900000000180221b4/6aabd2bd00000000290104b4
+  - generic: 置顶
+- link "上新预告🎶💿邦倪八代绒绒乐章":
+  - /url: /user/profile/67c55ab900000000180221b4/6aabd2bd00000000290104b4
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "356"
+- link "置顶":
+  - /url: /user/profile/67c55ab900000000180221b4/6ab5271300000000150142c7
+  - generic: 置顶
+- link "周年庆活动合集💞期待和你相聚✨":
+  - /url: /user/profile/67c55ab900000000180221b4/6ab5271300000000150142c7
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "17"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ad59cb50000000025036d32
+- link "娃衣上新｜穹顶之歌🕯于圣堂虔诚祷告":
+  - /url: /user/profile/67c55ab900000000180221b4/6ad59cb50000000025036d32
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "3"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ad303d2000000001a02b95d
+- link "娃衣上新｜醉花阴🌸花影落衣":
+  - /url: /user/profile/67c55ab900000000180221b4/6ad303d2000000001a02b95d
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "9"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ad1f517000000001500f596
+- link "什么⁉️从甜物嗒嗒带走的邦八自带打理！":
+  - /url: /user/profile/67c55ab900000000180221b4/6ad1f517000000001500f596
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "6"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ad06fec000000001203eb1e
+- link "娃衣上新｜餐前礼仪🕯宫廷风礼服登场~":
+  - /url: /user/profile/67c55ab900000000180221b4/6ad06fec000000001203eb1e
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "3"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6acf29fd000000001a0236a4
+- link "娃衣上新｜月圆雾语🐺根本没有这么萌的狼":
+  - /url: /user/profile/67c55ab900000000180221b4/6acf29fd000000001a0236a4
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "5"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6acc51b7000000001501437d
+- link "娃衣上新｜夜蝶寂礼🦋暗夜哥特序章":
+  - /url: /user/profile/67c55ab900000000180221b4/6acc51b7000000001501437d
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "12"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6acb63e2000000001203ebb9
+- link "BJD配件上新｜潘妮B12-特六人鱼体":
+  - /url: /user/profile/67c55ab900000000180221b4/6acb63e2000000001203ebb9
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "6"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6acb5cc4000000001a02a239
+- link "心屿守护计划实况🔥绒绒乐章小合集🎶":
+  - /url: /user/profile/67c55ab900000000180221b4/6acb5cc4000000001a02a239
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "25"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ac9d83e0000000015014472
+- link "娃衣上新｜抱春团🌸烟雨入江南":
+  - /url: /user/profile/67c55ab900000000180221b4/6ac9d83e0000000015014472
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "3"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ac70745000000001a02969c
+- link "娃衣上新｜猩红骑士🌹玫瑰与骑士":
+  - /url: /user/profile/67c55ab900000000180221b4/6ac70745000000001a02969c
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "9"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ac6152e000000001203e505
+- link "娃衣上新｜圣翼祷语🕊天使降临~":
+  - /url: /user/profile/67c55ab900000000180221b4/6ac6152e000000001203e505
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "9"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ac4d2fb000000001803b275
+- link "一场小尺寸娃聚⁉️甜物嗒嗒一周年💞✨":
+  - /url: /user/profile/67c55ab900000000180221b4/6ac4d2fb000000001803b275
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "15"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ac34183000000001500fb06
+- link "娃衣上新｜喵星来信💌来自喵星球的讯息":
+  - /url: /user/profile/67c55ab900000000180221b4/6ac34183000000001500fb06
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "8"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ac0afeb000000001b02f044
+- link "娃衣上新｜桃桃芒果冰🍨开启甜蜜派对":
+  - /url: /user/profile/67c55ab900000000180221b4/6ac0afeb000000001b02f044
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "9"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6abf6e99000000001802fba0
+- link "小嗒的周年庆开始啦～更多活动请点进小嗒合集（一周年活动）观看哦～":
+  - /url: /user/profile/67c55ab900000000180221b4/6abf6e99000000001802fba0
+  - text: 小嗒的周年庆开始啦
+  - text: ～更多活动请点进小嗒合集（一周年活动）观看哦～
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "11"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6abdc5cc00000000120350c2
+- link "娃衣上新｜骨骨软糖🍬一起逛街吧~":
+  - /url: /user/profile/67c55ab900000000180221b4/6abdc5cc00000000120350c2
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "3"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6abca0cc000000001500aff0
+- link "盲盒上新|心之暗面系列特六BJD":
+  - /url: /user/profile/67c55ab900000000180221b4/6abca0cc000000001500aff0
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "9"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6abc9321000000001203fe56
+- link "娃衣上新｜银月蝶心🤍甜酷少女登场":
+  - /url: /user/profile/67c55ab900000000180221b4/6abc9321000000001203fe56
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "7"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6aba329d0000000012034a72
+- link "米甜5⃣️童年回忆试吃活动🫧结算页面":
+  - /url: /user/profile/67c55ab900000000180221b4/6aba329d0000000012034a72
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "11"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6aba295b000000001b02caf3
+- link "娃衣上新｜白夜圣姬🤍月下的圣洁少女":
+  - /url: /user/profile/67c55ab900000000180221b4/6aba295b000000001b02caf3
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "19"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6aba1775000000001c00d4bd
+- link "🎵邦倪|绒绒乐章系列BJD华丽登场🐰":
+  - /url: /user/profile/67c55ab900000000180221b4/6aba1775000000001c00d4bd
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "6"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ab52656000000001203dd8c
+- link "店庆月即将开启🎂快来甜物嗒嗒一起过生日":
+  - /url: /user/profile/67c55ab900000000180221b4/6ab52656000000001203dd8c
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "32"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ab739390000000018039cec
+- link "娃衣上新｜菇咪🍄森林里的蘑菇小猫":
+  - /url: /user/profile/67c55ab900000000180221b4/6ab739390000000018039cec
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "5"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ab523a50000000012039bf0
+- link "🎂周年庆｜一岁相逢・娃友甜聚招募啦✨":
+  - /url: /user/profile/67c55ab900000000180221b4/6ab523a50000000012039bf0
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "23"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ab52157000000001a02029a
+- link "娃衣上新｜树莓莉莉🍓甜系围裙套装":
+  - /url: /user/profile/67c55ab900000000180221b4/6ab52157000000001a02029a
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "17"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ab51fd80000000012038d73
+- link "周年庆🎂【荷风弄影】限定色手喷头壳":
+  - /url: /user/profile/67c55ab900000000180221b4/6ab51fd80000000012038d73
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "17"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ab340230000000012038ced
+- link "娃衣上新｜刺玫蝶舞🌹玫瑰与蝶的诗歌":
+  - /url: /user/profile/67c55ab900000000180221b4/6ab340230000000012038ced
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "5"
+- link:
+  - /url: /user/profile/67c55ab900000000180221b4/6ab22cd1000000003401b03f
+- link "甜物嗒嗒1周年🎂活动日历来啦✨":
+  - /url: /user/profile/67c55ab900000000180221b4/6ab22cd1000000003401b03f
+- link "SweetDoDo甜物嗒嗒":
+  - /url: /user/profile/67c55ab900000000180221b4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: SweetDoDo甜物嗒嗒
+- generic: "9"
+- generic: 该用户已设置收藏内容不可见
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

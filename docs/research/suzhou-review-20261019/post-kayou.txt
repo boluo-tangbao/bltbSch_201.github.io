@@ -1,0 +1,17 @@
+- heading "仅剩22抽的银魂赏" [level=1]
+- text: 目前有last+b1+c1+d5+e7+f8 共计22抽 包赏总价590，包邮到家 富贵包
+- link "#银魂":
+  - /url: /search_result?keyword=%25E9%2593%25B6%25E9%25AD%2582&type=54&source=web_note_detail_r10
+- link "#银魂赏":
+  - /url: /search_result?keyword=%25E9%2593%25B6%25E9%25AD%2582%25E8%25B5%258F&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 银魂一番赏last赏
+- generic: 7天前 江苏
+- paragraph: 这是一片荒地点击评论
+- paragraph
+- generic: 说点什么...
+- generic: "1"
+- generic: 收藏
+- generic: 评论
+- button "发送" [disabled]
+- button "取消"

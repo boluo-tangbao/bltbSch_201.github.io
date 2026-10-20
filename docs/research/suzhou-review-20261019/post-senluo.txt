@@ -1,0 +1,74 @@
+- heading "一则来自苏州星悦汇店的到货声明，请查收" [level=1]
+- text: 亲爱的制作人： 非常抱歉，原计划于10月1日开启首发的恋与制作人拉链娃娃，受国庆期间物流运输+天气情况影响，目前货品到货时间暂无法确定，我们无法给到确切的上架时间。 我们正在持续加急跟进物流动态，货品一旦抵达门店，会第一时间通过门店、社群、朋友圈等全渠道发布到货通知，届时正式开启售卖。 给满怀期待的制作人们带来不便对此我们深感歉意。 敬请大家留意后续消息，感谢各位的理解与包容。 打卡活动可以正常进行，需要参与打卡活动的制作人可以正常到店参与 祝制作人们有一个快乐的假期❤️
+- link "#森罗万象苏州店":
+  - /url: /search_result?keyword=%25E6%25A3%25AE%25E7%25BD%2597%25E4%25B8%2587%25E8%25B1%25A1%25E8%258B%258F%25E5%25B7%259E%25E5%25BA%2597&type=54&source=web_note_detail_r10
+- link "#森罗万象GOODSFUN":
+  - /url: /search_result?keyword=%25E6%25A3%25AE%25E7%25BD%2597%25E4%25B8%2587%25E8%25B1%25A1GOODSFUN&type=54&source=web_note_detail_r10
+- link "#恋与制作人":
+  - /url: /search_result?keyword=%25E6%2581%258B%25E4%25B8%258E%25E5%2588%25B6%25E4%25BD%259C%25E4%25BA%25BA&type=54&source=web_note_detail_r10
+- link "#恋与制作人拉链娃娃":
+  - /url: /search_result?keyword=%25E6%2581%258B%25E4%25B8%258E%25E5%2588%25B6%25E4%25BD%259C%25E4%25BA%25BA%25E6%258B%2589%25E9%2593%25BE%25E5%25A8%2583%25E5%25A8%2583&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 森罗万象苏州店
+- generic: 09-30 江苏
+- generic: 共 9 条评论
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_profile_page
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 打卡明信片目前店内凌肖还有余量，其余均已发放完毕
+- generic: 置顶评论
+- generic: 10-06江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/6a0711fe0000000001007400?channel_type=web_profile_page
+- link "紫阳花":
+  - /url: /user/profile/6a0711fe0000000001007400?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 明信片问问还有谁的吗
+- generic: 10-01江苏
+- generic: 赞
+- generic: "4"
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_profile_page
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 目前都有的
+- generic: 10-01江苏
+- generic: 赞
+- generic: 回复
+- generic: 展开 3 条回复
+- link:
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_profile_page
+- link "森罗万象-苏州星悦汇店":
+  - /url: /user/profile/64d3b245000000001c029e9e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 老师们，恋与制作人到货啦，欢迎老师们到店～
+- generic: 10-01江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/649671a60000000012036f60?channel_type=web_profile_page
+- link "小心盐酸":
+  - /url: /user/profile/649671a60000000012036f60?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 现在还有李泽言的明信片吗！！
+- generic: 10-01江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5b576a2211be102f56c81c15?channel_type=web_profile_page
+- link "李泽言在逃未婚妻":
+  - /url: /user/profile/5b576a2211be102f56c81c15?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 09-30江苏
+- generic: 赞
+- generic: 回复
+- generic: "- THE END -"
+- paragraph
+- generic: 说点什么...
+- generic: "11"
+- generic: 收藏
+- generic: "9"
+- button "发送" [disabled]
+- button "取消"

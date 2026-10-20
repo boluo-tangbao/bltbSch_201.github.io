@@ -1,0 +1,265 @@
+- generic: 苏州扭扭城
+- generic: 小红书号：sznnt201
+- generic: IP属地：江苏
+- generic: 📍：苏州星悦汇二楼
+- generic: "34"
+- generic: 关注
+- generic: "1574"
+- generic: 粉丝
+- generic: "4191"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link "置顶":
+  - /url: /user/profile/6757cf86000000000800afb8/689b03f9000000001d02d423
+  - generic: 置顶
+- link "苏州扭扭城路径指南":
+  - /url: /user/profile/6757cf86000000000800afb8/689b03f9000000001d02d423
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "99"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6ad3438800000000180168eb
+- link "✨梦屋Hello Kitty毛绒指偶扭蛋上新✨":
+  - /url: /user/profile/6757cf86000000000800afb8/6ad3438800000000180168eb
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "4"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6ad312560000000002028efc
+- link "10月18日（本周日） NCT戒指限时返场":
+  - /url: /user/profile/6757cf86000000000800afb8/6ad312560000000002028efc
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "4"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6ad1ba5d0000000002028bde
+- link "💌苏州扭扭城💌本周上新！！！":
+  - /url: /user/profile/6757cf86000000000800afb8/6ad1ba5d0000000002028bde
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "6"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6acf10ee000000001c01fec4
+- link "银魂蹲蹲扭蛋｜将军暗杀篇全员集合！":
+  - /url: /user/profile/6757cf86000000000800afb8/6acf10ee000000001c01fec4
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "5"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6acdc9570000000002012153
+- link "孤独摇滚⭐仰望星空扭蛋上新！":
+  - /url: /user/profile/6757cf86000000000800afb8/6acdc9570000000002012153
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "4"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6acc5c6d0000000015003f34
+- link "✨三丽鸥披毛毯扭蛋第1弹上新！":
+  - /url: /user/profile/6757cf86000000000800afb8/6acc5c6d0000000015003f34
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "4"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6ac8c2b7000000001402dc25
+- link "✨三丽鸥披毛毯扭蛋第2弹上新！":
+  - /url: /user/profile/6757cf86000000000800afb8/6ac8c2b7000000001402dc25
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "3"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6ac798b7000000001c01caa8
+- link "苏州扭扭城丨本周新品爆料来袭！！！":
+  - /url: /user/profile/6757cf86000000000800afb8/6ac798b7000000001c01caa8
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "14"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6ac7402600000000140335be
+- link "🍰三丽鸥蛋糕收纳盒扭蛋上新！":
+  - /url: /user/profile/6757cf86000000000800afb8/6ac7402600000000140335be
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "3"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6ac5f73c000000000a01cb88
+- link "✨JOJO石之海｜肩靠肩瞌睡扭蛋上新✨":
+  - /url: /user/profile/6757cf86000000000800afb8/6ac5f73c000000000a01cb88
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "6"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6abb9b6b000000001403a5e9
+- link "✨一大波IP扭蛋新品集中上新！":
+  - /url: /user/profile/6757cf86000000000800afb8/6abb9b6b000000001403a5e9
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "9"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6abb909c0000000018006195
+- link "✨哆啦A梦毛绒扭蛋上新！":
+  - /url: /user/profile/6757cf86000000000800afb8/6abb909c0000000018006195
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "4"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6ab9e98c00000000180072dc
+- link "✨魔卡少女樱蝴蝶结浮雕挂饰扭蛋来啦🎀":
+  - /url: /user/profile/6757cf86000000000800afb8/6ab9e98c00000000180072dc
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "16"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6ab89c5d0000000018013228
+- link "魔性鲤鱼摔跤手🐟鲤人第4弹扭蛋上新":
+  - /url: /user/profile/6757cf86000000000800afb8/6ab89c5d0000000018013228
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "1"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6ab4a4bb000000000a022377
+- link "苏州扭扭城｜国庆中秋连扭13天活动来啦！":
+  - /url: /user/profile/6757cf86000000000800afb8/6ab4a4bb000000000a022377
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "6"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6ab493ef000000000a0202e9
+- link "✨史莱姆新品毛绒挂件到店！":
+  - /url: /user/profile/6757cf86000000000800afb8/6ab493ef000000000a0202e9
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "10"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6ab3953d000000001303c60c
+- link "原神一番赏 启动！":
+  - /url: /user/profile/6757cf86000000000800afb8/6ab3953d000000001303c60c
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "1"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6ab26e0600000000330312a5
+- link "✨门店上新预告｜一大波新品即将就位✨":
+  - /url: /user/profile/6757cf86000000000800afb8/6ab26e0600000000330312a5
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "5"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6ab0d4ef000000003302e39c
+- link "古早神番｜吊带袜天使迷你毛绒扭蛋来啦💥":
+  - /url: /user/profile/6757cf86000000000800afb8/6ab0d4ef000000003302e39c
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "2"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6aa76637000000000b00126a
+- link "鬼灭无限城新款吊挂扭蛋挂件来了🔥":
+  - /url: /user/profile/6757cf86000000000800afb8/6aa76637000000000b00126a
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "7"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6aa7658c000000002b025485
+- link "🔥一大波日系扭蛋新品预告来袭｜快乐拉满":
+  - /url: /user/profile/6757cf86000000000800afb8/6aa7658c000000002b025485
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "4"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6aa37bbe0000000026031b9f
+- link "就算我有100个朋友 也比不上一个小玉重要！":
+  - /url: /user/profile/6757cf86000000000800afb8/6aa37bbe0000000026031b9f
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "6"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6aa144e3000000002601b544
+- link "咒术回战5周年 等待系列扭蛋":
+  - /url: /user/profile/6757cf86000000000800afb8/6aa144e3000000002601b544
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "5"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6aa11ac900000000260331b5
+- link "新货重磅来袭！上周热门商品本次全部到货！":
+  - /url: /user/profile/6757cf86000000000800afb8/6aa11ac900000000260331b5
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "9"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6a9e41700000000026030603
+- link "✨BLEACH死神 坐等等待扭蛋来啦":
+  - /url: /user/profile/6757cf86000000000800afb8/6a9e41700000000026030603
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "9"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6a9e2935000000002603a497
+- link "BM上新预告丨饭团兄弟重磅来袭":
+  - /url: /user/profile/6757cf86000000000800afb8/6a9e2935000000002603a497
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "8"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6a9a98230000000028037f2e
+- link "MIKKO开学季限时返场":
+  - /url: /user/profile/6757cf86000000000800afb8/6a9a98230000000028037f2e
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "5"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6a9952200000000029013ced
+- link "上新预警📢一大批人气扭蛋抵达店铺！":
+  - /url: /user/profile/6757cf86000000000800afb8/6a9952200000000029013ced
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "16"
+- link:
+  - /url: /user/profile/6757cf86000000000800afb8/6a9913a40000000026030db6
+- link "🔥上新｜鬼灭之刃马卡龙扭蛋第2弹":
+  - /url: /user/profile/6757cf86000000000800afb8/6a9913a40000000026030db6
+- link "苏州扭扭城":
+  - /url: /user/profile/6757cf86000000000800afb8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 苏州扭扭城
+- generic: "52"
+- generic: 笔记・13
+- generic: 专辑・0
+- generic: 文件・0
+- generic: TA 还没有收藏任何内容哦
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

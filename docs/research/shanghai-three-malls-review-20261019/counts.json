@@ -1,0 +1,32 @@
+{
+  "shanghai-shop-001": {
+    "regularConfirmed": 12,
+    "limitedConfirmed": 2,
+    "regularPending": 16,
+    "limitedPending": 0,
+    "hidden": 1,
+    "accountShops": 9,
+    "accountLinks": 9,
+    "visible": 30
+  },
+  "shanghai-shop-003": {
+    "regularConfirmed": 10,
+    "limitedConfirmed": 3,
+    "regularPending": 6,
+    "limitedPending": 0,
+    "hidden": 2,
+    "accountShops": 7,
+    "accountLinks": 7,
+    "visible": 19
+  },
+  "shanghai-shop-004": {
+    "regularConfirmed": 18,
+    "limitedConfirmed": 1,
+    "regularPending": 4,
+    "limitedPending": 0,
+    "hidden": 0,
+    "accountShops": 19,
+    "accountLinks": 19,
+    "visible": 23
+  }
+}

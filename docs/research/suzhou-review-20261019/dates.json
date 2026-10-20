@@ -1,0 +1,281 @@
+{
+  "readAt": "2026-10-19",
+  "rules": "省年发表标签按原实际读取年；编辑不冒充发表；正文结合时序；相对时间不强算日",
+  "decisions": [
+    {
+      "url": "https://www.xiaohongshu.com/explore/69396ecc000000000d03f6fe",
+      "readAt": "2026-10-19",
+      "raw": "编辑于 2025-12-10",
+      "normalized": "2025-12-10",
+      "kind": "edit",
+      "reason": "页面明确2025年，属于2025—2026有效窗口；编辑时间不当原发表时间。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6890a82400000000040048fd",
+      "readAt": "2026-10-19",
+      "raw": "2025-08-04",
+      "normalized": "2025-08-04",
+      "kind": "publication",
+      "reason": "页面明确年份，原文领取地址关联本分店；次日活动为2025-08-05，不将旧活动宣传作当前优惠。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6abcf6f6000000000a026d39",
+      "readAt": "2026-10-19",
+      "raw": "09-30 江苏",
+      "normalized": "2026-09-30",
+      "kind": "publication",
+      "reason": "2026-10-19实际读取，省年发表标签按2026解释。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/69ac0ef2000000001a0376af",
+      "readAt": "2026-10-19",
+      "raw": "03-07",
+      "normalized": "2026-03-07",
+      "kind": "publication",
+      "reason": "省年发表标签按实际读取年2026解释。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6a50e9470000000011011c04",
+      "readAt": "2026-09-27",
+      "raw": "原2026-09-27读取“编辑于昨天”，正文“0926更新”",
+      "normalized": "2026-09-26",
+      "kind": "edit",
+      "reason": "复用2026-09-27实际读取的原标签与正文，年份按原读取年2026解释；不随复核日滚动，不将编辑时间当发表时间。",
+      "originalReadAt": "2026-09-27",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6a83d3230000000005022701",
+      "readAt": "2026-10-19",
+      "raw": "08-17",
+      "normalized": "2026-08-17",
+      "kind": "publication",
+      "reason": "实际读取年2026；正文预告8月23日，顺序一致，判断关闭日2026-08-23。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6a4e35f90000000016027dd4",
+      "readAt": "2026-10-19",
+      "raw": "07-08",
+      "normalized": "2026-07-08",
+      "kind": "publication",
+      "reason": "省年标签按实际读取年2026解释；正文回顾7月5日，与当月公告一致。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6a421f29000000000803c841",
+      "readAt": "2026-09-27",
+      "raw": "原2026-09-27实际读取：编辑于06-29",
+      "normalized": "2026-06-29",
+      "kind": "edit",
+      "reason": "复用2026-09-27实际读取的原标签与正文，年份按原读取年2026解释；不随复核日滚动，不将编辑时间当发表时间。",
+      "originalReadAt": "2026-09-27",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6abf46f50000000018012520",
+      "readAt": "2026-10-19",
+      "raw": "编辑于 10-02 江苏",
+      "normalized": "2026-10-02",
+      "kind": "edit",
+      "reason": "省略年份按本次实际读取年2026解释；编辑时间不冒充原发表时间。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/696b2235000000002103dbf7",
+      "readAt": "2026-10-19",
+      "raw": "01-17",
+      "normalized": "2026-01-17",
+      "kind": "publication",
+      "reason": "省年发表标签按实际读取年2026解释，年终促销及春节语境指当年春节前。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6ac0856c000000000b0040e0",
+      "readAt": "2026-10-19",
+      "raw": "编辑于 10-03 江苏",
+      "normalized": "2026-10-03",
+      "kind": "edit",
+      "reason": "省略年份按本次实际读取年2026解释；编辑时间不冒充原发表时间。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/69b39a6f0000000022028b3b",
+      "readAt": "2026-10-19",
+      "raw": "03-13",
+      "normalized": "2026-03-13",
+      "kind": "publication",
+      "reason": "省年发表标签按2026年解释；正文预告3月14日，是本店经营活动，非整店开放期。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6a2d17be000000001700bdc0",
+      "readAt": "2026-10-19",
+      "raw": "编辑于 06-13",
+      "normalized": "2026-06-13",
+      "kind": "edit",
+      "reason": "省略年份按本次实际读取年2026解释；编辑时间不冒充原发表时间。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6acb5606000000001303c720",
+      "readAt": "2026-10-19",
+      "raw": "7天前 江苏",
+      "normalized": null,
+      "kind": "relative-publication",
+      "reason": "保留相对标签及读取日，未补造精确发表日期。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6ad47f23000000000c00dda6",
+      "readAt": "2026-10-19",
+      "raw": "昨天04:11 江苏",
+      "normalized": null,
+      "kind": "relative-publication",
+      "reason": "保留相对标签及读取日，未补造精确发表日期。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6aaceb060000000027016201",
+      "readAt": "2026-10-19",
+      "raw": "09-18",
+      "normalized": "2026-09-18",
+      "kind": "publication",
+      "reason": "发表标签省年，按实际读取当年2026解释。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6ab62324000000001c00fbee",
+      "readAt": "2026-10-19",
+      "raw": "09-25",
+      "normalized": "2026-09-25",
+      "kind": "publication",
+      "reason": "发表标签省年，按实际读取当年2026解释。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6ad0b4c60000000015013f79",
+      "readAt": "2026-10-19",
+      "raw": "3天前 江苏",
+      "normalized": null,
+      "kind": "relative-publication",
+      "reason": "保留相对标签及读取日，未补造精确发表日期。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6ad3438800000000180168eb",
+      "readAt": "2026-10-19",
+      "raw": "1天前 江苏",
+      "normalized": null,
+      "kind": "relative-publication",
+      "reason": "保留相对标签及读取日，未补造精确发表日期。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6abd1a17000000000a024f83",
+      "raw": "09-30 江苏；作者回复10-01到货啦",
+      "readAt": "2026-10-19",
+      "normalized": "2026-09-30",
+      "kind": "publication",
+      "reason": "按实际读取当年2026补年。国庆运输延误与次日到货回复顺序一致；不把临时缺货当停业。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/68ec79860000000005012bbc",
+      "raw": "2025-10-13；正文“2025年10月16日起结束营业”",
+      "readAt": "2026-10-19",
+      "normalized": "2025-10-13",
+      "kind": "publication",
+      "reason": "发表和正文结束年份均明确为2025；不机械套2026，不将旧分店关闭转移到星悦汇新店。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6ad1a15a000000001b01f38a",
+      "readAt": "2026-10-19",
+      "raw": "3天前 江苏",
+      "normalized": null,
+      "kind": "relative-publication",
+      "reason": "保留相对标签与读取日，不强算精确发表日。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6ad22a21000000001500b5d0",
+      "readAt": "2026-10-19",
+      "raw": "2天前 江苏",
+      "normalized": null,
+      "kind": "relative-publication",
+      "reason": "保留相对标签与读取日，不强算精确发表日。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/678d433c0000000016020835",
+      "readAt": "2026-10-19",
+      "raw": "2025-01-19",
+      "normalized": "2025-01-19",
+      "kind": "publication",
+      "reason": "页面发表年明确2025，正文标题预告2025-01-20；不将置顶或品牌最新帖子改写该事实年份。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6a8c1325000000002802e9b2",
+      "raw": "08-24；正文“正式开业：8.28”",
+      "readAt": "2026-10-19",
+      "normalized": "2026-08-24",
+      "kind": "publication",
+      "reason": "发表省年按原读取2026年；正文8月28日在发表后，判断开业2026-08-28。常规营业时段及商品活动不构成限时店。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6abe1ae8000000000b007c96",
+      "readAt": "2026-10-19",
+      "raw": "10-01 江苏；正文国庆",
+      "normalized": "2026-10-01",
+      "kind": "publication",
+      "reason": "省年发表按读取年2026解释；国庆语境一致。作者照片时间另为2026-09-19，未混成发帖时间。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/69847d20000000001a01e255",
+      "readAt": "2026-10-19",
+      "reviewedAt": "2026-10-19",
+      "raw": "编辑于02-05；顾客07-18问天街店关了？商家本人答对哒宝子",
+      "normalized": null,
+      "kind": "edit-and-comment",
+      "reason": "实际读取当年2026补足省年标签；主帖编辑和关闭问答分开，评论证明已确认关闭，不是精确撤店日。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6accb803000000001800665d",
+      "readAt": "2026-10-19",
+      "reviewedAt": "2026-10-19",
+      "raw": "6天前",
+      "normalized": null,
+      "kind": "relative-publication",
+      "reason": "保留本店视频原相对标签和读取日，不推算精确日。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6ad31c57000000001a0266a4",
+      "readAt": "2026-10-19",
+      "reviewedAt": "2026-10-19",
+      "raw": "1天前",
+      "normalized": null,
+      "kind": "relative-publication",
+      "reason": "本店一番赏上新，保留相对标签；寄售者旧摘录的原读取日另列。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6a54e26f000000002201951a",
+      "readAt": "2026-10-19",
+      "reviewedAt": "2026-10-19",
+      "raw": "07-13",
+      "normalized": "2026-07-13",
+      "kind": "publication",
+      "reason": "省年发表按实际读取年2026解释；苏州金地标签只补强当时本分店线索，不以其他分店近期更新刷新该事实。"
+    },
+    {
+      "url": "https://www.douyin.com/note/7532390717056224539",
+      "readAt": "2026-10-19",
+      "reviewedAt": "2026-10-19",
+      "raw": "2025年7月29日",
+      "normalized": "2025-07-29",
+      "kind": "publication",
+      "reason": "平台明确2025年，本店上新属于有效窗口；不套2026。"
+    },
+    {
+      "url": "https://www.douyin.com/video/7631165833322065274",
+      "readAt": "2026-10-19",
+      "reviewedAt": "2026-10-19",
+      "raw": "4月21日",
+      "normalized": "2026-04-21",
+      "kind": "publication",
+      "reason": "省年发表按原实际读取年2026补足；已匹配苏州金地分店。"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6aba08d400000000010096f1",
+      "readAt": "2026-10-05",
+      "reviewedAt": "2026-10-19",
+      "raw": "原2026-10-05已读：国庆；10月1日CAFE开业；萌谷子快闪至10月18日",
+      "normalized": null,
+      "kind": "event-period",
+      "reason": "原读取2026年国庆语境，分别判断CAFE开业2026-10-01、快闪结束2026-10-18；活动日期不当发表日。本次直接读取失败，未宣称重新读到。"
+    }
+  ]
+}

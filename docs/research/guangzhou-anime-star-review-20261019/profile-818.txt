@@ -1,0 +1,264 @@
+- generic: 818吃谷怪
+- generic: 小红书号：9477172673
+- generic: IP属地：广东
+- generic: 广州动漫星城818吃谷怪 西区负二W212 西区负三BW356 广州永庆坊818吃谷怪 永庆坊一巷6号
+- generic: "349"
+- generic: 关注
+- generic: "6153"
+- generic: 粉丝
+- generic: 5.9万
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link:
+  - /url: /user/profile/607696d70000000001000591/6ad59e44000000002701661d
+- link "十日终焉 昼间萌物·夜访山海特价开抽":
+  - /url: /user/profile/607696d70000000001000591/6ad59e44000000002701661d
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "1"
+- link:
+  - /url: /user/profile/607696d70000000001000591/6ab2401d00000000340036aa
+- link "SBR飙马野郎毛绒亚克力摆件到货":
+  - /url: /user/profile/607696d70000000001000591/6ab2401d00000000340036aa
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "2"
+- link:
+  - /url: /user/profile/607696d70000000001000591/6ab22b6b000000003302c665
+- link "超辉夜姫万画赏现货到店":
+  - /url: /user/profile/607696d70000000001000591/6ab22b6b000000003302c665
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "13"
+- link:
+  - /url: /user/profile/607696d70000000001000591/6ab2198b0000000034016f0d
+- link "《JOJO的奇妙冒险：黄金之风》坐坐毛绒到货":
+  - /url: /user/profile/607696d70000000001000591/6ab2198b0000000034016f0d
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "5"
+- link:
+  - /url: /user/profile/607696d70000000001000591/6a8bb6910000000016020b9a
+- link "米粒公仔盲盒到货":
+  - /url: /user/profile/607696d70000000001000591/6a8bb6910000000016020b9a
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "3"
+- link:
+  - /url: /user/profile/607696d70000000001000591/6a536605000000001c027484
+- link "Dr.Stone石纪元眼萌萌系列毛绒盲盒现货到店":
+  - /url: /user/profile/607696d70000000001000591/6a536605000000001c027484
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "20"
+- link:
+  - /url: /user/profile/607696d70000000001000591/6a448930000000001603d26d
+- link "海贼王子供吧唧、黄金卡现货到店":
+  - /url: /user/profile/607696d70000000001000591/6a448930000000001603d26d
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "1"
+- link:
+  - /url: /user/profile/607696d70000000001000591/6a40eca8000000001c0278a4
+- link "海贼王辈字吧唧三十弹现货到店":
+  - /url: /user/profile/607696d70000000001000591/6a40eca8000000001c0278a4
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "2"
+- link:
+  - /url: /user/profile/607696d70000000001000591/6a3d1fdd000000001700b1de
+- link "第五人格老玩家专属周末活动来啦！":
+  - /url: /user/profile/607696d70000000001000591/6a3d1fdd000000001700b1de
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "2"
+- link:
+  - /url: /user/profile/607696d70000000001000591/6a215c0c000000003700dfbf
+- link "超时空辉夜姬打卡场景完工":
+  - /url: /user/profile/607696d70000000001000591/6a215c0c000000003700dfbf
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "13"
+- link:
+  - /url: /user/profile/607696d70000000001000591/69fef2cf00000000360302b4
+- link "【航海王PVC卡光影映迹系列】 到货":
+  - /url: /user/profile/607696d70000000001000591/69fef2cf00000000360302b4
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "4"
+- link:
+  - /url: /user/profile/607696d70000000001000591/69eb04220000000020007003
+- link "闪魂x如鸢心间探影收藏卡现货发售":
+  - /url: /user/profile/607696d70000000001000591/69eb04220000000020007003
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "2"
+- link:
+  - /url: /user/profile/607696d70000000001000591/69e30df4000000001a0329d2
+- link "鬼灭之刃金签拍立得部分到货":
+  - /url: /user/profile/607696d70000000001000591/69e30df4000000001a0329d2
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "2"
+- link:
+  - /url: /user/profile/607696d70000000001000591/69e1af13000000001a0321d5
+- link "2025 Topps Turbo Attax F1卡册组合包到店":
+  - /url: /user/profile/607696d70000000001000591/69e1af13000000001a0321d5
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "7"
+- link:
+  - /url: /user/profile/607696d70000000001000591/69ddc225000000002102cedc
+- link "超时空辉夜姫吧唧、拍立得现货到店":
+  - /url: /user/profile/607696d70000000001000591/69ddc225000000002102cedc
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "6"
+- link:
+  - /url: /user/profile/607696d70000000001000591/69d9a58c0000000022001caf
+- link "JOJO奇妙冒险星尘远征军周边首发":
+  - /url: /user/profile/607696d70000000001000591/69d9a58c0000000022001caf
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "9"
+- link:
+  - /url: /user/profile/607696d70000000001000591/69c4c865000000002102da42
+- link "本日新货，金牌得主，海贼王":
+  - /url: /user/profile/607696d70000000001000591/69c4c865000000002102da42
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "2"
+- link:
+  - /url: /user/profile/607696d70000000001000591/69c4c34f0000000022003354
+- link "鬼灭之刃明治村限定现货到店":
+  - /url: /user/profile/607696d70000000001000591/69c4c34f0000000022003354
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "5"
+- link:
+  - /url: /user/profile/607696d70000000001000591/69c38b960000000021010d75
+- link "SBR飙马野郎JS限定原画台历现货到店":
+  - /url: /user/profile/607696d70000000001000591/69c38b960000000021010d75
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "1"
+- link:
+  - /url: /user/profile/607696d70000000001000591/69c348cb000000001a025781
+- link "鬼灭之刃大哥金签拍立得现货到店":
+  - /url: /user/profile/607696d70000000001000591/69c348cb000000001a025781
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "1"
+- link:
+  - /url: /user/profile/607696d70000000001000591/69b7e6b9000000001a033dee
+- link "闪魂绝区零收藏卡第一弹现货发售":
+  - /url: /user/profile/607696d70000000001000591/69b7e6b9000000001a033dee
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "5"
+- link:
+  - /url: /user/profile/607696d70000000001000591/69b7bd5c000000001a024b1c
+- link "棋魂原画展周边现货到店":
+  - /url: /user/profile/607696d70000000001000591/69b7bd5c000000001a024b1c
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "10"
+- link:
+  - /url: /user/profile/607696d70000000001000591/69901ee6000000001b0150e7
+- link "⏰营业时间：全年无休，春节照常营业":
+  - /url: /user/profile/607696d70000000001000591/69901ee6000000001b0150e7
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "10"
+- link:
+  - /url: /user/profile/607696d70000000001000591/698ed3150000000016008384
+- link "鬼灭之刃圣诞节限定立牌、吧唧、挂件到货":
+  - /url: /user/profile/607696d70000000001000591/698ed3150000000016008384
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "257"
+- link:
+  - /url: /user/profile/607696d70000000001000591/694b713e000000001b0311bc
+- link "鬼灭之刃圣诞节立牌ab池 日版现货到店":
+  - /url: /user/profile/607696d70000000001000591/694b713e000000001b0311bc
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "12"
+- link:
+  - /url: /user/profile/607696d70000000001000591/694537b1000000000d00f946
+- link "圣诞场景准备就绪，大家可以来打卡了":
+  - /url: /user/profile/607696d70000000001000591/694537b1000000000d00f946
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "72"
+- link:
+  - /url: /user/profile/607696d70000000001000591/6932bb6e000000001902692b
+- link "鬼灭之刃周边大量上新":
+  - /url: /user/profile/607696d70000000001000591/6932bb6e000000001902692b
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "8"
+- link:
+  - /url: /user/profile/607696d70000000001000591/69294a2d000000000d03dedc
+- link "JOJO WORLD 漫画封面亚克力冰箱贴到店":
+  - /url: /user/profile/607696d70000000001000591/69294a2d000000000d03dedc
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "6"
+- link:
+  - /url: /user/profile/607696d70000000001000591/690d9ad0000000000301dfce
+- link "JOJOWorld 原画扑克到店":
+  - /url: /user/profile/607696d70000000001000591/690d9ad0000000000301dfce
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "6"
+- link:
+  - /url: /user/profile/607696d70000000001000591/68f1f1530000000003018bfa
+- link "SBR原画展实拍图，现货到店":
+  - /url: /user/profile/607696d70000000001000591/68f1f1530000000003018bfa
+- link "818吃谷怪":
+  - /url: /user/profile/607696d70000000001000591?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 818吃谷怪
+- generic: "5"
+- generic: 笔记・86
+- generic: 专辑・0
+- generic: 文件・0
+- generic: TA 还没有收藏任何内容哦
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

@@ -1,0 +1,165 @@
+{
+  "place": {
+    "id": "shanghai-shop-001",
+    "name": "第一百货",
+    "tier": "hang",
+    "order": 10,
+    "summary": "位置好、门类全，南京路上最夯选择。",
+    "details": "**谷子集市、寄售、同人谷、galgame、K-pop**应有尽有。\n\n再加上地理位置的bonus，它不一定每一项都做到最强，但胜在无敌的全面性。",
+    "visitNotes": [
+      "留意活动档期：这里会有地偶表演、小型漫展和快闪咖啡等活动。"
+    ],
+    "tags": [
+      "谷子集市",
+      "galgame",
+      "地偶",
+      "寄售",
+      "同人",
+      "中古",
+      "快闪",
+      "Kpop",
+      "欧美"
+    ],
+    "cover": "images/places/Shanghai/第一百货.jpg",
+    "gallery": [
+      {
+        "src": "images/places/Shanghai/第一百货.jpg",
+        "alt": "商场外观",
+        "group": "商圈外部",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/1791366115951.jpg",
+        "alt": "楼层导览",
+        "group": "店铺外景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/1791366104590.jpg",
+        "alt": "Lola 店面",
+        "group": "店铺外景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/1791366104610.jpg",
+        "alt": "谷店街区",
+        "group": "店铺外景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/1791366104654.jpg",
+        "alt": "Lolita 店铺街区",
+        "group": "店铺外景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/1791366115898.jpg",
+        "alt": "FONZ GOODS 店面",
+        "group": "店铺外景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322606.jpg",
+        "alt": "潮趣店面",
+        "group": "店铺外景",
+        "sourceName": "作者‘2025-09-27’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322311.jpg",
+        "alt": "少女乐队周边",
+        "group": "店铺内景",
+        "sourceName": "作者‘2025-09-27’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322430.jpg",
+        "alt": "角色周边陈列",
+        "group": "店铺内景",
+        "sourceName": "作者‘2025-09-27’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322494.jpg",
+        "alt": "亚克力周边",
+        "group": "店铺内景",
+        "sourceName": "作者‘2025-09-27’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322668.jpg",
+        "alt": "谷子展示台",
+        "group": "店铺内景",
+        "sourceName": "作者‘2025-09-27’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/2025-9-27/1791462322738.jpg",
+        "alt": "角色周边近景",
+        "group": "店铺内景",
+        "sourceName": "作者‘2025-09-27’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/image.png",
+        "alt": "主题店内布置",
+        "group": "店铺内景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/live_1b9cb1d5eb5aa1ee7a261eaa698e50d114596466.jpg",
+        "alt": "周边货架",
+        "group": "店铺内景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/QQ图片20250921192736.jpg",
+        "alt": "角色海报陈列",
+        "group": "店铺内景",
+        "sourceName": "作者直拍（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/1791366104491.jpg",
+        "alt": "角色立牌合影区",
+        "group": "额外活动",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/1791366104693.jpg",
+        "alt": "角色主题通道",
+        "group": "额外活动",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/ac3c4fd4-25eb-456c-868f-15a052ce9616.jpg",
+        "alt": "谷子集市现场",
+        "group": "额外活动",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/第一百货/faadd134-fb6e-4ce5-b325-b8245ecb8356.jpg",
+        "alt": "集市摊位",
+        "group": "额外活动",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/网图补充/first-department-exterior.webp",
+        "alt": "第一百货建筑外观（网图；2026-01-20报道）",
+        "group": "商圈外部",
+        "sourceName": "人民网·金台资讯（新浪转载）（2026-01-20）",
+        "sourceUrl": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html"
+      },
+      {
+        "src": "images/places/Shanghai/网图补充/first-department-market.webp",
+        "alt": "第一百货练摊现场（网图；2026-01-20报道，历史场景）",
+        "group": "额外活动",
+        "sourceName": "人民网·金台资讯（新浪转载）（2026-01-20）",
+        "sourceUrl": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html"
+      }
+    ],
+    "visitedAt": "2026-07-13",
+    "updatedAt": "2026-10-17",
+    "published": true,
+    "location": {
+      "lat": 31.237372,
+      "lng": 121.470895,
+      "coordinateSystem": "wgs84",
+      "address": "上海市黄浦区南京东路800号第一百货C馆"
+    }
+  },
+  "directory": null
+}

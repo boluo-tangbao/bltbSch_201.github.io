@@ -1,0 +1,141 @@
+{
+  "query": "苏州金地 灵智谷",
+  "mode": "用户",
+  "readAt": "2026-10-19",
+  "scope": "首屏已加载用户结果"
+}
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- link "苏州智谷网络科技 小红书号：636503061 粉丝・1 笔记・1 关注":
+  - /url: /user/profile/5aa77a2411be1053d2c690e6
+  - generic: 苏州智谷网络科技
+  - generic: 小红书号：636503061
+  - generic: 粉丝・1
+  - generic: 笔记・1
+  - button "关注":
+    - generic: 关注
+- link "苏州厂房招商 小红书号：26789328857 粉丝・98 笔记・41 关注":
+  - /url: /user/profile/5f0c78f1000000000101c147
+  - generic: 苏州厂房招商
+  - generic: 小红书号：26789328857
+  - generic: 粉丝・98
+  - generic: 笔记・41
+  - button "关注":
+    - generic: 关注
+- link "对方正在输入中... 1小时前更新 小红书号：27760482669 粉丝・15 笔记・87 关注":
+  - /url: /user/profile/69717bc2000000002a01d5ca
+  - generic: 对方正在输入中...
+  - generic: 1小时前更新
+  - generic: 小红书号：27760482669
+  - generic: 粉丝・15
+  - generic: 笔记・87
+  - button "关注":
+    - generic: 关注
+- link "郭管家～ 1天前更新 小红书号：18141132900 粉丝・10 笔记・5 关注":
+  - /url: /user/profile/67aa31300000000006012160
+  - generic: 郭管家～
+  - generic: 1天前更新
+  - generic: 小红书号：18141132900
+  - generic: 粉丝・10
+  - generic: 笔记・5
+  - button "关注":
+    - generic: 关注
+- link "苏州工业园区-方正智谷直租 小红书号：95834678605 粉丝・7 笔记・36 关注":
+  - /url: /user/profile/60c1b867000000000101d1fe
+  - generic: 苏州工业园区-方正智谷直租
+  - generic: 小红书号：95834678605
+  - generic: 粉丝・7
+  - generic: 笔记・36
+  - button "关注":
+    - generic: 关注
+- link "方正智谷| 刘可 小红书号：27730507858 粉丝・20 笔记・43 关注":
+  - /url: /user/profile/62a6a825000000002102ace3
+  - generic: 方正智谷| 刘可
+  - generic: 小红书号：27730507858
+  - generic: 粉丝・20
+  - generic: 笔记・43
+  - button "关注":
+    - generic: 关注
+- link "山东大伟鲜炒鸡 3天前更新 小红书号：7755673221 粉丝・3 笔记・33 关注":
+  - /url: /user/profile/6504d6b1000000001603abc1
+  - generic: 山东大伟鲜炒鸡
+  - generic: 3天前更新
+  - generic: 小红书号：7755673221
+  - generic: 粉丝・3
+  - generic: 笔记・33
+  - button "关注":
+    - generic: 关注
+- link "李家网 小红书号：708245805 粉丝・1 笔记・1 关注":
+  - /url: /user/profile/5dd68ae30000000001004d63
+  - generic: 李家网
+  - generic: 小红书号：708245805
+  - generic: 粉丝・1
+  - generic: 笔记・1
+  - button "关注":
+    - generic: 关注
+- link "VOGE 无极机车 苏州安美 1小时前更新 小红书号：18146533047 粉丝・24 笔记・69 关注":
+  - /url: /user/profile/6a65ad59000000001400c401
+  - generic: VOGE 无极机车 苏州安美
+  - generic: 1小时前更新
+  - generic: 小红书号：18146533047
+  - generic: 粉丝・24
+  - generic: 笔记・69
+  - button "关注":
+    - generic: 关注
+- link "元创iPark 5天前更新 小红书号：3559270362 粉丝・10 笔记・15 关注":
+  - /url: /user/profile/64f193310000000005002917
+  - generic: 元创iPark
+  - generic: 5天前更新
+  - generic: 小红书号：3559270362
+  - generic: 粉丝・10
+  - generic: 笔记・15
+  - button "关注":
+    - generic: 关注
+- link "谷系列产业园 小红书号：27414342574 粉丝・3 笔记・4 关注":
+  - /url: /user/profile/6865e4c0000000001d00938c
+  - generic: 谷系列产业园
+  - generic: 小红书号：27414342574
+  - generic: 粉丝・3
+  - generic: 笔记・4
+  - button "关注":
+    - generic: 关注
+- link "云舒 小红书号：2229681665 粉丝・2 笔记・4 关注":
+  - /url: /user/profile/6466d09c000000000e01eaaa
+  - generic: 云舒
+  - generic: 小红书号：2229681665
+  - generic: 粉丝・2
+  - generic: 笔记・4
+  - button "关注":
+    - generic: 关注
+- link "中集产城苏州公司 小红书号：796932776 粉丝・9 笔记・15 关注":
+  - /url: /user/profile/5e08821b0000000001005be0
+  - generic: 中集产城苏州公司
+  - generic: 小红书号：796932776
+  - generic: 粉丝・9
+  - generic: 笔记・15
+  - button "关注":
+    - generic: 关注
+- link "苏州盈泰昌 小红书号：63079002636 咨询公司 粉丝・4 笔记・7 关注":
+  - /url: /user/profile/68884874000000001d00b207
+  - text: 苏州盈泰昌
+  - generic: 小红书号：63079002636
+  - generic: 咨询公司
+  - generic: 粉丝・4
+  - generic: 笔记・7
+  - button "关注":
+    - generic: 关注
+- link "创智谷酒店家具定制工厂 小红书号：CZGJDJJC 粉丝・280 笔记・323 关注":
+  - /url: /user/profile/5ef82c430000000001005e2e
+  - generic: 创智谷酒店家具定制工厂
+  - generic: 小红书号：CZGJDJJC
+  - generic: 粉丝・280
+  - generic: 笔记・323
+  - button "关注":
+    - generic: 关注
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

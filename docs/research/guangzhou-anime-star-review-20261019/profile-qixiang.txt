@@ -1,0 +1,251 @@
+- generic: 奇想漫玩（动漫星城）
+- generic: 小红书号：2153769083
+- generic: IP属地：广东
+- generic: 📍广州市越秀区动漫星城东区负二楼夹层 🕐营业时间：10：00~21：30（周末22：00） 🥁TCG卡牌•谷子周边•一番赏🆙
+- generic: "1"
+- generic: 关注
+- generic: "885"
+- generic: 粉丝
+- generic: "5063"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6ad3286b0000000018005ded
+- link "上新|命运石之门":
+  - /url: /user/profile/61e6877b00000000210242d2/6ad3286b0000000018005ded
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6abf66880000000018011ed6
+- link "一番赏上新|光之美少女":
+  - /url: /user/profile/61e6877b00000000210242d2/6abf66880000000018011ed6
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "7"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6abcc7700000000014039fbe
+- link "卡牌上新|黑白双翼":
+  - /url: /user/profile/61e6877b00000000210242d2/6abcc7700000000014039fbe
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6ab61ce2000000000a0264be
+- link "一个字：🐮":
+  - /url: /user/profile/61e6877b00000000210242d2/6ab61ce2000000000a0264be
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6ab3c5990000000014003b85
+- link "一番赏上新|龙珠":
+  - /url: /user/profile/61e6877b00000000210242d2/6ab3c5990000000014003b85
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "1"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6aaf74750000000026016d08
+- link "上新｜轻松熊抽赏":
+  - /url: /user/profile/61e6877b00000000210242d2/6aaf74750000000026016d08
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "4"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6aae5f9e0000000011032878
+- link "上新｜宝可梦30周年小摆件":
+  - /url: /user/profile/61e6877b00000000210242d2/6aae5f9e0000000011032878
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "1"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6aad30f70000000011034332
+- link "一番赏上新|假面骑士":
+  - /url: /user/profile/61e6877b00000000210242d2/6aad30f70000000011034332
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6aad24fe0000000011037855
+- link "一番赏上新|hololive、龙珠":
+  - /url: /user/profile/61e6877b00000000210242d2/6aad24fe0000000011037855
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "1"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6aacfdb80000000025037e4c
+- link "一番赏上新|原神Vol. 1":
+  - /url: /user/profile/61e6877b00000000210242d2/6aacfdb80000000025037e4c
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "1"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6aab8c8b000000000d024502
+- link "上新|NIKKE 补充包":
+  - /url: /user/profile/61e6877b00000000210242d2/6aab8c8b000000000d024502
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "1"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6aab8700000000001103479e
+- link "一番赏更新":
+  - /url: /user/profile/61e6877b00000000210242d2/6aab8700000000001103479e
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6aaa4feb000000002802f324
+- link "一番赏上新":
+  - /url: /user/profile/61e6877b00000000210242d2/6aaa4feb000000002802f324
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6aaa35fe000000002502d9ff
+- link "新品到店💎宝可梦30周年庆典9月16日开售！":
+  - /url: /user/profile/61e6877b00000000210242d2/6aaa35fe000000002502d9ff
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6aa50aa0000000002601798c
+- link "上新":
+  - /url: /user/profile/61e6877b00000000210242d2/6aa50aa0000000002601798c
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6aa4ceca000000001001f8f5
+- link "上新鸣潮对决新品补充包「群星交错」BP01":
+  - /url: /user/profile/61e6877b00000000210242d2/6aa4ceca000000001001f8f5
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "2"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6aa49f2b000000002502f0e9
+- link "新品预告💎宝可梦30周年庆典9月16日开售！":
+  - /url: /user/profile/61e6877b00000000210242d2/6aa49f2b000000002502f0e9
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "5"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6aa49ef0000000002802f07f
+- link "新品预告：鸣潮对决新品补充包「群星交错」BP01":
+  - /url: /user/profile/61e6877b00000000210242d2/6aa49ef0000000002802f07f
+  - text: 新品预告：鸣潮对决新品补充包「群星交错」BP01
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6aa29e77000000000d0273b2
+- link "一番赏上新":
+  - /url: /user/profile/61e6877b00000000210242d2/6aa29e77000000000d0273b2
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "1"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6a92c9d10000000025012c91
+- link "上新":
+  - /url: /user/profile/61e6877b00000000210242d2/6a92c9d10000000025012c91
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "1"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6a91420f00000000250106fe
+- link "上新":
+  - /url: /user/profile/61e6877b00000000210242d2/6a91420f00000000250106fe
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "2"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6a890aa60000000026038672
+- link "上新":
+  - /url: /user/profile/61e6877b00000000210242d2/6a890aa60000000026038672
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "1"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6a7ec7380000000005031f9d
+- link "上新":
+  - /url: /user/profile/61e6877b00000000210242d2/6a7ec7380000000005031f9d
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "1"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6a7838e10000000025005bf4
+- link "上新":
+  - /url: /user/profile/61e6877b00000000210242d2/6a7838e10000000025005bf4
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6a75501d0000000006005007
+- link "上新":
+  - /url: /user/profile/61e6877b00000000210242d2/6a75501d0000000006005007
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6a743f4b000000002402d5dc
+- link "上新":
+  - /url: /user/profile/61e6877b00000000210242d2/6a743f4b000000002402d5dc
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "1"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6a702b83000000000801305e
+- link "上新":
+  - /url: /user/profile/61e6877b00000000210242d2/6a702b83000000000801305e
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "1"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6a6c5802000000002402c382
+- link "上新":
+  - /url: /user/profile/61e6877b00000000210242d2/6a6c5802000000002402c382
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "2"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6a61990c00000000050383e2
+- link "上新":
+  - /url: /user/profile/61e6877b00000000210242d2/6a61990c00000000050383e2
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "3"
+- link:
+  - /url: /user/profile/61e6877b00000000210242d2/6a618b100000000001000736
+- link "上新":
+  - /url: /user/profile/61e6877b00000000210242d2/6a618b100000000001000736
+- link "奇想漫玩（动漫星城）":
+  - /url: /user/profile/61e6877b00000000210242d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 奇想漫玩（动漫星城）
+- generic: "3"
+- generic: 该用户已设置收藏内容不可见
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

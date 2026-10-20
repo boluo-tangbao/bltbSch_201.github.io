@@ -1,0 +1,22 @@
+- heading "谷子快跑广州动星店《缎带英雄》新品到店啦✨" [level=1]
+- text: 到店新品如下↓ ✨马口铁徽章盲盒 ✨宝石亚克力挂件盲盒 ✨透卡盲盒 ✨场面写相卡盲盒 ✨亚克力彩窗立牌 蓝宝石缎带骑士款、蓝宝石款、天鹅绒款、帕茵款 购买《缎带英雄》产品系列总金额实付29元，可得贴纸一张，金额可叠加～ 📍动漫星城东区负二层E2007
+- link "#谷子快跑":
+  - /url: /search_result?keyword=%25E8%25B0%25B7%25E5%25AD%2590%25E5%25BF%25AB%25E8%25B7%2591&type=54&source=web_note_detail_r10
+- link "#新品上市":
+  - /url: /search_result?keyword=%25E6%2596%25B0%25E5%2593%2581%25E4%25B8%258A%25E5%25B8%2582&type=54&source=web_note_detail_r10
+- link "#新品到店":
+  - /url: /search_result?keyword=%25E6%2596%25B0%25E5%2593%2581%25E5%2588%25B0%25E5%25BA%2597&type=54&source=web_note_detail_r10
+- link "#缎带英雄":
+  - /url: /search_result?keyword=%25E7%25BC%258E%25E5%25B8%25A6%25E8%258B%25B1%25E9%259B%2584&type=54&source=web_note_detail_r10
+- link "#动漫星城":
+  - /url: /search_result?keyword=%25E5%258A%25A8%25E6%25BC%25AB%25E6%2598%259F%25E5%259F%258E&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 缎带英雄谷子
+- generic: 10-02 广东
+- paragraph: 这是一片荒地点击评论
+- paragraph
+- generic: 说点什么...
+- generic: 收藏
+- generic: 评论
+- button "发送" [disabled]
+- button "取消"

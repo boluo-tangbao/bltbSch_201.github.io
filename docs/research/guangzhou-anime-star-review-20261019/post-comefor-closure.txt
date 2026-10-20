@@ -1,0 +1,110 @@
+- heading "闭店公告｜告别在即，热血不止🔥" [level=1]
+- text: ComeFor × 假面骑士55周年「不朽征途」主题快闪·华南首站将于今日22点营业结束后正式闭店！ 感谢每位奔赴而来的假面骑士爱好者！ 活动虽告一段落，但骑士精神永续长存✨ 最后再共同回顾本次快闪的热血画面吧📸 期待与你的下一次相会🏍 📅【活动时间】 2026年8月7日-10月11日 📍【活动地点】 广州正佳广场5F 5D098-100侏罗纪恐龙乐园（儿童区）内
+- link "#ComeFor":
+  - /url: /search_result?keyword=ComeFor&type=54&source=web_note_detail_r10
+- link "#假面骑士":
+  - /url: /search_result?keyword=%25E5%2581%2587%25E9%259D%25A2%25E9%25AA%2591%25E5%25A3%25AB&type=54&source=web_note_detail_r10
+- link "#假面骑士55周年":
+  - /url: /search_result?keyword=%25E5%2581%2587%25E9%259D%25A2%25E9%25AA%2591%25E5%25A3%25AB55%25E5%2591%25A8%25E5%25B9%25B4&type=54&source=web_note_detail_r10
+- link "#假面骑士55周年主题快闪":
+  - /url: /search_result?keyword=%25E5%2581%2587%25E9%259D%25A2%25E9%25AA%2591%25E5%25A3%25AB55%25E5%2591%25A8%25E5%25B9%25B4%25E4%25B8%25BB%25E9%25A2%2598%25E5%25BF%25AB%25E9%2597%25AA&type=54&source=web_note_detail_r10
+- link "#不朽征途主题快闪":
+  - /url: /search_result?keyword=%25E4%25B8%258D%25E6%259C%25BD%25E5%25BE%2581%25E9%2580%2594%25E4%25B8%25BB%25E9%25A2%2598%25E5%25BF%25AB%25E9%2597%25AA&type=54&source=web_note_detail_r10
+- link "#二次元":
+  - /url: /search_result?keyword=%25E4%25BA%258C%25E6%25AC%25A1%25E5%2585%2583&type=54&source=web_note_detail_r10
+- link "#快闪":
+  - /url: /search_result?keyword=%25E5%25BF%25AB%25E9%2597%25AA&type=54&source=web_note_detail_r10
+- link "#新创华":
+  - /url: /search_result?keyword=%25E6%2596%25B0%25E5%2588%259B%25E5%258D%258E&type=54&source=web_note_detail_r10
+- link "#正佳广场":
+  - /url: /search_result?keyword=%25E6%25AD%25A3%25E4%25BD%25B3%25E5%25B9%25BF%25E5%259C%25BA&type=54&source=web_note_detail_r10
+- generic: 10-11 上海
+- generic: 共 12 条评论
+- link:
+  - /url: /user/profile/6317f5590000000012001805?channel_type=web_profile_page
+- link "赛Q来打":
+  - /url: /user/profile/6317f5590000000012001805?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 能来这边吗
+- generic: 6天前湖北
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5e623f5c0000000001001fb5?channel_type=web_profile_page
+- link "のあ":
+  - /url: /user/profile/5e623f5c0000000001001fb5?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 北京不考虑吗[抽泣R]
+- generic: 6天前北京
+- generic: "1"
+- generic: 回复
+- link:
+  - /url: /user/profile/6437cc1400000000290130c8?channel_type=web_profile_page
+- link "Xenontoni":
+  - /url: /user/profile/6437cc1400000000290130c8?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 下次再见
+- text: 希望能来西北呀
+- generic: 7天前陕西
+- generic: "1"
+- generic: 回复
+- link:
+  - /url: /user/profile/69d9b7b4000000003402c38f?channel_type=web_profile_page
+- link "momo":
+  - /url: /user/profile/69d9b7b4000000003402c38f?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 下次带别的皮套过来
+- generic: 7天前广东
+- generic: "1"
+- generic: 回复
+- link:
+  - /url: /user/profile/637f2172000000001f01564c?channel_type=web_profile_page
+- link "寄居蟹":
+  - /url: /user/profile/637f2172000000001f01564c?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 还有在其他城市办的打算吗🥺
+- generic: 7天前河南
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5ef5c02e000000000101d4d2?channel_type=web_profile_page
+- link "ALEX":
+  - /url: /user/profile/5ef5c02e000000000101d4d2?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 下次见！
+- generic: 7天前广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/6354c9b000000000120253b6?channel_type=web_profile_page
+- link "小马蹄_哒达":
+  - /url: /user/profile/6354c9b000000000120253b6?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 下次见！
+- generic: 7天前广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/68031d29000000000a03d56a?channel_type=web_profile_page
+- link "司音叶隐":
+  - /url: /user/profile/68031d29000000000a03d56a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 下次见
+- generic: 10-11广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/634554be000000001802843f?channel_type=web_profile_page
+- link "顺回音✨":
+  - /url: /user/profile/634554be000000001802843f?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 拜拜！下次见
+- generic: 10-11广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/64eb2b32000000000101399f?channel_type=web_profile_page
+- link "大蛇猩猩":
+  - /url: /user/profile/64eb2b32000000000101399f?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 拜拜下次见
+- generic: 10-11广东
+- generic: 赞
+- generic: 回复
+- paragraph
+- generic: 说点什么...
+- generic: "91"
+- generic: "6"
+- generic: "12"
+- button "发送" [disabled]
+- button "取消"

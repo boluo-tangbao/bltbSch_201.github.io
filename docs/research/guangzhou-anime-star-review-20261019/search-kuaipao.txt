@@ -1,0 +1,214 @@
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- generic: 筛选
+- button "综合"
+- button "店铺"
+- button "深圳店"
+- button "旗舰店"
+- button "广州"
+- button "杭州店"
+- button "全职猎人"
+- button "线下店"
+- button "兑换入口"
+- button "大悦城"
+- button "时尚天河"
+- button "活动"
+- button "小卷子"
+- button "钻石王牌"
+- button "快闪攻略"
+- button "开箱测评"
+- link:
+  - /url: /search_result/6acdbee5000000000a022a4e
+- link "好特卖22.9谷子快跑毛绒盲盒来啦！":
+  - /url: /search_result/6acdbee5000000000a022a4e
+- link "好特卖（上海七宝宝龙城） 6天前":
+  - /url: /user/profile/5be80c437eac3b0001e0ebc5?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 好特卖（上海七宝宝龙城）
+  - generic: 6天前
+- generic: "12"
+- link:
+  - /url: /search_result/6aa7bf03000000000b034823
+- link "明日方舟好价谷店铺推荐？快跑！":
+  - /url: /search_result/6aa7bf03000000000b034823
+- link "西红柿土豆罐头 09-14":
+  - /url: /user/profile/69e842920000000001007000?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 西红柿土豆罐头
+  - generic: 09-14
+- generic: "87"
+- link:
+  - /url: /search_result/6a6eee4e000000002701ca58
+- link "谷子快跑广州新店来袭🎉开业惊喜连连！":
+  - /url: /search_result/6a6eee4e000000002701ca58
+- link "谷子快跑GOGOGOODS 08-03":
+  - /url: /user/profile/6583c628000000001c02bd37?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 谷子快跑GOGOGOODS
+  - generic: 08-03
+- generic: "21"
+- link:
+  - /url: /search_result/6a4d259b0000000021023e58
+- link "上海静安大悦城谷子快跑探店（第二集！）":
+  - /url: /search_result/6a4d259b0000000021023e58
+- link "CY- Recoleta 07-08":
+  - /url: /user/profile/617fe292000000001000c87a?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: CY- Recoleta
+  - generic: 07-08
+- generic: "39"
+- link:
+  - /url: /search_result/6a61fe09000000000f010cf5
+- link "广州邦谷/GBC谷大扫荡攻略":
+  - /url: /search_result/6a61fe09000000000f010cf5
+- link "Hamilton 07-23":
+  - /url: /user/profile/60154fbc000000000100613c?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: Hamilton
+  - generic: 07-23
+- generic: "282"
+- link:
+  - /url: /search_result/699ad36d000000001a02b8ee
+- link "GoGoGoods 盲袋":
+  - /url: /search_result/699ad36d000000001a02b8ee
+- link "Hex 逆光 02-22":
+  - /url: /user/profile/659111340000000022014cb3?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: Hex 逆光
+  - generic: 02-22
+- generic: "4"
+- generic: 大家都在搜
+- generic: 谷子快跑gogogoods
+- generic: 谷子快跑全职猎人
+- generic: 谷子快跑深圳店
+- generic: 上海谷子快跑
+- link:
+  - /url: /search_result/6a3fc013000000001c026506
+- link "momo 06-27":
+  - /url: /user/profile/66f558a6000000001d03362f?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: momo
+  - generic: 06-27
+- generic: "124"
+- link:
+  - /url: /search_result/6abe56a6000000001203a828
+- link "谷圈大避雷｜原神一番赏团长累计跑单3w➕！":
+  - /url: /search_result/6abe56a6000000001203a828
+- link "棒棒糖 10-08":
+  - /url: /user/profile/5c5f95cd000000001b014c71?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 棒棒糖
+  - generic: 10-08
+- generic: "219"
+- link:
+  - /url: /search_result/6a18f4100000000006020e48
+- link "🥳谷子快跑上海旗舰店！即将开业！":
+  - /url: /search_result/6a18f4100000000006020e48
+- link "谷子快跑GOGOGOODS 05-29":
+  - /url: /user/profile/6583c628000000001c02bd37?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 谷子快跑GOGOGOODS
+  - generic: 05-29
+- generic: "39"
+- link:
+  - /url: /search_result/6acc992f000000000a02582a
+- link "谷子快跑GIRLS BAND CRY毛绒挂件！22.9元":
+  - /url: /search_result/6acc992f000000000a02582a
+- link "MMMMM（好乱卖） 10-12":
+  - /url: /user/profile/6a6425e60000000013002c00?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: MMMMM（好乱卖）
+  - generic: 10-12
+- generic: "10"
+- link:
+  - /url: /search_result/6acc97b30000000015002e9f
+- link "参展确认✨2026上海CTE ！":
+  - /url: /search_result/6acc97b30000000015002e9f
+- link "谷子快跑GOGOGOODS 10-12":
+  - /url: /user/profile/6583c628000000001c02bd37?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 谷子快跑GOGOGOODS
+  - generic: 10-12
+- generic: "28"
+- link:
+  - /url: /search_result/6ab4c88b000000001c02f376
+- link "九十要吃谷🎉谷子快跑 双节吃谷狂欢！":
+  - /url: /search_result/6ab4c88b000000001c02f376
+- link "谷子快跑GOGOGOODS 09-24":
+  - /url: /user/profile/6583c628000000001c02bd37?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 谷子快跑GOGOGOODS
+  - generic: 09-24
+- generic: "10"
+- link:
+  - /url: /search_result/6a2b6dd60000000006035bc2
+- link "📸名侦探光美！新品情报公开！":
+  - /url: /search_result/6a2b6dd60000000006035bc2
+- link "谷子快跑GOGOGOODS 06-13":
+  - /url: /user/profile/6583c628000000001c02bd37?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 谷子快跑GOGOGOODS
+  - generic: 06-13
+- generic: "848"
+- link:
+  - /url: /search_result/6a61c68a0000000013024e7b
+- link "少女乐队的呐喊·丹宁女孩 系列新品公开！":
+  - /url: /search_result/6a61c68a0000000013024e7b
+- link "GIRLS BAND CRY 官方 07-24":
+  - /url: /user/profile/67a9c502000000000d00afdf?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: GIRLS BAND CRY 官方
+  - generic: 07-24
+- generic: "351"
+- link:
+  - /url: /search_result/6abc793d0000000002012d6b
+- link "缎带英雄🎀线下首发门店公开！":
+  - /url: /search_result/6abc793d0000000002012d6b
+- link "谷子快跑GOGOGOODS 09-30":
+  - /url: /user/profile/6583c628000000001c02bd37?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 谷子快跑GOGOGOODS
+  - generic: 09-30
+- generic: "3"
+- generic: 大家都在搜
+- generic: 谷子快跑广州店
+- generic: 谷子快跑旗舰店
+- generic: 谷子快跑数码宝贝
+- generic: gbc谷子快跑
+- link:
+  - /url: /search_result/69eb540e000000001a02d846
+- link "🎉谷子快跑开业！现场精彩集锦！":
+  - /url: /search_result/69eb540e000000001a02d846
+- link "百联ZX造趣场 04-25":
+  - /url: /user/profile/673d54da000000001c01a370?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 百联ZX造趣场
+  - generic: 04-25
+- generic: "16"
+- link:
+  - /url: /search_result/6aba2b05000000001b0303ba
+- link "🎊谷子快跑旗舰店！国庆限定活动！":
+  - /url: /search_result/6aba2b05000000001b0303ba
+- link "谷子快跑GOGOGOODS 09-28":
+  - /url: /user/profile/6583c628000000001c02bd37?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 谷子快跑GOGOGOODS
+  - generic: 09-28
+- generic: "16"
+- link:
+  - /url: /search_result/6ac7e1f0000000001c00f8dc
+- link "知名连锁大店：飞社长抽赏藏票漏票？！":
+  - /url: /search_result/6ac7e1f0000000001c00f8dc
+- link "别烦我行吗 10-09":
+  - /url: /user/profile/5fedea26000000000101c270?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 别烦我行吗
+  - generic: 10-09
+- generic: "349"
+- link:
+  - /url: /search_result/6a5fa44d000000000100d536
+- link "上海找工作必避雷的公司（二次元谷店）":
+  - /url: /search_result/6a5fa44d000000000100d536
+- link "西瓜椰椰冰 07-23":
+  - /url: /user/profile/63738c3d000000001f01928b?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 西瓜椰椰冰
+  - generic: 07-23
+- generic: "752"
+- link:
+  - /url: /search_result/6a9aeded0000000029015ef3
+- link "上海吃谷路线分享":
+  - /url: /search_result/6a9aeded0000000029015ef3
+- link "阿水 10-08":
+  - /url: /user/profile/671b9c7f000000001d030b52?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 阿水
+  - generic: 10-08
+- generic: "937"
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

@@ -1,0 +1,21 @@
+[
+  {
+    "placeId": "shanghai-shop-003",
+    "src": "images/places/Shanghai/新世界城补充/new-world-sanrio-2025.webp",
+    "alt": "新世界城三丽鸥门店外景（网图；2025-12-26报道，拍摄日期未标明）",
+    "group": "店铺外景",
+    "sourceName": "赢商网·熊舒苗／图片来源项目官方渠道（2025-12-26）",
+    "sourceUrl": "https://m.winshang.com/news737942.html",
+    "sourceDate": "2025-12-26",
+    "capturedAt": null,
+    "eventDate": null,
+    "reviewedAt": "2026-10-18",
+    "originalImageUrl": "https://img1.winshang.com/newsimg/2025/12/image_b413b7cadfe0455cb4efe749476c9021.png",
+    "originalFile": "docs/research/new-world-city-20261018/winshang-2.png",
+    "originalSha256": "78452bcee9029123bb448af1b58be859a76dfbcd4594a1605fc49b65fc01d20d",
+    "localSha256": "07d18cba628ce8cd3f6001ce7cb357765af468a96b1814df9077ff8ef0bebcf6",
+    "evidence": "正文讲述新世界城四楼Fun肆街区并列出Sanrio Gift Gate；相邻配图门头清楚可见SANRIO GIFT GATE。未据照片推断实时营业、库存或拍摄日期。",
+    "reviewMethod": "读取正文与图片来源说明，逐张查看原图；与既有图集比较后仅选非重复三丽鸥角度。",
+    "processing": "保留完整画面，等比例缩放，最长边不超过1600px，WebP质量85；无裁切、无重绘。"
+  }
+]

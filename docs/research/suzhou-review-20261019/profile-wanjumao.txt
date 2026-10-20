@@ -1,0 +1,267 @@
+- generic: 玩聚猫PURRJOY
+- generic: 小红书号：2202238410
+- generic: IP属地：江苏
+- generic: 店铺位置：苏州相城龙湖天街B馆二楼 桌游跑团，潮玩模型，手作饮品 来店提前预约，桌游咨询都可私 来店消费有免费饮品送哟！
+- generic: 江苏苏州
+- generic: "1"
+- generic: 关注
+- generic: "136"
+- generic: 粉丝
+- generic: "933"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link "置顶":
+  - /url: /user/profile/648830fb000000001003508b/6a5ddff70000000001003f5b
+  - generic: 置顶
+- link "我宣布这是今年最棒的桌游":
+  - /url: /user/profile/648830fb000000001003508b/6a5ddff70000000001003f5b
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "109"
+- link "置顶":
+  - /url: /user/profile/648830fb000000001003508b/68baab20000000001d020e3b
+  - generic: 置顶
+- link "哇，这家桌游店也太酷了吧！🥳":
+  - /url: /user/profile/648830fb000000001003508b/68baab20000000001d020e3b
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "25"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6abe1ae8000000000b007c96
+- link "大风：来，一起玩桌游～":
+  - /url: /user/profile/648830fb000000001003508b/6abe1ae8000000000b007c96
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "2"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a9e5037000000002502e4a1
+- link "救命！被这桌桌游玩家硬控了！":
+  - /url: /user/profile/648830fb000000001003508b/6a9e5037000000002502e4a1
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "2"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a9cf2660000000011031086
+- link "到底什么人会喜欢玩血染钟楼呀快让我认识":
+  - /url: /user/profile/648830fb000000001003508b/6a9cf2660000000011031086
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "1"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a969a33000000000d024c92
+- link "拉斯维加斯的赌场":
+  - /url: /user/profile/648830fb000000001003508b/6a969a33000000000d024c92
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "2"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a82a4a50000000008010ede
+- link "一天五场血染钟楼真的好累呀":
+  - /url: /user/profile/648830fb000000001003508b/6a82a4a50000000008010ede
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "2"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a6f383d0000000006005387
+- link "玩聚猫桌游":
+  - /url: /user/profile/648830fb000000001003508b/6a6f383d0000000006005387
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "5"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a6727850000000001002674
+- link "三国枭雄来了":
+  - /url: /user/profile/648830fb000000001003508b/6a6727850000000001002674
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "4"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a545d4c0000000016026af7
+- link "血染钟楼怎么这么好玩":
+  - /url: /user/profile/648830fb000000001003508b/6a545d4c0000000016026af7
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "3"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a51c2cf00000000160241e7
+- link "左滑看我打桌游👀":
+  - /url: /user/profile/648830fb000000001003508b/6a51c2cf00000000160241e7
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "2"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a49f75800000000160279a4
+- link "桌游人的快乐！":
+  - /url: /user/profile/648830fb000000001003508b/6a49f75800000000160279a4
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "3"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a41dc44000000001602413e
+- link "农场主来了":
+  - /url: /user/profile/648830fb000000001003508b/6a41dc44000000001602413e
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "4"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a3fc2b7000000001503db6a
+- link "怎么会有这么好玩的桌游！":
+  - /url: /user/profile/648830fb000000001003508b/6a3fc2b7000000001503db6a
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "11"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a3b90f1000000001700a92a
+- link "谁不想下午来一把刺激的桌游":
+  - /url: /user/profile/648830fb000000001003508b/6a3b90f1000000001700a92a
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "6"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a390006000000001702d969
+- link "桌游人有自己的游戏日！":
+  - /url: /user/profile/648830fb000000001003508b/6a390006000000001702d969
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "4"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a372cc40000000016024839
+- link "再被这桌人玩桌游刺激到！":
+  - /url: /user/profile/648830fb000000001003508b/6a372cc40000000016024839
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "3"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a2fcf12000000001603c15b
+- link "有桌游的人才懂这一刻的含金量！":
+  - /url: /user/profile/648830fb000000001003508b/6a2fcf12000000001603c15b
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "3"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a293aba000000001603de92
+- link "和朋友们开桌就是很快乐🥹":
+  - /url: /user/profile/648830fb000000001003508b/6a293aba000000001603de92
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "9"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a2812b4000000001702bba2
+- link "破案了！是桌游拯救了我的周末":
+  - /url: /user/profile/648830fb000000001003508b/6a2812b4000000001702bba2
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "6"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a26535400000000150260f9
+- link "挺好玩的桌游，但没那么神～～～":
+  - /url: /user/profile/648830fb000000001003508b/6a26535400000000150260f9
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "23"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a253bb20000000016024e52
+- link "开开心心玩桌游":
+  - /url: /user/profile/648830fb000000001003508b/6a253bb20000000016024e52
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "12"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a1e378e000000003701e877
+- link "↑谁家好人买俩战魂啊":
+  - /url: /user/profile/648830fb000000001003508b/6a1e378e000000003701e877
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "3"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a1d026e000000003601ca60
+- link "谁家桌游这么打啊":
+  - /url: /user/profile/648830fb000000001003508b/6a1d026e000000003601ca60
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "13"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a17e487000000003700fb5b
+- link "财阀开荒圆满完成桌游 桌游推荐 骰塔 宅家游戏不无聊 后屋的客人 沉浸式社交 桌":
+  - /url: /user/profile/648830fb000000001003508b/6a17e487000000003700fb5b
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "3"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a1404740000000037035e73
+- link "新的毛线真的很好玩每一次赛跑都充满了刺激地球村小聚场 桌游收纳 桌游 桌面游戏":
+  - /url: /user/profile/648830fb000000001003508b/6a1404740000000037035e73
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "4"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a0e9dcf000000003701fde4
+- link "财阀开荒啦桌游 桌游推荐 消磨时间妙器 好玩分享 桌面游戏 德式桌游 德式 大学":
+  - /url: /user/profile/648830fb000000001003508b/6a0e9dcf000000003701fde4
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "7"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a0334ed0000000037036c90
+- link "谁能拒绝在放松的时候来一把紧张又刺激的黎明杀机骰子定制 桌游推荐 桌面游戏 骰子":
+  - /url: /user/profile/648830fb000000001003508b/6a0334ed0000000037036c90
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "3"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/6a01e48b000000003701c287
+- link "相城的桌游玩家都吃这么好嘛 桌游 桌游推荐 玩的就是美式玩的就是环境美式桌游 桌":
+  - /url: /user/profile/648830fb000000001003508b/6a01e48b000000003701c287
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "5"
+- link:
+  - /url: /user/profile/648830fb000000001003508b/69fefd30000000003601d517
+- link "北欧众神到店，喜欢美式的小伙伴一起来打卡呀桌游 美式 美式桌游 骰塔 游戏人生":
+  - /url: /user/profile/648830fb000000001003508b/69fefd30000000003601d517
+- link "玩聚猫PURRJOY":
+  - /url: /user/profile/648830fb000000001003508b?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 玩聚猫PURRJOY
+- generic: "11"
+- generic: 笔记・8
+- generic: 专辑・0
+- generic: 文件・0
+- generic: TA 还没有收藏任何内容哦
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

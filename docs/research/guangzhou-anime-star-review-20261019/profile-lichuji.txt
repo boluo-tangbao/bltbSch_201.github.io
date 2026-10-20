@@ -1,0 +1,250 @@
+- generic: 璃初记
+- generic: 小红书号：2741844006
+- generic: IP属地：广东
+- generic: 广州动漫星城西区负二层夹层wm049铺，主营手办、盲盒、谷子、卡片、毛绒娃娃、极少量玩具， 非遗公仔纸免费盖章点和售卖点
+- generic: 广东广州
+- generic: "81"
+- generic: 关注
+- generic: "294"
+- generic: 粉丝
+- generic: "5389"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab4d89700000000150108bd
+- link "新到的一些":
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab4d89700000000150108bd
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab4d220000000001c01e610
+- link "剑网3周边":
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab4d220000000001c01e610
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab4c527000000001a027a9e
+- link "非人哉和万圣街上新":
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab4c527000000001a027a9e
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- generic: "37"
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab4c33f000000001c01f5e3
+- link "我在精神病院学斩神周边":
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab4c33f000000001c01f5e3
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab3a133000000000100a5cf
+- link "古早番《鬼灯的冷彻》居然有周边了":
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab3a133000000000100a5cf
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab39f56000000001b0325c0
+- link "天官赐福岁和纸影抽拉相片":
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab39f56000000001b0325c0
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- generic: "1"
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab387f00000000018017b46
+- link "明日方舟雪域破晓一番赏":
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab387f00000000018017b46
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab387c80000000014031435
+- link "新世纪福音战士新剧场版:序一番赏":
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab387c80000000014031435
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab38796000000001801b5f6
+- link "龙珠GT一番赏":
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab38796000000001801b5f6
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab3876e0000000014031323
+- link "鬼灭之刃上弦之贰":
+  - /url: /user/profile/6107ed2a000000000101cbf1/6ab3876e0000000014031323
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69eeec17000000001a037101
+- link "吉伊卡哇来了":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69eeec17000000001a037101
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- generic: "2"
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d111db000000001a036d16
+- link "药屋少女:花开有时尤为可贵":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d111db000000001a036d16
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- generic: "3"
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d10d6e000000001a02e1b2
+- link "知音漫客:谁的爷青回我不说":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d10d6e000000001a02e1b2
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d10889000000001a02c5a5
+- link "原神:终幕之后的盛宴是愉悦还是忧伤？":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d10889000000001a02c5a5
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d1015c00000000220252dc
+- link "吸血鬼骑士:谁的骨科入门教材？":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d1015c00000000220252dc
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0fcaa0000000022027809
+- link "非人哉:当非人哉遇上三丽鸥":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0fcaa0000000022027809
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- generic: "1"
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0fa40000000002301c7ad
+- link "狐妖小红娘:眼中情系列":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0fa40000000002301c7ad
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- generic: "2"
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0f8a4000000001b02096b
+- link "时光代理人:后台花絮有时候更精彩":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0f8a4000000001b02096b
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0efa2000000001e00f4c7
+- link "你们还玩第五人格吗？":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0efa2000000001e00f4c7
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0c8ca000000001f0056eb
+- link "第五人格:千年书旅":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0c8ca000000001f0056eb
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- generic: "1"
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0c2f40000000023017ba5
+- link "盗墓笔记:还记得同舟的日子吗？":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0c2f40000000023017ba5
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- generic: "1"
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0b8d6000000001e00cf70
+- link "时光代理人:禁忌之门后面有什么？":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0b8d6000000001e00cf70
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- generic: "1"
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0a9b00000000022027dab
+- link "人鱼陷落:落英芬芳，是带着花香的情书":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0a9b00000000022027dab
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- generic: "1"
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0a18e00000000220284e3
+- link "万圣街:你在异界会是什么形象？":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d0a18e00000000220284e3
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d09f4f000000001f000863
+- link "小蘑菇:春光正好，带安折去旅游吧":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69d09f4f000000001f000863
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- generic: "2"
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69ce0254000000002301cd21
+- link "我也是有魔法糖果的人了":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69ce0254000000002301cd21
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69b793ab0000000020039ce5
+- link "闪魂绝区零收藏卡，帅！":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69b793ab0000000020039ce5
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- generic: "2"
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69b5708d000000001f00717f
+- link "时光代理人:糖果危机，甜度爆表？！":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69b5708d000000001f00717f
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- generic: "1"
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69b5703500000000220264ff
+- link "时光代理人:幕后猎手，是你，抑或是我？":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69b5703500000000220264ff
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- generic: "1"
+- link:
+  - /url: /user/profile/6107ed2a000000000101cbf1/69b52dd8000000001b022c79
+- link "谁不喜欢香香软软的有兽焉和非人哉啊":
+  - /url: /user/profile/6107ed2a000000000101cbf1/69b52dd8000000001b022c79
+- link "璃初记":
+  - /url: /user/profile/6107ed2a000000000101cbf1?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 璃初记
+- generic: "2"
+- generic: 笔记・200
+- generic: 专辑・0
+- generic: 文件・0
+- generic: TA 还没有收藏任何内容哦
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

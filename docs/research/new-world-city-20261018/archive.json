@@ -1,0 +1,148 @@
+{
+  "reviewedAt": "2026-10-18",
+  "beforeSnapshot": "before.json",
+  "hiddenClosed": [
+    {
+      "name": "谷里谷气",
+      "floor": "四层",
+      "status": "closed",
+      "note": "新闻晨报2025年11月19日报道本店已发布闭店公告、11月15日起闭店清仓。2026年攻略仍列旧店名，不能覆盖明确闭店信息；本轮未取得重新营业公告，前台隐藏，最终撤店日期未独立核实。",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        },
+        {
+          "label": "新闻晨报·记者王丽芳报道新世界城谷里谷气闭店公告",
+          "url": "https://ep.shxwcb.com/2025/11/19/20251119-02-2_20251118234808.html",
+          "date": "2025-11-19"
+        }
+      ]
+    },
+    {
+      "name": "IPSTAR 鸣潮主题店（2026 年夏季限定）",
+      "floor": "四层 · A18–19",
+      "kind": "联动餐饮、游戏周边（鸣潮）",
+      "status": "closed",
+      "note": "品牌 2026 年 7 月 8 日公告明确该期主题店于 7 月 12 日结束。仅指这一期主题活动结束，不代表潮玩星球零售店或其他主题店整体闭店。",
+      "sources": [
+        {
+          "label": "IPSTAR 官方鸣潮主题店闭店提醒",
+          "url": "https://www.sina.cn/news/detail/5318412382245813.html",
+          "date": "2026-07-08"
+        }
+      ]
+    }
+  ],
+  "removedShops": [
+    {
+      "shop": {
+        "name": "光荣特库摩中心",
+        "aliases": [
+          "KOEI TECMO CENTER",
+          "KT中心"
+        ],
+        "floor": "四层",
+        "kind": "游戏周边（光荣特库摩）",
+        "status": "older",
+        "note": "上海商务 2024 年资料列出这家官方品牌店；本轮未取得可独立确认当前营业的门店目录或近期原始公告，作为线索保留。",
+        "sources": [
+          {
+            "label": "上海商务·新世界 Fun 肆街区案例",
+            "url": "https://sww.sh.gov.cn/swdt/20240830/fd6aa86f3f1e45e4b748726b071c12b3.html",
+            "date": "2024-08-29"
+          }
+        ]
+      },
+      "reason": "旧店单只用2024年资料；新检索出现8月31日闭店线索及原账号停用，但未取得可核对的原始闭店公告。2025年报道是过往阵容，未用于抵消关闭线索。先撤出生产店单，暂不把未核实线索写成确定闭店。"
+    }
+  ],
+  "removedGallery": [
+    {
+      "src": "images/places/Shanghai/网图补充/new-world-shindang-front.webp",
+      "alt": "新世界城新鐺集门面（网图；2024-02-12报道）",
+      "group": "店铺外景",
+      "sourceName": "上海黄浦·范煜昊（官方澎湃号）（2024-02-12）",
+      "sourceUrl": "https://m.thepaper.cn/newsDetail_forward_26350360"
+    },
+    {
+      "src": "images/places/Shanghai/网图补充/new-world-shindang-interior.webp",
+      "alt": "新世界城新鐺集店内陈列（网图；2024-02-12报道）",
+      "group": "店铺内景",
+      "sourceName": "上海黄浦·范煜昊（官方澎湃号）（2024-02-12）",
+      "sourceUrl": "https://m.thepaper.cn/newsDetail_forward_26350360"
+    },
+    {
+      "src": "images/places/Shanghai/新世界城补充/new-world-exterior-official.webp",
+      "alt": "新世界城沿街外观与皮卡丘装置（网图；2024-08-29报道，历史场景）",
+      "group": "商圈外部",
+      "sourceName": "上海商务（2024-08-29）",
+      "sourceUrl": "https://sww.sh.gov.cn/swdt/20240830/fd6aa86f3f1e45e4b748726b071c12b3.html"
+    },
+    {
+      "src": "images/places/Shanghai/新世界城补充/new-world-atrium-history.webp",
+      "alt": "新世界城中庭攀岩空间与逛展人流（网图；2024-08-29报道，历史场景）",
+      "group": "额外活动",
+      "sourceName": "上海商务（2024-08-29）",
+      "sourceUrl": "https://sww.sh.gov.cn/swdt/20240830/fd6aa86f3f1e45e4b748726b071c12b3.html"
+    }
+  ],
+  "removedSources": [
+    {
+      "shop": "CAPCOM STORE CHINA 喀普康中心",
+      "label": "CAPCOM 官方开业公告（历史资料）",
+      "url": "https://www.capcom.co.jp/amusement/capcomstore/2023/06/capcom-store-china628.html",
+      "date": "2023-06-28"
+    },
+    {
+      "shop": "光荣特库摩中心",
+      "label": "上海商务·新世界 Fun 肆街区案例",
+      "url": "https://sww.sh.gov.cn/swdt/20240830/fd6aa86f3f1e45e4b748726b071c12b3.html",
+      "date": "2024-08-29"
+    },
+    {
+      "shop": "IPSTAR 潮玩星球（零售店）",
+      "label": "上海商务·新世界 Fun 肆街区案例",
+      "url": "https://sww.sh.gov.cn/swdt/20240830/fd6aa86f3f1e45e4b748726b071c12b3.html",
+      "date": "2024-08-29"
+    },
+    {
+      "shop": "GOODSLOVE 谷乐屋",
+      "label": "上海商务·新世界 Fun 肆街区案例",
+      "url": "https://sww.sh.gov.cn/swdt/20240830/fd6aa86f3f1e45e4b748726b071c12b3.html",
+      "date": "2024-08-29"
+    },
+    {
+      "shop": "新鐺集",
+      "label": "上海黄浦·新鐺集开业实访",
+      "url": "https://m.thepaper.cn/newsDetail_forward_26350360",
+      "date": "2024-02-12"
+    },
+    {
+      "shop": "新鐺集",
+      "label": "上海商务·新世界 Fun 肆街区案例",
+      "url": "https://sww.sh.gov.cn/swdt/20240830/fd6aa86f3f1e45e4b748726b071c12b3.html",
+      "date": "2024-08-29"
+    },
+    {
+      "shop": "新鐺集",
+      "label": "上海黄浦·新鐺集开业实访",
+      "url": "https://m.thepaper.cn/newsDetail_forward_26350360",
+      "date": "2024-02-12"
+    },
+    {
+      "shop": "三丽鸥 Sanrio Gift Gate",
+      "label": "上海商务·新世界 Fun 肆街区案例",
+      "url": "https://sww.sh.gov.cn/swdt/20240830/fd6aa86f3f1e45e4b748726b071c12b3.html",
+      "date": "2024-08-29"
+    },
+    {
+      "shop": "墟弥 Goods",
+      "label": "上海商务·新世界 Fun 肆街区案例",
+      "url": "https://sww.sh.gov.cn/swdt/20240830/fd6aa86f3f1e45e4b748726b071c12b3.html",
+      "date": "2024-08-29"
+    }
+  ],
+  "policy": "仅移出页面引用；原文件、原始来源和完整旧店单快照保留。不删除或改写旧研究记录。"
+}

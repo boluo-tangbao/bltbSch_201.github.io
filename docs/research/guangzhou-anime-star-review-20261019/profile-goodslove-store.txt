@@ -1,0 +1,261 @@
+- text: GOODSLOVE STORE
+- generic: 小红书号：49328859601
+- generic: IP属地：上海
+- generic: ——快乐吃谷·快乐体验—— 品牌：@GOODSLOVE 呼呼~这里是狐狐STORE！我们有超多IP✨国谷、日谷每周持续上新！还有更多特别门店活动等待收藏家光临体验，关注开启快乐吃谷体验！
+- generic: "12"
+- generic: 关注
+- generic: 4.8万
+- generic: 粉丝
+- generic: 21.6万
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6ad423e4000000001e037279
+- link "💖STORE 新品预告｜【上新合集】💖":
+  - /url: /user/profile/67c662ad000000000e01295a/6ad423e4000000001e037279
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "37"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6ad44931000000002a0055ab
+- link "时光代理人｜光影留痕，新章待启✨":
+  - /url: /user/profile/67c662ad000000000e01295a/6ad44931000000002a0055ab
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "27"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6ad45119000000001e03543d
+- link "多功能亚克力手机挂件 | 羁绊降临于手边":
+  - /url: /user/profile/67c662ad000000000e01295a/6ad45119000000001e03543d
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "71"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6ad316b8000000001500bedb
+- link "仿撕拉拍立得盲盒 | 请开启神秘召唤！":
+  - /url: /user/profile/67c662ad000000000e01295a/6ad316b8000000001500bedb
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "72"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6ad18c8e000000001802c29c
+- link "角色方形徽章 | 来开启一场现世的漫游！":
+  - /url: /user/profile/67c662ad000000000e01295a/6ad18c8e000000001802c29c
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "50"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6ad17eac000000001203c9dc
+- link "阴阳师 | 城市漫游指南征集开启！":
+  - /url: /user/profile/67c662ad000000000e01295a/6ad17eac000000001203c9dc
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "109"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6ad06885000000001c00dc66
+- link "亚克力气囊手机支架 | 实用谷才是yyds":
+  - /url: /user/profile/67c662ad000000000e01295a/6ad06885000000001c00dc66
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "85"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6ad06ccc0000000018013784
+- link "💖STORE 新品预告｜【鸣潮】💖":
+  - /url: /user/profile/67c662ad000000000e01295a/6ad06ccc0000000018013784
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "49"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6acf44d4000000001c00e872
+- link "亚克力透明色纸 | 带TA于现世漫游！":
+  - /url: /user/profile/67c662ad000000000e01295a/6acf44d4000000001c00e872
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "90"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6acddee9000000000b005e38
+- link "💖STORE 新品预告｜【品牌专区上新】💖":
+  - /url: /user/profile/67c662ad000000000e01295a/6acddee9000000000b005e38
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "1508"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6acde60d0000000015017841
+- link "场景化亚克力立牌 | TA在平安京很想你":
+  - /url: /user/profile/67c662ad000000000e01295a/6acde60d0000000015017841
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "116"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6acc56a7000000001803b809
+- link "Q版迷你徽章盲盒|可爱即是正义！":
+  - /url: /user/profile/67c662ad000000000e01295a/6acc56a7000000001803b809
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "121"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6aca356a000000001301afd9
+- link "风格化圆形徽章 | 跨越千年的平安京旧梦":
+  - /url: /user/profile/67c662ad000000000e01295a/6aca356a000000001301afd9
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "146"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6aca2259000000001301a62d
+- link "🎡返图展示 | 别小瞧小洛克和精灵的羁绊":
+  - /url: /user/profile/67c662ad000000000e01295a/6aca2259000000001301a62d
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "47"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6abbe09e0000000012036bb3
+- link "二期单品·心动特写 | 心形亚克力杯垫 ♡":
+  - /url: /user/profile/67c662ad000000000e01295a/6abbe09e0000000012036bb3
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "297"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6abd19f1000000001b02ef15
+- link "请查收！精灵们的乐园赠礼来咯！":
+  - /url: /user/profile/67c662ad000000000e01295a/6abd19f1000000001b02ef15
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "51"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6abbd5cb000000001c00c3ed
+- link "二期单品·心动特写 | 陶瓷装饰盘🍽️":
+  - /url: /user/profile/67c662ad000000000e01295a/6abbd5cb000000001c00c3ed
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "450"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6abd1686000000001203f771
+- link "把乐园漫游的瞬间快洛定格！":
+  - /url: /user/profile/67c662ad000000000e01295a/6abd1686000000001203f771
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "27"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6abbcfdf000000001803bb6b
+- link "二期单品·心动特写 | 陶瓷马克杯套装☕️":
+  - /url: /user/profile/67c662ad000000000e01295a/6abbcfdf000000001803bb6b
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "1579"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6abd1443000000001500b83e
+- link "捕捉~精灵们怎么变小啦！":
+  - /url: /user/profile/67c662ad000000000e01295a/6abd1443000000001500b83e
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "34"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6abcbe2e00000000180392d7
+- link "🎡返图展示 | 把精灵带回家！":
+  - /url: /user/profile/67c662ad000000000e01295a/6abcbe2e00000000180392d7
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "60"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6abbcc8b0000000012037122
+- link "二期单品·心动特写 | 绒绒茶壶玩偶套装🫖":
+  - /url: /user/profile/67c662ad000000000e01295a/6abbcc8b0000000012037122
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "3191"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6abd10db000000001b02cb37
+- link "喝点东西，和精灵歇一歇吧~":
+  - /url: /user/profile/67c662ad000000000e01295a/6abd10db000000001b02cb37
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "22"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6abbc7db000000001b02c274
+- link "二期单品·心动特写 | 萌趣两用单肩痛包👜":
+  - /url: /user/profile/67c662ad000000000e01295a/6abbc7db000000001b02c274
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "1472"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6abd0e1a0000000015016eb0
+- link "乐园一角展开！和精灵同游乐园吧~":
+  - /url: /user/profile/67c662ad000000000e01295a/6abd0e1a0000000015016eb0
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "53"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6abbc31b000000001a020348
+- link "二期单品心动特写 | Q版多功能组合手机挂绳":
+  - /url: /user/profile/67c662ad000000000e01295a/6abbc31b000000001a020348
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "819"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6abd0a5b000000001a029686
+- link "乐园漫游中！看看精灵们都在做什么？":
+  - /url: /user/profile/67c662ad000000000e01295a/6abd0a5b000000001a029686
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "46"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6abdedc0000000001b02c398
+- link "忘川风华录丨回眸一瞬，跨越千年":
+  - /url: /user/profile/67c662ad000000000e01295a/6abdedc0000000001b02c398
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "842"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6abbe4c9000000001802c548
+- link "忘川风华录丨谷美征集计划正式开启🖼":
+  - /url: /user/profile/67c662ad000000000e01295a/6abbe4c9000000001802c548
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "248"
+- link:
+  - /url: /user/profile/67c662ad000000000e01295a/6abbbe3a000000001a023103
+- link "二期单品·心动特写 | 萌云相遇场景立牌":
+  - /url: /user/profile/67c662ad000000000e01295a/6abbbe3a000000001a023103
+- link "GOODSLOVE STORE":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE STORE
+- generic: "769"
+- generic: 该用户已设置收藏内容不可见
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

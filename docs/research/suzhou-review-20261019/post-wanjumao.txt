@@ -1,0 +1,35 @@
+- heading "大风：来，一起玩桌游～" [level=1]
+- text: 这能拒绝在快乐的国庆来上一把刺激飞行棋呢
+- link "#桌游":
+  - /url: /search_result?keyword=%25E6%25A1%258C%25E6%25B8%25B8&type=54&source=web_note_detail_r10
+- link "#桌面游戏":
+  - /url: /search_result?keyword=%25E6%25A1%258C%25E9%259D%25A2%25E6%25B8%25B8%25E6%2588%258F&type=54&source=web_note_detail_r10
+- link "#桌游推荐":
+  - /url: /search_result?keyword=%25E6%25A1%258C%25E6%25B8%25B8%25E6%258E%25A8%25E8%258D%2590&type=54&source=web_note_detail_r10
+- link "#大富翁":
+  - /url: /search_result?keyword=%25E5%25A4%25A7%25E5%25AF%258C%25E7%25BF%2581&type=54&source=web_note_detail_r10
+- link "#互动式游戏":
+  - /url: /search_result?keyword=%25E4%25BA%2592%25E5%258A%25A8%25E5%25BC%258F%25E6%25B8%25B8%25E6%2588%258F&type=54&source=web_note_detail_r10
+- link "#不管牌咋样气势不能输":
+  - /url: /search_result?keyword=%25E4%25B8%258D%25E7%25AE%25A1%25E7%2589%258C%25E5%2592%258B%25E6%25A0%25B7%25E6%25B0%2594%25E5%258A%25BF%25E4%25B8%258D%25E8%2583%25BD%25E8%25BE%2593&type=54&source=web_note_detail_r10
+- link "#沉浸式社交":
+  - /url: /search_result?keyword=%25E6%25B2%2589%25E6%25B5%25B8%25E5%25BC%258F%25E7%25A4%25BE%25E4%25BA%25A4&type=54&source=web_note_detail_r10
+- link "#聚会游戏":
+  - /url: /search_result?keyword=%25E8%2581%259A%25E4%25BC%259A%25E6%25B8%25B8%25E6%2588%258F&type=54&source=web_note_detail_r10
+- link "#大学生":
+  - /url: /search_result?keyword=%25E5%25A4%25A7%25E5%25AD%25A6%25E7%2594%259F&type=54&source=web_note_detail_r10
+- link "#地球村小聚场":
+  - /url: /search_result?keyword=%25E5%259C%25B0%25E7%2590%2583%25E6%259D%2591%25E5%25B0%258F%25E8%2581%259A%25E5%259C%25BA&type=54&source=web_note_detail_r10
+- link "#狼人杀":
+  - /url: /search_result?keyword=%25E7%258B%25BC%25E4%25BA%25BA%25E6%259D%2580&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 大富翁最好玩的版本
+- generic: 10-01 江苏
+- paragraph: 这是一片荒地点击评论
+- paragraph
+- generic: 说点什么...
+- generic: "2"
+- generic: 收藏
+- generic: 评论
+- button "发送" [disabled]
+- button "取消"

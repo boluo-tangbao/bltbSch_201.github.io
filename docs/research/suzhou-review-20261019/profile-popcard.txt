@@ -1,0 +1,263 @@
+- generic: POP card
+- generic: 小红书号：95319529107
+- generic: POP card品牌店 绍兴店：绍兴天地A厂二楼L230（爷爷不泡茶旁边） 致力于推动kpop文化
+- generic: 23岁
+- generic: 江苏苏州
+- generic: 品牌创始人
+- generic: "22"
+- generic: 关注
+- generic: "410"
+- generic: 粉丝
+- generic: "919"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link "置顶":
+  - /url: /user/profile/6804fe0f000000000e011fd4/691b5c9f000000000401658e
+  - generic: 置顶
+- link "POP card 我们开业啦！！！":
+  - /url: /user/profile/6804fe0f000000000e011fd4/691b5c9f000000000401658e
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "8"
+- link "置顶":
+  - /url: /user/profile/6804fe0f000000000e011fd4/685aa181000000002203000c
+  - generic: 置顶
+- link "POP card会员日 千元现金 直接送！！！":
+  - /url: /user/profile/6804fe0f000000000e011fd4/685aa181000000002203000c
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "10"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/6a19f0bb000000000701229b
+- link "清库存啦，除个别两三个新货外，店铺专辑小卡包括饭制统统半价啦！！！[哇R":
+  - /url: /user/profile/6804fe0f000000000e011fd4/6a19f0bb000000000701229b
+  - text: 清库存啦，除个别两三个新货外，店铺专辑小卡包括饭制统统半价啦！！！
+  - text: "[哇R"
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/6a0548230000000007025392
+- link "绍兴天地专辑店招短期兼职，可短天接，超级轻松的活，收收银就行了，兼职时间随时，两":
+  - /url: /user/profile/6804fe0f000000000e011fd4/6a0548230000000007025392
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "50"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/69cf7bf4000000001a035e0c
+- link "春假来临！":
+  - /url: /user/profile/6804fe0f000000000e011fd4/69cf7bf4000000001a035e0c
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "2"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/69a50138000000000e00f4ec
+- link "大家苦等的专辑终于到货啦！":
+  - /url: /user/profile/6804fe0f000000000e011fd4/69a50138000000000e00f4ec
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "14"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/69a253b80000000028021ca4
+- link "假期最后的狂欢！买专辑送小卡！":
+  - /url: /user/profile/6804fe0f000000000e011fd4/69a253b80000000028021ca4
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "3"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/699c2e04000000001a026ccb
+- link "专辑持续更新中":
+  - /url: /user/profile/6804fe0f000000000e011fd4/699c2e04000000001a026ccb
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/69944803000000001a032442
+- link "POPcard 祝大家新年快乐🥰":
+  - /url: /user/profile/6804fe0f000000000e011fd4/69944803000000001a032442
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "1"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/698dbe0e000000001a032266
+- link "持续上新中…":
+  - /url: /user/profile/6804fe0f000000000e011fd4/698dbe0e000000001a032266
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "6"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/698adeb70000000028020263
+- link "新专辑又来啦！":
+  - /url: /user/profile/6804fe0f000000000e011fd4/698adeb70000000028020263
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "6"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/6986b0d0000000001a037933
+- link "又有新货啦！！！":
+  - /url: /user/profile/6804fe0f000000000e011fd4/6986b0d0000000001a037933
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "3"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/698443c0000000001a037cd3
+- link "续火花计划！火花也能换专辑！":
+  - /url: /user/profile/6804fe0f000000000e011fd4/698443c0000000001a037cd3
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "1"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/6983079b000000002800800b
+- link "20块钱的nct在哪还能买到呀":
+  - /url: /user/profile/6804fe0f000000000e011fd4/6983079b000000002800800b
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/697b37d5000000000d009d8b
+- link "这次进货终于更新小卡啦！分别是idle和aespa两个团的成员，下周会更新更多小":
+  - /url: /user/profile/6804fe0f000000000e011fd4/697b37d5000000000d009d8b
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "1"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/69770ed1000000000e03c7ac
+- link "寒假马上要来啦，这两月由于小卡供应商更换的问题导致我们店里两个月没有更新小卡啦[":
+  - /url: /user/profile/6804fe0f000000000e011fd4/69770ed1000000000e03c7ac
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "2"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/697262cf000000001a033783
+- link "最近店里现况🥰":
+  - /url: /user/profile/6804fe0f000000000e011fd4/697262cf000000001a033783
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "6"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/696a3da9000000001a02cc53
+- link "新专辑到货啦！":
+  - /url: /user/profile/6804fe0f000000000e011fd4/696a3da9000000001a02cc53
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "14"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/69674b93000000001a031d54
+- link "烤蹄台历来啦！":
+  - /url: /user/profile/6804fe0f000000000e011fd4/69674b93000000001a031d54
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "1"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/695f6d70000000001a034a8a
+- link "专辑补货啦！":
+  - /url: /user/profile/6804fe0f000000000e011fd4/695f6d70000000001a034a8a
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/694bb71b000000001f00d03a
+- link "𐂂𝓜𝓮𝓻𝓻𝔂 𝓒𝓱𝓻𝓲𝓼𝓽𝓶𝓪𝓼˚♬🎄":
+  - /url: /user/profile/6804fe0f000000000e011fd4/694bb71b000000001f00d03a
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "8"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/69492c28000000001e03b1fb
+- link "时代峰峻饭制上新！！！":
+  - /url: /user/profile/6804fe0f000000000e011fd4/69492c28000000001e03b1fb
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "2"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/69466e1b000000001e02a616
+- link "谁能懂我的笑点":
+  - /url: /user/profile/6804fe0f000000000e011fd4/69466e1b000000001e02a616
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "4"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/6944ba2e000000001e028742
+- link "超多专辑新到货！":
+  - /url: /user/profile/6804fe0f000000000e011fd4/6944ba2e000000001e028742
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "1"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/6943b6a5000000001e025b99
+- link "买奶茶，免费送小卡？":
+  - /url: /user/profile/6804fe0f000000000e011fd4/6943b6a5000000001e025b99
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "3"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/69413890000000001f005e8f
+- link "绍兴首个真马雪夜巡游！！！":
+  - /url: /user/profile/6804fe0f000000000e011fd4/69413890000000001f005e8f
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "2"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/693c1af3000000001f00543e
+- link "❗️火星哥采访确认与朴彩英有二搭合作":
+  - /url: /user/profile/6804fe0f000000000e011fd4/693c1af3000000001f00543e
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "1"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/693b823e000000001e03af8d
+- link "一夜之间，绍兴最大的巨幅海报出现啦":
+  - /url: /user/profile/6804fe0f000000000e011fd4/693b823e000000001e03af8d
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "18"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/693ac504000000001f00ed4b
+- link "POPcard 最新到货！这次货超级多呀！":
+  - /url: /user/profile/6804fe0f000000000e011fd4/693ac504000000001f00ed4b
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "3"
+- link:
+  - /url: /user/profile/6804fe0f000000000e011fd4/69318a9a000000001e038bc5
+- link "POP card周五会员日开始啦！超多好货":
+  - /url: /user/profile/6804fe0f000000000e011fd4/69318a9a000000001e038bc5
+- link "POP card":
+  - /url: /user/profile/6804fe0f000000000e011fd4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: POP card
+- generic: "7"
+- generic: 该用户已设置收藏内容不可见
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

@@ -1,0 +1,263 @@
+- text: 樱漫书店
+- generic: 小红书号：63025651824
+- generic: IP属地：广东
+- generic: 樱漫书店官方小红书账号，发布樱漫全国门店相关资讯~ 门店位于广州、武汉、成都、上海、重庆、深圳、福州、杭州、长沙、北京
+- generic: "32"
+- generic: 关注
+- generic: 2.4万
+- generic: 粉丝
+- generic: 7.3万
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link "置顶":
+  - /url: /user/profile/64644a4c000000001f0319c4/6a7bfa570000000032030b85
+  - generic: 置顶
+- link "樱漫书店18周年店庆活动来啦！":
+  - /url: /user/profile/64644a4c000000001f0319c4/6a7bfa570000000032030b85
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "60"
+- link "置顶":
+  - /url: /user/profile/64644a4c000000001f0319c4/6811eedc0000000022029a2a
+  - generic: 置顶
+- link "樱漫全国门店地址导航来啦！":
+  - /url: /user/profile/64644a4c000000001f0319c4/6811eedc0000000022029a2a
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "797"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ad45da10000000029018f24
+- link "樱漫｜《棋魂》漫画主题活动来啦！🎉":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ad45da10000000029018f24
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "63"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ad45d480000000028027402
+- link "樱漫｜鸣潮美术设定集补货到":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ad45d480000000028027402
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "8"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ad2ded5000000001a021b85
+- link "樱漫｜明日方舟终末地上新":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ad2ded5000000001a021b85
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "64"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ad22d4900000000120379e0
+- link "樱漫｜《珊瑚海》实体书大屏活动":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ad22d4900000000120379e0
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "3"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ad0de060000000012035c2b
+- link "樱漫｜明日方舟小小谷努咪系列上新":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ad0de060000000012035c2b
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "11"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ad0cc1f0000000018039481
+- link "酷威×樱漫 ｜《心跳引擎》大屏打卡活动":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ad0cc1f0000000018039481
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "32"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6acc9cf200000000150144b8
+- link "樱漫｜全职高手拼拼豆系列打卡活动":
+  - /url: /user/profile/64644a4c000000001f0319c4/6acc9cf200000000150144b8
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "50"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ac9c171000000001203e04c
+- link "樱漫｜战双帕弥什 歧海循光系列周边上新":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ac9c171000000001203e04c
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "21"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ac8bc54000000001301866a
+- link "樱漫打卡｜钱贝贝生日活动即将开启🎉":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ac8bc54000000001301866a
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "5"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ac33d59000000001802dd96
+- link "樱漫｜原神/崩铁上新":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ac33d59000000001802dd96
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "14"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ac33cad00000000120349ab
+- link "樱漫｜异形舞台周边上新":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ac33cad00000000120349ab
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "3"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ac0921000000000130180ce
+- link "樱漫｜明日方舟盲盒上新~":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ac0921000000000130180ce
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "8"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ac09177000000001203a247
+- link "樱漫｜鸣潮「3.2版本」上新":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ac09177000000001203a247
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "30"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6abf3a300000000012036ee3
+- link "樱漫｜第五人格上新🆕":
+  - /url: /user/profile/64644a4c000000001f0319c4/6abf3a300000000012036ee3
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "15"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6abf3731000000001802f5e6
+- link "樱漫｜第五人格周边上新":
+  - /url: /user/profile/64644a4c000000001f0319c4/6abf3731000000001802f5e6
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "9"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6abe0ff4000000001500f225
+- link "樱漫｜《蓝翅》纪念画集大屏打卡&无料":
+  - /url: /user/profile/64644a4c000000001f0319c4/6abe0ff4000000001500f225
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "19"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6abdc2de0000000012034740
+- link "樱漫｜元气少女缘结神上新🆕":
+  - /url: /user/profile/64644a4c000000001f0319c4/6abdc2de0000000012034740
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "7"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6abdc28c0000000015015c9a
+- link "樱漫｜明日方舟终末地上新":
+  - /url: /user/profile/64644a4c000000001f0319c4/6abdc28c0000000015015c9a
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "34"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6abcd2cb000000001500b020
+- link "樱漫｜重生之将门毒后•二期首发":
+  - /url: /user/profile/64644a4c000000001f0319c4/6abcd2cb000000001500b020
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "85"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6abbb909000000001500b1e6
+- link "樱漫｜「葬送的芙莉莲」周边首发打卡":
+  - /url: /user/profile/64644a4c000000001f0319c4/6abbb909000000001500b1e6
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "22"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6abbb83b0000000012036730
+- link "樱漫｜鸣潮3.6版本周边上新":
+  - /url: /user/profile/64644a4c000000001f0319c4/6abbb83b0000000012036730
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "7"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6abb6a530000000013019841
+- link "樱漫｜明日方舟上新":
+  - /url: /user/profile/64644a4c000000001f0319c4/6abb6a530000000013019841
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "46"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6aba3cdd000000001a022b0f
+- link "银水珀×樱漫 | 线下陈列展示活动来啦":
+  - /url: /user/profile/64644a4c000000001f0319c4/6aba3cdd000000001a022b0f
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "50"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ab90a1e000000001203db00
+- link "樱漫｜新网球王子「水族馆系列」上新":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ab90a1e000000001203db00
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "9"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ab9099d000000001500f8fc
+- link "樱漫｜原神上新🆕":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ab9099d000000001500f8fc
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "6"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ab9088d0000000012035a67
+- link "樱漫｜时光代理人Dream Out！系列上新":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ab9088d0000000012035a67
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "8"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ab90abb000000001803a217
+- link "樱漫｜抽赏上新-东方Project/超辉夜姬":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ab90abb000000001803a217
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "4"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4/6ab907c1000000001802e359
+- link "樱漫｜绝区零上新":
+  - /url: /user/profile/64644a4c000000001f0319c4/6ab907c1000000001802e359
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 樱漫书店
+- generic: "11"
+- generic: 该用户已设置收藏内容不可见
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

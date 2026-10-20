@@ -1,0 +1,144 @@
+{
+  "query": "苏州星悦汇 yooo shop",
+  "mode": "用户",
+  "readAt": "2026-10-19",
+  "scope": "首屏已加载用户结果"
+}
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- link "苏州星悦汇商场 8小时前更新 小红书号：9411859422 粉丝・3.4万 笔记・1373 关注":
+  - /url: /user/profile/60af3944000000000101f6ec
+  - generic: 苏州星悦汇商场
+  - generic: 8小时前更新
+  - generic: 小红书号：9411859422
+  - generic: 粉丝・3.4万
+  - generic: 笔记・1373
+  - button "关注":
+    - generic: 关注
+- link "森罗万象-苏州星悦汇店 2天前更新 小红书号：2038485756 粉丝・115 笔记・20 关注":
+  - /url: /user/profile/64d3b245000000001c029e9e
+  - generic: 森罗万象-苏州星悦汇店
+  - generic: 2天前更新
+  - generic: 小红书号：2038485756
+  - generic: 粉丝・115
+  - generic: 笔记・20
+  - button "关注":
+    - generic: 关注
+- link "photoism苏州星悦汇店 3天前更新 小红书号：49301271516 粉丝・183 笔记・55 关注":
+  - /url: /user/profile/69b3af0e000000003201bedd
+  - generic: photoism苏州星悦汇店
+  - generic: 3天前更新
+  - generic: 小红书号：49301271516
+  - generic: 粉丝・183
+  - generic: 笔记・55
+  - button "关注":
+    - generic: 关注
+- link "杨悦yooo 2天前更新 小红书号：yangyue777 粉丝・6456 笔记・175 关注":
+  - /url: /user/profile/59dedead44363b50c0d755c2
+  - generic: 杨悦yooo
+  - generic: 2天前更新
+  - generic: 小红书号：yangyue777
+  - generic: 粉丝・6456
+  - generic: 笔记・175
+  - button "关注":
+    - generic: 关注
+- link "yooo 7小时前更新 小红书号：5388602930 粉丝・112 笔记・39 关注":
+  - /url: /user/profile/62bfda4800000000190292e9
+  - generic: yooo
+  - generic: 7小时前更新
+  - generic: 小红书号：5388602930
+  - generic: 粉丝・112
+  - generic: 笔记・39
+  - button "关注":
+    - generic: 关注
+- link "1 3天前更新 小红书号：xiaoxuan7788 粉丝・1263 笔记・27 关注":
+  - /url: /user/profile/688f2efa000000002802dfc3
+  - generic: "1"
+  - generic: 3天前更新
+  - generic: 小红书号：xiaoxuan7788
+  - generic: 粉丝・1263
+  - generic: 笔记・27
+  - button "关注":
+    - generic: 关注
+- link "c2yooo 1天前更新 小红书号：542165852 粉丝・288 笔记・92 关注":
+  - /url: /user/profile/5b82a2a8bced6400011f339f
+  - generic: c2yooo
+  - generic: 1天前更新
+  - generic: 小红书号：542165852
+  - generic: 粉丝・288
+  - generic: 笔记・92
+  - button "关注":
+    - generic: 关注
+- link "yooo 10天前更新 小红书号：butterfly_yooo 粉丝・12.2万 笔记・143 关注":
+  - /url: /user/profile/5ec7b2120000000001002a4f
+  - generic: yooo
+  - generic: 10天前更新
+  - generic: 小红书号：butterfly_yooo
+  - generic: 粉丝・12.2万
+  - generic: 笔记・143
+  - button "关注":
+    - generic: 关注
+- link "Yooo 3天前更新 小红书号：5226015701 粉丝・173 笔记・8 关注":
+  - /url: /user/profile/61f68290000000001000a209
+  - generic: Yooo
+  - generic: 3天前更新
+  - generic: 小红书号：5226015701
+  - generic: 粉丝・173
+  - generic: 笔记・8
+  - button "关注":
+    - generic: 关注
+- link "yooo 小红书号：yiiouu 粉丝・257 笔记・1 关注":
+  - /url: /user/profile/5a873783e8ac2b0928d983d4
+  - generic: yooo
+  - generic: 小红书号：yiiouu
+  - generic: 粉丝・257
+  - generic: 笔记・1
+  - button "关注":
+    - generic: 关注
+- link "yooo🌻 小红书号：277281282 粉丝・682 笔记・91 关注":
+  - /url: /user/profile/593bde2350c4b43e6a0c39eb
+  - generic: yooo🌻
+  - generic: 小红书号：277281282
+  - generic: 粉丝・682
+  - generic: 笔记・91
+  - button "关注":
+    - generic: 关注
+- link "猫受屋苏州星悦汇店 18天前更新 小红书号：26806717478 粉丝・835 笔记・45 关注":
+  - /url: /user/profile/62c007f2000000001b02447a
+  - generic: 猫受屋苏州星悦汇店
+  - generic: 18天前更新
+  - generic: 小红书号：26806717478
+  - generic: 粉丝・835
+  - generic: 笔记・45
+  - button "关注":
+    - generic: 关注
+- link "yooo～ 小红书号：188144813 粉丝・125 笔记・3 关注":
+  - /url: /user/profile/5b5a6b794eacab2d7036bfc1
+  - generic: yooo～
+  - generic: 小红书号：188144813
+  - generic: 粉丝・125
+  - generic: 笔记・3
+  - button "关注":
+    - generic: 关注
+- link "yooo 小红书号：yo1_yo3__ 粉丝・362 笔记・3 关注":
+  - /url: /user/profile/648d7f11000000002a0344d3
+  - generic: yooo
+  - generic: 小红书号：yo1_yo3__
+  - generic: 粉丝・362
+  - generic: 笔记・3
+  - button "关注":
+    - generic: 关注
+- link "yooo 小红书号：306916963 粉丝・113 关注":
+  - /url: /user/profile/5d200547000000001000d1fc
+  - generic: yooo
+  - generic: 小红书号：306916963
+  - generic: 粉丝・113
+  - button "关注":
+    - generic: 关注
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

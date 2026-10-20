@@ -1,0 +1,198 @@
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- generic: 筛选
+- link:
+  - /url: /search_result/699eabe1000000001d012453
+- link "闭店公告🔒P3R Café闭店倒计时":
+  - /url: /search_result/699eabe1000000001d012453
+- link "ComeFor 02-25":
+  - /url: /user/profile/5f3f8f06000000000101c771?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: ComeFor
+  - generic: 02-25
+- generic: "452"
+- link:
+  - /url: /search_result/69722d1900000000220332d7
+- link "出cos去快闪有角色盲盒爆率加成💕💕":
+  - /url: /search_result/69722d1900000000220332d7
+- link "阿盐是只喵 01-22":
+  - /url: /user/profile/5b03d859f7e8b915cc7507b1?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 阿盐是只喵
+  - generic: 01-22
+- generic: "137"
+- link:
+  - /url: /search_result/6ad1f29f000000001402ff54
+- link "广州comefor请问还有p3r余量吗":
+  - /url: /search_result/6ad1f29f000000001402ff54
+- link "咻咻啾布鸟 3天前":
+  - /url: /user/profile/65fc429e000000000600d96f?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 咻咻啾布鸟
+  - generic: 3天前
+- generic: "3"
+- link:
+  - /url: /search_result/6970b26b000000000c036377
+- link "既然广州就有那还是要来看看👀":
+  - /url: /search_result/6970b26b000000000c036377
+- link "AAA熊商会铁球批发商 01-21":
+  - /url: /user/profile/589c03ec50c4b468aa688f7b?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: AAA熊商会铁球批发商
+  - generic: 01-21
+- generic: "6"
+- link:
+  - /url: /search_result/696b99dc000000000e00fc31
+- link "在广州💥P3R Café女神异闻录3打卡🥳":
+  - /url: /search_result/696b99dc000000000e00fc31
+- link "梨子没有梨🍐 01-17":
+  - /url: /user/profile/6117d928000000000101f01a?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 梨子没有梨🍐
+  - generic: 01-17
+- generic: "86"
+- link:
+  - /url: /search_result/696b78830000000022022663
+- link "牢广！cos传奇恋爱牌前往广州p3r cafe～":
+  - /url: /search_result/696b78830000000022022663
+- link "阿盐是只喵 01-18":
+  - /url: /user/profile/5b03d859f7e8b915cc7507b1?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 阿盐是只喵
+  - generic: 01-18
+- generic: "114"
+- generic: 大家都在搜
+- generic: comefor线下店
+- generic: 广州comefor怎么走
+- generic: 广州comefor钻a余量
+- generic: comefor p3r联动
+- link:
+  - /url: /search_result/696f2025000000002103ca6e
+- link "广州 p3r x comefor":
+  - /url: /search_result/696f2025000000002103ca6e
+- link "栀摩凛 01-20":
+  - /url: /user/profile/5b7197b26b58b705ec1d4d04?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 栀摩凛
+  - generic: 01-20
+- generic: "10"
+- link:
+  - /url: /search_result/69840dcd000000000a02da36
+- link "p3r comefor 动漫星城":
+  - /url: /search_result/69840dcd000000000a02da36
+- link "Futaba Rio 02-05":
+  - /url: /user/profile/62516074000000001000a0ec?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: Futaba Rio
+  - generic: 02-05
+- generic: "4"
+- link:
+  - /url: /search_result/69e22702000000002103a5d2
+- link "P3R系列余量商品⚡线下开售！🛍️":
+  - /url: /search_result/69e22702000000002103a5d2
+- link "ComeFor 04-18":
+  - /url: /user/profile/5f3f8f06000000000101c771?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: ComeFor
+  - generic: 04-18
+- generic: "89"
+- link:
+  - /url: /search_result/696c7a350000000022031b03
+- link "🆕广州痛店‼️P3R浓度已达1000000%":
+  - /url: /search_result/696c7a350000000022031b03
+- link "饭饭超爱吃 01-18":
+  - /url: /user/profile/5b8aa8e33781270001d1b952?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 饭饭超爱吃
+  - generic: 01-18
+- generic: "40"
+- link:
+  - /url: /search_result/69734156000000001a0354a7
+- link "🫐":
+  - /url: /search_result/69734156000000001a0354a7
+- link "塑料杯 01-23":
+  - /url: /user/profile/5ecb56410000000001000b2d?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 塑料杯
+  - generic: 01-23
+- generic: "133"
+- link:
+  - /url: /search_result/697dbe90000000000a03358d
+- link "打卡p3r广州comfor":
+  - /url: /search_result/697dbe90000000000a03358d
+- link "momo 01-31":
+  - /url: /user/profile/6851724f000000001b019115?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: momo
+  - generic: 01-31
+- generic: "30"
+- link:
+  - /url: /search_result/69904286000000001d027cfb
+- link "P3R联动咖啡厅☕️广州":
+  - /url: /search_result/69904286000000001d027cfb
+- link "sh14 02-14":
+  - /url: /user/profile/5e1ec2ef0000000001001029?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: sh14
+  - generic: 02-14
+- generic: "3"
+- link:
+  - /url: /search_result/696c49e7000000000a03e24e
+- link "来广州P3R店了":
+  - /url: /search_result/696c49e7000000000a03e24e
+- link "小菜一碟 01-18":
+  - /url: /user/profile/5ff59dd5000000000101c846?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 小菜一碟
+  - generic: 01-18
+- generic: "11"
+- link:
+  - /url: /search_result/696e31310000000021033e8e
+- link "一点repo":
+  - /url: /search_result/696e31310000000021033e8e
+- link "北极冻莓干 01-19":
+  - /url: /user/profile/64edf3ce000000000100d1c5?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 北极冻莓干
+  - generic: 01-19
+- generic: "4"
+- generic: 大家都在搜
+- generic: comefor线下店地址
+- generic: 动漫星城comefor
+- generic: comefor店铺
+- generic: comefor会通贩吗
+- link:
+  - /url: /search_result/6969ca63000000002102be68
+- link "P3R Café☕Q&A和预售须知请查收！":
+  - /url: /search_result/6969ca63000000002102be68
+- link "ComeFor 01-16":
+  - /url: /user/profile/5f3f8f06000000000101c771?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: ComeFor
+  - generic: 01-16
+- generic: "186"
+- link:
+  - /url: /search_result/69646da4000000002200bbfa
+- link "P3R Café开业倒计时1天！⏳":
+  - /url: /search_result/69646da4000000002200bbfa
+- link "ComeFor 01-16":
+  - /url: /user/profile/5f3f8f06000000000101c771?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: ComeFor
+  - generic: 01-16
+- generic: "349"
+- link:
+  - /url: /search_result/698592ec000000000a03c86f
+- link "小红薯66134926 02-06":
+  - /url: /user/profile/6612cffa00000000070041c5?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 小红薯66134926
+  - generic: 02-06
+- generic: 赞
+- link:
+  - /url: /search_result/696b79d0000000000b013143
+- link "广州终于有联动了！结城理 你理理我吧":
+  - /url: /search_result/696b79d0000000000b013143
+- link "夏醚酱 01-17":
+  - /url: /user/profile/5dab2cee000000000100324d?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 夏醚酱
+  - generic: 01-17
+- generic: "445"
+- link:
+  - /url: /search_result/696b044b000000000a0293fb
+- link "来当凯子了":
+  - /url: /search_result/696b044b000000000a0293fb
+- link "望月绫时倒追结城理 01-17":
+  - /url: /user/profile/631f4f28000000002303c9fb?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 望月绫时倒追结城理
+  - generic: 01-17
+- generic: "20"
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

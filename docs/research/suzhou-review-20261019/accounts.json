@@ -1,0 +1,1256 @@
+{
+  "reviewedAt": "2026-10-19",
+  "scope": "每个生产候选及账号处置；复用已读证据与本轮新读分开；搜索仅代表实际查看首屏",
+  "shops": [
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "模玩熊",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "模玩熊苏州金地店",
+          "handle": "3433075308",
+          "url": "https://www.xiaohongshu.com/user/profile/65ac8548000000000e026eb9",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "门店简介定位苏州金地；10月初仍发布奥特曼、鸣潮等上新，B1位置另见9月22日探店。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-05"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "萌谷子",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "焦糖-萌谷子苏州版",
+          "url": "https://www.xiaohongshu.com/user/profile/69e355090000000002002005",
+          "handle": "63579507473",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-mengguzi.txt",
+        "profile-mengguzi.txt",
+        "post-mengguzi.txt"
+      ],
+      "result": "确认营业",
+      "reason": "经营者主页明确金地B1-27，最新补货帖标签亦明确苏州金地店。与星悦汇一楼中庭已结束快闪分别判断，不共用结束日期。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19",
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "三月兽",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "三月兽苏州金地店",
+          "handle": "750991350",
+          "url": "https://www.xiaohongshu.com/user/profile/5e05000b0000000001005c61",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "门店简介明确新市路1号金地广场B1-28，近期仍有手办及国庆上新。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-05"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "潮玩星球",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "潮玩星球苏州金地店",
+          "handle": "49347013579",
+          "url": "https://www.xiaohongshu.com/user/profile/65698b4000000000200366d6",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "门店简介标注B1苹果店对面，10月初仍有火影一番赏等店铺更新。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-05"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "漫魂",
+      "aliases": [],
+      "accounts": [],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "有效线索待核实",
+      "reason": "已执行苏州金地漫魂用户搜索，首屏未取到匹配号；上海研究已核品牌号及9月12日多店DIY正文未列苏州，不能跨分店借用。",
+      "reviewedAt": "2026-10-19",
+      "query": "苏州金地 漫魂（用户，首屏已加载）",
+      "accountReadAt": null,
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "GOODSlove",
+      "aliases": [],
+      "accounts": [],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-goodslove-jindi.txt",
+        "user-gulewu.txt"
+      ],
+      "result": "有效线索待核实",
+      "reason": "星悦汇找到同名号但0笔记、无简介，营业依据不足；金地英文及中文谷乐屋用户搜索首屏未匹配本店，品牌介绍不等于本分店在营。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": null,
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "图益拼图",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "TOi图益拼图-苏州金地店",
+          "url": "https://www.xiaohongshu.com/user/profile/65bb2aa7000000000903f981",
+          "handle": "26805461898",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-toi.txt",
+        "profile-toi.txt",
+        "post-toi.txt"
+      ],
+      "result": "确认营业",
+      "reason": "本店主页明确金地B1楼、欢迎到店选购，并有近期拼图经营内容。此前缺年份／正文的展会品牌介绍已移出生产来源，本轮改用已读本分店证据。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19",
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "灵智谷",
+      "aliases": [],
+      "accounts": [],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-lingzhigu.txt"
+      ],
+      "result": "有效线索待核实",
+      "reason": "苏州金地灵智谷用户结果为网络科技／园区等异业，未匹配；保留9月本商场记录，不按名字猜主营。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": null,
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "恰谷恰谷",
+      "aliases": [],
+      "accounts": [],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-qiagu.txt"
+      ],
+      "result": "有效线索待核实",
+      "reason": "苏州金地恰谷恰谷用户结果未匹配本店；作者9月19日门头与寄售区实拍＋9月楼层记录，为较强分店／品类／当时营业依据。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": null,
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "卡游",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "douyin",
+          "name": "卡游 （苏州金地店）",
+          "handle": "21936043320",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAm5E09iMD8ACGZRplo0q-cm6tYAyzDEFOwTnOYQzp3MX86CGH35OiYwFdyKQq4Yul",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-kayou.txt"
+      ],
+      "result": "确认营业",
+      "reason": "2026 年 9 月 22 日楼层探店记录收录。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-05",
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "TOP TOY",
+      "aliases": [],
+      "accounts": [],
+      "confirmedBy": "official-listing",
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "2026-10-19实际读取TOP TOY当前官网门店目录，明确苏州金地广场LG-4；按官方目录确认营业。目录未标发布日期，读取时间不当发表时间。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": null
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "CARD",
+      "aliases": [],
+      "accounts": [],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-card.txt",
+        "profile-popcard.txt"
+      ],
+      "result": "有效线索待核实",
+      "reason": "已执行苏州金地CARD用户搜索并打开POP card；该号当前地址为绍兴天地，未证明是金地CARD。保留原楼层线索，正式全名和主体仍缺。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": null,
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "墟弥",
+      "aliases": [],
+      "accounts": [],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-xumi.txt",
+        "profile-xumi.txt"
+      ],
+      "result": "有效线索待核实",
+      "reason": "已执行苏州金地墟弥用户搜索，另实际打开墟弥Goods品牌号；可见联动／线上内容未落实金地本店，不将品牌其他城市内容转为本分店确认。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": null,
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "谷东",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "GoGo谷东（开谷店版",
+          "url": "https://www.xiaohongshu.com/user/profile/64706ae70000000011002e1b",
+          "handle": "5558160082",
+          "scope": "brand"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-gudong.txt",
+        "profile-gudong.txt",
+        "post-gudong.txt"
+      ],
+      "result": "确认营业",
+      "reason": "共用经营号当前简介明确苏州金地LG-30；2025年苏州开店帖与原9月楼层记录相互印证，属于有效窗口。沈阳店内容不当作苏州到货或库存确认。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19",
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "耀卡盒子",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "耀卡盒子苏州金地店",
+          "handle": "27791716534",
+          "url": "https://www.xiaohongshu.com/user/profile/69411e8d0000000037009e78",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "闭店／已结束隐藏",
+      "reason": "本轮重读搬迁通知：金地原址LG-53营业截止10月10日，结合2026年10月2日编辑时间及新址预计2027年1月开业，判断原址截止2026-10-10。期限已过，本分店隐藏；没有把搬迁后的新址预告视为已营业，也不把原常设店关店日期当快闪档期。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "万代官方扭蛋专卖店",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "万代官方扭蛋(苏州金地)",
+          "handle": "11389552662",
+          "url": "https://www.xiaohongshu.com/user/profile/66389427000000000d0243c3",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "苏州金地门店号持续发布本周新品。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-05"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "多摩万事屋",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "多摩万事屋",
+          "handle": "63809055933",
+          "url": "https://www.xiaohongshu.com/user/profile/66f68155000000000d025aa7",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "本轮核对本店号明确B1-13，并读到1月17日本店年终促销／春节不打烊经营帖，足以补齐原来仅有主页的依据。促销本身不是限时店；未见明确关闭公告。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "趣捡屋",
+      "aliases": [],
+      "accounts": [],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "有效线索待核实",
+      "reason": "已核品牌主页和最新西安帖；金地6月顾客与7月品牌标签为较强本商场线索，但没有当前苏州分店确认，移出accounts防止误升营业。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": null
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "FOT LIFE",
+      "aliases": [
+        "FOTLIFE金地店"
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "FOTLIFE金地店小鹿店长",
+          "handle": "11546540285",
+          "url": "https://www.xiaohongshu.com/user/profile/676dacc60000000018016ad4",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "店长经营号简介明确金地LG-33，并有10月3日编辑的本店上新。相城与金地分别记录，未以相城经营帖代替金地证据。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "幽默猫",
+      "aliases": [
+        "幽默猫-苏州金地店"
+      ],
+      "accounts": [
+        {
+          "platform": "douyin",
+          "name": "幽默猫-苏州金地店",
+          "handle": "70901825577",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAjgTchTt9P1E_779zjVNBcnDDBhW_FGD8OVn9ReH4sbs",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "抖音主页明确苏州金地分店，2025年7月29日上新正文明确本店；2025—2026年仍有顾客吃谷与盖章线索。本店开业优惠与商品活动不构成整店限时档期；未核实铺位，不猜楼层。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "MAGICWOW",
+      "aliases": [
+        "MAGICWOW苏州金地店"
+      ],
+      "accounts": [
+        {
+          "platform": "douyin",
+          "name": "MAGICWOW苏州金地店",
+          "handle": "68054104887",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAA8F1kr1lPFk0-SlLKz5Sg_NC4iqVimdwhOU7GzQcMK6m3pyBjltxfuZ3otEO6of_E",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "抖音分店号名称与苏州金地关联一致，有本店到店上新及2026年4月21日经营帖；原名单没有该名称，本轮按独立店铺收录，未猜中文译名或楼层。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "煰物社 LIKEGOODS",
+      "aliases": [
+        "LIKEGOODS",
+        "煰物社"
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "煰物社星悦汇店（金地活动共用号）",
+          "handle": "26217704041",
+          "url": "https://www.xiaohongshu.com/user/profile/67317060000000001c018593",
+          "scope": "brand"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "已核对的煰物社经营号虽名为星悦汇店，3月13日自发活动正文明确金地LG层LIKEGOODS和B1舞台。按正文实际分店归属补强本店经营，标共用品牌范围；一日店长活动结束不等于常设零售店关闭。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "萌祺 GOODS",
+      "aliases": [
+        "萌祺GOODS（苏州店）"
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "萌祺GOODS（苏州店）",
+          "handle": "2747858381",
+          "url": "https://www.xiaohongshu.com/user/profile/61065c2d00000000010012a8",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "闭店／已结束隐藏",
+      "reason": "本店号简介仍写LG-54，但最新已读帖明确“撤店撤货最后几个小时”，页面编辑于2026年6月13日。按明确撤店记录隐藏，编辑日不作原发表日，也不补造最后撤店时刻。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-003",
+      "name": "三月兽 CAFE（金地旧店）",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "三月兽CAFE苏州金地店",
+          "handle": "11388986847",
+          "url": "https://www.xiaohongshu.com/user/profile/66625ff4000000000700451a",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "闭店／已结束隐藏",
+      "reason": "金地店自发公告明确“将于2025年10月16日起结束营业”；未取得本址复业依据。仅归档旧CAFE，与仍在经营的三月兽零售店、星悦汇新CAFE分开，不推断为直接迁店。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "三月兽",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "三月兽苏州星悦汇店",
+          "handle": "95207257680",
+          "url": "https://www.xiaohongshu.com/user/profile/668e7cb2000000000f0364de",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "门店简介定位星悦汇一楼，国庆仍有手办及鸣潮等更新；相关活动余量以门店当天为准。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-05"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "次元贩售",
+      "aliases": [
+        "MTS次元贩售"
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "Mts次元贩售-苏州星悦汇",
+          "handle": "26964416382",
+          "url": "https://www.xiaohongshu.com/user/profile/66816f920000000003033b0f",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "本分店号与9月30日补货帖均明确苏州星悦汇，足以补强4月楼层记录；包含多IP商品，不保证今日库存。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "卡游",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "卡游苏州星悦汇店",
+          "handle": "95848856324",
+          "url": "https://www.xiaohongshu.com/user/profile/660f7ee2000000000b00c70b",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-kayou.txt"
+      ],
+      "result": "确认营业",
+      "reason": "主页明确北区一层112、服务台旁麦当劳对面；本店一番赏上新与4月楼层店单相互印证。商品余量不作今日库存承诺。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19",
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "易乐谷",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "易乐谷-苏州星悦汇店",
+          "handle": "26567342785",
+          "url": "https://www.xiaohongshu.com/user/profile/66370ed800000000070059d9",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "门店简介定位一楼麦当劳对面，10月初仍发布门店通贩上新。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-05"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "飞社长",
+      "aliases": [],
+      "accounts": [],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-fei.txt"
+      ],
+      "result": "有效线索待核实",
+      "reason": "已执行星悦汇飞社长用户搜索，未取得匹配本店账号；9月实拍显著补强主体／在店与品类，不能冒充官方确认。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": null,
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "模玩熊",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "模玩熊苏州星悦汇店",
+          "handle": "95386945164",
+          "url": "https://www.xiaohongshu.com/user/profile/67566182000000001d02f4d7",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "本轮补到星悦汇分店号及本店一番赏更新，原9月26日寄售记录与顾客现场反馈提高了本店经营线索强度。寄售者为个人，不作为官方号；一层位置沿用4月店单。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "COMIPLUS",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "COMIPLUS+苏州星悦汇店",
+          "handle": "63806341667",
+          "url": "https://www.xiaohongshu.com/user/profile/66f27194000000001d022996",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "闭店／已结束隐藏",
+      "reason": "本店号简介明确已闭店；7月8日公告正文确认苏州店7月5日正式闭店。4月店单与品牌仍上新均不能覆盖本分店关闭依据。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "煰物社",
+      "aliases": [
+        "LIKEGOODS"
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "煰物社星悦汇店",
+          "handle": "26217704041",
+          "url": "https://www.xiaohongshu.com/user/profile/67317060000000001c018593",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "主页明确星悦汇一楼109，2026年3月7日有上新，4月23日楼层攻略独立收录。另有3月13日金地活动，为另一分店线索，单独归属金地，未当作星悦汇的到店活动。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "扭扭城",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "苏州扭扭城",
+          "handle": "sznnt201",
+          "url": "https://www.xiaohongshu.com/user/profile/6757cf86000000000800afb8",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-niuniu.txt"
+      ],
+      "result": "确认营业",
+      "reason": "本店主页明确星悦汇二层，最新已读Hello Kitty扭蛋上新支持本店经营。商品限时返场不是整家店限时开放。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19",
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "GOODSlove",
+      "aliases": [],
+      "accounts": [],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-goodslove-jindi.txt",
+        "user-gulewu.txt"
+      ],
+      "result": "有效线索待核实",
+      "reason": "星悦汇找到同名号但0笔记、无简介，营业依据不足；金地英文及中文谷乐屋用户搜索首屏未匹配本店，品牌介绍不等于本分店在营。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": null,
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "多番鱼",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "苏州多番鱼",
+          "handle": "49311641562",
+          "url": "https://www.xiaohongshu.com/user/profile/6a1533960000000001007400",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "profile-duofanyu.txt",
+        "post-duofanyu.txt"
+      ],
+      "result": "确认营业",
+      "reason": "主页明确星悦汇二层、一番赏和Hello Kitty集店；9月25日本店上新与原楼层店单相互印证。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "猫受屋",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "猫受屋苏州星悦汇店",
+          "handle": "26806717478",
+          "url": "https://www.xiaohongshu.com/user/profile/62c007f2000000001b02447a",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "星悦汇门店号仍有国庆及网球王子等到货记录；2F来自4月店单，若楼层调整请以现场导览为准。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-05"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "AKIBA",
+      "aliases": [
+        "AKIBA GO"
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "AKIBA GO苏州星悦汇店",
+          "handle": "95026767652",
+          "url": "https://www.xiaohongshu.com/user/profile/67160deb000000001e0078f7",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "profile-akiba.txt",
+        "post-akiba.txt"
+      ],
+      "result": "确认营业",
+      "reason": "本店主页明确星悦汇二层；最新已读帖子为本店10月18日上新。商品上新日不是整家门店限时开放期。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "次元过家家",
+      "aliases": [
+        "KURO次元过家家"
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "KURO次元过家家星悦汇店",
+          "handle": "27730261431",
+          "url": "https://www.xiaohongshu.com/user/profile/68616344000000001b01b436",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-guojiajia.txt"
+      ],
+      "result": "确认营业",
+      "reason": "本店主页明确星悦汇二层，并有近期Re：0经营更新；与旧楼层名单为同一分店。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19",
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "yooo shop",
+      "aliases": [],
+      "accounts": [],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-yooo.txt"
+      ],
+      "result": "有效线索待核实",
+      "reason": "已查苏州星悦汇yooo shop用户结果，未取得匹配本店；2024招商品类过期，4月本商场楼层线索仍有效。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": null,
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "ONE TWO GOODS",
+      "aliases": [
+        "OTG玩兔谷",
+        "玩兔谷"
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "OTG玩兔谷 苏州星悦汇店",
+          "handle": "4215214152",
+          "url": "https://www.xiaohongshu.com/user/profile/6059e6f70000000001009646",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "profile-otg.txt",
+        "post-otg.txt"
+      ],
+      "result": "确认营业",
+      "reason": "玩兔谷本店经营帖正文明确“苏州星悦汇三楼One Two Goods”，确认旧名单与新账号为同一家，合并别名不重复计店。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "捣谷社",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "苏州捣谷社",
+          "handle": "95695480417",
+          "url": "https://www.xiaohongshu.com/user/profile/66fb9aed000000000b0310b1",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "闭店／已结束隐藏",
+      "reason": "本店公告发表于2026年8月17日，明确8月23日营业结束后正式闭店；主页仍列L301不覆盖关闭公告。保留旧4月楼层线索归档，不再进入展开更多。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "萌谷子快闪",
+      "aliases": [],
+      "accounts": [],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "闭店／已结束隐藏",
+      "reason": "复用2026-10-05实际读取的商场公告：一楼中庭快闪截至10月18日，本轮已过期，从前台及展开更多隐藏；不据此判定金地萌谷子常设店关闭。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "三月兽 CAFE",
+      "aliases": [],
+      "accounts": [],
+      "confirmedBy": "official-listing",
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "商场官方2026年国庆公告明确10月1日开业、铺位L102b；据官方店单确认营业。与三月兽零售店分开，不把开业日或普通联动促销当整家咖啡店限时档期；未核实特定本期主题，故不编造主题结束日。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "元气喜乐会",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "元气喜乐会",
+          "url": "https://www.xiaohongshu.com/user/profile/6591a9e4000000002001f0b7",
+          "scope": "brand"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "闭店／已结束隐藏",
+      "reason": "原研究已读商家闭店清仓帖，页面为2026年6月29日编辑时间，7月5日回复清仓“到731”；继续作为已公布闭店记录隐藏，不能将编辑日当原发表日或补造最终撤店日。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-09-27",
+      "reuse": "原9月已读关闭依据，本轮仅重释日期和分类"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "浮游猫",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "浮游猫苏州星悦汇店",
+          "handle": "fuyuu_suzhou",
+          "url": "https://www.xiaohongshu.com/user/profile/6796fe40000000000e01d9a6",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "星悦汇门店号9月14日发布“周边回家”，另有持续痛包介绍。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-05"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "Yetimall（液体猫）",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "douyin",
+          "name": "Yetimall苏州店",
+          "handle": "23908761737",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAA8tnJY_EcXlDY8Olk1wXLAxf8g02-f3t3nJt-Fh_fYf46E8koASJwL8OizZtStD8l",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "抖音认证店铺号简介及指路视频均定位星悦汇三层317；国庆仍更新专辑与娃娃等周边。作为相关周边店收录。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-05"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "高达基地",
+      "aliases": [
+        "THE GUNDAM BASE",
+        "苏州高达基地"
+      ],
+      "accounts": [],
+      "confirmedBy": "official-listing",
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "本轮实际读取万代当前官网门店目录，列星悦汇L124—125；按官方目录确认营业。与步行街万代拼装模型店分开记，营业时段不构成限时店。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": null
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "万代拼装模型店",
+      "aliases": [],
+      "accounts": [],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-bandai.txt"
+      ],
+      "result": "有效线索待核实",
+      "reason": "逐店用户检索未取到匹配本店号。园区开业报道与品牌暑期地址均关联步行街，证据强于泛攻略，但品牌微博仅检索摘要，未取得当前官方门店目录。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": null,
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "栗汀",
+      "aliases": [],
+      "accounts": [],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-liting.txt"
+      ],
+      "result": "有效线索待核实",
+      "reason": "已查星悦汇栗汀用户结果，首屏未匹配本店；2025园区经营报道＋2026顾客定位较强，不与其他城市同名号混用。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": null,
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "追星馆",
+      "aliases": [],
+      "accounts": [],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-zhuixingguan.txt"
+      ],
+      "result": "有效线索待核实",
+      "reason": "已查苏州星悦汇追星馆用户结果，未匹配本店；2025园区报道是本商场经营线索，非当前目录。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": null,
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "森罗万象 GOODSFUN",
+      "aliases": [
+        "森罗万象"
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "森罗万象-苏州星悦汇店",
+          "handle": "2038485756",
+          "url": "https://www.xiaohongshu.com/user/profile/64d3b245000000001c029e9e",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-fei.txt",
+        "profile-senluo.txt",
+        "post-senluo.txt"
+      ],
+      "result": "确认营业",
+      "reason": "本店主页明确苏州中心星悦汇一楼；9月30日本店到货声明及10月1日作者到货回复明确可到店。临时物流延误不是门店停业，商品主题月活动不作整家门店限时开放期。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19",
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-002",
+      "name": "Hall One",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "Hall One（苏州星悦汇店）",
+          "handle": "26473349436",
+          "url": "https://www.xiaohongshu.com/user/profile/695e13680000000019034a2c",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-zhuixingguan.txt",
+        "profile-hallone.txt",
+        "post-hallone.txt"
+      ],
+      "result": "确认营业",
+      "reason": "分店主页与开业帖均明确星悦汇三层301a、靠近苏州中心连廊；8月24日预告8月28日开业，后续仍有新品经营内容。每日10:00—22:00是营业时段，不是限时店。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19",
+      "queryReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-001",
+      "name": "FOT LIFE",
+      "aliases": [
+        "FOT Life苏州相城店"
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "FOT Life苏州相城店",
+          "handle": "911228132",
+          "url": "https://www.xiaohongshu.com/user/profile/5ddf1fc60000000001000376",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "本店号明确B馆二层；2025年12月经营帖仍在本轮2025—2026资料窗口内，不能按旧“近半年”口径排除。编辑时间不作发表日。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-001",
+      "name": "OuO鸥店",
+      "aliases": [
+        "OuO鸥店.谷子手作电玩咖啡"
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "OuO鸥店.谷子手作电玩咖啡",
+          "handle": "5705508911",
+          "url": "https://www.xiaohongshu.com/user/profile/657cb4b9000000001902eac1",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "本店号简介明确B馆2F-15a，持续发布店内拼豆、痛扇及咖啡内容；最新已读经营视频显示“6天前”，保留相对时间，不补造精确发表日。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-001",
+      "name": "独角星MiNi",
+      "aliases": [
+        "苏州独角星MiNi"
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "苏州独角星MiNi",
+          "handle": "95035965181",
+          "url": "https://www.xiaohongshu.com/user/profile/681dc158000000000601e393",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "确认营业",
+      "reason": "本店自发领取活动明确“苏州相城天街B馆2楼独角星MiNi”；2025年资料属于有效窗口。主页现介绍月见川小卖部与相关作品，不能把线上内容或这次资料复核当作重新实地到访。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-001",
+      "name": "蛋屋 GACHAROOM（B馆）",
+      "aliases": [],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "苏州蛋屋",
+          "handle": "5559107374",
+          "url": "https://www.xiaohongshu.com/user/profile/64758b1d0000000011001d5e",
+          "scope": "brand"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [],
+      "result": "闭店／已结束隐藏",
+      "reason": "B馆经营帖评论中，顾客07-18问“天街店关了？”，商家本人答“对哒宝子”。按2026年读取判断为2026-07-18已确认关闭，不据此补造具体撤店日；主页仍保留旧址不能覆盖关闭回复。A馆旧快闪另列研究缺口，不与B馆合并判断。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19"
+    },
+    {
+      "placeId": "suzhou-shop-001",
+      "name": "玩聚猫 PURRJOY",
+      "aliases": [
+        "玩聚猫"
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "玩聚猫PURRJOY",
+          "handle": "2202238410",
+          "url": "https://www.xiaohongshu.com/user/profile/648830fb000000001003508b",
+          "scope": "store"
+        }
+      ],
+      "confirmedBy": null,
+      "mode": "主页／经营帖／官网目录；缺匹配者补站内用户搜索",
+      "rawFiles": [
+        "user-wanjumao.txt",
+        "profile-wanjumao.txt",
+        "post-wanjumao.txt"
+      ],
+      "result": "确认营业",
+      "reason": "作者实拍门头实际写“玩聚猫”，纠正旧图注“玩集萌”；主页地址为相城天街B馆二层，国庆有本店经营更新。模型／中古品类由实拍陈列印证，桌游与饮品由本店简介印证；未把桌游活动或促销当限时店。",
+      "reviewedAt": "2026-10-19",
+      "query": null,
+      "accountReadAt": "2026-10-19",
+      "queryReadAt": "2026-10-19"
+    }
+  ],
+  "unverifiedCandidate": {
+    "placeId": "suzhou-shop-002",
+    "name": "GOODSlove",
+    "url": "https://www.xiaohongshu.com/user/profile/6753c64900000000080097f8",
+    "handle": "26296642019",
+    "result": "同名号无简介、0笔记，未加入production accounts"
+  },
+  "sharedAccount": "https://www.xiaohongshu.com/user/profile/67317060000000001c018593 经营帖分别关联星悦汇及金地，金地入口标品牌号，不计为两个独立账号"
+}

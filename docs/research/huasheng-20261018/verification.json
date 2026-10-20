@@ -1,0 +1,68 @@
+{
+  "checkedAt": "2026-10-18",
+  "method": "本地最终构建，内置浏览器实际交互与只读DOM核对",
+  "preview": "http://127.0.0.1:4186/bltbSch_201.github.io/rank/guide/#/place/shanghai-shop-004",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "directRefresh": true,
+      "confirmed": 19,
+      "pending": 3,
+      "pendingInitiallyOpen": false,
+      "confirmedSourceLists": 0,
+      "horizontalOverflow": false,
+      "expandedPendingSourceLinks": 6
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "directRefresh": true,
+      "confirmed": 19,
+      "pending": 3,
+      "pendingInitiallyOpen": false,
+      "confirmedSourceLists": 0,
+      "horizontalOverflow": false,
+      "expandedPendingSourceLinks": 6
+    }
+  ],
+  "pendingNames": [
+    "圆圆的ES二次元店",
+    "萌猫乐谷趣",
+    "亿加谷店"
+  ],
+  "accounts": {
+    "links": 19,
+    "unique": 19,
+    "xiaohongshu": 16,
+    "douyin": 3,
+    "profileUrlFormatsVerified": true
+  },
+  "gallery": {
+    "count": 17,
+    "lightboxOpened": true,
+    "lightboxClosed": true,
+    "imageLoaded": true,
+    "imageNaturalWidth": 410,
+    "sourceLinkVisible": true,
+    "testedCaption": "华盛小亭柴柴旺旺谷门面（网图；2025-08-22报道）"
+  },
+  "search": [
+    {
+      "query": "华盛漫趣集",
+      "results": 1,
+      "matched": "华盛小亭"
+    },
+    {
+      "query": "Anon Tokyo",
+      "results": 1,
+      "matched": "华盛小亭"
+    }
+  ],
+  "authorVisitCopy": "作者到访记录（2026-09-09）",
+  "limitations": [
+    "外部百度WebGL地图出现alert及脚本回调错误，不能将本次店单验收视为地图在线服务通过；店单、折叠、图集与搜索交互已独立完成。",
+    "账号经营真实性依据本轮研究台账；浏览器前台验收只核对19个唯一主页入口及格式，未重复打开全部外站账号。"
+  ],
+  "publication": "local-only"
+}

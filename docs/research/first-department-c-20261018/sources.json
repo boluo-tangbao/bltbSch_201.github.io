@@ -1,0 +1,166 @@
+{
+  "placeId": "shanghai-shop-001",
+  "reviewedAt": "2026-10-18",
+  "window": {
+    "from": "2025-01-01",
+    "through": "2026-10-18"
+  },
+  "shopSources": [
+    {
+      "label": "多摩第一百货店本人·地址与主营简介",
+      "url": "https://www.xiaohongshu.com/user/profile/62fb4b19000000000f005c0d"
+    },
+    {
+      "label": "人民网·金台资讯（新浪转载）·第一百货商业中心实景介绍",
+      "url": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html",
+      "date": "2026-01-20"
+    },
+    {
+      "label": "春日门店本人·当前第一百货地址简介",
+      "url": "https://www.xiaohongshu.com/user/profile/5c62e10800000000120269f3"
+    },
+    {
+      "label": "春日门店号·博士招募周边上新",
+      "url": "https://www.xiaohongshu.com/explore/6aabaa37000000002900d5b5",
+      "dateLabel": "09-17（页面未显示年份，2026-10-18读取）"
+    },
+    {
+      "label": "Sanriocharacters_Cafe·Hello Kitty sweet cafe本店主题公告",
+      "url": "https://www.sina.cn/news/detail/5343493154930981.html",
+      "date": "2026-09-15"
+    },
+    {
+      "label": "焦糖小谷包·上海吃谷攻略",
+      "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+      "date": "2026-06-11"
+    },
+    {
+      "label": "谷回门店本人·谷回动漫一百店闭店",
+      "url": "https://www.xiaohongshu.com/explore/6ab4ce8b0000000014003726",
+      "dateLabel": "编辑于09-24；公告写10月8日正式闭店（页面未显示年份）"
+    },
+    {
+      "label": "面包谷谷抖音认证店铺号·当前地址与经营简介",
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAKH7gNtMtBSr8IotvQjs3Xe2x9DgqnMf_BAWu2Uhx6Zg"
+    },
+    {
+      "label": "面包谷谷本人·超时空辉夜姬周边作品",
+      "url": "https://www.douyin.com/video/7600395171616515173",
+      "date": "2026-01-28"
+    }
+  ],
+  "hiddenClosed": [
+    {
+      "name": "谷回动漫中古店（第一百货店）",
+      "aliases": [
+        "谷回动漫中古店",
+        "谷回动漫一百店"
+      ],
+      "floor": "六层",
+      "kind": "中古动漫周边",
+      "status": "closed",
+      "note": "门店本人公告明确一百店10月8日正式闭店，线上仍经营、后续另开新店。账号近期上新和新店预告不作为第一百货旧店复业依据；本条从前台及展开计数中隐藏。公告相对月日原样保留，不补造年份。",
+      "sources": [
+        {
+          "label": "谷回门店本人·谷回动漫一百店闭店",
+          "url": "https://www.xiaohongshu.com/explore/6ab4ce8b0000000014003726",
+          "dateLabel": "编辑于09-24；公告写10月8日正式闭店（页面未显示年份）"
+        },
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "谷回动漫中古店",
+          "handle": "11602787116",
+          "url": "https://www.xiaohongshu.com/user/profile/661a56990000000007007000",
+          "scope": "brand"
+        }
+      ]
+    }
+  ],
+  "deferred": [
+    {
+      "name": "潮π联盟",
+      "reason": "攻略中的场景／区域名称，未确认独立谷店主体，不作为一家店计数。",
+      "source": {
+        "label": "焦糖小谷包·上海吃谷攻略",
+        "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+        "date": "2026-06-11"
+      }
+    },
+    {
+      "name": "扭蛋售卖馆",
+      "reason": "泛称，未确认独立商户名称，保留候选不凑店数。",
+      "source": {
+        "label": "焦糖小谷包·上海吃谷攻略",
+        "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+        "date": "2026-06-11"
+      }
+    },
+    {
+      "name": "GOODSTime",
+      "reason": "攻略另列五层，但与四层谷的Time是否同一主体／不同店未核实，暂不重复接入。",
+      "source": {
+        "label": "焦糖小谷包·上海吃谷攻略",
+        "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+        "date": "2026-06-11"
+      }
+    },
+    {
+      "name": "Lola、FONZ GOODS等原图门头",
+      "reason": "照片保留，不凭未知日期旧门头推断当前营业。"
+    }
+  ],
+  "gallery": {
+    "action": "沿用现有21项，不重新下载、不重复加图；没有2025年前的生产网图。",
+    "localMedia": 19,
+    "existingWebImages": 2,
+    "newWebImages": 0,
+    "reusedLedger": "../shanghai-web-images-20261017/sources.json"
+  },
+  "limitations": [
+    "14家仍缺独立当前营业确认，保留折叠线索，不宣称账号已穷尽检索。",
+    "小红书未标年份的09-17／09-24按原dateLabel记录，不自行换算。",
+    "多摩主页未标更新时间，使用当前地址简介及2026年报道交叉核对；没有把2025年活动当作当前活动。"
+  ],
+  "correction": {
+    "trigger": "作者指出抖音中有面包谷门店而原名单漏收",
+    "shop": {
+      "name": "面包谷谷",
+      "aliases": [
+        "面包谷"
+      ],
+      "floor": "六层",
+      "kind": "动漫／游戏周边",
+      "status": "recent",
+      "note": "已核对抖音认证店铺账号，主页明确上海第一百货C馆六楼；账号展示2026年作品及多条写明本店地址的周边上新内容。面包店主题是概念风格，实际经营谷子；具体IP及库存以当日门店为准。",
+      "sources": [
+        {
+          "label": "面包谷谷抖音认证店铺号·当前地址与经营简介",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAKH7gNtMtBSr8IotvQjs3Xe2x9DgqnMf_BAWu2Uhx6Zg"
+        },
+        {
+          "label": "面包谷谷本人·超时空辉夜姬周边作品",
+          "url": "https://www.douyin.com/video/7600395171616515173",
+          "date": "2026-01-28"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "douyin",
+          "name": "面包谷谷（大脸猫版",
+          "handle": "KamiChaika",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAKH7gNtMtBSr8IotvQjs3Xe2x9DgqnMf_BAWu2Uhx6Zg",
+          "scope": "store"
+        }
+      ]
+    },
+    "reviewedAt": "2026-10-18",
+    "reason": "上一轮主要围绕攻略候选核对，缺少抖音平台的新店发现补查；不是闭店过滤或资料日期造成。"
+  }
+}

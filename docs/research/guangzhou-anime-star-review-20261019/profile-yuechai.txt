@@ -1,0 +1,262 @@
+- generic: 粤拆谷子店（广州店）
+- generic: 小红书号：95496425661
+- generic: 📍动漫星城东区负二2047(a店旁边) 营业时间10.30~21.30 拆子暂时不支持邮寄哦~
+- generic: "18"
+- generic: 关注
+- generic: "1952"
+- generic: 粉丝
+- generic: "3643"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link "置顶":
+  - /url: /user/profile/64faa9150000000005000172/67ecef94000000001d024b98
+  - generic: 置顶
+- link "📢📢📢《女寝》线下活动开启":
+  - /url: /user/profile/64faa9150000000005000172/67ecef94000000001d024b98
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "11"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/6926c317000000001e02d6fc
+- link "广州《奇怪的梦境》二期动物体娃娃到货咯":
+  - /url: /user/profile/64faa9150000000005000172/6926c317000000001e02d6fc
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "2"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/69213db8000000001f007267
+- link "奇怪的梦境上新来啦":
+  - /url: /user/profile/64faa9150000000005000172/69213db8000000001f007267
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "3"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/691c1b43000000001f005607
+- link "广州11.18上新":
+  - /url: /user/profile/64faa9150000000005000172/691c1b43000000001f005607
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "1"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/691964ea00000000040164c7
+- link "GBC小恶魔系列来啦！":
+  - /url: /user/profile/64faa9150000000005000172/691964ea00000000040164c7
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "1"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/691443ec0000000004003756
+- link "广州鸣潮到货":
+  - /url: /user/profile/64faa9150000000005000172/691443ec0000000004003756
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "1"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68f35185000000000402ab1f
+- link "10.18上新":
+  - /url: /user/profile/64faa9150000000005000172/68f35185000000000402ab1f
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "3"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68f06d5d0000000005031419
+- link "10.16上新来啦":
+  - /url: /user/profile/64faa9150000000005000172/68f06d5d0000000005031419
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "16"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68ea07100000000005030886
+- link "10.11日广州上新":
+  - /url: /user/profile/64faa9150000000005000172/68ea07100000000005030886
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68df3dda000000000503b131
+- link "《欲言难止》和《纸飞机》娃娃来啦":
+  - /url: /user/profile/64faa9150000000005000172/68df3dda000000000503b131
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "5"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68df383a00000000050390c2
+- link "《奇怪的梦境》二期 线下店来啦！":
+  - /url: /user/profile/64faa9150000000005000172/68df383a00000000050390c2
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "5"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68dde7900000000004014449
+- link "广州10.2上新来啦":
+  - /url: /user/profile/64faa9150000000005000172/68dde7900000000004014449
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "5"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68db5d060000000005032a17
+- link "咎由自取二期线下打卡活动来啦!":
+  - /url: /user/profile/64faa9150000000005000172/68db5d060000000005032a17
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "69"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68cf8bcb000000000b03e94f
+- link "广州9.21上新":
+  - /url: /user/profile/64faa9150000000005000172/68cf8bcb000000000b03e94f
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "4"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68ce6ec00000000011017a81
+- link "广州9.20上新2":
+  - /url: /user/profile/64faa9150000000005000172/68ce6ec00000000011017a81
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "1"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68ce6aa8000000000702ac61
+- link "广州9.20gbc上新":
+  - /url: /user/profile/64faa9150000000005000172/68ce6aa8000000000702ac61
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68c4e8b1000000001c00f22f
+- link "广州9.13上新来啦":
+  - /url: /user/profile/64faa9150000000005000172/68c4e8b1000000001c00f22f
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "1"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68be4ef6000000001b03040b
+- link "广州9.8上新来啦":
+  - /url: /user/profile/64faa9150000000005000172/68be4ef6000000001b03040b
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "4"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68bd0368000000001b031a6b
+- link "广州9.7学院偶像大师一番赏上新啦!":
+  - /url: /user/profile/64faa9150000000005000172/68bd0368000000001b031a6b
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "1"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68bbc00a000000001c00a41f
+- link "广州9.6上新来啦":
+  - /url: /user/profile/64faa9150000000005000172/68bbc00a000000001c00a41f
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "4"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68ae7351000000001b03e030
+- link "广州8.27上新来啦":
+  - /url: /user/profile/64faa9150000000005000172/68ae7351000000001b03e030
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "4"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68aaec0c000000001b03f948
+- link "《咎由自取》二期原著衍生周边打卡活动":
+  - /url: /user/profile/64faa9150000000005000172/68aaec0c000000001b03f948
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "15"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68a53b2a000000001c013eef
+- link "广州店8.20上新":
+  - /url: /user/profile/64faa9150000000005000172/68a53b2a000000001c013eef
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "3"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/689c5987000000001c011bbc
+- link "GBC 耳机一番赏 上新":
+  - /url: /user/profile/64faa9150000000005000172/689c5987000000001c011bbc
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "3"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68996350000000002302853d
+- link "广州8.11上新来啦":
+  - /url: /user/profile/64faa9150000000005000172/68996350000000002302853d
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "4"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/689580a6000000002302af15
+- link "广州8.9上新来啦":
+  - /url: /user/profile/64faa9150000000005000172/689580a6000000002302af15
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "9"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68941dd40000000023033869
+- link "广州8.7上新":
+  - /url: /user/profile/64faa9150000000005000172/68941dd40000000023033869
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "3"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/688b26f50000000023031f12
+- link "7.31上新来啦":
+  - /url: /user/profile/64faa9150000000005000172/688b26f50000000023031f12
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "3"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68889ed10000000023019c2a
+- link "7.29上新2":
+  - /url: /user/profile/64faa9150000000005000172/68889ed10000000023019c2a
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "6"
+- link:
+  - /url: /user/profile/64faa9150000000005000172/68888e6100000000230336dc
+- link "7.29上新":
+  - /url: /user/profile/64faa9150000000005000172/68888e6100000000230336dc
+- link "粤拆谷子店（广州店）":
+  - /url: /user/profile/64faa9150000000005000172?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 粤拆谷子店（广州店）
+- generic: "2"
+- generic: 笔记・0
+- generic: 专辑・0
+- generic: 文件・0
+- generic: TA 还没有收藏任何内容哦
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

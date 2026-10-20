@@ -1,0 +1,256 @@
+- generic: 焦糖-萌谷子苏州版
+- generic: 小红书号：63579507473
+- generic: IP属地：江苏
+- generic: 新品上新、打卡活动、补货通知都会宣发🥳 📍姑苏区新市路1号苏州金地广场B1-27
+- generic: "4"
+- generic: 关注
+- generic: "517"
+- generic: 粉丝
+- generic: "1334"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link:
+  - /url: /user/profile/69e355090000000002002005/6ad22a21000000001500b5d0
+- link "今日补货上新💫":
+  - /url: /user/profile/69e355090000000002002005/6ad22a21000000001500b5d0
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- link:
+  - /url: /user/profile/69e355090000000002002005/6ad190b6000000001802d29f
+- link "今日补货上新⌛️旧故新长":
+  - /url: /user/profile/69e355090000000002002005/6ad190b6000000001802d29f
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "50"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6abf633b000000001203bf14
+- link "今日上新💫旧故新长三期":
+  - /url: /user/profile/69e355090000000002002005/6abf633b000000001203bf14
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "11"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6aba3613000000001a02a1c6
+- link "今日上新🆕《灯花笑》":
+  - /url: /user/profile/69e355090000000002002005/6aba3613000000001a02a1c6
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "20"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6ab79d320000000015016331
+- link "今日上新💫破云3期":
+  - /url: /user/profile/69e355090000000002002005/6ab79d320000000015016331
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "57"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6ab79cd5000000001301a71b
+- link "今日上新💫吞海 三期":
+  - /url: /user/profile/69e355090000000002002005/6ab79cd5000000001301a71b
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "50"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6ab79c12000000001301a446
+- link "奇洛李维斯回信 六期上新":
+  - /url: /user/profile/69e355090000000002002005/6ab79c12000000001301a446
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "38"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6ab4ff160000000012038e05
+- link "今日上新💫伪装学渣二期":
+  - /url: /user/profile/69e355090000000002002005/6ab4ff160000000012038e05
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "34"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6ab4fd9c0000000012038861
+- link "今日上新💫放学等我7期":
+  - /url: /user/profile/69e355090000000002002005/6ab4fd9c0000000012038861
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "121"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6aa940250000000012035f43
+- link "今日上新💫秉性下等":
+  - /url: /user/profile/69e355090000000002002005/6aa940250000000012035f43
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "41"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a9ce31f0000000012002bd9
+- link "今日上新💓欲言难止":
+  - /url: /user/profile/69e355090000000002002005/6a9ce31f0000000012002bd9
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "4"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a9be0ea0000000012002e2e
+- link "泠屿笺 小蘑菇 三期 上新啦！":
+  - /url: /user/profile/69e355090000000002002005/6a9be0ea0000000012002e2e
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "46"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a8e97c0000000001e014bf4
+- link "🥳🥳🥳今日补货上新":
+  - /url: /user/profile/69e355090000000002002005/6a8e97c0000000001e014bf4
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "2"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a86af5f000000003400d918
+- link "【你的雪人能活多久】三期制品抢先看❗":
+  - /url: /user/profile/69e355090000000002002005/6a86af5f000000003400d918
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "3"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a843fa80000000027020b4e
+- link "补货上新啦(≧∇≦)/":
+  - /url: /user/profile/69e355090000000002002005/6a843fa80000000027020b4e
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "1"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a83d20200000000220124a7
+- link "今日🎐补货上新":
+  - /url: /user/profile/69e355090000000002002005/6a83d20200000000220124a7
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a82842d0000000027021fac
+- link "[烟花R][烟花R]今日补货上新[烟花R][烟花R]":
+  - /url: /user/profile/69e355090000000002002005/6a82842d0000000027021fac
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "7"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a8199e10000000026037495
+- link "《锁帝翎》上新啦～[星R]":
+  - /url: /user/profile/69e355090000000002002005/6a8199e10000000026037495
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a7edce7000000002c0016a0
+- link "破云二期 上新啦～[庆祝R]":
+  - /url: /user/profile/69e355090000000002002005/6a7edce7000000002c0016a0
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "30"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a7d9b00000000003203067a
+- link "补货上新啦(≧∇≦)/":
+  - /url: /user/profile/69e355090000000002002005/6a7d9b00000000003203067a
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a7c42cd00000000270222d4
+- link "补货上新啦(≧∇≦)/":
+  - /url: /user/profile/69e355090000000002002005/6a7c42cd00000000270222d4
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "1"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a7a8916000000002201738b
+- link "0814 纪望生日无料来啦":
+  - /url: /user/profile/69e355090000000002002005/6a7a8916000000002201738b
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "37"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a76b1320000000022016f88
+- link "上新啦！":
+  - /url: /user/profile/69e355090000000002002005/6a76b1320000000022016f88
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "1"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a745b120000000022010dc8
+- link "《江医生他怀了死对头的崽》上新啦[星R]":
+  - /url: /user/profile/69e355090000000002002005/6a745b120000000022010dc8
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "1"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a73ed47000000002c001107
+- link "伪装学渣|贺朝0806生日大屏投放来啦！":
+  - /url: /user/profile/69e355090000000002002005/6a73ed47000000002c001107
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "3"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a72f81800000000220103c4
+- link "🎉🎉🎉今日补货上新🎉🎉🎉":
+  - /url: /user/profile/69e355090000000002002005/6a72f81800000000220103c4
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "32"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a7075a400000000270231c2
+- link "暑期快闪来袭！":
+  - /url: /user/profile/69e355090000000002002005/6a7075a400000000270231c2
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a6ef99900000000320216be
+- link "补货啦！":
+  - /url: /user/profile/69e355090000000002002005/6a6ef99900000000320216be
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "19"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a6af97d0000000011012ce4
+- link "某某二期 上新⭐️～":
+  - /url: /user/profile/69e355090000000002002005/6a6af97d0000000011012ce4
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "63"
+- link:
+  - /url: /user/profile/69e355090000000002002005/6a69cd0a0000000011018e4c
+- link "诟病二期|线下首发ദ്ദി˶>ω<)✧":
+  - /url: /user/profile/69e355090000000002002005/6a69cd0a0000000011018e4c
+- link "焦糖-萌谷子苏州版":
+  - /url: /user/profile/69e355090000000002002005?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 焦糖-萌谷子苏州版
+- generic: "34"
+- generic: 该用户已设置收藏内容不可见
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

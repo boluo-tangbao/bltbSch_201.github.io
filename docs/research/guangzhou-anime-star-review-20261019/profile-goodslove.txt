@@ -1,0 +1,262 @@
+- text: GOODSLOVE
+- generic: 小红书号：27247595607
+- generic: IP属地：上海
+- generic: 快乐吃谷🦊快乐体验 · 吃饭号：@GOODSLOVE CAFE · 零售号：@GOODSLOVE STORE · 街区号：@GOODSLOVE LAND · 旗舰店：@GOODSLOVE旗舰店
+- generic: "16"
+- generic: 关注
+- generic: 24.3万
+- generic: 粉丝
+- generic: 143.7万
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link "置顶":
+  - /url: /user/profile/63ef802e000000000f0124b7/6a702e86000000003400c776
+  - generic: 置顶
+- link "光与夜之恋 | 音乐盛典主题活动情报公开！":
+  - /url: /user/profile/63ef802e000000000f0124b7/6a702e86000000003400c776
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: 1.3万
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ad20258000000001402fbc9
+- link "万圣节到！速速变身神奇人类出来发疯！":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ad20258000000001402fbc9
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "53"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ad207b00000000001008e1c
+- link "阴阳师｜十载同行！主题街区首日实拍来啦！":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ad207b00000000001008e1c
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "159"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ad1a2b5000000001801a9e5
+- link "主题征集｜快门按下，晒出你的社团记忆📸":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ad1a2b5000000001801a9e5
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "94"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ad1a33000000000180296b2
+- link "🎥时光代理人｜主题餐厅首日实拍来啦✨":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ad1a33000000000180296b2
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "809"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ad0a4c3000000001801b067
+- link "阴阳师｜识别到您就是天选欧皇🎉":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ad0a4c3000000001801b067
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "272"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ad04fbc000000000a01ccd9
+- link "🎥时光代理人｜主题零售门店即将上新！":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ad04fbc000000000a01ccd9
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "363"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6aca10d8000000000200efcb
+- link "阴阳师 | 🏮联动快闪主题街区情报公开！":
+  - /url: /user/profile/63ef802e000000000f0124b7/6aca10d8000000000200efcb
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "1068"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ac8bb3f000000001802a6fc
+- link "阴阳师｜全新系列周边线下通贩即将开启":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ac8bb3f000000001802a6fc
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "1037"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ac47296000000001a025b2d
+- link "🎥时光代理人主题餐厅预约情报来啦✨":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ac47296000000001a025b2d
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "245"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ac3753f0000000002011c2d
+- link "GOODSLOVE南昌｜搬店通知！":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ac3753f0000000002011c2d
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "177"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ac223dc000000001b01f4b5
+- link "「萌趣返图征集」今日开启！":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ac223dc000000001b01f4b5
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "1124"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6abe2f6e000000001802baa0
+- link "🎥时光代理人| 学院社团代表风采（二）":
+  - /url: /user/profile/63ef802e000000000f0124b7/6abe2f6e000000001802baa0
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "7248"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6abe135f000000000200ebd6
+- link "精灵出现！就这样萌萌地等你来打卡……":
+  - /url: /user/profile/63ef802e000000000f0124b7/6abe135f000000000200ebd6
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "117"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6abddafe000000001c02fa1d
+- link "🚩盛世华诞，举国同庆！":
+  - /url: /user/profile/63ef802e000000000f0124b7/6abddafe000000001c02fa1d
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "462"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6abcddda0000000002028cc9
+- link "🎥时光代理人| 学院社团代表风采（一）":
+  - /url: /user/profile/63ef802e000000000f0124b7/6abcddda0000000002028cc9
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "4102"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6abb8c34000000000a01f73a
+- link "🎥时光代理人官方授权主题餐厅，即将开启！":
+  - /url: /user/profile/63ef802e000000000f0124b7/6abb8c34000000000a01f73a
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "6369"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6aba48e9000000000200e113
+- link "闭店公告丨部分门店即将闭店":
+  - /url: /user/profile/63ef802e000000000f0124b7/6aba48e9000000000200e113
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "1935"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab9e65b0000000018029d00
+- link "「萌趣集市」系列周边·第二期线下全门店上新":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab9e65b0000000018029d00
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "9329"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab797cc0000000015002130
+- link "20秒体验！乐园漫游全流程来啦！":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab797cc0000000015002130
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "141"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab766df000000001c02e2b2
+- link "🎡「洛克王国：世界」官方周边线下贩售中！":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab766df000000001c02e2b2
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "294"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab60e1d000000001402e3d3
+- link "共迎中秋丨狐狐正抱着月亮奔你而来~":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab60e1d000000001402e3d3
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "132"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab5f22d000000000a01efeb
+- link "《忘川风华录》全新周边余量线下贩售":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab5f22d000000000a01efeb
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "818"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab4b7820000000015011f0d
+- link "《全职高手》瓶中独白系列丨今日开售":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab4b7820000000015011f0d
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "1156"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab484d6000000001801abfa
+- link "结界即将开启，请查收这份现世邀约📨":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab484d6000000001801abfa
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "259"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab3a428000000000a01c813
+- link "《全职高手》宅家时间系列门店上新！":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab3a428000000000a01c813
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "162"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab10740000000003501de67
+- link "💌《全职高手》瓶中独白系列·即将预售":
+  - /url: /user/profile/63ef802e000000000f0124b7/6ab10740000000003501de67
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "1539"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6aafd20600000000270141a4
+- link "「洛克王国：世界」乐园漫游系列情报公开":
+  - /url: /user/profile/63ef802e000000000f0124b7/6aafd20600000000270141a4
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "4417"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6aae5d4c000000000b036cd9
+- link "⭐洛克王国：世界官方周边新品即将上新":
+  - /url: /user/profile/63ef802e000000000f0124b7/6aae5d4c000000000b036cd9
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "1992"
+- link:
+  - /url: /user/profile/63ef802e000000000f0124b7/6aae095b000000002a00740e
+- link "秋日限时巡游会 | 解锁全街区体验✨":
+  - /url: /user/profile/63ef802e000000000f0124b7/6aae095b000000002a00740e
+- link "GOODSLOVE":
+  - /url: /user/profile/63ef802e000000000f0124b7?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: GOODSLOVE
+- generic: "135"
+- generic: 该用户已设置收藏内容不可见
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

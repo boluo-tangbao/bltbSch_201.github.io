@@ -1,0 +1,310 @@
+{
+  "checkedAt": "2026-10-18",
+  "confirmedVisibleShops": [
+    {
+      "name": "多摩万事屋（第一百货店）",
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "多摩万事屋（第一百货店）",
+          "handle": "Domo1008",
+          "url": "https://www.xiaohongshu.com/user/profile/62fb4b19000000000f005c0d",
+          "scope": "store"
+        }
+      ],
+      "addressEvidence": [
+        {
+          "label": "多摩第一百货店本人·地址与主营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/62fb4b19000000000f005c0d"
+        },
+        {
+          "label": "人民网·金台资讯（新浪转载）·第一百货商业中心实景介绍",
+          "url": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html",
+          "date": "2026-01-20"
+        }
+      ],
+      "note": "已核对本分店小红书账号，主页明确列出第一百货C馆四楼地址；2026年1月报道也收录该店。账号同时提及静安大悦城分店，未混用其他分店的位置与货品。"
+    },
+    {
+      "name": "春日动漫中古店",
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "春日动漫周边（中古）",
+          "handle": "550725626",
+          "url": "https://www.xiaohongshu.com/user/profile/5c62e10800000000120269f3",
+          "scope": "store"
+        }
+      ],
+      "addressEvidence": [
+        {
+          "label": "春日门店本人·当前第一百货地址简介",
+          "url": "https://www.xiaohongshu.com/user/profile/5c62e10800000000120269f3"
+        },
+        {
+          "label": "春日门店号·博士招募周边上新",
+          "url": "https://www.xiaohongshu.com/explore/6aabaa37000000002900d5b5",
+          "dateLabel": "09-17（页面未显示年份，2026-10-18读取）"
+        }
+      ],
+      "note": "已核对门店账号，当前简介列第一百货C栋六楼及线下经营；另读取09-17上新帖。置顶旧闭店帖指百米店，不是第一百货店，未把旧帖编辑时间当作新公告日期。"
+    },
+    {
+      "name": "面包谷谷",
+      "accounts": [
+        {
+          "platform": "douyin",
+          "name": "面包谷谷（大脸猫版",
+          "handle": "KamiChaika",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAKH7gNtMtBSr8IotvQjs3Xe2x9DgqnMf_BAWu2Uhx6Zg",
+          "scope": "store"
+        }
+      ],
+      "addressEvidence": [
+        {
+          "label": "面包谷谷抖音认证店铺号·当前地址与经营简介",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAKH7gNtMtBSr8IotvQjs3Xe2x9DgqnMf_BAWu2Uhx6Zg"
+        },
+        {
+          "label": "面包谷谷本人·超时空辉夜姬周边作品",
+          "url": "https://www.douyin.com/video/7600395171616515173",
+          "date": "2026-01-28"
+        }
+      ],
+      "note": "已核对抖音认证店铺账号，主页明确上海第一百货C馆六楼；账号展示2026年作品及多条写明本店地址的周边上新内容。面包店主题是概念风格，实际经营谷子；具体IP及库存以当日门店为准。"
+    },
+    {
+      "name": "谷的Time",
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "谷的time 一百店",
+          "handle": "5466814819",
+          "url": "https://www.xiaohongshu.com/user/profile/635a1cea00000000120257a6",
+          "scope": "store"
+        }
+      ],
+      "addressEvidence": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        },
+        {
+          "label": "谷的Time一百店本人·铺位、主营与线下经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/635a1cea00000000120257a6"
+        },
+        {
+          "label": "谷的Time一百店·舞萌新品（主页读取标题）",
+          "url": "https://www.xiaohongshu.com/explore/6ad223ec000000001b033b55",
+          "dateLabel": "帖子未取得明确日期；用户搜索显示1天前更新，2026-10-18读取"
+        }
+      ],
+      "note": "一百店本人简介明确C馆四楼10号铺、线下到店经营；主页有周边上新内容，用户搜索显示“1天前更新”。该相对时间仅按原文保留，不换算发帖日期。"
+    },
+    {
+      "name": "奶惜 nicegoods",
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "奶惜 nice goods",
+          "handle": "5996182392",
+          "url": "https://www.xiaohongshu.com/user/profile/65378f040000000004009d05",
+          "scope": "store"
+        }
+      ],
+      "addressEvidence": [
+        {
+          "label": "人民网·金台资讯（新浪转载）·第一百货商业中心实景介绍",
+          "url": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html",
+          "date": "2026-01-20"
+        },
+        {
+          "label": "奶惜本人·当前C馆四楼地址简介",
+          "url": "https://www.xiaohongshu.com/user/profile/65378f040000000004009d05"
+        },
+        {
+          "label": "奶惜本人·世界之外一番赏来啦",
+          "url": "https://www.xiaohongshu.com/explore/69732a9c000000000c03545e",
+          "dateLabel": "01-23（页面未显示年份，2026-10-18读取）"
+        }
+      ],
+      "note": "门店本人简介列明第一百货C馆四楼地址；已读取到店选购与一番赏上新帖，账号与本店对应。具体货品以门店当日为准。"
+    },
+    {
+      "name": "雪鱼町",
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "雪鱼工作室",
+          "handle": "49321522910",
+          "url": "https://www.xiaohongshu.com/user/profile/667bb78a000000001c0005a1",
+          "scope": "brand"
+        }
+      ],
+      "addressEvidence": [
+        {
+          "label": "第一百货商业中心官方·C馆新店与慢闪公告",
+          "url": "https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3",
+          "dateLabel": "编辑于10-08（页面未显示年份，2026-10-18读取）"
+        },
+        {
+          "label": "雪鱼工作室本人·当前C馆四层地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/667bb78a000000001c0005a1"
+        }
+      ],
+      "note": "商场官方新店公告列C馆L4；雪鱼工作室本人简介亦列第一百货C馆四层，主页有动漫／游戏周边上新。旧大悦城搬迁或闭店内容不适用于现C馆店。"
+    },
+    {
+      "name": "六柴谷屋（第一百货店）",
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "六柴谷屋上海第一百货c馆6楼",
+          "handle": "xxs0331",
+          "url": "https://www.xiaohongshu.com/user/profile/618d2992000000001000ec47",
+          "scope": "store"
+        }
+      ],
+      "addressEvidence": [
+        {
+          "label": "六柴谷屋本人·当前上海第一百货C馆6楼主页",
+          "url": "https://www.xiaohongshu.com/user/profile/618d2992000000001000ec47"
+        },
+        {
+          "label": "六柴谷屋本人·上海店地址",
+          "url": "https://www.xiaohongshu.com/explore/69ea11e9000000001f006335",
+          "dateLabel": "04-23（页面未显示年份，2026-10-18读取）"
+        }
+      ],
+      "note": "门店本人主页名明确上海第一百货C馆6楼，已读主页经营内容含周边上新及上海店地址帖；帖子仅显示月日，不补造年份。"
+    },
+    {
+      "name": "铃夏学园（上海店）",
+      "accounts": [
+        {
+          "platform": "douyin",
+          "name": "铃夏学园",
+          "handle": "75225236295",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAMquuwI9GwVygSK8mUA9kZ7jYvm9SjaXyzppIOQFDChrV8sdVmlmIPgkQthk7DJS7",
+          "scope": "brand"
+        }
+      ],
+      "addressEvidence": [
+        {
+          "label": "铃夏学园本人·上海与武汉分店地址简介",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAMquuwI9GwVygSK8mUA9kZ7jYvm9SjaXyzppIOQFDChrV8sdVmlmIPgkQthk7DJS7"
+        },
+        {
+          "label": "铃夏学园本人·新店开业与新地址指引",
+          "url": "https://www.douyin.com/video/7589996999739526457",
+          "date": "2025-12-31"
+        }
+      ],
+      "note": "品牌本人当前简介列上海第一百货C馆六楼，并有2025年12月新店开业指引。该账号同时服务武汉店，武汉经营内容不作为上海现货依据；旧TPY地址不再用于本店。"
+    },
+    {
+      "name": "蔷薇石英",
+      "accounts": [
+        {
+          "platform": "douyin",
+          "name": "蔷薇石英RoseQuartz",
+          "handle": "29278068705",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAA191NHHtR3g0vVytffbXFFIf93DilXZSABRm-P3-Qa1MsnAy3lhczJoO2j4BRWXJN",
+          "scope": "brand"
+        }
+      ],
+      "addressEvidence": [
+        {
+          "label": "新民晚报张钰芸·上观新闻（C馆4至6楼引进店铺）",
+          "url": "https://www.shobserver.com/wx/detail.do?id=904356",
+          "date": "2025-05-03"
+        },
+        {
+          "label": "蔷薇石英本人·C馆门店简介与上新作品",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAA191NHHtR3g0vVytffbXFFIf93DilXZSABRm-P3-Qa1MsnAy3lhczJoO2j4BRWXJN"
+        },
+        {
+          "label": "蔷薇石英本人·2026年1月店内活动（已结束，仅作经营依据）",
+          "url": "https://www.douyin.com/note/7592064894402283688",
+          "dateLabel": "正文活动从2026-01-07开启；未取得发帖日期"
+        }
+      ],
+      "note": "同人社团本人主页明确门店位于第一百货C馆，有本店上新及明确写出2026年的到店活动内容；未取得单店楼层，不猜填。往期活动不代表当前仍可领取。"
+    }
+  ],
+  "reused": {
+    "names": [
+      "多摩万事屋（第一百货店）",
+      "春日动漫中古店",
+      "面包谷谷"
+    ],
+    "checkedAt": "2026-10-18",
+    "ledger": "../first-department-c-20261018/accounts.json"
+  },
+  "candidates": [
+    {
+      "name": "次元站台",
+      "handle": "ciyuanzhantai",
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAao2NzevBvK00jY4u1JKTrPdevuUVDb_6IEECCLIMPvn3M65ocmNbdct7ds7b_7U6",
+      "result": "简介有关联，未核实有效期内本店经营日期，不接入accounts"
+    },
+    {
+      "name": "囍模屋",
+      "handle": "81070869944",
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAiI5QfEa9Jo9uDoooLNkadjVmLqPvJTIZ6SH2Aai9ZTcsr8nCtwCacfff1FF2jgsz",
+      "result": "简介C馆六楼，作品日期未核实，不接入accounts"
+    },
+    {
+      "name": "绵花猫谷屋",
+      "handle": "MHMGW01",
+      "url": "https://www.xiaohongshu.com/user/profile/5c2b56b6000000000501d651",
+      "evidence": "https://www.xiaohongshu.com/explore/68781da50000000023005432",
+      "date": "2025-07-16",
+      "result": "本人现址华盛街地下二层DW-38；棉／绵关系未确认，不借用为C6营业依据"
+    },
+    {
+      "name": "欧缘谷社严选店",
+      "handle": "211992714",
+      "url": "https://www.douyin.com/user/MS4wLjABAAAALiubVinYptLnRwyfVZcd8QsbJhzYkmRTqkgkaUFIDhU",
+      "result": "当前世贸广场L2，旧C馆帖不作当前地址证明，C馆关联不明暂不接入"
+    },
+    {
+      "name": "谷力全开",
+      "handle": "82429591376",
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAn0KtLk4JJrIvB7f_zu_rO85cP_h7uOOx4BsrhYeZy0lDiZigPBbaMBgzb4_-RbGQ",
+      "result": "用户结果简介列新世界城和五角场，排除C馆；未修改其他地点"
+    },
+    {
+      "name": "次元无极上海第一百货店",
+      "handle": "24155792713",
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAEJVty8g5sWAL9wdRD4UFGGAeOKr8VngdZCWRVHOiKDF9lccztg3YSdfZoE7kLmDx",
+      "result": "实际打开主页，无简介、0作品，仅同名不足确认"
+    },
+    {
+      "name": "Koi Tune",
+      "handle": "79198829895",
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAi748CwHJzUvMuDsjWVWFPNbB9Y9DsxK6avkl4aTGemwC3iUKwEQe44lUmK7814_K",
+      "result": "用户结果认证品牌候选未明确本分店，未打开；杭州店排除"
+    },
+    {
+      "name": "CREAM CAFE",
+      "handle": "38925631682",
+      "url": "https://www.douyin.com/user/MS4wLjABAAAA5jtp7ZXX3vRa3SrUn1Ax5_GhqoE8QjwGKgWw9-6NGiA",
+      "result": "用户结果同名无地址，未打开，关联未确认"
+    },
+    {
+      "name": "琉璃星",
+      "handle": "40256243199",
+      "url": null,
+      "result": "用户结果仅动漫周边品牌简介，未关联C馆，不确认"
+    }
+  ],
+  "statistics": {
+    "open": 14,
+    "pending": 16,
+    "hiddenClosed": 1,
+    "visibleAccountShops": 9,
+    "visibleAccountLinks": 9
+  }
+}

@@ -1,0 +1,15 @@
+- heading "上新|命运石之门" [level=1]
+- text: UA日文版 命运石之门 补充包
+- link "#命运石之门":
+  - /url: /search_result?keyword=%25E5%2591%25BD%25E8%25BF%2590%25E7%259F%25B3%25E4%25B9%258B%25E9%2597%25A8&type=54&source=web_note_detail_r10
+- text: 🔥地址：广东省广州市越秀区动漫星城东区负二楼夹层奇想漫玩
+- generic: 猜你想搜
+- generic: 命运石之门补充包
+- generic: 2天前 广东
+- paragraph: 这是一片荒地点击评论
+- paragraph
+- generic: 说点什么...
+- generic: 收藏
+- generic: 评论
+- button "发送" [disabled]
+- button "取消"

@@ -1,0 +1,59 @@
+{
+  "placeId": "shanghai-shop-008",
+  "reviewedAt": "2026-10-19",
+  "commands": [
+    {
+      "cwd": "rank",
+      "command": "npm run validate:data",
+      "result": "通过，29地点、32条更新"
+    },
+    {
+      "cwd": "rank",
+      "command": "npm test",
+      "result": "50通过，0失败"
+    },
+    {
+      "cwd": "rank",
+      "command": "npm run build",
+      "result": "vue-tsc及Vite构建通过"
+    }
+  ],
+  "browser": {
+    "desktop": {
+      "width": 1440,
+      "height": 1000,
+      "horizontalOverflow": false,
+      "screenshot": "desktop-1440.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "horizontalOverflow": false,
+      "screenshot": "mobile-390.png"
+    },
+    "regularConfirmed": 12,
+    "limitedConfirmed": 7,
+    "regularPending": 14,
+    "limitedPending": 0,
+    "initialFolded": [
+      false
+    ],
+    "afterExpand": true,
+    "pendingSourceLinks": 29,
+    "confirmedSourceLists": 0,
+    "accountLinks": 7,
+    "endedVisible": 0,
+    "rows": 33,
+    "limitedPeriodsHaveFullYears": true,
+    "search": {
+      "query": "樱漫",
+      "results": 0,
+      "reason": "现有搜索仅索引营业确认项，本次不改搜索规则；待核实通过展开查看"
+    },
+    "viewportReset": true,
+    "reload": "触发外部百度APP Referer白名单错误弹窗，随后控制超时；未确认刷新后DOM",
+    "mapService": "外部百度ak Referer配置异常，未改配置或宣称验收通过"
+  },
+  "scope": "日期解释、既有候选与过期状态复核；完整发现仍为阶段性",
+  "publication": "本地完成，未发布、未推送"
+}

@@ -1,0 +1,53 @@
+- heading "P3R系列余量商品⚡线下开售！🛍️" [level=1]
+- text: 💎P3R系列余量商品今日已登陆ComeFor南京东路店！ 💙【徽章盲盒线稿款】现货也同步在ComeFor南京东路店、五角场店与广州动漫星城店开售！ 🎁满额礼赠活动同步进行中~ 🛒快来ComeFor线下店铺选购吧！ 🗒P3R系列商品&满赠详细内容，可查看
+- link "@ComeFor":
+  - /url: /user/profile/5f3f8f06000000000101c771
+- text: 往期发布！ 🏠【门店地址】 ►ComeFor上海南京东路店-上海市黄浦区南京东路340号百联ZX创趣场4F ►ComeFor上海五角场店-上海市杨浦区四平路2500号百联ZX造趣场B1（近下沉式广场入口） ►ComeFor广州店-广州市越秀区吉祥路1号广州动漫星城广场东区负二层E2022-2023铺
+- link "#ComeFor":
+  - /url: /search_result?keyword=ComeFor&type=54&source=web_note_detail_r10
+- link "#ComeFor P3R Café Stand":
+  - /url: /search_result?keyword=ComeFor%2520P3R%2520Caf%25C3%25A9%2520Stand&type=54&source=web_note_detail_r10
+- link "#p3r":
+  - /url: /search_result?keyword=p3r&type=54&source=web_note_detail_r10
+- link "#p30th":
+  - /url: /search_result?keyword=p30th&type=54&source=web_note_detail_r10
+- link "#女神异闻录3 Reload":
+  - /url: /search_result?keyword=%25E5%25A5%25B3%25E7%25A5%259E%25E5%25BC%2582%25E9%2597%25BB%25E5%25BD%25953%2520Reload&type=54&source=web_note_detail_r10
+- link "#SEGA":
+  - /url: /search_result?keyword=SEGA&type=54&source=web_note_detail_r10
+- link "#ATLUS":
+  - /url: /search_result?keyword=ATLUS&type=54&source=web_note_detail_r10
+- generic: 04-18
+- generic: 共 3 条评论
+- link:
+  - /url: /user/profile/625f6aaa0000000010007b5d?channel_type=web_search_result_notes
+- link "O...":
+  - /url: /user/profile/625f6aaa0000000010007b5d?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 帆布包线上还能加不
+- generic: 04-18广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/63e7973a000000002601067c?channel_type=web_search_result_notes
+- link "iin":
+  - /url: /user/profile/63e7973a000000002601067c?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 帆布包还有吗
+- generic: 04-18上海
+- generic: "1"
+- generic: 回复
+- link:
+  - /url: /user/profile/5c6d4f60000000001201ce43?channel_type=web_search_result_notes
+- link "摸不着鱼":
+  - /url: /user/profile/5c6d4f60000000001201ce43?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 一天天就这样吃饭赶不上热乎的
+- generic: 10-01上海
+- generic: 赞
+- generic: 回复
+- generic: "- THE END -"
+- paragraph
+- generic: 说点什么...
+- generic: "89"
+- generic: "14"
+- generic: "3"
+- button "发送" [disabled]
+- button "取消"

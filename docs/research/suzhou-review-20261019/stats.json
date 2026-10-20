@@ -1,0 +1,110 @@
+{
+  "suzhou-shop-001": {
+    "before": {
+      "total": 0,
+      "open": 0,
+      "pending": 0,
+      "closed": 0
+    },
+    "after": {
+      "total": 5,
+      "regularConfirmed": 4,
+      "limitedConfirmed": 0,
+      "regularPending": 0,
+      "limitedPending": 0,
+      "hidden": 1,
+      "displayed": 4,
+      "accountShops": 4,
+      "accountEntries": 4
+    },
+    "added": [
+      "FOT LIFE",
+      "OuO鸥店",
+      "独角星MiNi",
+      "蛋屋 GACHAROOM（B馆）",
+      "玩聚猫 PURRJOY"
+    ],
+    "changedToOpen": [],
+    "newlyHidden": []
+  },
+  "suzhou-shop-002": {
+    "before": {
+      "total": 23,
+      "open": 6,
+      "pending": 16,
+      "closed": 1
+    },
+    "after": {
+      "total": 28,
+      "regularConfirmed": 18,
+      "limitedConfirmed": 0,
+      "regularPending": 6,
+      "limitedPending": 0,
+      "hidden": 4,
+      "displayed": 24,
+      "accountShops": 16,
+      "accountEntries": 16
+    },
+    "added": [
+      "高达基地",
+      "万代拼装模型店",
+      "栗汀",
+      "追星馆",
+      "森罗万象 GOODSFUN",
+      "Hall One"
+    ],
+    "changedToOpen": [
+      "次元贩售",
+      "卡游",
+      "模玩熊",
+      "煰物社",
+      "扭扭城",
+      "多番鱼",
+      "AKIBA",
+      "次元过家家",
+      "ONE TWO GOODS",
+      "三月兽 CAFE"
+    ],
+    "newlyHidden": [
+      "COMIPLUS",
+      "捣谷社",
+      "萌谷子快闪"
+    ]
+  },
+  "suzhou-shop-003": {
+    "before": {
+      "total": 18,
+      "open": 8,
+      "pending": 10,
+      "closed": 0
+    },
+    "after": {
+      "total": 24,
+      "regularConfirmed": 14,
+      "limitedConfirmed": 0,
+      "regularPending": 7,
+      "limitedPending": 0,
+      "hidden": 3,
+      "displayed": 21,
+      "accountShops": 13,
+      "accountEntries": 13
+    },
+    "added": [
+      "FOT LIFE",
+      "幽默猫",
+      "MAGICWOW",
+      "煰物社 LIKEGOODS",
+      "萌祺 GOODS",
+      "三月兽 CAFE（金地旧店）"
+    ],
+    "changedToOpen": [
+      "萌谷子",
+      "图益拼图",
+      "TOP TOY",
+      "谷东"
+    ],
+    "newlyHidden": [
+      "耀卡盒子"
+    ]
+  }
+}

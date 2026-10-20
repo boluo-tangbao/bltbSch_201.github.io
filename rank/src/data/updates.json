@@ -1,5 +1,177 @@
 [
   {
+    "id": "guangzhou-fashion-tianhe-review-20261019",
+    "date": "2026-10-19",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "guangzhou-shop-004"
+    ],
+    "note": "按省年日期、本分店证据与限时新规则复核时尚天河：32条常规确认、5条限时确认、9条折叠线索，5条闭店／已公布关闭记录隐藏。补齐分店经营、易乐谷铺位和暴蒙／捣谷社旧名，分开当前咖啡主题、常规零售与促销；2022网图仅归档，29项作者素材保留。按用户补充要求，原网页已记录内容只核对对应，不再重搜；后续新增谷子快跑、卡游、TOP TOY、追星馆、泽山谷町、谷惑崽、魔渊、甜物嗒嗒、JoJoFun及弹了个猪。部分原帖、咖啡主体和快闪档期仍有缺口，按阶段性结果归档。"
+  },
+  {
+    "id": "guangzhou-anime-star-review-20261019",
+    "date": "2026-10-19",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "guangzhou-shop-002",
+      "guangzhou-shop-003"
+    ],
+    "note": "按新日期与本分店证据规则复核动漫星城东西两区：现为43条常规确认、2条限时确认、8条折叠线索，补入万代魂、Nullset、谷星漫游、甜物嗒嗒、元理核心、潮玩谷、谷子快跑、TOYS STAR及新樂屋；纠正店名与夹层地址，分开促销、当期主题与异店闭店。原作者评级、排序、到访和素材保留，仅纠正两处图注。浏览器重试后补读本人经营与用户结果；其他主体／馆区缺口仍按阶段性结果归档。"
+  },
+  {
+    "id": "suzhou-date-evidence-review-20261019",
+    "date": "2026-10-19",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "suzhou-shop-001",
+      "suzhou-shop-002",
+      "suzhou-shop-003"
+    ],
+    "note": "按2025—2026窗口、省年日期及本分店证据复核苏州三处店单，补齐分店经营号、官网确认与别名，新增森罗万象、Hall One等；隐藏明确闭店及到期快闪，暴蒙2024旧资料仅归档。纠正相城实拍“玩聚猫”图注，复用飞社长与恰谷实拍补强依据。保留作者评级、排序、到访和原素材；尚有馆区、主体及账号缺口，按阶段性结果记录。"
+  },
+  {
+    "id": "three-malls-date-evidence-review-20261019",
+    "date": "2026-10-19",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-001",
+      "shanghai-shop-003",
+      "shanghai-shop-004"
+    ],
+    "note": "按省年日期及本商圈证据新规则复核三处：新世界城漫魂核对品牌本人常驻回复后确认营业；C馆补全FenzGoods档期及谷回闭店年份，囍模屋/次元站台2024旧帖仍不作当前依据；华盛ANIKIGOODS按暂定截止日单列限时，UGOODS本年导览线索收进折叠。作者评价、到访与图集保留。"
+  },
+  {
+    "id": "jingan-joy-city-date-review-20261019",
+    "date": "2026-10-19",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-008"
+    ],
+    "note": "按平台省年日期规则重审静安大悦城：补全当年发表日期及本期档期，3条昨日期满记录转为已结束隐藏；复用本商场近年攻略与品牌分店关联，新增8条有效待核线索。现为12家常规确认、7条限时确认、14条常规待核、5条结束归档，保留原评价与图集。"
+  },
+  {
+    "id": "jingan-joy-city-directory-20261018",
+    "date": "2026-10-18",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-008"
+    ],
+    "note": "静安大悦城新增阶段性店单：12家常规确认、8条限时确认；6家常规与2条限时线索独立折叠，2期已结束快闪隐藏归档。核对7个经营账号，更新广博、JOYCODE、FUN MAGNET现址及如鸢延期，保留原评价、到访和12项图集。"
+  },
+  {
+    "id": "limited-shop-sections-20261018",
+    "date": "2026-10-18",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-001",
+      "shanghai-shop-003"
+    ],
+    "note": "谷店一览新增独立限时谷店／快闪栏及开放期／主题期字段；第一百货整理为12家常规营业＋2条限时，新世界城为9家常规营业＋3条限时。各栏未确认线索独立折叠，已结束主题继续隐藏；沿用既有来源与核对日期。"
+  },
+  {
+    "id": "huasheng-directory-20261018",
+    "date": "2026-10-18",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-004"
+    ],
+    "note": "华盛小亭接入阶段性谷店一览：19家确认营业、3家有效线索折叠，保留19个已核对门店账号与原始依据；记录香橙社旧名、鱼小铺现址及ANIKIGOODS暂定营业期限。原17项图集、作者评级和到访日期不变。"
+  },
+  {
+    "id": "new-world-cross-platform-rerun-20261018",
+    "date": "2026-10-18",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-003"
+    ],
+    "note": "新世界城按跨平台发现规则补漏：新增谷力全开、星河动漫、八楼無限萌界及三期有明确档期的IPSTAR主题店；补齐三丽鸥门店经营号。当前12家确认营业、7家折叠线索、6个已核对账号入口；闭店和旧主题继续隐藏，原12项图集不变。"
+  },
+  {
+    "id": "first-department-cross-platform-rerun-20261018",
+    "date": "2026-10-18",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-001"
+    ],
+    "note": "第一百货C馆按跨平台发现规则复核：默认14家确认营业、16家线索折叠，9家接入已核对账号。补入官方新店、六柴、铃夏和蔷薇石英，奶惜及谷的Time移入营业列表；保留来源和限时档期，谷回旧店继续隐藏，原21项图集不变。"
+  },
+  {
+    "id": "first-department-bread-correction-20261018",
+    "date": "2026-10-18",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-001"
+    ],
+    "note": "根据作者反馈补漏面包谷谷：核对抖音认证店铺号KamiChaika、第一百货C馆六楼地址及2026年作品，补入默认营业列表，并增加面包谷别名。"
+  },
+  {
+    "id": "first-department-c-directory-20261018",
+    "date": "2026-10-18",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-001"
+    ],
+    "note": "第一百货C馆接入谷店一览：3家确认营业、14家有效线索折叠展示；核对多摩与春日门店账号、三丽鸥餐厅本店主题公告，谷回一百店按本人闭店公告隐藏。沿用现有21项图集与来源，补充C馆搜索别名。"
+  },
+  {
+    "id": "new-world-recent-evidence-20261018",
+    "date": "2026-10-18",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-003"
+    ],
+    "note": "新世界城按2025—2026年资料复核：补入卡普空、SNK门店号及矿也品牌号，核对三丽鸥官网店单，新铛集合并更名为新漫界；隐藏已公布闭店的谷里谷气和已结束主题，冲突／过期资料归档。图集移出4张2024年网图，补入1张2025年报道三丽鸥门店图。"
+  },
+  {
+    "id": "new-world-directory-trial-20261017",
+    "date": "2026-10-17",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-003"
+    ],
+    "note": "新世界城试行完整商圈流程：补充16条谷店与历史活动记录，区分确认营业、待核实及已结束主题店；保留原图集并增加3张标明出处与年代的实景网图。"
+  },
+  {
+    "id": "shanghai-web-gallery-20261017",
+    "date": "2026-10-17",
+    "type": "edited",
+    "category": "gallery",
+    "placeIds": [
+      "shanghai-shop-001",
+      "shanghai-shop-002",
+      "shanghai-shop-003",
+      "shanghai-shop-004",
+      "shanghai-shop-005",
+      "shanghai-shop-006",
+      "shanghai-shop-007",
+      "shanghai-shop-008",
+      "shanghai-shop-009",
+      "shanghai-shop-010",
+      "shanghai-shop-011",
+      "shanghai-shop-012",
+      "shanghai-shop-013",
+      "shanghai-shop-014",
+      "shanghai-shop-015",
+      "shanghai-shop-018",
+      "shanghai-shop-021"
+    ],
+    "note": "上海17处商圈补充26张网图，保留原始图文链接、发布者与实际来源日期；区分历史快闪、开业场景和页面未标日期的官网图。原有实拍、评级、排序和店单营业分类保持不变。"
+  },
+  {
     "id": "shanghai-band-instrument-shops-20261010",
     "date": "2026-10-10",
     "type": "added",

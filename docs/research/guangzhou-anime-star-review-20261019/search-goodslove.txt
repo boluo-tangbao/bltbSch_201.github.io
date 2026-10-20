@@ -1,0 +1,222 @@
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- generic: 筛选
+- link "GOODSLOVE 3天前更新 小红书号：27247595607 文创潮玩 粉丝・24.3万 笔记・1548 关注":
+  - /url: /user/profile/63ef802e000000000f0124b7
+  - text: GOODSLOVE
+  - generic: 3天前更新
+  - generic: 小红书号：27247595607
+  - generic: 文创潮玩
+  - generic: 粉丝・24.3万
+  - generic: 笔记・1548
+  - button "关注":
+    - generic: 关注
+- button "综合"
+- button "厦门"
+- button "南宁"
+- button "长沙"
+- button "福州"
+- button "昆明"
+- button "深圳"
+- button "青岛"
+- button "西安"
+- button "重庆"
+- button "武汉"
+- button "上海门店"
+- button "沈阳"
+- button "成都"
+- button "郑州店"
+- button "天津店"
+- link:
+  - /url: /search_result/6aca13e80000000012039086
+- link "阴阳师×GOODSLOVE·上海快闪主题街区情报":
+  - /url: /search_result/6aca13e80000000012039086
+- link "阴阳师 10-10":
+  - /url: /user/profile/5fc1d11c000000000101d232?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 阴阳师
+  - generic: 10-10
+- generic: "1185"
+- link:
+  - /url: /search_result/6a8c3859000000003400db6e
+- link "这对吗？goodslove已经连关15家门店！":
+  - /url: /search_result/6a8c3859000000003400db6e
+- link "雷报-周六 09-03":
+  - /url: /user/profile/647a0567000000001001c760?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 雷报-周六
+  - generic: 09-03
+- generic: "372"
+- link:
+  - /url: /search_result/6a97da23000000001001c669
+- link "就是KTV的二次元版本":
+  - /url: /search_result/6a97da23000000001001c669
+- link "在逃榛子🌰 09-02":
+  - /url: /user/profile/583702bb50c4b451430a5696?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 在逃榛子🌰
+  - generic: 09-02
+- generic: "42"
+- link:
+  - /url: /search_result/6a8c43f400000000380018b6
+- link "怎么静安大悦城谷子爱闭店了":
+  - /url: /search_result/6a8c43f400000000380018b6
+- link "momo 08-24":
+  - /url: /user/profile/62b03321000000001501908d?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: momo
+  - generic: 08-24
+- generic: "126"
+- link:
+  - /url: /search_result/69f8907b0000000035039b72
+- link "已严肃测评谷乐屋KTV":
+  - /url: /search_result/69f8907b0000000035039b72
+- link "乔不高 05-04":
+  - /url: /user/profile/5f452c6800000000010050b6?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 乔不高
+  - generic: 05-04
+- generic: "79"
+- link:
+  - /url: /search_result/6a92525b000000001e017037
+- link "GOODSLOVE上海静安大悦城店，再见":
+  - /url: /search_result/6a92525b000000001e017037
+- link "Sujidama 08-29":
+  - /url: /user/profile/667eb3fb00000000070045ba?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: Sujidama
+  - generic: 08-29
+- generic: "64"
+- generic: 大家都在搜
+- generic: goodslove线下门店
+- generic: goodslove店铺分布
+- generic: 时光代理人goodslove
+- generic: 阴阳师goodslove
+- link:
+  - /url: /search_result/6a9cdd37000000002902ea2a
+- link "上海五角场goodslove路线":
+  - /url: /search_result/6a9cdd37000000002902ea2a
+- link "我要吃冰激凌(停氪版) 09-15":
+  - /url: /user/profile/5f9d7912000000000100be9a?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 我要吃冰激凌(停氪版)
+  - generic: 09-15
+- generic: "862"
+- link:
+  - /url: /search_result/6ac764db000000001a0295f6
+- link "谷子放生，五角场goodslove":
+  - /url: /search_result/6ac764db000000001a0295f6
+- link "momo 10-08":
+  - /url: /user/profile/603fbf2d000000000101c245?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: momo
+  - generic: 10-08
+- generic: "5"
+- link:
+  - /url: /search_result/6ad61cfd00000000280093aa
+- link "个人评价阴阳师goodslove联动饮品":
+  - /url: /search_result/6ad61cfd00000000280093aa
+- link "神秘饭团男 8分钟前":
+  - /url: /user/profile/61e2b4fb000000001000b9d4?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 神秘饭团男
+  - generic: 8分钟前
+- generic: "1"
+- link:
+  - /url: /search_result/6ad3549f0000000014001530
+- link "什么叫goodslove线下店第一天铺货就没货":
+  - /url: /search_result/6ad3549f0000000014001530
+- link "夏夜晚风依旧 2天前":
+  - /url: /user/profile/6379ed34000000001f01ae4b?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 夏夜晚风依旧
+  - generic: 2天前
+- generic: "24"
+- link:
+  - /url: /search_result/6a2107b2000000002202ea99
+- link "我服了上海唯一一家娅的除了吧唧全无了":
+  - /url: /search_result/6a2107b2000000002202ea99
+- link "最爱娅娅了（娅娅虚质空间回来给kl克2个648） 06-04":
+  - /url: /user/profile/62e23f3c000000001e01dbfe?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 最爱娅娅了（娅娅虚质空间回来给kl克2个648）
+  - generic: 06-04
+- generic: "155"
+- link:
+  - /url: /search_result/6aba04c3000000001303ce8f
+- link "🎮阴阳师十周年快闪！五角场限定街区打卡":
+  - /url: /search_result/6aba04c3000000001303ce8f
+- link "上海城市活动雷达 09-28":
+  - /url: /user/profile/6aa534070000000013032804?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 上海城市活动雷达
+  - generic: 09-28
+- generic: "62"
+- link:
+  - /url: /search_result/6ad1960c000000000a01ebc9
+- link "ovo 3天前":
+  - /url: /user/profile/68536732000000001b021c3d?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: ovo
+  - generic: 3天前
+- generic: "10"
+- link:
+  - /url: /search_result/6aba8186000000001a02bf02
+- link "💖STORE 新品预告｜【明日方舟】💖":
+  - /url: /search_result/6aba8186000000001a02bf02
+- link "GOODSLOVE STORE 09-29":
+  - /url: /user/profile/67c662ad000000000e01295a?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: GOODSLOVE STORE
+  - generic: 09-29
+- generic: "277"
+- link:
+  - /url: /search_result/69d79fd7000000001f007ed1
+- link "主播的上海吃打折谷焚诀":
+  - /url: /search_result/69d79fd7000000001f007ed1
+- link "浪吐吐 04-09":
+  - /url: /user/profile/688a062c0000000028010079?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 浪吐吐
+  - generic: 04-09
+- generic: "80"
+- generic: 大家都在搜
+- generic: goodslove线下店
+- generic: goodslove洛克王国
+- generic: goodslove全国门店地址汇总
+- generic: goodslove旗舰店
+- link:
+  - /url: /search_result/6a49e19b00000000060312a4
+- link "为何goodslove旗舰店只开在上海T_T":
+  - /url: /search_result/6a49e19b00000000060312a4
+- link "今日天晴无风想礼 07-05":
+  - /url: /user/profile/5d233460000000001603744d?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 今日天晴无风想礼
+  - generic: 07-05
+- generic: "259"
+- link:
+  - /url: /search_result/6a6aba5500000000010337bb
+- link "十九加零 07-30":
+  - /url: /user/profile/5cf7f91500000000050195c0?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 十九加零
+  - generic: 07-30
+- generic: "238"
+- link:
+  - /url: /search_result/6a4e303a000000001101fb80
+- link "你是说在上海ktv唱歌顺便棚拍了吗":
+  - /url: /search_result/6a4e303a000000001101fb80
+- link "千叶沅沅 07-08":
+  - /url: /user/profile/5d19ae51000000001600e2cc?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 千叶沅沅
+  - generic: 07-08
+- generic: "49"
+- link:
+  - /url: /search_result/6abb9ff1000000000a024a8a
+- link "鸣潮3.6周边现货情况":
+  - /url: /search_result/6abb9ff1000000000a024a8a
+- link "云琅 09-29":
+  - /url: /user/profile/65fa9a6b000000000600d0a9?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 云琅
+  - generic: 09-29
+- generic: "21"
+- link:
+  - /url: /search_result/6ad35c5d000000001501774c
+- link "上海五角场万达：阴阳师大人，就等你了":
+  - /url: /search_result/6ad35c5d000000001501774c
+- link "碓氷 2天前":
+  - /url: /user/profile/5a8523fee8ac2b1b70a79aab?channel_type=web_search_result_notes&parent_page_channel_type=web_profile_board
+  - generic: 碓氷
+  - generic: 2天前
+- generic: "55"
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

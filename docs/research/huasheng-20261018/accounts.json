@@ -1,0 +1,1207 @@
+{
+  "placeId": "shanghai-shop-004",
+  "checkedAt": "2026-10-18",
+  "confirmedShops": [
+    {
+      "name": "700谷玩铺",
+      "floor": "负一层B1号（7号口下方第一间）",
+      "kind": "动漫／游戏周边、中古",
+      "status": "recent",
+      "note": "本人简介明确华盛街B1层B1号；主页有中古整理、上新内容。开业置顶帖未补造年份；周三定休以本人当日公告为准。",
+      "sources": [
+        {
+          "label": "700谷玩铺本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/6308a8d00000000012002ec0",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "10.18 一些中古整理—萤火虫之嫁（主页／站内已读内容）",
+          "url": "https://www.xiaohongshu.com/explore/6ad48777000000002a004633",
+          "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "700谷玩铺本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/6308a8d00000000012002ec0",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "700谷玩铺",
+          "handle": "5456884873",
+          "url": "https://www.xiaohongshu.com/user/profile/6308a8d00000000012002ec0",
+          "scope": "store"
+        }
+      ]
+    },
+    {
+      "name": "ANIKIGOODS",
+      "floor": "负一层129—130号",
+      "kind": "动漫／游戏周边、中古（生化危机、女神异闻录）",
+      "status": "recent",
+      "note": "本人简介明确华盛小亭负一层129—130号，主页持续展示上新。简介注明暂定营业至2026-12-31、后续计划待定；到期需复查，不能视作已永久闭店。",
+      "sources": [
+        {
+          "label": "ANIKIGOODS本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/5cc83f4c00000000110172c7",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "生化危机趴趴上新（主页／站内已读内容）",
+          "url": "https://www.xiaohongshu.com/explore/6ad48191000000001e034e2d",
+          "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "ANIKIGOODS本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/5cc83f4c00000000110172c7",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "ANIKIGOODS",
+          "handle": "649654187",
+          "url": "https://www.xiaohongshu.com/user/profile/5cc83f4c00000000110172c7",
+          "scope": "store"
+        }
+      ],
+      "aliases": [
+        "ANIKI GOODS"
+      ]
+    },
+    {
+      "name": "白茶织梦屋",
+      "floor": "负一层BW137号",
+      "kind": "动漫／游戏周边、手作同人、寄售周边",
+      "status": "recent",
+      "note": "本人简介明确华盛小亭B1层BW137号及手作同人、格子铺经营；已读主页上新标题。2025年新闻晨报采访可作历史品类补充，不代替本人现址。",
+      "sources": [
+        {
+          "label": "白茶织梦屋本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/60c4650800000000010040fa",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "生化危机、剑风传奇上新（主页／站内已读内容）",
+          "url": "https://www.xiaohongshu.com/explore/6ad49850000000002902fd77",
+          "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "白茶织梦屋本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/60c4650800000000010040fa",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "白茶织梦屋",
+          "handle": "2629027411",
+          "url": "https://www.xiaohongshu.com/user/profile/60c4650800000000010040fa",
+          "scope": "store"
+        }
+      ]
+    },
+    {
+      "name": "邮差喵谷",
+      "floor": "负一层BE73—75号",
+      "kind": "动漫周边、中古、寄售周边",
+      "status": "recent",
+      "note": "本人简介列BE73—75号，已读本人B1寄售公告正文及主页中古寄售上新。公告只显示编辑月日，保留原文时间，不将当时招租价格写作当前优惠。",
+      "sources": [
+        {
+          "label": "邮差喵谷本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/68a2bc520000000019014040",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "华盛小亭 B1 寄售火热招募中！欢迎邮寄！（主页／站内已读内容）",
+          "url": "https://www.xiaohongshu.com/explore/68d4f64d000000000e020d03",
+          "dateLabel": "编辑于09-12（页面未显示年份）；2026-10-18读取正文"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "邮差喵谷本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/68a2bc520000000019014040",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "邮差喵谷",
+          "handle": "42209956949",
+          "url": "https://www.xiaohongshu.com/user/profile/68a2bc520000000019014040",
+          "scope": "store"
+        }
+      ]
+    },
+    {
+      "name": "星星糖谷小屋",
+      "floor": "负一层BW126号（罗森后面第二家）",
+      "kind": "游戏周边、寄售周边（世界计划）",
+      "status": "recent",
+      "note": "本人简介明确华盛小亭B1 BW126，主页有格子余量、周边补货内容。2026年报道记述其从悦荟迁来，未把旧悦荟地址用于华盛店。",
+      "sources": [
+        {
+          "label": "星星糖谷小屋本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/674c3eba000000001d02c581",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "华盛小亭星星糖格子余量更新！（主页／站内已读内容）",
+          "url": "https://www.xiaohongshu.com/explore/6acca0b3000000000200d247",
+          "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "星星糖谷小屋本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/674c3eba000000001d02c581",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "星星糖谷小屋",
+          "handle": "63019555556",
+          "url": "https://www.xiaohongshu.com/user/profile/674c3eba000000001d02c581",
+          "scope": "store"
+        }
+      ]
+    },
+    {
+      "name": "爪爪谷社",
+      "floor": "负一层BW105号",
+      "kind": "动漫／游戏周边（偶像梦幻祭、Love Live!）",
+      "status": "recent",
+      "note": "已打开本人抖音主页及2025-08-31营业原帖，正文和简介均明确华盛小亭B1 BW105、8号口罗森内方向；排除同名宠物等账号。",
+      "sources": [
+        {
+          "label": "爪爪谷社本人·当前地址与经营简介",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAA-OOPN3KS5DFZKIhMeqIA_3lYIPj9Em7hyvFAKMGDh86c8ydUJcwijhPIe_NiCUGY",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "华盛小亭B1 BW105营业帖",
+          "url": "https://www.douyin.com/note/7544667328983256380",
+          "date": "2025-08-31"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "爪爪谷社本人·当前地址与经营简介",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAA-OOPN3KS5DFZKIhMeqIA_3lYIPj9Em7hyvFAKMGDh86c8ydUJcwijhPIe_NiCUGY",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "douyin",
+          "name": "爪爪谷社",
+          "handle": "zhuazhuagushe",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAA-OOPN3KS5DFZKIhMeqIA_3lYIPj9Em7hyvFAKMGDh86c8ydUJcwijhPIe_NiCUGY",
+          "scope": "store"
+        }
+      ]
+    },
+    {
+      "name": "胖FuFu杂货铺",
+      "floor": "负一层A63-1号（近6号口）",
+      "kind": "毛绒、挂件（Chiikawa、轻松熊、角落生物）",
+      "status": "recent",
+      "note": "本人简介及2026-08-07原帖明确上海华盛街A63-1、地下一层；原帖列Chiikawa、轻松熊、角落生物。苏州筹店内容不作上海分店依据。",
+      "sources": [
+        {
+          "label": "胖FuFu杂货铺本人·当前地址与经营简介",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAdeDg6fWOQVWfnZKPxcdo92VKA_IsfCifIQhmMnBiS14",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "胖FuFu0807上海店内情况",
+          "url": "https://www.douyin.com/note/7671274264222305266",
+          "date": "2026-08-07"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "胖FuFu杂货铺本人·当前地址与经营简介",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAdeDg6fWOQVWfnZKPxcdo92VKA_IsfCifIQhmMnBiS14",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "douyin",
+          "name": "胖FuFu杂货铺",
+          "handle": "FuFu0108_",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAdeDg6fWOQVWfnZKPxcdo92VKA_IsfCifIQhmMnBiS14",
+          "scope": "store"
+        }
+      ],
+      "aliases": [
+        "胖FUFU杂货铺"
+      ]
+    },
+    {
+      "name": "星物馆",
+      "floor": "负一层BE-56号",
+      "kind": "动漫／游戏周边",
+      "status": "recent",
+      "note": "本人用户结果明确华盛街B1 BE-56；已打开主页与2025-10-17理货作品，正文邀请到华盛小亭，未把平台AI章节概括用于扩充主营。",
+      "sources": [
+        {
+          "label": "星物馆本人·当前地址与经营简介",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAJJQyjX517JIC5mCnShs0ra40NfX11cxhDaG9jlve2zU",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "星物馆本人·华盛理货与到店指引",
+          "url": "https://www.douyin.com/video/7562206310272421170",
+          "date": "2025-10-17"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "星物馆本人·当前地址与经营简介",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAJJQyjX517JIC5mCnShs0ra40NfX11cxhDaG9jlve2zU",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "douyin",
+          "name": "星物馆",
+          "handle": "78799439439",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAJJQyjX517JIC5mCnShs0ra40NfX11cxhDaG9jlve2zU",
+          "scope": "store"
+        }
+      ]
+    },
+    {
+      "name": "香橙社-KiraGoods",
+      "floor": "负二层DW80号",
+      "kind": "音乐番周边、寄售周边（BanG Dream!）",
+      "status": "recent",
+      "note": "本人简介明确华盛小亭负二层DW80、音乐番及格子铺寄售，注明旧名Anon Tokyo；主页有标题写出2026年的经营内容。原评价中的香澄社保留为搜索别名，作者评价不改。",
+      "sources": [
+        {
+          "label": "香橙社-KiraGoods本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/666fae4a000000000700404a",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "香橙社 v26.9.27（主页／站内已读内容）",
+          "url": "https://www.xiaohongshu.com/explore/6ab8cf5c0000000018004e95",
+          "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "香橙社-KiraGoods本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/666fae4a000000000700404a",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "香橙社-KiraGoods",
+          "handle": "63071594740",
+          "url": "https://www.xiaohongshu.com/user/profile/666fae4a000000000700404a",
+          "scope": "store"
+        }
+      ],
+      "aliases": [
+        "香橙社",
+        "香澄社",
+        "Anon Tokyo",
+        "KiraGoods"
+      ]
+    },
+    {
+      "name": "葱谷八",
+      "floor": "负二层DE-23号",
+      "kind": "日谷、寄售周边（BanG Dream!、Love Live!）",
+      "status": "recent",
+      "note": "本人简介明确华盛街B2 DE-23、主营日谷且仅线下经营，主页有当日上新及寄售更新。标题月日不补造年份，作品与库存以门店当日为准。",
+      "sources": [
+        {
+          "label": "葱谷八本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/621efbe90000000021023459",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "10/18上新《Mujica》剧场版场贩（主页／站内已读内容）",
+          "url": "https://www.xiaohongshu.com/explore/6ad472c300000000290148d3",
+          "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "葱谷八本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/621efbe90000000021023459",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "葱谷八",
+          "handle": "2845665936",
+          "url": "https://www.xiaohongshu.com/user/profile/621efbe90000000021023459",
+          "scope": "store"
+        }
+      ]
+    },
+    {
+      "name": "柴柴旺旺谷",
+      "floor": "负二层DE-26号",
+      "kind": "日谷、中古、寄售周边",
+      "status": "recent",
+      "note": "本人简介明确华盛小亭（漫趣集）地下二层DE-26，主页有中古及日谷上新。2025年采访与2026年报道另行保留；周一店休不能误判为闭店。",
+      "sources": [
+        {
+          "label": "柴柴旺旺谷本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/647341030000000011000683",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "10月17日中古宣宣（主页／站内已读内容）",
+          "url": "https://www.xiaohongshu.com/explore/6ad24dc8000000001c00f088",
+          "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "柴柴旺旺谷本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/647341030000000011000683",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "柴柴旺旺谷",
+          "handle": "wujing426",
+          "url": "https://www.xiaohongshu.com/user/profile/647341030000000011000683",
+          "scope": "store"
+        }
+      ]
+    },
+    {
+      "name": "绵花猫谷屋",
+      "floor": "负二层DW-38号",
+      "kind": "动漫／游戏周边、中古",
+      "status": "recent",
+      "note": "本轮读取本人主页，简介明确华盛街地下二层DW-38及营业时间，主页可见上新内容；2025-07-16指路依据复用同日第一百货研究台账。与C馆近名棉花猫的关系未确认，不合并其他分店。",
+      "sources": [
+        {
+          "label": "绵花猫谷屋本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/5c2b56b6000000000501d651",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "绵花猫本人·店铺指路（主页／站内已读内容）",
+          "url": "https://www.xiaohongshu.com/explore/68781da50000000023005432",
+          "date": "2025-07-16"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "绵花猫谷屋本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/5c2b56b6000000000501d651",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "绵花猫谷屋",
+          "handle": "MHMGW01",
+          "url": "https://www.xiaohongshu.com/user/profile/5c2b56b6000000000501d651",
+          "scope": "store"
+        }
+      ]
+    },
+    {
+      "name": "玉见星间模玩谷铺",
+      "floor": "负二层（详见本人7／8号口指路帖）",
+      "kind": "游戏周边、通行证寄售",
+      "status": "recent",
+      "note": "已打开本人主页和2025年指路帖；正文说明华盛婚纱街出口，作者2025-10-25回复明确地下二层。主页有通行证寄售制度及游戏周边上新；周一闭店休息为定休。",
+      "sources": [
+        {
+          "label": "玉见星间模玩谷铺本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/6245ebeb0000000010004280",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "久等！迟来的店铺图片指引（主页／站内已读内容）",
+          "url": "https://www.xiaohongshu.com/explore/681c877d00000000220374d8",
+          "dateLabel": "编辑于2025-05-12；作者2025-10-25回复确认地下二层"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "玉见星间模玩谷铺本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/6245ebeb0000000010004280",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "玉见星间模玩谷铺",
+          "handle": "2190120137",
+          "url": "https://www.xiaohongshu.com/user/profile/6245ebeb0000000010004280",
+          "scope": "store"
+        }
+      ],
+      "aliases": [
+        "玉见星间"
+      ]
+    },
+    {
+      "name": "Agoodz爱谷集",
+      "floor": "负二层DE35号",
+      "kind": "动漫周边、中古、寄售周边",
+      "status": "recent",
+      "note": "本人简介列华盛街B2 DE35和二号线到店路线，主页有抽屉寄售上新及店铺指路；线上交易功能不代替线下地址确认。Agoodz与导览上的UGOODS未证实同店，不合并。",
+      "sources": [
+        {
+          "label": "Agoodz爱谷集-线上下同步交易站本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/6807d350000000000a03d3d8",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "黑执事｜抽屉寄售上新———（主页／站内已读内容）",
+          "url": "https://www.xiaohongshu.com/explore/6ad493b2000000000c00e33f",
+          "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "Agoodz爱谷集-线上下同步交易站本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/6807d350000000000a03d3d8",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "Agoodz爱谷集-线上下同步交易站",
+          "handle": "26734519098",
+          "url": "https://www.xiaohongshu.com/user/profile/6807d350000000000a03d3d8",
+          "scope": "store"
+        }
+      ],
+      "aliases": [
+        "Agoodz",
+        "爱谷集"
+      ]
+    },
+    {
+      "name": "蓝门LEMON GOODS",
+      "floor": "负二层DW69、71号",
+      "kind": "动漫／游戏周边（Chiikawa、明日方舟）",
+      "status": "recent",
+      "note": "本人简介明确华盛街B2 DW69、71，主页展示周边上新。保留本人地址，不将他处蓝门或同名内容作本店依据。",
+      "sources": [
+        {
+          "label": "蓝门LEMON GOODS本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/5b075a61e8ac2b244e328af5",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "【ckw上新】一大群小八攻打蓝门（主页／站内已读内容）",
+          "url": "https://www.xiaohongshu.com/explore/6ad1cd62000000001402f52b",
+          "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "蓝门LEMON GOODS本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/5b075a61e8ac2b244e328af5",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "蓝门LEMON GOODS",
+          "handle": "490059053",
+          "url": "https://www.xiaohongshu.com/user/profile/5b075a61e8ac2b244e328af5",
+          "scope": "store"
+        }
+      ]
+    },
+    {
+      "name": "布丁喵",
+      "floor": "DW-52号",
+      "kind": "动漫／游戏周边、中古、寄售周边",
+      "status": "recent",
+      "note": "由华盛内容搜索反查本人；简介列华盛小亭DW-52和营业时间，主页有中古、格子铺上新。楼层未取得独立明确文字，不按DW编号推算。",
+      "sources": [
+        {
+          "label": "布丁喵o(^・x・^)o本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/68819a3f000000001e03baa2",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "美妙天堂中古上新（主页／站内已读内容）",
+          "url": "https://www.xiaohongshu.com/explore/6ad4a094000000001d02ee22",
+          "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "布丁喵o(^・x・^)o本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/68819a3f000000001e03baa2",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "布丁喵o(^・x・^)o",
+          "handle": "budingshigepang",
+          "url": "https://www.xiaohongshu.com/user/profile/68819a3f000000001e03baa2",
+          "scope": "store"
+        }
+      ]
+    },
+    {
+      "name": "秘宝屋",
+      "floor": "BW106号",
+      "kind": "动漫／游戏周边、寄售周边",
+      "status": "recent",
+      "note": "本人简介明确人民广场地铁站华盛小亭BW106，主页有寄售招募及上新；2025-12-24经营帖日期由实际站内结果取得。没有将普通寄售主当店铺官方账号。",
+      "sources": [
+        {
+          "label": "秘宝屋本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/61c0c57d000000001000c263",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "店铺上新·明日方舟音律通行证与吧唧（主页／站内已读内容）",
+          "url": "https://www.xiaohongshu.com/explore/694bb8bb000000001f004dc5",
+          "date": "2025-12-24"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "秘宝屋本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/61c0c57d000000001000c263",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "秘宝屋",
+          "handle": "6948710769",
+          "url": "https://www.xiaohongshu.com/user/profile/61c0c57d000000001000c263",
+          "scope": "store"
+        }
+      ]
+    },
+    {
+      "name": "树枝谷岛",
+      "floor": "BE-85号",
+      "kind": "游戏周边、中古（明日方舟、碧蓝航线）",
+      "status": "recent",
+      "note": "本人简介明确华盛街BE-85及中古仅到店翻，主页有明日方舟和碧蓝航线上新。楼层未独立核实，仅保留本人铺号。",
+      "sources": [
+        {
+          "label": "树枝谷岛本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/6681a0c0000000000d025793",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "明日方舟 通行证 上新（主页／站内已读内容）",
+          "url": "https://www.xiaohongshu.com/explore/6ad20b82000000001203f08a",
+          "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "树枝谷岛本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/6681a0c0000000000d025793",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "树枝谷岛",
+          "handle": "11686668497",
+          "url": "https://www.xiaohongshu.com/user/profile/6681a0c0000000000d025793",
+          "scope": "store"
+        }
+      ]
+    },
+    {
+      "name": "鱼小铺（华盛店）",
+      "floor": "BE083号",
+      "kind": "动漫／游戏周边",
+      "status": "recent",
+      "note": "已读搬店帖与本人现址：当前简介列华盛小亭BE083，原迪美／悦荟鱼小铺；主页有明确华盛上新。搬店帖未写新址，不能据标题推断离开华盛或闭店；不复制旧分店地址。",
+      "sources": [
+        {
+          "label": "鱼小铺online（接dg版）本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/64a24782000000001f004e0a",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        },
+        {
+          "label": "华盛小亭上新 火影忍者宇智波家族杯垫（主页／站内已读内容）",
+          "url": "https://www.xiaohongshu.com/explore/6ad43fa8000000002900acd2",
+          "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+        }
+      ],
+      "kindSources": [
+        {
+          "label": "鱼小铺online（接dg版）本人·当前地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/64a24782000000001f004e0a",
+          "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+        }
+      ],
+      "accounts": [
+        {
+          "platform": "xiaohongshu",
+          "name": "鱼小铺online（接dg版）",
+          "handle": "8936568830",
+          "url": "https://www.xiaohongshu.com/user/profile/64a24782000000001f004e0a",
+          "scope": "store"
+        }
+      ]
+    }
+  ],
+  "statistics": {
+    "confirmed": 19,
+    "confirmedAccountShops": 19,
+    "accountLinks": 19,
+    "xiaohongshu": 16,
+    "douyin": 3
+  },
+  "verification": [
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "700谷玩铺",
+      "aliases": [],
+      "discoveryUrl": "https://www.xiaohongshu.com/user/profile/6308a8d00000000012002ec0",
+      "query": "华盛街",
+      "mode": "小红书内容→经营帖作者→主页",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "xiaohongshu",
+        "name": "700谷玩铺",
+        "handle": "5456884873",
+        "url": "https://www.xiaohongshu.com/user/profile/6308a8d00000000012002ec0",
+        "scope": "store"
+      },
+      "addressEvidence": "负一层B1号（7号口下方第一间）",
+      "operatingEvidence": {
+        "label": "10.18 一些中古整理—萤火虫之嫁（主页／站内已读内容）",
+        "url": "https://www.xiaohongshu.com/explore/6ad48777000000002a004633",
+        "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+      },
+      "readingScope": "本人简介及主页／站内经营标题；未声称所有详情原帖逐篇打开",
+      "result": "确认营业",
+      "reason": "本人简介明确华盛街B1层B1号；主页有中古整理、上新内容。开业置顶帖未补造年份；周三定休以本人当日公告为准。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "ANIKIGOODS",
+      "aliases": [
+        "ANIKI GOODS"
+      ],
+      "discoveryUrl": "https://www.xiaohongshu.com/user/profile/5cc83f4c00000000110172c7",
+      "query": "上海 华盛小亭 谷店",
+      "mode": "小红书内容→经营帖作者→主页",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "xiaohongshu",
+        "name": "ANIKIGOODS",
+        "handle": "649654187",
+        "url": "https://www.xiaohongshu.com/user/profile/5cc83f4c00000000110172c7",
+        "scope": "store"
+      },
+      "addressEvidence": "负一层129—130号",
+      "operatingEvidence": {
+        "label": "生化危机趴趴上新（主页／站内已读内容）",
+        "url": "https://www.xiaohongshu.com/explore/6ad48191000000001e034e2d",
+        "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+      },
+      "readingScope": "本人简介及主页／站内经营标题；未声称所有详情原帖逐篇打开",
+      "result": "确认营业",
+      "reason": "本人简介明确华盛小亭负一层129—130号，主页持续展示上新。简介注明暂定营业至2026-12-31、后续计划待定；到期需复查，不能视作已永久闭店。",
+      "next": "2026-12-31期限后复查营业计划"
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "白茶织梦屋",
+      "aliases": [],
+      "discoveryUrl": "https://www.xiaohongshu.com/user/profile/60c4650800000000010040fa",
+      "query": "白茶织梦屋",
+      "mode": "小红书内容→本人主页",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "xiaohongshu",
+        "name": "白茶织梦屋",
+        "handle": "2629027411",
+        "url": "https://www.xiaohongshu.com/user/profile/60c4650800000000010040fa",
+        "scope": "store"
+      },
+      "addressEvidence": "负一层BW137号",
+      "operatingEvidence": {
+        "label": "生化危机、剑风传奇上新（主页／站内已读内容）",
+        "url": "https://www.xiaohongshu.com/explore/6ad49850000000002902fd77",
+        "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+      },
+      "readingScope": "本人简介及主页／站内经营标题；未声称所有详情原帖逐篇打开",
+      "result": "确认营业",
+      "reason": "本人简介明确华盛小亭B1层BW137号及手作同人、格子铺经营；已读主页上新标题。2025年新闻晨报采访可作历史品类补充，不代替本人现址。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "邮差喵谷",
+      "aliases": [],
+      "discoveryUrl": "https://www.xiaohongshu.com/user/profile/68a2bc520000000019014040",
+      "query": "华盛街",
+      "mode": "小红书内容→本人主页→B1寄售公告正文",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "xiaohongshu",
+        "name": "邮差喵谷",
+        "handle": "42209956949",
+        "url": "https://www.xiaohongshu.com/user/profile/68a2bc520000000019014040",
+        "scope": "store"
+      },
+      "addressEvidence": "负一层BE73—75号",
+      "operatingEvidence": {
+        "label": "华盛小亭 B1 寄售火热招募中！欢迎邮寄！（主页／站内已读内容）",
+        "url": "https://www.xiaohongshu.com/explore/68d4f64d000000000e020d03",
+        "dateLabel": "编辑于09-12（页面未显示年份）；2026-10-18读取正文"
+      },
+      "readingScope": "本人主页与已注明原帖正文",
+      "result": "确认营业",
+      "reason": "本人简介列BE73—75号，已读本人B1寄售公告正文及主页中古寄售上新。公告只显示编辑月日，保留原文时间，不将当时招租价格写作当前优惠。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "星星糖谷小屋",
+      "aliases": [],
+      "discoveryUrl": "https://www.xiaohongshu.com/user/profile/674c3eba000000001d02c581",
+      "query": "星星糖谷小屋",
+      "mode": "小红书内容→本人主页",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "xiaohongshu",
+        "name": "星星糖谷小屋",
+        "handle": "63019555556",
+        "url": "https://www.xiaohongshu.com/user/profile/674c3eba000000001d02c581",
+        "scope": "store"
+      },
+      "addressEvidence": "负一层BW126号（罗森后面第二家）",
+      "operatingEvidence": {
+        "label": "华盛小亭星星糖格子余量更新！（主页／站内已读内容）",
+        "url": "https://www.xiaohongshu.com/explore/6acca0b3000000000200d247",
+        "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+      },
+      "readingScope": "本人简介及主页／站内经营标题；未声称所有详情原帖逐篇打开",
+      "result": "确认营业",
+      "reason": "本人简介明确华盛小亭B1 BW126，主页有格子余量、周边补货内容。2026年报道记述其从悦荟迁来，未把旧悦荟地址用于华盛店。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "爪爪谷社",
+      "aliases": [],
+      "discoveryUrl": "https://www.douyin.com/user/MS4wLjABAAAA-OOPN3KS5DFZKIhMeqIA_3lYIPj9Em7hyvFAKMGDh86c8ydUJcwijhPIe_NiCUGY",
+      "query": "爪爪谷社",
+      "mode": "抖音用户→本人主页→2025-08-31原帖",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "douyin",
+        "name": "爪爪谷社",
+        "handle": "zhuazhuagushe",
+        "url": "https://www.douyin.com/user/MS4wLjABAAAA-OOPN3KS5DFZKIhMeqIA_3lYIPj9Em7hyvFAKMGDh86c8ydUJcwijhPIe_NiCUGY",
+        "scope": "store"
+      },
+      "addressEvidence": "负一层BW105号",
+      "operatingEvidence": {
+        "label": "华盛小亭B1 BW105营业帖",
+        "url": "https://www.douyin.com/note/7544667328983256380",
+        "date": "2025-08-31"
+      },
+      "readingScope": "本人主页与已注明原帖正文",
+      "result": "确认营业",
+      "reason": "已打开本人抖音主页及2025-08-31营业原帖，正文和简介均明确华盛小亭B1 BW105、8号口罗森内方向；排除同名宠物等账号。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "胖FuFu杂货铺",
+      "aliases": [
+        "胖FUFU杂货铺"
+      ],
+      "discoveryUrl": "https://www.douyin.com/user/MS4wLjABAAAAdeDg6fWOQVWfnZKPxcdo92VKA_IsfCifIQhmMnBiS14",
+      "query": "胖FUFU杂货铺",
+      "mode": "抖音用户→本人主页→2026-08-07原帖",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "douyin",
+        "name": "胖FuFu杂货铺",
+        "handle": "FuFu0108_",
+        "url": "https://www.douyin.com/user/MS4wLjABAAAAdeDg6fWOQVWfnZKPxcdo92VKA_IsfCifIQhmMnBiS14",
+        "scope": "store"
+      },
+      "addressEvidence": "负一层A63-1号（近6号口）",
+      "operatingEvidence": {
+        "label": "胖FuFu0807上海店内情况",
+        "url": "https://www.douyin.com/note/7671274264222305266",
+        "date": "2026-08-07"
+      },
+      "readingScope": "本人主页与已注明原帖正文",
+      "result": "确认营业",
+      "reason": "本人简介及2026-08-07原帖明确上海华盛街A63-1、地下一层；原帖列Chiikawa、轻松熊、角落生物。苏州筹店内容不作上海分店依据。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "星物馆",
+      "aliases": [],
+      "discoveryUrl": "https://www.douyin.com/user/MS4wLjABAAAAJJQyjX517JIC5mCnShs0ra40NfX11cxhDaG9jlve2zU",
+      "query": "星物馆 华盛",
+      "mode": "抖音用户→本人主页→2025-10-17作品",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "douyin",
+        "name": "星物馆",
+        "handle": "78799439439",
+        "url": "https://www.douyin.com/user/MS4wLjABAAAAJJQyjX517JIC5mCnShs0ra40NfX11cxhDaG9jlve2zU",
+        "scope": "store"
+      },
+      "addressEvidence": "负一层BE-56号",
+      "operatingEvidence": {
+        "label": "星物馆本人·华盛理货与到店指引",
+        "url": "https://www.douyin.com/video/7562206310272421170",
+        "date": "2025-10-17"
+      },
+      "readingScope": "本人主页与已注明原帖正文",
+      "result": "确认营业",
+      "reason": "本人用户结果明确华盛街B1 BE-56；已打开主页与2025-10-17理货作品，正文邀请到华盛小亭，未把平台AI章节概括用于扩充主营。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "香橙社-KiraGoods",
+      "aliases": [
+        "香橙社",
+        "香澄社",
+        "Anon Tokyo",
+        "KiraGoods"
+      ],
+      "discoveryUrl": "https://www.xiaohongshu.com/user/profile/666fae4a000000000700404a",
+      "query": "香澄社；香橙社",
+      "mode": "小红书用户→本人主页",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "xiaohongshu",
+        "name": "香橙社-KiraGoods",
+        "handle": "63071594740",
+        "url": "https://www.xiaohongshu.com/user/profile/666fae4a000000000700404a",
+        "scope": "store"
+      },
+      "addressEvidence": "负二层DW80号",
+      "operatingEvidence": {
+        "label": "香橙社 v26.9.27（主页／站内已读内容）",
+        "url": "https://www.xiaohongshu.com/explore/6ab8cf5c0000000018004e95",
+        "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+      },
+      "readingScope": "本人简介及主页／站内经营标题；未声称所有详情原帖逐篇打开",
+      "result": "确认营业",
+      "reason": "本人简介明确华盛小亭负二层DW80、音乐番及格子铺寄售，注明旧名Anon Tokyo；主页有标题写出2026年的经营内容。原评价中的香澄社保留为搜索别名，作者评价不改。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "葱谷八",
+      "aliases": [],
+      "discoveryUrl": "https://www.xiaohongshu.com/user/profile/621efbe90000000021023459",
+      "query": "上海 华盛小亭 谷店",
+      "mode": "小红书内容→本人上新作者→主页",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "xiaohongshu",
+        "name": "葱谷八",
+        "handle": "2845665936",
+        "url": "https://www.xiaohongshu.com/user/profile/621efbe90000000021023459",
+        "scope": "store"
+      },
+      "addressEvidence": "负二层DE-23号",
+      "operatingEvidence": {
+        "label": "10/18上新《Mujica》剧场版场贩（主页／站内已读内容）",
+        "url": "https://www.xiaohongshu.com/explore/6ad472c300000000290148d3",
+        "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+      },
+      "readingScope": "本人简介及主页／站内经营标题；未声称所有详情原帖逐篇打开",
+      "result": "确认营业",
+      "reason": "本人简介明确华盛街B2 DE-23、主营日谷且仅线下经营，主页有当日上新及寄售更新。标题月日不补造年份，作品与库存以门店当日为准。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "柴柴旺旺谷",
+      "aliases": [],
+      "discoveryUrl": "https://www.xiaohongshu.com/user/profile/647341030000000011000683",
+      "query": "柴柴旺旺谷",
+      "mode": "小红书内容→本人主页",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "xiaohongshu",
+        "name": "柴柴旺旺谷",
+        "handle": "wujing426",
+        "url": "https://www.xiaohongshu.com/user/profile/647341030000000011000683",
+        "scope": "store"
+      },
+      "addressEvidence": "负二层DE-26号",
+      "operatingEvidence": {
+        "label": "10月17日中古宣宣（主页／站内已读内容）",
+        "url": "https://www.xiaohongshu.com/explore/6ad24dc8000000001c00f088",
+        "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+      },
+      "readingScope": "本人简介及主页／站内经营标题；未声称所有详情原帖逐篇打开",
+      "result": "确认营业",
+      "reason": "本人简介明确华盛小亭（漫趣集）地下二层DE-26，主页有中古及日谷上新。2025年采访与2026年报道另行保留；周一店休不能误判为闭店。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "绵花猫谷屋",
+      "aliases": [],
+      "discoveryUrl": "https://www.xiaohongshu.com/user/profile/5c2b56b6000000000501d651",
+      "query": null,
+      "mode": "复用同日既有候选链接→实际打开本人主页",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "xiaohongshu",
+        "name": "绵花猫谷屋",
+        "handle": "MHMGW01",
+        "url": "https://www.xiaohongshu.com/user/profile/5c2b56b6000000000501d651",
+        "scope": "store"
+      },
+      "addressEvidence": "负二层DW-38号",
+      "operatingEvidence": {
+        "label": "绵花猫本人·店铺指路（主页／站内已读内容）",
+        "url": "https://www.xiaohongshu.com/explore/68781da50000000023005432",
+        "date": "2025-07-16"
+      },
+      "readingScope": "本轮读取主页；2025-07-16原帖沿用../first-department-c-rerun-20261018/accounts.json",
+      "result": "确认营业",
+      "reason": "本轮读取本人主页，简介明确华盛街地下二层DW-38及营业时间，主页可见上新内容；2025-07-16指路依据复用同日第一百货研究台账。与C馆近名棉花猫的关系未确认，不合并其他分店。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "玉见星间模玩谷铺",
+      "aliases": [
+        "玉见星间"
+      ],
+      "discoveryUrl": "https://www.xiaohongshu.com/user/profile/6245ebeb0000000010004280",
+      "query": "玉见星间",
+      "mode": "抖音内容／用户排除→小红书用户→本人主页→指路原帖",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "xiaohongshu",
+        "name": "玉见星间模玩谷铺",
+        "handle": "2190120137",
+        "url": "https://www.xiaohongshu.com/user/profile/6245ebeb0000000010004280",
+        "scope": "store"
+      },
+      "addressEvidence": "负二层（详见本人7／8号口指路帖）",
+      "operatingEvidence": {
+        "label": "久等！迟来的店铺图片指引（主页／站内已读内容）",
+        "url": "https://www.xiaohongshu.com/explore/681c877d00000000220374d8",
+        "dateLabel": "编辑于2025-05-12；作者2025-10-25回复确认地下二层"
+      },
+      "readingScope": "本人主页与已注明原帖正文",
+      "result": "确认营业",
+      "reason": "已打开本人主页和2025年指路帖；正文说明华盛婚纱街出口，作者2025-10-25回复明确地下二层。主页有通行证寄售制度及游戏周边上新；周一闭店休息为定休。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "Agoodz爱谷集",
+      "aliases": [
+        "Agoodz",
+        "爱谷集"
+      ],
+      "discoveryUrl": "https://www.xiaohongshu.com/user/profile/6807d350000000000a03d3d8",
+      "query": "Agoodz 华盛",
+      "mode": "小红书内容→本人主页",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "xiaohongshu",
+        "name": "Agoodz爱谷集-线上下同步交易站",
+        "handle": "26734519098",
+        "url": "https://www.xiaohongshu.com/user/profile/6807d350000000000a03d3d8",
+        "scope": "store"
+      },
+      "addressEvidence": "负二层DE35号",
+      "operatingEvidence": {
+        "label": "黑执事｜抽屉寄售上新———（主页／站内已读内容）",
+        "url": "https://www.xiaohongshu.com/explore/6ad493b2000000000c00e33f",
+        "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+      },
+      "readingScope": "本人简介及主页／站内经营标题；未声称所有详情原帖逐篇打开",
+      "result": "确认营业",
+      "reason": "本人简介列华盛街B2 DE35和二号线到店路线，主页有抽屉寄售上新及店铺指路；线上交易功能不代替线下地址确认。Agoodz与导览上的UGOODS未证实同店，不合并。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "蓝门LEMON GOODS",
+      "aliases": [],
+      "discoveryUrl": "https://www.xiaohongshu.com/user/profile/5b075a61e8ac2b244e328af5",
+      "query": "华盛街",
+      "mode": "小红书内容→本人主页",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "xiaohongshu",
+        "name": "蓝门LEMON GOODS",
+        "handle": "490059053",
+        "url": "https://www.xiaohongshu.com/user/profile/5b075a61e8ac2b244e328af5",
+        "scope": "store"
+      },
+      "addressEvidence": "负二层DW69、71号",
+      "operatingEvidence": {
+        "label": "【ckw上新】一大群小八攻打蓝门（主页／站内已读内容）",
+        "url": "https://www.xiaohongshu.com/explore/6ad1cd62000000001402f52b",
+        "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+      },
+      "readingScope": "本人简介及主页／站内经营标题；未声称所有详情原帖逐篇打开",
+      "result": "确认营业",
+      "reason": "本人简介明确华盛街B2 DW69、71，主页展示周边上新。保留本人地址，不将他处蓝门或同名内容作本店依据。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "布丁喵",
+      "aliases": [],
+      "discoveryUrl": "https://www.xiaohongshu.com/user/profile/68819a3f000000001e03baa2",
+      "query": "布丁喵 谷店；布丁喵 华盛",
+      "mode": "抖音用户排除→小红书内容→本人主页",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "xiaohongshu",
+        "name": "布丁喵o(^・x・^)o",
+        "handle": "budingshigepang",
+        "url": "https://www.xiaohongshu.com/user/profile/68819a3f000000001e03baa2",
+        "scope": "store"
+      },
+      "addressEvidence": "DW-52号",
+      "operatingEvidence": {
+        "label": "美妙天堂中古上新（主页／站内已读内容）",
+        "url": "https://www.xiaohongshu.com/explore/6ad4a094000000001d02ee22",
+        "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+      },
+      "readingScope": "本人简介及主页／站内经营标题；未声称所有详情原帖逐篇打开",
+      "result": "确认营业",
+      "reason": "由华盛内容搜索反查本人；简介列华盛小亭DW-52和营业时间，主页有中古、格子铺上新。楼层未取得独立明确文字，不按DW编号推算。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "秘宝屋",
+      "aliases": [],
+      "discoveryUrl": "https://www.xiaohongshu.com/user/profile/61c0c57d000000001000c263",
+      "query": "秘宝屋 华盛",
+      "mode": "小红书内容→本人主页",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "xiaohongshu",
+        "name": "秘宝屋",
+        "handle": "6948710769",
+        "url": "https://www.xiaohongshu.com/user/profile/61c0c57d000000001000c263",
+        "scope": "store"
+      },
+      "addressEvidence": "BW106号",
+      "operatingEvidence": {
+        "label": "店铺上新·明日方舟音律通行证与吧唧（主页／站内已读内容）",
+        "url": "https://www.xiaohongshu.com/explore/694bb8bb000000001f004dc5",
+        "date": "2025-12-24"
+      },
+      "readingScope": "本人简介及主页／站内经营标题；未声称所有详情原帖逐篇打开",
+      "result": "确认营业",
+      "reason": "本人简介明确人民广场地铁站华盛小亭BW106，主页有寄售招募及上新；2025-12-24经营帖日期由实际站内结果取得。没有将普通寄售主当店铺官方账号。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "树枝谷岛",
+      "aliases": [],
+      "discoveryUrl": "https://www.xiaohongshu.com/user/profile/6681a0c0000000000d025793",
+      "query": "华盛街",
+      "mode": "小红书内容→本人主页",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "xiaohongshu",
+        "name": "树枝谷岛",
+        "handle": "11686668497",
+        "url": "https://www.xiaohongshu.com/user/profile/6681a0c0000000000d025793",
+        "scope": "store"
+      },
+      "addressEvidence": "BE-85号",
+      "operatingEvidence": {
+        "label": "明日方舟 通行证 上新（主页／站内已读内容）",
+        "url": "https://www.xiaohongshu.com/explore/6ad20b82000000001203f08a",
+        "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+      },
+      "readingScope": "本人简介及主页／站内经营标题；未声称所有详情原帖逐篇打开",
+      "result": "确认营业",
+      "reason": "本人简介明确华盛街BE-85及中古仅到店翻，主页有明日方舟和碧蓝航线上新。楼层未独立核实，仅保留本人铺号。",
+      "next": null
+    },
+    {
+      "placeId": "shanghai-shop-004",
+      "name": "鱼小铺（华盛店）",
+      "aliases": [],
+      "discoveryUrl": "https://www.xiaohongshu.com/user/profile/64a24782000000001f004e0a",
+      "query": "华盛小亭 闭店 搬迁",
+      "mode": "小红书内容→搬店原帖→本人现址与华盛上新",
+      "checkedAt": "2026-10-18",
+      "account": {
+        "platform": "xiaohongshu",
+        "name": "鱼小铺online（接dg版）",
+        "handle": "8936568830",
+        "url": "https://www.xiaohongshu.com/user/profile/64a24782000000001f004e0a",
+        "scope": "store"
+      },
+      "addressEvidence": "BE083号",
+      "operatingEvidence": {
+        "label": "华盛小亭上新 火影忍者宇智波家族杯垫（主页／站内已读内容）",
+        "url": "https://www.xiaohongshu.com/explore/6ad43fa8000000002900acd2",
+        "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+      },
+      "readingScope": "本人简介及主页／站内经营标题；未声称所有详情原帖逐篇打开",
+      "result": "确认营业",
+      "reason": "已读搬店帖与本人现址：当前简介列华盛小亭BE083，原迪美／悦荟鱼小铺；主页有明确华盛上新。搬店帖未写新址，不能据标题推断离开华盛或闭店；不复制旧分店地址。",
+      "next": null
+    }
+  ]
+}

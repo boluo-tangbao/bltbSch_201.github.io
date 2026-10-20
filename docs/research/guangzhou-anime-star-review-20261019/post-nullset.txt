@@ -1,0 +1,126 @@
+- heading "Nullset 广州新店开业活动来袭" [level=1]
+- text: 滴滴！N社广州动漫星城店来啦 超丰富的开业活动等你来体验 ✅满 299 元免费抽奖，限量 500 抽 ✅多款热门 IP 毛绒商品低至五折 ✅梦色糕点师、纸飞机首发新品登场 ⏰时间：2026.07.28 📍地址：越秀区动漫星城东负二层 E2025-2026
+- link "#吃谷":
+  - /url: /search_result?keyword=%25E5%2590%2583%25E8%25B0%25B7&type=54&source=web_note_detail_r10
+- link "#nullset":
+  - /url: /search_result?keyword=nullset&type=54&source=web_note_detail_r10
+- link "#快乐吃谷":
+  - /url: /search_result?keyword=%25E5%25BF%25AB%25E4%25B9%2590%25E5%2590%2583%25E8%25B0%25B7&type=54&source=web_note_detail_r10
+- link "#新品上线":
+  - /url: /search_result?keyword=%25E6%2596%25B0%25E5%2593%2581%25E4%25B8%258A%25E7%25BA%25BF&type=54&source=web_note_detail_r10
+- link "#线下吃谷":
+  - /url: /search_result?keyword=%25E7%25BA%25BF%25E4%25B8%258B%25E5%2590%2583%25E8%25B0%25B7&type=54&source=web_note_detail_r10
+- link "#广州吃谷":
+  - /url: /search_result?keyword=%25E5%25B9%25BF%25E5%25B7%259E%25E5%2590%2583%25E8%25B0%25B7&type=54&source=web_note_detail_r10
+- link "#广州动漫星城":
+  - /url: /search_result?keyword=%25E5%25B9%25BF%25E5%25B7%259E%25E5%258A%25A8%25E6%25BC%25AB%25E6%2598%259F%25E5%259F%258E&type=54&source=web_note_detail_r10
+- link "#上新":
+  - /url: /search_result?keyword=%25E4%25B8%258A%25E6%2596%25B0&type=54&source=web_note_detail_r10
+- link "#梦色糕点师":
+  - /url: /search_result?keyword=%25E6%25A2%25A6%25E8%2589%25B2%25E7%25B3%2595%25E7%2582%25B9%25E5%25B8%2588&type=54&source=web_note_detail_r10
+- link "#纸飞机":
+  - /url: /search_result?keyword=%25E7%25BA%25B8%25E9%25A3%259E%25E6%259C%25BA&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 广州Nullset门店地址
+- generic: 07-24
+- generic: 共 85 条评论
+- link:
+  - /url: /user/profile/64ded5270000000001004a1a?channel_type=web_search_result_notes
+- link "Nullset":
+  - /url: /user/profile/64ded5270000000001004a1a?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- text: 🍎👍🏻送随机🎁哦！
+- generic: 置顶评论
+- generic: 07-24广东
+- generic: "2"
+- generic: "4"
+- link:
+  - /url: /user/profile/64ded5270000000001004a1a?channel_type=web_search_result_notes
+- link "Nullset":
+  - /url: /user/profile/64ded5270000000001004a1a?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 梦色糕点师新品以及满赠规则后续会公布
+- generic: 07-24广东
+- generic: 赞
+- generic: 回复
+- generic: 展开 3 条回复
+- link:
+  - /url: /user/profile/661fbe850000000003030f48?channel_type=web_search_result_notes
+- link "绘衣家的猫":
+  - /url: /user/profile/661fbe850000000003030f48?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 你好还缺兼职或者全职嘛，有谷店经验
+- generic: 07-28广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/62304a43000000001000c6b5?channel_type=web_search_result_notes
+- link "关山难越🍀🍀🍀":
+  - /url: /user/profile/62304a43000000001000c6b5?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 开业大吉
+- generic: 07-27浙江
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/6117e02d000000000100347a?channel_type=web_search_result_notes
+- link "大苹果":
+  - /url: /user/profile/6117e02d000000000100347a?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 蹲一波欧气，祝我好运✨
+- generic: 07-28山东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5d4be3240000000012012007?channel_type=web_search_result_notes
+- link "Komorebi":
+  - /url: /user/profile/5d4be3240000000012012007?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 问问中奖名单？
+- generic: 09-08宁夏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/5f7ed98500000000010038cb?channel_type=web_search_result_notes
+- link "君子安":
+  - /url: /user/profile/5f7ed98500000000010038cb?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 开业大吉
+- text: 抽空就去逛逛
+- generic: 07-28广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/63f0a2c4000000001001d1aa?channel_type=web_search_result_notes
+- link "旺仔牛奶.":
+  - /url: /user/profile/63f0a2c4000000001001d1aa?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 有没有转生恶役的 有的话我跪着买。。
+- generic: 07-25广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/54e7faff4fac6301a92d7d7f?channel_type=web_search_result_notes
+- link "momo11":
+  - /url: /user/profile/54e7faff4fac6301a92d7d7f?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 期待鬼灭和猎人！恭喜开业
+- generic: 07-28广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/69a1b4ed000000001d004b4f?channel_type=web_search_result_notes
+- link "kiyose":
+  - /url: /user/profile/69a1b4ed000000001d004b4f?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 蹲蹲
+- generic: 07-25广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/682b19bc000000000e01de72?channel_type=web_search_result_notes
+- link "西兰花肘击西红柿":
+  - /url: /user/profile/682b19bc000000000e01de72?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 祝贺开业
+- generic: 07-28江苏
+- generic: 赞
+- generic: 回复
+- paragraph
+- generic: 说点什么...
+- generic: "223"
+- generic: "61"
+- generic: "85"
+- button "发送" [disabled]
+- button "取消"

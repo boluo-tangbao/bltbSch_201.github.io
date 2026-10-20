@@ -1,0 +1,14 @@
+{
+  "runtime": "v24.19.0",
+  "otherPlaces": "unchanged",
+  "otherDirectories": "unchanged",
+  "priorUpdates": "unchanged",
+  "protectedPlaceFields": "unchanged except aliases, updatedAt and address district corrected to 静安区",
+  "gallery": 12,
+  "regularConfirmed": 12,
+  "limitedConfirmed": 8,
+  "regularPending": 6,
+  "limitedPending": 2,
+  "hiddenEnded": 2,
+  "accountLinks": 7
+}

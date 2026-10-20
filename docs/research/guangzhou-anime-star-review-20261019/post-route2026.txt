@@ -1,0 +1,206 @@
+- heading "保姆级广州吃谷攻略第2篇🌟『动漫星城』指路" [level=1]
+- text: 看完来广州吃谷不再迷路了吧～ 🌟『动漫星城』🈶东区西区注意标志噢 公园前地铁站🚇是很大很多出口的换乘中心 视频从H口进入直达西区 Ps：素材是错峰去拍的 平时周末很热闹的人非常多噢（参见封面）
+- link "#广州二次元":
+  - /url: /search_result?keyword=%25E5%25B9%25BF%25E5%25B7%259E%25E4%25BA%258C%25E6%25AC%25A1%25E5%2585%2583&type=54&source=web_note_detail_r10
+- link "#广州吃谷攻略":
+  - /url: /search_result?keyword=%25E5%25B9%25BF%25E5%25B7%259E%25E5%2590%2583%25E8%25B0%25B7%25E6%2594%25BB%25E7%2595%25A5&type=54&source=web_note_detail_r10
+- link "#广州吃谷":
+  - /url: /search_result?keyword=%25E5%25B9%25BF%25E5%25B7%259E%25E5%2590%2583%25E8%25B0%25B7&type=54&source=web_note_detail_r10
+- link "#线下吃谷":
+  - /url: /search_result?keyword=%25E7%25BA%25BF%25E4%25B8%258B%25E5%2590%2583%25E8%25B0%25B7&type=54&source=web_note_detail_r10
+- link "#线下吃谷路线":
+  - /url: /search_result?keyword=%25E7%25BA%25BF%25E4%25B8%258B%25E5%2590%2583%25E8%25B0%25B7%25E8%25B7%25AF%25E7%25BA%25BF&type=54&source=web_note_detail_r10
+- link "#吃谷好去处":
+  - /url: /search_result?keyword=%25E5%2590%2583%25E8%25B0%25B7%25E5%25A5%25BD%25E5%258E%25BB%25E5%25A4%2584&type=54&source=web_note_detail_r10
+- link "#广州吃谷圣地":
+  - /url: /search_result?keyword=%25E5%25B9%25BF%25E5%25B7%259E%25E5%2590%2583%25E8%25B0%25B7%25E5%259C%25A3%25E5%259C%25B0&type=54&source=web_note_detail_r10
+- link "#动漫星城":
+  - /url: /search_result?keyword=%25E5%258A%25A8%25E6%25BC%25AB%25E6%2598%259F%25E5%259F%258E&type=54&source=web_note_detail_r10
+- link "#次元聚集地":
+  - /url: /search_result?keyword=%25E6%25AC%25A1%25E5%2585%2583%25E8%2581%259A%25E9%259B%2586%25E5%259C%25B0&type=54&source=web_note_detail_r10
+- link "#二次元看见计划":
+  - /url: /search_result?keyword=%25E4%25BA%258C%25E6%25AC%25A1%25E5%2585%2583%25E7%259C%258B%25E8%25A7%2581%25E8%25AE%25A1%25E5%2588%2592&type=54&source=web_note_detail_r10
+- generic: 猜你想搜
+- generic: 动漫星城攻略
+- generic: 编辑于 05-03
+- generic: 共 56 条评论
+- link:
+  - /url: /user/profile/661a0f030000000003031261?channel_type=web_search_result_notes
+- link "小红薯661A8190":
+  - /url: /user/profile/661a0f030000000003031261?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 姐妹想吃小说谷 去动漫星城还是时尚天河好呀
+- generic: 01-23广东
+- generic: "9"
+- generic: "5"
+- link:
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes
+- link "9000跨时代sis":
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 个人感觉时尚天河 你可以看看这个攻略路线也拍了 你对比看看
+- generic: 01-23广东
+- generic: "10"
+- generic: 回复
+- generic: 展开 4 条回复
+- link:
+  - /url: /user/profile/67e79c83000000000a03d0ed?channel_type=web_search_result_notes
+- link "用户已注销":
+  - /url: /user/profile/67e79c83000000000a03d0ed?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 哇 请问里面有COSPLAY租衣服 化妆 拍照的吗？如果专门玩COS 也是在这里吗
+- generic: 02-14美国
+- generic: "1"
+- generic: "1"
+- link:
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes
+- link "9000跨时代sis":
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 妆娘有不少 cos服选择不多 出特定角色 最好别处准备好再过来 周末假期就是有很多coser都在这里玩～很热闹的
+- generic: 02-14广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/58637da06a6a69281a913b37?channel_type=web_search_result_notes
+- link "跑":
+  - /url: /user/profile/58637da06a6a69281a913b37?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 动漫星城最有用的攻略就是不去
+- generic: 01-31广东
+- generic: "15"
+- generic: "1"
+- link:
+  - /url: /user/profile/58637da06a6a69281a913b37?channel_type=web_search_result_notes
+- link "跑":
+  - /url: /user/profile/58637da06a6a69281a913b37?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 去动漫星城还不如去地王广场
+- generic: 01-31广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/64cfc4fa000000002b00a2ff?channel_type=web_search_result_notes
+- link "Restless":
+  - /url: /user/profile/64cfc4fa000000002b00a2ff?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 老师老师，这里年后还热闹吗，想年后再来
+- generic: 02-05广东
+- generic: "1"
+- generic: "4"
+- link:
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes
+- link "9000跨时代sis":
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 周末节假日都会很热闹
+- generic: 02-05广东
+- generic: "1"
+- generic: 回复
+- generic: 展开 3 条回复
+- link:
+  - /url: /user/profile/646b7ba90000000010029491?channel_type=web_search_result_notes
+- link "湖亭":
+  - /url: /user/profile/646b7ba90000000010029491?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 动漫星城没啥好逛的，差不多
+- generic: 01-25广东
+- generic: 赞
+- generic: "2"
+- link:
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes
+- link "9000跨时代sis":
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 时尚天河发展起来后 这边是优势不大了
+- generic: 01-25广东
+- generic: 赞
+- generic: 回复
+- generic: 展开 1 条回复
+- link:
+  - /url: /user/profile/64f1b9550000000005000ed6?channel_type=web_search_result_notes
+- link "渊溯医":
+  - /url: /user/profile/64f1b9550000000005000ed6?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 主播主播这个H出口是不是在公元前的呀？
+- generic: 01-23广东
+- generic: 赞
+- generic: "1"
+- link:
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes
+- link "9000跨时代sis":
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 是的
+- generic: 01-23广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/6555c0df000000000802fd05?channel_type=web_search_result_notes
+- link "夜烬星芒（上学，别清）":
+  - /url: /user/profile/6555c0df000000000802fd05?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 动漫星城去了才有
+- generic: 02-14广东
+- generic: "1"
+- generic: "1"
+- link:
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes
+- link "9000跨时代sis":
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- text: 来玩
+- generic: 02-14广东
+- generic: "1"
+- generic: 回复
+- link:
+  - /url: /user/profile/6100d22800000000200286ab?channel_type=web_search_result_notes
+- link "序禾":
+  - /url: /user/profile/6100d22800000000200286ab?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- text: 动漫星辰那么小还会迷路的吗
+- generic: 01-27湖北
+- generic: "1"
+- generic: "1"
+- link:
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes
+- link "9000跨时代sis":
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 面积小 找店难 绕来绕去的
+- generic: 01-27广东
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/615a90610000000002020eb3?channel_type=web_search_result_notes
+- link "白":
+  - /url: /user/profile/615a90610000000002020eb3?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 请问这里有没有未锈铠毛毯存货？
+- generic: 08-25山东
+- generic: 赞
+- generic: "4"
+- link:
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes
+- link "9000跨时代sis":
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 不太确定余量 暑假客流很大 可以重点看看goodslove 樱漫
+- generic: 08-25广东
+- generic: 赞
+- generic: 回复
+- generic: 展开 3 条回复
+- link:
+  - /url: /user/profile/67dfd5bc000000000a03d622?channel_type=web_search_result_notes
+- link "阿核":
+  - /url: /user/profile/67dfd5bc000000000a03d622?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 罗森在哪里呀？
+- generic: 09-28广东
+- generic: "1"
+- generic: "1"
+- link:
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes
+- link "9000跨时代sis":
+  - /url: /user/profile/5938d14e5e87e778ffd177f6?channel_type=web_search_result_notes&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 在东区靠近麦当劳 我没有拍
+- generic: 09-28广东
+- generic: 赞
+- generic: 回复
+- paragraph
+- generic: 说点什么...
+- generic: "2046"
+- generic: "1356"
+- generic: "56"
+- button "发送" [disabled]
+- button "取消"

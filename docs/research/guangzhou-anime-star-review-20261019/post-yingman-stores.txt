@@ -1,0 +1,174 @@
+- heading "樱漫全国门店地址导航来啦！" [level=1]
+- text: ⚠️樱漫全国门店以此为准⚠️ 无此地址外的其他门店 各位宝宝注意辨别哈 门店位于广州/武汉/成都/上海/重庆/深圳/福州/杭州/长沙/北京ᜊ•ᴗ•ᜊ 附上超详细的樱漫全国门店地址
+- text: "📍樱漫越秀店地址： 广州市越秀区吉祥路1号动漫星城广场西区负二层自编W203AB-CD 号铺 📍樱漫天河店地址: 广州市天河区时尚天河商业广场负一层中区中二街（夜上海）102-109号铺 📍樱漫武汉店地址： 湖北省武汉市江汉路X118商场一楼L106-L108铺号 📍樱漫成都店地址： 四川省成都市锦江区东御街18号天府红购物中心负一层B1017号铺 📍樱漫上海店地址： 上海市静安区西藏北路198号静安大悦城购物中心北座六楼N601-N602号铺 📍樱漫重庆店地址： 重庆市江北区观音桥方圆LIVE B1层 📍樱漫深圳宝安店地址： 广东省深圳市宝安区新安街道新湖路99号壹方城B2层075A-075B号铺 📍樱漫深圳福田店地址： 广东省深圳市福田区大中华·BitCity次元小镇 GF-098-101号 📍樱漫周边部地址： 广东省广州市越秀区动漫星城西区负二夹层周边部WM073 📍樱漫福州店地址： 福建省福州市鼓楼区八一七路东街口大洋百货负一楼L118铺号 📍樱漫杭州店地址： 杭州市上城区学士路31号工联CC次元站B2层217-220号铺 📍樱漫长沙店地址： 湖南省长沙市天心区坡子街216号悦方idmall购物中心B111+112号铺 📍樱漫北京店地址： 北京市东城区王府井大街301号王府井喜悦购物中心G-B2-D060-D065号铺樱漫"
+- link "#快来打卡吧":
+  - /url: /search_result?keyword=%25E5%25BF%25AB%25E6%259D%25A5%25E6%2589%2593%25E5%258D%25A1%25E5%2590%25A7&type=54&source=web_note_detail_r10
+- text: 无法到店的老师也可移步樱漫官方线上平台了解更多产品资讯
+- link "@樱漫Sakura Comic":
+  - /url: /user/profile/65ab89c1000000000d01e872
+- text: 🍑：樱漫Sakura Comic
+- link "#樱漫书店":
+  - /url: /search_result?keyword=%25E6%25A8%25B1%25E6%25BC%25AB%25E4%25B9%25A6%25E5%25BA%2597&type=54&source=web_note_detail_r10
+- link "#樱漫":
+  - /url: /search_result?keyword=%25E6%25A8%25B1%25E6%25BC%25AB&type=54&source=web_note_detail_r10
+- link "#沉浸式逛店":
+  - /url: /search_result?keyword=%25E6%25B2%2589%25E6%25B5%25B8%25E5%25BC%258F%25E9%2580%259B%25E5%25BA%2597&type=54&source=web_note_detail_r10
+- link "#图书":
+  - /url: /search_result?keyword=%25E5%259B%25BE%25E4%25B9%25A6&type=54&source=web_note_detail_r10
+- link "#周边":
+  - /url: /search_result?keyword=%25E5%2591%25A8%25E8%25BE%25B9&type=54&source=web_note_detail_r10
+- link "#实体书":
+  - /url: /search_result?keyword=%25E5%25AE%259E%25E4%25BD%2593%25E4%25B9%25A6&type=54&source=web_note_detail_r10
+- link "#潮玩":
+  - /url: /search_result?keyword=%25E6%25BD%25AE%25E7%258E%25A9&type=54&source=web_note_detail_r10
+- generic: 编辑于 06-14
+- generic: 共 191 条评论
+- link:
+  - /url: /user/profile/65ab89c1000000000d01e872?channel_type=web_profile_page
+- link "樱漫Sakura Comic":
+  - /url: /user/profile/65ab89c1000000000d01e872?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 欢迎各位老师到樱漫sakura Comic了解
+- generic: 置顶评论
+- generic: 2025-04-30广东
+- generic: "8"
+- generic: 回复
+- link:
+  - /url: /user/profile/5edbaea10000000001001a93?channel_type=web_profile_page
+- link "鬼生蝴蝶":
+  - /url: /user/profile/5edbaea10000000001001a93?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 看看南昌！南昌吧！南昌二次元不少的！
+- generic: 2025-05-26江西
+- generic: "25"
+- generic: "3"
+- link:
+  - /url: /user/profile/6460757b0000000010028698?channel_type=web_profile_page
+- link "归败.":
+  - /url: /user/profile/6460757b0000000010028698?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 来天津开吧
+- generic: 2025-08-08天津
+- generic: "4"
+- generic: 回复
+- generic: 展开 2 条回复
+- link:
+  - /url: /user/profile/5e182b2a000000000100009f?channel_type=web_profile_page
+- link "平安顺遂":
+  - /url: /user/profile/5e182b2a000000000100009f?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 来合肥吧
+- generic: 2025-12-19安徽
+- generic: "9"
+- generic: "2"
+- link:
+  - /url: /user/profile/682826570000000006010cb6?channel_type=web_profile_page
+- link "绵夏":
+  - /url: /user/profile/682826570000000006010cb6?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 我支持
+- generic: 02-19安徽
+- generic: 赞
+- generic: 回复
+- generic: 展开 1 条回复
+- link:
+  - /url: /user/profile/5edc7b320000000001007b3f?channel_type=web_profile_page
+- link "海岛呼吸。（看到我请让我去打乙给）":
+  - /url: /user/profile/5edc7b320000000001007b3f?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 我支持在郑州开一家[抽泣R]，我们郑州不仅交通便利而且人也多，路过的人随便吃一口，加起来也有很多了。
+- generic: 2025-08-18上海
+- generic: "16"
+- generic: "1"
+- link:
+  - /url: /user/profile/5edc7b320000000001007b3f?channel_type=web_profile_page
+- link "海岛呼吸。（看到我请让我去打乙给）":
+  - /url: /user/profile/5edc7b320000000001007b3f?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 我支持樱漫在郑州开一家，理由如下： 1.郑州举办过多种大型活动，有大型场地和丰富的经验。 2.河南人口众多 堪称中国人口最多的省，人流量巨大消费程度高。 3.郑州现已跃居大城市，开放度很高，对二次元包容度强。 4.算我求你了考虑一下吧好不好？ 5.其实都不重要主要是因为我在郑州[抽泣R]。
+- generic: 2025-08-18上海
+- generic: "19"
+- generic: 回复
+- link:
+  - /url: /user/profile/6566a46e000000003c00dcc9?channel_type=web_profile_page
+- link "貘茌_":
+  - /url: /user/profile/6566a46e000000003c00dcc9?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 真的不考虑在东北开一家吗
+- generic: 2025-12-12辽宁
+- generic: "2"
+- generic: "1"
+- link:
+  - /url: /user/profile/6566a46e000000003c00dcc9?channel_type=web_profile_page
+- link "貘茌_":
+  - /url: /user/profile/6566a46e000000003c00dcc9?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 来沈阳别逼我跪下求你（）
+- generic: 2025-12-12辽宁
+- generic: "1"
+- generic: 回复
+- link:
+  - /url: /user/profile/618921e7000000001000856a?channel_type=web_profile_page
+- link "kismet":
+  - /url: /user/profile/618921e7000000001000856a?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 北京需要你啊
+- generic: 2025-08-07北京
+- generic: "15"
+- generic: "3"
+- link:
+  - /url: /user/profile/63842991000000001f01574e?channel_type=web_profile_page
+- link "Esther":
+  - /url: /user/profile/63842991000000001f01574e?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- text: 真的北京这么大为什么不开一家，来王府井开吧
+- generic: 2025-08-08河北
+- generic: "3"
+- generic: 回复
+- generic: 展开 2 条回复
+- link:
+  - /url: /user/profile/61078b3f0000000020028ae5?channel_type=web_profile_page
+- link "nijiiki":
+  - /url: /user/profile/61078b3f0000000020028ae5?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 保定这家也是你们的吗
+- generic: 05-30广东
+- generic: 赞
+- generic: "2"
+- link:
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_profile_page
+- link "樱漫书店":
+  - /url: /user/profile/64644a4c000000001f0319c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 作者
+- generic: 不是哦老师 帖子有我们全部门店的具体地址 没有保定哈
+- generic: 05-30广东
+- generic: 赞
+- generic: 回复
+- generic: 展开 1 条回复
+- link:
+  - /url: /user/profile/60d6f8bc000000002002d5c4?channel_type=web_profile_page
+- link "Forelsktut":
+  - /url: /user/profile/60d6f8bc000000002002d5c4?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 求苏州开一个
+- generic: 2025-07-26江苏
+- generic: "4"
+- generic: "1"
+- link:
+  - /url: /user/profile/5ad2aa604eacab7ca1664cca?channel_type=web_profile_page
+- link "是小然呀✨":
+  - /url: /user/profile/5ad2aa604eacab7ca1664cca?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 上去！
+- generic: 2025-11-16江苏
+- generic: 赞
+- generic: 回复
+- link:
+  - /url: /user/profile/622d6b2600000000100080ef?channel_type=web_profile_page
+- link "胖福福达":
+  - /url: /user/profile/622d6b2600000000100080ef?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 苏州有没有樱漫呐？
+- generic: 04-22江苏
+- generic: "1"
+- generic: 回复
+- link:
+  - /url: /user/profile/5e8b3dc30000000001008f01?channel_type=web_profile_page
+- link "第二季雪":
+  - /url: /user/profile/5e8b3dc30000000001008f01?channel_type=web_user_page&parent_page_channel_type=web_user_board
+- generic: 天津开一家吧
+- generic: 2025-12-20天津
+- generic: "2"
+- generic: 回复
+- paragraph
+- generic: 说点什么...
+- generic: "797"
+- generic: "279"
+- generic: "191"
+- button "发送" [disabled]
+- button "取消"

@@ -1,0 +1,311 @@
+{
+  "placeId": "shanghai-shop-003",
+  "readAt": "2026-10-18",
+  "window": [
+    "2025-01-01",
+    "2026-10-18"
+  ],
+  "shops": [
+    {
+      "name": "CAPCOM STORE CHINA 喀普康中心",
+      "result": "open",
+      "sources": [
+        {
+          "label": "CAPCOM 官网当前门店目录（上海店）",
+          "url": "https://www.capcom.co.jp/amusement/brands/capcomstore/"
+        }
+      ]
+    },
+    {
+      "name": "小小谷努咪",
+      "result": "open",
+      "sources": [
+        {
+          "label": "上海新世界城官方微博（小小谷努咪上新）",
+          "url": "https://www.sina.cn/news/detail/5354964727628101.html",
+          "date": "2026-10-17"
+        }
+      ]
+    },
+    {
+      "name": "矿也 MiNE",
+      "result": "open",
+      "sources": [
+        {
+          "label": "上海新世界城官方微博（矿也门店上新）",
+          "url": "https://www.sina.cn/media/2210057511",
+          "date": "2026-10-10"
+        },
+        {
+          "label": "矿也MiNE品牌号·绵绵玛咻线下首发与门店地址",
+          "url": "https://www.xiaohongshu.com/explore/6aca0e1f000000000a020a9f",
+          "dateLabel": "页面显示“编辑于7天前”（2026-10-18核对，未换算具体发帖日期）"
+        }
+      ]
+    },
+    {
+      "name": "SNK 中心",
+      "result": "open",
+      "sources": [
+        {
+          "label": "SNK 中心官方授权店·国庆新品上架与门店地址",
+          "url": "https://www.xiaohongshu.com/explore/68db55be000000000402244c",
+          "date": "2025-09-29"
+        },
+        {
+          "label": "SNK 官方上海门店预告",
+          "url": "https://www.snkchina.com.cn/general/news/20250728/60112.html",
+          "date": "2025-07-21"
+        }
+      ]
+    },
+    {
+      "name": "新漫界",
+      "result": "open",
+      "sources": [
+        {
+          "label": "新世界公司管理层·2025年度业绩说明会问答10",
+          "url": "https://roadshow.cnstock.com/fbh/xsj2025",
+          "date": "2026-05-27"
+        }
+      ]
+    },
+    {
+      "name": "三丽鸥 Sanrio Gift Gate",
+      "result": "open",
+      "sources": [
+        {
+          "label": "三丽鸥官网当前线下门店目录·上海新世界商场",
+          "url": "https://www.sanrio.com.cn/store.html"
+        },
+        {
+          "label": "三丽鸥新世界城门店经营号·当前地址与上新主页",
+          "url": "https://www.xiaohongshu.com/user/profile/561329f23f95a3652527ff53",
+          "dateLabel": "当前主页未标发布日期，2026-10-18读取；身份及地址与官网店单核对"
+        }
+      ]
+    },
+    {
+      "name": "IPSTAR 潮玩星球（零售店）",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ]
+    },
+    {
+      "name": "GOODSLOVE 谷乐屋",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ]
+    },
+    {
+      "name": "漫魂 comic soul",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ]
+    },
+    {
+      "name": "LCH 领潮汇 goods",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ]
+    },
+    {
+      "name": "芳香屋",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ]
+    },
+    {
+      "name": "二次三香",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ]
+    },
+    {
+      "name": "墟弥 Goods",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "赢商网·新世界城业态报道（熊舒苗）",
+          "url": "https://m.winshang.com/news737942.html",
+          "date": "2025-12-26"
+        }
+      ]
+    },
+    {
+      "name": "谷力全开（新世界城店）",
+      "result": "open",
+      "sources": [
+        {
+          "label": "谷力全开本人·当前分店简介",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAn0KtLk4JJrIvB7f_zu_rO85cP_h7uOOx4BsrhYeZy0lDiZigPBbaMBgzb4_-RbGQ",
+          "dateLabel": "当前主页未标发布日期，2026-10-18读取"
+        },
+        {
+          "label": "谷力全开本人·新世界城路线指引",
+          "url": "https://www.douyin.com/video/7523190582504983843",
+          "date": "2025-07-04"
+        },
+        {
+          "label": "谷力全开本人·开业地址4A21（主页已读正文）",
+          "url": "https://www.douyin.com/video/7520564859622559028",
+          "dateLabel": "未独立取得发布日期，2026-10-18读取主页作品正文"
+        },
+        {
+          "label": "谷力全开本人·凹凸世界十周年新世界城首发（往期经营依据）",
+          "url": "https://www.douyin.com/note/7652344844216961204",
+          "dateLabel": "正文写开售时间2026-06-18；未取得发帖日期"
+        }
+      ]
+    },
+    {
+      "name": "星河动漫（新世界城店）",
+      "result": "open",
+      "sources": [
+        {
+          "label": "星河动漫XHDM官方·九店活动门店名单",
+          "url": "https://www.sina.cn/news/detail/5346280440333408.html",
+          "date": "2026-09-23"
+        }
+      ]
+    },
+    {
+      "name": "無限萌界（新世界城店）",
+      "result": "open",
+      "sources": [
+        {
+          "label": "無限萌界本人·八楼地址、试营业与餐饮经营主页",
+          "url": "https://www.xiaohongshu.com/user/profile/65570708000000000802c1a5",
+          "dateLabel": "当前主页未标发布日期；当值表写10.17～10.23，2026-10-18读取，不补造年份"
+        }
+      ]
+    },
+    {
+      "name": "IPSTAR 怪物猎人：荒野主题店（2026年秋季限定）",
+      "result": "open",
+      "sources": [
+        {
+          "label": "IPSTAR官方·主题店地址与营业期限一览",
+          "url": "https://www.sina.cn/news/detail/5346974813137260.html",
+          "date": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "name": "IPSTAR 犬夜叉主题餐厅（2026年秋季限定）",
+      "result": "open",
+      "sources": [
+        {
+          "label": "IPSTAR官方·主题店地址与营业期限一览",
+          "url": "https://www.sina.cn/news/detail/5346974813137260.html",
+          "date": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "name": "IPSTAR 加油吧！中村君！！主题店（2026年秋季限定）",
+      "result": "open",
+      "sources": [
+        {
+          "label": "上海新世界城官方·中村君主题店地址及档期",
+          "url": "https://www.xiaohongshu.com/explore/6abcbc6e000000001802dcfb",
+          "dateLabel": "编辑于09-30；正文档期2026-10-01至2026-11-01，2026-10-18读取"
+        }
+      ]
+    },
+    {
+      "name": "谷里谷气",
+      "result": "closed",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        },
+        {
+          "label": "新闻晨报·记者王丽芳报道新世界城谷里谷气闭店公告",
+          "url": "https://ep.shxwcb.com/2025/11/19/20251119-02-2_20251118234808.html",
+          "date": "2025-11-19"
+        }
+      ]
+    },
+    {
+      "name": "IPSTAR 鸣潮主题店（2026 年夏季限定）",
+      "result": "closed",
+      "sources": [
+        {
+          "label": "IPSTAR 官方鸣潮主题店闭店提醒",
+          "url": "https://www.sina.cn/news/detail/5318412382245813.html",
+          "date": "2026-07-08"
+        }
+      ]
+    }
+  ],
+  "reusedSources": "../new-world-city-20261018/sources.json",
+  "closedArchive": "../new-world-city-20261018/archive.json",
+  "gallery": {
+    "count": 12,
+    "change": "none",
+    "ledger": "../new-world-city-20261018/images.json"
+  },
+  "candidatesNotAdopted": [
+    {
+      "name": "GETOY次元贩售（上海新世界城店）",
+      "url": "https://wechat.bandainamcotoyshobbysh.com/H5/store.php?id=471",
+      "reason": "搜索摘要列4B24；读取页面仅得动态模板及售前名单说明，尚未在正文核实店铺，未将摘要作当前官网确认。"
+    },
+    {
+      "name": "聚次元Goods、魔伊岛、小红石头电玩、the Green Party",
+      "url": "https://www.douyin.com/search/%E4%B8%8A%E6%B5%B7%E6%96%B0%E4%B8%96%E7%95%8C%E5%9F%8E%20%E8%B0%B7%E5%BA%97",
+      "reason": "2025-09-08紫儿内容搜索结果出现多个名称；未取得各店当前独立经营与原帖详情，暂不接入，不能自动合并GETOY。"
+    },
+    {
+      "name": "RESHAKE、cosme等",
+      "reason": "涉及服饰等泛二次元业态，未取得谷子／周边经营依据，本轮不扩充为谷店。"
+    },
+    {
+      "name": "香澄社、葱谷八",
+      "reason": "小红书结果出现，但未核实属于新世界城，归属不明暂不接入。"
+    },
+    {
+      "name": "八楼谷子折扣店／潮玩开仓节",
+      "url": "https://www.xiaohongshu.com/search_result?keyword=%E6%96%B0%E4%B8%96%E7%95%8C%E5%9F%8E%20%E5%85%AB%E6%A5%BC%20%E8%B0%B7%E5%BA%97",
+      "reason": "已读02-17笔记，正文仅地点和活动标签，未取得独立店名，避免把活动区域作新店。"
+    },
+    {
+      "name": "打卡探索之新世界城",
+      "url": "https://www.xiaohongshu.com/search_result?keyword=%E4%B8%8A%E6%B5%B7%E6%96%B0%E4%B8%96%E7%95%8C%E5%9F%8E%20%E8%B0%B7%E5%BA%97",
+      "reason": "已读1222Chanel正文，编辑09-23但叙述四月底到访，未作为最新店单依据；完整原帖ID未在本轮提取，以发现记录为准。"
+    }
+  ]
+}

@@ -5,6 +5,18 @@ export function shopDisplayStatus(shop: DirectoryShop): 'open' | 'evidence' | 'c
   return shop.operatingConfirmation === 'official-listing' || shop.accounts?.length ? 'open' : 'evidence'
 }
 
+export function shopDirectoryGroups<T extends DirectoryShop>(shops: T[]) {
+  const groups = {
+    regular: { open: [] as T[], evidence: [] as T[] },
+    limited: { open: [] as T[], evidence: [] as T[] },
+  }
+  for (const shop of shops) {
+    const status = shopDisplayStatus(shop)
+    if (status !== 'closed') groups[shop.limited ? 'limited' : 'regular'][status].push(shop)
+  }
+  return groups
+}
+
 export function latestSourceDate(sources: ShopSource[]): string | undefined {
   return sources.flatMap(source => source.date ? [source.date] : []).sort().at(-1)
 }

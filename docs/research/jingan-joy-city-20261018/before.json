@@ -1,0 +1,111 @@
+{
+  "place": {
+    "id": "shanghai-shop-008",
+    "name": "静安大悦城",
+    "tier": "above",
+    "order": 10,
+    "summary": "快闪必吃榜，但平时一般",
+    "details": "**静安大悦城的场地、动线和配套都很成熟**。\n\n问题是常驻谷店不够有记忆点，脱离活动后不是很好逛。",
+    "visitNotes": [
+      "有快闪或 Coser 活动时更适合专程来；如果主要想逛常驻谷店，平日的吸引力会弱一些。"
+    ],
+    "tags": [
+      "快闪",
+      "卡牌",
+      "扭蛋",
+      "Kpop",
+      "书籍",
+      "同人",
+      "女仆咖啡厅"
+    ],
+    "cover": "images/places/Shanghai/静安大悦城.jpg",
+    "gallery": [
+      {
+        "src": "images/places/Shanghai/静安大悦城.jpg",
+        "alt": "商场外观",
+        "group": "商圈外部",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/静安大悦城/2025-9-10/1791462835335.jpg",
+        "alt": "商场夜景",
+        "group": "商圈外部",
+        "sourceName": "作者‘2025-09-10’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/静安大悦城/大悦城地铁接口.png",
+        "alt": "地铁连接通道（视频截图）",
+        "group": "商圈外部",
+        "sourceName": "本地整理截图（原始链接未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/静安大悦城/大悦城大扶梯.png",
+        "alt": "商场扶梯",
+        "group": "店铺外景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/静安大悦城/2025-9-10/1791462835387.jpg",
+        "alt": "谷店通道",
+        "group": "店铺外景",
+        "sourceName": "作者‘2025-09-10’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/静安大悦城/35e606fef0df479abd4bb80a35a63acf.webp",
+        "alt": "IPSTAR 潮玩星球店面",
+        "group": "店铺外景",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/静安大悦城/QQ图片20250920112416.jpg",
+        "alt": "谷店门头（视频截图）",
+        "group": "店铺外景",
+        "sourceName": "本地整理截图（原始链接未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/静安大悦城/2025-9-10/1791462835263.jpg",
+        "alt": "Poooku 周边陈列",
+        "group": "店铺内景",
+        "sourceName": "作者‘2025-09-10’直拍"
+      },
+      {
+        "src": "images/places/Shanghai/正片/静安大悦城/027f1094b1bf494dacd484fa0e3411d7.jpg",
+        "alt": "少女乐队主题活动",
+        "group": "额外活动",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/静安大悦城/1c47ff158dc74cc2aeb5ddc368a83287.webp",
+        "alt": "同好聚集现场",
+        "group": "额外活动",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/正片/静安大悦城/6631c00b23d798475.jpg_e1080.png",
+        "alt": "角色立牌布置",
+        "group": "额外活动",
+        "sourceName": "本地整理图片（日期未记录）"
+      },
+      {
+        "src": "images/places/Shanghai/网图补充/jingan-chiikawa-2024.webp",
+        "alt": "静安大悦城Chiikawa×MINISO快闪（网图；2024年历史活动）",
+        "group": "额外活动",
+        "sourceName": "上海静安区融媒体中心·受访者供图（2024-08-29）",
+        "sourceUrl": "https://www.jingan.gov.cn/rmtzx/003001/20240830/cac351a7-28ab-4b4d-b340-66f1f95f8693.html"
+      }
+    ],
+    "visitedAt": "2026-05-02",
+    "updatedAt": "2026-10-17",
+    "published": true,
+    "location": {
+      "lat": 31.245608,
+      "lng": 121.467556,
+      "coordinateSystem": "wgs84",
+      "address": "上海市黄浦区西藏北路166号"
+    }
+  },
+  "directory": null,
+  "otherPlacesHash": "b7185ed5da8ef8537b6de3584528f4849e84ebee20a67a7688a29ff55cefc799",
+  "otherDirectoriesHash": "4cf81b0e157acde3ba88510c69ce05d20bdab446cab1b434949400dd26375bd0",
+  "priorUpdatesHash": "2aceb8c9cdcc2f2e0b5f096df37289699a18e06e9e0c4ec3c24e63b017cbe5e5"
+}

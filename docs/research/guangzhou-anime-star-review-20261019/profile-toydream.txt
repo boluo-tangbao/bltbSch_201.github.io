@@ -1,0 +1,264 @@
+- generic: 广州童梦动漫星城店Toydream
+- generic: 小红书号：26292958205
+- generic: 广州童梦动漫星城西区负三TOY DREAM 童梦 营业时间11：00-20：00 周末营业时间至21：00 集换社ID:296021 有疑问可问@小k
+- generic: 广东广州
+- generic: "3"
+- generic: 关注
+- generic: "303"
+- generic: 粉丝
+- generic: "1145"
+- generic: 获赞与收藏
+- button "关注":
+  - generic: 关注
+- button "发消息":
+- generic: 笔记
+- generic: 收藏
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/6a756e7c000000003301d612
+- link "[今日上新] WS黑白双翼日文补充包：我推的孩子Vol.3":
+  - /url: /user/profile/675e9caf0000000018014487/6a756e7c000000003301d612
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "12"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/6a6da36e000000003400d1c9
+- link "近期谷子上新世界计划谷子 葬送的芙莉莲周边":
+  - /url: /user/profile/675e9caf0000000018014487/6a6da36e000000003400d1c9
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "13"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/6a6da2ca0000000028032013
+- link "BanG Dream谷子近期上新BanGDream 动漫周边 快乐吃谷子":
+  - /url: /user/profile/675e9caf0000000018014487/6a6da2ca0000000028032013
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "13"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/6a5af283000000000f0090fb
+- link "(07.18)近期上新谷子：魔裁、少歌、邦邦！":
+  - /url: /user/profile/675e9caf0000000018014487/6a5af283000000000f0090fb
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "25"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/6a3f3f37000000000803242a
+- link "【新品到店】黑白双翼(日文名称WeiβSchwarz)。是由Bushiroad在":
+  - /url: /user/profile/675e9caf0000000018014487/6a3f3f37000000000803242a
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "16"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/6a33918e000000000803c1e5
+- link "hololiveOFFICIAL CARD GAME第8弹到货，欢迎选购。hol":
+  - /url: /user/profile/675e9caf0000000018014487/6a33918e000000000803c1e5
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "12"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/6a23c34000000000210196e5
+- link "近期谷子上新！[勾引R][勾引R]动漫周边 BanGDream 超时空辉夜姬魔法":
+  - /url: /user/profile/675e9caf0000000018014487/6a23c34000000000210196e5
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "14"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/69d088bb000000001f001853
+- link "LoveLive!方形吧唧上新":
+  - /url: /user/profile/675e9caf0000000018014487/69d088bb000000001f001853
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "15"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/69d08843000000002301f3e4
+- link "邦邦mujica谷子上新！":
+  - /url: /user/profile/675e9caf0000000018014487/69d08843000000002301f3e4
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "22"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/69be24b7000000002202870d
+- link "邦邦avemujica若叶睦生日谷到货啦！":
+  - /url: /user/profile/675e9caf0000000018014487/69be24b7000000002202870d
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "12"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/69be23d6000000001f0054ae
+- link "鬼灭之刃日谷盲盒徽章上新！":
+  - /url: /user/profile/675e9caf0000000018014487/69be23d6000000001f0054ae
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "9"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/69ba2ba000000000280098d5
+- link "邦邦10周年BTCC收藏卡到货热卖中！":
+  - /url: /user/profile/675e9caf0000000018014487/69ba2ba000000000280098d5
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "34"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/69ba29de000000001b0230f3
+- link "NIKKE盲盒上新——金属币第2弹！":
+  - /url: /user/profile/675e9caf0000000018014487/69ba29de000000001b0230f3
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "8"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/69abd3e1000000001a035867
+- link "GSC邦邦Afterglow毛绒玩偶到货热卖中！":
+  - /url: /user/profile/675e9caf0000000018014487/69abd3e1000000001a035867
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "10"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/69744f730000000028008721
+- link "邦邦手游8周年商品到货热卖中！":
+  - /url: /user/profile/675e9caf0000000018014487/69744f730000000028008721
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "20"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/696af6a3000000000e03c45e
+- link "WS黑白双翼『传说』系列卡包到货热卖中！":
+  - /url: /user/profile/675e9caf0000000018014487/696af6a3000000000e03c45e
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "12"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/695617f0000000001f00d10b
+- link "元旦上新！！！":
+  - /url: /user/profile/675e9caf0000000018014487/695617f0000000001f00d10b
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "13"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/694544ea000000001e03b12a
+- link "广州童梦动漫星城店双旦活动优惠":
+  - /url: /user/profile/675e9caf0000000018014487/694544ea000000001e03b12a
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "9"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/69453f23000000001e020f0f
+- link "12.19上新！本周新发售卡片3款":
+  - /url: /user/profile/675e9caf0000000018014487/69453f23000000001e020f0f
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "8"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/693661bd000000001e0290be
+- link "广州童梦芳村店现已开业！！":
+  - /url: /user/profile/675e9caf0000000018014487/693661bd000000001e0290be
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "36"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/692e6dda000000001e029535
+- link "11.14上新！WS黄金拼图本日发售热卖中":
+  - /url: /user/profile/675e9caf0000000018014487/692e6dda000000001e029535
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "12"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/690daaac000000000503a922
+- link "胜利女神nikke日谷上新11.7":
+  - /url: /user/profile/675e9caf0000000018014487/690daaac000000000503a922
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "16"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/690da91d0000000005010e90
+- link "邦邦mujica谷子上新11.7":
+  - /url: /user/profile/675e9caf0000000018014487/690da91d0000000005010e90
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "10"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/68fb10dc000000000402200d
+- link "本日上新！PJSK ep卡 vol.24到货热卖中！":
+  - /url: /user/profile/675e9caf0000000018014487/68fb10dc000000000402200d
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "17"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/68f5b476000000000401270b
+- link "新品到店！GSC MyGO校服款玩偶到货热卖中！":
+  - /url: /user/profile/675e9caf0000000018014487/68f5b476000000000401270b
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "18"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/68f5b46c000000000503aa2e
+- link "新品到店！GSC母鸡卡再版玩偶到货热卖中！":
+  - /url: /user/profile/675e9caf0000000018014487/68f5b46c000000000503aa2e
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "15"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/68df4ca5000000000503883c
+- link "WS黑白双翼「约会大作战vol.3」火热发售中":
+  - /url: /user/profile/675e9caf0000000018014487/68df4ca5000000000503883c
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "15"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/68b2b244000000001b03f8d4
+- link "万代「女神异闻录5」一番赏等你来抽":
+  - /url: /user/profile/675e9caf0000000018014487/68b2b244000000001b03f8d4
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "14"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/68b2b115000000001b037728
+- link "UA新弹卡包「坂本日常」到货热卖中！":
+  - /url: /user/profile/675e9caf0000000018014487/68b2b115000000001b037728
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "11"
+- link:
+  - /url: /user/profile/675e9caf0000000018014487/68b2afeb000000001b03e8aa
+- link "AveMujica名场面亚克力砖到货热卖中！":
+  - /url: /user/profile/675e9caf0000000018014487/68b2afeb000000001b03e8aa
+- link "广州童梦动漫星城店Toydream":
+  - /url: /user/profile/675e9caf0000000018014487?channel_type=web_user_page&parent_page_channel_type=web_user_board
+  - generic: 广州童梦动漫星城店Toydream
+- generic: "8"
+- generic: 笔记・0
+- generic: 专辑・0
+- generic: 文件・0
+- generic: TA 还没有收藏任何内容哦
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

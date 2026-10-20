@@ -1,0 +1,128 @@
+{
+  "query": "苏州金地 GOODSlove",
+  "mode": "用户",
+  "scope": "首屏已加载用户结果",
+  "readAt": "2026-10-19"
+}
+- generic: 全部
+- generic: 图文
+- generic: 视频
+- generic: 用户
+- link "riris 小红书号：11670846519 粉丝・8 笔记・1 关注":
+  - /url: /user/profile/6650139400000000030302e2
+  - generic: riris
+  - generic: 小红书号：11670846519
+  - generic: 粉丝・8
+  - generic: 笔记・1
+  - button "关注":
+    - generic: 关注
+- link "Mr. H😎 小红书号：26722149408 粉丝・145 笔记・39 关注":
+  - /url: /user/profile/678ac333000000000e013111
+  - generic: Mr. H😎
+  - generic: 小红书号：26722149408
+  - generic: 粉丝・145
+  - generic: 笔记・39
+  - button "关注":
+    - generic: 关注
+- link "onestardust 小红书号：onestardust 粉丝・93 笔记・9 关注":
+  - /url: /user/profile/67861db6000000000801df61
+  - generic: onestardust
+  - generic: 小红书号：onestardust
+  - generic: 粉丝・93
+  - generic: 笔记・9
+  - button "关注":
+    - generic: 关注
+- link "izzykathryn 小红书号：26204693577 粉丝・4 笔记・1 关注":
+  - /url: /user/profile/6788486a000000000803cc35
+  - generic: izzykathryn
+  - generic: 小红书号：26204693577
+  - generic: 粉丝・4
+  - generic: 笔记・1
+  - button "关注":
+    - generic: 关注
+- link "small city BIG LOVE 小红书号：3612704952 粉丝・1 关注":
+  - /url: /user/profile/65339eb6000000000301d65a
+  - generic: small city BIG LOVE
+  - generic: 小红书号：3612704952
+  - generic: 粉丝・1
+  - button "关注":
+    - generic: 关注
+- link "噜噜猫🐱 2小时前更新 小红书号：ljdaydayupp 粉丝・170 笔记・38 关注":
+  - /url: /user/profile/62adbecc000000001b02653c
+  - generic: 噜噜猫🐱
+  - generic: 2小时前更新
+  - generic: 小红书号：ljdaydayupp
+  - generic: 粉丝・170
+  - generic: 笔记・38
+  - button "关注":
+    - generic: 关注
+- link "Alli ✨ 小红书号：95617261409 粉丝・1 关注":
+  - /url: /user/profile/6786e1f8000000000803d4c9
+  - generic: Alli ✨
+  - generic: 小红书号：95617261409
+  - generic: 粉丝・1
+  - button "关注":
+    - generic: 关注
+- link "with.trista 5天前更新 小红书号：854062571 粉丝・361 笔记・46 关注":
+  - /url: /user/profile/5f3629dc0000000001006d54
+  - generic: with.trista
+  - generic: 5天前更新
+  - generic: 小红书号：854062571
+  - generic: 粉丝・361
+  - generic: 笔记・46
+  - button "关注":
+    - generic: 关注
+- link "trista.studio.goods 16天前更新 小红书号：186009254 粉丝・44 笔记・5 关注":
+  - /url: /user/profile/5a5122224eacab2a305a09ba
+  - generic: trista.studio.goods
+  - generic: 16天前更新
+  - generic: 小红书号：186009254
+  - generic: 粉丝・44
+  - generic: 笔记・5
+  - button "关注":
+    - generic: 关注
+- link "Wendys Knits 小红书号：Wendy_Knit 粉丝・4 笔记・8 关注":
+  - /url: /user/profile/61b4c5090000000010007592
+  - generic: Wendys Knits
+  - generic: 小红书号：Wendy_Knit
+  - generic: 粉丝・4
+  - generic: 笔记・8
+  - button "关注":
+    - generic: 关注
+- link "Uno肠 23天前更新 小红书号：sssii_555 粉丝・278 笔记・181 关注":
+  - /url: /user/profile/5e718c8d0000000001002c17
+  - generic: Uno肠
+  - generic: 23天前更新
+  - generic: 小红书号：sssii_555
+  - generic: 粉丝・278
+  - generic: 笔记・181
+  - button "关注":
+    - generic: 关注
+- link "yeebee 英比母婴 小红书号：1526916013 粉丝・22 笔记・18 关注":
+  - /url: /user/profile/62764f4e000000002102b4fc
+  - generic: yeebee 英比母婴
+  - generic: 小红书号：1526916013
+  - generic: 粉丝・22
+  - generic: 笔记・18
+  - button "关注":
+    - generic: 关注
+- link "Lé Që 小红书号：8722457460 粉丝・2 笔记・16 关注":
+  - /url: /user/profile/6537e1ba000000000200f8d4
+  - generic: Lé Që
+  - generic: 小红书号：8722457460
+  - generic: 粉丝・2
+  - generic: 笔记・16
+  - button "关注":
+    - generic: 关注
+- link "只二小助理 小红书号：4144646839 粉丝・8 关注":
+  - /url: /user/profile/6292e1180000000021020752
+  - generic: 只二小助理
+  - generic: 小红书号：4144646839
+  - generic: 粉丝・8
+  - button "关注":
+    - generic: 关注
+- button:
+- generic: 活动
+- button:
+- button:
+- iframe

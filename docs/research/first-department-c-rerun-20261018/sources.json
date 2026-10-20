@@ -1,0 +1,438 @@
+{
+  "checkedAt": "2026-10-18",
+  "window": [
+    "2025-01-01",
+    "2026-10-18"
+  ],
+  "placeId": "shanghai-shop-001",
+  "shops": [
+    {
+      "name": "多摩万事屋（第一百货店）",
+      "result": "open",
+      "sources": [
+        {
+          "label": "多摩第一百货店本人·地址与主营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/62fb4b19000000000f005c0d"
+        },
+        {
+          "label": "人民网·金台资讯（新浪转载）·第一百货商业中心实景介绍",
+          "url": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html",
+          "date": "2026-01-20"
+        }
+      ]
+    },
+    {
+      "name": "春日动漫中古店",
+      "result": "open",
+      "sources": [
+        {
+          "label": "春日门店本人·当前第一百货地址简介",
+          "url": "https://www.xiaohongshu.com/user/profile/5c62e10800000000120269f3"
+        },
+        {
+          "label": "春日门店号·博士招募周边上新",
+          "url": "https://www.xiaohongshu.com/explore/6aabaa37000000002900d5b5",
+          "dateLabel": "09-17（页面未显示年份，2026-10-18读取）"
+        }
+      ]
+    },
+    {
+      "name": "面包谷谷",
+      "result": "open",
+      "sources": [
+        {
+          "label": "面包谷谷抖音认证店铺号·当前地址与经营简介",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAKH7gNtMtBSr8IotvQjs3Xe2x9DgqnMf_BAWu2Uhx6Zg"
+        },
+        {
+          "label": "面包谷谷本人·超时空辉夜姬周边作品",
+          "url": "https://www.douyin.com/video/7600395171616515173",
+          "date": "2026-01-28"
+        }
+      ]
+    },
+    {
+      "name": "Sanrio Characters Cafe 三丽鸥家族主题餐厅",
+      "result": "open",
+      "sources": [
+        {
+          "label": "Sanriocharacters_Cafe·Hello Kitty sweet cafe本店主题公告",
+          "url": "https://www.sina.cn/news/detail/5343493154930981.html",
+          "date": "2026-09-15"
+        }
+      ]
+    },
+    {
+      "name": "Mr.T 托老师の谷店",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ]
+    },
+    {
+      "name": "次元站台",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ]
+    },
+    {
+      "name": "偶尔梦游",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ]
+    },
+    {
+      "name": "HAPPY ZOO 小铺",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ]
+    },
+    {
+      "name": "巫狐魔谷店",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ]
+    },
+    {
+      "name": "谷的Time",
+      "result": "open",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        },
+        {
+          "label": "谷的Time一百店本人·铺位、主营与线下经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/635a1cea00000000120257a6"
+        },
+        {
+          "label": "谷的Time一百店·舞萌新品（主页读取标题）",
+          "url": "https://www.xiaohongshu.com/explore/6ad223ec000000001b033b55",
+          "dateLabel": "帖子未取得明确日期；用户搜索显示1天前更新，2026-10-18读取"
+        }
+      ]
+    },
+    {
+      "name": "Koi Tune",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        },
+        {
+          "label": "新民晚报张钰芸·上观新闻（C馆4至6楼引进店铺）",
+          "url": "https://www.shobserver.com/wx/detail.do?id=904356",
+          "date": "2025-05-03"
+        }
+      ]
+    },
+    {
+      "name": "囍模屋",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ]
+    },
+    {
+      "name": "棉花猫谷屋",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ]
+    },
+    {
+      "name": "真谷",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ]
+    },
+    {
+      "name": "水豚小怪兽",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ]
+    },
+    {
+      "name": "CREAM CAFE",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        },
+        {
+          "label": "尼库漫肉包文化·素晴日联动地址公告（该期已结束）",
+          "url": "https://www.sina.cn/news/detail/5315848672648147.html",
+          "date": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "name": "奶惜 nicegoods",
+      "result": "open",
+      "sources": [
+        {
+          "label": "人民网·金台资讯（新浪转载）·第一百货商业中心实景介绍",
+          "url": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html",
+          "date": "2026-01-20"
+        },
+        {
+          "label": "奶惜本人·当前C馆四楼地址简介",
+          "url": "https://www.xiaohongshu.com/user/profile/65378f040000000004009d05"
+        },
+        {
+          "label": "奶惜本人·世界之外一番赏来啦",
+          "url": "https://www.xiaohongshu.com/explore/69732a9c000000000c03545e",
+          "dateLabel": "01-23（页面未显示年份，2026-10-18读取）"
+        }
+      ]
+    },
+    {
+      "name": "萌樱",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "人民网·金台资讯（新浪转载）·第一百货商业中心实景介绍",
+          "url": "https://k.sina.cn/article_6824573189_196c6b90502002i7la.html",
+          "date": "2026-01-20"
+        }
+      ]
+    },
+    {
+      "name": "古典玩偶",
+      "result": "open",
+      "sources": [
+        {
+          "label": "第一百货商业中心官方·C馆新店与慢闪公告",
+          "url": "https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3",
+          "dateLabel": "编辑于10-08（页面未显示年份，2026-10-18读取）"
+        }
+      ]
+    },
+    {
+      "name": "阅文好物",
+      "result": "open",
+      "sources": [
+        {
+          "label": "第一百货商业中心官方·C馆新店与慢闪公告",
+          "url": "https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3",
+          "dateLabel": "编辑于10-08（页面未显示年份，2026-10-18读取）"
+        }
+      ]
+    },
+    {
+      "name": "雪鱼町",
+      "result": "open",
+      "sources": [
+        {
+          "label": "第一百货商业中心官方·C馆新店与慢闪公告",
+          "url": "https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3",
+          "dateLabel": "编辑于10-08（页面未显示年份，2026-10-18读取）"
+        },
+        {
+          "label": "雪鱼工作室本人·当前C馆四层地址与经营简介",
+          "url": "https://www.xiaohongshu.com/user/profile/667bb78a000000001c0005a1"
+        }
+      ]
+    },
+    {
+      "name": "谷子集合·绘梦造物",
+      "result": "open",
+      "sources": [
+        {
+          "label": "第一百货商业中心官方·C馆新店与慢闪公告",
+          "url": "https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3",
+          "dateLabel": "编辑于10-08（页面未显示年份，2026-10-18读取）"
+        }
+      ]
+    },
+    {
+      "name": "FenzGoods 慢闪店（非人哉·荒野俱乐部）",
+      "result": "open",
+      "sources": [
+        {
+          "label": "第一百货商业中心官方·C馆新店与慢闪公告",
+          "url": "https://www.xiaohongshu.com/explore/6ac767e00000000018012ea3",
+          "dateLabel": "编辑于10-08（页面未显示年份，2026-10-18读取）"
+        }
+      ]
+    },
+    {
+      "name": "六柴谷屋（第一百货店）",
+      "result": "open",
+      "sources": [
+        {
+          "label": "六柴谷屋本人·当前上海第一百货C馆6楼主页",
+          "url": "https://www.xiaohongshu.com/user/profile/618d2992000000001000ec47"
+        },
+        {
+          "label": "六柴谷屋本人·上海店地址",
+          "url": "https://www.xiaohongshu.com/explore/69ea11e9000000001f006335",
+          "dateLabel": "04-23（页面未显示年份，2026-10-18读取）"
+        }
+      ]
+    },
+    {
+      "name": "铃夏学园（上海店）",
+      "result": "open",
+      "sources": [
+        {
+          "label": "铃夏学园本人·上海与武汉分店地址简介",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAMquuwI9GwVygSK8mUA9kZ7jYvm9SjaXyzppIOQFDChrV8sdVmlmIPgkQthk7DJS7"
+        },
+        {
+          "label": "铃夏学园本人·新店开业与新地址指引",
+          "url": "https://www.douyin.com/video/7589996999739526457",
+          "date": "2025-12-31"
+        }
+      ]
+    },
+    {
+      "name": "蔷薇石英",
+      "result": "open",
+      "sources": [
+        {
+          "label": "新民晚报张钰芸·上观新闻（C馆4至6楼引进店铺）",
+          "url": "https://www.shobserver.com/wx/detail.do?id=904356",
+          "date": "2025-05-03"
+        },
+        {
+          "label": "蔷薇石英本人·C馆门店简介与上新作品",
+          "url": "https://www.douyin.com/user/MS4wLjABAAAA191NHHtR3g0vVytffbXFFIf93DilXZSABRm-P3-Qa1MsnAy3lhczJoO2j4BRWXJN"
+        },
+        {
+          "label": "蔷薇石英本人·2026年1月店内活动（已结束，仅作经营依据）",
+          "url": "https://www.douyin.com/note/7592064894402283688",
+          "dateLabel": "正文活动从2026-01-07开启；未取得发帖日期"
+        }
+      ]
+    },
+    {
+      "name": "Magic WOW",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "新民晚报张钰芸·上观新闻（C馆4至6楼引进店铺）",
+          "url": "https://www.shobserver.com/wx/detail.do?id=904356",
+          "date": "2025-05-03"
+        }
+      ]
+    },
+    {
+      "name": "百人卡牌对战中心",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "新民晚报张钰芸·上观新闻（C馆4至6楼引进店铺）",
+          "url": "https://www.shobserver.com/wx/detail.do?id=904356",
+          "date": "2025-05-03"
+        }
+      ]
+    },
+    {
+      "name": "次元无极",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "新民晚报张钰芸·上观新闻（C馆4至6楼引进店铺）",
+          "url": "https://www.shobserver.com/wx/detail.do?id=904356",
+          "date": "2025-05-03"
+        }
+      ]
+    },
+    {
+      "name": "琉璃星",
+      "result": "evidence",
+      "sources": [
+        {
+          "label": "新民晚报张钰芸·上观新闻（C馆4至6楼引进店铺）",
+          "url": "https://www.shobserver.com/wx/detail.do?id=904356",
+          "date": "2025-05-03"
+        }
+      ]
+    },
+    {
+      "name": "谷回动漫中古店（第一百货店）",
+      "result": "closed",
+      "sources": [
+        {
+          "label": "谷回门店本人·谷回动漫一百店闭店",
+          "url": "https://www.xiaohongshu.com/explore/6ab4ce8b0000000014003726",
+          "dateLabel": "编辑于09-24；公告写10月8日正式闭店（页面未显示年份）"
+        },
+        {
+          "label": "焦糖小谷包·上海吃谷攻略",
+          "url": "https://www.sina.cn/news/detail/5308626362172404.html",
+          "date": "2026-06-11"
+        }
+      ]
+    }
+  ],
+  "gallery": {
+    "change": "none",
+    "ledger": "../first-department-c-20261018/sources.json"
+  },
+  "notAdopted": [
+    {
+      "name": "XW model、五层扭蛋售卖馆",
+      "url": "https://www.sohu.com/a/909234083_121668715",
+      "reason": "搜索摘要出现，但本轮已读取正文未能定位对应段落；仅作后续候选，不接入。"
+    },
+    {
+      "name": "百忍卡牌对战中心",
+      "url": "https://m.jiemian.com/article/13266559.html",
+      "reason": "检索摘要出现不同写法，正文未检得名称；不擅自合并别名或更名。"
+    },
+    {
+      "name": "CREAM CAFE较新报道",
+      "url": "https://finance.sina.com.cn/jjxw/2026-09-18/doc-inisfiii0259547.shtml",
+      "reason": "已读页面未检得Cream相关正文，未采用搜索摘要更新本店证据。"
+    }
+  ]
+}
