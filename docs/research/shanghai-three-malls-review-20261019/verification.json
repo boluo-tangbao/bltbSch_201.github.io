@@ -17,19 +17,14 @@
       "result": "vue-tsc及Vite通过"
     }
   ],
-  "log": "checks.log",
   "browserObservations": "browser-observations.json",
   "allThreeWidths": [
     1440,
     390
   ],
   "screenshots": [
-    "c-desktop-1440.png",
     "c-mobile-390.png",
-    "new-world-desktop-1440.png",
-    "new-world-mobile-390.png",
-    "huasheng-desktop-1440.png",
-    "huasheng-mobile-390.png"
+    "huasheng-desktop-1440.png"
   ],
   "initialPendingCollapsed": true,
   "limitedPendingEmptySectionHidden": true,

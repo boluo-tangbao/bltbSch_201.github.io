@@ -18,7 +18,6 @@
       "result": "vue-tsc及Vite构建通过"
     }
   ],
-  "log": "checks.log",
   "browser": {
     "desktop": {
       "width": 1440,

@@ -85,6 +85,6 @@ node scripts/preview-site.mjs
 
 `npm run dev` 在 rank 启动前也会生成活动，Vite 可访问主站页面、assets 与公开图片。完整部署预览默认为 `http://127.0.0.1:4180/bltbSch_201.github.io/`；使用 `SITE_BASE=/` 等环境变量可更改主站前缀。浏览器验收默认使用已安装的 Edge；Linux/CI 设置 `PLAYWRIGHT_CHANNEL=chromium` 并先安装 Playwright Chromium。
 
-`verify-activities.mjs --static` 只执行元数据、逐场素材数量和部署排除检查。完整验收还覆盖全部活动、五主题隔离（额外主题使用测试响应，不写真实记录）、类型与年份、直接分享、旧链接、预览开关、图片放大、视频实际播放及关闭、返回列表、rank 入口、页面与资源访问和 390/768/1440px 布局。截图保存在忽略的 `test-results/activities/`。日常验收按当前元数据和原始素材动态检查。
+`verify-activities.mjs --static` 只执行元数据、逐场素材数量和部署排除检查。完整验收还覆盖全部活动、五主题隔离（额外主题使用测试响应，不写真实记录）、类型与年份、直接分享、旧链接、预览开关、图片放大、视频实际播放及关闭、返回列表、rank 入口、页面与资源访问和 390/768/1440px 布局。截图保存在忽略的 `test-results/activities/`。日常验收按当前元数据和原始素材动态检查。长期迁移基线保存于 [activity-migration-baseline.json](activity-migration-baseline.json)，不放临时测试目录；必要时追加 `--migration` 校验149个迁移原件的SHA-256，普通新增活动不更新或套用这份历史基线。2026-10-19整理前已存在差异：历史基线中的4张ChinaJoy照片不在现目录，现存145项哈希一致；保留原基线，不将完整迁移核验记为通过。
 
 GitHub Pages 工作流继续从 main 部署，使用通用脚本组装和验收；活动生成缓存可复用。用户只提交源码、元数据和原始素材，生成产物自动处理。店铺维护另遵守 [固定维护规则](shop-directory-rules.md)。

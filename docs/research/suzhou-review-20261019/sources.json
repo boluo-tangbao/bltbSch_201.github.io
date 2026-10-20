@@ -373,5 +373,5 @@
       "reviewedAt": null
     }
   ],
-  "note": "本轮仅复用已有实拍与原官方素材；未重复下载。新店来源见directories.json和candidates.json。照片日期不当发帖日期。"
+  "note": "本轮仅复用已有实拍与原官方素材；未重复下载。新店来源见../../../rank/src/data/shop-directories.json和candidates.json。照片日期不当发帖日期。"
 }

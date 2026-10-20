@@ -23,9 +23,9 @@ for(const event of source) {
  for(const media of record.media)for(const path of [media.src,media.preview,media.poster].filter(Boolean))assert.ok(existsSync(new URL('../_site/'+path,import.meta.url)))
 }
 for(const path of ['content','images/anime/events','images/anime/event-web','scripts','docs'])assert.equal(existsSync(new URL('../_site/'+path,import.meta.url)),false)
-const baseline=new URL('../test-results/activity-migration-before.json',import.meta.url)
+const baseline=new URL('../docs/activity-migration-baseline.json',import.meta.url)
 if(process.argv.includes('--migration')&&existsSync(baseline)) {
- const before=JSON.parse(readFileSync(baseline,'utf8'))
+ const before=JSON.parse(readFileSync(baseline,'utf8')).media
  const current=source.flatMap(e=>activityFiles(e.folder).map(file=>({folder:e.folder,file})))
  assert.equal(current.length,before.length)
  for(const file of before)assert.equal(createHash('sha256').update(readFileSync(resolve(activityRoot,file.folder,file.file))).digest('hex'),file.sha256)

@@ -60,8 +60,8 @@ C馆数量未变。新世界漫魂从待核升级确认，店数未增加，新�
 
 生产数据只改三处店单、地点updatedAt和新增批次three-malls-date-evidence-review-20261019。其他地点（含刚更新的静安大悦城）、店单和已有更新记录均核对不变；三处作者原字段与图集逐字段保护，详见[data-verification.json](data-verification.json)、更新前[before.json](before.json)。未改共享组件或搜索逻辑。
 
-- Node.js v24.19.0，rank目录npm run validate:data、npm test、npm run build全部通过：29地点、33条更新，50项测试0失败，vue-tsc及Vite成功。实际日志[checks.log](checks.log)。
-- 三处各1440×1000桌面、390×844手机均实际检查，数量与上表一致，无横向溢出；确认营业卡片两类来源列表为0，账号分别9／7／19，图集21／12／17。三处限时栏、FenzGoods完整年份及ANIKIGOODS暂定截止可读。截图：[C馆桌面](c-desktop-1440.png)／[手机](c-mobile-390.png)、[新世界桌面](new-world-desktop-1440.png)／[手机](new-world-mobile-390.png)、[华盛桌面](huasheng-desktop-1440.png)／[手机](huasheng-mobile-390.png)。
+- Node.js v24.19.0，rank目录npm run validate:data、npm test、npm run build全部通过：29地点、33条更新，50项测试0失败，vue-tsc及Vite成功。结果见[verification.json](verification.json)。
+- 三处各1440×1000桌面、390×844手机均实际检查，数量与上表一致，无横向溢出；确认营业卡片两类来源列表为0，账号分别9／7／19，图集21／12／17。三处限时栏、FenzGoods完整年份及ANIKIGOODS暂定截止可读。代表截图：[C馆手机](c-mobile-390.png)、[华盛桌面](huasheng-desktop-1440.png)。
 - 三处默认待核实区关闭，限时待核实为0不生成空折叠栏。已结束记录未进入前台卡片计数。ComicSoul搜索命中1个结果新世界城，升级记录可被搜索，待核实店仍按原机制不进入索引。
 - **展开交互未记本轮通过**：本轮对新世界summary尝试定位器点击、键盘、可访问展开及可见坐标点击，自动化不能稳定触发／核实展开，记录为浏览器交互验收限制；不因旧报告通过就写成本轮成功。数据中的有效原始链接保留，原共享组件未改。此项仍需后续人工或稳定浏览器复核。
 - 页面初始再次弹出外部百度地图APP Referer白名单错误；首次C馆标签失去同步，新标签关闭错误弹窗后完成上述数量与布局核对。未改地图配置，在线地图服务不记通过；本轮未重复刷新以免把失败重试当额外成功。图集内容未改，本轮仅核数量，没有再次全面放大／视频播放验收。临时视口已恢复。

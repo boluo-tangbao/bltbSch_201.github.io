@@ -80,7 +80,7 @@ RE-MENT的9月25日开业、森雨漫的10月1日开业均可结合2026年本期
 
 - 店单checkedAt更新到2026-10-19，表示本次对日期、归属及过期状态的复核；各官网／账号原读取日仍2026-10-18，没有冒充今天重新打开所有账号。地点updatedAt为2026-10-19，新增更新批次jingan-joy-city-date-review-20261019。
 - 保留作者评级above、order 10、评价、visitedAt 2026-05-02、地址及WGS84坐标、12项图集和视频章节；无新下载图片。2024历史活动图仅沿用原历史标注，不参与本轮营业确认。原始素材台账见[上轮sources.json](../jingan-joy-city-20261018/sources.json)。
-- Node.js v24.19.0，在rank执行npm run validate:data、npm test、npm run build：数据校验、50项测试、vue-tsc及Vite构建通过。实际日志[checks.log](checks.log)。
+- Node.js v24.19.0，在rank执行npm run validate:data、npm test、npm run build：数据校验、50项测试、vue-tsc及Vite构建通过。结果见[verification.json](verification.json)。
 - [1440px桌面截图](desktop-1440.png)与[390px手机截图](mobile-390.png)均无横向溢出。确认营业来源列表隐藏，7个账号入口保留；14条待核实可展开，保留29个营业／位置来源链接；已结束5条的前台卡片为0。
 - 默认仅一个常规待核实折叠栏，初态关闭；限时待核实为0，不显示空栏。页面DOM卡片33，7条当前限时档期均有完整年份。樱漫搜索返回0符合既有搜索仅索引已确认营业条目的规则，本轮未改搜索机制；待核实通过展开查看。
 - 页面刷新再次触发外部百度地图APP Referer白名单校验失败弹窗，随后浏览器控制超时；不声称外部地图或这次刷新后DOM验收通过。刷新前桌面、手机、数量、来源和展开实测已完成；临时视口已恢复。导航坐标数据未改。
