@@ -1,0 +1,106 @@
+[
+  {
+    "placeId": "guangzhou-shop-004",
+    "name": "Maid Jump Goods Cafe",
+    "source": "https://www.sohu.com/a/942633642_120047249",
+    "result": "关联未明，暂不另接入",
+    "reason": "本人用户搜索未匹配；2025行业实访及西区Goods Cafe照片关系待核，可能与旧泛称重复，未另计店",
+    "next": "仅有新有效信息时沿具体缺口补核"
+  },
+  {
+    "placeId": "guangzhou-shop-004",
+    "name": "小小谷努咪",
+    "source": "https://www.xiaohongshu.com/explore/6acee5fb00000000140013a3",
+    "result": "原帖无法读取，暂不接入",
+    "reason": "恢复验证后直接打开仍要求App查看；旧2025/12—2026/2快闪不能决定本期状态",
+    "next": "仅有新有效信息时沿具体缺口补核"
+  },
+  {
+    "placeId": "guangzhou-shop-004",
+    "name": "梦幻潮玩",
+    "source": "https://wechat.bandainamcotoyshobbysh.com/H5/store.php?id=471",
+    "result": "目录无法实际读取，暂不接入",
+    "reason": "实际打开为空模板；不能把检索摘要冒充当前官方目录。邻近铺号疑点待核，不按同址与甜物嗒嗒/潮玩星球合并",
+    "next": "仅有新有效信息时沿具体缺口补核"
+  },
+  {
+    "placeId": "guangzhou-shop-004",
+    "name": "星梦偶像萌仆料理广州",
+    "source": "https://www.xiaohongshu.com/user/profile/6ac340da0000000013032802",
+    "result": "范围暂不匹配，未接入",
+    "reason": "已读本人，主要公演、萌仆排班、料理与cos日，未取得周边零售或授权IP主题经营依据；不等于判断未营业",
+    "next": "仅有新有效信息时沿具体缺口补核"
+  },
+  {
+    "placeId": "guangzhou-shop-004",
+    "name": "东映广州店",
+    "source": "https://www.xiaohongshu.com/explore/6aa518f2000000002802e9ad",
+    "result": "异商场排除",
+    "reason": "本轮已读正文明确正佳广场6F；不按搜索关联套入时尚天河，旧时尚天河东映快闪另属历史",
+    "next": "仅有新有效信息时沿具体缺口补核"
+  },
+  {
+    "placeId": "guangzhou-shop-004",
+    "name": "次元GO广州",
+    "source": "https://www.xiaohongshu.com/explore/6ad229e8000000001803ad89",
+    "result": "本条未归属时尚天河，未接入",
+    "reason": "搜索结果上新标题未指向本商场；已知原网页账号关联动漫星城，不据搜索结果增造时尚天河分店，未重复搜已记录账号",
+    "next": "仅有新有效信息时沿具体缺口补核"
+  },
+  {
+    "placeId": "guangzhou-shop-004",
+    "name": "假面骑士麦斯快闪",
+    "source": "https://www.xiaohongshu.com/explore/6acb93dd000000001b0206ee",
+    "result": "延期未核，未接入",
+    "reason": "探店称好像延期，已知原期9/5–10/7；未取得本人延期依据，不推当前有效",
+    "next": "仅有新有效信息时沿具体缺口补核"
+  },
+  {
+    "placeId": "guangzhou-shop-004",
+    "name": "重返未来众声漫游夜／猎人REUNION／遇意IP集合",
+    "source": "https://www.xiaohongshu.com/explore/6acb93dd000000001b0206ee",
+    "result": "探店所述结束，仅归档",
+    "reason": "所述结束日分别10/18、10/18、10/15，早于读取日；原始官方起始期未取得",
+    "next": "仅有新有效信息时沿具体缺口补核"
+  },
+  {
+    "placeId": "guangzhou-shop-004",
+    "name": "萌购／一番赏／猫屋",
+    "source": "https://www.douyin.com/search/%E6%97%B6%E5%B0%9A%E5%A4%A9%E6%B2%B3%20%E8%A5%BF%E5%8C%BA%20%E8%B0%B7%E5%AD%90",
+    "result": "主体不明，未接入",
+    "reason": "2026-03-16 LLMY泛称，无可匹配门头/账号/铺位，不能当三家独立实体",
+    "next": "仅有新有效信息时沿具体缺口补核"
+  },
+  {
+    "placeId": "guangzhou-shop-004",
+    "name": "万谷AM Goods（杭州）",
+    "source": "https://www.xiaohongshu.com/user/profile/68d20157000000002101a492",
+    "result": "异城市排除",
+    "reason": "已读本人简介杭州工联CC B2，不是本店",
+    "next": "仅有新有效信息时沿具体缺口补核"
+  },
+  {
+    "placeId": "guangzhou-shop-004",
+    "name": "GuGuGuGu同名空白号",
+    "source": "https://www.xiaohongshu.com/user/profile/6826d8c30000000008016bf6",
+    "result": "账号不采用",
+    "reason": "0粉0帖无简介、地址或经营；实体旧线索仍保留折叠",
+    "next": "仅有新有效信息时沿具体缺口补核"
+  },
+  {
+    "placeId": "guangzhou-shop-004",
+    "name": "名创优品",
+    "source": "https://www.amz520.com/articles/52130.html",
+    "result": "仅场景背景，未接入本轮谷店表",
+    "reason": "行业文章提到百货跨界销售场景，未定位本轮独立店铺，不为扩充数量将泛百货名称计入",
+    "next": "仅有新有效信息时沿具体缺口补核"
+  },
+  {
+    "placeId": "guangzhou-shop-004",
+    "name": "集卡社",
+    "source": "https://www.xiaohongshu.com/user/profile/697dce10000000001c0342ec",
+    "result": "关联业务不重复计店",
+    "reason": "森罗万象本人简介作为卡牌渠道关联，尚未证明另一独立铺位",
+    "next": "仅有新有效信息时沿具体缺口补核"
+  }
+]

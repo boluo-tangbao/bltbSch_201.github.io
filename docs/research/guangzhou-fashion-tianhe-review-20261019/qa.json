@@ -1,0 +1,230 @@
+{
+  "date": "2026-10-19",
+  "environment": "项目Playwright + 独立无登录Edge；用户已授权本地验收",
+  "code": {
+    "node": "24.19.0",
+    "validateData": {
+      "passed": true,
+      "places": 29,
+      "updates": 36
+    },
+    "tests": {
+      "passed": 50,
+      "failed": 0
+    },
+    "types": true,
+    "productionBuild": true,
+    "sharedComponentsChanged": false,
+    "published": false
+  },
+  "preservation": {
+    "unrelatedDirectoriesUnchanged": true,
+    "unrelatedPlacesUnchanged": true,
+    "originalUpdatesRetained": true,
+    "authorFieldsUnchanged": true,
+    "originalAuthorMedia": 29,
+    "remainingAuthorMedia": 29,
+    "galleryBefore": 31,
+    "galleryAfter": 30,
+    "authorMediaSourcesPreserved": true,
+    "onlyRemovedMedia": "2022潮玩星球网图，原文件仍存在",
+    "removedFileExists": true,
+    "onlyAuthorMediaEdit": "捣谷社DGS门头图注纠错",
+    "galleryAfterLastSupplementUnchanged": true
+  },
+  "pages": [
+    {
+      "width": 1440,
+      "route": "rank/",
+      "heading": "时尚天河",
+      "counts": {
+        "regularConfirmed": 32,
+        "limitedConfirmed": 5,
+        "regularPending": 7,
+        "limitedPending": 2,
+        "accountEntrances": 31
+      },
+      "defaultClosed": true,
+      "confirmedSources": 0,
+      "sourceLinks": [
+        {
+          "section": "regular",
+          "sourceLinks": 10
+        },
+        {
+          "section": "limited",
+          "sourceLinks": 3
+        }
+      ],
+      "gallery": 30,
+      "overflow": {
+        "viewport": 1440,
+        "document": 1440
+      },
+      "refreshClosed": true,
+      "directoryAssociated": null,
+      "photo": {
+        "loaded": true,
+        "initial": "1 / 30",
+        "next": "2 / 30",
+        "focusRestored": true
+      },
+      "video": {
+        "readyState": 4,
+        "currentTime": 0.209414,
+        "duration": 5.222,
+        "paused": false,
+        "error": null
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "route": "guide/",
+      "heading": "时尚天河",
+      "counts": {
+        "regularConfirmed": 32,
+        "limitedConfirmed": 5,
+        "regularPending": 7,
+        "limitedPending": 2,
+        "accountEntrances": 31
+      },
+      "defaultClosed": true,
+      "confirmedSources": 0,
+      "sourceLinks": [
+        {
+          "section": "regular",
+          "sourceLinks": 10
+        },
+        {
+          "section": "limited",
+          "sourceLinks": 3
+        }
+      ],
+      "gallery": 30,
+      "overflow": {
+        "viewport": 1440,
+        "document": 1440
+      },
+      "refreshClosed": true,
+      "directoryAssociated": true,
+      "photo": {
+        "loaded": true,
+        "initial": "1 / 30",
+        "next": "2 / 30",
+        "focusRestored": true
+      },
+      "video": {
+        "readyState": 4,
+        "currentTime": 0.212525,
+        "duration": 5.222,
+        "paused": false,
+        "error": null
+      },
+      "passed": true
+    },
+    {
+      "width": 390,
+      "route": "rank/",
+      "heading": "时尚天河",
+      "counts": {
+        "regularConfirmed": 32,
+        "limitedConfirmed": 5,
+        "regularPending": 7,
+        "limitedPending": 2,
+        "accountEntrances": 31
+      },
+      "defaultClosed": true,
+      "confirmedSources": 0,
+      "sourceLinks": [
+        {
+          "section": "regular",
+          "sourceLinks": 10
+        },
+        {
+          "section": "limited",
+          "sourceLinks": 3
+        }
+      ],
+      "gallery": 30,
+      "overflow": {
+        "viewport": 390,
+        "document": 390
+      },
+      "refreshClosed": true,
+      "directoryAssociated": null,
+      "photo": {
+        "loaded": true,
+        "initial": "1 / 30",
+        "next": "2 / 30",
+        "focusRestored": true
+      },
+      "video": {
+        "readyState": 4,
+        "currentTime": 0.213691,
+        "duration": 5.222,
+        "paused": false,
+        "error": null
+      },
+      "passed": true
+    },
+    {
+      "width": 390,
+      "route": "guide/",
+      "heading": "时尚天河",
+      "counts": {
+        "regularConfirmed": 32,
+        "limitedConfirmed": 5,
+        "regularPending": 7,
+        "limitedPending": 2,
+        "accountEntrances": 31
+      },
+      "defaultClosed": true,
+      "confirmedSources": 0,
+      "sourceLinks": [
+        {
+          "section": "regular",
+          "sourceLinks": 10
+        },
+        {
+          "section": "limited",
+          "sourceLinks": 3
+        }
+      ],
+      "gallery": 30,
+      "overflow": {
+        "viewport": 390,
+        "document": 390
+      },
+      "refreshClosed": true,
+      "directoryAssociated": true,
+      "photo": {
+        "loaded": true,
+        "initial": "1 / 30",
+        "next": "2 / 30",
+        "focusRestored": true
+      },
+      "video": {
+        "readyState": 4,
+        "currentTime": 0.229224,
+        "duration": 5.222,
+        "paused": false,
+        "error": null
+      },
+      "passed": true
+    }
+  ],
+  "interactionScope": "图片／视频实测发生于最后补店前；最后补店未改图集或组件，最终数量、分栏、来源、折叠及目录已追加复核",
+  "errors": [],
+  "localHttpFailures": [],
+  "onlineMap": {
+    "passed": false,
+    "reason": "地图请求网络拒绝或离页中断，未计在线地图交互通过；地址和三个导航链接已核对"
+  },
+  "initialFailure": "初次操作遗漏展开广州城市分组，点击隐藏目录项超时；修正后四组通过，未确认为页面缺陷",
+  "screenshots": [
+    "qa-final-rank-390.png",
+    "qa-rank-390-limited-expanded.png"
+  ],
+  "passed": true
+}

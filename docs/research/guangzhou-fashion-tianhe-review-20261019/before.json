@@ -1,0 +1,741 @@
+{
+  "placeId": "guangzhou-shop-004",
+  "place": {
+    "id": "guangzhou-shop-004",
+    "name": "时尚天河",
+    "tier": "above",
+    "order": 30,
+    "summary": "地下迷宫，快闪居多",
+    "details": "**时尚天河在天河体育中心附近，整片商场都在地下**，餐饮、服装和体验店与谷店交错分布，如同地下迷宫（无夸张！）。\n\n店铺主要散落在西区和中区，中区又有几条相连的街，初次来很容易绕路或走回头路。\n\n**西区偏女性向**，如扭蛋、联动咖啡，也有不少 Lolita、Jk制服店铺，以及 K-pop 和内娱周边；**而中区既有常见连锁，也有日谷、中古、同人、一番赏**及专门经营某些作品的店，继续往前还会遇到潮玩和小说周边。\n\n我的直观感受是内容比较分散，商业气息比较浓厚，有点大悦城的感觉。",
+    "visitNotes": [
+      "店铺主要散落在西区和中区，中区有几条相连的街，初次来容易绕路；建议预留时间慢慢找。",
+      "这里比较适合冲着快闪来；如果本来就在天河附近，可以顺路逛。专程来建议先想好要找的品类。"
+    ],
+    "tags": [
+      "谷子集市",
+      "Kpop",
+      "中古",
+      "lolita",
+      "卡牌",
+      "快闪"
+    ],
+    "cover": "images/places/Guangzhou/时尚天河.webp",
+    "gallery": [
+      {
+        "src": "images/places/Guangzhou/时尚天河/地图截图.png",
+        "alt": "周边位置图",
+        "group": "商圈外部",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/1000.webp",
+        "alt": "商场入口",
+        "group": "商圈外部",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/官方账号补充/tianhe-route-04.webp",
+        "alt": "时尚天河入口指路：APM体育中心南站A口（千格谷官方图）",
+        "group": "商圈外部",
+        "sourceName": "千格谷官方小红书",
+        "sourceUrl": "https://www.xiaohongshu.com/explore/6ab74851000000000a024e4c"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/内部图.png",
+        "alt": "商场楼层导览",
+        "group": "店铺外景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/内部图1.png",
+        "alt": "商场街区导览",
+        "group": "店铺外景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/西区/扭扭城.jpg",
+        "alt": "扭扭城",
+        "group": "店铺外景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/西区/扭扭城2.jpg",
+        "alt": "扭扭城店面",
+        "group": "店铺外景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/西区/Cafe店.jpg",
+        "alt": "主题咖啡店",
+        "group": "店铺外景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/西区/JK、Lolita.jpg",
+        "alt": "JK 与 Lolita 街区",
+        "group": "店铺外景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/西区中区连接通道.webp",
+        "alt": "西区与中区通道",
+        "group": "店铺外景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/中区/QQ图片20260127182832.jpg",
+        "alt": "嘀谷社",
+        "group": "店铺外景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/中区/QQ图片20260127182838.jpg",
+        "alt": "萌谷子",
+        "group": "店铺外景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/中区/QQ图片20260127182848.jpg",
+        "alt": "谷艺人",
+        "group": "店铺外景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/中区/QQ图片20260127182852.jpg",
+        "alt": "谷店橱窗",
+        "group": "店铺外景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/西区/扭扭城1.jpg",
+        "alt": "扭扭城周边陈列",
+        "group": "店铺内景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/西区/特色中式寿司.jpg",
+        "alt": "中式寿司店",
+        "group": "店铺内景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/西区/Cafe店内部.jpg",
+        "alt": "咖啡店周边陈列",
+        "group": "店铺内景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/西区/Kpop店实录.jpg",
+        "alt": "K-pop 周边陈列",
+        "group": "店铺内景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/中区/OZVXbMTdB8tosTDC7p4oLe_a4Kt5SbxNpIxASOCubBHG5MZ4My8nF7SLw7JmT7dtY0q73sB2DyQcgmKUxZFQtw.jpg",
+        "alt": "角色周边",
+        "group": "店铺内景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/中区/QQ图片20260127182810.jpg",
+        "alt": "谷店陈列",
+        "group": "店铺内景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/中区/QQ图片20260127182815.jpg",
+        "alt": "周边展示台",
+        "group": "店铺内景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/中区/QQ图片20260127182822.jpg",
+        "alt": "周边展示墙",
+        "group": "店铺内景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/中区/QQ图片20260127182825.jpg",
+        "alt": "店内全景",
+        "group": "店铺内景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/中区/QQ图片20260127182828.jpg",
+        "alt": "周边货架",
+        "group": "店铺内景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/中区/QQ图片20260127182835.jpg",
+        "alt": "周边陈列",
+        "group": "店铺内景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/中区/QQ图片20260127182842.jpg",
+        "alt": "店内通道",
+        "group": "店铺内景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/中区/QQ图片20260127182845.jpg",
+        "alt": "卡牌近景",
+        "group": "店铺内景",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/西区/Kpop店实录.mp4",
+        "alt": "K-pop 店内实录",
+        "group": "店铺内景",
+        "type": "video",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/网图补充/时尚天河-潮玩星球.jpeg",
+        "alt": "潮玩星球店内陈列（网图，原图发布于 2022 年）",
+        "group": "店铺内景",
+        "sourceName": "搜狐号·南梦柯漫（2022 店铺照片）",
+        "sourceUrl": "https://m.sohu.com/a/567464965_121123945"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/西区/商场广告.jpg",
+        "alt": "角色主题广告",
+        "group": "额外活动",
+        "sourceName": "作者‘2026-01-19’直拍"
+      },
+      {
+        "src": "images/places/Guangzhou/时尚天河/中区/QQ图片20260127182818.jpg",
+        "alt": "周年角色装置",
+        "group": "额外活动",
+        "sourceName": "作者‘2026-01-19’直拍"
+      }
+    ],
+    "visitedAt": "2026-01-19",
+    "updatedAt": "2026-10-06",
+    "published": true,
+    "location": {
+      "lat": 23.137324,
+      "lng": 113.319434,
+      "coordinateSystem": "wgs84",
+      "address": "广东省广州市天河路299号"
+    }
+  },
+  "directory": {
+    "area": "时尚天河",
+    "checkedAt": "2026-10-05",
+    "shops": [
+      {
+        "name": "三月兽",
+        "floor": "负一层 · 中一街",
+        "status": "recent",
+        "note": "店铺简介明确中一街 62 号铺，国庆期间仍发布到店和补货记录。",
+        "sources": [
+          {
+            "label": "时尚天河店主页",
+            "url": "https://www.xiaohongshu.com/user/profile/66a8ed0a000000001d0236d6"
+          },
+          {
+            "label": "近期门店上新",
+            "url": "https://www.xiaohongshu.com/explore/6ac337a1000000000202af79"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "三月兽广州时尚天河店",
+            "handle": "sysgzssth",
+            "url": "https://www.xiaohongshu.com/user/profile/66a8ed0a000000001d0236d6",
+            "scope": "store"
+          }
+        ],
+        "kind": "动漫周边、手办、模型",
+        "kindSources": [
+          {
+            "label": "星悦汇三月兽商品品类介绍",
+            "url": "https://www.sipac.gov.cn/szgyyq/dthg202506/202506/e585f55089fe480f8126517eef1d25bb.shtml"
+          }
+        ]
+      },
+      {
+        "name": "COMIPLUS+",
+        "floor": "负一层 · 中一街",
+        "status": "recent",
+        "note": "店铺号近期仍发布线下打卡、补货及 10 月 1 日门店上架公告；街区按旧攻略标注。",
+        "sources": [
+          {
+            "label": "时尚天河店主页",
+            "url": "https://www.xiaohongshu.com/user/profile/66ac9406000000001d02143a"
+          },
+          {
+            "label": "国庆门店上架公告",
+            "url": "https://www.xiaohongshu.com/explore/6abcf2fd000000001802bcff"
+          },
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "COMIPLUS+广州时尚天河店",
+            "handle": "42949685026",
+            "url": "https://www.xiaohongshu.com/user/profile/66ac9406000000001d02143a",
+            "scope": "store"
+          }
+        ],
+        "kind": "动漫／游戏联动周边",
+        "kindSources": [
+          {
+            "label": "COMIPLUS品牌周边介绍（非门店库存）",
+            "url": "https://www.sina.cn/media/2589574104"
+          }
+        ]
+      },
+      {
+        "name": "樱漫",
+        "floor": "负一层 · 中二街",
+        "status": "recent",
+        "note": "9 月 20 日顾客实逛记录明确提到时尚天河樱漫；街区按旧攻略整理。",
+        "sources": [
+          {
+            "label": "9 月实逛记录",
+            "url": "https://www.xiaohongshu.com/explore/6aaff7b70000000014013bc1",
+            "date": "2026-09-20"
+          },
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ],
+        "kind": "动漫周边",
+        "kindSources": [
+          {
+            "label": "已核对的门店商品或经营记录（主营依据）",
+            "url": "https://www.xiaohongshu.com/explore/6aaff7b70000000014013bc1"
+          }
+        ]
+      },
+      {
+        "name": "谷物集",
+        "floor": "负一层 · 中三街",
+        "status": "recent",
+        "note": "商家简介列二店位于中三街 047 号，并持续发布中古、Love Live! 和 PJSK 周边记录；账号为两店共用。",
+        "sources": [
+          {
+            "label": "商家地址与上新",
+            "url": "https://www.xiaohongshu.com/user/profile/683578a3000000001b01874c"
+          },
+          {
+            "label": "近期中古周边记录",
+            "url": "https://www.xiaohongshu.com/explore/6ac1ed82000000001801ac4c"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "谷物集",
+            "handle": "27715539948",
+            "url": "https://www.xiaohongshu.com/user/profile/683578a3000000001b01874c",
+            "scope": "brand"
+          }
+        ],
+        "kind": "中古周边"
+      },
+      {
+        "name": "千格谷",
+        "floor": "负一层 · 西一街",
+        "status": "recent",
+        "note": "商家简介列西一街 065A，9 月 21 日开店帖及后续指路记录可见；账号为时尚天河和地王两店共用。",
+        "sources": [
+          {
+            "label": "商家主页",
+            "url": "https://www.xiaohongshu.com/user/profile/6a65938b0000000013002c01"
+          },
+          {
+            "label": "时尚天河开店记录",
+            "url": "https://www.xiaohongshu.com/explore/6ab108220000000031012df9",
+            "date": "2026-09-21"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "千格谷",
+            "handle": "63654204375",
+            "url": "https://www.xiaohongshu.com/user/profile/6a65938b0000000013002c01",
+            "scope": "brand"
+          }
+        ],
+        "kind": "寄售周边"
+      },
+      {
+        "name": "扭扭城",
+        "floor": "负一层 · 2 号门附近",
+        "status": "recent",
+        "note": "店铺主页明确 2 号门下楼到店，仍有 9 月 30 日上新预告及近期扭蛋记录；不沿用旧照片判断街区。",
+        "sources": [
+          {
+            "label": "时尚天河店主页",
+            "url": "https://www.xiaohongshu.com/user/profile/67885d02000000000403e6f8"
+          },
+          {
+            "label": "9.30 上新预告",
+            "url": "https://www.xiaohongshu.com/explore/6abb84c00000000015017790"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "广州扭扭城时尚天河店",
+            "handle": "nncgz888",
+            "url": "https://www.xiaohongshu.com/user/profile/67885d02000000000403e6f8",
+            "scope": "store"
+          }
+        ],
+        "kind": "扭蛋、动漫周边"
+      },
+      {
+        "name": "gugugugu",
+        "floor": "负一层 · 中一街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为夜上海中一街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ]
+      },
+      {
+        "name": "万谷",
+        "floor": "负一层 · 中一街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为夜上海中一街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ]
+      },
+      {
+        "name": "乌丸屋",
+        "floor": "负一层 · 中一街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为夜上海中一街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ]
+      },
+      {
+        "name": "萌谷子",
+        "floor": "负一层 · 中一街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为夜上海中一街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ]
+      },
+      {
+        "name": "GOODSLOVE",
+        "floor": "负一层 · 中一街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为夜上海中一街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ],
+        "kind": "国谷、日谷、动漫／游戏周边",
+        "kindSources": [
+          {
+            "label": "GOODSLOVE品牌品类介绍（非门店库存）",
+            "url": "https://www.sina.cn/media/8004243464"
+          }
+        ]
+      },
+      {
+        "name": "JOYOUTH 九九又（旧攻略作 joyth）",
+        "floor": "负一层 · 中一街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为夜上海中一街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ]
+      },
+      {
+        "name": "非人哉店",
+        "floor": "负一层 · 中一街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为夜上海中一街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ]
+      },
+      {
+        "name": "bilibili 谷子店",
+        "floor": "负一层 · 中一街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为夜上海中一街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ]
+      },
+      {
+        "name": "南漫社",
+        "floor": "负一层 · 中一街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为夜上海中一街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ]
+      },
+      {
+        "name": "趣玩+",
+        "floor": "负一层 · 中一街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为夜上海中一街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ]
+      },
+      {
+        "name": "漫库",
+        "floor": "负一层 · 中一街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为夜上海中一街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ]
+      },
+      {
+        "name": "暴萌",
+        "floor": "负一层 · 中一街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为夜上海中一街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ]
+      },
+      {
+        "name": "新乐屋",
+        "floor": "负一层 · 中一街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为夜上海中一街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ]
+      },
+      {
+        "name": "捣鼓社",
+        "floor": "负一层 · 中二街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为中二街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ]
+      },
+      {
+        "name": "潮玩星球",
+        "floor": "负一层 · 中二街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为中二街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ],
+        "kind": "动漫／游戏周边（含徽章、立牌、毛绒）",
+        "kindSources": [
+          {
+            "label": "地王潮玩星球商品与周边品类展示",
+            "url": "https://www.sohu.com/a/914156719_121123945"
+          }
+        ]
+      },
+      {
+        "name": "TOYC",
+        "floor": "负一层 · 中二街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为中二街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ]
+      },
+      {
+        "name": "饭沫宇宙",
+        "floor": "负一层 · 中二街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为中二街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ]
+      },
+      {
+        "name": "易乐谷",
+        "floor": "负一层 · 中二街",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录，位置为中二街。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ],
+        "kind": "游戏周边（网易 IP；含徽章、立牌、色纸）",
+        "kindSources": [
+          {
+            "label": "网易乐谷官方周边发售介绍（品牌范围）",
+            "url": "https://weibo.com/7893344848/PCHQNqKia"
+          }
+        ]
+      },
+      {
+        "name": "次元波板糖联动咖啡",
+        "floor": "西区",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录于西区；主题咖啡及联动内容按活动档期变化。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ],
+        "kind": "联动咖啡"
+      },
+      {
+        "name": "潮玩星球咖啡",
+        "floor": "西区",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录于西区；主题咖啡及联动内容按活动档期变化。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ],
+        "kind": "联动咖啡"
+      },
+      {
+        "name": "木木来电 Cafe",
+        "floor": "西区",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录于西区；主题咖啡及联动内容按活动档期变化。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ],
+        "kind": "联动咖啡"
+      },
+      {
+        "name": "GOODS 咖啡",
+        "floor": "西区",
+        "status": "unverified",
+        "note": "2025 年 10 月攻略收录于西区；主题咖啡及联动内容按活动档期变化。",
+        "sources": [
+          {
+            "label": "时尚天河旧楼层攻略",
+            "url": "https://www.xiaohongshu.com/explore/68f1f6400000000004029944",
+            "date": "2025-10-17"
+          }
+        ],
+        "kind": "联动咖啡"
+      },
+      {
+        "name": "MYDreamWorld",
+        "floor": "负一层 · 西一街",
+        "status": "recent",
+        "kind": "专辑、周边（K-pop、内娱、泰娱）",
+        "note": "门店号简介和2026年10月2日应援帖均注明西一街051，国庆仍有线下店铺更新。作为相关周边店收录，不保证特定专辑和小卡余量。",
+        "sources": [
+          {
+            "label": "门店主页及地址",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAA5oq8P_1qKuJWeMmGyfsO9ZNe3ygMpXcJeiXlRWLZNoDOFdK7LH1PS5B6gQKWmijb"
+          },
+          {
+            "label": "国庆门店更新",
+            "url": "https://www.douyin.com/video/7692759854503046891"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "douyin",
+            "name": "MYDreamWorld天河",
+            "handle": "78392706204",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAA5oq8P_1qKuJWeMmGyfsO9ZNe3ygMpXcJeiXlRWLZNoDOFdK7LH1PS5B6gQKWmijb",
+            "scope": "store"
+          }
+        ]
+      }
+    ]
+  },
+  "note": "只保留本地点改前数据与移出依据；其他城市及整站更新副本已清理，保留检查结论见qa.json#preservation"
+}

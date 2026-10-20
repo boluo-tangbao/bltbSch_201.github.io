@@ -1,0 +1,249 @@
+{
+  "date": "2026-10-19",
+  "status": "阶段性结果：用户验证后恢复补查，新候选已按取得的证据处置；部分原帖/当前官网目录仍无法读取，咖啡主体及主题结束日仍有缺口，不宣称全商场无遗漏。",
+  "queries": [
+    {
+      "platform": "xiaohongshu",
+      "query": "广州时尚天河 谷店",
+      "mode": "内容",
+      "url": "https://www.xiaohongshu.com/search_result?keyword=%E5%B9%BF%E5%B7%9E%E6%97%B6%E5%B0%9A%E5%A4%A9%E6%B2%B3%20%E8%B0%B7%E5%BA%97&type=51",
+      "scope": "首批约20条；已看到南漫社闭店、千格谷、快闪攻略等",
+      "result": "已实际读取；create/getTab两次超时后由已选浏览器标签接口恢复"
+    },
+    {
+      "platform": "douyin",
+      "query": "广州时尚天河 谷店",
+      "mode": "综合内容",
+      "url": "https://www.douyin.com/search/%E5%B9%BF%E5%B7%9E%E6%97%B6%E5%B0%9A%E5%A4%A9%E6%B2%B3%20%E8%B0%B7%E5%BA%97",
+      "scope": "首屏约18项；2023/2024只归档，读到2025-10-17攻略、2025-05-24萌谷子搬位转常驻描述",
+      "finding": "LLMY 03-16新增萌购/一番赏/猫屋名称缺主体且泛称，先候选不加入生产"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河",
+      "mode": "用户",
+      "scope": "首批14条，商场及三月兽、扭扭城、COMIPLUS、极乐一番已找到入口；卡游为新候选，潮玩星球1粉空号待核非确认"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 乌丸屋",
+      "mode": "内容",
+      "scope": "首批约20项+页面追加结果",
+      "finding": "顾客关闭线索、品牌9/23营业时段调整和9/24恢复通知（不能误当闭店）、本人全国目录新编辑"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 谷艺人",
+      "mode": "内容",
+      "scope": "首批20项",
+      "finding": "本人时尚天河店与2026上新帖；不套百信广场分店简介"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 萌谷子",
+      "mode": "内容＋用户",
+      "readAt": "2026-10-19",
+      "scope": "实际返回首批结果及所述直接匹配主页/正文；非全量穷举",
+      "finding": "本人西瓜糖、捣谷社、暴蒙、模玩熊、易乐谷、森罗等候选"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 万谷",
+      "mode": "内容＋用户",
+      "readAt": "2026-10-19",
+      "scope": "实际返回首批结果及所述直接匹配主页/正文；非全量穷举",
+      "finding": "杭州AM Goods/北京喜悦为异地；本店未匹配"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 GOODSLOVE",
+      "mode": "内容",
+      "readAt": "2026-10-19",
+      "scope": "实际返回首批结果及所述直接匹配主页/正文；非全量穷举",
+      "finding": "品牌本店发售证据"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "GOODSLOVE 广州",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "实际返回首批结果及所述直接匹配主页/正文；非全量穷举",
+      "finding": "首14项异地或搬运未匹配"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 GOODS 咖啡",
+      "mode": "内容＋用户",
+      "readAt": "2026-10-19",
+      "scope": "实际返回首批结果及所述直接匹配主页/正文；非全量穷举",
+      "finding": "咖啡身份歧义；首20内容及用户两项未匹配"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "GOODSLOVE CAFE",
+      "mode": "内容与匹配主页",
+      "readAt": "2026-10-19",
+      "scope": "实际返回首批结果及所述直接匹配主页/正文；非全量穷举",
+      "finding": "正式品牌号，实际最新主题正文2026档期"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 非人哉",
+      "mode": "内容＋用户",
+      "readAt": "2026-10-19",
+      "scope": "实际返回首批结果及所述直接匹配主页/正文；非全量穷举",
+      "finding": "品牌开业及本分店号/近期经营帖"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 漫库",
+      "mode": "用户与主页正文",
+      "readAt": "2026-10-19",
+      "scope": "实际返回首批结果及所述直接匹配主页/正文；非全量穷举",
+      "finding": "本店号及欢迎到店最新帖"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "B谷 时尚天河",
+      "mode": "内容＋用户",
+      "readAt": "2026-10-19",
+      "scope": "实际返回首批结果及所述直接匹配主页/正文；非全量穷举",
+      "finding": "别名匹配本店"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 gugugugu",
+      "mode": "内容＋用户",
+      "readAt": "2026-10-19",
+      "scope": "实际返回首批结果及所述直接匹配主页/正文；非全量穷举",
+      "finding": "空白同名号不可确认"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 趣玩",
+      "mode": "内容＋用户",
+      "readAt": "2026-10-19",
+      "scope": "实际返回首批结果及所述直接匹配主页/正文；非全量穷举",
+      "finding": "本人3/22闭店公告"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 新乐屋",
+      "mode": "用户",
+      "readAt": "2026-10-19",
+      "scope": "实际返回首批结果及所述直接匹配主页/正文；非全量穷举",
+      "finding": "首15项未匹配，不能套用动漫星城新樂屋号"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 饭沫宇宙",
+      "mode": "内容＋用户",
+      "readAt": "2026-10-19",
+      "scope": "实际返回首批结果及所述直接匹配主页/正文；非全量穷举",
+      "finding": "本分店近期首发确认"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 TOYC",
+      "mode": "拟内容及用户",
+      "readAt": "2026-10-19",
+      "result": "无法读取：转APP扫码验证页；没有用户结果，不记为无结果。已向用户交接验证，等待。"
+    },
+    {
+      "platform": "douyin",
+      "query": "时尚天河 西区 谷子",
+      "mode": "综合内容",
+      "url": "https://www.douyin.com/search/%E6%97%B6%E5%B0%9A%E5%A4%A9%E6%B2%B3%20%E8%A5%BF%E5%8C%BA%20%E8%B0%B7%E5%AD%90",
+      "readAt": "2026-10-19",
+      "scope": "实际读取首批约20项",
+      "finding": "2025指南与萌谷子转常驻复现；2024西区路线仅归档；2026-03-16泛称萌购/一番赏/猫屋缺主体，尚未核为独立实体。"
+    },
+    {
+      "platform": "douyin",
+      "query": "时尚天河 东区 谷子",
+      "mode": "拟内容",
+      "readAt": "2026-10-19",
+      "result": "填入搜索框并点击后工具超时，未读取新结果；不计已检查东区。"
+    },
+    {
+      "platform": "douyin",
+      "query": "时尚天河 上新 谷子",
+      "mode": "拟内容",
+      "readAt": "2026-10-19",
+      "result": "前轮操作超时未取得结果；不记为已搜无结果。"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 TOYC",
+      "mode": "恢复后内容＋用户",
+      "scope": "首批内容及用户两项；匹配TOY-C分店并另发现TOPTOY",
+      "result": "用户自行验证后站内页已恢复；已核两家主页与经营帖，旧无法读取保留为历史。",
+      "readAt": "2026-10-19"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 谷丘社",
+      "mode": "用户",
+      "scope": "实际首批返回及所述直接匹配主页/经营帖",
+      "readAt": "2026-10-19",
+      "finding": "找到谷丘社本人关闭公告及谷惑崽入口"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "谷子快跑 时尚天河",
+      "mode": "用户",
+      "scope": "实际首批返回及所述直接匹配主页/经营帖",
+      "readAt": "2026-10-19",
+      "finding": "本分店号匹配，中一街065"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "Maid Jump 广州",
+      "mode": "用户",
+      "scope": "实际首批返回及所述直接匹配主页/经营帖",
+      "readAt": "2026-10-19",
+      "finding": "首15项未匹配准确主体"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 魔渊",
+      "mode": "用户",
+      "scope": "实际首批返回及所述直接匹配主页/经营帖",
+      "readAt": "2026-10-19",
+      "finding": "匹配魔渊、另见甜物嗒嗒本分店并直接核对"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 琉璃星",
+      "mode": "用户",
+      "scope": "实际首批返回及所述直接匹配主页/经营帖",
+      "readAt": "2026-10-19",
+      "finding": "首批仅独角星，未匹配"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 童瑶",
+      "mode": "用户",
+      "scope": "实际首批返回及所述直接匹配主页/经营帖",
+      "readAt": "2026-10-19",
+      "finding": "演员/个人号排除，另见JoJoFun并直接核对"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 弹了个猪",
+      "mode": "用户",
+      "scope": "实际首批返回及所述直接匹配主页/经营帖",
+      "readAt": "2026-10-19",
+      "finding": "准确本店号、当期周边经营匹配"
+    },
+    {
+      "platform": "xiaohongshu",
+      "query": "时尚天河 东区 谷店",
+      "mode": "内容",
+      "scope": "实际首批返回及所述直接匹配主页/经营帖",
+      "readAt": "2026-10-19",
+      "finding": "首20项定向补漏；东映正文正佳6F排除，未取得新增可归属本商场独立门店"
+    }
+  ],
+  "userSteering": "用户明确：原网页已记录的只检查是否对应，不再重新搜索；后续沿用已有证据与原读取日，只查新候选和冲突。"
+}
