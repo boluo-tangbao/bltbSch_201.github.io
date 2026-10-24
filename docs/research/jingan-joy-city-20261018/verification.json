@@ -19,7 +19,7 @@
       "result": "vue-tsc及Vite构建通过"
     }
   ],
-  "dataVerification": "data-verification.json",
+  "dataVerification": "report.md#素材地址与日期",
   "browser": {
     "url": "http://127.0.0.1:4186/bltbSch_201.github.io/rank/guide/#/place/shanghai-shop-008",
     "desktop": {

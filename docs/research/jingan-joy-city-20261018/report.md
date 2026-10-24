@@ -159,7 +159,7 @@ STAND同点位多作品合为一条；三月兽本期主题不另列常规店；
 
 地址由黄浦区纠正为静安区，和已读本店官方地址一致；WGS84坐标保持31.245608、121.467556。地点补别名上海静安大悦城／上海大悦城／静安Joy City，updatedAt及本次新店单checkedAt为2026-10-18；作者visitedAt仍2026-05-02。原作者评价、评级、顺序及图集逐字段未变。
 
-生产修改为places.json目标008、shop-directories.json目标008及updates.json新增批次jingan-joy-city-directory-20261018；沿用已有共享限时组件，无新增商场专属组件。其他地点、店单及既有更新记录哈希一致，比较见[data-verification.json](data-verification.json)，更新前快照见[before.json](before.json)。
+生产修改为places.json目标008、shop-directories.json目标008及updates.json新增批次jingan-joy-city-directory-20261018；沿用已有共享限时组件，无新增商场专属组件。其他地点、店单及既有更新记录哈希一致，保留检查通过，更新前快照见[before.json](before.json)。
 
 ## 页面与构建验收
 

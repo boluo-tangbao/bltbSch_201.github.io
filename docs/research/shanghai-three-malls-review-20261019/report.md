@@ -58,7 +58,7 @@ C馆数量未变。新世界漫魂从待核升级确认，店数未增加，新�
 
 ## 接入与验收
 
-生产数据只改三处店单、地点updatedAt和新增批次three-malls-date-evidence-review-20261019。其他地点（含刚更新的静安大悦城）、店单和已有更新记录均核对不变；三处作者原字段与图集逐字段保护，详见[data-verification.json](data-verification.json)、更新前[before.json](before.json)。未改共享组件或搜索逻辑。
+生产数据只改三处店单、地点updatedAt和新增批次three-malls-date-evidence-review-20261019。其他地点（含刚更新的静安大悦城）、店单和已有更新记录均核对不变；三处作者原字段与图集逐字段保护，详见上述保留结论及更新前[before.json](before.json)。未改共享组件或搜索逻辑。
 
 - Node.js v24.19.0，rank目录npm run validate:data、npm test、npm run build全部通过：29地点、33条更新，50项测试0失败，vue-tsc及Vite成功。结果见[verification.json](verification.json)。
 - 三处各1440×1000桌面、390×844手机均实际检查，数量与上表一致，无横向溢出；确认营业卡片两类来源列表为0，账号分别9／7／19，图集21／12／17。三处限时栏、FenzGoods完整年份及ANIKIGOODS暂定截止可读。代表截图：[C馆手机](c-mobile-390.png)、[华盛桌面](huasheng-desktop-1440.png)。
