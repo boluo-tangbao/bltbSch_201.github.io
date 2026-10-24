@@ -173,6 +173,11 @@ export function validateShopDirectories(directories, places) {
           if (validDate(limited.endsOn) && limited.endsOn < directory.checkedAt && shop.status !== 'closed') fail(id, `${shop.name} 已结束的限时条目必须标为 closed，仅留档`)
         }
       }
+      if (shop.inactive !== undefined) {
+        if (!object(shop.inactive) || !['closed', 'relocated', 'renovation', 'unconfirmed'].includes(shop.inactive.reason) || !text(shop.inactive.history)) fail(id, `${shop.name} 停止营业记录需要有效原因及非空营业历史`)
+        if (shop.status !== 'closed') fail(id, `${shop.name} 停止营业记录必须与当前营业列表分开（status: closed）`)
+        if (shop.limited?.scope === 'theme') fail(id, `${shop.name} 主题结束不能当作整店停止营业`)
+      }
       if (shop.kind !== undefined && !text(shop.kind)) fail(id, `${shop.name} 主营必须为非空文字`)
       if (shop.kindSources !== undefined) {
         if (!text(shop.kind) || !Array.isArray(shop.kindSources) || !shop.kindSources.length) fail(id, `${shop.name} 主营依据需要非空主营与来源数组`)

@@ -22,12 +22,15 @@ export function shopDisplayStatus(shop: DirectoryShop): 'open' | 'evidence' | 'c
 
 export function shopDirectoryGroups<T extends DirectoryShop>(shops: T[]) {
   const groups = {
+    inactive: [] as T[],
     regular: { open: [] as T[], evidence: [] as T[] },
     limited: { open: [] as T[], evidence: [] as T[] },
   }
   for (const shop of shops) {
     const status = shopDisplayStatus(shop)
-    if (status !== 'closed') groups[shop.limited ? 'limited' : 'regular'][status].push(shop)
+    if (status === 'closed') {
+      if (shop.inactive) groups.inactive.push(shop)
+    } else groups[shop.limited ? 'limited' : 'regular'][status].push(shop)
   }
   return groups
 }

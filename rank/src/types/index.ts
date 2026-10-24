@@ -9,6 +9,7 @@ export interface DirectoryShop {
   aliases?: string[]
   operatingConfirmation?: 'official-listing'
   limited?: { scope: 'store' | 'theme'; period: string; startsOn?: string; endsOn?: string }
+  inactive?: { reason: 'closed' | 'relocated' | 'renovation' | 'unconfirmed'; history: string }
   status: 'recent' | 'listed' | 'older' | 'unverified' | 'closed'
   note: string; sources: ShopSource[]; kindSources?: ShopSource[]; accounts?: ShopAccount[]
 }

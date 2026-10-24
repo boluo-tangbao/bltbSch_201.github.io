@@ -13,7 +13,8 @@ function expand(section: string, more = false) {
 }
 watch(() => props.directory, () => { visibleCounts.value = {} })
 const statusLabel = { open: '营业中', evidence: '有营业线索', closed: '已公布闭店' }
-const shops = computed(() => props.directory.shops.filter(shop => shop.status !== 'closed').map(shop => {
+const inactiveLabel = { closed: '已停止营业', relocated: '已停止营业', renovation: '装修停业', unconfirmed: '停业待核实' }
+const shops = computed(() => props.directory.shops.map(shop => {
   const status = shopDisplayStatus(shop)
   const sourceTime = shop.sources.find(source => source.dateLabel)?.dateLabel
     ?? latestSourceDate(shop.sources)
@@ -24,6 +25,7 @@ const sections = computed(() => {
   return [
     { key: 'regular', title: '常规谷店', ...grouped.regular },
     { key: 'limited', title: '限时谷店／快闪', ...grouped.limited },
+    { key: 'inactive', title: '停止营业', open: grouped.inactive, evidence: [] },
   ].filter(section => section.open.length || section.evidence.length)
 })
 const platformLabel = { xiaohongshu: '小红书', douyin: '抖音' }
@@ -46,8 +48,9 @@ defineExpose({ revealShop })
     </header>
     <p class="shop-directory-intro">每栏先展示5家，点击「展开全部」每次再增加5家；待核实线索默认收起。</p>
     <div v-for="section in sections" :key="section.key" class="shop-directory-section" :class="'shop-directory-' + section.key">
-    <header class="shop-section-heading"><h3>{{ section.title }}</h3><div class="shop-section-actions"><span>确认 {{ section.open.length }} 家<template v-if="section.evidence.length"> · 待核实 {{ section.evidence.length }} 家</template></span><button v-if="section.open.length > visibleCount(section.key)" class="shop-expand" type="button" :aria-label="section.title + '展开全部，每次增加5家'" @click="expand(section.key)">展开全部 <small>+{{ Math.min(5, section.open.length - visibleCount(section.key)) }}家</small></button></div></header>
+    <header class="shop-section-heading"><h3>{{ section.title }}</h3><div class="shop-section-actions"><span><template v-if="section.key === 'inactive'">记录 {{ section.open.length }} 家</template><template v-else>确认 {{ section.open.length }} 家</template><template v-if="section.evidence.length"> · 待核实 {{ section.evidence.length }} 家</template></span><button v-if="section.open.length > visibleCount(section.key)" class="shop-expand" type="button" :aria-label="section.title + '展开全部，每次增加5家'" @click="expand(section.key)">展开全部 <small>+{{ Math.min(5, section.open.length - visibleCount(section.key)) }}家</small></button></div></header>
     <p v-if="section.key === 'limited'" class="shop-limited-intro">按已核对档期整理；「主题期」仅指这一期主题，不代表整家店的营业期限。</p>
+    <p v-if="section.key === 'inactive'" class="shop-inactive-intro">“已停止营业”指彻底关店或迁往其他地点的旧店；装修暂停另行标注，同一商场换楼层的店铺继续按新位置展示。</p>
     <p v-if="!section.open.length" class="shop-directory-empty">暂没有已确认营业的店铺，可展开更多查看已有线索。</p>
     <template v-for="group in [{ more: false, shops: section.open }, { more: true, shops: section.evidence }]" :key="String(group.more)">
     <component :is="group.more ? 'details' : 'div'" v-if="group.shops.length" :class="group.more ? 'shop-directory-more' : 'shop-directory-confirmed'">
@@ -55,22 +58,23 @@ defineExpose({ revealShop })
     <div v-if="group.more && group.shops.length > visibleCount(section.key, true)" class="shop-pending-actions"><span>已展示 {{ visibleCount(section.key, true) }} / {{ group.shops.length }} 家线索</span><button class="shop-expand" type="button" :aria-label="section.title + '待核实线索展开全部，每次增加5家'" @click="expand(section.key, true)">展开全部 <small>+{{ Math.min(5, group.shops.length - visibleCount(section.key, true)) }}家</small></button></div>
     <ul class="shop-list">
       <li v-for="(shop, index) in group.shops" v-show="index < visibleCount(section.key, group.more)" :id="placeId ? searchTargetId(placeId, { kind: 'shop', name: shop.name }) : undefined" :key="shop.name" class="shop-row" tabindex="-1">
-        <div class="shop-row-title"><div class="shop-name-location"><h4>{{ shop.name }}</h4><span v-if="shop.floor" class="shop-location">{{ shop.floor }}</span></div><span class="shop-status" :class="'is-' + shop.displayStatus">{{ statusLabel[shop.displayStatus] }}</span></div>
-        <dl v-if="shop.kind || shop.limited" class="shop-facts">
+        <div class="shop-row-title"><div class="shop-name-location"><h4>{{ shop.name }}</h4><span v-if="shop.floor" class="shop-location"><template v-if="shop.inactive">原位置：</template>{{ shop.floor }}</span></div><span class="shop-status" :class="'is-' + shop.displayStatus">{{ shop.inactive ? inactiveLabel[shop.inactive.reason] : statusLabel[shop.displayStatus] }}</span></div>
+        <dl v-if="shop.kind || shop.limited || shop.inactive" class="shop-facts">
+          <template v-if="shop.inactive"><dt>营业历史</dt><dd class="shop-history">{{ shop.inactive.history }}</dd></template>
           <template v-if="shop.kind"><dt>主营</dt><dd class="shop-kind">{{ shop.kind }}</dd></template>
           <template v-if="shop.limited"><dt>{{ shop.limited.scope === 'theme' ? '主题期' : '开放期' }}</dt><dd class="shop-period">{{ shop.limited.period }}</dd></template>
         </dl>
         <p v-if="shop.displayStatus === 'evidence'" class="shop-time"><template v-if="shop.sourceTime">线索更新：{{ shop.sourceTime }}</template><template v-else>来源核对：<time :datetime="directory.checkedAt">{{ directory.checkedAt }}</time></template></p>
         <p v-if="shop.limited && shop.authorVisited" class="shop-author-visit">作者到访记录<time v-if="visitedAt" :datetime="visitedAt">（{{ visitedAt }}）</time></p>
-        <p v-if="shop.note && (shop.limited || !shop.accounts?.length)" class="shop-evidence-note"><b>依据说明</b>{{ shop.note }}</p>
-        <template v-if="shop.limited ? shop.displayStatus !== 'open' : !shop.accounts?.length">
+        <p v-if="shop.note && (shop.inactive || shop.limited || !shop.accounts?.length)" class="shop-evidence-note"><b>依据说明</b>{{ shop.note }}</p>
+        <template v-if="shop.inactive || (shop.limited ? shop.displayStatus !== 'open' : !shop.accounts?.length)">
         <p class="shop-source-label">依据出处</p>
         <ul class="shop-sources" :aria-label="shop.name + '的来源依据'">
           <li v-for="source in shop.evidenceSources" :key="source.url"><a :href="source.url" target="_blank" rel="noopener noreferrer">{{ source.labels.join('／') }} ↗</a><small class="shop-source-role">{{ source.roles.join('、') }}<template v-if="!source.roles.includes('营业／位置')">（不作为当前营业确认）</template></small><span v-if="source.dates.length"> · {{ source.dates.join('；') }}</span></li>
         </ul>
         </template>
-        <p v-if="shop.accounts?.length" class="shop-source-label">官方账号</p>
-        <ul v-if="shop.accounts?.length" class="shop-accounts" :aria-label="shop.name + '的官方账号'">
+        <p v-if="shop.accounts?.length" class="shop-source-label">{{ shop.inactive ? '原账号' : '官方账号' }}</p>
+        <ul v-if="shop.accounts?.length" class="shop-accounts" :aria-label="shop.name + (shop.inactive ? '的原账号' : '的官方账号')">
           <li v-for="account in shop.accounts" :key="account.platform + account.url"><a :href="account.url" target="_blank" rel="noopener noreferrer"><b>{{ platformLabel[account.platform] }}</b><span>{{ account.name }}<small v-if="account.handle">号：{{ account.handle }}</small></span><em v-if="account.scope === 'brand'">品牌号</em><span aria-hidden="true">↗</span></a></li>
         </ul>
       </li>
@@ -94,7 +98,7 @@ defineExpose({ revealShop })
 .shop-pending-actions { justify-content: space-between; margin: 0 0 12px; }
 .shop-expand { min-height: 36px; padding: 5px 10px; border: 1px solid #d9aab6; background: #fff0f3; color: #a83750; font-size: 12px; font-weight: 700; }
 .shop-expand small { margin-left: 5px; font-weight: 400; }
-.shop-limited-intro { font-size: 12px; line-height: 1.8; color: #79626b; }
+.shop-limited-intro,.shop-inactive-intro { font-size: 12px; line-height: 1.8; color: #79626b; }
 .shop-limited-intro { margin: -4px 0 16px; }
 .shop-period { font-weight: 700; }
 .shop-list,.shop-accounts { list-style: none; padding: 0; margin: 0; }
@@ -111,7 +115,7 @@ defineExpose({ revealShop })
 .shop-status.is-open { background: #e8f3ed; color: #347357; }
 .shop-status.is-evidence { background: #eaf0f8; color: #45698d; }
 .shop-status.is-closed { background: #f9e4e8; color: #983b52; }
-.shop-facts { display: grid; grid-template-columns: 3em minmax(0, 1fr); gap: 5px 12px; margin: 12px 0; font-size: 13px; line-height: 1.8; }
+.shop-facts { display: grid; grid-template-columns: 4em minmax(0, 1fr); gap: 5px 12px; margin: 12px 0; font-size: 13px; line-height: 1.8; }
 .shop-facts dt { color: #79626b; font-weight: 700; }
 .shop-facts dd { margin: 0; color: #534a52; overflow-wrap: anywhere; }
 .shop-time { font-size: 12px; color: #45698d; margin: 8px 0; }

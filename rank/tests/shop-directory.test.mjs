@@ -135,3 +135,34 @@ test('reject unsupported accounts, spoofed platform URLs, missing sources and du
   assert.ok(errors.some(error => error.includes('缺少核对依据')))
   assert.ok(validateShopDirectories(fixture(), []).some(error => error.includes('不存在的地点')))
 })
+
+
+test('inactive histories distinguish external relocation from current stores and floor moves', () => {
+  const base = fixture().test.shops[0]
+  const account = { platform: 'xiaohongshu', name: '门店本人', url: 'https://www.xiaohongshu.com/user/profile/123abc', scope: 'store' }
+  const stopped = { ...base, name: '原六层店', status: 'closed', accounts: [account], inactive: { reason: 'renovation', history: '停业日待核' } }
+  const relocated = { ...base, name: '已迁五层店', floor: '五层', status: 'recent', accounts: [account], note: '旧六层停业后迁到五层复业' }
+  const hidden = { ...base, name: '仅有旧线索', status: 'closed' }
+  const endedTheme = { ...hidden, name: '已结束主题', limited: { scope: 'theme', period: '往期主题' } }
+  const movedOut = { ...stopped, name: '迁往其他商场的旧店', inactive: { reason: 'relocated', history: '旧址营业至2026.10.01，现已迁往其他商场' } }
+  const result = shopDirectoryGroups([stopped, movedOut, relocated, hidden, endedTheme])
+  assert.deepEqual(result.inactive.map(s => s.name), ['原六层店', '迁往其他商场的旧店'])
+  assert.deepEqual(result.regular.open.map(s => s.name), ['已迁五层店'])
+  assert.equal(result.regular.evidence.length + result.limited.open.length + result.limited.evidence.length, 0)
+  assert.equal(shopDisplayStatus(stopped), 'closed')
+  assert.equal(stopped.accounts.length, 1)
+})
+
+test('inactive records require history and a non-operating status, and cannot turn theme expiry into closure', () => {
+  const validate = (inactive, status = 'closed', limited) => {
+    const data = fixture()
+    Object.assign(data.test.shops[0], { status, inactive, ...(limited ? { limited } : {}) })
+    return validateShopDirectories(data, [{ id: 'test' }])
+  }
+  assert.deepEqual(validate({ reason: 'closed', history: '～2026.10.01' }), [])
+  assert.deepEqual(validate({ reason: 'relocated', history: '旧址营业至2026.10.01，已迁往其他商场' }), [])
+  assert.deepEqual(validate({ reason: 'unconfirmed', history: '停业日待核；原位置六层' }), [])
+  for (const value of [null, {}, { reason: 'moved', history: '已搬家' }, { reason: 'closed', history: '' }]) assert.ok(validate(value).length)
+  assert.ok(validate({ reason: 'closed', history: '～2026.10.01' }, 'recent').some(e => e.includes('当前营业列表分开')))
+  assert.ok(validate({ reason: 'closed', history: '主题结束' }, 'closed', { scope: 'theme', period: '往期主题' }).some(e => e.includes('主题结束不能')))
+})
