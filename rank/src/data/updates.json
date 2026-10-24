@@ -1,5 +1,15 @@
 [
   {
+    "id": "jingan-pending-verification-20261024",
+    "date": "2026-10-24",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-008"
+    ],
+    "note": "增量复核待核实内容：阅文好物按集团官网确认南座四层营业；次元波板糖新增关闭冲突，单列停业待核实；隐藏2条10月19日结束的主题／快闪。其他缺口仍为阶段性结果，未完成双平台站内补查。"
+  },
+  {
     "id": "shanghai-baimi-directory-20261024",
     "date": "2026-10-24",
     "type": "edited",
