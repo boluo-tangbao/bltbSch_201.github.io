@@ -661,7 +661,7 @@
         }
       ],
       "visitedAt": "2026-08-29",
-      "updatedAt": "2026-10-24",
+      "updatedAt": "2026-10-25",
       "published": true,
       "location": {
         "lat": 31.235439,
@@ -934,7 +934,7 @@
         }
       ],
       "visitedAt": "2026-05-02",
-      "updatedAt": "2026-10-24",
+      "updatedAt": "2026-10-25",
       "published": true,
       "location": {
         "lat": 31.245608,
@@ -2513,7 +2513,7 @@
         }
       ],
       "visitedAt": "2026-01-21",
-      "updatedAt": "2026-10-20",
+      "updatedAt": "2026-10-25",
       "published": true,
       "location": {
         "lat": 23.128469,
@@ -2928,7 +2928,7 @@
         }
       ],
       "visitedAt": "2026-01-19",
-      "updatedAt": "2026-10-20",
+      "updatedAt": "2026-10-25",
       "published": true,
       "location": {
         "lat": 23.137324,
@@ -3157,7 +3157,7 @@
         }
       ],
       "visitedAt": "2026-09-19",
-      "updatedAt": "2026-10-20",
+      "updatedAt": "2026-10-25",
       "published": true,
       "location": {
         "lat": 31.321634,

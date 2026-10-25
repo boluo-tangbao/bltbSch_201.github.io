@@ -1,5 +1,39 @@
 [
   {
+    "id": "shop-conflict-followup-20261025",
+    "date": "2026-10-25",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-005",
+      "guangzhou-shop-004"
+    ],
+    "note": "按用户缩小范围只续查变更冲突及未完成核实：ANIKIGOODS店主回复确认搬店，百米旧址改为已停止营业（外迁）；逆水寒广州快闪取得官方分城公告，按10月28日列结束日，保留后续泛称11月1日但未明确广州延期的说明。其他仅有攻略／分店关联不足的线索继续折叠待核。"
+  },
+  {
+    "id": "three-cities-pending-verification-20261025",
+    "date": "2026-10-25",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-008",
+      "suzhou-shop-002",
+      "guangzhou-shop-002",
+      "guangzhou-shop-004"
+    ],
+    "note": "逐步补查上海、广州、苏州待核：8条依据品牌／商场公告或既有官方店单升级确认，另2条补足位置线索。银魂DISCO确认至10月25日，逆水寒快闪经营已确认、结束日冲突仍保留；其余不凭搜索摘要升级，完整站内补查仍为阶段性结果。"
+  },
+  {
+    "id": "baimi-pending-verification-20261025",
+    "date": "2026-10-25",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-005"
+    ],
+    "note": "增量补查百米香榭7条待核：大滿商店核到本人账号与二层252／254室经营原帖，升级确认；樱动漫补足待店方核对的铺位、品类与新来源。其余保持待核，完整查找仍为阶段性结果。"
+  },
+  {
     "id": "jingan-pending-verification-20261024",
     "date": "2026-10-24",
     "type": "edited",
