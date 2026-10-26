@@ -1,4 +1,167 @@
 {
+  "shanghai-shop-009": {
+    "area": "A馆、商业步行街负一层及C馆",
+    "checkedAt": "2026-10-26",
+    "shops": [
+      {
+        "name": "三月兽（含万代官方扭蛋专卖店）",
+        "aliases": ["三月兽上海五角场万达店", "三月兽上海五角场店", "March Monster", "万代官方扭蛋专卖店", "GASHAPON", "万代扭蛋"],
+        "floor": "负一层 B1007B",
+        "kind": "动漫／游戏周边、谷美、扭蛋",
+        "description": "动漫潮玩周边集合店，售卖角色周边、卡套等谷美；同一铺位设万代官方扭蛋专卖店。",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "翻翻现行官网确认五角场万达B1门店；万代一番赏实际渲染店单与官方扭蛋现行目录均列B1007B，本店2026年10月1日亦发布万代扭蛋上新，因此合并同一铺位、不重复计店。三月兽CAFE B1120是另一空间，其暂停不影响本条。",
+        "sources": [
+          {"label": "翻翻动漫现行官方门店目录", "url": "https://www.fanfannet.com/portal/offline_stores/index/id/11.html", "dateLabel": "未标发表日；2026-10-26实际读取"},
+          {"label": "万代官方扭蛋现行全球门店目录·五角场B1007B", "url": "https://bandainamco-am.co.jp/others/gashapon-bandai-officialshop/store/world_store/", "dateLabel": "未标发表日；2026-10-26实际读取"},
+          {"label": "万代一番赏官方店单·三月兽五角场B1007B", "url": "https://wechat.bandainamcotoyshobbysh.com/H5/store.php?id=471", "dateLabel": "未标发表日；2026-10-26在浏览器实际读取渲染正文"},
+          {"label": "本店万代扭蛋上新", "url": "https://www.xiaohongshu.com/explore/6abdc2fc000000001c01fe77", "date": "2026-10-01"},
+          {"label": "本店fukuya卡套等谷美上新", "url": "https://www.xiaohongshu.com/explore/6ad1af720000000018014e12", "date": "2026-10-16"}
+        ],
+        "accounts": [
+          {"platform": "xiaohongshu", "name": "三月兽上海五角场店", "handle": "wujiaosys", "url": "https://www.xiaohongshu.com/user/profile/6579374d000000002002f269", "scope": "store"}
+        ]
+      },
+      {
+        "name": "宝可梦官方卡牌道馆-上海 五角场（轻身鳕）",
+        "aliases": ["宝可梦道馆", "轻身鳕", "Pokemon", "Pokémon"],
+        "floor": "A馆负一层",
+        "kind": "卡牌（宝可梦）、卡牌教学、对战",
+        "description": "宝可梦官方卡牌道馆，提供卡牌销售、教学和对战活动。具体赛事与商品以官方当期公告为准。",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "宝可梦官网2025年开店公告明确2025年10月30日开业，2026年6月与7月活动名单仍列本店；A馆负一层来自官方名单。活动兑换期不作为整店开放期。本轮站内用户检索未匹配到本店账号，保留文字及官网出处。",
+        "sources": [
+          {"label": "宝可梦官方道馆五角场开业公告", "url": "https://www.pokemon.cn/tcg/17358.html", "date": "2025-10-24"},
+          {"label": "宝可梦官方活动名单·五角场A馆负一层", "url": "https://www.pokemon.cn/tcg/campaign/22280.html", "date": "2026-06-03"},
+          {"label": "宝可梦官方共逐荣光体验会·本店名单", "url": "https://www.pokemon.cn/tcg/event/22742.html", "date": "2026-07-03"}
+        ]
+      },
+      {
+        "name": "GOODSLOVE 五角场万达旗舰店",
+        "aliases": ["GOODSLOVE", "GOODSLOVE STORE", "GOODSLOVE上海五角场万达店", "谷乐屋"],
+        "floor": "C馆二层 2F-A-5",
+        "kind": "动漫／游戏周边、抽赏",
+        "description": "多IP角色周边集合旗舰店，经营徽章、拍立得等商品，并随企划更新主题展示。具体上新及库存以门店公告为准。",
+        "status": "recent",
+        "note": "本人抖音认证上海谷乐屋文化发展有限公司，2026年10月22日王也商品帖明确本店C馆2F；精确铺号复用2026-10-19已读主题零售门店原文。10月23日商品首发不等于整店限时，光夜旧零售主题10月11日结束亦不关闭旗舰店。",
+        "sources": [
+          {"label": "GOODSLOVE旗舰店官方本店上新与C馆2F地址", "url": "https://www.sina.cn/news/detail/5311491000501951.html", "date": "2026-06-19"},
+          {"label": "GOODSLOVE本店抖音一人之下上新与C馆2F地址", "url": "https://www.douyin.com/note/7699346330073850082", "date": "2026-10-22"},
+          {"label": "GOODSLOVE STORE品牌身份；精确铺号见原研究摘录", "url": "https://www.xiaohongshu.com/user/profile/67c662ad000000000e01295a", "dateLabel": "身份及含本店2F-A-5的主题零售原文复用2026-10-19实际读取，非本轮新发表"}
+        ],
+        "accounts": [
+          {"platform": "douyin", "name": "GOODSLOVE上海五角场万达店", "handle": "41394790051", "url": "https://www.douyin.com/user/MS4wLjABAAAATRIaZubfZxnqzx6rOM3zhKyE0Pow8HNLbyyJIqLgX0E", "scope": "store"},
+          {"platform": "xiaohongshu", "name": "GOODSLOVE STORE", "handle": "49328859601", "url": "https://www.xiaohongshu.com/user/profile/67c662ad000000000e01295a", "scope": "brand"}
+        ]
+      },
+      {
+        "name": "X11 上海五角场万达广场店",
+        "aliases": ["X11", "X11上海五角场万达广场"],
+        "floor": "一层 1205／1206",
+        "kind": "动漫周边、盲盒、毛绒、模型、卡牌",
+        "description": "潮玩集合店，本店账号介绍涵盖二次元周边、盲盒、毛绒、模型和卡牌等；不保证具体系列实时有货。",
+        "status": "recent",
+        "note": "小红书本店主页与2025年12月12日Keeno盲盒原帖实际已读；抖音商家认证本店号及用户结果补足政通路189号一层1205／1206的对应关系。抖音本人主页暂无作品，不冒充该平台有经营帖；另一员工候选提及二层2232尚未核实，未加入位置。",
+        "sources": [
+          {"label": "X11小红书本店主页与经营品类", "url": "https://www.xiaohongshu.com/user/profile/60d5fb97000000002002a603", "dateLabel": "主页未标发表日；2026-10-26实际读取"},
+          {"label": "X11本店Keeno盲盒经营原帖", "url": "https://www.xiaohongshu.com/explore/693bc9b3000000001e002e05", "date": "2025-12-12"},
+          {"label": "X11抖音商家认证本店主页；用户结果明确一层铺位", "url": "https://www.douyin.com/user/MS4wLjABAAAA7f0TpdkK0Q6LoPd5LEYrXo-8yfMI9fet-nUUHROo97yCL73pyfOC_b7if9R26gpV", "dateLabel": "无主页发表日；2026-10-26实际读取主页及用户结果"}
+        ],
+        "accounts": [
+          {"platform": "xiaohongshu", "name": "上海五角场万达广场X11店", "handle": "9564543132", "url": "https://www.xiaohongshu.com/user/profile/60d5fb97000000002002a603", "scope": "store"},
+          {"platform": "douyin", "name": "X11上海五角场万达广场", "handle": "45536191221", "url": "https://www.douyin.com/user/MS4wLjABAAAA7f0TpdkK0Q6LoPd5LEYrXo-8yfMI9fet-nUUHROo97yCL73pyfOC_b7if9R26gpV", "scope": "store"}
+        ]
+      },
+      {
+        "name": "《阴阳师》×GOODSLOVE 上海快闪主题街区",
+        "floor": "C馆二层 GOODSLOVE LAND",
+        "kind": "游戏周边、主题轻餐、主题体验",
+        "description": "本期阴阳师联动主题街区，包含通贩周边、轻餐与互动等内容；同一主题各项目不拆成多家店。",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "limited": {"scope": "theme", "period": "2026年10月16日—10月29日", "startsOn": "2026-10-16", "endsOn": "2026-10-29"},
+        "note": "游戏本人及GOODSLOVE官方公告均明确日期与C馆2F GOODSLOVE LAND。与旗舰店具体空间关系尚未证实，因此不猜填所在常设店；按主题项计数，不新增常设门店。",
+        "sources": [
+          {"label": "阴阳师官方上海联动主题街区原帖", "url": "https://www.xiaohongshu.com/explore/6aca13e80000000012039086", "date": "2026-10-10"},
+          {"label": "GOODSLOVE官方主题街区公告", "url": "https://www.sina.cn/news/detail/5346673549382048.html", "date": "2026-09-24"}
+        ]
+      },
+      {
+        "name": "GOODSLOVE CAFE《光与夜之恋》五周年音乐盛典主题（场地待核）",
+        "aliases": ["GOODSLOVE CAFE", "光夜音乐盛典餐厅"],
+        "kind": "主题餐饮、主题饮品",
+        "description": "上海本期餐厅档期已有官方公告；五角场万达当期铺位及旧B1场地关系仍待核实。",
+        "status": "unverified",
+        "pendingReview": {"category": "verification"},
+        "limited": {"scope": "theme", "period": "上海主题：2026年9月10日—12月13日（本商场场地待核）", "startsOn": "2026-09-10", "endsOn": "2026-12-13"},
+        "note": "品牌本人明确上海餐厅9月10日—12月13日，10月12日起提供外带；没有把广州等城市10月11日结束套来。2026年3月官方原文曾写本商场B1 B1066—1068，本期本人正文未列上海铺位，不能直接沿用旧址或据活动汇总填C馆二层。原帖曾出现App扫码限制，用户恢复后已续核；品牌身份已识别，本商场当期场地仍待确认。",
+        "sources": [
+          {"label": "GOODSLOVE CAFE本人上海主题继续营业至12月13日", "url": "https://www.xiaohongshu.com/explore/6abcee6800000000140034f6", "date": "2026-10-06"},
+          {"label": "GOODSLOVE CAFE本人上海外带10月12日开启", "url": "https://www.xiaohongshu.com/explore/6ac70ad5000000000a025886", "date": "2026-10-08"},
+          {"label": "GOODSLOVE CAFE本人音乐盛典主题开幕与上海档期", "url": "https://www.xiaohongshu.com/explore/6a7e8fc9000000002402e621", "date": "2026-08-14"},
+          {"label": "GOODSLOVE CAFE官方3月B1旧场地及当期主题，仅作位置历史线索", "url": "https://www.sina.cn/news/detail/5282137621660860.html", "date": "2026-03-30"}
+        ]
+      },
+      {
+        "name": "漫魂ComicSoul 五角场万达旧店",
+        "aliases": ["ComicSoul", "漫魂"],
+        "status": "closed",
+        "inactive": {"reason": "closed", "history": "2026年9月1日正式停止营业；开业日及原具体楼层未核。"},
+        "note": "品牌本人9月7日公告明确本店已于2026年9月1日正式停止营业、不再接待到店消费，售后联系品牌。停止日与公告日分别保留；不影响迪美、新世界等其他门店。开业报道正文未成功取得，不用摘要猜原楼层。",
+        "sources": [
+          {"label": "漫魂ComicSoul本人上海五角场万达店闭店通知", "url": "https://www.xiaohongshu.com/explore/6a9e55010000000012003f58", "date": "2026-09-07"},
+          {"label": "漫魂ComicSoul品牌身份与原账号", "url": "https://www.xiaohongshu.com/user/profile/59acc6345e87e725d76d5a59", "dateLabel": "品牌身份复用2026-10-19实际读取；主页日期不作五角场复业证据"}
+        ],
+        "accounts": [
+          {"platform": "xiaohongshu", "name": "漫魂ComicSoul", "handle": "27760645347", "url": "https://www.xiaohongshu.com/user/profile/59acc6345e87e725d76d5a59", "scope": "brand"}
+        ]
+      },
+      {
+        "name": "三月兽CAFE 上海五角场万达原址",
+        "floor": "负一层 B1120",
+        "status": "closed",
+        "inactive": {"reason": "unconfirmed", "history": "2025年4月1日开业；原址最后营业日2025年11月30日。新址及是否同商场、复业情况待核。"},
+        "note": "本店置顶公告完整日期2025年11月30日，明确当天为原地址最后营业时间、将到全新地点且新坐标待公布。不是2026新公告；主页仍保留旧址不等于恢复营业。原址已停，但未证去向是否同商场或已复业，标停业待核实，不擅判彻底外迁或装修。与零售／扭蛋B1007B分开。",
+        "sources": [
+          {"label": "三月兽CAFE本人原址最后营业与新址待公布公告", "url": "https://www.xiaohongshu.com/explore/692bc142000000001f0093e7", "date": "2025-11-30"},
+          {"label": "翻翻动漫本人2025年4月1日五角场CAFE开业回顾（历史用途）", "url": "https://www.sohu.com/a/880052627_534742", "date": "2025-04-05"},
+          {"label": "三月兽CAFE官方2025女仆主题与原B1120地址（历史用途）", "url": "https://www.sina.cn/news/detail/5207851110765241.html", "date": "2025-09-06"},
+          {"label": "三月兽CAFE本店原账号及简介旧地址", "url": "https://www.xiaohongshu.com/user/profile/67db6dc7000000000d00a091", "dateLabel": "未标主页发表日；2026-10-26实际读取，置顶原公告2025-11-30"}
+        ],
+        "accounts": [
+          {"platform": "xiaohongshu", "name": "三月兽CAFE 上海五角场万达店", "handle": "95349123430", "url": "https://www.xiaohongshu.com/user/profile/67db6dc7000000000d00a091", "scope": "store"}
+        ]
+      },
+      {
+        "name": "《夜幕之下》万达快闪（2026年10月）",
+        "floor": "负一层中庭",
+        "status": "closed",
+        "limited": {"scope": "store", "period": "2026年10月1日—10月24日（已结束）", "startsOn": "2026-10-01", "endsOn": "2026-10-24"},
+        "note": "商场官方明确限时商品贩售；按档期隐藏归档，不加入整店停止营业历史。大屏10月1—10日与快闪10月1—24日为不同范围。",
+        "sources": [{"label": "商场官方夜幕之下快闪与B1中庭档期", "url": "https://www.sina.cn/news/detail/5346302049389403.html", "date": "2026-09-23"}]
+      },
+      {
+        "name": "三月兽 HUNDRED NOTE新中式主题（2026年10月）",
+        "floor": "负一层 B1007B",
+        "hostShop": "三月兽（含万代官方扭蛋专卖店）",
+        "status": "closed",
+        "limited": {"scope": "theme", "period": "2026年10月1日—10月25日（已结束）", "startsOn": "2026-10-01", "endsOn": "2026-10-25"},
+        "note": "品牌官方列本店参加主题周边销售，但本店未带咖啡标识，不将其他城市印花拿铁套来。结束仅隐藏本期主题，三月兽常设店保留。",
+        "sources": [{"label": "三月兽官方HUNDRED NOTE主题、日期与参与店", "url": "https://www.sina.cn/news/detail/5346310434853861.html", "date": "2026-09-23"}]
+      },
+      {
+        "name": "GOODSLOVE旗舰店《光与夜之恋》音乐盛典零售主题（2026年9—10月）",
+        "floor": "C馆二层",
+        "hostShop": "GOODSLOVE 五角场万达旗舰店",
+        "status": "closed",
+        "limited": {"scope": "theme", "period": "2026年9月10日—10月11日（已结束）", "startsOn": "2026-09-10", "endsOn": "2026-10-11"},
+        "note": "旗舰店官方明确该期零售主题已结束，常设店继续保留；不能把此结束日套到官方另行公布至12月13日的上海主题餐厅。",
+        "sources": [{"label": "GOODSLOVE旗舰店官方音乐盛典主题实拍及档期", "url": "https://www.sina.cn/news/detail/5341670435717704.html", "date": "2026-09-10"}]
+      }
+    ]
+  },
   "guangzhou-shop-002": {
     "area": "西区",
     "checkedAt": "2026-10-26",
