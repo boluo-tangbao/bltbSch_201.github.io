@@ -89,28 +89,36 @@
         ]
       },
       {
-        "name": "GOODSLOVE CAFE《光与夜之恋》五周年音乐盛典主题（场地待核）",
+        "name": "GOODSLOVE CAFE《光与夜之恋》五周年音乐盛典主题",
         "aliases": ["GOODSLOVE CAFE", "光夜音乐盛典餐厅"],
+        "floor": "C馆二层",
         "kind": "主题餐饮、主题饮品",
-        "description": "上海本期餐厅档期已有官方公告；五角场万达当期铺位及旧B1场地关系仍待核实。",
-        "status": "unverified",
-        "pendingReview": {"category": "verification"},
-        "limited": {"scope": "theme", "period": "上海主题：2026年9月10日—12月13日（本商场场地待核）", "startsOn": "2026-09-10", "endsOn": "2026-12-13"},
-        "note": "品牌本人明确上海餐厅9月10日—12月13日，10月12日起提供外带；没有把广州等城市10月11日结束套来。2026年3月官方原文曾写本商场B1 B1066—1068，本期本人正文未列上海铺位，不能直接沿用旧址或据活动汇总填C馆二层。原帖曾出现App扫码限制，用户恢复后已续核；品牌身份已识别，本商场当期场地仍待确认。",
+        "description": "在五角场万达C馆二层举办的光夜音乐盛典主题餐厅，提供本期主题餐饮；入场与周边购买方式以官方当期指引为准。",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "limited": {"scope": "theme", "period": "上海主题：2026年9月10日—12月13日", "startsOn": "2026-09-10", "endsOn": "2026-12-13"},
+        "note": "本人9月14日预约原帖第2张海报明确上海五角场万达店在淞沪路77号C馆2F，上海本期9月10日—12月13日；10月公告确认继续营业及外带。十月装修海报只列武汉、广州、重庆，不能套上海。B1 B1066—1068属于3月旧主题地址，与C馆空间关系尚未证实，不据此宣称整店搬迁或新增另一家常设店。",
         "sources": [
+          {"label": "GOODSLOVE CAFE本人预约海报第2张·上海五角场万达C馆二层与本期档期", "url": "https://www.xiaohongshu.com/explore/6aa7c5b80000000011034c44", "date": "2026-09-14"},
           {"label": "GOODSLOVE CAFE本人上海主题继续营业至12月13日", "url": "https://www.xiaohongshu.com/explore/6abcee6800000000140034f6", "date": "2026-10-06"},
           {"label": "GOODSLOVE CAFE本人上海外带10月12日开启", "url": "https://www.xiaohongshu.com/explore/6ac70ad5000000000a025886", "date": "2026-10-08"},
           {"label": "GOODSLOVE CAFE本人音乐盛典主题开幕与上海档期", "url": "https://www.xiaohongshu.com/explore/6a7e8fc9000000002402e621", "date": "2026-08-14"},
-          {"label": "GOODSLOVE CAFE官方3月B1旧场地及当期主题，仅作位置历史线索", "url": "https://www.sina.cn/news/detail/5282137621660860.html", "date": "2026-03-30"}
+          {"label": "GOODSLOVE CAFE官方3月B1旧场地及当期主题，仅作位置历史线索", "url": "https://www.sina.cn/news/detail/5282137621660860.html", "date": "2026-03-30"},
+          {"label": "GOODSLOVE CAFE本人装修时间线·适用武汉广州重庆，不含上海", "url": "https://www.xiaohongshu.com/explore/6aca06ec0000000018007daf", "dateLabel": "原文编辑于10-12 上海，读取2026-10-26；仅解释2026年编辑，非原发表日"}
+        ],
+        "accounts": [
+          {"platform": "xiaohongshu", "name": "GOODSLOVE CAFE", "handle": "27760585669", "url": "https://www.xiaohongshu.com/user/profile/63169fda000000001501c39d", "scope": "brand"}
         ]
       },
       {
         "name": "漫魂ComicSoul 五角场万达旧店",
         "aliases": ["ComicSoul", "漫魂"],
+        "floor": "C馆（具体楼层未核）",
         "status": "closed",
-        "inactive": {"reason": "closed", "history": "2026年9月1日正式停止营业；开业日及原具体楼层未核。"},
-        "note": "品牌本人9月7日公告明确本店已于2026年9月1日正式停止营业、不再接待到店消费，售后联系品牌。停止日与公告日分别保留；不影响迪美、新世界等其他门店。开业报道正文未成功取得，不用摘要猜原楼层。",
+        "inactive": {"reason": "closed", "history": "2025年5月1日有本人本店经营记录；2026年9月1日正式停止营业。具体开业日及原楼层未核。"},
+        "note": "品牌本人2025年5月1日排队原帖明确本店C栋C2门及当天开门选购；C2为入口编号，不能当作二层。本人2026年9月7日公告明确本店已于9月1日正式停止营业、不再接待到店消费，售后联系品牌。停止日与公告日分别保留，不影响其他分店；原开业报道仍打不开，不用摘要补原楼层。",
         "sources": [
+          {"label": "漫魂本人2025年5月1日经营与C栋C2门排队指引（历史用途）", "url": "https://www.xiaohongshu.com/explore/68124a9e0000000023001010", "date": "2025-05-01"},
           {"label": "漫魂ComicSoul本人上海五角场万达店闭店通知", "url": "https://www.xiaohongshu.com/explore/6a9e55010000000012003f58", "date": "2026-09-07"},
           {"label": "漫魂ComicSoul品牌身份与原账号", "url": "https://www.xiaohongshu.com/user/profile/59acc6345e87e725d76d5a59", "dateLabel": "品牌身份复用2026-10-19实际读取；主页日期不作五角场复业证据"}
         ],
@@ -123,12 +131,13 @@
         "floor": "负一层 B1120",
         "status": "closed",
         "inactive": {"reason": "unconfirmed", "history": "2025年4月1日开业；原址最后营业日2025年11月30日。新址及是否同商场、复业情况待核。"},
-        "note": "本店置顶公告完整日期2025年11月30日，明确当天为原地址最后营业时间、将到全新地点且新坐标待公布。不是2026新公告；主页仍保留旧址不等于恢复营业。原址已停，但未证去向是否同商场或已复业，标停业待核实，不擅判彻底外迁或装修。与零售／扭蛋B1007B分开。",
+        "note": "翻翻本人开业回顾确认2025年4月1日开业；本店11月30日置顶公告明确当天为原址最后营业日、新坐标待公布。主页旧址不等于恢复营业。品牌2026年9月主题名单中的上海场为静安大悦城，没有说明五角场店迁往该店；原址去向及复业关系仍待核，不擅判外迁或装修。与零售／扭蛋B1007B分开。",
         "sources": [
           {"label": "三月兽CAFE本人原址最后营业与新址待公布公告", "url": "https://www.xiaohongshu.com/explore/692bc142000000001f0093e7", "date": "2025-11-30"},
           {"label": "翻翻动漫本人2025年4月1日五角场CAFE开业回顾（历史用途）", "url": "https://www.sohu.com/a/880052627_534742", "date": "2025-04-05"},
           {"label": "三月兽CAFE官方2025女仆主题与原B1120地址（历史用途）", "url": "https://www.sina.cn/news/detail/5207851110765241.html", "date": "2025-09-06"},
-          {"label": "三月兽CAFE本店原账号及简介旧地址", "url": "https://www.xiaohongshu.com/user/profile/67db6dc7000000000d00a091", "dateLabel": "未标主页发表日；2026-10-26实际读取，置顶原公告2025-11-30"}
+          {"label": "三月兽CAFE本店原账号及简介旧地址", "url": "https://www.xiaohongshu.com/user/profile/67db6dc7000000000d00a091", "dateLabel": "未标主页发表日；2026-10-26实际读取，置顶原公告2025-11-30"},
+          {"label": "三月兽CAFE本人本期上海参与店为静安，未说明五角场迁移关系", "url": "https://www.xiaohongshu.com/explore/6ab34f84000000001403ad33", "date": "2026-09-23"}
         ],
         "accounts": [
           {"platform": "xiaohongshu", "name": "三月兽CAFE 上海五角场万达店", "handle": "95349123430", "url": "https://www.xiaohongshu.com/user/profile/67db6dc7000000000d00a091", "scope": "store"}
