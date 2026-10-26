@@ -1,5 +1,49 @@
 [
   {
+    "id": "nanjing-zx-official-research-20261026",
+    "date": "2026-10-26",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-002"
+    ],
+    "note": "南京路百联ZX创趣场补齐41家商场常设门店与楼层，追加官方简介／主营依据；COMIPLUS与GoodSmile Cafe常设主体保留，本期主题独立列入限时栏，另有暖暖、逆转裁判两家独立快闪。门店与活动分别计数，旧来源、账号和日期保留；待用户审查，未发布。"
+  },
+  {
+    "id": "external-evidence-retry-20261026",
+    "date": "2026-10-26",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-008",
+      "shanghai-shop-005",
+      "guangzhou-shop-002",
+      "guangzhou-shop-004"
+    ],
+    "note": "重试原受超时、抓取或链接错误影响的证据：暴蒙静安店、梦晴社取得官方门店依据，百米补入官方目录确认的人偶的乌托邦；恋恋甘风原文确认两店合并至一楼106。鸣潮天河海报补足10月25日结束，按已知档期隐藏两商场共6个已结束快闪／主题；仍受阻记录与恢复后不足以判断的资料分开归档。"
+  },
+  {
+    "id": "pending-history-groups-20261025",
+    "date": "2026-10-25",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "guangzhou-shop-002",
+      "guangzhou-shop-003",
+      "guangzhou-shop-004",
+      "guangzhou-shop-001",
+      "suzhou-shop-003",
+      "suzhou-shop-002",
+      "shanghai-shop-003",
+      "shanghai-shop-001",
+      "shanghai-shop-004",
+      "shanghai-shop-008",
+      "shanghai-shop-007",
+      "shanghai-shop-005"
+    ],
+    "note": "待核实区新增“有探店攻略历史”子模块，简列已有出处与原时间；其余身份、分店或状态缺口合并显示“待验证”，保留原因及全部来源。各子组先5条、每次增5条，默认仍折叠；营业、限时与停止营业分类和数量不变，本阶段未追加店铺搜索。"
+  },
+  {
     "id": "shop-conflict-followup-20261025",
     "date": "2026-10-25",
     "type": "edited",

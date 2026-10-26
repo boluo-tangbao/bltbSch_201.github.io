@@ -146,6 +146,11 @@ export function validateShopDirectories(directories, places) {
     try { const parsed = new URL(value); return parsed.protocol === 'https:' && !parsed.username && !parsed.password ? parsed : null }
     catch { return null }
   }
+  const validSource = source => object(source) && text(source.label)
+    && (source.providedBy === undefined || source.providedBy === 'user')
+    && (source.url === undefined
+      ? source.providedBy === 'user' && text(source.dateLabel) && source.date === undefined
+      : !!url(source.url))
   if (!object(directories)) return ['shop-directories.json 必须是地点 ID 到店单的对象']
   const ids = new Set(places.map(place => place.id))
   for (const [id, directory] of Object.entries(directories)) {
@@ -160,10 +165,23 @@ export function validateShopDirectories(directories, places) {
       for (const key of ['name', 'note']) if (!text(shop[key])) fail(id, `店铺 ${key} 必填`)
       if (shop.aliases !== undefined && !validAliases(shop.aliases)) fail(id, `${shop.name} aliases 必须是不重复的 1–160 字别名数组，不能有首尾空格`)
       if (shop.floor !== undefined && !text(shop.floor)) fail(id, `${shop.name} 未知楼层请省略 floor`)
+      if (shop.description !== undefined && !text(shop.description)) fail(id, `${shop.name} 简介须为非空文字`)
+      if (shop.hostShop !== undefined) {
+        const host = directory.shops.find(candidate => candidate?.name === shop.hostShop)
+        if (!text(shop.hostShop) || shop.limited?.scope !== 'theme' || !host || host === shop || host.limited) fail(id, `${shop.name} 店内主题须关联本商圈独立的常设店铺`)
+        else if (host.status === 'closed' && shop.status !== 'closed') fail(id, `${shop.name} 所在店铺已停业，不能仍展示当前店内主题`)
+      }
       if (names.has(shop.name)) fail(id, `店名重复：${shop.name}`)
       names.add(shop.name)
       if (!['recent', 'listed', 'older', 'unverified', 'closed'].includes(shop.status)) fail(id, `${shop.name} 核实状态无效`)
       if (shop.operatingConfirmation !== undefined && shop.operatingConfirmation !== 'official-listing') fail(id, `${shop.name} 营业确认依据无效`)
+      if (shop.pendingReview !== undefined) {
+        const review = shop.pendingReview
+        if (shop.status === 'closed' || shop.accounts?.length || shop.operatingConfirmation === 'official-listing') fail(id, `${shop.name} 待核分组仅适用于未确认营业的线索`)
+        if (!object(review) || !['history', 'verification'].includes(review.category)) fail(id, `${shop.name} 待核分组无效`)
+        else if (review.category === 'history' && (!url(review.sourceUrl) || !shop.sources?.some(source => source.url === review.sourceUrl))) fail(id, `${shop.name} 探店攻略历史必须引用已有营业／位置来源`)
+        else if (review.category === 'verification' && review.sourceUrl !== undefined) fail(id, `${shop.name} 待验证分组不能混填历史来源`)
+      }
       if (shop.limited !== undefined) {
         const limited = shop.limited
         if (!object(limited) || !['store', 'theme'].includes(limited.scope) || !text(limited.period)) fail(id, `${shop.name} 限时信息须注明 store/theme 范围与非空档期 period`)
@@ -182,12 +200,12 @@ export function validateShopDirectories(directories, places) {
       if (shop.kindSources !== undefined) {
         if (!text(shop.kind) || !Array.isArray(shop.kindSources) || !shop.kindSources.length) fail(id, `${shop.name} 主营依据需要非空主营与来源数组`)
         else for (const source of shop.kindSources) {
-          if (!object(source) || !text(source.label) || !url(source.url)) fail(id, `${shop.name} 主营依据需要名称与 HTTPS 链接`)
+          if (!validSource(source)) fail(id, `${shop.name} 主营依据需要名称与 HTTPS 链接；用户文字来源须标明提供者及确认时间`)
         }
       }
       if (!Array.isArray(shop.sources) || !shop.sources.length) fail(id, `${shop.name} 缺少核对依据`)
       else for (const source of shop.sources) {
-        if (!object(source) || !text(source.label) || !url(source.url)) { fail(id, `${shop.name} 依据需要名称与 HTTPS 链接`); continue }
+        if (!validSource(source)) { fail(id, `${shop.name} 依据需要名称与 HTTPS 链接；用户文字来源须标明提供者及确认时间`); continue }
         if (source.date !== undefined && (!validDate(source.date) || source.date > directory.checkedAt)) fail(id, `${shop.name} 来源日期无效或晚于核对日期`)
         if (source.dateLabel !== undefined && (!text(source.dateLabel) || source.date !== undefined)) fail(id, `${shop.name} 来源时间范围必须是非空文字，且不能与 date 同时填写`)
       }

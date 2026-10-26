@@ -588,7 +588,11 @@
   "failedOriginals": [
     {
       "url": "https://www.xiaohongshu.com/explore/6a3f9c3a000000001c024520",
-      "result": "当前笔记暂时无法浏览，提示App扫码；不作生产依据"
+      "result": "当前笔记暂时无法浏览，提示App扫码；不作生产依据",
+      "retry": {
+        "readAt": "2026-10-25",
+        "result": "再次打开仍300031，当前笔记暂时无法浏览，请打开App扫码查看；未绕过，不作本次已读依据"
+      }
     },
     {
       "url": "https://www.xiaohongshu.com/explore/6a12f8d6000000003601e41b",

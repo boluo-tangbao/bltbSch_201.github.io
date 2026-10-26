@@ -154,7 +154,7 @@
         }
       ],
       "visitedAt": "2026-07-13",
-      "updatedAt": "2026-10-24",
+      "updatedAt": "2026-10-25",
       "published": true,
       "location": {
         "lat": 31.237372,
@@ -286,14 +286,20 @@
         }
       ],
       "visitedAt": "2026-08-29",
-      "updatedAt": "2026-10-17",
+      "updatedAt": "2026-10-26",
       "published": true,
       "location": {
         "lat": 31.239113,
         "lng": 121.478747,
         "coordinateSystem": "wgs84",
         "address": "上海市黄浦区南京东路348号百联ZX创趣场"
-      }
+      },
+      "aliases": [
+        "百联ZX创趣场",
+        "百联 ZX 创趣场",
+        "南京东路百联",
+        "上海华联商厦"
+      ]
     },
     {
       "id": "shanghai-shop-003",
@@ -385,7 +391,7 @@
         }
       ],
       "visitedAt": "2026-08-02",
-      "updatedAt": "2026-10-19",
+      "updatedAt": "2026-10-25",
       "published": true,
       "location": {
         "lat": 31.23704,
@@ -522,7 +528,7 @@
         }
       ],
       "visitedAt": "2026-09-09",
-      "updatedAt": "2026-10-19",
+      "updatedAt": "2026-10-25",
       "published": true,
       "location": {
         "lat": 31.236076,
@@ -661,7 +667,7 @@
         }
       ],
       "visitedAt": "2026-08-29",
-      "updatedAt": "2026-10-25",
+      "updatedAt": "2026-10-26",
       "published": true,
       "location": {
         "lat": 31.235439,
@@ -829,7 +835,7 @@
         }
       ],
       "visitedAt": "2026-06-27",
-      "updatedAt": "2026-10-24",
+      "updatedAt": "2026-10-25",
       "published": true,
       "location": {
         "lat": 31.230084,
@@ -934,7 +940,7 @@
         }
       ],
       "visitedAt": "2026-05-02",
-      "updatedAt": "2026-10-25",
+      "updatedAt": "2026-10-26",
       "published": true,
       "location": {
         "lat": 31.245608,
@@ -2326,7 +2332,7 @@
         }
       ],
       "visitedAt": "2026-01-20",
-      "updatedAt": "2026-10-20",
+      "updatedAt": "2026-10-25",
       "published": true,
       "location": {
         "lat": 23.128403,
@@ -2513,7 +2519,7 @@
         }
       ],
       "visitedAt": "2026-01-21",
-      "updatedAt": "2026-10-25",
+      "updatedAt": "2026-10-26",
       "published": true,
       "location": {
         "lat": 23.128469,
@@ -2714,7 +2720,7 @@
         }
       ],
       "visitedAt": "2026-01-18",
-      "updatedAt": "2026-10-20",
+      "updatedAt": "2026-10-25",
       "published": true,
       "location": {
         "lat": 23.12846,
@@ -2928,7 +2934,7 @@
         }
       ],
       "visitedAt": "2026-01-19",
-      "updatedAt": "2026-10-25",
+      "updatedAt": "2026-10-26",
       "published": true,
       "location": {
         "lat": 23.137324,
@@ -3269,7 +3275,7 @@
         }
       ],
       "visitedAt": "2026-09-19",
-      "updatedAt": "2026-10-20",
+      "updatedAt": "2026-10-25",
       "published": true,
       "location": {
         "lat": 31.293239,

@@ -28,13 +28,15 @@ for (const route of ['', 'guide/']) {
         for (const more of await page.locator('.shop-directory-more').all()) {
           await expect(more).toHaveJSProperty('open', false)
           await more.locator('summary').click()
-          const rows = more.locator('.shop-row')
-          await expect(rows.filter({ visible: true })).toHaveCount(Math.min(5, await rows.count()))
-          const expand = more.locator('.shop-expand')
-          while (await expand.count()) {
-            const before = await rows.filter({ visible: true }).count()
-            await expand.click()
-            await expect(rows.filter({ visible: true })).toHaveCount(Math.min(before + 5, await rows.count()))
+          for (const subgroup of await more.locator('.shop-pending-group').all()) {
+            const rows = subgroup.locator('.shop-row')
+            await expect(rows.filter({ visible: true })).toHaveCount(Math.min(5, await rows.count()))
+            const expand = subgroup.locator('.shop-expand')
+            while (await expand.count()) {
+              const before = await rows.filter({ visible: true }).count()
+              await expand.click()
+              await expect(rows.filter({ visible: true })).toHaveCount(Math.min(before + 5, await rows.count()))
+            }
           }
         }
         for (const shop of directories[placeId].shops.filter(shop => shop.status !== 'closed')) {
@@ -58,6 +60,15 @@ for (const route of ['', 'guide/']) {
           } else {
             if (shop.operatingConfirmation === 'official-listing') checkedOfficialListing = true
             else checkedPending = true
+            if (shop.pendingReview?.category === 'history') {
+              const history = row.locator('.shop-history-source')
+              await expect(history).toBeVisible()
+              await expect(history.locator('a')).toHaveAttribute('href', shop.pendingReview.sourceUrl)
+              await expect(row.locator('xpath=ancestor::*[@data-pending-category][1]')).toHaveAttribute('data-pending-category', 'history')
+            } else if (shop.operatingConfirmation !== 'official-listing') {
+              await expect(row.locator('.shop-status')).toHaveText('待验证')
+              await expect(row.locator('.shop-history-source')).toHaveCount(0)
+            }
             await expect(row.locator('.shop-evidence-note')).toContainText(shop.note!)
             const links = row.locator('.shop-sources').first().locator('a')
             const sources = mergeShopSources(shop)

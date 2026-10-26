@@ -3,12 +3,14 @@ export interface GalleryMedia { src: string; alt: string; group?: string; type?:
 export interface ShopAccount {
   platform: 'xiaohongshu' | 'douyin'; name: string; handle?: string; url: string; scope: 'store' | 'brand'
 }
-export interface ShopSource { label: string; url: string; date?: string; dateLabel?: string }
+export interface ShopSource { label: string; url?: string; providedBy?: 'user'; date?: string; dateLabel?: string }
 export interface DirectoryShop {
-  name: string; floor?: string; kind?: string
+  name: string; floor?: string; kind?: string; description?: string
   aliases?: string[]
   operatingConfirmation?: 'official-listing'
+  pendingReview?: { category: 'history'; sourceUrl: string } | { category: 'verification' }
   limited?: { scope: 'store' | 'theme'; period: string; startsOn?: string; endsOn?: string }
+  hostShop?: string
   inactive?: { reason: 'closed' | 'relocated' | 'renovation' | 'unconfirmed'; history: string }
   status: 'recent' | 'listed' | 'older' | 'unverified' | 'closed'
   note: string; sources: ShopSource[]; kindSources?: ShopSource[]; accounts?: ShopAccount[]

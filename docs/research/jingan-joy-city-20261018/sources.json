@@ -848,5 +848,22 @@
     "抖音小Mia原图未完整读完，未当作店单证据",
     "部分微博入口或新浪原文反爬，失败页面未作生产结论依据",
     "没有新下载网图"
+  ],
+  "failedOriginalPageRetries": [
+    {
+      "url": "https://www.sina.cn/news/detail/5334378541744617.html",
+      "readAt": "2026-10-26",
+      "result": "原文恢复，樱漫官方2026-08-21 15:46活动名单列静安大悦城N601-N602；现有9月确认已足，不重复改店数。"
+    },
+    {
+      "url": "https://www.sina.cn/news/detail/5303880893596041.html",
+      "readAt": "2026-10-26",
+      "result": "抓取转antispam安全路径，不可重试；停止相关路径，未绕过。"
+    },
+    {
+      "url": "https://sh.people.com.cn/n2/2026/0120/c134768-41477643.html",
+      "readAt": "2026-10-26",
+      "result": "抓取502；浏览器ERR_CERT_COMMON_NAME_INVALID，未绕过证书警告；合法转载仍可复用。"
+    }
   ]
 }

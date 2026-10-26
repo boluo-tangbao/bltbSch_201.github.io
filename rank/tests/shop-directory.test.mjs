@@ -2,12 +2,42 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { validateShopDirectories } from '../scripts/validate-data.mjs'
-import { mergeShopSources, shopDisplayStatus, shopDirectoryGroups, sourcePredatesVisit } from '../src/utils/shopDirectory.ts'
+import { mergeShopSources, shopDisplayStatus, shopDirectoryGroups, sourcePredatesVisit, pendingShopGroups, shopHistorySource } from '../src/utils/shopDirectory.ts'
 
 const directories = JSON.parse(readFileSync(new URL('../src/data/shop-directories.json', import.meta.url), 'utf8'))
 const groups = JSON.parse(readFileSync(new URL('../src/data/places.json', import.meta.url), 'utf8'))
 const places = Object.values(groups).flat()
 const fixture = () => ({ test: { area: '东区', checkedAt: '2026-10-05', shops: [{ name: '测试店', floor: '负二层', status: 'unverified', note: '保留旧线索', sources: [{ label: '来源', url: 'https://example.com/source' }] }] } })
+
+test('pending history is explicitly grouped, keeps original source time, and never confirms operation', () => {
+  const shop = fixture().test.shops[0]
+  shop.sources[0].dateLabel = '编辑于2025-09-03；读取2026-10-05，非原发表日'
+  const history = { ...shop, name: '历史线索', pendingReview: { category: 'history', sourceUrl: shop.sources[0].url } }
+  const verification = { ...shop, name: '身份冲突', pendingReview: { category: 'verification' } }
+  assert.deepEqual(pendingShopGroups([verification, history, shop]).map(g => [g.key, g.shops.map(s => s.name)]), [
+    ['history', ['历史线索']], ['verification', ['身份冲突', '测试店']],
+  ])
+  assert.equal(shopHistorySource(history).time, '编辑于2025-09-03')
+  assert.equal(shopHistorySource(shop), undefined)
+  assert.equal(shopDisplayStatus(history), 'evidence')
+  delete history.sources[0].dateLabel
+  assert.equal(shopHistorySource(history).time, '原文日期未注明')
+})
+
+test('history groups reject missing source references and cannot be attached to confirmed or closed shops', () => {
+  const data = fixture(), shop = data.test.shops[0]
+  shop.pendingReview = { category: 'history', sourceUrl: shop.sources[0].url }
+  const validate = () => validateShopDirectories(data, [{ id: 'test' }])
+  assert.deepEqual(validate(), [])
+  shop.pendingReview.sourceUrl = 'https://example.com/unread'
+  assert.ok(validate().some(e => e.includes('引用已有')))
+  shop.pendingReview.sourceUrl = shop.sources[0].url
+  shop.operatingConfirmation = 'official-listing'
+  assert.ok(validate().some(e => e.includes('仅适用于')))
+  delete shop.operatingConfirmation
+  shop.status = 'closed'
+  assert.ok(validate().some(e => e.includes('仅适用于')))
+})
 
 test('shared evidence URLs appear once while retaining roles, dates and independent merchandise sources', () => {
   const source = { label: '官网门店目录', url: 'https://example.com/store', dateLabel: '2026-10-20读取' }
@@ -28,6 +58,34 @@ test('only verified account entries are shown as open; closed notices override a
   assert.equal(shopDisplayStatus(shop), 'open')
   shop.status = 'closed'
   assert.equal(shopDisplayStatus(shop), 'closed')
+})
+
+test('user-confirmed text sources retain provenance without inventing URLs or publication dates', () => {
+  const data = fixture(), shop = data.test.shops[0]
+  shop.sources = [{ label: '商场店单用户转录', providedBy: 'user', dateLabel: '用户2026-10-05确认；原发表日未知' }]
+  const validate = () => validateShopDirectories(data, [{ id: 'test' }])
+  assert.deepEqual(validate(), [])
+  assert.equal(shopDisplayStatus(shop), 'evidence')
+  assert.equal(sourcePredatesVisit(shop.sources, '2026-10-06'), false)
+  delete shop.sources[0].providedBy
+  assert.ok(validate().some(e => e.includes('提供者及确认时间')))
+  shop.sources[0].providedBy = 'user'
+  delete shop.sources[0].dateLabel
+  assert.ok(validate().some(e => e.includes('提供者及确认时间')))
+  shop.sources[0].dateLabel = '用户2026-10-05确认'
+  for (const invalidUrl of ['', 'http://example.com', 'javascript:alert(1)']) {
+    shop.sources[0].url = invalidUrl
+    assert.ok(validate().some(e => e.includes('HTTPS')))
+  }
+})
+
+test('distinct text sources do not collapse together and matching evidence keeps both roles', () => {
+  const source = { label: '用户转录商场名单', providedBy: 'user', dateLabel: '用户2026-10-05确认' }
+  const result = mergeShopSources({ sources: [source, { ...source, label: '用户提供的原店名说明' }], kindSources: [source] })
+  assert.equal(result.length, 2)
+  assert.deepEqual(result[0].roles, ['营业／位置', '主营'])
+  assert.deepEqual(result[1].labels, ['用户提供的原店名说明'])
+  assert.equal(result[0].url, undefined)
 })
 
 test('explicit official listings confirm operation without social accounts; closure still wins', () => {
@@ -86,6 +144,42 @@ test('limited periods preserve unknown years and reject impossible dates, revers
   data.test.shops[0].status = 'closed'
   data.test.shops[0].limited = { scope: 'theme', period: '截至2026-10-04', endsOn: '2026-10-04' }
   assert.deepEqual(validateShopDirectories(data, [{ id: 'test' }]), [])
+})
+
+test('store and hosted theme remain separate, and theme expiry preserves the permanent store', () => {
+  const data = fixture()
+  const host = data.test.shops[0]
+  host.operatingConfirmation = 'official-listing'
+  host.description = '角色周边与主题饮品门店。'
+  const theme = { ...host, name: '本期主题', hostShop: host.name, limited: { scope: 'theme', period: '至10月5日', endsOn: '2026-10-05' } }
+  data.test.shops.push(theme)
+  assert.deepEqual(validateShopDirectories(data, [{ id: 'test' }]), [])
+  assert.deepEqual(shopDirectoryGroups(data.test.shops).regular.open.map(s => s.name), [host.name])
+  assert.deepEqual(shopDirectoryGroups(data.test.shops).limited.open.map(s => s.name), [theme.name])
+  data.test.checkedAt = '2026-10-06'
+  assert.ok(validateShopDirectories(data, [{ id: 'test' }]).some(e => e.includes('已结束')))
+  theme.status = 'closed'
+  assert.deepEqual(validateShopDirectories(data, [{ id: 'test' }]), [])
+  const result = shopDirectoryGroups(data.test.shops)
+  assert.equal(result.regular.open.length, 1)
+  assert.equal(result.limited.open.length + result.inactive.length, 0)
+})
+
+test('hosted themes must reference a distinct permanent store in the same directory', () => {
+  const data = fixture()
+  const host = data.test.shops[0]
+  const theme = { ...host, name: '主题', hostShop: host.name, limited: { scope: 'theme', period: '档期待核实' } }
+  data.test.shops.push(theme)
+  for (const hostShop of ['', '异地店', theme.name]) {
+    theme.hostShop = hostShop
+    assert.ok(validateShopDirectories(data, [{ id: 'test' }]).some(e => e.includes('关联本商圈')))
+  }
+  theme.hostShop = host.name
+  theme.limited.scope = 'store'
+  assert.ok(validateShopDirectories(data, [{ id: 'test' }]).some(e => e.includes('关联本商圈')))
+  theme.limited.scope = 'theme'
+  host.status = 'closed'
+  assert.ok(validateShopDirectories(data, [{ id: 'test' }]).some(e => e.includes('所在店铺已停业')))
 })
 
 test('published shop directories reference actual places and carry source evidence', () => {

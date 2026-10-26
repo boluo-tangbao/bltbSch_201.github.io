@@ -661,5 +661,13 @@
     "dateLabel": "编辑于09-13",
     "finding": "正文明确正佳广场6F东映店；不是时尚天河独立新店。",
     "decision": "异商场排除，不套历史东映快闪"
+  },
+  {
+    "readAt": "2026-10-26",
+    "key": "wuthering-waves-official-poster-recovered",
+    "url": "https://www.sina.cn/news/detail/5345945026037533.html",
+    "finding": "正常原页面内嵌首图可读，明确快闪2026-10-01至10-25、主题店10-05至10-25；非首周预约期限。",
+    "evidence": "wuthering-waves-official-period-20261026.png",
+    "decision": "补齐endsOn；已跨10月26日按期隐藏，无整店闭店推断"
   }
 ]
