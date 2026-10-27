@@ -1,4 +1,415 @@
 {
+  "shanghai-shop-018": {
+    "area": "上海环球港（中山北路3300号）",
+    "checkedAt": "2026-10-27",
+    "notice": "阶段性研究：已做小红书、抖音站内内容发现；尚有传统潮玩店账号、部分快闪档期及三楼售谷区主体待核，非全商场完整名单。",
+    "shops": [
+      {
+        "name": "漫谷里",
+        "floor": "负二层 X118次元空间",
+        "kind": "动漫／游戏周边",
+        "status": "recent",
+        "note": "本分店主页明确环球港B2 X118及营业时间；八月本址探店与本人近期新品预告相符。新品到店时间未定，不承诺现货。",
+        "sources": [
+          {
+            "label": "漫谷里（环球港）本人主页",
+            "url": "https://www.xiaohongshu.com/user/profile/6a19a7140000000002001c06",
+            "dateLabel": "页面未标发表日；实际读取2026-10-27"
+          },
+          {
+            "label": "星期日本址探店：漫谷里、罗森、三月兽",
+            "url": "https://www.xiaohongshu.com/explore/6a803a510000000029030906",
+            "date": "2026-08-15"
+          },
+          {
+            "label": "本人安魂曲新品预告，明确上海环球港B2漫谷里",
+            "url": "https://www.xiaohongshu.com/explore/6ad9cfd00000000033011bb2",
+            "dateLabel": "编辑于5天前 上海；读取2026-10-27，非原发表日期"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "星期日本址探店：漫谷里、罗森、三月兽",
+            "url": "https://www.xiaohongshu.com/explore/6a803a510000000029030906",
+            "date": "2026-08-15"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "漫谷里（环球港）",
+            "handle": "49329990879",
+            "url": "https://www.xiaohongshu.com/user/profile/6a19a7140000000002001c06",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "森罗万象",
+        "floor": "负二层 X118-B01",
+        "kind": "动漫周边、集换式卡牌",
+        "status": "recent",
+        "note": "本人主页精确到本址B01；近期本人灵契线下发售帖与本商圈经营账号的漫威TCG现货及试玩桌信息相互印证。官网未列本店不能推出关闭。",
+        "sources": [
+          {
+            "label": "森罗万象-上海环球港X118店本人主页",
+            "url": "https://www.xiaohongshu.com/user/profile/6a62fcfb000000000f038402",
+            "dateLabel": "页面未标发表日；实际读取2026-10-27"
+          },
+          {
+            "label": "本人灵契系列线下发售原文",
+            "url": "https://www.xiaohongshu.com/explore/6adb12a9000000003300facf",
+            "dateLabel": "4天前 上海；读取2026-10-27"
+          },
+          {
+            "label": "上海X118-摸鱼小8本址经营帖：漫威TCG现货、试玩桌，直接关联森罗本店",
+            "url": "https://www.xiaohongshu.com/explore/6ae066db0000000034034197",
+            "dateLabel": "4小时前 上海；读取2026-10-27"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "本人灵契周边线下发售",
+            "url": "https://www.xiaohongshu.com/explore/6adb12a9000000003300facf",
+            "dateLabel": "4天前 上海；读取2026-10-27"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "森罗万象-上海环球港X118店",
+            "handle": "63657709541",
+            "url": "https://www.xiaohongshu.com/user/profile/6a62fcfb000000000f038402",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "罗森IP购旗舰店",
+        "floor": "负二层 X118 A10",
+        "kind": "IP联动周边",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "罗森当前官网门店目录明确列本店与铺位；本址八月探店介绍IP联动礼盒及玩偶。未套用浦东啦啦宝都店资料。",
+        "sources": [
+          {
+            "label": "罗森官网：上海IP购旗舰店目录",
+            "url": "https://www.chinalawson.com.cn/newsfeeds/31/shops/%E4%B8%8A%E6%B5%B7%E5%B8%82",
+            "dateLabel": "页面未标发表日；实际读取2026-10-27"
+          },
+          {
+            "label": "星期日本址探店：漫谷里、罗森、三月兽",
+            "url": "https://www.xiaohongshu.com/explore/6a803a510000000029030906",
+            "date": "2026-08-15"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "星期日本址探店：漫谷里、罗森、三月兽",
+            "url": "https://www.xiaohongshu.com/explore/6a803a510000000029030906",
+            "date": "2026-08-15"
+          }
+        ]
+      },
+      {
+        "name": "TOP TOY",
+        "floor": "负二层 2013号铺",
+        "kind": "潮玩",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "当前品牌官网目录明确上海环球港店及负二层2013号铺；2026年本商场攻略列为B2花园厅潮玩店。不将其他分店库存套用到本店。",
+        "sources": [
+          {
+            "label": "TOP TOY官网当前门店目录：上海环球港店",
+            "url": "https://toptoyglobal.com/store/15.html",
+            "dateLabel": "页面未标发表日；实际读取2026-10-27"
+          },
+          {
+            "label": "上海观察本址潮玩攻略",
+            "url": "https://www.shobserver.com/sgh/detail?id=1710225",
+            "date": "2026-02-16"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "上海观察本址潮玩攻略",
+            "url": "https://www.shobserver.com/sgh/detail?id=1710225",
+            "date": "2026-02-16"
+          }
+        ]
+      },
+      {
+        "name": "MINISO FRIENDS",
+        "floor": "负二层",
+        "kind": "IP周边、潮玩",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "名创优品当前官网全球门店板块明确列MINISO FRIENDS上海环球港店；本址2026年报道支持负二层位置。",
+        "sources": [
+          {
+            "label": "名创优品官网全球门店：MINISO FRIENDS上海环球港店",
+            "url": "https://www.miniso.cn/",
+            "dateLabel": "页面未标发表日；实际读取2026-10-27"
+          },
+          {
+            "label": "上海观察本址潮玩攻略",
+            "url": "https://www.shobserver.com/sgh/detail?id=1710225",
+            "date": "2026-02-16"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "上海观察本址潮玩攻略",
+            "url": "https://www.shobserver.com/sgh/detail?id=1710225",
+            "date": "2026-02-16"
+          }
+        ]
+      },
+      {
+        "name": "The Green Party 绿光派对",
+        "floor": "负二层",
+        "kind": "IP周边、潮玩杂货",
+        "status": "unverified",
+        "pendingReview": {
+          "category": "history",
+          "sourceUrl": "https://www.shobserver.com/sgh/detail?id=1710225"
+        },
+        "note": "2026年2月商场报道列店；抖音2月21日本址售谷内容卡、七月小红书评论有本址线索。抖音实际用户搜索未找到可确认的环球港分店，原视频点击后自动跳转到旧内容，未取得稳定原帖，不据此升级营业。",
+        "sources": [
+          {
+            "label": "上海观察本址潮玩攻略",
+            "url": "https://www.shobserver.com/sgh/detail?id=1710225",
+            "date": "2026-02-16"
+          },
+          {
+            "label": "抖音站内内容结果：摸鱼小珍珠2月21日本址售谷线索，仅读卡片",
+            "url": "https://www.douyin.com/search/%E7%8E%AF%E7%90%83%E6%B8%AF%20%E7%BB%BF%E5%85%89%E6%B4%BE%E5%AF%B9",
+            "dateLabel": "卡片2月21日，按读取当年解释2026年；读取2026-10-27"
+          },
+          {
+            "label": "七月环球港探店评论中的B2绿光线索",
+            "url": "https://www.xiaohongshu.com/explore/6a4b3ff7000000002103c0cb",
+            "date": "2026-07-06"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "上海观察本址潮玩攻略",
+            "url": "https://www.shobserver.com/sgh/detail?id=1710225",
+            "date": "2026-02-16"
+          }
+        ]
+      },
+      {
+        "name": "三月兽环球港X118快闪店",
+        "floor": "负二层 X118次元空间",
+        "kind": "动漫／游戏周边",
+        "status": "unverified",
+        "limited": {
+          "scope": "store",
+          "period": "2026年7月10日起；整店结束日待核",
+          "startsOn": "2026-07-10"
+        },
+        "pendingReview": {
+          "category": "history",
+          "sourceUrl": "https://www.xiaohongshu.com/explore/6a803a510000000029030906"
+        },
+        "note": "品牌公告明确为快闪店。周年福利7月10—31日不等于整店档期；八月探店仍有本店线索，当前延续状态和结束日待核。",
+        "sources": [
+          {
+            "label": "翻翻动漫品牌周报：三月兽环球港X118快闪开业",
+            "url": "https://www.sohu.com/a/1048882810_534742",
+            "date": "2026-07-11"
+          },
+          {
+            "label": "三月兽本人公告：周年福利与快闪地址",
+            "url": "https://www.sina.cn/news/detail/5317785603020406.html",
+            "date": "2026-07-06"
+          },
+          {
+            "label": "星期日本址探店：漫谷里、罗森、三月兽",
+            "url": "https://www.xiaohongshu.com/explore/6a803a510000000029030906",
+            "date": "2026-08-15"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "星期日本址探店：漫谷里、罗森、三月兽",
+            "url": "https://www.xiaohongshu.com/explore/6a803a510000000029030906",
+            "date": "2026-08-15"
+          }
+        ]
+      },
+      {
+        "name": "小小谷努咪（花园厅旧快闪）",
+        "floor": "负二层 花园厅",
+        "kind": "动漫周边、毛绒玩偶",
+        "status": "closed",
+        "limited": {
+          "scope": "store",
+          "period": "2026年7月1日—8月31日",
+          "startsOn": "2026-07-01",
+          "endsOn": "2026-08-31"
+        },
+        "note": "商场原帖明确整店快闪期，已结束并隐藏归档。10月B07新线索不自动延长旧花园厅档期，也不据旧活动结束宣布品牌所有售点关闭。",
+        "sources": [
+          {
+            "label": "上海环球港本人：小小谷努咪快闪店及明确档期",
+            "url": "https://www.xiaohongshu.com/explore/6a4e22b7000000000702e356",
+            "date": "2026-07-08"
+          }
+        ]
+      }
+    ]
+  },
+  "shanghai-shop-017": {
+    "area": "长宁巴黎春天·悦汇天山（天山路762号）",
+    "checkedAt": "2026-10-27",
+    "notice": "阶段性研究：已做小红书、抖音站内内容发现；B1其他候选及四楼主题咖啡、快闪档期仍待核，不据泛称撤店推断具体门店闭店。",
+    "shops": [
+      {
+        "name": "RXD集换式卡牌对战道馆",
+        "aliases": [
+          "RXD人形町漫玩屋",
+          "人形町卡牌对战馆"
+        ],
+        "floor": "负一层 B1-02",
+        "kind": "集换式卡牌、手办、模型",
+        "status": "recent",
+        "note": "本人明确悦汇天山巴黎春天B1-02及TCG、手办、模型；八月公告一楼暑期快闪收官并回归B1老位置，十月本人继续发布店赛。只计B1本体一店。",
+        "sources": [
+          {
+            "label": "RXD本人主页与本址铺位",
+            "url": "https://www.xiaohongshu.com/user/profile/692d5ce40000000037002936",
+            "dateLabel": "页面未标发表日；实际读取2026-10-27"
+          },
+          {
+            "label": "RXD本人地址变更公告：一楼暑期快闪收官，B1本体继续",
+            "url": "https://www.xiaohongshu.com/explore/6a8c2cee0000000025004f91",
+            "date": "2026-08-24"
+          },
+          {
+            "label": "RXD本人最新店赛：宝可梦、符文战场",
+            "url": "https://www.xiaohongshu.com/explore/6adeb5c7000000001500956d",
+            "date": "2026-10-26"
+          },
+          {
+            "label": "商场本人：人形町卡牌对战馆赛事",
+            "url": "https://www.sina.cn/news/detail/5278845893874210.html",
+            "date": "2026-03-21"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "RXD本人主页主营",
+            "url": "https://www.xiaohongshu.com/user/profile/692d5ce40000000037002936",
+            "dateLabel": "页面未标发表日；实际读取2026-10-27"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "RXD集换式卡牌对战道馆",
+            "handle": "42075446684",
+            "url": "https://www.xiaohongshu.com/user/profile/692d5ce40000000037002936",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "集研社",
+        "aliases": [
+          "集研社（上海天山巴黎春天店）"
+        ],
+        "floor": "负一层 最西边",
+        "kind": "韩娱周边、专辑、小卡",
+        "status": "recent",
+        "note": "商场八月公告明确本址B1集研社承办活动；上海共用主页仍列本分店，结合本址探店确认。共用号当前无可读笔记，未宣称取得本人经营帖。已结束VAYONN主题与常设承办店分开。",
+        "sources": [
+          {
+            "label": "集研社-上海店共用主页：列本分店B1最西边",
+            "url": "https://www.xiaohongshu.com/user/profile/67dbce37000000000e01d67d",
+            "dateLabel": "页面未标发表日；实际读取2026-10-27"
+          },
+          {
+            "label": "商场本人VAYONN快闪公告，明确B1集研社承办",
+            "url": "https://www.xiaohongshu.com/explore/6a7d40b30000000032021060",
+            "date": "2026-08-13"
+          },
+          {
+            "label": "Silence本址韩娱谷店探店，直接关联集研社",
+            "url": "https://www.xiaohongshu.com/explore/68a05b32000000001d00af76",
+            "date": "2025-08-16"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "Silence本址韩娱谷店探店，直接关联集研社",
+            "url": "https://www.xiaohongshu.com/explore/68a05b32000000001d00af76",
+            "date": "2025-08-16"
+          },
+          {
+            "label": "商场本人VAYONN快闪公告，明确B1集研社承办",
+            "url": "https://www.xiaohongshu.com/explore/6a7d40b30000000032021060",
+            "date": "2026-08-13"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "集研社-上海店（上海共用号）",
+            "handle": "27759391479",
+            "url": "https://www.xiaohongshu.com/user/profile/67dbce37000000000e01d67d",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "GeeGoodly × VAYONN Youth Today",
+        "floor": "负一层 集研社店内",
+        "hostShop": "集研社",
+        "kind": "韩娱周边、专辑、小卡",
+        "status": "closed",
+        "limited": {
+          "scope": "theme",
+          "period": "2026年8月10日—9月10日",
+          "startsOn": "2026-08-10",
+          "endsOn": "2026-09-10"
+        },
+        "note": "商场及品牌明确店内快闪主题档期，已结束隐藏，不代表集研社整店关闭。",
+        "sources": [
+          {
+            "label": "商场本人VAYONN快闪公告，明确B1集研社承办",
+            "url": "https://www.xiaohongshu.com/explore/6a7d40b30000000032021060",
+            "date": "2026-08-13"
+          },
+          {
+            "label": "集谷力GeeGoodly本人同主题公告",
+            "url": "https://www.sina.cn/news/detail/5330003030181912.html",
+            "date": "2026-08-09"
+          }
+        ]
+      },
+      {
+        "name": "RXD一楼暑期快闪",
+        "floor": "一层",
+        "kind": "集换式卡牌、潮玩",
+        "status": "closed",
+        "limited": {
+          "scope": "store",
+          "period": "暑假限定；2026年8月24日公告即将收官，精确始末日未标"
+        },
+        "note": "本人公告明确暑期限定点位收官并回归B1本体；促销、抽奖日期不能当快闪营业结束日。保留归档，不重复计常规门店或外迁历史。",
+        "sources": [
+          {
+            "label": "RXD本人地址变更公告：一楼暑期快闪收官，B1本体继续",
+            "url": "https://www.xiaohongshu.com/explore/6a8c2cee0000000025004f91",
+            "date": "2026-08-24"
+          }
+        ]
+      }
+    ]
+  },
   "shanghai-shop-020": {
     "area": "百联南方购物中心ZX LAB（2区三层、四层）",
     "checkedAt": "2026-10-27",
