@@ -24,7 +24,7 @@ const sections = computed(() => {
   const grouped = shopDirectoryGroups(shops.value)
   return [
     { key: 'regular', title: '常规谷店', ...grouped.regular },
-    { key: 'limited', title: '限时谷店／快闪', ...grouped.limited },
+    { key: 'limited', title: '快闪活动', ...grouped.limited },
     { key: 'inactive', title: '停止营业', open: grouped.inactive, evidence: [] },
   ].filter(section => section.open.length || section.evidence.length)
 })
@@ -51,7 +51,7 @@ defineExpose({ revealShop })
     <p class="shop-directory-intro">每栏及待核实子组先展示5条，每次展开再增加5条；待核实区默认收起，历史探店记录不代表当前营业。</p>
     <div v-for="section in sections" :key="section.key" class="shop-directory-section" :class="'shop-directory-' + section.key">
     <header class="shop-section-heading"><h3>{{ section.title }}</h3><div class="shop-section-actions"><span><template v-if="section.key === 'inactive'">记录 {{ section.open.length }} 家</template><template v-else>确认 {{ section.open.length }} {{ sectionUnit(section.key) }}</template><template v-if="section.evidence.length"> · 待核实 {{ section.evidence.length }} {{ sectionUnit(section.key) }}</template></span><button v-if="section.open.length > visibleCount(section.key)" class="shop-expand" type="button" :aria-label="section.title + '展开全部，每次增加5' + sectionUnit(section.key)" @click="expand(section.key)">展开全部 <small>+{{ Math.min(5, section.open.length - visibleCount(section.key)) }}{{ sectionUnit(section.key) }}</small></button></div></header>
-    <p v-if="section.key === 'limited'" class="shop-limited-intro">本栏包含整店快闪与店内限时主题，按项计数；店内主题不另算一家门店。「主题期」仅指本期活动，常设店继续保留。</p>
+    <p v-if="section.key === 'limited'" class="shop-limited-intro">快闪店、慢闪店与店内限时主题统一归入快闪活动，按项计数，不计入常规门店家数。活动结束不代表所在常设店关闭。</p>
     <p v-if="section.key === 'inactive'" class="shop-inactive-intro">“已停止营业”指彻底关店或迁往其他地点的旧店；装修暂停另行标注，同一商场换楼层的店铺继续按新位置展示。</p>
     <p v-if="!section.open.length" class="shop-directory-empty">暂没有已确认营业的店铺，可展开更多查看已有线索。</p>
     <template v-for="group in [{ more: false, shops: section.open }, { more: true, shops: section.evidence }]" :key="String(group.more)">
@@ -63,7 +63,7 @@ defineExpose({ revealShop })
     <div v-if="group.more && bucket.shops.length > visibleCount(section.key, true, bucket.key)" class="shop-pending-actions"><span>已展示 {{ visibleCount(section.key, true, bucket.key) }} / {{ bucket.shops.length }} {{ sectionUnit(section.key) }}线索</span><button class="shop-expand" type="button" :aria-label="section.title + bucket.title + '展开全部，每次增加5' + sectionUnit(section.key)" @click="expand(section.key, true, bucket.key)">展开全部 <small>+{{ Math.min(5, bucket.shops.length - visibleCount(section.key, true, bucket.key)) }}{{ sectionUnit(section.key) }}</small></button></div>
     <ul class="shop-list">
       <li v-for="(shop, index) in bucket.shops" v-show="index < visibleCount(section.key, group.more, bucket.key)" :id="placeId ? searchTargetId(placeId, { kind: 'shop', name: shop.name }) : undefined" :key="shop.name" class="shop-row" tabindex="-1">
-        <div class="shop-row-title"><div class="shop-name-location"><h4>{{ shop.name }}</h4><span v-if="shop.floor" class="shop-location"><template v-if="shop.inactive">原位置：</template>{{ shop.floor }}</span></div><span class="shop-status" :class="'is-' + shop.displayStatus">{{ shop.inactive ? inactiveLabel[shop.inactive.reason] : statusLabel[shop.displayStatus] }}</span></div>
+        <div class="shop-row-title"><div class="shop-name-location"><h4>{{ shop.name }}</h4><span v-if="shop.floor" class="shop-location"><template v-if="shop.inactive">原位置：</template>{{ shop.floor }}</span></div><span class="shop-status" :class="'is-' + shop.displayStatus">{{ shop.inactive ? inactiveLabel[shop.inactive.reason] : shop.limited && shop.displayStatus === 'open' ? '进行中' : statusLabel[shop.displayStatus] }}</span></div>
         <p v-if="shop.description" class="shop-description">{{ shop.description }}</p>
         <dl v-if="shop.kind || shop.limited || shop.inactive" class="shop-facts">
           <template v-if="shop.inactive"><dt>营业历史</dt><dd class="shop-history">{{ shop.inactive.history }}</dd></template>

@@ -397,6 +397,16 @@ body {
     linear-gradient(37deg, transparent 0 68%, #a6526412 68.05% 68.3%, transparent 68.4% 100%) 0 0 / 690px 760px,
     var(--manga-marble);
 }
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+#app > .page-shell {
+  flex: 1;
+  width: 100%;
+}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,textarea:focus-visible {
   outline-color: var(--manga-pink);
 }
@@ -582,11 +592,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .criteria-section summary { color: var(--manga-ink); font-weight: 750; }
 .criteria-scale>span { color: #514851; }
 .site-footer {
-  max-width: 1200px;
-  margin-bottom: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-inline: max(36px, calc((100% - 1128px) / 2));
   border: 2px solid var(--manga-ink);
   border-bottom: 0;
-  border-radius: 3px 3px 0 0;
+  border-radius: 0;
   background: var(--manga-ink);
   box-shadow: 0 -5px 0 var(--manga-pink);
   color: #fffaf2;
@@ -887,6 +899,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .mascot-guestbook { justify-self: end; }
 .site-footer { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
 .site-footer > span { flex: 1; }
+@media (max-width: 800px) {
+  .site-footer { padding-inline: 24px; }
+}
 @media (max-width: 580px) {
   .board-page .guide-entry { grid-template-columns: 96px minmax(0, 1fr); gap: 12px; padding: 20px 16px; }
   .board-page .guide-entry::before { width: 114px; }
@@ -896,7 +911,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
   .guide-entry-copy .button { padding: 10px; font-size: 14px; }
   .guestbook-layout { grid-template-columns: minmax(0, 1fr) 88px; gap: 12px; }
   .mascot-guestbook { --portrait-size: 88px; }
-  .site-footer { gap: 10px 16px; }
+  .site-footer { gap: 10px 16px; padding-inline: 20px; }
   .site-footer > span { flex-basis: 100%; }
   .site-footer .visit-counter { order: 3; flex-basis: 100%; }
 }

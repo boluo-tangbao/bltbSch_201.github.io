@@ -1,4 +1,1212 @@
 {
+  "shanghai-shop-006": {
+    "area": "百联ZX造趣场（五角场，四平路2500号）",
+    "checkedAt": "2026-10-27",
+    "shops": [
+      {
+        "name": "AKIBA GO 百联ZX造趣场店",
+        "aliases": [
+          "AKIBAGO",
+          "AKIBA秋葉原"
+        ],
+        "floor": "二层",
+        "kind": "动漫／游戏周边、毛绒",
+        "description": "动漫与游戏周边集合店，商场本店上新介绍列明日方舟终末地签名板、摆件、毛绒挂件等。",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "商场本人2026年10月17日原帖明确五角场造趣场二层及10月18日上新，区别南京路创趣场负一层分店。上新不是整店开放期，不承诺实时库存。",
+        "sources": [
+          {
+            "label": "百联ZX造趣场：AKIBA GO明日方舟终末地春晓栖亭上新",
+            "url": "https://www.xiaohongshu.com/explore/6ad08e1b0000000014003443",
+            "date": "2026-10-17"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "商场本店商品介绍：签名板、摆件、毛绒挂件",
+            "url": "https://www.xiaohongshu.com/explore/6ad08e1b0000000014003443",
+            "date": "2026-10-17"
+          }
+        ]
+      },
+      {
+        "name": "GOODSLAND 百联ZX造趣场店",
+        "floor": "三层",
+        "kind": "动漫／游戏周边、盲抽",
+        "description": "角色周边店，商场本店介绍包含PJSK指定盲抽商品。",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "商场本人本月原帖明确三层GOODSLAND本店正在开展到店活动。10月24日至30日为生日折扣与打卡福利，不作为门店限时开放期；未核本人主页的同名抖音候选暂不接入。",
+        "sources": [
+          {
+            "label": "百联ZX造趣场：GOODSLAND望月穗波生日活动",
+            "url": "https://www.xiaohongshu.com/explore/6adc53b20000000033022798",
+            "dateLabel": "原文1天前 上海；读取2026-10-27"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "商场本店PJSK盲抽商品说明",
+            "url": "https://www.xiaohongshu.com/explore/6adc53b20000000033022798",
+            "dateLabel": "原文1天前 上海；读取2026-10-27"
+          }
+        ]
+      },
+      {
+        "name": "甘乐屋（百联ZX造趣场店）",
+        "floor": "二层",
+        "kind": "动漫周边",
+        "description": "动漫角色周边店，商场原帖介绍本店凹凸世界帕洛斯生日花束礼赠。",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "商场本人原帖明确四平路2500号二层甘乐屋及本月到店礼赠，正文含2026生日标签。10月17日至31日是礼赠活动，不是整店开放期，不承诺剩余赠品。",
+        "sources": [
+          {
+            "label": "百联ZX造趣场：甘乐屋帕洛斯生日花束礼",
+            "url": "https://www.xiaohongshu.com/explore/6ad7095b0000000027015b11",
+            "dateLabel": "原文6天前 上海；读取2026-10-27"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "商场本店凹凸世界周边礼赠说明",
+            "url": "https://www.xiaohongshu.com/explore/6ad7095b0000000027015b11",
+            "dateLabel": "原文6天前 上海；读取2026-10-27"
+          }
+        ]
+      },
+      {
+        "name": "YOOOOSHOP（百联ZX造趣场店）",
+        "aliases": [
+          "YOOOSHOP"
+        ],
+        "floor": "负一层",
+        "kind": "动漫周边、明信片、邮折",
+        "description": "角色衍生周边店，本店设moonray全职高手专柜，商场介绍列邮政联名邮折与明信片。",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "商场本人2026年10月13日原帖明确本店负一层；新品预计10月14日到货、以门店实际到货为准，不改写成已到货。moonray专柜不另计一家店。",
+        "sources": [
+          {
+            "label": "百联ZX造趣场：YOOOOSHOP全职高手夏至花笺系列邮政联名",
+            "url": "https://www.xiaohongshu.com/explore/6acdca3e000000001303d86d",
+            "date": "2026-10-13"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "商场本店邮折、扇形明信片等商品说明",
+            "url": "https://www.xiaohongshu.com/explore/6acdca3e000000001303d86d",
+            "date": "2026-10-13"
+          }
+        ]
+      },
+      {
+        "name": "乌丸屋（百联ZX造趣场店）",
+        "floor": "负一层",
+        "kind": "动漫周边",
+        "description": "角色周边店，商场本店原帖介绍缎带英雄新品及到店打卡礼。",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "商场本人2026年10月2日原帖明确五角场造趣场负一层乌丸屋及10月1日起上新。商品满赠与打卡不作为整店限时或独立快闪依据。",
+        "sources": [
+          {
+            "label": "百联ZX造趣场：乌丸屋缎带英雄全新商品",
+            "url": "https://www.xiaohongshu.com/explore/6abe6001000000001a032ff7",
+            "date": "2026-10-02"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "商场本店缎带英雄周边说明",
+            "url": "https://www.xiaohongshu.com/explore/6abe6001000000001a032ff7",
+            "date": "2026-10-02"
+          }
+        ]
+      },
+      {
+        "name": "漫库MANCOOL（百联ZX造趣场店）",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "漫庫MANCOOL(上海五角场百联ZX店)",
+            "handle": "95195483923",
+            "url": "https://www.xiaohongshu.com/user/profile/676e9415000000001801c199",
+            "scope": "store"
+          }
+        ],
+        "aliases": [
+          "漫庫"
+        ],
+        "floor": "二层",
+        "kind": "小说衍生周边",
+        "description": "小说衍生周边店，商场原帖介绍本店藏青一期原著向衍生周边。",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "商场本人2026年10月2日原帖明确五角场造趣场二层漫库及10月1日起商品活动；本店小红书主页身份与9月30日《藏青》原帖的2026年经营内容相符。抖音用户卡尚未读本人主页，不填入账号。",
+        "sources": [
+          {
+            "label": "百联ZX造趣场：漫库藏青原著向衍生周边一期上新",
+            "url": "https://www.xiaohongshu.com/explore/6abe5c35000000001c02e2a1",
+            "date": "2026-10-02"
+          },
+          {
+            "label": "漫库五角场店本人：藏青系列周边，正文2026年10月1日活动",
+            "url": "https://www.xiaohongshu.com/explore/6abcd3cc0000000012036cbb",
+            "date": "2026-09-30"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "商场本店小说衍生周边说明",
+            "url": "https://www.xiaohongshu.com/explore/6abe5c35000000001c02e2a1",
+            "date": "2026-10-02"
+          }
+        ]
+      },
+      {
+        "name": "刺猿虫（百联ZX造趣场店）",
+        "aliases": [
+          "XHRHOBBY"
+        ],
+        "floor": "负一层",
+        "kind": "动漫周边、模型、毛绒、一番赏",
+        "description": "动漫周边集合店，本人主页作品涉及景品、毛绒、拼装模型与一番赏；经营帖列非人哉、夏目友人帐、银魂等IP。",
+        "status": "recent",
+        "note": "本店本人主页及近期上新正文明确欢迎到店选购，门店主体与本商场相符；负一层位置沿用2025年楼层探店，不将攻略编辑日当新核位置日。XHRHOBBY为本人经营标签，不与南京路分店合并。",
+        "sources": [
+          {
+            "label": "刺猿虫五角场造趣场店本人：本周上新，欢迎到店选购",
+            "url": "https://www.xiaohongshu.com/explore/6ad5becd000000000c00bb58",
+            "dateLabel": "原文7天前 上海；读取2026-10-27"
+          },
+          {
+            "label": "添添鸭楼层探店：负一层刺猿虫，历史位置依据",
+            "url": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0",
+            "dateLabel": "编辑于2025-11-30；原发表日未知"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "刺猿虫本店本人主页：景品、毛绒、拼装模型、一番赏",
+            "url": "https://www.xiaohongshu.com/user/profile/675fc5140000000018015731",
+            "dateLabel": "主页未标发表日；读取2026-10-27"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "刺猿虫上海五角场百联zx造趣场店",
+            "handle": "26805398005",
+            "url": "https://www.xiaohongshu.com/user/profile/675fc5140000000018015731",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "奇妙谷屋（百联ZX造趣场店）",
+        "floor": "负一层",
+        "kind": "动漫周边、徽章、色纸、亚克力挂件",
+        "description": "动漫周边集合店，本人首发介绍列剑来动画徽章、色纸、亚克力挂件等商品方向。",
+        "status": "recent",
+        "note": "本人共用号简介明确五角场造趣场负一层及南方百联的不同地址，实际读到2026年10月1日首发正文。账号标品牌共用号，不把南方店库存直接套用本店；商品首发并非整店限时开放。",
+        "sources": [
+          {
+            "label": "奇妙谷屋本人主页：五角场造趣场负一层门店地址",
+            "url": "https://www.xiaohongshu.com/user/profile/6731a5dd000000001d02c0f3",
+            "dateLabel": "主页未标发表日；读取2026-10-27"
+          },
+          {
+            "label": "奇妙谷屋本人：剑来动画浩然系列线下首发，正文2026年10月1日",
+            "url": "https://www.xiaohongshu.com/explore/6ab9fa26000000001803bb66",
+            "date": "2026-09-28"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "奇妙谷屋剑来动画周边品类介绍",
+            "url": "https://www.xiaohongshu.com/explore/6ab9fa26000000001803bb66",
+            "date": "2026-09-28"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "奇妙谷屋-五角场店&百联南方店",
+            "handle": "94133637502",
+            "url": "https://www.xiaohongshu.com/user/profile/6731a5dd000000001d02c0f3",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "模玩熊（百联ZX造趣场店）",
+        "floor": "一层",
+        "kind": "动漫／游戏周边、食玩、手办",
+        "description": "动漫与游戏周边集合店，本店主页及鸣潮经营原帖介绍徽章、亚克力立牌、挂件等，另有食玩和迷你手办作品。",
+        "status": "recent",
+        "note": "本人主页明确四平路造趣场本分店，近期鸣潮原帖与本店发布者一致；一层位置沿用2025年楼层攻略。普通食玩促销和上新不当门店限时；不承诺实时库存。",
+        "sources": [
+          {
+            "label": "模玩熊五角场店本人：鸣潮墨韵游湖／鸣乐之时上新",
+            "url": "https://www.xiaohongshu.com/explore/6adc87cd000000003301bf6f",
+            "dateLabel": "原文2天前 上海；读取2026-10-27"
+          },
+          {
+            "label": "添添鸭楼层探店：一层模玩熊，历史位置依据",
+            "url": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0",
+            "dateLabel": "编辑于2025-11-30；原发表日未知"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "模玩熊本店本人主页与商品作品",
+            "url": "https://www.xiaohongshu.com/user/profile/675145d700000000010018b6",
+            "dateLabel": "主页未标发表日；读取2026-10-27"
+          },
+          {
+            "label": "模玩熊本店鸣潮商品说明",
+            "url": "https://www.xiaohongshu.com/explore/6adc87cd000000003301bf6f",
+            "dateLabel": "原文2天前 上海；读取2026-10-27"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "模玩熊上海百联ZX五角场店",
+            "handle": "95848187865",
+            "url": "https://www.xiaohongshu.com/user/profile/675145d700000000010018b6",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "GuGuGuGu（百联ZX造趣场店）",
+        "aliases": [
+          "GUGUGU"
+        ],
+        "floor": "一层",
+        "kind": "动漫／游戏周边、手办、毛绒、一番赏",
+        "description": "角色周边集合店，店铺本人主页介绍手办、毛绒与一番赏等；补货按本店现场实际为准。",
+        "status": "recent",
+        "note": "本人简介明确杨浦区造趣场一层，2026年10月3日补货原帖及10月8日作者回复关联本店。此为零售主体，未据品牌名与新海诚作品CAFE合并；促销不视作整店限时。",
+        "sources": [
+          {
+            "label": "GuGuGuGu五角场店本人主页与一层地址",
+            "url": "https://www.xiaohongshu.com/user/profile/67a9c74d000000000d0081c4",
+            "dateLabel": "主页未标发表日；读取2026-10-27"
+          },
+          {
+            "label": "GuGuGuGu五角场店本人：补货随机刷新",
+            "url": "https://www.xiaohongshu.com/explore/6ac0e3c600000000180130a2",
+            "date": "2026-10-03"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "GuGuGuGu五角场店本人商品作品",
+            "url": "https://www.xiaohongshu.com/user/profile/67a9c74d000000000d0081c4",
+            "dateLabel": "主页未标发表日；读取2026-10-27"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "GuGuGuGu上海五角场百联zx造趣场店",
+            "handle": "26238874251",
+            "url": "https://www.xiaohongshu.com/user/profile/67a9c74d000000000d0081c4",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "萌购（百联ZX造趣场店）",
+        "floor": "二层",
+        "kind": "游戏周边、徽章、亚克力立牌、毛绒",
+        "description": "游戏角色周边店，商场本店上新介绍包含明日方舟兔兔赴春行系列。",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "商场本人2026年8月29日原帖明确五角场造趣场二层萌购并邀请到店，列周边商品。上新时间不作为整店开放期，不承诺当日库存或赠品。",
+        "sources": [
+          {
+            "label": "百联ZX造趣场：萌购明日方舟兔兔赴春行上新",
+            "url": "https://www.xiaohongshu.com/explore/6a90feec000000000402984d",
+            "date": "2026-08-29"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "商场萌购本店徽章、立牌、毛绒等商品说明",
+            "url": "https://www.xiaohongshu.com/explore/6a90feec000000000402984d",
+            "date": "2026-08-29"
+          }
+        ]
+      },
+      {
+        "name": "animate 上海五角场店",
+        "floor": "一层",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "现行品牌官网门店目录实际读取后确认四平路2500号造趣场分店，区别南京东路旗舰店；一层位置沿用2025年楼层探店。官网注明2025年5月1日迁移焕新，不把旧址迁出当本址关闭。",
+        "sources": [
+          {
+            "label": "animate现行官网：上海五角场门店",
+            "url": "https://www.animate.co.jp/shop/wujiaochang/",
+            "dateLabel": "现行门店目录未标更新日；读取2026-10-27"
+          },
+          {
+            "label": "添添鸭楼层探店：一层animate",
+            "url": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0",
+            "dateLabel": "编辑于2025-11-30；原发表日未知"
+          }
+        ]
+      },
+      {
+        "name": "GOODSMILE STORE 百联ZX造趣场店",
+        "aliases": [
+          "GOOD SMILE STORE",
+          "GSC"
+        ],
+        "floor": "一层",
+        "kind": "动漫周边、模型、手办",
+        "description": "模型、手办与角色周边零售店，品牌官方本月经营名单明确包含造趣场分店。",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "品牌旗下GoodSmile Moment官方2026年10月10日18:26动态明确造趣场店参与10月11日起余量贩售，区别南京路创趣场店。一层及模型手办为2025年本店探店依据；不把品牌10月30日预告写成商品已到货。",
+        "sources": [
+          {
+            "label": "GoodSmile Moment官方：10月11日起余量贩售，列造趣场店",
+            "url": "https://www.sina.cn/media/5798332377",
+            "dateLabel": "本人动态2026-10-10 18:26；读取2026-10-27"
+          },
+          {
+            "label": "添添鸭楼层探店：一层GOOD SMILE STORE",
+            "url": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0",
+            "dateLabel": "编辑于2025-11-30；原发表日未知"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "本店楼层探店：模型与手办",
+            "url": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0",
+            "dateLabel": "编辑于2025-11-30；原发表日未知"
+          }
+        ]
+      },
+      {
+        "name": "ComeFor 上海五角场店",
+        "floor": "负一层，近下沉式广场入口",
+        "kind": "动漫周边、毛绒、杂货",
+        "description": "动漫周边与毛绒杂货店，本人本分店介绍包含徽章、立牌、透卡等商品方向。",
+        "status": "recent",
+        "note": "品牌本人原帖明确造趣场负一层本店及2026年秋季促销；9月19日至11月30日是优惠档期，不是整店限时开放期，具体商品与赠品以门店实际为准。品牌号身份复用既有2026年10月19日核验，本次补读明确本分店正文。",
+        "sources": [
+          {
+            "label": "ComeFor本人：五角场店秋季优惠，明确本店地址",
+            "url": "https://www.xiaohongshu.com/explore/6aab956c0000000012000d87",
+            "dateLabel": "编辑于09-18，正文完整2026活动档期；原发表日未知"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "ComeFor五角场本店商品类别说明",
+            "url": "https://www.xiaohongshu.com/explore/6aab956c0000000012000d87",
+            "dateLabel": "编辑于09-18；读取2026-10-27"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "ComeFor",
+            "url": "https://www.xiaohongshu.com/user/profile/5f3f8f06000000000101c771",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "繁花谷（百联ZX造趣场店）",
+        "floor": "二层",
+        "status": "unverified",
+        "pendingReview": {
+          "category": "history",
+          "sourceUrl": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0"
+        },
+        "note": "2025年楼层攻略记录本店；品牌本人主页与用户卡简介也关联造趣场二层，但已读近期作品多属迪美、鑫耀光环等其他分店，本分店带日期的经营正文仍待补。已结束的灵笼一层快闪不推断为二层常设店关闭，候选品牌号暂不作本店营业账号。",
+        "sources": [
+          {
+            "label": "添添鸭楼层探店：二层繁花谷",
+            "url": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0",
+            "dateLabel": "编辑于2025-11-30；原发表日未知"
+          },
+          {
+            "label": "繁花谷官方品牌主页，经营作品须区分分店",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAA2uVhLn5XK5Qkr_o6n2S63XE80hzuxmDj3Yn3KHVVsaH99OHmVuNym-l_TeJDtUTB",
+            "dateLabel": "主页未标发表日；读取2026-10-27"
+          }
+        ]
+      },
+      {
+        "name": "Rejet Shop（百联ZX造趣场店）",
+        "aliases": [
+          "RejectShop"
+        ],
+        "floor": "一层",
+        "kind": "动漫周边",
+        "status": "unverified",
+        "pendingReview": {
+          "category": "history",
+          "sourceUrl": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0"
+        },
+        "note": "2025年本店探店及上海市政府转载经营报道支持历史经营；报道明确从早期快闪转为扩大经营面积的上海首店，不能仅因最初快闪标签列为当前限时。近期本人经营、Rejet Cafe与零售是否同一空间仍待核。",
+        "sources": [
+          {
+            "label": "添添鸭楼层探店：一层RejectShop",
+            "url": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0",
+            "dateLabel": "编辑于2025-11-30；原发表日未知"
+          },
+          {
+            "label": "上海市政府转载解放日报：Rejet shop在造趣场经营并扩店",
+            "url": "https://www.shanghai.gov.cn/nw4411/20250413/861fecb6a79147fc8b9113f116d00c3b.html",
+            "date": "2025-04-13"
+          }
+        ]
+      },
+      {
+        "name": "潮派谷屋",
+        "floor": "二层",
+        "status": "unverified",
+        "pendingReview": {
+          "category": "history",
+          "sourceUrl": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0"
+        },
+        "note": "2025年本商场楼层探店记录二层潮派谷屋；抖音本店用户查询暂未匹配，结果为服饰、泛好物及同名个人号，不能据此认定没有账号或闭店。当前经营与正式名称仍待核。",
+        "sources": [
+          {
+            "label": "添添鸭楼层探店：二层潮派谷屋",
+            "url": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0",
+            "dateLabel": "编辑于2025-11-30；原发表日未知"
+          }
+        ]
+      },
+      {
+        "name": "番乐星球",
+        "floor": "二层",
+        "status": "unverified",
+        "pendingReview": {
+          "category": "history",
+          "sourceUrl": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0"
+        },
+        "note": "2025年楼层探店记录本店；抖音用户查询主要返回番楽星球直播基地等品牌候选及不相干同音号，未匹配五角场分店与有效经营，不将品牌直播基地当本店账号。",
+        "sources": [
+          {
+            "label": "添添鸭楼层探店：二层番乐星球",
+            "url": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0",
+            "dateLabel": "编辑于2025-11-30；原发表日未知"
+          }
+        ]
+      },
+      {
+        "name": "木木来电",
+        "aliases": [
+          "MumuLand"
+        ],
+        "floor": "二层",
+        "status": "unverified",
+        "pendingReview": {
+          "category": "verification"
+        },
+        "note": "2025年楼层攻略记录零售及IP餐饮；同帖12月读者称未找到、作者仅猜测关门，不能当关闭公告。本轮实际读到上海店抖音本人主页83363123161，但没有能确认五角场旧址的地址；品牌及其他上海地点上新不能消除本址冲突，未接入营业账号。",
+        "sources": [
+          {
+            "label": "添添鸭楼层探店及2025年12月未找到门店的评论",
+            "url": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0",
+            "dateLabel": "正文编辑于2025-11-30；相关评论2025-12-15"
+          },
+          {
+            "label": "MumuLand木木来电上海店本人主页，本商场归属待核",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAP0Ef8s-0ASXlewi21rRqeFK7saNmbiLtTwQyzlrIoD9uxL8RD9OtOsTQn8AmxdfT",
+            "dateLabel": "主页未标发表日；读取2026-10-27"
+          }
+        ]
+      },
+      {
+        "name": "COMIPLUS+（五角场线索）",
+        "aliases": [
+          "COMLPLUS＋"
+        ],
+        "floor": "二层",
+        "status": "unverified",
+        "pendingReview": {
+          "category": "verification"
+        },
+        "note": "2025年楼层攻略原写COMLPLUS＋，提到苏丹游戏周边及饮品；正式名与当前经营待核。抖音COMIPLUS五角场用户结果未匹配本店。商场本月苏丹拍贴原帖实为负一层机器，没有提本店，不能用来确认二层门店或推断搬迁。",
+        "sources": [
+          {
+            "label": "添添鸭楼层探店：COMLPLUS＋原写法",
+            "url": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0",
+            "dateLabel": "编辑于2025-11-30；原发表日未知"
+          }
+        ]
+      },
+      {
+        "name": "野心家",
+        "floor": "二层",
+        "kind": "娃娃、娃衣",
+        "status": "unverified",
+        "pendingReview": {
+          "category": "history",
+          "sourceUrl": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0"
+        },
+        "note": "2025年本商场楼层探店记录二层娃娃及娃衣店；抖音用户查询返回个人及同名账号，未匹配经营主体，当前状态及店型仍待核。",
+        "sources": [
+          {
+            "label": "添添鸭楼层探店：二层野心家",
+            "url": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0",
+            "dateLabel": "编辑于2025-11-30；原发表日未知"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "本店历史探店：娃娃及娃衣",
+            "url": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0",
+            "dateLabel": "编辑于2025-11-30；原发表日未知"
+          }
+        ]
+      },
+      {
+        "name": "XKA",
+        "floor": "三层",
+        "kind": "卡牌、卡牌对战",
+        "status": "unverified",
+        "pendingReview": {
+          "category": "history",
+          "sourceUrl": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0"
+        },
+        "note": "2025年本商场楼层攻略记录三层卡牌店及对战区域；抖音用户查询返回舞蹈号、个人账号与其他卡牌卖家，未匹配本分店，正式主体和当前经营待核。",
+        "sources": [
+          {
+            "label": "添添鸭楼层探店：三层XKA",
+            "url": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0",
+            "dateLabel": "编辑于2025-11-30；原发表日未知"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "本店历史探店：卡牌及对战区域",
+            "url": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0",
+            "dateLabel": "编辑于2025-11-30；原发表日未知"
+          }
+        ]
+      },
+      {
+        "name": "次元波板糖（百联ZX造趣场线索）",
+        "floor": "三层308—310",
+        "status": "unverified",
+        "pendingReview": {
+          "category": "verification"
+        },
+        "note": "品牌旧门店合集明确本址三层308—310，2025年探店也记录零售与主题餐饮；2026年1月网友称门店已无，关闭时间及零售／餐饮去向未核。本人9月温馨提示仅处理忘川产品发货，不能支持五角场复业，静安店关闭也不套本店。暂留待验证，不填营业账号或猜停止原因。",
+        "sources": [
+          {
+            "label": "次元波板糖本人旧门店地址合集：造趣场L3 308—310",
+            "url": "https://www.xiaohongshu.com/explore/6744454d00000000070354cd",
+            "dateLabel": "编辑于2025-12-01；原帖至少已有2024年评论，不作为当前营业确认"
+          },
+          {
+            "label": "添添鸭楼层探店及次元波板糖状态评论",
+            "url": "https://www.xiaohongshu.com/explore/692b9907000000001d03bdc0",
+            "dateLabel": "正文编辑于2025-11-30；关闭线索评论01-11按读取当年为2026"
+          },
+          {
+            "label": "上海市政府转载经营报道：次元波板糖主题餐厅",
+            "url": "https://www.shanghai.gov.cn/nw4411/20250413/861fecb6a79147fc8b9113f116d00c3b.html",
+            "date": "2025-04-13"
+          }
+        ]
+      },
+      {
+        "name": "阅文好物慢闪店",
+        "floor": "一层",
+        "kind": "小说／动漫衍生周边",
+        "description": "阅文IP周边慢闪店，开业介绍包含全职高手、诡秘之主、一人之下系列。",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "limited": {
+          "scope": "store",
+          "period": "2026年10月23日起，结束日未公布",
+          "startsOn": "2026-10-23"
+        },
+        "note": "商场本人明确10月23日开始营业及造趣场一层，结束日未知。与2026年3月负一层入口已结束的阅文快闪分开，不以预约或发帖相对日期代替开业日。",
+        "sources": [
+          {
+            "label": "百联ZX造趣场：阅文好物慢闪店开业",
+            "url": "https://www.xiaohongshu.com/explore/6adad25e0000000031026a2d",
+            "dateLabel": "原文3天前 上海；正文10月23日开业，读取2026-10-27"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "商场慢闪全职高手、诡秘之主、一人之下商品说明",
+            "url": "https://www.xiaohongshu.com/explore/6adad25e0000000031026a2d",
+            "dateLabel": "原文3天前 上海；读取2026-10-27"
+          }
+        ]
+      },
+      {
+        "name": "NEOPLAYERONE 哥斯拉周・怪兽觉醒快闪",
+        "floor": "负一层造趣领域；入口设副会场",
+        "kind": "哥斯拉周边",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "limited": {
+          "scope": "store",
+          "period": "2026年10月23日—11月1日；入口副会场10月24日起",
+          "startsOn": "2026-10-23",
+          "endsOn": "2026-11-01"
+        },
+        "note": "商场本人原帖明确完整档期和负一层主副会场，作者回复仅主会场销售。主副会场是同一快闪，不重复计两家；现场抽选及库存以工作人员说明为准。",
+        "sources": [
+          {
+            "label": "百联ZX造趣场：哥斯拉周怪兽觉醒快闪限定周边",
+            "url": "https://www.xiaohongshu.com/explore/6ad89b8700000000320207f1",
+            "dateLabel": "原文5天前 上海；正文完整2026档期，读取2026-10-27"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "商场哥斯拉周边与展柜说明",
+            "url": "https://www.xiaohongshu.com/explore/6ad89b8700000000320207f1",
+            "dateLabel": "原文5天前 上海；读取2026-10-27"
+          }
+        ]
+      },
+      {
+        "name": "网易乐谷×逆水寒周边快闪",
+        "floor": "一层",
+        "kind": "游戏周边",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "limited": {
+          "scope": "store",
+          "period": "2026年9月30日—10月31日",
+          "startsOn": "2026-09-30",
+          "endsOn": "2026-10-31"
+        },
+        "note": "商场本人原帖明确一层、9月30日至10月31日活动，作者本月答复不会提前结束。按实际读取当年、编辑标签及同季活动上下文判断年份为2026；10月4日以后无需预约，不承诺现货。",
+        "sources": [
+          {
+            "label": "百联ZX造趣场：逆水寒×网易乐谷周边快闪情报",
+            "url": "https://www.xiaohongshu.com/explore/6ab7426c000000001802b3ab",
+            "dateLabel": "编辑于09-30 上海，按读取当年为2026；原发表日未知"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "商场逆水寒周边快闪说明",
+            "url": "https://www.xiaohongshu.com/explore/6ab7426c000000001802b3ab",
+            "dateLabel": "编辑于09-30 上海；读取2026-10-27"
+          }
+        ]
+      },
+      {
+        "name": "漫屿&巍海稷快闪",
+        "floor": "二层小中岛",
+        "kind": "小说衍生周边、毛绒",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "limited": {
+          "scope": "store",
+          "period": "2026年10月1日—10月31日（已延期）",
+          "startsOn": "2026-10-01",
+          "endsOn": "2026-10-31"
+        },
+        "note": "商场本人延期公告明确完整2026档期及二层小中岛，列周边商品。两个品牌同一公告、同一快闪点位先合并一项，不凭品牌数重复计门店。",
+        "sources": [
+          {
+            "label": "百联ZX造趣场：漫屿&巍海稷快闪延期公告",
+            "url": "https://www.xiaohongshu.com/explore/6acdca92000000001303da33",
+            "date": "2026-10-13"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "商场快闪卡套、钥匙扣、毛绒等品类说明",
+            "url": "https://www.xiaohongshu.com/explore/6acdca92000000001303da33",
+            "date": "2026-10-13"
+          }
+        ]
+      },
+      {
+        "name": "the greenparty goods",
+        "floor": "负一层",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户查阅商场店铺栏后提供本店及楼层；按用户确认纳入营业中。未核对的账号及商品细分不猜填。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ]
+      },
+      {
+        "name": "卡游",
+        "floor": "负一层",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户查阅商场店铺栏后提供本店及楼层；按用户确认纳入营业中。未核对的账号及商品细分不猜填。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ]
+      },
+      {
+        "name": "I LOVE TOY",
+        "floor": "负一层",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户查阅商场店铺栏后提供本店及楼层；按用户确认纳入营业中。未核对的账号及商品细分不猜填。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ]
+      },
+      {
+        "name": "飞社长",
+        "floor": "负一层",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户查阅商场店铺栏后提供本店及楼层；按用户确认纳入营业中。未核对的账号及商品细分不猜填。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ]
+      },
+      {
+        "name": "ACG BOX（漫盒）",
+        "floor": "负一层",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户查阅商场店铺栏后提供本店及楼层；按用户确认纳入营业中。未核对的账号及商品细分不猜填。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ]
+      },
+      {
+        "name": "谷力全开",
+        "floor": "负一层",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户查阅商场店铺栏后提供本店及楼层；按用户确认纳入营业中。未核对的账号及商品细分不猜填。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ]
+      },
+      {
+        "name": "耀卡",
+        "floor": "负一层",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户查阅商场店铺栏后提供本店及楼层；按用户确认纳入营业中。未核对的账号及商品细分不猜填。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ]
+      },
+      {
+        "name": "TAKARA TOMY（Tomica）",
+        "floor": "负一层",
+        "kind": "车模（Tomica）",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户查阅商场店铺栏后确认负一层门店，明确售卖Tomica相关车模；不将品牌其他产品线作为本店库存。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ],
+        "aliases": [
+          "takara tomy",
+          "tomica"
+        ],
+        "kindSources": [
+          {
+            "label": "用户补充本店主营：Tomica相关车模",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ]
+      },
+      {
+        "name": "遇意好物",
+        "floor": "二层",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户查阅商场店铺栏后提供本店及楼层；按用户确认纳入营业中。未核对的账号及商品细分不猜填。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ]
+      },
+      {
+        "name": "动物星云",
+        "floor": "二层",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户查阅商场店铺栏后提供本店及楼层；按用户确认纳入营业中。未核对的账号及商品细分不猜填。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ]
+      },
+      {
+        "name": "偶尔梦游",
+        "floor": "三层",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户查阅商场店铺栏后提供本店及楼层；按用户确认纳入营业中。未核对的账号及商品细分不猜填。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ]
+      },
+      {
+        "name": "TO ALICE",
+        "floor": "三层",
+        "kind": "女装（洛丽塔服饰）",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户明确确认三层门店存在及女装店型；实读To Alice上海百联ZX造趣场店本人抖音主页，地址列杨浦区五角场四平路2500号，本人近一周服装作品相符，接入门店账号。不凭服装风格推断售卖谷子。",
+        "accounts": [{"platform": "douyin", "name": "To Alice上海百联ZX造趣场店", "handle": "80582233624", "url": "https://www.douyin.com/user/MS4wLjABAAAAXU49Zlg-dXxvHQCgTDJjvyCC6cPo7feMuPqfDyQ0SJ9FfSvUUGKK48fZLQdNjfB_", "scope": "store"}],
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          },
+          {
+            "label": "To Alice上海百联ZX造趣场店本人主页及近一周服装经营作品",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAXU49Zlg-dXxvHQCgTDJjvyCC6cPo7feMuPqfDyQ0SJ9FfSvUUGKK48fZLQdNjfB_",
+            "dateLabel": "主页未标发表日；实读万圣节cos服5天前、开衫6天前、五角场外套1周前；读取2026-10-27"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "用户明确确认本店类型：女装",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          },
+          {
+            "label": "To Alice本店本人主页及洛丽塔服饰经营作品",
+            "url": "https://www.douyin.com/user/MS4wLjABAAAAXU49Zlg-dXxvHQCgTDJjvyCC6cPo7feMuPqfDyQ0SJ9FfSvUUGKK48fZLQdNjfB_",
+            "dateLabel": "近一周作品原相对日期保留；读取2026-10-27"
+          }
+        ]
+      },
+      {
+        "name": "COSME",
+        "floor": "三层",
+        "kind": "女装",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户明确确认三层门店存在及女装店型；作为商场相关店铺保留，不凭服装风格推断售卖谷子。官方账号尚未匹配本分店。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "用户明确确认本店类型：女装",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ]
+      },
+      {
+        "name": "摩多摩多",
+        "floor": "三层",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户查阅商场店铺栏后提供本店及楼层；按用户确认纳入营业中。未核对的账号及商品细分不猜填。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ]
+      },
+      {
+        "name": "樱之束女仆店",
+        "floor": "三层",
+        "kind": "女仆咖啡厅",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户确认本店三层经营及女仆咖啡厅店型；原抖音用户卡tynsc99999亦列四平路2500号L3，但本人主页与经营正文未补足，暂不接入账号。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ],
+        "aliases": [
+          "樱之束女仆咖啡厅",
+          "樱之束maidcafe"
+        ],
+        "kindSources": [
+          {
+            "label": "用户明确确认本店类型：女仆咖啡厅",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ]
+      },
+      {
+        "name": "箱庭",
+        "floor": "二层",
+        "kind": "盲盒、徽章、色纸、毛绒、摆件",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户提供商场店铺栏，并明确有对应本店经营线索即可纳入营业中；实读2026年7月9日原帖明确百联ZX造趣场2F。五角场万达C栋B1的PetalNook愈梦箱庭为其他商场近似名，未套用其账号。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          },
+          {
+            "label": "小小黑：箱庭（罗小黑战记线下周边店收集），正文造趣场2F",
+            "url": "https://www.xiaohongshu.com/explore/6a4f36a500000000110125da",
+            "date": "2026-07-09"
+          }
+        ],
+        "description": "本店探店介绍列盲盒、徽章、色纸、毛绒及摆件，涉及国漫与日漫周边。",
+        "kindSources": [
+          {
+            "label": "小小黑：箱庭（罗小黑战记线下周边店收集），正文造趣场2F",
+            "url": "https://www.xiaohongshu.com/explore/6a4f36a500000000110125da",
+            "date": "2026-07-09"
+          }
+        ]
+      },
+      {
+        "name": "谷池",
+        "floor": "二层",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "kind": "动漫／游戏周边、国漫小说周边、场贩周边",
+        "description": "本店本人简介列日谷场贩、韩国咖啡厅周边及国漫小说周边；上新与库存以本店实际为准。",
+        "accounts": [{"platform": "xiaohongshu", "name": "谷池goodspool上海店", "handle": "791494697", "url": "https://www.xiaohongshu.com/user/profile/5e3e7c960000000001001fc9", "scope": "store"}],
+        "note": "用户提供商场店铺栏，本人2025年10月8日路线帖明确本址2楼；续读本人主页仍列杨浦区百联造趣场2楼，4天前本址棋魂上新原帖与经营主体相符，接入门店账号。未将南京水游城同名店线索套入本店。商品上新不等于整店快闪，不凭搜索推荐词推定活动档期。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          },
+          {
+            "label": "谷池goodspool上海店本人：上海沉浸式吃谷路线，正文造趣场2楼",
+            "url": "https://www.xiaohongshu.com/explore/68e64a5900000000040049e9",
+            "date": "2025-10-08"
+          },
+          {
+            "label": "谷池上海店本人主页：百联造趣场2楼",
+            "url": "https://www.xiaohongshu.com/user/profile/5e3e7c960000000001001fc9",
+            "dateLabel": "主页未标发表日；读取2026-10-27"
+          },
+          {
+            "label": "谷池上海店本人：百联造趣场棋魂25周年上新",
+            "url": "https://www.xiaohongshu.com/explore/6ada9975000000002502146d",
+            "dateLabel": "原文4天前 浙江；读取2026-10-27"
+          }
+        ],
+        "kindSources": [{"label": "谷池上海店本人简介：日谷场贩、韩国咖啡厅周边、国漫小说周边", "url": "https://www.xiaohongshu.com/user/profile/5e3e7c960000000001001fc9", "dateLabel": "主页未标发表日；读取2026-10-27"}],
+        "aliases": [
+          "谷池goodspool"
+        ]
+      },
+      {
+        "name": "奇乐MAX",
+        "floor": "二层",
+        "kind": "一番赏、模型、毛绒",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户提供商场店铺栏；实际抖音站内内容结果及打开的经营正文列四平路2500号百联ZX造趣场L2奇乐MAX，与本店相符，按用户补充口径纳入营业中。来源保留实际搜索入口，未取得可可靠对应的独立作品链接；未核本人主页，不接入账号。普通抽赏上新不作为快闪开放期。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          },
+          {
+            "label": "抖音站内内容结果：奇乐潮玩2025-12-22奇乐MAX一番赏上新，含本址L2",
+            "url": "https://www.douyin.com/search/%E5%A5%87%E4%B9%90MAX%20%E4%BA%94%E8%A7%92%E5%9C%BA?type=general",
+            "date": "2025-12-22"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "抖音站内内容结果：奇乐潮玩2025-12-22奇乐MAX一番赏上新，含本址L2",
+            "url": "https://www.douyin.com/search/%E5%A5%87%E4%B9%90MAX%20%E4%BA%94%E8%A7%92%E5%9C%BA?type=general",
+            "date": "2025-12-22"
+          }
+        ]
+      },
+      {
+        "name": "梦想栖所",
+        "floor": "三层",
+        "kind": "偶像主题咖啡厅",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户提供商场店铺栏；实际读取探店正文明确百联ZX造趣场三楼及到店体验，结合官方列表纳入营业中。主题咖啡为店型，未见固定整店开放期，不因名称含主题或人员排班而当快闪；官方账号候选仍待核主页。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          },
+          {
+            "label": "本店探店：百联ZX造趣场三楼梦想栖所偶像主题咖啡",
+            "url": "https://www.xiaohongshu.com/explore/6ac0ee0d0000000014032ab7",
+            "dateLabel": "编辑于10-10 湖南，按读取当年为2026；原发表日未知；读取2026-10-27"
+          }
+        ],
+        "aliases": [
+          "梦想栖所DreamingNest"
+        ],
+        "kindSources": [
+          {
+            "label": "本店探店：百联ZX造趣场三楼梦想栖所偶像主题咖啡",
+            "url": "https://www.xiaohongshu.com/explore/6ac0ee0d0000000014032ab7",
+            "dateLabel": "编辑于10-10 湖南，按读取当年为2026；原发表日未知；读取2026-10-27"
+          }
+        ]
+      },
+      {
+        "name": "绘梦造物",
+        "floor": "二层",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "kind": "动漫／游戏周边、一番赏、模型",
+        "description": "动漫与游戏周边店，本店账号列明日方舟、原神等作品，近期链锯人一番赏介绍包括手办、亚克力立牌及贴纸。",
+        "note": "用户提供商场官方店铺栏，补查准确店名后实读近期本址到店原帖；本人主页明确百联ZX造趣场L2，近期上新原文与本店相符，接入门店账号。第一百货C馆同名店及绘梦造物社不混用；不承诺实时库存。",
+        "accounts": [{"platform": "xiaohongshu", "name": "绘梦造物", "handle": "95995467054", "url": "https://www.xiaohongshu.com/user/profile/6a9d96860000000013003000", "scope": "store"}],
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          },
+          {
+            "label": "醒醒不睡：造趣场绘梦造物有记管盲抽，本址到店记录",
+            "url": "https://www.xiaohongshu.com/explore/6add8a4e000000003101d164",
+            "dateLabel": "原文2天前 上海；实际读取2026-10-27"
+          },
+          {
+            "label": "绘梦造物本人主页：百联ZX造趣场L2",
+            "url": "https://www.xiaohongshu.com/user/profile/6a9d96860000000013003000",
+            "dateLabel": "主页未标发表日；读取2026-10-27"
+          },
+          {
+            "label": "绘梦造物本人：链锯人蕾塞篇一番赏上架",
+            "url": "https://www.xiaohongshu.com/explore/6ad75f64000000002900af86",
+            "dateLabel": "原文6天前 广东，正文REDLAND2026；读取2026-10-27"
+          }
+        ],
+        "kindSources": [
+          {"label": "绘梦造物本店本人商品介绍：一番赏、手办、立牌、贴纸", "url": "https://www.xiaohongshu.com/explore/6ad75f64000000002900af86", "dateLabel": "原文6天前 广东；读取2026-10-27"}
+        ]
+      },
+      {
+        "name": "皮可屋",
+        "floor": "三层",
+        "status": "unverified",
+        "pendingReview": {
+          "category": "verification"
+        },
+        "note": "用户转录官方店铺栏但明确表示不确定本店是否仍在；尚缺本址经营线索，暂待验证。已实际搜索小红书、抖音内容与用户结果；皮可屋peko本人主页明确静安大悦城北座807，不能套用为百联三层分店。皮可熊美妆与其他近似名不接入。",
+        "sources": [
+          {
+            "label": "用户转录商场店铺栏中的待核候选（未确认当前存在）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ]
+      },
+      {
+        "name": "谷时光",
+        "floor": "三层",
+        "status": "unverified",
+        "pendingReview": {
+          "category": "verification"
+        },
+        "note": "用户转录官方店铺栏但明确表示不确定本店是否仍在；尚缺本址经营线索，暂待验证。已实际搜索小红书、抖音内容与用户结果；GOODSTIME谷时光手作主页明确重庆观音桥方圆live，其他煎饼／杂粮商家也不属于本店。未凭同名推断本店主营或闭店。",
+        "sources": [
+          {
+            "label": "用户转录商场店铺栏中的待核候选（未确认当前存在）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          }
+        ]
+      },
+      {
+        "name": "谷里谷气",
+        "floor": "三层",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户提供商场店铺栏；抖音站内内容实际读到2025年4月15日五角场楼层攻略列三层，以及2026年10月到店／分店地址记录列四平路2500号造趣场三层，按用户明确口径结合官方列表列为营业中。新世界城同名店关闭不套用本址；品牌品类及其他分店现货不直接套用。",
+        "sources": [
+          {
+            "label": "商场店铺栏（用户查阅后转录）",
+            "providedBy": "user",
+            "dateLabel": "用户于2026-10-27提供；商场原文发布日期未提供"
+          },
+          {
+            "label": "抖音站内内容结果：五角场楼层攻略及谷里谷气本址三层记录",
+            "url": "https://www.douyin.com/search/%E8%B0%B7%E9%87%8C%E8%B0%B7%E6%B0%94%20%E4%BA%94%E8%A7%92%E5%9C%BA?type=general",
+            "dateLabel": "攻略2025-04-15；本址记录10-16、10-17按读取当年为2026；读取2026-10-27；未取得独立作品链接"
+          }
+        ]
+      }
+    ]
+  },
   "shanghai-shop-009": {
     "area": "A馆、商业步行街负一层及C馆",
     "checkedAt": "2026-10-26",

@@ -107,7 +107,7 @@ npm run preview
 
 浏览器检查使用已安装的 Microsoft Edge：`npm run test:browser`。没有 Edge 的环境可安装 Playwright Chromium 并把 `playwright.config.ts` 的 `channel` 配置移除。检查包含空榜单、测试条目、隐藏数据、详情直达/刷新/返回、筛选恢复、375/768/1440px 无溢出、两种 PNG 导出、分页、错误提示和重试。虚构测试数据仅写到忽略的 `.fixture-app/`，不修改正式 JSON、不进入部署产物。截图与实际导出文件在 `rank/test-results/evidence/`。
 
-导出使用独立 Canvas 版式，宽 1200px、单页高不超过 3000px，按完整卡片行分页。等待字体和同源图片载入后生成 PNG，每页单独下载，手机可长按图片保存。默认导出当前筛选，也可选择全榜。单条名称最长 160 字，城市 80 字，短评 600 字；长篇内容请放 `details`。
+导出使用独立 Canvas 海报版式：黑白、酸黄色、窄体大标题、斜切档位条和城市色标，宽 1200px、单页高不超过 3000px，按完整卡片行分页。弹窗提供版式示意与生成后的实际分页预览；简洁排序图为三列、短评长图为两列，保留原始档内排名与完整名称／短评。等待字体和同源图片载入后生成 PNG，每页单独下载，手机可长按图片保存。默认导出当前筛选，也可选择全榜。单条名称最长 160 字，城市 80 字，短评 600 字；长篇内容请放 `details`。英文标题使用本地打包的 Barlow Condensed ExtraBold，来自 Google Fonts，许可保存在 `rank/src/assets/fonts/OFL-Barlow-Condensed.txt`，导出不依赖在线字体服务。
 
 ## 首次 Pages 部署和以后自动发布
 

@@ -735,13 +735,13 @@
         }
       ],
       "visitedAt": "2025-11-09",
-      "updatedAt": "2026-10-17",
+      "updatedAt": "2026-10-27",
       "published": true,
       "location": {
         "lat": 31.300361,
         "lng": 121.511513,
         "coordinateSystem": "wgs84",
-        "address": "上海市杨浦区区四平路2500号百联ZX造趣场"
+        "address": "上海市杨浦区四平路2500号百联ZX造趣场"
       }
     },
     {

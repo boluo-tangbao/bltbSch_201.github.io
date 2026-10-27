@@ -68,11 +68,12 @@ test('fixture: export real images, Chinese, long names, filtered scope, paginati
   for (let i = 0; i < count; i++) {
     const download = page.waitForEvent('download'); await links.nth(i).click(); await (await download).saveAs(`test-results/evidence/fixture-review-${i + 1}.png`)
   }
-  await page.getByLabel('简洁排序图 · 图片与名称').check(); await page.getByRole('button', { name: '重新生成' }).click()
+  // Changing the layout releases old downloads and starts a fresh export.
+  await page.getByLabel('简洁排序图 · 图片与名称').check(); await page.getByRole('button', { name: '生成图片', exact: true }).click()
   await expect(links.first()).toBeVisible()
   let download = page.waitForEvent('download'); await links.first().click(); await (await download).saveAs('test-results/evidence/fixture-compact.png')
   await page.getByRole('button', { name: '关闭导出' }).click()
-  await page.getByRole('searchbox').fill('店铺 1（')
+  await page.getByRole('searchbox').fill('虚构店铺 27（演示）')
   await expect(page.locator('.place-card')).toHaveCount(1)
   await page.getByRole('button', { name: '导出榜单' }).click()
   await page.getByRole('button', { name: '生成图片', exact: true }).click()
