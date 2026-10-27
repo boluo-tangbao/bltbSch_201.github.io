@@ -1,5 +1,27 @@
 [
   {
+    "id": "bailian-evidence-filter-20261027",
+    "date": "2026-10-27",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-002",
+      "shanghai-shop-006",
+      "shanghai-shop-020"
+    ],
+    "note": "按用户要求，南方百联保留中等及以上5家店，萌果酱按历史线索显示可能营业，其余18家退出展示并保留研究出处。南京路、五角场及南方三家百联店单增加META ZX资料参考与探店筛选提示；其他店单与营业核对日期不变，未发布。"
+  },
+  {
+    "id": "nanfang-bailian-research-20261027",
+    "date": "2026-10-27",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-020"
+    ],
+    "note": "南方百联ZX LAB店单按用户指定置信度精简为5家常规确认，萌果酱保留2025年11月28日商场原帖及位置线索，标为可能营业；其余低置信度条目及酷乐潮玩仅归档。已核3个小红书入口保留，原评级、到访及图集保留；未发布。"
+  },
+  {
     "id": "wujiaochang-zx-research-20261027",
     "date": "2026-10-27",
     "type": "edited",

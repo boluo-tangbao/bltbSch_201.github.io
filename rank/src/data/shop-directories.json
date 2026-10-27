@@ -1,7 +1,244 @@
 {
+  "shanghai-shop-020": {
+    "area": "百联南方购物中心ZX LAB（2区三层、四层）",
+    "checkedAt": "2026-10-27",
+    "shops": [
+      {
+        "name": "潮玩季",
+        "floor": "2区三层",
+        "kind": "模型、车模、动漫周边",
+        "description": "官方介绍列玩具、模型、手办及动漫周边。",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户官方店单列本店2区三层；2026年9月27日到访者正文明确当日去潮玩季，抖音本店名用户卡的2区3楼地址相符。原帖泛称其他店关闭但未点明具体店名，不据此判断本店闭店。本店抖音主页未成功打开，用户卡不当完整主页核验，不接入候选账号。",
+        "sources": [
+          {
+            "label": "用户确认的百联南方官方品牌店铺一览（P1）",
+            "providedBy": "user",
+            "dateLabel": "截图未标原文发布日期；用户于2026-10-27提供并确认；原图已在研究报告归档"
+          },
+          {
+            "label": "千羽影舞本址到访原帖：2026-09-27当日去潮玩季",
+            "url": "https://www.xiaohongshu.com/explore/6ab90a9f000000000a021530",
+            "date": "2026-09-27"
+          },
+          {
+            "label": "抖音用户结果：潮玩季上海百联南方店，简介地址2区3楼（非主页核验）",
+            "url": "https://www.douyin.com/search/%E6%BD%AE%E7%8E%A9%E5%AD%A3%20%E5%8D%97%E6%96%B9%E7%99%BE%E8%81%94?type=user",
+            "dateLabel": "用户卡未标发表日；读取2026-10-27"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "用户确认的官方P1：本品牌介绍及店型",
+            "providedBy": "user",
+            "dateLabel": "截图未标原文发布日期；用户于2026-10-27提供并确认；原图已在研究报告归档"
+          }
+        ]
+      },
+      {
+        "name": "萌果酱",
+        "floor": "2区三层",
+        "kind": "IP主题餐饮、动漫周边",
+        "description": "官方品牌介绍为IP主题餐饮，本商场店铺传送门正文另列闪卡及角色立牌。",
+        "status": "unverified",
+        "note": "商场2025年11月28日本店介绍明确百联南方2区L3萌果酱，并列闪卡和角色立牌；用户提供的官方P1亦收录本店，但原图发布日期未知，目前缺近期经营补证。按用户要求保留历史线索，标为可能营业，不计入确认营业。当前主题和档期未核，不套用南京路或五角场联动。",
+        "sources": [
+          {
+            "label": "用户确认的百联南方官方品牌店铺一览（P1）",
+            "providedBy": "user",
+            "dateLabel": "截图未标原文发布日期；用户于2026-10-27提供并确认；原图已在研究报告归档"
+          },
+          {
+            "label": "百联ZX LAB本人：萌果酱店铺传送门，明确南方2区L3及卡牌／立牌",
+            "url": "https://www.xiaohongshu.com/explore/6926bacf000000001e0021dd",
+            "date": "2025-11-28"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "用户确认的官方P1：本品牌介绍及店型",
+            "providedBy": "user",
+            "dateLabel": "截图未标原文发布日期；用户于2026-10-27提供并确认；原图已在研究报告归档"
+          },
+          {
+            "label": "百联ZX LAB本人：萌果酱店铺传送门，明确南方2区L3及卡牌／立牌",
+            "url": "https://www.xiaohongshu.com/explore/6926bacf000000001e0021dd",
+            "date": "2025-11-28"
+          }
+        ],
+        "evidenceLabel": "可能营业",
+        "pendingReview": {
+          "category": "history",
+          "sourceUrl": "https://www.xiaohongshu.com/explore/6926bacf000000001e0021dd"
+        }
+      },
+      {
+        "name": "刺猿虫",
+        "floor": "2区三层近观光梯0019—0021",
+        "kind": "动漫周边、模型、中古回收",
+        "description": "本店本人主页明确动漫手办周边回收、中古及新品售卖；官方原图使用刺猿虫标识，但卡片标题写TOY ART，与右列玩艺卡分别记录。",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户官方图使用刺猿虫标识、卡片标题写TOY ART；实际本店本人主页及2026年3月17日上新原帖明确百联南方二区三层，按刺猿虫名称记录，不将本账号套给右列TOY ART玩艺。泛商圈关店帖未明确指向本店，不作闭店公告。",
+        "sources": [
+          {
+            "label": "用户确认的百联南方官方品牌店铺一览（P1）",
+            "providedBy": "user",
+            "dateLabel": "截图未标原文发布日期；用户于2026-10-27提供并确认；原图已在研究报告归档"
+          },
+          {
+            "label": "刺猿虫南方百联店本人主页：2区3楼0019—0021",
+            "url": "https://www.xiaohongshu.com/user/profile/68cce86100000000220201b7",
+            "dateLabel": "主页未标发表日；读取2026-10-27"
+          },
+          {
+            "label": "刺猿虫本店本人：拼装上新，正文明确本址",
+            "url": "https://www.xiaohongshu.com/explore/69b91ea6000000002200fb7c",
+            "date": "2026-03-17"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "用户确认的官方P1：本品牌介绍及店型",
+            "providedBy": "user",
+            "dateLabel": "截图未标原文发布日期；用户于2026-10-27提供并确认；原图已在研究报告归档"
+          },
+          {
+            "label": "刺猿虫本店本人简介：回收、中古、新品",
+            "url": "https://www.xiaohongshu.com/user/profile/68cce86100000000220201b7",
+            "dateLabel": "主页未标发表日；读取2026-10-27"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "刺猿虫上海南方百联店",
+            "handle": "18914408508",
+            "url": "https://www.xiaohongshu.com/user/profile/68cce86100000000220201b7",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "百忍潮玩卡牌（对战中心标杆店）",
+        "floor": "2区四层",
+        "kind": "TCG卡牌、卡牌对战",
+        "description": "官方介绍为TCG对战中心，含教学、新手体验及周边制作。",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户官方店单确认2区四层；实读本店本人主页，地址同为沪闵路7250号百联南方2区4楼，再读2026年2月27日本店宝可梦及符文战场赛程原文，接入门店账号。比赛日程及每日营业时段不是整店限时开放期，不因赛事结束宣布门店关闭。",
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "百忍潮玩卡牌对战中心上海南方百联店",
+            "handle": "95147014803",
+            "url": "https://www.xiaohongshu.com/user/profile/696677bb000000002600398c",
+            "scope": "store"
+          }
+        ],
+        "sources": [
+          {
+            "label": "用户确认的百联南方官方品牌店铺一览（P1）",
+            "providedBy": "user",
+            "dateLabel": "截图未标原文发布日期；用户于2026-10-27提供并确认；原图已在研究报告归档"
+          },
+          {
+            "label": "百忍本店本人主页：南方百联2区4楼",
+            "url": "https://www.xiaohongshu.com/user/profile/696677bb000000002600398c",
+            "dateLabel": "主页未标发表日；读取2026-10-27"
+          },
+          {
+            "label": "百忍南方百联店本人：宝可梦及符文战场赛程安排",
+            "url": "https://www.xiaohongshu.com/explore/69a169d7000000002903e158",
+            "date": "2026-02-27"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "用户确认的官方P1：本品牌介绍及店型",
+            "providedBy": "user",
+            "dateLabel": "截图未标原文发布日期；用户于2026-10-27提供并确认；原图已在研究报告归档"
+          }
+        ]
+      },
+      {
+        "name": "奇妙谷屋",
+        "floor": "2区四层",
+        "kind": "动漫周边",
+        "description": "官方介绍为二次元商品集合店，已读共用号资料明确本分店。",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户官方图确认2区四层；复用2026-10-27已读品牌共用号，简介分别列本址四楼及五角场负一层。本人2026年9月28日原帖说明10月1日剑来系列首发，标品牌共用号，不承诺两店库存一致。",
+        "sources": [
+          {
+            "label": "用户确认的百联南方官方品牌店铺一览（P1）",
+            "providedBy": "user",
+            "dateLabel": "截图未标原文发布日期；用户于2026-10-27提供并确认；原图已在研究报告归档"
+          },
+          {
+            "label": "奇妙谷屋共用号简介：南方百联二区四楼",
+            "url": "https://www.xiaohongshu.com/user/profile/6731a5dd000000001d02c0f3",
+            "dateLabel": "主页未标发表日；原读取2026-10-27，复用同日五角场研究"
+          },
+          {
+            "label": "奇妙谷屋本人：剑来浩然系列首发，正文2026-10-01",
+            "url": "https://www.xiaohongshu.com/explore/6ab9fa26000000001803bb66",
+            "date": "2026-09-28"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "用户确认的官方P1：本品牌介绍及店型",
+            "providedBy": "user",
+            "dateLabel": "截图未标原文发布日期；用户于2026-10-27提供并确认；原图已在研究报告归档"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "奇妙谷屋-五角场店&百联南方店",
+            "handle": "94133637502",
+            "url": "https://www.xiaohongshu.com/user/profile/6731a5dd000000001d02c0f3",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "MOIMOIAKIRA",
+        "floor": "2区四层",
+        "kind": "女仆主题餐饮、桌游",
+        "description": "官方介绍为女仆主题餐厅，以桌游及餐饮为主要载体，未见整店固定开放期，不自动归为快闪。",
+        "status": "listed",
+        "operatingConfirmation": "official-listing",
+        "note": "用户官方店单列本店2区四层；抖音认证品牌用户卡简介明确百联南方二区402，与静安南座S501分列。保留本店关联依据，但本人完整主页及近期南方店经营原文未读，不接入候选品牌号；女仆主题餐饮及桌游店型沿用官方介绍，不推断售谷或整店限时。",
+        "sources": [
+          {
+            "label": "用户确认的百联南方官方品牌店铺一览（P1）",
+            "providedBy": "user",
+            "dateLabel": "截图未标原文发布日期；用户于2026-10-27提供并确认；原图已在研究报告归档"
+          },
+          {
+            "label": "抖音用户结果：MoiMoiaKira认证餐厅简介分列南方二区402和静安S501（非主页核验）",
+            "url": "https://www.douyin.com/search/MOIMOIAKIRA%20%E5%8D%97%E6%96%B9%E7%99%BE%E8%81%94?type=user",
+            "dateLabel": "用户卡未标发表日；读取2026-10-27"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "用户确认的官方P1：本品牌介绍及店型",
+            "providedBy": "user",
+            "dateLabel": "截图未标原文发布日期；用户于2026-10-27提供并确认；原图已在研究报告归档"
+          }
+        ]
+      }
+    ],
+    "notice": "部分数据参考了META ZX小程序，本网站内容结合探店线索给出更高可信度的店铺名单"
+  },
   "shanghai-shop-006": {
     "area": "百联ZX造趣场（五角场，四平路2500号）",
     "checkedAt": "2026-10-27",
+    "notice": "部分数据参考了META ZX小程序，本网站内容结合探店线索给出更高可信度的店铺名单",
     "shops": [
       {
         "name": "AKIBA GO 百联ZX造趣场店",
@@ -11693,6 +11930,7 @@
   "shanghai-shop-002": {
     "area": "百联ZX创趣场（南京东路）",
     "checkedAt": "2026-10-26",
+    "notice": "部分数据参考了META ZX小程序，本网站内容结合探店线索给出更高可信度的店铺名单",
     "shops": [
       {
         "name": "AKIBA GO 百联ZX品牌店",

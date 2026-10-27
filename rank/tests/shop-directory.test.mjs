@@ -2,12 +2,41 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { validateShopDirectories } from '../scripts/validate-data.mjs'
-import { mergeShopSources, shopDisplayStatus, shopDirectoryGroups, sourcePredatesVisit, pendingShopGroups, shopHistorySource } from '../src/utils/shopDirectory.ts'
+import { mergeShopSources, shopDisplayStatus, shopStatusLabel, shopDirectoryGroups, sourcePredatesVisit, pendingShopGroups, shopHistorySource } from '../src/utils/shopDirectory.ts'
 
 const directories = JSON.parse(readFileSync(new URL('../src/data/shop-directories.json', import.meta.url), 'utf8'))
 const groups = JSON.parse(readFileSync(new URL('../src/data/places.json', import.meta.url), 'utf8'))
 const places = Object.values(groups).flat()
 const fixture = () => ({ test: { area: '东区', checkedAt: '2026-10-05', shops: [{ name: '测试店', floor: '负二层', status: 'unverified', note: '保留旧线索', sources: [{ label: '来源', url: 'https://example.com/source' }] }] } })
+
+test('possible-operation wording keeps evidence unconfirmed and cannot override verified or closed status', () => {
+  const data = fixture(), shop = data.test.shops[0]
+  assert.equal(shopStatusLabel(shop), '待验证')
+  shop.evidenceLabel = '可能营业'
+  assert.equal(shopStatusLabel(shop), '可能营业')
+  assert.equal(shopDisplayStatus(shop), 'evidence')
+  assert.equal(shopDirectoryGroups([shop]).regular.open.length, 0)
+  assert.deepEqual(validateShopDirectories(data, [{ id: 'test' }]), [])
+  shop.operatingConfirmation = 'official-listing'
+  assert.equal(shopStatusLabel(shop), '营业中')
+  assert.ok(validateShopDirectories(data, [{ id: 'test' }]).some(e => e.includes('可能营业标签')))
+  shop.limited = { scope: 'store', period: '档期待公布' }
+  assert.equal(shopStatusLabel(shop), '进行中')
+  shop.status = 'closed'
+  assert.equal(shopStatusLabel(shop), '已公布闭店')
+  shop.inactive = { reason: 'renovation', history: '装修暂停' }
+  assert.equal(shopStatusLabel(shop), '装修停业')
+})
+
+test('directory notices are optional and must contain text', () => {
+  const data = fixture()
+  data.test.notice = '部分数据参考META ZX'
+  assert.deepEqual(validateShopDirectories(data, [{ id: 'test' }]), [])
+  for (const notice of ['', ' ', null, 123]) {
+    data.test.notice = notice
+    assert.ok(validateShopDirectories(data, [{ id: 'test' }]).some(e => e.includes('店单提示')))
+  }
+})
 
 test('pending history is explicitly grouped, keeps original source time, and never confirms operation', () => {
   const shop = fixture().test.shops[0]

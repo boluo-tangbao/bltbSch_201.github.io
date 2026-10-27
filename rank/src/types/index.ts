@@ -8,6 +8,7 @@ export interface DirectoryShop {
   name: string; floor?: string; kind?: string; description?: string
   aliases?: string[]
   operatingConfirmation?: 'official-listing'
+  evidenceLabel?: '可能营业'
   pendingReview?: { category: 'history'; sourceUrl: string } | { category: 'verification' }
   limited?: { scope: 'store' | 'theme'; period: string; startsOn?: string; endsOn?: string }
   hostShop?: string
@@ -15,7 +16,7 @@ export interface DirectoryShop {
   status: 'recent' | 'listed' | 'older' | 'unverified' | 'closed'
   note: string; sources: ShopSource[]; kindSources?: ShopSource[]; accounts?: ShopAccount[]
 }
-export interface ShopDirectory { area: string; checkedAt: string; shops: DirectoryShop[] }
+export interface ShopDirectory { area: string; checkedAt: string; notice?: string; shops: DirectoryShop[] }
 export interface PlaceEntry {
   id: string; name: string; tier: TierId; order: number
   aliases?: string[]

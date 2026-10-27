@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import type { ShopDirectory } from '../types'
-import { latestSourceDate, mergeShopSources, shopDisplayStatus, shopDirectoryGroups, sourcePredatesVisit, pendingShopGroups, shopHistorySource } from '../utils/shopDirectory'
+import { latestSourceDate, mergeShopSources, shopDisplayStatus, shopStatusLabel, shopDirectoryGroups, sourcePredatesVisit, pendingShopGroups, shopHistorySource } from '../utils/shopDirectory'
 import { searchTargetId } from '../utils/search'
 
 const props = defineProps<{ directory: ShopDirectory; visitedAt?: string | null; placeId?: string }>()
@@ -12,13 +12,11 @@ function expand(section: string, more = false, bucket = '') {
   visibleCounts.value[groupKey(section, more, bucket)] = visibleCount(section, more, bucket) + 5
 }
 watch(() => props.directory, () => { visibleCounts.value = {} })
-const statusLabel = { open: '营业中', evidence: '待验证', closed: '已公布闭店' }
-const inactiveLabel = { closed: '已停止营业', relocated: '已停止营业', renovation: '装修停业', unconfirmed: '停业待核实' }
 const shops = computed(() => props.directory.shops.map(shop => {
   const status = shopDisplayStatus(shop)
   const sourceTime = shop.sources.find(source => source.dateLabel)?.dateLabel
     ?? latestSourceDate(shop.sources)
-  return { ...shop, displayStatus: status, historySource: shopHistorySource(shop), sourceTime, authorVisited: sourcePredatesVisit(shop.sources, props.visitedAt), evidenceSources: mergeShopSources(shop) }
+  return { ...shop, displayStatus: status, statusText: shopStatusLabel(shop), historySource: shopHistorySource(shop), sourceTime, authorVisited: sourcePredatesVisit(shop.sources, props.visitedAt), evidenceSources: mergeShopSources(shop) }
 }))
 const sections = computed(() => {
   const grouped = shopDirectoryGroups(shops.value)
@@ -48,6 +46,7 @@ defineExpose({ revealShop })
       <div><p class="section-label">SHOP DIRECTORY</p><h2 id="shop-directory-heading">谷店一览（自整理）</h2></div>
       <span>核对 {{ directory.checkedAt }}</span>
     </header>
+    <p v-if="directory.notice" class="shop-directory-notice">{{ directory.notice }}</p>
     <p class="shop-directory-intro">每栏及待核实子组先展示5条，每次展开再增加5条；待核实区默认收起，历史探店记录不代表当前营业。</p>
     <div v-for="section in sections" :key="section.key" class="shop-directory-section" :class="'shop-directory-' + section.key">
     <header class="shop-section-heading"><h3>{{ section.title }}</h3><div class="shop-section-actions"><span><template v-if="section.key === 'inactive'">记录 {{ section.open.length }} 家</template><template v-else>确认 {{ section.open.length }} {{ sectionUnit(section.key) }}</template><template v-if="section.evidence.length"> · 待核实 {{ section.evidence.length }} {{ sectionUnit(section.key) }}</template></span><button v-if="section.open.length > visibleCount(section.key)" class="shop-expand" type="button" :aria-label="section.title + '展开全部，每次增加5' + sectionUnit(section.key)" @click="expand(section.key)">展开全部 <small>+{{ Math.min(5, section.open.length - visibleCount(section.key)) }}{{ sectionUnit(section.key) }}</small></button></div></header>
@@ -63,7 +62,7 @@ defineExpose({ revealShop })
     <div v-if="group.more && bucket.shops.length > visibleCount(section.key, true, bucket.key)" class="shop-pending-actions"><span>已展示 {{ visibleCount(section.key, true, bucket.key) }} / {{ bucket.shops.length }} {{ sectionUnit(section.key) }}线索</span><button class="shop-expand" type="button" :aria-label="section.title + bucket.title + '展开全部，每次增加5' + sectionUnit(section.key)" @click="expand(section.key, true, bucket.key)">展开全部 <small>+{{ Math.min(5, bucket.shops.length - visibleCount(section.key, true, bucket.key)) }}{{ sectionUnit(section.key) }}</small></button></div>
     <ul class="shop-list">
       <li v-for="(shop, index) in bucket.shops" v-show="index < visibleCount(section.key, group.more, bucket.key)" :id="placeId ? searchTargetId(placeId, { kind: 'shop', name: shop.name }) : undefined" :key="shop.name" class="shop-row" tabindex="-1">
-        <div class="shop-row-title"><div class="shop-name-location"><h4>{{ shop.name }}</h4><span v-if="shop.floor" class="shop-location"><template v-if="shop.inactive">原位置：</template>{{ shop.floor }}</span></div><span class="shop-status" :class="'is-' + shop.displayStatus">{{ shop.inactive ? inactiveLabel[shop.inactive.reason] : shop.limited && shop.displayStatus === 'open' ? '进行中' : statusLabel[shop.displayStatus] }}</span></div>
+        <div class="shop-row-title"><div class="shop-name-location"><h4>{{ shop.name }}</h4><span v-if="shop.floor" class="shop-location"><template v-if="shop.inactive">原位置：</template>{{ shop.floor }}</span></div><span class="shop-status" :class="'is-' + shop.displayStatus">{{ shop.statusText }}</span></div>
         <p v-if="shop.description" class="shop-description">{{ shop.description }}</p>
         <dl v-if="shop.kind || shop.limited || shop.inactive" class="shop-facts">
           <template v-if="shop.inactive"><dt>营业历史</dt><dd class="shop-history">{{ shop.inactive.history }}</dd></template>
@@ -100,6 +99,7 @@ defineExpose({ revealShop })
 .shop-directory-heading h2 { margin: 0; font-size: clamp(22px, 3vw, 28px); }
 .shop-directory-heading > span { color: #79626b; font-size: 12px; }
 .shop-directory-intro { color: #74656c; line-height: 1.8; font-size: 13px; margin-bottom: 20px; }
+.shop-directory-notice { margin: 14px 0; padding: 10px 12px; border-left: 3px solid #d9aab6; background: #fff0f3; color: #74656c; font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
 .shop-directory-section + .shop-directory-section { margin-top: 28px; padding-top: 22px; border-top: 2px dashed #d9aab6; }
 .shop-section-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 .shop-section-heading h3 { margin: 0; font-size: 19px; color: #a83750; }

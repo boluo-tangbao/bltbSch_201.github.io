@@ -157,6 +157,7 @@ export function validateShopDirectories(directories, places) {
     if (!ids.has(id)) fail(id, '引用了不存在的地点')
     if (!object(directory)) { fail(id, '店单必须是对象'); continue }
     if (!text(directory.area)) fail(id, '需要填写区域')
+    if (directory.notice !== undefined && !text(directory.notice)) fail(id, '店单提示须为非空文字')
     if (!validDate(directory.checkedAt)) fail(id, 'checkedAt 必须是真实 YYYY-MM-DD 日期')
     if (!Array.isArray(directory.shops) || !directory.shops.length) { fail(id, 'shops 必须是非空店铺数组'); continue }
     const names = new Set()
@@ -175,6 +176,7 @@ export function validateShopDirectories(directories, places) {
       names.add(shop.name)
       if (!['recent', 'listed', 'older', 'unverified', 'closed'].includes(shop.status)) fail(id, `${shop.name} 核实状态无效`)
       if (shop.operatingConfirmation !== undefined && shop.operatingConfirmation !== 'official-listing') fail(id, `${shop.name} 营业确认依据无效`)
+      if (shop.evidenceLabel !== undefined && (shop.evidenceLabel !== '可能营业' || shop.status === 'closed' || shop.accounts?.length || shop.operatingConfirmation === 'official-listing')) fail(id, `${shop.name} 可能营业标签仅适用于未确认营业的线索`)
       if (shop.pendingReview !== undefined) {
         const review = shop.pendingReview
         if (shop.status === 'closed' || shop.accounts?.length || shop.operatingConfirmation === 'official-listing') fail(id, `${shop.name} 待核分组仅适用于未确认营业的线索`)

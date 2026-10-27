@@ -21,6 +21,15 @@ export function shopDisplayStatus(shop: DirectoryShop): 'open' | 'evidence' | 'c
   return shop.operatingConfirmation === 'official-listing' || shop.accounts?.length ? 'open' : 'evidence'
 }
 
+export function shopStatusLabel(shop: DirectoryShop): string {
+  const status = shopDisplayStatus(shop)
+  if (status === 'closed') {
+    return shop.inactive ? { closed: '已停止营业', relocated: '已停止营业', renovation: '装修停业', unconfirmed: '停业待核实' }[shop.inactive.reason] : '已公布闭店'
+  }
+  if (status === 'open') return shop.limited ? '进行中' : '营业中'
+  return shop.evidenceLabel ?? '待验证'
+}
+
 export function shopDirectoryGroups<T extends DirectoryShop>(shops: T[]) {
   const groups = {
     inactive: [] as T[],
