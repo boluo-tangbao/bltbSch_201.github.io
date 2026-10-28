@@ -1,4 +1,87 @@
 {
+  "shanghai-shop-016": {
+    "area": "上海长宁龙之梦城市生活中心（长宁路1018号）",
+    "checkedAt": "2026-10-29",
+    "notice": "阶段性研究：部分卡牌店现状、谷街经营情况及其他楼层仍待核；附近地下街与又又中心不计入本店单。",
+    "shops": [
+      {
+        "name": "宝可梦官方卡牌道馆－上海中山公园（古月鸟）",
+        "floor": "三层 红中庭",
+        "kind": "宝可梦卡牌、玩偶及周边",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "宝可梦官方公告明确道馆于2026年1月25日装修后重新营业，8月本馆活动公告再次确认本店；限时焕新活动已结束，不影响常设店。",
+        "sources": [
+          { "label": "宝可梦官方：道馆焕新、地址及营业", "url": "https://www.pokemon.cn/tcg/campaign/20479.html", "date": "2026-01-24" },
+          { "label": "宝可梦官方：本馆8月活动", "url": "https://www.pokemon.cn/tcg/23305.html", "date": "2026-08-17" }
+        ]
+      },
+      {
+        "name": "MIAOXX LAND（长宁龙之梦店）",
+        "floor": "三层 宝可梦道馆旁",
+        "kind": "角色玩偶、三丽鸥及其他IP周边",
+        "status": "recent",
+        "note": "门店本人主页列长宁龙之梦三层及店址；2026年9月本人发布本店商品内容。仅据原帖概括品类，不保证具体库存。",
+        "sources": [
+          { "label": "本店主页：三层位置", "url": "https://www.xiaohongshu.com/user/profile/659bba540000000022004c77", "dateLabel": "主页无发表日期；读取2026-10-29" },
+          { "label": "本店：长宁龙之梦角色周边", "url": "https://www.xiaohongshu.com/explore/6abd1db5000000001301b5e8", "date": "2026-09-30" }
+        ],
+        "accounts": [
+          { "platform": "xiaohongshu", "name": "miaoxx land上海长宁龙之梦店", "handle": "MIAOXXLAND_SH", "url": "https://www.xiaohongshu.com/user/profile/659bba540000000022004c77", "scope": "store" }
+        ]
+      },
+      {
+        "name": "水豚大怪兽（上海龙之梦店）",
+        "floor": "三层 红中庭3087",
+        "kind": "动漫周边、日谷、中古",
+        "status": "unverified",
+        "pendingReview": { "category": "verification" },
+        "note": "本人主页列长宁店三层3087，2026年9月本人发布店内活动；近期第三方反映水豚小怪兽关门，照片可见水豚大怪兽门头，但正文未明确是哪家龙之梦，是否同址及现况仍需核实，暂不作为确认营业或确定闭店。",
+        "sources": [
+          { "label": "水豚大怪兽本人主页：长宁店地址", "url": "https://www.xiaohongshu.com/user/profile/661633bb0000000003032b19", "dateLabel": "主页无发表日期；读取2026-10-29" },
+          { "label": "本人：店内同人快闪预告", "url": "https://www.xiaohongshu.com/explore/6aba699b0000000018007c71", "date": "2026-09-28" },
+          { "label": "Ryougi暮雪：水豚门头关门线索，分店待核", "url": "https://www.xiaohongshu.com/explore/6adb0407000000002c035353", "dateLabel": "读取2026-10-29时显示5天前" }
+        ]
+      },
+      {
+        "name": "卡游（长宁龙之梦店）",
+        "floor": "三层 红中庭3097（主页线索）",
+        "kind": "收藏卡牌、角色周边",
+        "status": "unverified",
+        "pendingReview": { "category": "verification" },
+        "note": "抖音同名主页写长宁龙之梦三层3097；作品含2025年全国上新广告，缺少近期本址经营证据及主体确认，未将主页绑定为已确认门店账号。",
+        "sources": [
+          { "label": "卡游上海龙之梦购物中心店候选主页", "url": "https://www.douyin.com/user/MS4wLjABAAAA_Q8Vfbq_L4K8AktBEFbShJ4eDESKPjubB3L_U2rzzLxpeOUdzy3FvEdsZ40CKlaN", "dateLabel": "主页无发表日期；读取2026-10-29" }
+        ]
+      },
+      {
+        "name": "万代卡牌中心（长宁龙之梦店）",
+        "kind": "集换式卡牌、对战",
+        "status": "unverified",
+        "pendingReview": { "category": "history", "sourceUrl": "https://www.shcn.gov.cn/col7344/20250422/1282998.html" },
+        "note": "2025年长宁区报道明确曾在本商场引进万代卡牌馆；尚缺近期本址营业记录与门店本人账号，不能仅凭品牌在其他商场营业推断本店现状。",
+        "sources": [
+          { "label": "长宁区转载解放日报：商场宝可梦及万代卡牌店", "url": "https://www.shcn.gov.cn/col7344/20250422/1282998.html", "date": "2025-04-22" }
+        ]
+      },
+      {
+        "name": "Linkstage（龙之梦店）",
+        "floor": "三层 3087内 A05",
+        "kind": "动漫、游戏周边",
+        "status": "closed",
+        "inactive": { "reason": "closed", "history": "2025年11月有本店上新；本人公告2026年6月30日闭店" },
+        "note": "本人主页明确长宁龙之梦3087内A05；本人公告龙之梦店于2026年6月30日闭店，不凭仍存在的主页恢复营业。",
+        "sources": [
+          { "label": "本人主页：长宁店原位置", "url": "https://www.xiaohongshu.com/user/profile/65c33af7000000000903cb4c", "dateLabel": "主页无发表日期；读取2026-10-29" },
+          { "label": "本人：龙之梦店闭店公告", "url": "https://www.xiaohongshu.com/explore/6a32320c000000000f015c30", "date": "2026-06-17" },
+          { "label": "本人：龙之梦三楼上新", "url": "https://www.xiaohongshu.com/explore/6906cef1000000000700b5b0", "date": "2025-11-02" }
+        ],
+        "accounts": [
+          { "platform": "xiaohongshu", "name": "Linkstage", "handle": "26806071862", "url": "https://www.xiaohongshu.com/user/profile/65c33af7000000000903cb4c", "scope": "store" }
+        ]
+      }
+    ]
+  },
   "shanghai-shop-013": {
     "area": "上海鑫耀·光环Live二期（北区／南区／东区）",
     "checkedAt": "2026-10-28",
