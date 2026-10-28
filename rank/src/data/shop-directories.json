@@ -1,4 +1,779 @@
 {
+  "shanghai-shop-012": {
+    "area": "上海TPY中心（肇嘉浜路1117号）",
+    "checkedAt": "2026-10-28",
+    "notice": "阶段性研究：已做小红书、抖音站内商圈内容发现；部分旧店现状、共享柜位及匿名卡牌空间主体仍待核。",
+    "shops": [
+      {
+        "name": "猫受屋",
+        "floor": "负二层",
+        "kind": "动漫／游戏周边、抽赏",
+        "status": "recent",
+        "note": "本人主页明确TPY负二层，商场谷单及本人近期抽赏上新对应本店。",
+        "sources": [
+          {
+            "label": "猫受屋上海徐家汇店主页",
+            "url": "https://www.xiaohongshu.com/user/profile/621452b70000000010007eba",
+            "dateLabel": "页面未标发表日；读取2026-10-28"
+          },
+          {
+            "label": "TPY中心暑期谷单：猫受屋、谷GO、GOODSLOVE及GOODSBUS",
+            "url": "https://www.xiaohongshu.com/explore/6a58d8f80000000001001dae",
+            "date": "2026-07-17"
+          },
+          {
+            "label": "本人电锯人抽赏上新",
+            "url": "https://www.xiaohongshu.com/explore/6addd4fd000000002a0110e7",
+            "dateLabel": "2天前 上海；读取2026-10-28"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "本人电锯人抽赏上新",
+            "url": "https://www.xiaohongshu.com/explore/6addd4fd000000002a0110e7",
+            "dateLabel": "2天前 上海；读取2026-10-28"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "猫受屋上海徐家汇店",
+            "handle": "63570508126",
+            "url": "https://www.xiaohongshu.com/user/profile/621452b70000000010007eba",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "谷GO",
+        "floor": "负二层 B2 09-11",
+        "kind": "动漫／游戏周边",
+        "status": "recent",
+        "note": "本人主页及近期本店上新与商场谷单相符；历史主题结束不影响常设店。",
+        "sources": [
+          {
+            "label": "谷GO上海徐家汇tpy中心店主页",
+            "url": "https://www.xiaohongshu.com/user/profile/574b19565e87e7771aed2e89",
+            "dateLabel": "页面未标发表日；读取2026-10-28"
+          },
+          {
+            "label": "TPY中心暑期谷单：猫受屋、谷GO、GOODSLOVE及GOODSBUS",
+            "url": "https://www.xiaohongshu.com/explore/6a58d8f80000000001001dae",
+            "date": "2026-07-17"
+          },
+          {
+            "label": "本人明日方舟上新",
+            "url": "https://www.xiaohongshu.com/explore/6a8e848a0000000028006937",
+            "date": "2026-08-26"
+          },
+          {
+            "label": "天闻角川合作店：TPY B2 09-11",
+            "url": "https://www.xiaohongshu.com/explore/69cf927800000001b0010eb",
+            "dateLabel": "编辑于04-03；原读取2026-10-19"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "天闻角川合作店：TPY B2 09-11",
+            "url": "https://www.xiaohongshu.com/explore/69cf927800000001b0010eb",
+            "dateLabel": "编辑于04-03；原读取2026-10-19"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "谷GO上海徐家汇tpy中心店",
+            "handle": "104754337",
+            "url": "https://www.xiaohongshu.com/user/profile/574b19565e87e7771aed2e89",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "GOODSLOVE",
+        "floor": "负二层",
+        "kind": "动漫／游戏周边、抽赏",
+        "status": "recent",
+        "note": "商场本人2026年谷单明确本店经营；品牌关闭公告所列异地门店不包括TPY。品牌号为共用号。",
+        "sources": [
+          {
+            "label": "TPY中心暑期谷单：猫受屋、谷GO、GOODSLOVE及GOODSBUS",
+            "url": "https://www.xiaohongshu.com/explore/6a58d8f80000000001001dae",
+            "date": "2026-07-17"
+          },
+          {
+            "label": "GOODSLOVE主页",
+            "url": "https://www.xiaohongshu.com/user/profile/63ef802e000000000f0124b7",
+            "dateLabel": "页面未标发表日；读取2026-10-28"
+          },
+          {
+            "label": "品牌部分门店闭店公告",
+            "url": "https://www.xiaohongshu.com/explore/6aba48e9000000000200e113",
+            "dateLabel": "编辑于10-13；读取2026-10-28"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "品牌部分门店闭店公告",
+            "url": "https://www.xiaohongshu.com/explore/6aba48e9000000000200e113",
+            "dateLabel": "编辑于10-13；读取2026-10-28"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "GOODSLOVE",
+            "handle": "27247595607",
+            "url": "https://www.xiaohongshu.com/user/profile/63ef802e000000000f0124b7",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "万番屋",
+        "floor": "负二层",
+        "kind": "中古／动漫周边",
+        "status": "closed",
+        "note": "用户明确确认TPY旧店已关闭；关闭日期及具体原因未知。其他地点的同名店不受此结论影响。",
+        "sources": [
+          {
+            "label": "TPY中心2025年谷店汇总",
+            "url": "https://www.xiaohongshu.com/explore/6810a6f3000000002001c529",
+            "dateLabel": "编辑于2025-05-01；原发表日未知"
+          },
+          {
+            "label": "用户确认TPY本店已关闭",
+            "providedBy": "user",
+            "dateLabel": "用户确认于2026-10-28；关闭日期未知"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "TPY中心2025年谷店汇总",
+            "url": "https://www.xiaohongshu.com/explore/6810a6f3000000002001c529",
+            "dateLabel": "编辑于2025-05-01；原发表日未知"
+          }
+        ],
+        "inactive": {
+          "reason": "closed",
+          "history": "2025年有TPY负二层经营记录；用户于2026-10-28确认该旧店已关闭，具体关闭日期未知。"
+        }
+      },
+      {
+        "name": "大胶布",
+        "floor": "负二层",
+        "kind": "动漫／游戏周边",
+        "status": "unverified",
+        "pendingReview": {
+          "category": "history",
+          "sourceUrl": "https://www.xiaohongshu.com/explore/6810a6f3000000002001c529"
+        },
+        "note": "2025年商场店单列出本店；水豚小怪兽上海TPY号简介亦写大胶布，柜位与经营主体关系及当前状态待核，未重复计店。",
+        "sources": [
+          {
+            "label": "TPY中心2025年谷店汇总",
+            "url": "https://www.xiaohongshu.com/explore/6810a6f3000000002001c529",
+            "dateLabel": "编辑于2025-05-01；原发表日未知"
+          },
+          {
+            "label": "水豚小怪兽上海TPY主页：地址提大胶布",
+            "url": "https://www.xiaohongshu.com/user/profile/6326ccbb000000002303f479",
+            "dateLabel": "读取2026-10-28"
+          },
+          {
+            "label": "水豚小怪兽上海TPY：圆滚滚毛绒上新",
+            "url": "https://www.xiaohongshu.com/explore/69798fe4000000000e03d256",
+            "date": "2026-01-28"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "TPY中心2025年谷店汇总",
+            "url": "https://www.xiaohongshu.com/explore/6810a6f3000000002001c529",
+            "dateLabel": "编辑于2025-05-01；原发表日未知"
+          }
+        ]
+      },
+      {
+        "name": "多摩万事屋",
+        "floor": "负二层",
+        "kind": "同人／动漫周边",
+        "status": "unverified",
+        "pendingReview": {
+          "category": "history",
+          "sourceUrl": "https://www.xiaohongshu.com/explore/6810a6f3000000002001c529"
+        },
+        "note": "2025年商场店单列出本店；2024旧图只作历史，未找到匹配本址的本人账号，现状待核。",
+        "sources": [
+          {
+            "label": "TPY中心2025年谷店汇总",
+            "url": "https://www.xiaohongshu.com/explore/6810a6f3000000002001c529",
+            "dateLabel": "编辑于2025-05-01；原发表日未知"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "TPY中心2025年谷店汇总",
+            "url": "https://www.xiaohongshu.com/explore/6810a6f3000000002001c529",
+            "dateLabel": "编辑于2025-05-01；原发表日未知"
+          }
+        ]
+      },
+      {
+        "name": "铃夏学园（TPY旧址）",
+        "floor": "负二层",
+        "kind": "Galgame／动漫周边",
+        "status": "closed",
+        "note": "用户明确确认TPY旧店已关闭；关闭日期及具体原因未知。其他地点的同名店不受此结论影响。",
+        "sources": [
+          {
+            "label": "Yune：TPY中心B2铃夏学院打卡",
+            "url": "https://www.xiaohongshu.com/explore/68c7b5dc000000001b020088",
+            "dateLabel": "编辑于2025-09-16；原发表日未知"
+          },
+          {
+            "label": "铃夏学园本人第一百货重开业",
+            "url": "https://www.douyin.com/video/7698385579662867151",
+            "date": "2026-10-19"
+          },
+          {
+            "label": "用户确认TPY本店已关闭",
+            "providedBy": "user",
+            "dateLabel": "用户确认于2026-10-28；关闭日期未知"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "Yune：TPY中心B2铃夏学院打卡",
+            "url": "https://www.xiaohongshu.com/explore/68c7b5dc000000001b020088",
+            "dateLabel": "编辑于2025-09-16；原发表日未知"
+          }
+        ],
+        "inactive": {
+          "reason": "closed",
+          "history": "2025年有TPY负二层经营记录；用户于2026-10-28确认该旧店已关闭，具体关闭日期未知。"
+        }
+      },
+      {
+        "name": "GOODSBUS（TPY旧店）",
+        "floor": "负二层 扶梯口",
+        "kind": "原耽／动漫周边",
+        "status": "closed",
+        "inactive": {
+          "reason": "closed",
+          "history": "2026年7月商场店单记录本址经营；本人公告因内部调整于2026年10月9日正式关店。"
+        },
+        "note": "本人主页旧地址及账号保留作历史；大悦城其他店不证明旧店迁址。",
+        "sources": [
+          {
+            "label": "TPY中心暑期谷单：猫受屋、谷GO、GOODSLOVE及GOODSBUS",
+            "url": "https://www.xiaohongshu.com/explore/6a58d8f80000000001001dae",
+            "date": "2026-07-17"
+          },
+          {
+            "label": "Goodsbus上海TPY店主页",
+            "url": "https://www.xiaohongshu.com/user/profile/5e7861f4000000000100a828",
+            "dateLabel": "页面未标发表日；读取2026-10-28"
+          },
+          {
+            "label": "本人闭店公告：10月9日正式关店",
+            "url": "https://www.xiaohongshu.com/explore/6ac5a9270000000018039893",
+            "date": "2026-10-07"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "TPY中心暑期谷单：猫受屋、谷GO、GOODSLOVE及GOODSBUS",
+            "url": "https://www.xiaohongshu.com/explore/6a58d8f80000000001001dae",
+            "date": "2026-07-17"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "Goodsbus上海TPY店",
+            "handle": "908366009",
+            "url": "https://www.xiaohongshu.com/user/profile/5e7861f4000000000100a828",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "兄弟战争 POPUP（谷GO）",
+        "floor": "负二层",
+        "kind": "动漫周边",
+        "status": "closed",
+        "hostShop": "谷GO",
+        "limited": {
+          "scope": "theme",
+          "period": "6月10日—7月25日（原文未写年份；结合2026年编辑及同年活动评论判断为2026年）",
+          "startsOn": "2026-06-10",
+          "endsOn": "2026-07-25"
+        },
+        "note": "本期店内主题已结束；不代表谷GO常设店关闭。",
+        "sources": [
+          {
+            "label": "谷GO本人：兄弟战争POPUP",
+            "url": "https://www.xiaohongshu.com/explore/69fd8d6300000000350205dd",
+            "dateLabel": "编辑于05-21；读取2026-10-28"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "谷GO上海徐家汇tpy中心店",
+            "handle": "104754337",
+            "url": "https://www.xiaohongshu.com/user/profile/574b19565e87e7771aed2e89",
+            "scope": "store"
+          }
+        ]
+      }
+    ]
+  },
+  "shanghai-shop-015": {
+    "area": "上海美罗城（肇嘉浜路1111号）",
+    "checkedAt": "2026-10-28",
+    "notice": "阶段性研究：已做小红书、抖音站内商圈内容发现；部分账号、快闪结束日期及五楼售卖区主体仍待核。",
+    "shops": [
+      {
+        "name": "SHONEN JUMP SHOP",
+        "floor": "一层 A区",
+        "kind": "漫画／动漫周边",
+        "status": "recent",
+        "note": "2025年同商场迁至A区一、二层，2026本人上新明确美罗城SHOP；品牌账号与CAFE共用。",
+        "sources": [
+          {
+            "label": "集英万梦本人：美罗城同商场迁位重开",
+            "url": "https://www.weibo.com/7705016221/PzT3fBNav?mod=weibotime",
+            "date": "2025-07-06"
+          },
+          {
+            "label": "美罗城官方吃谷潮玩杂货店单上篇",
+            "url": "https://www.xiaohongshu.com/explore/68ef797e000000000402b0b7",
+            "dateLabel": "编辑于2025-10-15；原发表日未知"
+          },
+          {
+            "label": "JUMP本人：上海美罗城SHOP与CAFE上新",
+            "url": "https://www.xiaohongshu.com/explore/6ad99fd60000000024039d4b",
+            "dateLabel": "5天前 上海；读取2026-10-28"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "JUMP本人：上海美罗城SHOP与CAFE上新",
+            "url": "https://www.xiaohongshu.com/explore/6ad99fd60000000024039d4b",
+            "dateLabel": "5天前 上海；读取2026-10-28"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "SHONEN JUMP SHOP·CAFE",
+            "handle": "49316278959",
+            "url": "https://www.xiaohongshu.com/user/profile/64f53c4b000000000200d0d8",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "SHONEN JUMP CAFE",
+        "floor": "二层 A区",
+        "kind": "主题咖啡厅",
+        "status": "recent",
+        "note": "与SHOP同商场迁位后继续营业；本人上新明确美罗城CAFE。主题期不等于常设店营业期。",
+        "sources": [
+          {
+            "label": "集英万梦本人：美罗城同商场迁位重开",
+            "url": "https://www.weibo.com/7705016221/PzT3fBNav?mod=weibotime",
+            "date": "2025-07-06"
+          },
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          },
+          {
+            "label": "JUMP本人：上海美罗城SHOP与CAFE上新",
+            "url": "https://www.xiaohongshu.com/explore/6ad99fd60000000024039d4b",
+            "dateLabel": "5天前 上海；读取2026-10-28"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "JUMP本人：上海美罗城SHOP与CAFE上新",
+            "url": "https://www.xiaohongshu.com/explore/6ad99fd60000000024039d4b",
+            "dateLabel": "5天前 上海；读取2026-10-28"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "SHONEN JUMP SHOP·CAFE",
+            "handle": "49316278959",
+            "url": "https://www.xiaohongshu.com/user/profile/64f53c4b000000000200d0d8",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "三月兽",
+        "floor": "负一层",
+        "kind": "动漫周边、扭蛋、抽赏",
+        "status": "listed",
+        "note": "翻翻动漫当前官网明确本店地址与营业门店；商场店单和2026本址探店记载周边及扭蛋。",
+        "sources": [
+          {
+            "label": "翻翻动漫官网当前门店目录",
+            "url": "https://www.fanfannet.com/portal/offline_stores/index/id/11.html",
+            "dateLabel": "无发布日期；读取2026-10-28"
+          },
+          {
+            "label": "美罗城官方吃谷潮玩杂货店单上篇",
+            "url": "https://www.xiaohongshu.com/explore/68ef797e000000000402b0b7",
+            "dateLabel": "编辑于2025-10-15；原发表日未知"
+          },
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          }
+        ],
+        "operatingConfirmation": "official-listing"
+      },
+      {
+        "name": "Sanrio Gift Gate",
+        "floor": "负一层 A段B-15",
+        "kind": "三丽鸥角色周边、毛绒",
+        "status": "listed",
+        "note": "三丽鸥当前官网明确本店及铺位，负一层由本址探店佐证。",
+        "sources": [
+          {
+            "label": "三丽鸥官网当前门店目录",
+            "url": "https://www.sanrio.com.cn/store.html",
+            "dateLabel": "无发布日期；读取2026-10-28"
+          },
+          {
+            "label": "美罗城官方吃谷潮玩杂货店单上篇",
+            "url": "https://www.xiaohongshu.com/explore/68ef797e000000000402b0b7",
+            "dateLabel": "编辑于2025-10-15；原发表日未知"
+          },
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          }
+        ],
+        "operatingConfirmation": "official-listing"
+      },
+      {
+        "name": "ZAKKAMI杂货猫",
+        "floor": "负一层",
+        "kind": "杂货、潮玩与角色周边",
+        "status": "listed",
+        "note": "商场官方店单列潮玩杂货，2026本址探店记录猫咪玩偶、摆件与杂货。",
+        "sources": [
+          {
+            "label": "美罗城官方吃谷潮玩杂货店单上篇",
+            "url": "https://www.xiaohongshu.com/explore/68ef797e000000000402b0b7",
+            "dateLabel": "编辑于2025-10-15；原发表日未知"
+          },
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "美罗城官方吃谷潮玩杂货店单上篇",
+            "url": "https://www.xiaohongshu.com/explore/68ef797e000000000402b0b7",
+            "dateLabel": "编辑于2025-10-15；原发表日未知"
+          },
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          }
+        ],
+        "operatingConfirmation": "official-listing"
+      },
+      {
+        "name": "橡子共和国",
+        "floor": "一层",
+        "kind": "吉卜力角色周边、毛绒",
+        "status": "listed",
+        "note": "商场官方店单与2026本址探店均列本店。",
+        "sources": [
+          {
+            "label": "美罗城官方吃谷潮玩杂货店单上篇",
+            "url": "https://www.xiaohongshu.com/explore/68ef797e000000000402b0b7",
+            "dateLabel": "编辑于2025-10-15；原发表日未知"
+          },
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "美罗城官方吃谷潮玩杂货店单上篇",
+            "url": "https://www.xiaohongshu.com/explore/68ef797e000000000402b0b7",
+            "dateLabel": "编辑于2025-10-15；原发表日未知"
+          },
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          }
+        ],
+        "operatingConfirmation": "official-listing"
+      },
+      {
+        "name": "LINE FRIENDS",
+        "floor": "二层",
+        "kind": "角色周边、毛绒",
+        "status": "listed",
+        "note": "商场官方店单与2026本址探店均列本店。",
+        "sources": [
+          {
+            "label": "美罗城官方吃谷潮玩杂货店单下篇",
+            "url": "https://www.xiaohongshu.com/explore/68f203f8000000000402b82e",
+            "dateLabel": "编辑于2025-10-17；原发表日未知"
+          },
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "美罗城官方吃谷潮玩杂货店单下篇",
+            "url": "https://www.xiaohongshu.com/explore/68f203f8000000000402b82e",
+            "dateLabel": "编辑于2025-10-17；原发表日未知"
+          },
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          }
+        ],
+        "operatingConfirmation": "official-listing"
+      },
+      {
+        "name": "LOFT",
+        "floor": "二层",
+        "kind": "日式杂货、文具与IP文创",
+        "status": "listed",
+        "note": "商场官方店单与2026本址探店均列本店；多美卡2-4C空间与本店关系尚待核。",
+        "sources": [
+          {
+            "label": "美罗城官方吃谷潮玩杂货店单下篇",
+            "url": "https://www.xiaohongshu.com/explore/68f203f8000000000402b82e",
+            "dateLabel": "编辑于2025-10-17；原发表日未知"
+          },
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "美罗城官方吃谷潮玩杂货店单下篇",
+            "url": "https://www.xiaohongshu.com/explore/68f203f8000000000402b82e",
+            "dateLabel": "编辑于2025-10-17；原发表日未知"
+          },
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          }
+        ],
+        "operatingConfirmation": "official-listing"
+      },
+      {
+        "name": "TAPIOCA",
+        "floor": "二层",
+        "kind": "动漫周边、盲抽",
+        "status": "listed",
+        "note": "商场官方店单与2026本址探店均列本店，记录立牌、挂件与盲抽。",
+        "sources": [
+          {
+            "label": "美罗城官方吃谷潮玩杂货店单下篇",
+            "url": "https://www.xiaohongshu.com/explore/68f203f8000000000402b82e",
+            "dateLabel": "编辑于2025-10-17；原发表日未知"
+          },
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "美罗城官方吃谷潮玩杂货店单下篇",
+            "url": "https://www.xiaohongshu.com/explore/68f203f8000000000402b82e",
+            "dateLabel": "编辑于2025-10-17；原发表日未知"
+          },
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          }
+        ],
+        "operatingConfirmation": "official-listing"
+      },
+      {
+        "name": "YOOOOSHOP",
+        "floor": "二层 A段2-18B-2",
+        "kind": "动漫／游戏周边、盲盒",
+        "status": "recent",
+        "note": "品牌本人门店整理关联美罗分店主页，主页明确铺位；2026本址探店记录谷子及盲盒。",
+        "sources": [
+          {
+            "label": "YOOOOSHOP本人门店整理",
+            "url": "https://www.xiaohongshu.com/explore/6abb9a75000000001203f47a",
+            "dateLabel": "编辑于10-04 江苏；读取2026-10-28"
+          },
+          {
+            "label": "YOOOOSHOP美罗城店主页",
+            "url": "https://www.xiaohongshu.com/user/profile/66bd90b8000000001d033df9",
+            "dateLabel": "页面未标发表日；读取2026-10-28"
+          },
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "Anna in沪：美罗城2026分层探店",
+            "url": "https://www.xiaohongshu.com/explore/6a56fd340000000021021687",
+            "date": "2026-07-15"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "YOOOOSHOP美罗城店",
+            "handle": "42954557349",
+            "url": "https://www.xiaohongshu.com/user/profile/66bd90b8000000001d033df9",
+            "scope": "store"
+          }
+        ]
+      },
+      {
+        "name": "新铛集",
+        "floor": "二层",
+        "kind": "动漫角色周边",
+        "status": "unverified",
+        "pendingReview": {
+          "category": "history",
+          "sourceUrl": "https://www.xiaohongshu.com/explore/68f203f8000000000402b82e"
+        },
+        "note": "商场2025年店单列有本店及角色周边；关联账号无简介及作品，近期本址经营仍待核。",
+        "sources": [
+          {
+            "label": "美罗城官方吃谷潮玩杂货店单下篇",
+            "url": "https://www.xiaohongshu.com/explore/68f203f8000000000402b82e",
+            "dateLabel": "编辑于2025-10-17；原发表日未知"
+          },
+          {
+            "label": "商场关联的新铛集账号",
+            "url": "https://www.xiaohongshu.com/user/profile/62ff8cd50000000012001f04",
+            "dateLabel": "无简介及作品；读取2026-10-28"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "美罗城官方吃谷潮玩杂货店单下篇",
+            "url": "https://www.xiaohongshu.com/explore/68f203f8000000000402b82e",
+            "dateLabel": "编辑于2025-10-17；原发表日未知"
+          }
+        ]
+      },
+      {
+        "name": "家庭教师主题（SHONEN JUMP CAFE）",
+        "floor": "二层 A区",
+        "kind": "主题咖啡厅",
+        "status": "recent",
+        "hostShop": "SHONEN JUMP CAFE",
+        "limited": {
+          "scope": "theme",
+          "period": "2026年10月16日—12月24日",
+          "startsOn": "2026-10-16",
+          "endsOn": "2026-12-24"
+        },
+        "note": "店内主题按一项活动计数；菜单分阶段更新，STATION与咖啡厅的空间关系待核。",
+        "sources": [
+          {
+            "label": "JUMP本人：家庭教师主题与完整档期",
+            "url": "https://www.xiaohongshu.com/explore/6ad1d7840000000014038471",
+            "dateLabel": "编辑于10-16；读取2026-10-28"
+          },
+          {
+            "label": "JUMP本人：上海美罗城SHOP与CAFE上新",
+            "url": "https://www.xiaohongshu.com/explore/6ad99fd60000000024039d4b",
+            "dateLabel": "5天前 上海；读取2026-10-28"
+          },
+          {
+            "label": "集英万梦本人：美罗城同商场迁位重开",
+            "url": "https://www.weibo.com/7705016221/PzT3fBNav?mod=weibotime",
+            "date": "2025-07-06"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "SHONEN JUMP SHOP·CAFE",
+            "handle": "49316278959",
+            "url": "https://www.xiaohongshu.com/user/profile/64f53c4b000000000200d0d8",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "MINISO × CHIIKAWA水果市集主题快闪",
+        "floor": "A区正门",
+        "kind": "角色周边、快闪",
+        "status": "unverified",
+        "limited": {
+          "scope": "store",
+          "period": "2026年8月7日起；结束日待核",
+          "startsOn": "2026-08-07"
+        },
+        "pendingReview": {
+          "category": "history",
+          "sourceUrl": "https://www.xiaohongshu.com/explore/6a77fc580000000033018492"
+        },
+        "note": "商场本人明确本址主题快闪开业；8月31日为限购政策截止日，非已知闭展日，当前是否继续及结束日期待核。",
+        "sources": [
+          {
+            "label": "美罗城本人：CHIIKAWA水果市集快闪",
+            "url": "https://www.xiaohongshu.com/explore/6a77fc580000000033018492",
+            "date": "2026-08-09"
+          }
+        ]
+      }
+    ]
+  },
   "shanghai-shop-018": {
     "area": "上海环球港（中山北路3300号）",
     "checkedAt": "2026-10-27",

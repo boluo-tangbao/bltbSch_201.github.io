@@ -1,5 +1,27 @@
 [
   {
+    "id": "tpy-metro-user-correction-20261028",
+    "date": "2026-10-28",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-012",
+      "shanghai-shop-015"
+    ],
+    "note": "按用户反馈，美罗城移除泡泡玛特、九木杂物社和本小姐并将JUMP提前；TPY万番屋与铃夏旧址按关闭历史记录。谷店展开按钮移至各组展示内容下方。"
+  },
+  {
+    "id": "tpy-metro-city-research-20261028",
+    "date": "2026-10-28",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-012",
+      "shanghai-shop-015"
+    ],
+    "note": "TPY中心、美罗城阶段性谷店研究：完成双平台站内商圈内容发现，接入确认门店、快闪与待核线索；GOODSBUS旧店按本人公告列停止营业历史。图集与原评价保留，未发布。"
+  },
+  {
     "id": "global-harbor-paris-spring-research-20261027",
     "date": "2026-10-27",
     "type": "edited",

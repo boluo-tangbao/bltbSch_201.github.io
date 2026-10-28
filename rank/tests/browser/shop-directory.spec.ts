@@ -18,9 +18,10 @@ for (const route of ['', 'guide/']) {
         for (const section of await page.locator('.shop-directory-section').all()) {
           const confirmed = section.locator('.shop-directory-confirmed .shop-row')
           await expect(confirmed.filter({ visible: true })).toHaveCount(Math.min(5, await confirmed.count()))
-          const expand = section.locator('.shop-section-actions .shop-expand')
+          const expand = section.locator('.shop-directory-confirmed .shop-expand')
           while (await expand.count()) {
             const before = await confirmed.filter({ visible: true }).count()
+            expect(await expand.evaluate(button => button.getBoundingClientRect().top >= button.parentElement!.previousElementSibling!.getBoundingClientRect().bottom)).toBe(true)
             await expand.click()
             await expect(confirmed.filter({ visible: true })).toHaveCount(Math.min(before + 5, await confirmed.count()))
           }
@@ -34,6 +35,7 @@ for (const route of ['', 'guide/']) {
             const expand = subgroup.locator('.shop-expand')
             while (await expand.count()) {
               const before = await rows.filter({ visible: true }).count()
+              expect(await expand.evaluate(button => button.getBoundingClientRect().top >= button.parentElement!.previousElementSibling!.getBoundingClientRect().bottom)).toBe(true)
               await expand.click()
               await expect(rows.filter({ visible: true })).toHaveCount(Math.min(before + 5, await rows.count()))
             }
