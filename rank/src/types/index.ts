@@ -7,7 +7,7 @@ export interface ShopSource { label: string; url?: string; providedBy?: 'user'; 
 export interface DirectoryShop {
   name: string; floor?: string; kind?: string; description?: string
   aliases?: string[]
-  operatingConfirmation?: 'official-listing'
+  operatingConfirmation?: 'official-listing' | 'user-confirmed'
   evidenceLabel?: '可能营业'
   pendingReview?: { category: 'history'; sourceUrl: string } | { category: 'verification' }
   limited?: { scope: 'store' | 'theme'; period: string; startsOn?: string; endsOn?: string }
@@ -25,6 +25,7 @@ export interface PlaceEntry {
   gallery: GalleryMedia[]
   visitedAt: string | null; updatedAt: string; published: boolean
   location?: string | { lat: number; lng: number; coordinateSystem: 'wgs84'; address: string } | null
+  nearbyVisits?: { name: string; address: string; note: string; sourceUrl: string; theme?: 'mihoyo' | 'hypergryph' | 'museum' }[]
   mapSnapshot?: { src: string; alt: string; updatedAt: string }
 }
 export type PlacesByCity = Record<string, PlaceEntry[]>

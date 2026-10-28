@@ -60,14 +60,14 @@ for (const route of ['', 'guide/']) {
             await expect(row.locator('.shop-evidence-note, .shop-sources, .shop-kind-evidence')).toHaveCount(0)
             await expect(row.locator('.shop-accounts a')).toHaveCount(shop.accounts.length)
           } else {
-            if (shop.operatingConfirmation === 'official-listing') checkedOfficialListing = true
+            if (shop.operatingConfirmation) checkedOfficialListing = true
             else checkedPending = true
             if (shop.pendingReview?.category === 'history') {
               const history = row.locator('.shop-history-source')
               await expect(history).toBeVisible()
               await expect(history.locator('a')).toHaveAttribute('href', shop.pendingReview.sourceUrl)
               await expect(row.locator('xpath=ancestor::*[@data-pending-category][1]')).toHaveAttribute('data-pending-category', 'history')
-            } else if (shop.operatingConfirmation !== 'official-listing') {
+            } else if (!shop.operatingConfirmation) {
               await expect(row.locator('.shop-status')).toHaveText('待验证')
               await expect(row.locator('.shop-history-source')).toHaveCount(0)
             }

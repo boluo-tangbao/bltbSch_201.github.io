@@ -128,6 +128,16 @@ test('explicit official listings confirm operation without social accounts; clos
   assert.ok(validateShopDirectories({ test: { ...fixture().test, shops: [shop] } }, [{ id: 'test' }]).some(error => error.includes('营业确认依据无效')))
 })
 
+test('user confirmation requires a user source and makes the shop visible', () => {
+  const data = fixture()
+  const shop = data.test.shops[0]
+  shop.operatingConfirmation = 'user-confirmed'
+  assert.ok(validateShopDirectories(data, [{ id: 'test' }]).some(error => error.includes('用户来源')))
+  shop.sources.push({ label: '用户确认', providedBy: 'user', dateLabel: '用户确认于2026-10-29' })
+  assert.equal(shopDisplayStatus(shop), 'open')
+  assert.deepEqual(validateShopDirectories(data, [{ id: 'test' }]), [])
+})
+
 test('author visit annotation uses latest evidence and excludes equal, newer or unknown dates', () => {
   const source = date => ({ label: '探店', url: 'https://example.com/post', date })
   assert.equal(sourcePredatesVisit([source('2025-09-29')], '2026-01-20'), true)

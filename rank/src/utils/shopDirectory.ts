@@ -18,7 +18,7 @@ export function mergeShopSources(shop: Pick<DirectoryShop, 'sources' | 'kindSour
 
 export function shopDisplayStatus(shop: DirectoryShop): 'open' | 'evidence' | 'closed' {
   if (shop.status === 'closed') return 'closed'
-  return shop.operatingConfirmation === 'official-listing' || shop.accounts?.length ? 'open' : 'evidence'
+  return shop.operatingConfirmation || shop.accounts?.length ? 'open' : 'evidence'
 }
 
 export function shopStatusLabel(shop: DirectoryShop): string {

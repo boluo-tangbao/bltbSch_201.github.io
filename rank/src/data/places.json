@@ -1390,14 +1390,37 @@
         }
       ],
       "visitedAt": "2026-09-09",
-      "updatedAt": "2026-10-17",
+      "updatedAt": "2026-10-28",
       "published": true,
       "location": {
         "lat": 31.168415,
         "lng": 121.410019,
         "coordinateSystem": "wgs84",
         "address": "上海市徐汇区漕宝路261号鑫耀光环live二期"
-      }
+      },
+      "nearbyVisits": [
+        {
+          "name": "米哈游英业达园区南楼（玩家参观）",
+          "address": "上海市徐汇区宜山路1295号英业达园区南楼一层",
+          "note": "曾设公众预约参观；请在微信“米哈游开放日预约”查询最新开放日期与名额，以预约页面为准。",
+          "sourceUrl": "https://bme-college.fudan.edu.cn/80/83/c49155a753795/page.psp",
+          "theme": "mihoyo"
+        },
+        {
+          "name": "鹰角网络办公楼（漕河泾中心）",
+          "address": "上海市徐汇区古美路1520号漕河泾中心",
+          "note": "办公楼位置仅供周边打卡参考；尚未核实对公众开放参观，请以现场及官方公告为准。",
+          "sourceUrl": "https://user.hypergryph.com/protocol/popucom/children_privacy",
+          "theme": "hypergryph"
+        },
+        {
+          "name": "中国音数协游戏博物馆",
+          "address": "上海市徐汇区桂箐路65号新研大厦B座3楼",
+          "note": "常设展呈现电子游戏的发展历史，设有主题展与互动试玩。参观需购票，2026年指南注明10:00—17:00开放、周一闭馆；节假日与预约规则请以馆方最新公告为准。",
+          "sourceUrl": "https://www.taptap.cn/moment/757618683458619546?group_id=159750",
+          "theme": "museum"
+        }
+      ]
     },
     {
       "id": "shanghai-shop-014",

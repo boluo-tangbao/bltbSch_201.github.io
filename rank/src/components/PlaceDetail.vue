@@ -11,9 +11,21 @@ import shopDirectories from '../data/shop-directories.json'
 import type { ShopDirectory as ShopDirectoryData } from '../types'
 import { parseRichText, richTextClasses } from '../utils/richText'
 import { createPlaceSearchIndex, matchPlaces, searchTargetId } from '../utils/search'
+import { assetUrl } from '../utils/assets'
 
 const props = defineProps<{ place: Place; rank?: number; color: string; searchQuery?: string }>()
 const address = computed(() => placeAddress(props.place))
+const nearbyNavigation = (address: string) => `https://uri.amap.com/search?${new URLSearchParams({ keyword: address, callnative: '1', src: 'tangbao-shop-ranking' })}`
+const visitLogos = { mihoyo: assetUrl('images/brands/mihoyo.png'), hypergryph: assetUrl('images/brands/hypergryph.svg'), museum: assetUrl('images/brands/game-museum.svg') }
+type NearbyVisit = NonNullable<Place['nearbyVisits']>[number]
+const selectedVisit = ref<NearbyVisit | null>(null)
+const visitDialog = ref<HTMLDialogElement>()
+async function openVisit(spot: NearbyVisit) {
+  selectedVisit.value = spot
+  await nextTick()
+  visitDialog.value?.showModal()
+}
+watch(() => props.place.id, () => visitDialog.value?.close())
 const detailParagraphs = computed(() => props.place.details.split(/\r?\n+/).map(paragraph => paragraph.trim()).filter(Boolean).map(paragraph => parseRichText(paragraph)))
 const visitNotes = computed(() => (props.place.visitNotes ?? []).map(note => parseRichText(note)))
 const shopDirectory = computed(() => (shopDirectories as Record<string, ShopDirectoryData>)[props.place.id])
@@ -117,7 +129,30 @@ onBeforeUnmount(() => {
       <div class="place-mini-map-heading"><div><p class="section-label">AROUND HERE</p><h2 id="nearby-map-heading">店铺周边</h2></div><span>百度地图 · 无需访客登录 · 可拖动、缩放</span></div>
       <AddressMap :place="place" :color="color" />
       <p class="map-caption">百度在线地图异常时，可显示配置过的每月 500m 备份图。</p>
+      <div v-if="place.nearbyVisits?.length" class="nearby-visits">
+        <h3>附近参观与打卡</h3>
+        <div class="nearby-visit-grid">
+          <article v-for="spot in place.nearbyVisits" :key="spot.name" class="nearby-visit" :class="spot.theme && 'nearby-visit--' + spot.theme">
+            <div class="nearby-visit-frame">
+              <button class="nearby-visit-brand" type="button" :aria-label="`查看${spot.name}的介绍`" aria-haspopup="dialog" @click="openVisit(spot)"><img v-if="spot.theme" :src="visitLogos[spot.theme]" alt=""><span v-else aria-hidden="true">✦</span></button>
+              <h4>{{ spot.name }}</h4><p class="nearby-visit-hint">点击图片查看介绍 ↗</p>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
+    <Teleport to="body">
+      <dialog ref="visitDialog" class="nearby-dialog" aria-labelledby="nearby-dialog-title" @close="selectedVisit = null">
+        <div v-if="selectedVisit" class="nearby-dialog-content">
+          <button class="nearby-dialog-close" type="button" aria-label="关闭介绍" @click="visitDialog?.close()">×</button>
+          <p class="nearby-dialog-kicker">AROUND HERE</p>
+          <h2 id="nearby-dialog-title">{{ selectedVisit.name }}</h2>
+          <p class="nearby-dialog-address">{{ selectedVisit.address }}</p>
+          <p>{{ selectedVisit.note }}</p>
+          <div class="nearby-visit-links"><a :href="nearbyNavigation(selectedVisit.address)" target="_blank" rel="noopener noreferrer">高德地图 ↗</a><a :href="selectedVisit.sourceUrl" target="_blank" rel="noopener noreferrer">资料来源 ↗</a></div>
+        </div>
+      </dialog>
+    </Teleport>
     <footer :id="chapterId('directions')" class="detail-destination detail-chapter" aria-label="怎么去">
       <div><p class="section-label">DIRECTIONS</p><h2>怎么去</h2><p>{{ address || '位置待补充，暂不提供导航。' }}</p></div>
       <div v-if="address" class="destination-actions"><a :href="baiduMapUrl(place)!" target="_blank" rel="noopener noreferrer" class="button dark">百度地图 ↗</a><a :href="navigationUrl(place, true)!" target="_blank" rel="noopener noreferrer" class="button">高德地图 ↗</a><a :href="googleMapsUrl(place)!" target="_blank" rel="noopener noreferrer" class="button">Google 地图 ↗</a></div>
@@ -134,6 +169,37 @@ onBeforeUnmount(() => {
 .has-chapters [tabindex="-1"] { scroll-margin-top: 80px; }
 .has-chapters [tabindex="-1"]:focus { outline: 2px solid #a83750; outline-offset: 4px; }
 .has-chapters :deep(.place-gallery-group) { scroll-margin-top: 72px; }
+.nearby-visits { margin-top: 22px; }
+.nearby-visits h3 { margin: 0 0 12px; font-size: 17px; }
+.nearby-visit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 12px; }
+.nearby-visit { min-width: 0; padding: 8px; border: 1px solid #e5c5cc; background: #fffdfa; overflow-wrap: anywhere; }
+.nearby-visit-frame { height: 100%; padding: 18px; border: 1px solid #e5c5cc; }
+.nearby-visit h4 { margin: 14px 0 0; font-size: 16px; line-height: 1.5; }
+.nearby-visit p { margin: 9px 0; color: #695862; font-size: 13px; line-height: 1.7; }
+.nearby-visit .nearby-visit-hint { margin-bottom: 0; color: #8b6374; }
+.nearby-visit-links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 14px; }
+.nearby-visit-links a { color: #a83750; font-size: 13px; font-weight: 700; }
+.nearby-visit-brand { display: flex; align-items: center; justify-content: center; width: 100%; height: 100px; padding: 12px; border: 0; background: #1d2739; color: white; cursor: pointer; }
+.nearby-visit-brand:focus-visible { outline: 3px solid #a83750; outline-offset: 3px; }
+.nearby-visit-brand img { max-width: 150px; width: auto; max-height: 100%; object-fit: contain; }
+.nearby-visit--mihoyo { border-color: #77bce1; background: repeating-linear-gradient(135deg, #d8efff 0 8px, #f5fbff 8px 16px); }
+.nearby-visit--mihoyo .nearby-visit-frame { border-color: #a6d9ee; background: radial-gradient(circle at 92% 13%, #c6eaff 0 3px, transparent 4px), #f7fcff; }
+.nearby-visit--mihoyo .nearby-visit-brand { background: linear-gradient(110deg, #273957, #4889bc); }
+.nearby-visit--hypergryph { border-color: #b3a780; background: repeating-linear-gradient(135deg, #dfc274 0 6px, #2f3540 6px 12px); }
+.nearby-visit--hypergryph .nearby-visit-frame { border-color: #d2c7a8; background: #f8f7f0; }
+.nearby-visit--hypergryph .nearby-visit-brand { background: #252a31; }
+.nearby-visit--museum { border-color: #78a6a6; background: repeating-linear-gradient(135deg, #d5eae5 0 8px, #f1f5e8 8px 16px); }
+.nearby-visit--museum .nearby-visit-frame { border-color: #aed0ca; background: #f8fcf8; }
+.nearby-visit--museum .nearby-visit-brand { padding: 0; background: #243647; }
+.nearby-visit--museum .nearby-visit-brand img { width: 100%; max-width: none; height: 100%; object-fit: cover; }
+.nearby-dialog { width: min(520px, calc(100% - 32px)); max-height: calc(100% - 32px); padding: 0; border: 1px solid #d4b3bd; border-radius: 12px; background: #fffaf5; color: #382e37; box-shadow: 0 20px 70px #24151d55; }
+.nearby-dialog::backdrop { background: #1b1420aa; }
+.nearby-dialog-content { position: relative; padding: 30px; }
+.nearby-dialog-content h2 { margin: 8px 36px 16px 0; font-size: 23px; line-height: 1.4; }
+.nearby-dialog-content p { font-size: 14px; line-height: 1.8; }
+.nearby-dialog-content .nearby-dialog-kicker { color: #a83750; font-size: 11px; font-weight: 800; letter-spacing: .15em; }
+.nearby-dialog-address { font-weight: 700; }
+.nearby-dialog-close { position: absolute; top: 14px; right: 16px; width: 40px; height: 40px; border: 0; border-radius: 50%; background: #f3e7e8; color: #624e58; font-size: 25px; cursor: pointer; }
 @media (max-width: 580px) {
   .detail-chapters { gap: 0; padding: 4px 6px; }
   .detail-chapters button { padding: 7px 11px; font-size: 12px; }

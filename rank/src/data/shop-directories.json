@@ -1,4 +1,158 @@
 {
+  "shanghai-shop-013": {
+    "area": "上海鑫耀·光环Live二期（北区／南区／东区）",
+    "checkedAt": "2026-10-28",
+    "notice": "阶段性研究：卡游由用户确认存在，具体楼层待核；其他卡牌小店仍在核实。",
+    "shops": [
+      {
+        "name": "繁花谷",
+        "floor": "二期南区二层 S5-L2-G07",
+        "kind": "动漫／游戏周边",
+        "status": "recent",
+        "note": "本人2026年招聘正文明确二期南区二层及本店工作地点，品牌主页列本店；其他分店的关闭公告不套用本店。",
+        "sources": [
+          {
+            "label": "万代南梦宫一番赏门店目录：繁花谷鑫耀光环店铺位",
+            "url": "https://wechat.bandainamcotoyshobbysh.com/H5/store.php?id=471",
+            "dateLabel": "官网目录读取2026-10-28"
+          },
+          {
+            "label": "繁花谷本人：鑫耀光环二期南区招聘",
+            "url": "https://www.xiaohongshu.com/explore/6a2e087f000000001503c7d0",
+            "date": "2026-06-14"
+          },
+          {
+            "label": "繁花谷品牌主页",
+            "url": "https://www.xiaohongshu.com/user/profile/660e4409000000000600fee8",
+            "dateLabel": "主页无发表日期；读取2026-10-28"
+          },
+          {
+            "label": "联商网：二期南区谷店现场",
+            "url": "https://m.linkshop.com/article/news/543303",
+            "dateLabel": "2026年报道；读取2026-10-28"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "繁花谷本人：鑫耀光环二期南区招聘",
+            "url": "https://www.xiaohongshu.com/explore/6a2e087f000000001503c7d0",
+            "date": "2026-06-14"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "繁花很绚烂",
+            "handle": "95270846380",
+            "url": "https://www.xiaohongshu.com/user/profile/660e4409000000000600fee8",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "米哈游×潮玩星球",
+        "floor": "二期南区二层 G04",
+        "kind": "米哈游游戏周边",
+        "status": "recent",
+        "note": "用户确认该售卖点长期存在；品牌2026年7月发布本址实拍及上新。2025年原快闪档期保留历史，不当作现店结束日期。",
+        "sources": [
+          {
+            "label": "潮玩星球本人2026年本店实拍及铺位",
+            "url": "https://www.sina.cn/news/detail/5323872828397679.html",
+            "date": "2026-07-23"
+          },
+          {
+            "label": "2025年米哈游×潮玩星球原快闪档期",
+            "url": "https://www.sohu.com/a/914880465_121123945",
+            "date": "2025-07-17"
+          },
+          {
+            "label": "2025年二期本址探店",
+            "url": "https://www.xiaohongshu.com/explore/688b7fb40000000023022618",
+            "date": "2025-07-31"
+          },
+          {
+            "label": "用户确认该售卖点长期存在",
+            "providedBy": "user",
+            "dateLabel": "用户确认于2026-10-28"
+          },
+          {
+            "label": "IPSTAR潮玩星球品牌主页（复用既有研究）",
+            "url": "https://www.xiaohongshu.com/user/profile/61b1ad4b0000000010007076",
+            "dateLabel": "原读取2026-10-18"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "潮玩星球本人2026年本店实拍及铺位",
+            "url": "https://www.sina.cn/news/detail/5323872828397679.html",
+            "date": "2026-07-23"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "IPSTAR潮玩星球",
+            "handle": "49313385424",
+            "url": "https://www.xiaohongshu.com/user/profile/61b1ad4b0000000010007076",
+            "scope": "brand"
+          }
+        ]
+      },
+      {
+        "name": "卡游",
+        "floor": "具体楼层待核",
+        "kind": "卡牌",
+        "status": "recent",
+        "operatingConfirmation": "user-confirmed",
+        "note": "用户确认二期有卡游；具体铺位及楼层尚待核。路线帖提到前往南区途中有卡游，但未明确其分期，不用于确认具体位置。",
+        "sources": [
+          { "label": "用户确认卡游存在", "providedBy": "user", "dateLabel": "用户确认于2026-10-29" },
+          { "label": "商场路线帖：途经卡游，分期与铺位待核", "url": "https://www.xiaohongshu.com/explore/6ab1685c00000000350258d6", "dateLabel": "编辑于2026-09-23；原发表日未知" }
+        ]
+      },
+      {
+        "name": "米哈游×潮玩星球（2025年快闪）",
+        "floor": "二期南区二层 G04",
+        "kind": "米哈游游戏周边",
+        "status": "closed",
+        "limited": {
+          "scope": "store",
+          "period": "2025年7月18日—8月31日",
+          "startsOn": "2025-07-18",
+          "endsOn": "2025-08-31"
+        },
+        "note": "2025年原快闪档期已结束；用户确认该售卖点长期存在，当前店铺另列常规栏。",
+        "sources": [
+          {
+            "label": "2025年米哈游×潮玩星球原快闪档期",
+            "url": "https://www.sohu.com/a/914880465_121123945",
+            "date": "2025-07-17"
+          }
+        ]
+      },
+      {
+        "name": "闪魂×绝区零「仲夏欢梦」收藏卡快闪（2026年8月）",
+        "floor": "二期南区一层 L1-27/29",
+        "kind": "收藏卡牌、游戏周边",
+        "status": "closed",
+        "limited": {
+          "scope": "store",
+          "period": "2026年8月1日—8月16日",
+          "startsOn": "2026-08-01",
+          "endsOn": "2026-08-16"
+        },
+        "note": "本人公告明确此期为限时卡牌快闪，已结束；不推断品牌或其他门店关闭。",
+        "sources": [
+          {
+            "label": "闪魂本人：鑫耀南区收藏卡快闪与档期",
+            "url": "https://www.bilibili.com/video/BV1PiuJ6XEmq",
+            "date": "2026-08-06"
+          }
+        ]
+      }
+    ]
+  },
   "shanghai-shop-012": {
     "area": "上海TPY中心（肇嘉浜路1117号）",
     "checkedAt": "2026-10-28",

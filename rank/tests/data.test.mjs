@@ -50,6 +50,15 @@ function validateEntries(site, places, updates, imageExists) {
   return validateData(site, groups, updates, imageExists)
 }
 
+test('nearby visit information requires a usable address, access note and HTTPS source', () => {
+  const spot = { name: '参观点', address: '测试路1号', note: '参观需预约', sourceUrl: 'https://example.org/visit' }
+  assert.deepEqual(validateEntries(site, [{ ...place, nearbyVisits: [spot] }], []), [])
+  assert.deepEqual(validateEntries(site, [{ ...place, nearbyVisits: [{ ...spot, theme: 'mihoyo' }] }], []), [])
+  for (const invalid of [null, { ...spot, address: '' }, { ...spot, note: '' }, { ...spot, sourceUrl: 'javascript:alert(1)' }, { ...spot, theme: 'unknown' }]) {
+    assert.ok(validateEntries(site, [{ ...place, nearbyVisits: [invalid] }], []).length)
+  }
+})
+
 test('empty board is valid, and real dates are checked', () => {
   assert.deepEqual(validateEntries(site, [], []), [])
   assert.equal(validDate('2026-02-30'), false)
