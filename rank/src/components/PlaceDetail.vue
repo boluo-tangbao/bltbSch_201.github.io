@@ -12,6 +12,9 @@ import type { ShopDirectory as ShopDirectoryData } from '../types'
 import { parseRichText, richTextClasses } from '../utils/richText'
 import { createPlaceSearchIndex, matchPlaces, searchTargetId } from '../utils/search'
 import { assetUrl } from '../utils/assets'
+import bilibiliCatalog from '../data/bilibili-videos.json'
+import { placeClips } from '../utils/bilibili'
+import type { BilibiliCatalog } from '../types/bilibili'
 
 const props = defineProps<{ place: Place; rank?: number; color: string; searchQuery?: string }>()
 const address = computed(() => placeAddress(props.place))
@@ -31,10 +34,12 @@ const visitNotes = computed(() => (props.place.visitNotes ?? []).map(note => par
 const shopDirectory = computed(() => (shopDirectories as Record<string, ShopDirectoryData>)[props.place.id])
 const shopDirectoryView = ref<InstanceType<typeof ShopDirectory>>()
 const chapterNav = ref<HTMLElement>()
+const sideNavOpen = ref(false)
 const activeChapter = ref('overview')
 const chapterId = (key: string) => `place-${props.place.id}-${key}`
 const chapters = computed(() => [
   ...(detailParagraphs.value.length || visitNotes.value.length ? [{ key: 'overview', label: '介绍' }] : []),
+  ...(placeClips(bilibiliCatalog as BilibiliCatalog, props.place.id).length ? [{ key: 'video', label: '视频' }] : []),
   ...(shopDirectory.value ? [{ key: 'shops', label: '店铺' }] : []),
   ...(props.place.gallery.length ? [{ key: 'gallery', label: '图集' }] : []),
   ...(address.value ? [{ key: 'nearby', label: '周边' }] : []),
@@ -42,6 +47,7 @@ const chapters = computed(() => [
 ])
 let scrollFrame = 0
 let searchFrame = 0
+let desktopNav = false
 const targetId = (target: Parameters<typeof searchTargetId>[1]) => searchTargetId(props.place.id, target)
 function locateSearchMatch() {
   if (searchFrame) cancelAnimationFrame(searchFrame)
@@ -76,22 +82,34 @@ function updateChapter() {
 function scheduleChapterUpdate() {
   if (!scrollFrame) scrollFrame = window.requestAnimationFrame(updateChapter)
 }
+function handleResize() {
+  const desktop = window.matchMedia('(min-width: 1100px)').matches
+  if (desktop !== desktopNav) { desktopNav = desktop; sideNavOpen.value = desktop }
+  scheduleChapterUpdate()
+}
 function goToChapter(key: string) {
   const section = document.getElementById(chapterId(key))
   if (!section) return
   activeChapter.value = key
   section.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' })
+  if (window.matchMedia('(max-width: 800px)').matches) sideNavOpen.value = false
+}
+function goToTop() {
+  window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })
+  if (window.matchMedia('(max-width: 800px)').matches) sideNavOpen.value = false
 }
 onMounted(() => {
+  desktopNav = window.matchMedia('(min-width: 1100px)').matches
+  sideNavOpen.value = desktopNav
   window.addEventListener('scroll', scheduleChapterUpdate, { passive: true })
-  window.addEventListener('resize', scheduleChapterUpdate)
+  window.addEventListener('resize', handleResize)
   updateChapter()
   nextTick(locateSearchMatch)
 })
 watch(chapters, () => nextTick(updateChapter))
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', scheduleChapterUpdate)
-  window.removeEventListener('resize', scheduleChapterUpdate)
+  window.removeEventListener('resize', handleResize)
   if (scrollFrame) window.cancelAnimationFrame(scrollFrame)
   if (searchFrame) cancelAnimationFrame(searchFrame)
 })
@@ -108,6 +126,14 @@ onBeforeUnmount(() => {
     <nav ref="chapterNav" class="detail-chapters" aria-label="地点章节导航">
       <button v-for="chapter in chapters" :key="chapter.key" type="button" :aria-controls="chapterId(chapter.key)" :aria-current="activeChapter === chapter.key ? 'location' : undefined" @click="goToChapter(chapter.key)">{{ chapter.label }}</button>
     </nav>
+    <nav class="detail-side-nav" aria-label="页面侧边导航">
+      <button type="button" class="side-nav-toggle" :aria-expanded="sideNavOpen" aria-controls="side-chapter-list" @click="sideNavOpen = !sideNavOpen"><span aria-hidden="true">☰</span> {{ sideNavOpen ? '收起' : '导航' }}</button>
+      <div v-if="sideNavOpen" id="side-chapter-list" class="side-nav-list">
+        <span class="side-nav-title">快速直达</span>
+        <button v-for="chapter in chapters" :key="chapter.key" type="button" :aria-controls="chapterId(chapter.key)" :aria-current="activeChapter === chapter.key ? 'location' : undefined" @click="goToChapter(chapter.key)">{{ chapter.label }}</button>
+        <button type="button" @click="goToTop">回到顶部 ↑</button>
+      </div>
+    </nav>
     <section v-if="detailParagraphs.length || visitNotes.length" :id="chapterId('overview')" class="detail-body detail-review detail-chapter" aria-labelledby="review-heading">
       <header class="detail-review-heading">
         <div><p class="section-label">PLACE OVERVIEW</p><h2 id="review-heading">商圈介绍</h2></div>
@@ -122,7 +148,7 @@ onBeforeUnmount(() => {
         <ul class="detail-visit-list"><li v-for="(note, index) in visitNotes" :id="targetId({ kind: 'note', index })" :key="index" tabindex="-1"><span class="detail-visit-mark" aria-hidden="true">↗</span><p><template v-for="(part, partIndex) in note" :key="partIndex"><strong v-if="part.strong" :class="richTextClasses(part)">{{ part.text }}</strong><span v-else :class="richTextClasses(part)">{{ part.text }}</span></template></p></li></ul>
       </aside>
     </section>
-    <BilibiliClips :key="place.id" :place-id="place.id" :place-name="place.name" />
+    <div v-if="chapters.some(chapter => chapter.key === 'video')" :id="chapterId('video')" class="detail-chapter"><BilibiliClips :key="place.id" :place-id="place.id" :place-name="place.name" /></div>
     <ShopDirectory v-if="shopDirectory" ref="shopDirectoryView" :id="chapterId('shops')" class="detail-chapter" :place-id="place.id" :directory="shopDirectory" :visited-at="place.visitedAt" />
     <div v-if="place.gallery.length" :id="chapterId('gallery')" class="detail-chapter"><PlaceGallery :images="place.gallery" :color="color" /></div>
     <section v-if="address" :id="chapterId('nearby')" class="place-mini-map detail-chapter" aria-labelledby="nearby-map-heading">
@@ -165,6 +191,14 @@ onBeforeUnmount(() => {
 .detail-chapters { position: sticky; top: 0; z-index: 600; display: flex; gap: 4px; overflow-x: auto; padding: 6px 16px; border-top: 1px solid #dfb8c3; border-bottom: 1px solid #dfb8c3; background: var(--manga-paper, #fffaf1); }
 .detail-chapters button { flex: none; min-height: 44px; padding: 7px 14px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: #755d6a; font: inherit; font-size: 13px; font-weight: 700; }
 .detail-chapters button[aria-current] { border-bottom-color: #a83750; color: #a83750; background: #fff0f2; }
+.detail-side-nav { position: fixed; z-index: 700; right: 12px; top: 50%; transform: translateY(-50%); width: 98px; padding: 6px; border: 2px solid #3a3038; border-radius: 12px; background: #fffaf2; box-shadow: 4px 4px 0 #e6aebc; }
+.detail-side-nav button { display: block; width: 100%; min-height: 40px; padding: 7px 5px; border: 0; border-radius: 6px; background: transparent; color: #5d4b56; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
+.detail-side-nav button:hover, .detail-side-nav button[aria-current] { background: #f9dbe3; color: #a12f4c; }
+.detail-side-nav button:focus-visible { outline: 2px solid #a83750; outline-offset: 1px; }
+.detail-side-nav .side-nav-toggle { background: #a83750; color: #fff; }
+.side-nav-list { padding-top: 5px; }
+.side-nav-title { display: block; padding: 6px 4px; color: #9b7884; text-align: center; font-size: 10px; font-weight: 700; }
+@media (max-width: 800px) { .detail-side-nav { right: 6px; top: auto; bottom: 22px; transform: none; width: 80px; } }
 .detail-chapter { scroll-margin-top: 72px; }
 .has-chapters [tabindex="-1"] { scroll-margin-top: 80px; }
 .has-chapters [tabindex="-1"]:focus { outline: 2px solid #a83750; outline-offset: 4px; }

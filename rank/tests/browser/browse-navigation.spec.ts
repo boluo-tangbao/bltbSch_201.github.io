@@ -169,6 +169,22 @@ test('chapters jump without replacing the place route and remain available while
   }
 })
 
+test('side navigation opens and jumps to sections on desktop and mobile', async ({ page }) => {
+  const place = places.find(p => p.gallery.length && directories[p.id])
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  for (const width of [390, 1440]) {
+    await page.setViewportSize({ width, height: 900 })
+    await page.goto(base + 'guide/#/place/' + place.id)
+    const nav = page.getByRole('navigation', { name: '页面侧边导航' })
+    if (width === 390) await nav.getByRole('button', { name: '导航', exact: true }).click()
+    await nav.getByRole('button', { name: '店铺', exact: true }).click()
+    await expect(page.locator('#place-' + place.id + '-shops')).toBeInViewport()
+    await expect(page).toHaveURL(base + 'guide/#/place/' + place.id)
+    if (width === 390) await expect(nav.getByRole('button', { name: '导航', exact: true })).toHaveAttribute('aria-expanded', 'false')
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+  }
+})
+
 test('shop chapter keeps unconfirmed stores collapsed and only links to existing sections', async ({ page }) => {
   const place = places.find(p => directories[p.id])
   await page.emulateMedia({ reducedMotion: 'reduce' })
