@@ -21,7 +21,7 @@ test('possible-operation wording keeps evidence unconfirmed and cannot override 
   assert.equal(shopStatusLabel(shop), '营业中')
   assert.ok(validateShopDirectories(data, [{ id: 'test' }]).some(e => e.includes('可能营业标签')))
   shop.limited = { scope: 'store', period: '档期待公布' }
-  assert.equal(shopStatusLabel(shop), '进行中')
+  assert.equal(shopStatusLabel(shop), '档期见原文')
   shop.status = 'closed'
   assert.equal(shopStatusLabel(shop), '已公布闭店')
   shop.inactive = { reason: 'renovation', history: '装修暂停' }
@@ -194,7 +194,7 @@ test('store and hosted theme remain separate, and theme expiry preserves the per
   data.test.shops.push(theme)
   assert.deepEqual(validateShopDirectories(data, [{ id: 'test' }]), [])
   assert.deepEqual(shopDirectoryGroups(data.test.shops).regular.open.map(s => s.name), [host.name])
-  assert.deepEqual(shopDirectoryGroups(data.test.shops).limited.open.map(s => s.name), [theme.name])
+  assert.deepEqual(shopDirectoryGroups(data.test.shops, '2026-10-05').limited.open.map(s => s.name), [theme.name])
   data.test.checkedAt = '2026-10-06'
   assert.ok(validateShopDirectories(data, [{ id: 'test' }]).some(e => e.includes('已结束')))
   theme.status = 'closed'

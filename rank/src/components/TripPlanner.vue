@@ -96,4 +96,5 @@ onBeforeUnmount(release)
   .trip-plan-dock button { font-size: 12px; padding: 7px 10px; }
   .trip-plan-dialog { padding: 16px; }
 }
+@media (max-width: 800px) { :global(body:has(.trip-plan-dock) .detail-side-nav) { bottom: calc(110px + env(safe-area-inset-bottom)); } }
 </style>

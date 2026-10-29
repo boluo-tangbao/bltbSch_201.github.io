@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { readFileSync } from 'node:fs'
 import type { ShopDirectory } from '../../src/types'
-import { mergeShopSources } from '../../src/utils/shopDirectory'
+import { mergeShopSources, shopDisplayStatus } from '../../src/utils/shopDirectory'
 
 const base = 'http://127.0.0.1:4173/bltbSch_201.github.io/rank/'
 const directories: Record<string, ShopDirectory> = JSON.parse(readFileSync('src/data/shop-directories.json', 'utf8'))
@@ -41,7 +41,7 @@ for (const route of ['', 'guide/']) {
             }
           }
         }
-        for (const shop of directories[placeId].shops.filter(shop => shop.status !== 'closed')) {
+        for (const shop of directories[placeId].shops.filter(shop => shopDisplayStatus(shop) !== 'closed')) {
           const row = page.locator('.shop-row').filter({ has: page.getByRole('heading', { name: shop.name, exact: true }) })
           await expect(row).toHaveCount(1)
           await expect(row).toBeVisible()

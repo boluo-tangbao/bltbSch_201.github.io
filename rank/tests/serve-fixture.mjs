@@ -30,6 +30,17 @@ writeFileSync(resolve(target, 'src/data/updates.json'), JSON.stringify(empty ? [
   { id: 'added-test', placeId: 'demo-0', type: 'added', note: '仅供测试的新增原因', date: '2026-09-18' },
   { id: 'hidden-update', placeId: 'hidden', type: 'added', note: '不可见更新原因', date: '2026-09-18' },
 ]))
+// Time-sensitive fixtures stay inside the ignored test checkout.
+const testShop = { name: '测试常设店', floor: '负一层', status: 'listed', operatingConfirmation: 'official-listing', note: '仅用于功能验证', sources: [{ label: '测试来源', url: 'https://example.com/fixture' }] }
+writeFileSync(resolve(target, 'src/data/shop-directories.json'), JSON.stringify(empty ? {} : { 'demo-0': {
+  area: '测试商圈', checkedAt: '2026-10-29', shops: [
+    testShop,
+    { ...testShop, name: '测试本期主题', hostShop: testShop.name, limited: { scope: 'theme', period: '2026年10月25日—10月29日', startsOn: '2026-10-25', endsOn: '2026-10-29' } },
+    { ...testShop, name: '测试即将开始快闪', limited: { scope: 'store', period: '2026年10月30日—11月2日', startsOn: '2026-10-30', endsOn: '2026-11-02' } },
+    { ...testShop, name: '测试未知年份快闪', limited: { scope: 'store', period: '9月—10月（原文未注明年份）' } },
+    { ...testShop, name: '测试待核活动', operatingConfirmation: undefined, limited: { scope: 'store', period: '2026年10月25日—10月29日', startsOn: '2026-10-25', endsOn: '2026-10-29' } },
+  ],
+} }))
 writeFileSync(resolve(target, 'public/images/places/test.svg'), '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300"><rect width="600" height="300" fill="#e4bd74"/><circle cx="300" cy="150" r="85" fill="#628875"/><text x="300" y="165" text-anchor="middle" font-size="40" fill="white">DEMO</text></svg>')
 const server = await createServer({ root: target, configFile: false, plugins: [vue()], base: '/bltbSch_201.github.io/rank/', server: { host: '127.0.0.1', port: empty ? 4175 : 4174, strictPort: true, fs: { allow: [root, resolve(root, '../docs')] } } })
 await server.listen()
