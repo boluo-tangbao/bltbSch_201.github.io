@@ -3,8 +3,13 @@ import { computed, ref, watch } from 'vue'
 import type { ShopDirectory } from '../types'
 import { latestSourceDate, mergeShopSources, shopDisplayStatus, shopStatusLabel, shopDirectoryGroups, sourcePredatesVisit, pendingShopGroups, shopHistorySource } from '../utils/shopDirectory'
 import { searchTargetId } from '../utils/search'
+import { shopFeedbackUrl } from '../utils/shopFeedback'
+import { useShopToday } from '../utils/shopToday'
+import TripPlanButton from './TripPlanButton.vue'
 
 const props = defineProps<{ directory: ShopDirectory; visitedAt?: string | null; placeId?: string }>()
+const base = import.meta.env.BASE_URL
+const today = useShopToday()
 const visibleCounts = ref<Record<string, number>>({})
 const groupKey = (section: string, more = false, bucket = '') => `${section}-${more ? 'evidence' : 'open'}-${bucket}`
 const visibleCount = (section: string, more = false, bucket = '') => visibleCounts.value[groupKey(section, more, bucket)] ?? 5
@@ -13,13 +18,13 @@ function expand(section: string, more = false, bucket = '') {
 }
 watch(() => props.directory, () => { visibleCounts.value = {} })
 const shops = computed(() => props.directory.shops.map(shop => {
-  const status = shopDisplayStatus(shop)
+  const status = shopDisplayStatus(shop, today.value)
   const sourceTime = shop.sources.find(source => source.dateLabel)?.dateLabel
     ?? latestSourceDate(shop.sources)
-  return { ...shop, displayStatus: status, statusText: shopStatusLabel(shop), historySource: shopHistorySource(shop), sourceTime, authorVisited: sourcePredatesVisit(shop.sources, props.visitedAt), evidenceSources: mergeShopSources(shop) }
+  return { ...shop, displayStatus: status, statusText: shopStatusLabel(shop, today.value), historySource: shopHistorySource(shop), sourceTime, authorVisited: sourcePredatesVisit(shop.sources, props.visitedAt), evidenceSources: mergeShopSources(shop) }
 }))
 const sections = computed(() => {
-  const grouped = shopDirectoryGroups(shops.value)
+  const grouped = shopDirectoryGroups(shops.value, today.value)
   return [
     { key: 'regular', title: '常规谷店', ...grouped.regular },
     { key: 'limited', title: '快闪活动', ...grouped.limited },
@@ -83,6 +88,7 @@ defineExpose({ revealShop })
         <ul v-if="shop.accounts?.length" class="shop-accounts" :aria-label="shop.name + (shop.inactive ? '的原账号' : '的官方账号')">
           <li v-for="account in shop.accounts" :key="account.platform + account.url"><a :href="account.url" target="_blank" rel="noopener noreferrer"><b>{{ platformLabel[account.platform] }}</b><span>{{ account.name }}<small v-if="account.handle">号：{{ account.handle }}</small></span><em v-if="account.scope === 'brand'">品牌号</em><span aria-hidden="true">↗</span></a></li>
         </ul>
+        <div v-if="placeId" class="shop-feedback"><TripPlanButton v-if="shop.displayStatus === 'open'" :place-id="placeId" :name="shop.name" :shop-name="shop.name" /><a :href="shopFeedbackUrl(base, placeId, shop.name)" :aria-label="`${shop.name}：信息有变化`">信息有变化？反馈纠错 →</a></div>
       </li>
     </ul>
     <div v-if="bucket.shops.length > visibleCount(section.key, group.more, bucket.key)" class="shop-expand-actions">
@@ -121,6 +127,8 @@ defineExpose({ revealShop })
 .shop-list,.shop-accounts { list-style: none; padding: 0; margin: 0; }
 .shop-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 12px; }
 .shop-row { min-width: 0; padding: 16px; border: 1px solid #e5c5cc; background: #fffdfa; }
+.shop-feedback { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; border-top: 1px dashed #e5c5cc; padding-top: 6px; }
+.shop-feedback a { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; color: #84394e; font-size: 12px; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
 .shop-row { scroll-margin-top: 80px; }
 .shop-row:focus { outline: 2px solid #a83750; outline-offset: 3px; }
 .shop-row-title { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }

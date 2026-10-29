@@ -20,7 +20,9 @@ test('directory, map and search use the same filtered places', async ({ page }) 
 
 test('published copy reflects current places and update categories', async ({ page }) => {
   await page.goto(preview)
-  await expect(page.getByRole('searchbox')).toHaveAttribute('placeholder', '搜索店名、城市或标签…')
+  await expect(page.getByRole('searchbox')).toHaveAttribute('placeholder', '搜索地点、店铺、城市或标签…')
+  await expect(page.locator('.hero-counts')).toContainText('处逛店地点')
+  await page.goto(preview + 'updates/')
   await expect(page.locator('.update-kind').filter({ hasText: '图集更新' }).first()).toBeVisible()
   await expect(page.locator('.update-kind').filter({ hasText: '地图更新' }).first()).toBeVisible()
 

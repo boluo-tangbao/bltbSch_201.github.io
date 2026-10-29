@@ -1,6 +1,43 @@
 {
   "上海": [
     {
+      "id": "shanghai-shop-022",
+      "name": "又又中心",
+      "tier": "npc",
+      "order": 90,
+      "summary": "长宁龙之梦附近的逛店地点。",
+      "details": "位于天山路823号，靠近中山公园地铁站。根据用户确认，店铺大多已关闭，目前还有一家谷店、一家 Livehouse 和一家女仆咖啡厅；具体店名待补充。",
+      "tags": [
+        "周边",
+        "谷子"
+      ],
+      "cover": "images/places/Shanghai/又又中心.png",
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/又又中心.png",
+          "alt": "又又中心外观",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/附近的又又中心/1771942021016.jpg",
+          "alt": "又又中心：谷店入口",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/附近的又又中心/1771942021170.jpg",
+          "alt": "又又中心：周边货架",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        }
+      ],
+      "visitedAt": null,
+      "updatedAt": "2026-10-29",
+      "published": true,
+      "location": "上海市长宁区天山路823号又又中心"
+    },
+    {
       "id": "shanghai-shop-001",
       "name": "第一百货",
       "tier": "hang",
@@ -1552,10 +1589,10 @@
     {
       "id": "shanghai-shop-016",
       "name": "长宁龙之梦",
-      "tier": "above",
-      "order": 70,
+      "tier": "npc",
+      "order": 45,
       "summary": "宝可梦中心是主菜，周边谷店让它不只是一站打卡。",
-      "details": "**宝可梦中心给了这里足够明确的目的性**，周边还有少数几家质量在线的日谷和 Lolita 店可顺手逛。\n\n冲宝可梦很值得来！",
+      "details": "**宝可梦中心给了这里足够明确的目的性**，周边还有少数几家谷店、扭蛋和 Lolita 店可顺手逛。\n\n冲宝可梦值得来！",
       "tags": [
         "宝可梦",
         "lolita",

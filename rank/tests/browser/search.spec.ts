@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { mkdirSync, readFileSync } from 'node:fs'
 import { createPlaceSearchIndex, matchPlaces, searchTargetId } from '../../src/utils/search'
+import { placeAddress } from '../../src/utils/cities'
 const base = process.env.BROWSE_TEST_BASE || 'http://127.0.0.1:4173/bltbSch_201.github.io/rank/'
 const groups = JSON.parse(readFileSync('src/data/places.json', 'utf8'))
 const places = Object.entries(groups).flatMap(([city, entries]) => (entries as any[]).map(place => ({ ...place, city })))
@@ -16,7 +17,7 @@ test('HIPPIHO search identifies the parent place and remains available through d
   await expect(page.locator('.place-card')).toHaveCount(1)
   const card = page.locator('#place-card-' + hipp.id)
   await expect(card.locator('.photo-caption')).toContainText(hipp.name)
-  await expect(card.locator('.search-match, mark')).toHaveCount(0)
+  await expect(card.locator('.search-match')).toBeVisible()
   await expect(page.locator('.active-filters')).toHaveCount(0)
   await card.locator('.card-link').click()
   await expect(page.locator('.selected-detail h1')).toHaveText(hipp.name)
@@ -32,11 +33,16 @@ test('HIPPIHO search identifies the parent place and remains available through d
 test('searching a verified shop finds its commercial area and does not change shop folding', async ({ page }) => {
   await page.goto(base)
   await page.getByRole('searchbox').fill('animate')
+  await page.getByLabel('城市筛选').selectOption('广州')
   const card = page.locator('#place-card-guangzhou-shop-003')
   await expect(page.locator('.place-card')).toHaveCount(1)
   await expect(card.locator('.photo-caption')).toContainText('动漫星城')
-  await expect(card.locator('.search-match, mark')).toHaveCount(0)
-  await card.locator('.card-link').click()
+  await expect(card.locator('.search-match')).toContainText('匹配店铺')
+  await expect(card.locator('.search-match-location')).toContainText('动漫星城')
+  await expect(card.locator('mark')).toContainText([/animate/i])
+  await expect(card.locator('.search-match')).toBeVisible()
+  await page.screenshot({ path: 'test-results/evidence/search-shop-result.png' })
+  await card.locator('.card-search-link').click()
   const shopTarget = page.locator('[id="' + searchTargetId('guangzhou-shop-003', matchPlaces(searchIndex, 'animate').get('guangzhou-shop-003')!.target!) + '"]')
   await expect(shopTarget).toBeFocused()
   await expect(shopTarget).toBeInViewport()
@@ -46,10 +52,10 @@ test('searching a verified shop finds its commercial area and does not change sh
   await expect(more.locator('.shop-sources').first()).not.toBeVisible()
 })
 
-test('explicit search targets survive reload and support same-place searches without adding excerpts', async ({ page }) => {
+test('explicit search targets survive reload and support same-place searches without changing shop folding', async ({ page }) => {
   for (const width of [390, 1440]) {
     await page.setViewportSize({ width, height: 950 })
-    await page.goto(base + 'guide/?filters=1&q=animate')
+    await page.goto(base + 'guide/?filters=1&city=' + encodeURIComponent('广州') + '&q=animate')
     await page.getByRole('button', { name: '地点列表 · 1', exact: true }).click()
     await page.locator('.directory-place').click()
     const targetId = searchTargetId('guangzhou-shop-003', matchPlaces(searchIndex, 'animate').get('guangzhou-shop-003')!.target!)
@@ -60,7 +66,7 @@ test('explicit search targets survive reload and support same-place searches wit
     await expect(target).toBeFocused()
     await expect(target).toBeInViewport()
     await expect(page.locator('.shop-directory-more')).not.toHaveAttribute('open')
-    await expect(page.locator('mark, .search-match')).toHaveCount(0)
+    await expect(page.locator('.selected-detail mark, .selected-detail .search-match')).toHaveCount(0)
     await page.screenshot({ path: `test-results/evidence/search-direct-shop-${width}.png` })
     await page.getByRole('searchbox').focus()
     await page.getByRole('button', { name: '地点列表 · 1', exact: true }).click()
@@ -104,14 +110,15 @@ test('guide search opens the matching city group and keeps map and directory res
   await expect(page.locator('.directory-city-group')).toHaveAttribute('open', '')
   await expect(page.locator('.directory-place')).toHaveCount(1)
   await expect(page.locator('.directory-place')).toContainText(hipp.name)
-  await expect(page.locator('.directory-place .search-match, .directory-place mark')).toHaveCount(0)
+  await expect(page.locator('.directory-place .search-match')).toContainText(/HIPPIHO/i)
   await page.screenshot({ path: 'test-results/evidence/search-mobile-guide.png' })
   await page.getByRole('button', { name: '地图', exact: true }).click()
   await expect(page.locator('.atlas-count strong')).toHaveText('0')
   await page.getByRole('searchbox').fill('animate')
-  await expect(page.locator('.directory-place')).toContainText('动漫星城')
+  await expect(page.locator('.directory-place').filter({ hasText: '动漫星城' })).toHaveCount(1)
   await page.getByRole('button', { name: '地图', exact: true }).click()
-  await expect(page.locator('.atlas-count strong')).toHaveText('1')
+  const mappedMatches = places.filter(place => place.published && matchPlaces(searchIndex, 'animate').has(place.id) && placeAddress(place))
+  await expect(page.locator('.atlas-count strong')).toHaveText(String(mappedMatches.length))
   await page.getByRole('searchbox').fill('HIPPIHO')
   await page.getByRole('button', { name: '地点列表 · 1', exact: true }).click()
   await page.locator('.directory-place').click()
@@ -121,13 +128,17 @@ test('guide search opens the matching city group and keeps map and directory res
   await expect(page.locator('.directory-place')).toHaveCount(1)
 })
 
-test('search results remain plain cards and preserve rank order across viewports', async ({ page }) => {
+test('search result explanations preserve rank order across viewports', async ({ page }) => {
   await page.goto(base)
   await page.getByRole('searchbox').fill('少女乐队')
   const order = await page.locator('.place-card').evaluateAll(cards => cards.map(card => card.id))
   for (const width of [320, 390, 1440]) {
     await page.setViewportSize({ width, height: 950 })
-    await expect(page.locator('.place-card .search-match, .place-card mark')).toHaveCount(0)
+    await expect(page.locator('.place-card .search-match')).toHaveCount(order.length)
+    expect(await page.locator('.place-card').evaluateAll(cards => cards.every(card => {
+      const summary = card.querySelector('.card-search-link')!.getBoundingClientRect()
+      return summary.bottom <= card.getBoundingClientRect().bottom + 1 && summary.bottom <= card.closest('.tier-row')!.getBoundingClientRect().bottom + 1
+    }))).toBe(true)
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
     expect(await page.locator('.place-card').evaluateAll(cards => cards.map(card => card.id))).toEqual(order)
   }

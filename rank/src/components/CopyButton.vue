@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { nextTick, onBeforeUnmount, ref, watch } from 'vue'
 const props = withDefaults(defineProps<{ text: string; label: string; copiedLabel?: string; variant?: 'plain' | 'share' }>(), { copiedLabel: '已复制', variant: 'plain' })
-const copied = ref(false), fallback = ref(false), field = ref<HTMLInputElement>()
+const copied = ref(false), fallback = ref(false), field = ref<HTMLInputElement | HTMLTextAreaElement>()
 let timer: ReturnType<typeof setTimeout> | undefined
 let disposed = false
 function clear() { clearTimeout(timer); copied.value = false; fallback.value = false }
@@ -27,7 +27,7 @@ onBeforeUnmount(() => { disposed = true; clearTimeout(timer) })
 <template>
   <span class="copy-control">
     <button type="button" class="copy-button" :class="{ 'is-share': variant === 'share', 'is-copied': copied }" :aria-label="label" :title="label" @click="copy"><span aria-live="polite">{{ copied ? copiedLabel : label }}</span></button>
-    <span v-if="fallback" class="copy-fallback"><span role="status">暂时无法自动复制</span><input ref="field" :value="text" readonly :aria-label="`${label}内容`" @focus="field?.select()" /></span>
+    <span v-if="fallback" class="copy-fallback"><span role="status">暂时无法自动复制</span><textarea v-if="text.includes('\n')" ref="field" :value="text" readonly rows="5" :aria-label="`${label}内容`" @focus="field?.select()"></textarea><input v-else ref="field" :value="text" readonly :aria-label="`${label}内容`" @focus="field?.select()" /></span>
   </span>
 </template>
 
@@ -36,7 +36,7 @@ onBeforeUnmount(() => { disposed = true; clearTimeout(timer) })
 .copy-button { min-width: 96px; min-height: 44px; padding: 7px 10px; border: 1px solid #d5a5b2; border-radius: 4px; background: #fffaf1; color: #84394e; font: inherit; font-size: 12px; font-weight: 700; white-space: nowrap; }
 .copy-button:hover { background: #fff0f2; }
 .copy-fallback { display: grid; gap: 4px; max-width: 100%; font-size: 11px; color: #84394e; }
-.copy-fallback input { width: 100%; min-width: 0; min-height: 40px; padding: 6px; border: 1px solid #d5a5b2; background: #fff; font-size: 12px; }
+.copy-fallback input,.copy-fallback textarea { width: 100%; min-width: 0; min-height: 40px; padding: 6px; border: 1px solid #d5a5b2; background: #fff; font: inherit; font-size: 12px; }
 .copy-button.is-share {
   --share-shape: polygon(8% 12%, 26% 12%, 31% 0, 43% 9%, 90% 5%, 96% 23%, 100% 24%, 95% 43%, 100% 65%, 92% 72%, 95% 92%, 65% 92%, 58% 100%, 46% 91%, 9% 96%, 5% 77%, 0 70%, 5% 50%, 0 32%, 7% 29%);
   position: relative;

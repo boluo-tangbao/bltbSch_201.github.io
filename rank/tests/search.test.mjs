@@ -85,6 +85,14 @@ test('search targets identify exact visible paragraphs, notes and verified shop 
   assert.notEqual(searchTargetId(entry.id, { kind: 'shop', name: 'A&B' }), searchTargetId(entry.id, { kind: 'shop', name: 'A B' }))
 })
 
+test('shop search excerpts include the parent location and known floor without indexing uncertain shops', () => {
+  const index = createPlaceSearchIndex([place], { [place.id]: { ...directory, shops: [{ ...shop, floor: '负一层' }] } })
+  assert.equal(matchPlaces(index, 'OPEN SHOP').get(place.id).location, '上海 · 测试商圈 · 负一层')
+  assert.equal(matchPlaces(index, '确认店').get(place.id).location, '上海 · 测试商圈 · 负一层')
+  assert.equal(matchPlaces(index, 'HIPPIHO').get(place.id).location, undefined)
+  assert.equal(matchPlaces(index, '负一层').size, 0)
+})
+
 test('explicit search navigation round trips special characters without changing ordinary detail routes', () => {
   for (const query of ['上海 HIPPIHO', 'A&B + #?', '']) {
     assert.deepEqual(parsePlaceRoute(placeDetailHash(place.id, query)), { id: place.id, query })

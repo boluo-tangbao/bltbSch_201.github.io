@@ -160,7 +160,7 @@ test('chapters jump without replacing the place route and remain available while
     await page.screenshot({ path: `test-results/evidence/detail-chapters-${width}.png` })
     await expect(nav.getByRole('button', { name: '图集', exact: true })).toHaveAttribute('aria-current', 'location')
     await nav.getByRole('button', { name: '周边', exact: true }).click()
-    await expect(page.getByRole('heading', { name: '店铺周边', exact: true })).toBeInViewport()
+    await expect(page.getByRole('heading', { name: '地点周边', exact: true })).toBeInViewport()
     await nav.getByRole('button', { name: '怎么去', exact: true }).click()
     await expect(page.getByRole('heading', { name: '怎么去', exact: true })).toBeInViewport()
     await nav.getByRole('button', { name: '介绍', exact: true }).click()

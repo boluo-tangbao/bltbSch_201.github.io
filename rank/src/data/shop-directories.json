@@ -2,7 +2,7 @@
   "shanghai-shop-016": {
     "area": "上海长宁龙之梦城市生活中心（长宁路1018号）",
     "checkedAt": "2026-10-29",
-    "notice": "阶段性研究：部分卡牌店现状、谷街经营情况及其他楼层仍待核；附近地下街与又又中心不计入本店单。",
+    "notice": "阶段性研究：其他楼层与谷街经营情况仍待核；附近地下街与又又中心不计入本店单。",
     "shops": [
       {
         "name": "宝可梦官方卡牌道馆－上海中山公园（古月鸟）",
@@ -34,10 +34,11 @@
         "name": "水豚大怪兽（上海龙之梦店）",
         "floor": "三层 红中庭3087",
         "kind": "动漫周边、日谷、中古",
-        "status": "unverified",
-        "pendingReview": { "category": "verification" },
-        "note": "本人主页列长宁店三层3087，2026年9月本人发布店内活动；近期第三方反映水豚小怪兽关门，照片可见水豚大怪兽门头，但正文未明确是哪家龙之梦，是否同址及现况仍需核实，暂不作为确认营业或确定闭店。",
+        "status": "recent",
+        "operatingConfirmation": "user-confirmed",
+        "note": "用户于2026-10-29确认本店目前营业；本人主页列长宁店三层3087，2026年9月本人发布店内活动；近期第三方反映水豚小怪兽关门，照片可见水豚大怪兽门头，但正文未明确是哪家龙之梦，是否同址仍需核实。",
         "sources": [
+          { "label": "用户确认本店营业", "providedBy": "user", "dateLabel": "用户确认于2026-10-29" },
           { "label": "水豚大怪兽本人主页：长宁店地址", "url": "https://www.xiaohongshu.com/user/profile/661633bb0000000003032b19", "dateLabel": "主页无发表日期；读取2026-10-29" },
           { "label": "本人：店内同人快闪预告", "url": "https://www.xiaohongshu.com/explore/6aba699b0000000018007c71", "date": "2026-09-28" },
           { "label": "Ryougi暮雪：水豚门头关门线索，分店待核", "url": "https://www.xiaohongshu.com/explore/6adb0407000000002c035353", "dateLabel": "读取2026-10-29时显示5天前" }
@@ -47,20 +48,22 @@
         "name": "卡游（长宁龙之梦店）",
         "floor": "三层 红中庭3097（主页线索）",
         "kind": "收藏卡牌、角色周边",
-        "status": "unverified",
-        "pendingReview": { "category": "verification" },
-        "note": "抖音同名主页写长宁龙之梦三层3097；作品含2025年全国上新广告，缺少近期本址经营证据及主体确认，未将主页绑定为已确认门店账号。",
+        "status": "recent",
+        "operatingConfirmation": "user-confirmed",
+        "note": "用户于2026-10-29确认本店目前营业；抖音同名主页写长宁龙之梦三层3097；作品含2025年全国上新广告，候选账号主体仍待核，未将主页绑定为已确认门店账号。",
         "sources": [
+          { "label": "用户确认本店营业", "providedBy": "user", "dateLabel": "用户确认于2026-10-29" },
           { "label": "卡游上海龙之梦购物中心店候选主页", "url": "https://www.douyin.com/user/MS4wLjABAAAA_Q8Vfbq_L4K8AktBEFbShJ4eDESKPjubB3L_U2rzzLxpeOUdzy3FvEdsZ40CKlaN", "dateLabel": "主页无发表日期；读取2026-10-29" }
         ]
       },
       {
         "name": "万代卡牌中心（长宁龙之梦店）",
         "kind": "集换式卡牌、对战",
-        "status": "unverified",
-        "pendingReview": { "category": "history", "sourceUrl": "https://www.shcn.gov.cn/col7344/20250422/1282998.html" },
-        "note": "2025年长宁区报道明确曾在本商场引进万代卡牌馆；尚缺近期本址营业记录与门店本人账号，不能仅凭品牌在其他商场营业推断本店现状。",
+        "status": "recent",
+        "operatingConfirmation": "user-confirmed",
+        "note": "用户于2026-10-29确认本店目前营业；2025年长宁区报道明确曾在本商场引进万代卡牌馆；门店本人账号仍待核。",
         "sources": [
+          { "label": "用户确认本店营业", "providedBy": "user", "dateLabel": "用户确认于2026-10-29" },
           { "label": "长宁区转载解放日报：商场宝可梦及万代卡牌店", "url": "https://www.shcn.gov.cn/col7344/20250422/1282998.html", "date": "2025-04-22" }
         ]
       },

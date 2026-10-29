@@ -1,5 +1,22 @@
 [
   {
+    "id": "youyou-center-added-20261029",
+    "date": "2026-10-29",
+    "type": "added",
+    "placeIds": [
+      "shanghai-shop-022"
+    ],
+    "note": "新增上海又又中心地点，复用已有现场图片；店铺信息待进一步研究。"
+  },
+  {
+    "id": "changning-longemont-user-confirmation-20261029",
+    "date": "2026-10-29",
+    "type": "edited",
+    "category": "content",
+    "placeIds": ["shanghai-shop-016"],
+    "note": "按用户确认将水豚大怪兽、卡游和万代卡牌中心转为营业中，保留原有线索。"
+  },
+  {
     "id": "changning-longemont-research-20261029",
     "date": "2026-10-29",
     "type": "edited",

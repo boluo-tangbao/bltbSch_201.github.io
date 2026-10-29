@@ -12,11 +12,14 @@ import type { ShopDirectory as ShopDirectoryData } from '../types'
 import { parseRichText, richTextClasses } from '../utils/richText'
 import { createPlaceSearchIndex, matchPlaces, searchTargetId } from '../utils/search'
 import { assetUrl } from '../utils/assets'
+import { useShopToday } from '../utils/shopToday'
+import TripPlanButton from './TripPlanButton.vue'
 import bilibiliCatalog from '../data/bilibili-videos.json'
 import { placeClips } from '../utils/bilibili'
 import type { BilibiliCatalog } from '../types/bilibili'
 
 const props = defineProps<{ place: Place; rank?: number; color: string; searchQuery?: string }>()
+const today = useShopToday()
 const address = computed(() => placeAddress(props.place))
 const nearbyNavigation = (address: string) => `https://uri.amap.com/search?${new URLSearchParams({ keyword: address, callnative: '1', src: 'tangbao-shop-ranking' })}`
 const visitLogos = { mihoyo: assetUrl('images/brands/mihoyo.png'), hypergryph: assetUrl('images/brands/hypergryph.svg'), museum: assetUrl('images/brands/game-museum.svg') }
@@ -54,7 +57,7 @@ function locateSearchMatch() {
   if (!props.searchQuery?.trim()) return
   searchFrame = requestAnimationFrame(() => {
     searchFrame = 0
-    const index = createPlaceSearchIndex([props.place], shopDirectory.value ? { [props.place.id]: shopDirectory.value } : {})
+    const index = createPlaceSearchIndex([props.place], shopDirectory.value ? { [props.place.id]: shopDirectory.value } : {}, today.value)
     const target = matchPlaces(index, props.searchQuery!).get(props.place.id)?.target
     if (target?.kind === 'shop') shopDirectoryView.value?.revealShop(target.name)
     nextTick(() => {
@@ -121,7 +124,8 @@ onBeforeUnmount(() => {
       <p class="detail-kicker"><i class="city-dot" :style="{ background: color }"></i><span>{{ place.city }}</span><span aria-hidden="true">/</span><span>{{ tierLabel(place.tier) }}</span><span v-if="rank" aria-hidden="true">/</span><span v-if="rank">档内第 {{ rank }} 名</span></p>
       <h1 :id="targetId({ kind: 'heading' })" tabindex="-1">{{ place.name }}</h1><p :id="targetId({ kind: 'summary' })" tabindex="-1" class="detail-summary">{{ place.summary }}</p>
       <div class="detail-facts"><span v-if="place.visitedAt"><small>到访</small>{{ place.visitedAt }}</span><span><small>更新</small>{{ place.updatedAt }}</span><span v-if="address"><small>地址</small>{{ address }}</span></div>
-      <div v-if="place.tags.length" class="tags detail-tags" aria-label="店铺标签"><span v-for="item in place.tags" :key="item"># {{ item }}</span></div>
+      <div v-if="place.tags.length" class="tags detail-tags" aria-label="逛店地点标签"><span v-for="item in place.tags" :key="item"># {{ item }}</span></div>
+      <TripPlanButton :place-id="place.id" :name="place.name" />
     </header>
     <nav ref="chapterNav" class="detail-chapters" aria-label="地点章节导航">
       <button v-for="chapter in chapters" :key="chapter.key" type="button" :aria-controls="chapterId(chapter.key)" :aria-current="activeChapter === chapter.key ? 'location' : undefined" @click="goToChapter(chapter.key)">{{ chapter.label }}</button>
@@ -152,7 +156,7 @@ onBeforeUnmount(() => {
     <ShopDirectory v-if="shopDirectory" ref="shopDirectoryView" :id="chapterId('shops')" class="detail-chapter" :place-id="place.id" :directory="shopDirectory" :visited-at="place.visitedAt" />
     <div v-if="place.gallery.length" :id="chapterId('gallery')" class="detail-chapter"><PlaceGallery :images="place.gallery" :color="color" /></div>
     <section v-if="address" :id="chapterId('nearby')" class="place-mini-map detail-chapter" aria-labelledby="nearby-map-heading">
-      <div class="place-mini-map-heading"><div><p class="section-label">AROUND HERE</p><h2 id="nearby-map-heading">店铺周边</h2></div><span>百度地图 · 无需访客登录 · 可拖动、缩放</span></div>
+      <div class="place-mini-map-heading"><div><p class="section-label">AROUND HERE</p><h2 id="nearby-map-heading">地点周边</h2></div><span>百度地图 · 无需访客登录 · 可拖动、缩放</span></div>
       <AddressMap :place="place" :color="color" />
       <p class="map-caption">百度在线地图异常时，可显示配置过的每月 500m 备份图。</p>
       <div v-if="place.nearbyVisits?.length" class="nearby-visits">

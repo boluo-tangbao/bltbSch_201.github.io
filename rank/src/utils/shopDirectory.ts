@@ -1,5 +1,17 @@
 import type { DirectoryShop, ShopSource } from '../types/index.ts'
 
+export function shopCalendarDate(now = new Date()) {
+  return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).format(now)
+}
+
+export function limitedPhase(shop: DirectoryShop, today = shopCalendarDate()): 'upcoming' | 'ongoing' | 'ended' | 'unknown' | undefined {
+  if (!shop.limited) return undefined
+  const { startsOn, endsOn } = shop.limited
+  if (endsOn && endsOn < today) return 'ended'
+  if (startsOn && startsOn > today) return 'upcoming'
+  return startsOn || endsOn ? 'ongoing' : 'unknown'
+}
+
 export function mergeShopSources(shop: Pick<DirectoryShop, 'sources' | 'kindSources'>) {
   const merged = new Map<string, { url?: string; labels: string[]; dates: string[]; roles: string[] }>()
   for (const [role, sources] of [['营业／位置', shop.sources], ['主营', shop.kindSources ?? []]] as const) {
@@ -16,28 +28,33 @@ export function mergeShopSources(shop: Pick<DirectoryShop, 'sources' | 'kindSour
   return [...merged.values()]
 }
 
-export function shopDisplayStatus(shop: DirectoryShop): 'open' | 'evidence' | 'closed' {
-  if (shop.status === 'closed') return 'closed'
+export function shopDisplayStatus(shop: DirectoryShop, today = shopCalendarDate()): 'open' | 'evidence' | 'closed' {
+  if (shop.status === 'closed' || limitedPhase(shop, today) === 'ended') return 'closed'
   return shop.operatingConfirmation || shop.accounts?.length ? 'open' : 'evidence'
 }
 
-export function shopStatusLabel(shop: DirectoryShop): string {
-  const status = shopDisplayStatus(shop)
+export function shopStatusLabel(shop: DirectoryShop, today = shopCalendarDate()): string {
+  if (limitedPhase(shop, today) === 'ended') return '已结束'
+  const status = shopDisplayStatus(shop, today)
   if (status === 'closed') {
     return shop.inactive ? { closed: '已停止营业', relocated: '已停止营业', renovation: '装修停业', unconfirmed: '停业待核实' }[shop.inactive.reason] : '已公布闭店'
   }
-  if (status === 'open') return shop.limited ? '进行中' : '营业中'
+  if (status === 'open') {
+    const phase = limitedPhase(shop, today)
+    return phase ? { upcoming: '即将开始', ongoing: '进行中', unknown: '档期见原文', ended: '已结束' }[phase] : '营业中'
+  }
   return shop.evidenceLabel ?? '待验证'
 }
 
-export function shopDirectoryGroups<T extends DirectoryShop>(shops: T[]) {
+export function shopDirectoryGroups<T extends DirectoryShop>(shops: T[], today = shopCalendarDate()) {
   const groups = {
     inactive: [] as T[],
     regular: { open: [] as T[], evidence: [] as T[] },
     limited: { open: [] as T[], evidence: [] as T[] },
   }
   for (const shop of shops) {
-    const status = shopDisplayStatus(shop)
+    if (limitedPhase(shop, today) === 'ended') continue
+    const status = shopDisplayStatus(shop, today)
     if (status === 'closed') {
       if (shop.inactive) groups.inactive.push(shop)
     } else groups[shop.limited ? 'limited' : 'regular'][status].push(shop)
