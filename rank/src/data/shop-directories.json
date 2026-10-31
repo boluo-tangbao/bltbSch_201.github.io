@@ -1,4 +1,147 @@
 {
+  "shanghai-shop-011": {
+    "area": "悦荟广场3、4层（南京东路353号；恰恰谷位于4层）",
+    "checkedAt": "2026-10-30",
+    "notice": "阶段性结果：Rejet与达家玩两家常规门店已由商场官方供稿及本址依据确认；FUN MAGNET和東方墨兰茶饮店待核，鱼小铺旧址外迁历史另列。小红书待登录，三层、部分旧店去向及快闪档期仍有缺口，非完整名单。",
+    "shops": [
+      {
+        "name": "Rejet Shop（悦荟广场店）",
+        "aliases": [
+          "Rejet Shop黄浦首店"
+        ],
+        "floor": "四层 恰恰谷",
+        "kind": "乙女游戏IP周边",
+        "status": "recent",
+        "note": "商场2026-09-15官方供稿明确Rejet Shop持续经营，品牌认证号2026-06-03经营帖明确悦荟L4；与原2025本址柜台一致，确认常设门店。店内快闪专区不代表整店为快闪；本期主题档期仍待核。",
+        "sources": [
+          {
+            "label": "上海黄浦·悦荟四层恰恰谷开业报道",
+            "url": "https://m.thepaper.cn/newsDetail_forward_30762914",
+            "dateLabel": "发表于2025-05-02；原读取2026-10-17，本轮复用；开业历史，不代表当前营业"
+          },
+          {
+            "label": "上海悦荟广场官方供稿·9月在营品牌更新（美通社）",
+            "url": "https://www.prnasia.com/story/547941-1.shtml",
+            "dateLabel": "发表于2026-09-15 18:48；2026-10-30读取；消息来源上海悦荟广场"
+          },
+          {
+            "label": "株式会社睿杰特认证品牌号·悦荟L4经营与快闪专区",
+            "url": "https://www.sina.cn/news/detail/5305792954633482.html",
+            "dateLabel": "发表于2026-06-03 18:38；2026-10-30读取；6月6日开售不等于整店限时开放"
+          }
+        ],
+        "operatingConfirmation": "official-listing"
+      },
+      {
+        "name": "达家玩（悦荟广场店）",
+        "aliases": [
+          "达家玩一番赏",
+          "D达家玩"
+        ],
+        "floor": "四层 恰恰谷",
+        "kind": "潮玩、一番赏",
+        "status": "recent",
+        "operatingConfirmation": "official-listing",
+        "note": "2025开业报道明确列入四层恰恰谷；2026-09-15商场官方供稿明确达家玩以常态化产品更新和主题活动持续经营。确认本址常设店，不把普通商品上新计为独立快闪。",
+        "sources": [
+          {
+            "label": "上海黄浦·悦荟四层恰恰谷开业报道",
+            "url": "https://m.thepaper.cn/newsDetail_forward_30762914",
+            "dateLabel": "发表于2025-05-02；原读取2026-10-17，本轮复用；开业历史，不代表当前营业"
+          },
+          {
+            "label": "上海悦荟广场官方供稿·9月在营品牌更新（美通社）",
+            "url": "https://www.prnasia.com/story/547941-1.shtml",
+            "dateLabel": "发表于2026-09-15 18:48；2026-10-30读取；消息来源上海悦荟广场"
+          }
+        ]
+      },
+      {
+        "name": "東方墨兰（悦荟广场店）",
+        "aliases": [
+          "东方墨兰"
+        ],
+        "floor": "四层406B",
+        "kind": "茶饮店（联名饮品及配套周边）",
+        "status": "unverified",
+        "note": "上海悦荟认证商场主页已读本址经营作品，明确L4-406B及一人之下联名饮品、包材和周边，实际店型为茶饮店。原发表日期尚未取得，当前联名及续营待核，不以读取日代替发表日；商品联名未提供主题空间或开放档期，不另造快闪活动。",
+        "sources": [
+          {
+            "label": "上海悦荟认证抖音·東方墨兰一人之下联名及L4-406B",
+            "url": "https://www.douyin.com/note/7670478664773573306",
+            "dateLabel": "2026-10-30实际读到官方主页作品正文；原发表日期未取得，不以读取日代填发表日"
+          }
+        ],
+        "pendingReview": {
+          "category": "verification"
+        }
+      },
+      {
+        "name": "FUN MAGNET（悦荟广场店）",
+        "aliases": [
+          "Fun Magnet"
+        ],
+        "floor": "四层409AB（本人简介；与未记日期旧导览位置有差异）",
+        "kind": "动漫／游戏周边、卡牌、盲盒",
+        "status": "unverified",
+        "pendingReview": {
+          "category": "verification"
+        },
+        "note": "复用2026-10-18已读品牌本人简介，明确上海悦荟商场4楼409AB。主页同时列静安大悦城及LCM，现有经营标题未独立确认悦荟分店，品牌入口先保留为来源。与未记日期导览位置差异待核，不据此认定外迁或停业。",
+        "sources": [
+          {
+            "label": "Fun Magnet本人品牌主页·悦荟4楼409AB",
+            "url": "https://www.xiaohongshu.com/user/profile/5f9a639a0000000001005f33",
+            "dateLabel": "主页未标发表日；原读取2026-10-18，本轮复用；多分店经营标题未独立关联悦荟"
+          }
+        ],
+        "kindSources": [
+          {
+            "label": "Fun Magnet本人品牌主页·悦荟4楼409AB",
+            "url": "https://www.xiaohongshu.com/user/profile/5f9a639a0000000001005f33",
+            "dateLabel": "主页未标发表日；原读取2026-10-18，本轮复用；多分店经营标题未独立关联悦荟"
+          }
+        ]
+      },
+      {
+        "name": "鱼小铺（悦荟旧址）",
+        "floor": "四层 恰恰谷",
+        "kind": "动漫／游戏周边",
+        "status": "closed",
+        "inactive": {
+          "reason": "relocated",
+          "history": "2025年开业报道有本址经营记录；原2026-10-18已读本人简介注明原迪美／悦荟、现华盛BE083；迁出时间未明确"
+        },
+        "note": "结合悦荟开业名单与原华盛研究本人现址，保留悦荟外迁旧店历史。现址华盛小亭BE083，经营主体仍在华盛；不把本人读取日或最后经营记录当迁出日，不表示品牌整体关闭。",
+        "sources": [
+          {
+            "label": "上海黄浦·悦荟四层恰恰谷开业报道",
+            "url": "https://m.thepaper.cn/newsDetail_forward_30762914",
+            "dateLabel": "发表于2025-05-02；原读取2026-10-17，本轮复用；开业历史，不代表当前营业"
+          },
+          {
+            "label": "鱼小铺online（接dg版）本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/64a24782000000001f004e0a",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "华盛小亭上新 火影忍者宇智波家族杯垫（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/6ad43fa8000000002900acd2",
+            "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "鱼小铺online（接dg版）",
+            "handle": "8936568830",
+            "url": "https://www.xiaohongshu.com/user/profile/64a24782000000001f004e0a",
+            "scope": "store"
+          }
+        ]
+      }
+    ]
+  },
   "shanghai-shop-018": {
     "area": "上海环球港（中山北路3300号）",
     "checkedAt": "2026-10-27",
