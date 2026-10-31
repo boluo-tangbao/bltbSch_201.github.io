@@ -1,10 +1,10 @@
 import type { Place, ShopDirectory } from '../types/index.ts'
 import { parseRichText } from './richText.ts'
-import { shopDisplayStatus } from './shopDirectory.ts'
+import { shopCalendarDate, shopDisplayStatus } from './shopDirectory.ts'
 
 export type SearchTarget = { kind: 'heading' | 'summary' } | { kind: 'paragraph' | 'note'; index: number } | { kind: 'shop'; name: string }
-export interface PlaceSearchMatch { label: string; text: string; terms: string[]; target?: SearchTarget }
-interface SearchField { label: string; text: string; normalized: string; target: SearchTarget }
+export interface PlaceSearchMatch { label: string; text: string; terms: string[]; target?: SearchTarget; location?: string }
+interface SearchField { label: string; text: string; normalized: string; target: SearchTarget; location?: string }
 export type PlaceSearchIndex = Map<string, SearchField[]>
 
 export function searchTargetId(placeId: string, target: SearchTarget) {
@@ -28,19 +28,20 @@ function searchTerms(query: string) {
   return [...new Set(cleanText(query).toLocaleLowerCase().split(' ').filter(Boolean))]
 }
 
-export function createPlaceSearchIndex(places: Place[], directories: Record<string, ShopDirectory> = {}): PlaceSearchIndex {
+export function createPlaceSearchIndex(places: Place[], directories: Record<string, ShopDirectory> = {}, today = shopCalendarDate()): PlaceSearchIndex {
   return new Map(places.filter(place => place.published).map(place => {
     const fields: SearchField[] = []
-    const add = (label: string, value: string, target: SearchTarget = { kind: 'heading' }) => {
+    const add = (label: string, value: string, target: SearchTarget = { kind: 'heading' }, location?: string) => {
       const text = cleanText(value)
-      if (text) fields.push({ label, text, normalized: text.toLocaleLowerCase(), target })
+      if (text) fields.push({ label, text, normalized: text.toLocaleLowerCase(), target, location })
     }
     add('地点名称', place.name)
     for (const alias of place.aliases ?? []) add('地点别名', alias)
     for (const shop of directories[place.id]?.shops ?? []) {
-      if (shopDisplayStatus(shop) !== 'open') continue
-      add('店铺一览', shop.name, { kind: 'shop', name: shop.name })
-      for (const alias of shop.aliases ?? []) add('店铺一览', `${alias}（${shop.name}）`, { kind: 'shop', name: shop.name })
+      if (shopDisplayStatus(shop, today) !== 'open') continue
+      const location = [place.city, place.name, shop.floor].filter(Boolean).join(' · ')
+      add('店铺一览', shop.name, { kind: 'shop', name: shop.name }, location)
+      for (const alias of shop.aliases ?? []) add('店铺一览', `${alias}（${shop.name}）`, { kind: 'shop', name: shop.name }, location)
     }
     add('介绍提及', place.summary, { kind: 'summary' })
     for (const [index, paragraph] of (place.details ?? '').split(/\r?\n+/).map(text => text.trim()).filter(Boolean).entries()) add('介绍提及', parseRichText(paragraph).map(part => part.text).join(''), { kind: 'paragraph', index })
@@ -62,7 +63,7 @@ export function matchPlaces(index: PlaceSearchIndex, query: string): Map<string,
     const start = Math.max(0, first - 18)
     const end = Math.min(field.text.length, start + 100)
     const text = `${start ? '…' : ''}${field.text.slice(start, end)}${end < field.text.length ? '…' : ''}`
-    matches.set(id, { label: field.label, text, terms, target: field.target })
+    matches.set(id, { label: field.label, text, terms, target: field.target, location: field.location })
   }
   return matches
 }

@@ -1,0 +1,27 @@
+import { test, expect } from '@playwright/test'
+const base = 'http://127.0.0.1:4174/bltbSch_201.github.io/rank/'
+
+test('activities and a selected trip update after China midnight without closing their permanent host', async ({ page }) => {
+  await page.clock.install({ time: new Date('2026-10-29T15:59:30Z') })
+  await page.goto(base + 'guide/#/place/demo-0')
+  const row = (name: string) => page.locator('.shop-row').filter({ has: page.getByRole('heading', { name, exact: true }) })
+  await expect(row('测试本期主题').locator('.shop-status')).toHaveText('进行中')
+  await expect(row('测试即将开始快闪').locator('.shop-status')).toHaveText('即将开始')
+  await expect(row('测试未知年份快闪').locator('.shop-status')).toHaveText('档期见原文')
+  await expect(page.locator('.shop-directory-more')).not.toHaveAttribute('open')
+  await row('测试本期主题').getByRole('button', { name: '加入本次清单：测试本期主题', exact: true }).click()
+  await row('测试常设店').getByRole('button', { name: '加入本次清单：测试常设店', exact: true }).click()
+  await expect(page.locator('.trip-plan-dock')).toContainText('2 站')
+  await page.getByRole('searchbox').fill('测试本期主题')
+  await expect(page.locator('.directory-place')).toHaveCount(1)
+  await page.clock.fastForward(61_000)
+  await expect(row('测试本期主题')).toHaveCount(0)
+  await expect(row('测试待核活动')).toHaveCount(0)
+  await expect(row('测试即将开始快闪').locator('.shop-status')).toHaveText('进行中')
+  await expect(row('测试未知年份快闪')).toContainText('9月—10月（原文未注明年份）')
+  await expect(row('测试常设店').locator('.shop-status')).toHaveText('营业中')
+  await expect(page.locator('.directory-place')).toHaveCount(0)
+  await expect(page.locator('.trip-plan-dock')).toContainText('1 站')
+  await expect(page.locator('.shop-directory-heading')).toContainText('2026-10-29')
+  await expect(page.locator('.shop-directory-inactive')).toHaveCount(0)
+})

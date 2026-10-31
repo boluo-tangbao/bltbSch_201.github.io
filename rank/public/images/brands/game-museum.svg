@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180" role="img" aria-labelledby="title">
+  <title id="title">游戏博物馆手柄插画</title>
+  <rect width="420" height="180" fill="#243647"/>
+  <path d="M0 145 420 35M0 175 420 65" stroke="#5b8291" stroke-width="2" opacity=".35"/>
+  <path d="M116 68c4-15 17-24 32-24h124c15 0 28 9 32 24l13 49c5 21-16 33-30 18l-20-20H153l-20 20c-14 15-35 3-30-18z" fill="#f3e7cd" stroke="#b9d8da" stroke-width="4"/>
+  <path d="M145 74v27m-14-13h28" stroke="#344858" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="268" cy="78" r="7" fill="#e57565"/><circle cx="286" cy="94" r="7" fill="#d4a64d"/>
+  <circle cx="255" cy="96" r="7" fill="#7aa6a4"/><circle cx="275" cy="112" r="7" fill="#8492bf"/>
+  <path d="M195 88h30" stroke="#80989a" stroke-width="5" stroke-linecap="round"/>
+</svg>

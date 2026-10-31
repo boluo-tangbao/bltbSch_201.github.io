@@ -10,6 +10,73 @@
     "note": "悦荟3、4层阶段性店单：Rejet由历史待核补强为营业确认，新增达家玩确认及東方墨兰茶饮店待核；FUN MAGNET待核、鱼小铺外迁历史保留。已做抖音内容发现并核商场主页，小红书待登录，三层及旧店去向仍有缺口；原评级、到访、坐标及图集保留，未发布。"
   },
   {
+    "id": "youyou-center-added-20261029",
+    "date": "2026-10-29",
+    "type": "added",
+    "placeIds": [
+      "shanghai-shop-022"
+    ],
+    "note": "新增上海又又中心地点，复用已有现场图片；店铺信息待进一步研究。"
+  },
+  {
+    "id": "changning-longemont-user-confirmation-20261029",
+    "date": "2026-10-29",
+    "type": "edited",
+    "category": "content",
+    "placeIds": ["shanghai-shop-016"],
+    "note": "按用户确认将水豚大怪兽、卡游和万代卡牌中心转为营业中，保留原有线索。"
+  },
+  {
+    "id": "changning-longemont-research-20261029",
+    "date": "2026-10-29",
+    "type": "edited",
+    "category": "content",
+    "placeIds": ["shanghai-shop-016"],
+    "note": "长宁龙之梦阶段性店单：双平台站内内容发现，接入宝可梦道馆和本店周边号，保留待核卡牌与谷街线索，并按公告记录Linkstage闭店。"
+  },
+  {
+    "id": "xinyao-cards-and-brand-20261028",
+    "date": "2026-10-28",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-013"
+    ],
+    "note": "按用户确认将米哈游×潮玩星球长期售卖点转入常规店；定向补查二期卡牌，并为米哈游与鹰角参观地点加入各自品牌标识及主题边框。"
+  },
+  {
+    "id": "xinyao-phase2-research-20261028",
+    "date": "2026-10-28",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-013"
+    ],
+    "note": "鑫耀光环Live二期阶段性谷店研究：复用双平台站内发现、接入确认门店和快闪待核线索，补充米哈游与鹰角周边位置及参观说明；未发布。"
+  },
+  {
+    "id": "tpy-metro-user-correction-20261028",
+    "date": "2026-10-28",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-012",
+      "shanghai-shop-015"
+    ],
+    "note": "按用户反馈，美罗城移除泡泡玛特、九木杂物社和本小姐并将JUMP提前；TPY万番屋与铃夏旧址按关闭历史记录。谷店展开按钮移至各组展示内容下方。"
+  },
+  {
+    "id": "tpy-metro-city-research-20261028",
+    "date": "2026-10-28",
+    "type": "edited",
+    "category": "content",
+    "placeIds": [
+      "shanghai-shop-012",
+      "shanghai-shop-015"
+    ],
+    "note": "TPY中心、美罗城阶段性谷店研究：完成双平台站内商圈内容发现，接入确认门店、快闪与待核线索；GOODSBUS旧店按本人公告列停止营业历史。图集与原评价保留，未发布。"
+  },
+  {
     "id": "global-harbor-paris-spring-research-20261027",
     "date": "2026-10-27",
     "type": "edited",

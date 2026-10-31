@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { readFileSync } from 'node:fs'
 import type { ShopDirectory } from '../../src/types'
-import { mergeShopSources } from '../../src/utils/shopDirectory'
+import { mergeShopSources, shopDisplayStatus } from '../../src/utils/shopDirectory'
 
 const base = 'http://127.0.0.1:4173/bltbSch_201.github.io/rank/'
 const directories: Record<string, ShopDirectory> = JSON.parse(readFileSync('src/data/shop-directories.json', 'utf8'))
@@ -18,9 +18,10 @@ for (const route of ['', 'guide/']) {
         for (const section of await page.locator('.shop-directory-section').all()) {
           const confirmed = section.locator('.shop-directory-confirmed .shop-row')
           await expect(confirmed.filter({ visible: true })).toHaveCount(Math.min(5, await confirmed.count()))
-          const expand = section.locator('.shop-section-actions .shop-expand')
+          const expand = section.locator('.shop-directory-confirmed .shop-expand')
           while (await expand.count()) {
             const before = await confirmed.filter({ visible: true }).count()
+            expect(await expand.evaluate(button => button.getBoundingClientRect().top >= button.parentElement!.previousElementSibling!.getBoundingClientRect().bottom)).toBe(true)
             await expand.click()
             await expect(confirmed.filter({ visible: true })).toHaveCount(Math.min(before + 5, await confirmed.count()))
           }
@@ -34,12 +35,13 @@ for (const route of ['', 'guide/']) {
             const expand = subgroup.locator('.shop-expand')
             while (await expand.count()) {
               const before = await rows.filter({ visible: true }).count()
+              expect(await expand.evaluate(button => button.getBoundingClientRect().top >= button.parentElement!.previousElementSibling!.getBoundingClientRect().bottom)).toBe(true)
               await expand.click()
               await expect(rows.filter({ visible: true })).toHaveCount(Math.min(before + 5, await rows.count()))
             }
           }
         }
-        for (const shop of directories[placeId].shops.filter(shop => shop.status !== 'closed')) {
+        for (const shop of directories[placeId].shops.filter(shop => shopDisplayStatus(shop) !== 'closed')) {
           const row = page.locator('.shop-row').filter({ has: page.getByRole('heading', { name: shop.name, exact: true }) })
           await expect(row).toHaveCount(1)
           await expect(row).toBeVisible()
@@ -58,14 +60,14 @@ for (const route of ['', 'guide/']) {
             await expect(row.locator('.shop-evidence-note, .shop-sources, .shop-kind-evidence')).toHaveCount(0)
             await expect(row.locator('.shop-accounts a')).toHaveCount(shop.accounts.length)
           } else {
-            if (shop.operatingConfirmation === 'official-listing') checkedOfficialListing = true
+            if (shop.operatingConfirmation) checkedOfficialListing = true
             else checkedPending = true
             if (shop.pendingReview?.category === 'history') {
               const history = row.locator('.shop-history-source')
               await expect(history).toBeVisible()
               await expect(history.locator('a')).toHaveAttribute('href', shop.pendingReview.sourceUrl)
               await expect(row.locator('xpath=ancestor::*[@data-pending-category][1]')).toHaveAttribute('data-pending-category', 'history')
-            } else if (shop.operatingConfirmation !== 'official-listing') {
+            } else if (!shop.operatingConfirmation) {
               await expect(row.locator('.shop-status')).toHaveText('待验证')
               await expect(row.locator('.shop-history-source')).toHaveCount(0)
             }

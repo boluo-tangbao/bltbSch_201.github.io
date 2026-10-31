@@ -1,6 +1,43 @@
 {
   "上海": [
     {
+      "id": "shanghai-shop-022",
+      "name": "又又中心",
+      "tier": "npc",
+      "order": 90,
+      "summary": "长宁龙之梦附近的逛店地点。",
+      "details": "位于天山路823号，靠近中山公园地铁站。根据用户确认，店铺大多已关闭，目前还有一家谷店、一家 Livehouse 和一家女仆咖啡厅；具体店名待补充。",
+      "tags": [
+        "周边",
+        "谷子"
+      ],
+      "cover": "images/places/Shanghai/又又中心.png",
+      "gallery": [
+        {
+          "src": "images/places/Shanghai/又又中心.png",
+          "alt": "又又中心外观",
+          "group": "商圈外部",
+          "sourceName": "本地整理图片（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/附近的又又中心/1771942021016.jpg",
+          "alt": "又又中心：谷店入口",
+          "group": "店铺外景",
+          "sourceName": "作者直拍（日期未记录）"
+        },
+        {
+          "src": "images/places/Shanghai/正片/长宁龙之梦和附近的地下广场/附近的又又中心/1771942021170.jpg",
+          "alt": "又又中心：周边货架",
+          "group": "店铺内景",
+          "sourceName": "作者直拍（日期未记录）"
+        }
+      ],
+      "visitedAt": null,
+      "updatedAt": "2026-10-29",
+      "published": true,
+      "location": "上海市长宁区天山路823号又又中心"
+    },
+    {
       "id": "shanghai-shop-001",
       "name": "第一百货",
       "tier": "hang",
@@ -1278,7 +1315,7 @@
         }
       ],
       "visitedAt": "2026-09-18",
-      "updatedAt": "2026-10-17",
+      "updatedAt": "2026-10-28",
       "published": true,
       "location": {
         "lat": 31.194887,
@@ -1390,14 +1427,37 @@
         }
       ],
       "visitedAt": "2026-09-09",
-      "updatedAt": "2026-10-17",
+      "updatedAt": "2026-10-28",
       "published": true,
       "location": {
         "lat": 31.168415,
         "lng": 121.410019,
         "coordinateSystem": "wgs84",
         "address": "上海市徐汇区漕宝路261号鑫耀光环live二期"
-      }
+      },
+      "nearbyVisits": [
+        {
+          "name": "米哈游英业达园区南楼（玩家参观）",
+          "address": "上海市徐汇区宜山路1295号英业达园区南楼一层",
+          "note": "曾设公众预约参观；请在微信“米哈游开放日预约”查询最新开放日期与名额，以预约页面为准。",
+          "sourceUrl": "https://bme-college.fudan.edu.cn/80/83/c49155a753795/page.psp",
+          "theme": "mihoyo"
+        },
+        {
+          "name": "鹰角网络办公楼（漕河泾中心）",
+          "address": "上海市徐汇区古美路1520号漕河泾中心",
+          "note": "办公楼位置仅供周边打卡参考；尚未核实对公众开放参观，请以现场及官方公告为准。",
+          "sourceUrl": "https://user.hypergryph.com/protocol/popucom/children_privacy",
+          "theme": "hypergryph"
+        },
+        {
+          "name": "中国音数协游戏博物馆",
+          "address": "上海市徐汇区桂箐路65号新研大厦B座3楼",
+          "note": "常设展呈现电子游戏的发展历史，设有主题展与互动试玩。参观需购票，2026年指南注明10:00—17:00开放、周一闭馆；节假日与预约规则请以馆方最新公告为准。",
+          "sourceUrl": "https://www.taptap.cn/moment/757618683458619546?group_id=159750",
+          "theme": "museum"
+        }
+      ]
     },
     {
       "id": "shanghai-shop-014",
@@ -1517,7 +1577,7 @@
         }
       ],
       "visitedAt": "2026-09-18",
-      "updatedAt": "2026-10-17",
+      "updatedAt": "2026-10-28",
       "published": true,
       "location": {
         "lat": 31.19482,
@@ -1529,10 +1589,10 @@
     {
       "id": "shanghai-shop-016",
       "name": "长宁龙之梦",
-      "tier": "above",
-      "order": 70,
+      "tier": "npc",
+      "order": 45,
       "summary": "宝可梦中心是主菜，周边谷店让它不只是一站打卡。",
-      "details": "**宝可梦中心给了这里足够明确的目的性**，周边还有少数几家质量在线的日谷和 Lolita 店可顺手逛。\n\n冲宝可梦很值得来！",
+      "details": "**宝可梦中心给了这里足够明确的目的性**，周边还有少数几家谷店、扭蛋和 Lolita 店可顺手逛。\n\n冲宝可梦值得来！",
       "tags": [
         "宝可梦",
         "lolita",
@@ -1694,7 +1754,7 @@
         }
       ],
       "visitedAt": "2026-07-08",
-      "updatedAt": "2026-10-10",
+      "updatedAt": "2026-10-29",
       "published": true,
       "location": {
         "lat": 31.220979,

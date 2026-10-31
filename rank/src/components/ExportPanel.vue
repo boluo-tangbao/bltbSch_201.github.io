@@ -8,7 +8,7 @@ import updateData from '../data/updates.json'
 import { publicUpdates } from '../utils/model'
 import { previewUrl } from '../utils/assets'
 import '../export-poster.css'
-const props = defineProps<{ site: Site; places: Place[]; allPlaces: Place[]; scope: string; updatedAt: string | null }>()
+const props = defineProps<{ site: Site; places: Place[]; allPlaces: Place[]; scope: string; updatedAt: string | null; currentLabel?: string }>()
 const emit = defineEmits<{ close: [] }>()
 const dialog = ref<HTMLDialogElement>()
 const mode = ref<ExportMode | 'full'>('compact'), all = ref(false), busy = ref(false), error = ref('')
@@ -77,10 +77,10 @@ async function generate() {
           </label>
         </fieldset>
         <fieldset :disabled="busy" class="studio-fieldset"><legend><span>02 /</span> 导出范围</legend>
-          <div class="studio-scope"><label><input v-model="all" type="radio" :value="false" name="scope" :aria-label="`当前筛选 · ${places.length} 个条目`" /><span>当前筛选<b>{{ places.length }}</b></span></label><label><input v-model="all" type="radio" :value="true" name="scope" :aria-label="`完整榜单 · ${allPlaces.length} 个条目`" /><span>完整榜单<b>{{ allPlaces.length }}</b></span></label></div>
+          <div class="studio-scope"><label><input v-model="all" type="radio" :value="false" name="scope" :aria-label="`${currentLabel || '当前筛选'} · ${places.length} 处地点`" /><span>{{ currentLabel || '当前筛选' }}<b>{{ places.length }}</b></span></label><label><input v-model="all" type="radio" :value="true" name="scope" :aria-label="`完整榜单 · ${allPlaces.length} 处地点`" /><span>完整榜单<b>{{ allPlaces.length }}</b></span></label></div>
         </fieldset>
         <fieldset v-if="mode === 'full'" :disabled="busy" class="studio-fieldset"><legend><span>03 /</span> 图片范围</legend><div class="studio-scope"><label><input v-model="includeGallery" type="radio" :value="false" name="images" aria-label="仅封面" /><span>仅封面</span></label><label><input v-model="includeGallery" type="radio" :value="true" name="images" aria-label="包含图集" /><span>包含图集</span></label></div></fieldset>
-        <div class="studio-summary"><span class="studio-summary-label">READY TO TAKE AWAY</span><p class="export-estimate"><b>{{ selectedPlaces.length }}</b> 个条目 <span>/</span> {{ imageCount }} 张图片</p></div>
+        <div class="studio-summary"><span class="studio-summary-label">READY TO TAKE AWAY</span><p class="export-estimate"><b>{{ selectedPlaces.length }}</b> 处地点 <span>/</span> {{ imageCount }} 张图片</p></div>
         <div class="export-actions"><button class="studio-generate" :disabled="busy || !selectedPlaces.length" @click="generate"><span>{{ busy ? '正在生成…' : results.length || documentResult ? '重新生成' : mode === 'full' ? '生成完整内容' : '生成图片' }}</span><span aria-hidden="true">↗</span></button><button v-if="busy" type="button" class="studio-cancel" @click="cancel">取消生成</button></div>
         <div v-if="busy" class="export-progress" :aria-busy="true"><p role="status" aria-live="polite">{{ progress.stage }}<span v-if="progress.total"> · {{ progress.completed }} / {{ progress.total }}</span></p><progress :value="progress.total ? progress.completed : undefined" :max="progress.total || 1" :aria-label="progress.stage" /></div>
         <p v-if="error" class="export-status export-error" role="alert">{{ error }}</p>
@@ -98,7 +98,7 @@ async function generate() {
           <div class="poster-body"><div class="poster-section"><span>01 / PERSONAL PICKS</span><span>{{ selectedCities }} CITIES ↗</span></div><div class="poster-cards"><div v-for="(place, index) in previewPlaces" :key="place.id" class="poster-card"><div class="poster-photo"><img v-if="place.cover" :src="previewUrl(place.cover)" alt="" :style="{ objectPosition: `${place.coverPosition?.[0] ?? 50}% ${place.coverPosition?.[1] ?? 50}%` }" /><span v-else>NO IMAGE</span><b>{{ String(index + 1).padStart(2, '0') }}</b></div><small>{{ place.city }}</small><b>{{ place.name }}</b><p v-if="mode === 'review'">{{ place.summary }}</p></div></div><div v-if="!previewPlaces.length" class="poster-empty">等待收录你的下一站。</div><div class="poster-colophon"><span>{{ site.author }}</span><span>PERSONAL / SUBJECTIVE</span></div></div>
         </div>
         <div v-else class="studio-archive"><span class="archive-symbol" aria-hidden="true">[↗]</span><span class="studio-kicker">YOUR OFFLINE COLLECTION</span><h3>留住每一次<br />值得记录的到访。</h3><p>详细评价、到访记录与{{ includeGallery ? '现场图集' : '封面图片' }}，一起打包收藏。</p><div><b>{{ selectedPlaces.length }}</b> PLACES <span>/</span> <b>{{ imageCount }}</b> IMAGES</div><a v-if="documentResult" class="button full-download" :href="documentResult.url" :download="documentResult.name">↓ 下载完整内容（HTML）</a></div>
-        <p v-if="!results.length && mode !== 'full'" class="studio-preview-note">版式示意，展示前 {{ previewPlaces.length }} 个条目；生成后可查看完整分页。</p>
+        <p v-if="!results.length && mode !== 'full'" class="studio-preview-note">版式示意，展示前 {{ previewPlaces.length }} 处地点；生成后可查看完整分页。</p>
       </section>
     </div>
   </dialog>

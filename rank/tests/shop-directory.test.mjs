@@ -21,7 +21,7 @@ test('possible-operation wording keeps evidence unconfirmed and cannot override 
   assert.equal(shopStatusLabel(shop), '营业中')
   assert.ok(validateShopDirectories(data, [{ id: 'test' }]).some(e => e.includes('可能营业标签')))
   shop.limited = { scope: 'store', period: '档期待公布' }
-  assert.equal(shopStatusLabel(shop), '进行中')
+  assert.equal(shopStatusLabel(shop), '档期见原文')
   shop.status = 'closed'
   assert.equal(shopStatusLabel(shop), '已公布闭店')
   shop.inactive = { reason: 'renovation', history: '装修暂停' }
@@ -128,6 +128,16 @@ test('explicit official listings confirm operation without social accounts; clos
   assert.ok(validateShopDirectories({ test: { ...fixture().test, shops: [shop] } }, [{ id: 'test' }]).some(error => error.includes('营业确认依据无效')))
 })
 
+test('user confirmation requires a user source and makes the shop visible', () => {
+  const data = fixture()
+  const shop = data.test.shops[0]
+  shop.operatingConfirmation = 'user-confirmed'
+  assert.ok(validateShopDirectories(data, [{ id: 'test' }]).some(error => error.includes('用户来源')))
+  shop.sources.push({ label: '用户确认', providedBy: 'user', dateLabel: '用户确认于2026-10-29' })
+  assert.equal(shopDisplayStatus(shop), 'open')
+  assert.deepEqual(validateShopDirectories(data, [{ id: 'test' }]), [])
+})
+
 test('author visit annotation uses latest evidence and excludes equal, newer or unknown dates', () => {
   const source = date => ({ label: '探店', url: 'https://example.com/post', date })
   assert.equal(sourcePredatesVisit([source('2025-09-29')], '2026-01-20'), true)
@@ -184,7 +194,7 @@ test('store and hosted theme remain separate, and theme expiry preserves the per
   data.test.shops.push(theme)
   assert.deepEqual(validateShopDirectories(data, [{ id: 'test' }]), [])
   assert.deepEqual(shopDirectoryGroups(data.test.shops).regular.open.map(s => s.name), [host.name])
-  assert.deepEqual(shopDirectoryGroups(data.test.shops).limited.open.map(s => s.name), [theme.name])
+  assert.deepEqual(shopDirectoryGroups(data.test.shops, '2026-10-05').limited.open.map(s => s.name), [theme.name])
   data.test.checkedAt = '2026-10-06'
   assert.ok(validateShopDirectories(data, [{ id: 'test' }]).some(e => e.includes('已结束')))
   theme.status = 'closed'

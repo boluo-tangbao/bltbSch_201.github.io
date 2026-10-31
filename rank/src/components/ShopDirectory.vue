@@ -3,8 +3,13 @@ import { computed, ref, watch } from 'vue'
 import type { ShopDirectory } from '../types'
 import { latestSourceDate, mergeShopSources, shopDisplayStatus, shopStatusLabel, shopDirectoryGroups, sourcePredatesVisit, pendingShopGroups, shopHistorySource } from '../utils/shopDirectory'
 import { searchTargetId } from '../utils/search'
+import { shopFeedbackUrl } from '../utils/shopFeedback'
+import { useShopToday } from '../utils/shopToday'
+import TripPlanButton from './TripPlanButton.vue'
 
 const props = defineProps<{ directory: ShopDirectory; visitedAt?: string | null; placeId?: string }>()
+const base = import.meta.env.BASE_URL
+const today = useShopToday()
 const visibleCounts = ref<Record<string, number>>({})
 const groupKey = (section: string, more = false, bucket = '') => `${section}-${more ? 'evidence' : 'open'}-${bucket}`
 const visibleCount = (section: string, more = false, bucket = '') => visibleCounts.value[groupKey(section, more, bucket)] ?? 5
@@ -13,13 +18,13 @@ function expand(section: string, more = false, bucket = '') {
 }
 watch(() => props.directory, () => { visibleCounts.value = {} })
 const shops = computed(() => props.directory.shops.map(shop => {
-  const status = shopDisplayStatus(shop)
+  const status = shopDisplayStatus(shop, today.value)
   const sourceTime = shop.sources.find(source => source.dateLabel)?.dateLabel
     ?? latestSourceDate(shop.sources)
-  return { ...shop, displayStatus: status, statusText: shopStatusLabel(shop), historySource: shopHistorySource(shop), sourceTime, authorVisited: sourcePredatesVisit(shop.sources, props.visitedAt), evidenceSources: mergeShopSources(shop) }
+  return { ...shop, displayStatus: status, statusText: shopStatusLabel(shop, today.value), historySource: shopHistorySource(shop), sourceTime, authorVisited: sourcePredatesVisit(shop.sources, props.visitedAt), evidenceSources: mergeShopSources(shop) }
 }))
 const sections = computed(() => {
-  const grouped = shopDirectoryGroups(shops.value)
+  const grouped = shopDirectoryGroups(shops.value, today.value)
   return [
     { key: 'regular', title: '常规谷店', ...grouped.regular },
     { key: 'limited', title: '快闪活动', ...grouped.limited },
@@ -49,7 +54,7 @@ defineExpose({ revealShop })
     <p v-if="directory.notice" class="shop-directory-notice">{{ directory.notice }}</p>
     <p class="shop-directory-intro">每栏及待核实子组先展示5条，每次展开再增加5条；待核实区默认收起，历史探店记录不代表当前营业。</p>
     <div v-for="section in sections" :key="section.key" class="shop-directory-section" :class="'shop-directory-' + section.key">
-    <header class="shop-section-heading"><h3>{{ section.title }}</h3><div class="shop-section-actions"><span><template v-if="section.key === 'inactive'">记录 {{ section.open.length }} 家</template><template v-else>确认 {{ section.open.length }} {{ sectionUnit(section.key) }}</template><template v-if="section.evidence.length"> · 待核实 {{ section.evidence.length }} {{ sectionUnit(section.key) }}</template></span><button v-if="section.open.length > visibleCount(section.key)" class="shop-expand" type="button" :aria-label="section.title + '展开全部，每次增加5' + sectionUnit(section.key)" @click="expand(section.key)">展开全部 <small>+{{ Math.min(5, section.open.length - visibleCount(section.key)) }}{{ sectionUnit(section.key) }}</small></button></div></header>
+    <header class="shop-section-heading"><h3>{{ section.title }}</h3><div class="shop-section-actions"><span><template v-if="section.key === 'inactive'">记录 {{ section.open.length }} 家</template><template v-else>确认 {{ section.open.length }} {{ sectionUnit(section.key) }}</template><template v-if="section.evidence.length"> · 待核实 {{ section.evidence.length }} {{ sectionUnit(section.key) }}</template></span></div></header>
     <p v-if="section.key === 'limited'" class="shop-limited-intro">快闪店、慢闪店与店内限时主题统一归入快闪活动，按项计数，不计入常规门店家数。活动结束不代表所在常设店关闭。</p>
     <p v-if="section.key === 'inactive'" class="shop-inactive-intro">“已停止营业”指彻底关店或迁往其他地点的旧店；装修暂停另行标注，同一商场换楼层的店铺继续按新位置展示。</p>
     <p v-if="!section.open.length" class="shop-directory-empty">暂没有已确认营业的店铺，可展开更多查看已有线索。</p>
@@ -59,7 +64,6 @@ defineExpose({ revealShop })
     <div v-for="bucket in group.more ? pendingShopGroups(group.shops) : [{ key: '', title: '', shops: group.shops }]" :key="bucket.key" :class="group.more ? 'shop-pending-group' : undefined" :data-pending-category="group.more ? bucket.key : undefined">
     <p v-if="group.more" class="shop-pending-heading">{{ bucket.title }}<span>{{ bucket.shops.length }} {{ sectionUnit(section.key) }}</span></p>
     <p v-if="group.more && bucket.key === 'history'" class="shop-history-intro">保留曾被探店、攻略或实访收录的记录，当前营业尚未确认。</p>
-    <div v-if="group.more && bucket.shops.length > visibleCount(section.key, true, bucket.key)" class="shop-pending-actions"><span>已展示 {{ visibleCount(section.key, true, bucket.key) }} / {{ bucket.shops.length }} {{ sectionUnit(section.key) }}线索</span><button class="shop-expand" type="button" :aria-label="section.title + bucket.title + '展开全部，每次增加5' + sectionUnit(section.key)" @click="expand(section.key, true, bucket.key)">展开全部 <small>+{{ Math.min(5, bucket.shops.length - visibleCount(section.key, true, bucket.key)) }}{{ sectionUnit(section.key) }}</small></button></div>
     <ul class="shop-list">
       <li v-for="(shop, index) in bucket.shops" v-show="index < visibleCount(section.key, group.more, bucket.key)" :id="placeId ? searchTargetId(placeId, { kind: 'shop', name: shop.name }) : undefined" :key="shop.name" class="shop-row" tabindex="-1">
         <div class="shop-row-title"><div class="shop-name-location"><h4>{{ shop.name }}</h4><span v-if="shop.floor" class="shop-location"><template v-if="shop.inactive">原位置：</template>{{ shop.floor }}</span></div><span class="shop-status" :class="'is-' + shop.displayStatus">{{ shop.statusText }}</span></div>
@@ -84,8 +88,12 @@ defineExpose({ revealShop })
         <ul v-if="shop.accounts?.length" class="shop-accounts" :aria-label="shop.name + (shop.inactive ? '的原账号' : '的官方账号')">
           <li v-for="account in shop.accounts" :key="account.platform + account.url"><a :href="account.url" target="_blank" rel="noopener noreferrer"><b>{{ platformLabel[account.platform] }}</b><span>{{ account.name }}<small v-if="account.handle">号：{{ account.handle }}</small></span><em v-if="account.scope === 'brand'">品牌号</em><span aria-hidden="true">↗</span></a></li>
         </ul>
+        <div v-if="placeId" class="shop-feedback"><TripPlanButton v-if="shop.displayStatus === 'open'" :place-id="placeId" :name="shop.name" :shop-name="shop.name" /><a :href="shopFeedbackUrl(base, placeId, shop.name)" :aria-label="`${shop.name}：信息有变化`">信息有变化？反馈纠错 →</a></div>
       </li>
     </ul>
+    <div v-if="bucket.shops.length > visibleCount(section.key, group.more, bucket.key)" class="shop-expand-actions">
+      <button class="shop-expand" type="button" :aria-label="section.title + bucket.title + '展开更多，每次增加5' + sectionUnit(section.key)" @click="expand(section.key, group.more, bucket.key)">展开更多 <small>+{{ Math.min(5, bucket.shops.length - visibleCount(section.key, group.more, bucket.key)) }}{{ sectionUnit(section.key) }}</small></button>
+    </div>
     </div>
     </component>
     </template>
@@ -103,13 +111,13 @@ defineExpose({ revealShop })
 .shop-directory-section + .shop-directory-section { margin-top: 28px; padding-top: 22px; border-top: 2px dashed #d9aab6; }
 .shop-section-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 .shop-section-heading h3 { margin: 0; font-size: 19px; color: #a83750; }
-.shop-section-actions,.shop-pending-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 14px; font-size: 12px; line-height: 1.8; color: #79626b; }
+.shop-section-actions { font-size: 12px; line-height: 1.8; color: #79626b; }
 .shop-pending-heading { margin: 0 0 8px; font-weight: 800; color: #45698d; font-size: 15px; }
 .shop-pending-heading span { margin-left: 10px; font-size: 12px; font-weight: 400; }
 .shop-pending-group + .shop-pending-group { margin-top: 22px; padding-top: 18px; border-top: 1px dashed #d9aab6; }
 .shop-history-intro,.shop-history-source { margin: 8px 0 12px; font-size: 12px; line-height: 1.8; color: #79626b; overflow-wrap: anywhere; }
 .shop-history-source a { color: #a83750; text-decoration: underline; text-underline-offset: 3px; }
-.shop-pending-actions { justify-content: space-between; margin: 0 0 12px; }
+.shop-expand-actions { display: flex; justify-content: center; margin-top: 14px; }
 .shop-expand { min-height: 36px; padding: 5px 10px; border: 1px solid #d9aab6; background: #fff0f3; color: #a83750; font-size: 12px; font-weight: 700; }
 .shop-expand small { margin-left: 5px; font-weight: 400; }
 .shop-limited-intro,.shop-inactive-intro { font-size: 12px; line-height: 1.8; color: #79626b; }
@@ -119,6 +127,8 @@ defineExpose({ revealShop })
 .shop-list,.shop-accounts { list-style: none; padding: 0; margin: 0; }
 .shop-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 12px; }
 .shop-row { min-width: 0; padding: 16px; border: 1px solid #e5c5cc; background: #fffdfa; }
+.shop-feedback { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; border-top: 1px dashed #e5c5cc; padding-top: 6px; }
+.shop-feedback a { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; color: #84394e; font-size: 12px; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
 .shop-row { scroll-margin-top: 80px; }
 .shop-row:focus { outline: 2px solid #a83750; outline-offset: 3px; }
 .shop-row-title { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }

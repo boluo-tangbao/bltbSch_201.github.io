@@ -71,6 +71,15 @@ export function validateData(site, groups, updates, imageExists = () => true, di
     if (p.aliases !== undefined && !validAliases(p.aliases)) fail('places.json', p.id, 'aliases 必须是不重复的 1–160 字别名数组，不能有首尾空格')
     if (p.visitedAt !== null && !validDate(p.visitedAt, true)) fail('places.json', p.id, 'visitedAt 必须为真实年月、日期或 null')
     if (!validDate(p.updatedAt)) fail('places.json', p.id, 'updatedAt 必须为真实 YYYY-MM-DD 日期')
+    if (p.nearbyVisits !== undefined) {
+      if (!Array.isArray(p.nearbyVisits)) fail('places.json', p.id, 'nearbyVisits 必须为数组')
+      else for (const spot of p.nearbyVisits) {
+        if (!spot || typeof spot !== 'object' || ['name', 'address', 'note'].some(key => typeof spot[key] !== 'string' || !spot[key].trim())) fail('places.json', p.id, '附近地点需要名称、地址和参观说明')
+        if (spot?.theme !== undefined && !['mihoyo', 'hypergryph', 'museum'].includes(spot.theme)) fail('places.json', p.id, '附近地点主题无效')
+        try { if (new URL(spot?.sourceUrl).protocol !== 'https:') throw new Error() }
+        catch { fail('places.json', p.id, '附近地点需要 HTTPS 来源链接') }
+      }
+    }
     if (p.cover !== null) image(p.cover, 'places.json', p.id)
     if (p.coverPosition !== undefined && (!Array.isArray(p.coverPosition) || p.coverPosition.length !== 2 || p.coverPosition.some(v => !Number.isFinite(v) || v < 0 || v > 100))) fail('places.json', p.id, 'coverPosition 必须为两个 0–100 数字')
     if (!Array.isArray(p.gallery)) fail('places.json', p.id, 'gallery 必须为数组')
@@ -175,11 +184,12 @@ export function validateShopDirectories(directories, places) {
       if (names.has(shop.name)) fail(id, `店名重复：${shop.name}`)
       names.add(shop.name)
       if (!['recent', 'listed', 'older', 'unverified', 'closed'].includes(shop.status)) fail(id, `${shop.name} 核实状态无效`)
-      if (shop.operatingConfirmation !== undefined && shop.operatingConfirmation !== 'official-listing') fail(id, `${shop.name} 营业确认依据无效`)
-      if (shop.evidenceLabel !== undefined && (shop.evidenceLabel !== '可能营业' || shop.status === 'closed' || shop.accounts?.length || shop.operatingConfirmation === 'official-listing')) fail(id, `${shop.name} 可能营业标签仅适用于未确认营业的线索`)
+      if (shop.operatingConfirmation !== undefined && !['official-listing', 'user-confirmed'].includes(shop.operatingConfirmation)) fail(id, `${shop.name} 营业确认依据无效`)
+      if (shop.operatingConfirmation === 'user-confirmed' && !shop.sources?.some(source => source.providedBy === 'user')) fail(id, `${shop.name} 用户确认须保留用户来源`)
+      if (shop.evidenceLabel !== undefined && (shop.evidenceLabel !== '可能营业' || shop.status === 'closed' || shop.accounts?.length || shop.operatingConfirmation)) fail(id, `${shop.name} 可能营业标签仅适用于未确认营业的线索`)
       if (shop.pendingReview !== undefined) {
         const review = shop.pendingReview
-        if (shop.status === 'closed' || shop.accounts?.length || shop.operatingConfirmation === 'official-listing') fail(id, `${shop.name} 待核分组仅适用于未确认营业的线索`)
+        if (shop.status === 'closed' || shop.accounts?.length || shop.operatingConfirmation) fail(id, `${shop.name} 待核分组仅适用于未确认营业的线索`)
         if (!object(review) || !['history', 'verification'].includes(review.category)) fail(id, `${shop.name} 待核分组无效`)
         else if (review.category === 'history' && (!url(review.sourceUrl) || !shop.sources?.some(source => source.url === review.sourceUrl))) fail(id, `${shop.name} 探店攻略历史必须引用已有营业／位置来源`)
         else if (review.category === 'verification' && review.sourceUrl !== undefined) fail(id, `${shop.name} 待验证分组不能混填历史来源`)
