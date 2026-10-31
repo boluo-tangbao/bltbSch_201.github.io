@@ -94,8 +94,53 @@
             "url": "https://www.xiaohongshu.com/user/profile/5f9a639a0000000001005f33",
             "dateLabel": "主页未标发表日；原读取2026-10-18，本轮复用；多分店经营标题未独立关联悦荟"
           }
+        ],
+        "kindSources": [
+          {
+            "label": "Fun Magnet本人品牌主页·悦荟4楼409AB",
+            "url": "https://www.xiaohongshu.com/user/profile/5f9a639a0000000001005f33",
+            "dateLabel": "主页未标发表日；原读取2026-10-18，本轮复用；多分店经营标题未独立关联悦荟"
+          }
         ]
-      }]
+      },
+      {
+        "name": "鱼小铺（悦荟旧址）",
+        "floor": "四层 恰恰谷",
+        "kind": "动漫／游戏周边",
+        "status": "closed",
+        "inactive": {
+          "reason": "relocated",
+          "history": "2025年开业报道有本址经营记录；原2026-10-18已读本人简介注明原迪美／悦荟、现华盛BE083；迁出时间未明确"
+        },
+        "note": "结合悦荟开业名单与原华盛研究本人现址，保留悦荟外迁旧店历史。现址华盛小亭BE083，经营主体仍在华盛；不把本人读取日或最后经营记录当迁出日，不表示品牌整体关闭。",
+        "sources": [
+          {
+            "label": "上海黄浦·悦荟四层恰恰谷开业报道",
+            "url": "https://m.thepaper.cn/newsDetail_forward_30762914",
+            "dateLabel": "发表于2025-05-02；原读取2026-10-17，本轮复用；开业历史，不代表当前营业"
+          },
+          {
+            "label": "鱼小铺online（接dg版）本人·当前地址与经营简介",
+            "url": "https://www.xiaohongshu.com/user/profile/64a24782000000001f004e0a",
+            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
+          },
+          {
+            "label": "华盛小亭上新 火影忍者宇智波家族杯垫（主页／站内已读内容）",
+            "url": "https://www.xiaohongshu.com/explore/6ad43fa8000000002900acd2",
+            "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对"
+          }
+        ],
+        "accounts": [
+          {
+            "platform": "xiaohongshu",
+            "name": "鱼小铺online（接dg版）",
+            "handle": "8936568830",
+            "url": "https://www.xiaohongshu.com/user/profile/64a24782000000001f004e0a",
+            "scope": "store"
+          }
+        ]
+      }
+    ]
   },
   "shanghai-shop-016": {
     "area": "上海长宁龙之梦城市生活中心（长宁路1018号）",
@@ -218,37 +263,6 @@
         ],
         "kindSources": [
           {
-            "label": "Fun Magnet本人品牌主页·悦荟4楼409AB",
-            "url": "https://www.xiaohongshu.com/user/profile/5f9a639a0000000001005f33",
-            "dateLabel": "主页未标发表日；原读取2026-10-18，本轮复用；多分店经营标题未独立关联悦荟"
-          }
-        ]
-      },
-      {
-        "name": "鱼小铺（悦荟旧址）",
-        "floor": "四层 恰恰谷",
-        "kind": "动漫／游戏周边",
-        "status": "closed",
-        "inactive": {
-          "reason": "relocated",
-          "history": "2025年开业报道有本址经营记录；原2026-10-18已读本人简介注明原迪美／悦荟、现华盛BE083；迁出时间未明确"
-        },
-        "note": "结合悦荟开业名单与原华盛研究本人现址，保留悦荟外迁旧店历史。现址华盛小亭BE083，经营主体仍在华盛；不把本人读取日或最后经营记录当迁出日，不表示品牌整体关闭。",
-        "sources": [
-          {
-            "label": "上海黄浦·悦荟四层恰恰谷开业报道",
-            "url": "https://m.thepaper.cn/newsDetail_forward_30762914",
-            "dateLabel": "发表于2025-05-02；原读取2026-10-17，本轮复用；开业历史，不代表当前营业"
-          },
-          {
-            "label": "鱼小铺online（接dg版）本人·当前地址与经营简介",
-            "url": "https://www.xiaohongshu.com/user/profile/64a24782000000001f004e0a",
-            "dateLabel": "本人主页未标发布日期；2026-10-18读取"
-          },
-          {
-            "label": "华盛小亭上新 火影忍者宇智波家族杯垫（主页／站内已读内容）",
-            "url": "https://www.xiaohongshu.com/explore/6ad43fa8000000002900acd2",
-            "dateLabel": "主页已读标题，未取得完整发帖日期；2026-10-18核对",
             "label": "繁花谷本人：鑫耀光环二期南区招聘",
             "url": "https://www.xiaohongshu.com/explore/6a2e087f000000001503c7d0",
             "date": "2026-06-14"
@@ -257,9 +271,6 @@
         "accounts": [
           {
             "platform": "xiaohongshu",
-            "name": "鱼小铺online（接dg版）",
-            "handle": "8936568830",
-            "url": "https://www.xiaohongshu.com/user/profile/64a24782000000001f004e0a",
             "name": "繁花很绚烂",
             "handle": "95270846380",
             "url": "https://www.xiaohongshu.com/user/profile/660e4409000000000600fee8",
