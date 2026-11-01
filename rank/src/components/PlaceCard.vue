@@ -20,8 +20,8 @@ defineProps<{ place: Place; rank?: number; badge: string; color: string; href: s
 <style scoped>
 .photo-card .card-link { height: auto; }
 .photo-card { position: relative; }
-.card-trip-add { position: absolute; top: 4px; right: 4px; z-index: 1; }
-@media (max-width: 580px) { .card-trip-add { top: 0; right: 0; } }
+.photo-card > .card-trip-add.trip-plan-add { position: absolute; top: 4px; right: 4px; z-index: 1; }
+@media (max-width: 580px) { .photo-card > .card-trip-add.trip-plan-add { top: 0; right: 0; } }
 .card-search-link { display: block; margin-top: 8px; padding: 10px; border: 1px solid #e5c5cc; border-radius: 4px; background: #fffdfa; }
 .card-search-link:hover { background: #fff0f3; }
 .card-search-link:focus-visible { outline: 3px solid #a83750; outline-offset: 3px; }
