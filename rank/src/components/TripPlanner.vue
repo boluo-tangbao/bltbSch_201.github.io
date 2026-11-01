@@ -23,6 +23,7 @@ const updatedAt = computed(() => [site.updatedAt, ...selectedPlaces.value.map(pl
 const rankingOpen = ref(false), documentUrl = ref('')
 const plannerOpen=ref(false)
 function openPlanner(){plannerOpen.value=true;dialog.value?.showModal()}
+function finishSelecting(){plan.setSelecting(false);if(stops.value.length)openPlanner()}
 function release() { if (documentUrl.value) URL.revokeObjectURL(documentUrl.value); documentUrl.value = '' }
 function exportPlan() { release(); documentUrl.value = URL.createObjectURL(new Blob([tripPlanHtml(stops.value, guideUrl, today.value)], { type: 'text/html;charset=utf-8' })) }
 function clear() { plan.clear();try{sessionStorage.removeItem('tangbao-trip-routing-session-v1')}catch{};dialog.value?.close() }
@@ -35,9 +36,10 @@ onBeforeUnmount(release)
 </script>
 
 <template>
-  <aside v-if="stops.length" class="trip-plan-dock" aria-label="本次逛店清单">
-    <div><strong>本次逛店清单 · {{ groups.length }} 站</strong><small>选店、规划路线，带着清单出发</small></div>
-    <button type="button" class="button dark" aria-haspopup="dialog" @click="openPlanner">整理与导出</button>
+  <button v-if="!stops.length&&!plan.selecting.value" type="button" class="trip-plan-launcher" @click="plan.setSelecting(true)"><span aria-hidden="true">↗</span> 规划逛店</button>
+  <aside v-if="stops.length||plan.selecting.value" class="trip-plan-dock" aria-label="本次逛店清单">
+    <div><strong>{{plan.selecting.value?'正在挑选想逛的地方':'本次逛店清单'}} · {{ groups.length }} 站</strong><small>{{plan.selecting.value?'点「想逛」选地点，也可进入介绍挑具体店铺':'选好下一站，带着清单出发'}}</small></div>
+    <div class="trip-dock-actions"><template v-if="plan.selecting.value"><button type="button" class="button dark" @click="finishSelecting">{{stops.length?'选好了，规划路线':'退出选店'}}</button></template><template v-else><button type="button" class="text-button" @click="plan.setSelecting(true)">继续选店</button><button type="button" class="button dark" aria-haspopup="dialog" @click="openPlanner">整理与导出</button></template></div>
   </aside>
   <dialog ref="dialog" class="trip-plan-dialog" aria-labelledby="trip-plan-title" @close="plannerOpen=false">
     <header class="trip-plan-heading"><div><p class="section-label">THIS TRIP</p><h2 id="trip-plan-title">本次逛店清单</h2></div><button type="button" class="trip-plan-close" aria-label="关闭本次清单" @click="dialog?.close()">×</button></header>
@@ -59,6 +61,10 @@ onBeforeUnmount(release)
 :global(body:has(.trip-plan-dock)) { padding-bottom: 100px; }
 .trip-plan-dock { position: fixed; z-index: 850; bottom: max(12px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: space-between; gap: 12px; width: min(760px, calc(100% - 28px)); padding: 12px 16px; border: 2px solid #292932; background: #fffaf1; box-shadow: 4px 4px 0 #efb1bb; }
 .trip-plan-dock > div { min-width: 0; }
+.trip-plan-launcher { position:fixed;z-index:850;right:20px;bottom:max(20px,env(safe-area-inset-bottom));display:flex;align-items:center;gap:8px;min-height:44px;padding:10px 18px;border:1px solid #a83750;border-radius:28px;background:#fffaf1;color:#84394e;font:inherit;font-size:14px;box-shadow:2px 3px 0 #efb1bb;cursor:pointer; }
+.trip-plan-launcher span { font-size:20px; }
+.trip-plan-launcher:focus-visible { outline:3px solid #a83750;outline-offset:4px; }
+.trip-dock-actions { display:flex;align-items:center;gap:10px;flex:none; }
 .trip-plan-dock strong { display: block; font-size: 15px; }
 .trip-plan-dock small { display: block; margin-top: 3px; color: #79626b; font-size: 12px; }
 .trip-plan-dock button { flex: none; min-height: 44px; }

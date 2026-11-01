@@ -7,7 +7,7 @@ const entry = computed(() => ({ placeId: props.placeId, ...(props.shopName ? { s
 </script>
 
 <template>
-  <button type="button" class="trip-plan-add" :aria-pressed="plan.contains(entry)" :aria-label="`${plan.contains(entry) ? '从本次清单移除' : '加入本次清单'}：${name}`" @click="plan.toggle(entry)">{{ plan.contains(entry) ? '✓ 已加入清单' : '＋ 加入本次清单' }}</button>
+  <button v-if="plan.selecting.value" type="button" class="trip-plan-add" :aria-pressed="plan.contains(entry)" :aria-label="`${plan.contains(entry) ? '从本次清单移除' : '加入本次清单'}：${name}`" @click="plan.toggle(entry)">{{ plan.contains(entry) ? '✓ 已选' : '＋ 想逛' }}</button>
 </template>
 
 <style scoped>

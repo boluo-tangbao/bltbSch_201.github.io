@@ -5,8 +5,13 @@ import { readTripEntries, tripEntryKey } from './tripPlan'
 const key = 'tangbao-trip-plan-session-v1'
 function read() { try { return readTripEntries(sessionStorage.getItem(key)) } catch { return [] } }
 const entries = ref<TripEntry[]>(read())
+const selectionKey = 'tangbao-trip-selecting-session-v1'
+function readSelecting(){try{return sessionStorage.getItem(selectionKey)==='true'}catch{return false}}
+const selecting = ref(readSelecting())
+function setSelecting(value:boolean){selecting.value=value;try{sessionStorage.setItem(selectionKey,String(value))}catch{}}
 let users = 0
 function restore() {
+  selecting.value=readSelecting()
   const next = read()
   if (JSON.stringify(next) !== JSON.stringify(entries.value)) entries.value = next
 }
@@ -32,5 +37,5 @@ export function useTripPlan() {
     next.splice(target, 0, item!)
     replace(next)
   }
-  return { entries: readonly(entries), contains, toggle, remove, move, replace, clear: () => replace([]) }
+  return { entries: readonly(entries), selecting:readonly(selecting),setSelecting, contains, toggle, remove, move, replace, clear: () => replace([]) }
 }
