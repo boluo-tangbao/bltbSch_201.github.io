@@ -10,6 +10,7 @@ import {resolveTripStops,tripEntryKey,tripStopUrl,type TripEntry} from '../utils
 import {shopDisplayStatus,shopStatusLabel} from '../utils/shopDirectory'
 import {baiduMapConfigured} from '../utils/baiduMaps'
 import {queryTripOptions} from '../utils/baiduTripRoutes'
+import {mallHours} from '../utils/mallHours'
 import {chinaDateTime,chooseRoute,evaluateTrip,formatTripTime,groupTripStops,legKey,modeNames,optimizeTrip,parseDeparture,type ModePreference,type RouteMatrix,type TripGroup,type VisitSetting} from '../utils/tripRouting'
 import TripRouteMap from './TripRouteMap.vue'
 import CopyButton from './CopyButton.vue'
@@ -38,13 +39,16 @@ function validPrefix(){return completedPrefix.value.length>1&&completedPrefix.va
 const completed=computed(()=>validPrefix()?completedPrefix.value.length-1:0)
 if(validPrefix())selected.value=groups.value[completed.value]?.id||selected.value
 function save(){try{sessionStorage.setItem(metadataKey,JSON.stringify({prefix:completedPrefix.value,modes,visits}))}catch{}}
-const settings=computed(()=>({start:parseDeparture(departure.value),completed:completed.value,modes,visits}))
+const effectiveVisits=computed(()=>Object.fromEntries(groups.value.map(g=>[g.id,{...visit(g.id),earlyShopClose:!visits[g.id]?.close}])))
+const settings=computed(()=>({start:parseDeparture(departure.value),completed:completed.value,modes,visits:effectiveVisits.value}))
 const evaluation=computed(()=>evaluateTrip(groups.value,matrix.value,settings.value))
 const activeIndex=computed(()=>groups.value.findIndex(g=>g.id===active.value?.id))
 const nextLeg=computed(()=>evaluation.value.legs[activeIndex.value])
-const riskLabel=(risk:string)=>({unknown:'闭店时间未核对，风险待确认',closed:'预计到达时已闭店',during:'预计逛店期间可能闭店',tight:'距填写的闭店时间不足15分钟',ok:'按本次填写的闭店时间可逛'}[risk]||'')
-function visit(id:string){return visits[id]||{minutes:30}}
-function setVisit(id:string,field:'close'|'minutes',event:Event){const input=event.target as HTMLInputElement;if(!input.reportValidity())return;visits[id]={...visit(id),[field]:field==='minutes'?Number(input.value):input.value};save();void analyse(true)}
+const riskLabel=(risk:string)=>({unknown:'目标店闭店时间未核对，风险待确认',closed:'预计到达时已超过参考截止',during:'预计逛店期间可能超过参考截止',tight:'距参考截止不足15分钟',ok:'未超过参考截止，目标店营业仍需确认'}[risk]||'')
+function visit(id:string){return {minutes:visits[id]?.minutes??30,close:visits[id]?.close??mallHours(id).close}}
+function hoursLabel(id:string){return visits[id]?.close?'本次自填截止':mallHours(id).label}
+function setVisit(id:string,field:'close'|'minutes',event:Event){const input=event.target as HTMLInputElement;if(!input.reportValidity())return;visits[id]={...visits[id],minutes:visits[id]?.minutes??30,[field]:field==='minutes'?Number(input.value):input.value||undefined};save();void analyse(true)}
+function resetClose(id:string){delete visits[id]?.close;save();void analyse(true)}
 function readClock(){departure.value=chinaDateTime();clockRead.value=`系统时间 ${departure.value.replace('T',' ')}（上海）`}
 function manualTime(){clockRead.value='本次手动出发时间；刷新或完成路段后读取新的系统时间。';void analyse(false)}
 function replaceOrder(order:TripGroup[]){plan.replace(order.flatMap(g=>g.entries.map(({placeId,shopName,custom})=>({placeId,...(shopName?{shopName}:{}),...(custom?{custom}:{})}))))}
@@ -79,11 +83,11 @@ async function analyse(optimize=false,force=false){
       if(result.status==='optimal'||result.status==='risk'){
         replaceOrder(result.groups)
         const incompleteModes=pairs.some(([a,b])=>(matrix.value[legKey(a.id,b.id)]||[]).length<3)
-        message.value=result.status==='risk'?'已优先减少闭店风险，仍有站点可能赶不上。':`已按本次${incompleteModes?'可用的':'地图返回的'}交通方案安排建议顺序，起点保持固定。`
+        message.value=result.status==='risk'?'已优先减少超过参考截止的风险，仍有站点可能赶不上。':`已按本次${incompleteModes?'可用的':'地图返回的'}交通方案安排建议顺序，起点保持固定。`
       }else message.value=result.status==='too-many'?'超过8站，保留当前顺序并查询逐段通勤；可手动调整。':'部分路线未知，保留当前顺序，无法确认最优路线。'
     }
     if(!evaluation.value.complete)message.value+=' 有路段尚未查到时间，完整总耗时待补齐。'
-    if(groups.value.some(g=>!visits[g.id]?.close))message.value+=' 部分闭店时间未核对。'
+    if(groups.value.some(g=>!visits[g.id]?.close&&mallHours(g.id).kind!=='published'))message.value+=' 部分商场时间仍待核，暂用规划参考。'
   }catch{if(current===revision)message.value='地图暂时未返回有效路线，请稍后重新计算；没有使用估造耗时。'}
   finally{if(current===revision){busy.value=false;progress.value=''}}
 }
@@ -141,7 +145,7 @@ const nextOptions=computed(()=>nextLeg.value?matrix.value[nextLeg.value.key]||[]
       <ul class="selected-shops"><li v-for="entry in group.entries.filter(e=>e.shopName||e.custom)" :key="tripEntryKey(entry)"><div>{{entry.name}} <span v-if="entry.custom" class="tag">自填</span><small>{{entry.floor}}<template v-if="entry.period"> · {{entry.status}} · {{entry.period}}</template><template v-if="entry.custom?.note"> · {{entry.custom.note}}</template></small></div><button type="button" :aria-label="`移除店铺：${entry.name}`" @click="plan.remove(entry)">×</button></li></ul>
       <p v-if="!group.entries.some(e=>e.shopName)" class="muted">先逛整个商圈</p>
       <div class="journey-actions"><button type="button" class="link-button" @click="openCustom(group)">＋ 补一间店</button><a v-if="group.place" :href="tripStopUrl({placeId:group.id},guideUrl)" @click="emit('details')">地点详情 ↗</a><a v-if="group.entries[0]?.navigation" :href="group.entries[0].navigation!" target="_blank" rel="noopener noreferrer">外部导航 ↗</a></div>
-      <div class="visit-settings"><label>本次填写闭店<input type="time" :value="visit(group.id).close||''" @change="setVisit(group.id,'close',$event)"></label><label>逛店（分钟）<input type="number" min="0" max="240" :value="visit(group.id).minutes" @change="setVisit(group.id,'minutes',$event)"></label></div><p class="muted">网站尚未核对每日闭店时间；本次填写仅用于你的行程。</p>
+      <div class="visit-settings"><label>本次截止（可改）<input type="time" :value="visit(group.id).close||''" @change="setVisit(group.id,'close',$event)"></label><label>逛店（分钟）<input type="number" min="0" max="240" :value="visit(group.id).minutes" @change="setVisit(group.id,'minutes',$event)"></label></div><p class="muted">{{hoursLabel(group.id)}}<template v-if="visit(group.id).close"> · {{visit(group.id).close}}</template>。商场时间不代表每家店；部分店可能20:00提前收店。</p><p v-if="mallHours(group.id).source" class="muted"><a :href="mallHours(group.id).source!.url" target="_blank" rel="noopener noreferrer">{{mallHours(group.id).source!.label}} ↗</a> · 读取 {{mallHours(group.id).checkedAt}}</p><button v-if="visits[group.id]?.close" type="button" class="link-button" @click="resetClose(group.id)">恢复商场参考</button>
       <div class="journey-actions stop-order"><button type="button" :aria-label="`上移：${group.name}`" :disabled="index===0||(completed>0&&index<=completed+1)" @click="move(index,-1)">↑ 上移</button><button type="button" :aria-label="`下移：${group.name}`" :disabled="index===groups.length-1||(completed>0&&index<=completed)" @click="move(index,1)">↓ 下移</button><button type="button" :disabled="completed>0&&index<=completed" @click="removeGroup(index)">移除此站</button></div>
      </div>
     </li>
@@ -153,9 +157,9 @@ const nextOptions=computed(()=>nextLeg.value?matrix.value[nextLeg.value.key]||[]
   </div>
   <section class="journey-commute" aria-label="完整通勤时间"><h3>这一路，要花多久？</h3><div class="journey-actions departure-controls"><label>出发时间（上海时间）<input v-model="departure" type="datetime-local" step="1" required aria-label="出发时间（上海时间）" @change="manualTime"></label><button type="button" :disabled="busy" @click="analyse(false,true)">重新计算时间</button><button type="button" :disabled="busy" @click="analyse(true)">重新优化顺序</button><button v-if="completed" type="button" class="link-button" @click="resetProgress">重置完成进度</button></div>
    <p class="muted">{{clockRead}}</p><p class="journey-status" role="status">{{busy?progress:message}}</p>
-   <div v-for="leg in evaluation.legs" :key="leg.key" class="journey-leg" :class="{'is-done':leg.done}"><div><p>{{leg.index+1}}. {{leg.from.name}} → {{leg.to.name}}</p><p v-if="leg.done" class="muted">已结束这段旅途</p><template v-else><p v-if="leg.choice" class="muted">地图估时 {{Math.ceil(leg.choice.seconds/60)}} 分钟 · {{formatTripTime(leg.departure)}} 出发 → {{formatTripTime(leg.arrival)}} 到达</p><p v-else class="muted">{{busy?'正在查询…':'此段暂未查到时间，请在地图确认。'}}</p><p :class="['closed','during','tight'].includes(leg.risk)?'journey-warning':'muted'">{{leg.arrival===null?'前段时间待补齐，闭店风险尚不能确定':riskLabel(leg.risk)}}<template v-if="leg.close"> · 本次填写 {{formatTripTime(leg.close)}}</template></p></template></div><div class="leg-controls"><select :aria-label="`第${leg.index+1}段交通方式`" :value="modes[leg.key]||'auto'" :disabled="leg.done" @change="setMode(leg.key,$event)"><option v-for="(name,key) in modeNames" :key="key" :value="key">{{name}}</option></select><button type="button" :disabled="leg.done" @click="complete(leg.index)">{{leg.done?'✓ 已完成':'已完成'}}</button></div></div>
+   <div v-for="leg in evaluation.legs" :key="leg.key" class="journey-leg" :class="{'is-done':leg.done}"><div><p>{{leg.index+1}}. {{leg.from.name}} → {{leg.to.name}}</p><p v-if="leg.done" class="muted">已结束这段旅途</p><template v-else><p v-if="leg.choice" class="muted">地图估时 {{Math.ceil(leg.choice.seconds/60)}} 分钟 · {{formatTripTime(leg.departure)}} 出发 → {{formatTripTime(leg.arrival)}} 到达</p><p v-else class="muted">{{busy?'正在查询…':'此段暂未查到时间，请在地图确认。'}}</p><p :class="['closed','during','tight'].includes(leg.risk)?'journey-warning':'muted'">{{leg.arrival===null?'前段时间待补齐，闭店风险尚不能确定':riskLabel(leg.risk)}}<template v-if="leg.close"> · {{hoursLabel(leg.to.id)}} {{formatTripTime(leg.close)}}</template></p><p v-if="leg.earlyShopWarning" class="journey-warning">预计逛店跨过20:00，部分店可能提前收店，请先确认目标店。</p></template></div><div class="leg-controls"><select :aria-label="`第${leg.index+1}段交通方式`" :value="modes[leg.key]||'auto'" :disabled="leg.done" @change="setMode(leg.key,$event)"><option v-for="(name,key) in modeNames" :key="key" :value="key">{{name}}</option></select><button type="button" :disabled="leg.done" @click="complete(leg.index)">{{leg.done?'✓ 已完成':'已完成'}}</button></div></div>
    <div class="journey-total" aria-live="polite"><strong v-if="evaluation.legs.length&&completed===evaluation.legs.length">本次行程已完成</strong><template v-else><span>剩余通勤</span><strong>{{evaluation.complete&&Number.isFinite(settings.start)?`约 ${Math.ceil(evaluation.knownSeconds/60)} 分钟`:'全程尚未算完整'}}</strong><span v-if="!evaluation.complete">已知部分 {{Math.ceil(evaluation.knownSeconds/60)}} 分钟</span></template><small>已完成 {{completed}} / {{evaluation.legs.length}} 段<template v-if="evaluation.risks.length"> · {{evaluation.risks.length}} 站存在闭店风险</template></small></div>
-   <p class="muted">总通勤不含逛店停留；后续到达时间包含预计停留。地图返回当前估时，不代表预约时刻的公交预测。点击“已完成”表示准备从该段终点继续，之前各段一并完成。8站以内基于本次可用地图方案比较顺序。</p>
+   <p class="muted">总通勤不含逛店停留；后续到达时间包含预计停留。地图返回当前估时，不代表预约时刻的公交预测。点击“已完成”表示准备从该段终点继续，之前各段一并完成。8站以内基于本次可用地图方案比较顺序；先减少超过参考截止的风险，再减少20:00提前收店提醒，最后比较通勤。商场公开时间及临时参考均不是逐店营业保证。</p>
   </section>
   <dialog ref="catalog" class="journey-dialog" aria-labelledby="journey-catalog-title"><header><h3 id="journey-catalog-title">从榜单添加 · {{catalogCity}}</h3><button type="button" @click="catalog?.close()">关闭</button></header>
    <template v-if="!focusedPlace"><p class="muted">以 {{props.places.find(p=>p.id===catalogAnchor)?.name||'当前站（未定位）'}} 为中心 · 仅限同城</p><div class="journey-actions"><strong>{{scope==='within3km'?'周围3公里':scope==='within5km'?'周围5公里':'全城'}}</strong><button type="button" :disabled="scope==='wholeCity'" @click="expand">{{scope==='within3km'?'扩大到5公里':scope==='within5km'?'扩大到全城':'已显示全城'}}</button></div><label>搜索同城店铺或商圈<input v-model="term" type="search" maxlength="80" @input="placeLimit=5"></label><p class="muted">{{candidates.length}} 处匹配地点 · 附近范围按预存直线距离筛选</p><p v-if="!nearby[catalogAnchor]&&scope!=='wholeCity'" class="muted">当前站缺少预存坐标，请扩大到全城。</p><div class="catalog-grid"><article v-for="place in candidates.slice(0,placeLimit)" :key="place.id"><h4>{{place.name}}</h4><p class="muted">{{place.city}}<template v-if="nearby[catalogAnchor]?.meters[place.id]!==undefined"> · 直线约 {{(nearby[catalogAnchor]!.meters[place.id]!/1000).toFixed(1)}} 公里</template></p><div class="journey-actions"><button type="button" :disabled="has(place)" @click="add(place)">{{has(place)?'已加入':'逛此商圈'}}</button><button v-if="shops(place).length" type="button" @click="focus(place)">选具体店铺（{{shops(place).length}}）</button></div></article></div><p v-if="!candidates.length" class="muted">当前范围无匹配内容，可扩大范围或自己补一站。</p><button v-if="candidates.length>placeLimit" type="button" @click="placeLimit+=5">再看5处</button></template>

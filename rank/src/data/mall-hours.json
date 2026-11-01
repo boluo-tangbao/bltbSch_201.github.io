@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-31",
+  "mallPlaceIds": ["shanghai-shop-001", "shanghai-shop-002", "shanghai-shop-003", "shanghai-shop-004", "shanghai-shop-005", "shanghai-shop-006", "shanghai-shop-007", "shanghai-shop-008", "shanghai-shop-009", "shanghai-shop-011", "shanghai-shop-012", "shanghai-shop-013", "shanghai-shop-014", "shanghai-shop-015", "shanghai-shop-016", "shanghai-shop-017", "shanghai-shop-018", "shanghai-shop-020", "shanghai-shop-022", "guangzhou-shop-001", "guangzhou-shop-002", "guangzhou-shop-003", "guangzhou-shop-004", "suzhou-shop-001", "suzhou-shop-002", "suzhou-shop-003"],
+  "bailianFallbackIds": ["shanghai-shop-002", "shanghai-shop-006", "shanghai-shop-020"],
+  "fallback": {"close": "21:00", "bailianClose": "22:00", "providedBy": "user", "providedAt": "2026-10-31", "note": "用户提供的一般规划参考，尚非逐商场确认。"},
+  "references": {
+    "shanghai-shop-002": {"close": "22:00", "label": "上海市政府·百联ZX", "url": "https://japanese.shanghai.gov.cn/ja-ShoppingCenters/20240320/9f991649efb247b9a75caa69a2d0f154.html", "publishedAt": "2024-03-20", "quote": "営業時間：10:00 - 22:00", "note": "南京东路340—372号百联ZX创趣场；不套用于五角场分店。"},
+    "shanghai-shop-008": {"close": "22:00", "label": "上海市文旅推广网·静安大悦城", "url": "https://www.meet-in-shanghai.net/cn/shopping/jingan-joy-city-447026/", "publishedAt": "未标注明确发布日期", "quote": "开放时间 10:00-22:00", "note": "商场主体时间；夜食天台延时不代表谷店延时。"},
+    "shanghai-shop-015": {"close": "22:00", "label": "徐汇区政府·美罗城", "url": "https://www.xuhui.gov.cn/gzfw_cssh_gw/20200319/247793.html", "publishedAt": "2024-03-25", "quote": "周一—周日10:00-22:00", "note": "当前仍可读取的官方介绍，原页标注2024-03-25；不是逐店最新公告。"},
+    "shanghai-shop-018": {"close": "22:00", "label": "上海市政府·一路清凉！来普陀逛逛逛！", "url": "https://www.shanghai.gov.cn/nw17239/20250916/6fff6f7588ec42c087304f3dcb3c9995.html", "publishedAt": "2025-09-16", "quote": "营业时间：10:00-22:00", "note": "上海环球港段，地址中山北路3300号；不采用跨年、餐饮延时。"}
+  }
+}

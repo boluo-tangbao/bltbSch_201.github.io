@@ -6,7 +6,7 @@ export type TravelMode = 'walk'|'bus'|'car'
 export type ModePreference = TravelMode|'auto'
 export interface RouteChoice {mode:TravelMode;seconds:number;meters:number;paths:Array<Array<{lng:number;lat:number}>>;queriedAt:number}
 export interface TripGroup {id:string;name:string;city:string;address:string;place?:Place;entries:TripStop[]}
-export interface VisitSetting {close?:string;minutes:number}
+export interface VisitSetting {close?:string;minutes:number;earlyShopClose?:boolean}
 export type RouteMatrix = Record<string,RouteChoice[]>
 export const legKey=(a:string,b:string)=>JSON.stringify([a,b])
 export const modeNames:Record<ModePreference,string>={auto:'最快方式',walk:'步行',bus:'公共交通',car:'驾车'}
@@ -26,7 +26,7 @@ export function chinaDateTime(now=new Date()){
 export function parseDeparture(value:string){return new Date(`${value}+08:00`).getTime()}
 export function formatTripTime(value:number|null){return value===null?'时间待定':chinaDateTime(new Date(value)).slice(5).replace('T',' ')}
 export interface RoutingSettings {start:number;completed:number;modes:Record<string,ModePreference>;visits:Record<string,VisitSetting>}
-export interface TripLeg {key:string;index:number;from:TripGroup;to:TripGroup;done:boolean;choice?:RouteChoice;departure:number|null;arrival:number|null;close:number|null;risk:'unknown'|'ok'|'closed'|'during'|'tight'}
+export interface TripLeg {key:string;index:number;from:TripGroup;to:TripGroup;done:boolean;choice?:RouteChoice;departure:number|null;arrival:number|null;close:number|null;earlyShopWarning?:boolean;risk:'unknown'|'ok'|'closed'|'during'|'tight'}
 export function evaluateTrip(groups:TripGroup[],matrix:RouteMatrix,settings:RoutingSettings){
   let clock=settings.start,uncertain=!Number.isFinite(clock),seconds=0;const legs:TripLeg[]=[]
   const date=Number.isFinite(clock)?chinaDateTime(new Date(clock)).slice(0,10):''
@@ -40,13 +40,15 @@ export function evaluateTrip(groups:TripGroup[],matrix:RouteMatrix,settings:Rout
     const visit=settings.visits[to.id],stay=(visit?.minutes??30)*60000
     if(visit?.close&&/^([01]\d|2[0-3]):[0-5]\d$/.test(visit.close))leg.close=new Date(`${date}T${visit.close}:00+08:00`).getTime()
     clock=leg.arrival+stay
+    const earlyClose=new Date(`${date}T20:00:00+08:00`).getTime()
+    leg.earlyShopWarning=!!visit?.earlyShopClose&&(leg.arrival>=earlyClose||clock>earlyClose)
     if(leg.close!==null)leg.risk=leg.arrival>=leg.close?'closed':clock>leg.close?'during':leg.close-clock<900000?'tight':'ok'
     legs.push(leg)
   }
   const remaining=legs.filter(l=>!l.done),risks=remaining.filter(l=>l.risk==='closed'||l.risk==='during')
   const missing=remaining.filter(l=>!l.choice).length
   return {legs,risks,complete:!missing&&Number.isFinite(settings.start),totalSeconds:missing?null:seconds,knownSeconds:seconds,
-    score:[missing,risks.length,risks.reduce((sum,l)=>sum+Math.max(0,(l.arrival!+(settings.visits[l.to.id]?.minutes??30)*60000)-l.close!),0),seconds]}
+    score:[missing,risks.length,risks.reduce((sum,l)=>sum+Math.max(0,(l.arrival!+(settings.visits[l.to.id]?.minutes??30)*60000)-l.close!),0),remaining.filter(l=>l.earlyShopWarning).length,seconds]}
 }
 export function optimizeTrip(groups:TripGroup[],matrix:RouteMatrix,settings:RoutingSettings){
   const fixed=groups.slice(0,settings.completed+1),remaining=groups.slice(settings.completed+1)

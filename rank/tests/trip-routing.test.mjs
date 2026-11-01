@@ -4,11 +4,44 @@ import {readFileSync} from 'node:fs'
 import {chinaDateTime,parseDeparture,groupTripStops,chooseRoute,evaluateTrip,optimizeTrip,legKey} from '../src/utils/tripRouting.ts'
 import {readTripEntries,resolveTripStops,tripPlanHtml} from '../src/utils/tripPlan.ts'
 import {parseRouteResult,queryTripOptions} from '../src/utils/baiduTripRoutes.ts'
+import {mallHours} from '../src/utils/mallHours.ts'
 const group=id=>({id,name:id,city:'上海',address:'公开测试地点',entries:[]})
 const choice=(mode,seconds)=>({mode,seconds,meters:100,paths:[],queriedAt:0})
 const start=parseDeparture('2026-11-01T12:00:00'),settings={start,completed:0,modes:{},visits:{b:{minutes:30},c:{minutes:30,close:'12:50'}}}
 const groups=['a','b','c'].map(group),matrix={}
 for(const a of groups)for(const b of groups)if(a!==b)matrix[legKey(a.id,b.id)]=[choice('walk',a.id==='a'&&b.id==='c'?600:300),choice('car',900)]
+
+test('mall references distinguish published times, owner planning defaults and places without one closing time',()=>{
+ assert.equal(mallHours('shanghai-shop-002').kind,'published')
+ assert.equal(mallHours('shanghai-shop-002').close,'22:00')
+ assert.equal(mallHours('shanghai-shop-006').kind,'fallback')
+ assert.equal(mallHours('shanghai-shop-006').close,'22:00')
+ assert.equal(mallHours('shanghai-shop-001').close,'21:00')
+ assert.equal(mallHours('shanghai-shop-010').close,undefined)
+ assert.equal(mallHours('guangzhou-shop-005').close,undefined)
+ assert.equal(mallHours('personal-unknown').close,undefined)
+ const places=JSON.parse(readFileSync(new URL('../src/data/places.json',import.meta.url),'utf8'))
+ const ids=new Set(Object.values(places).flat().map(p=>p.id))
+ const hours=JSON.parse(readFileSync(new URL('../src/data/mall-hours.json',import.meta.url),'utf8'))
+ assert(hours.mallPlaceIds.every(id=>ids.has(id)))
+ for(const source of Object.values(hours.references))assert(source.url.startsWith('https://')&&source.quote&&source.publishedAt)
+})
+
+test('20:00 is a potential shop warning, not an invented hard closing time; optimizer considers it',()=>{
+ const visits={b:{minutes:30,close:'22:00',earlyShopClose:true},c:{minutes:30,close:'22:00',earlyShopClose:true}}
+ const evening={...settings,start:parseDeparture('2026-11-01T19:00:00'),visits}
+ const routes={...matrix,[legKey('a','b')]:[choice('walk',1200)],[legKey('a','c')]:[choice('walk',300)]}
+ const current=evaluateTrip(groups,routes,evening)
+ assert.equal(current.legs[0].earlyShopWarning,false)
+ assert.equal(current.legs[1].earlyShopWarning,true)
+ assert.equal(current.legs[1].risk,'ok')
+ assert.deepEqual(optimizeTrip(groups,routes,evening).groups.map(g=>g.id),['a','c','b'])
+ const boundary=evaluateTrip(groups.slice(0,2),matrix,{...evening,start:parseDeparture('2026-11-01T19:25:00')})
+ assert.equal(boundary.legs[0].earlyShopWarning,false)
+ const refreshed=evaluateTrip(groups,routes,{...evening,completed:1,start:parseDeparture('2026-11-01T20:00:00')})
+ assert(refreshed.legs[0].done);assert(refreshed.legs[1].earlyShopWarning)
+ assert.equal(refreshed.legs[1].departure,parseDeparture('2026-11-01T20:00:00'))
+})
 test('closing windows outrank the shortest unconstrained order; completed prefix and chosen modes are preserved',()=>{
  assert.equal(chooseRoute(matrix,'a','b').mode,'walk')
  assert.equal(chooseRoute(matrix,'a','b','car').seconds,900)
