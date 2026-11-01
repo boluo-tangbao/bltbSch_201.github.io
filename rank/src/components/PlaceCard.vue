@@ -13,13 +13,15 @@ defineProps<{ place: Place; rank?: number; badge: string; color: string; href: s
       <div class="photo-caption"><span>{{ place.name }}</span><small>{{ place.city }}<span v-if="rank" class="rank-number"> · #{{ rank }}</span><span v-if="badge"> · {{ badge }}</span></small></div>
     </a>
     <a v-if="match" :href="href" class="card-search-link" :aria-label="`${place.name}的搜索匹配说明，查看详情`"><SearchMatch :match="match" /></a>
-    <TripPlanButton :place-id="place.id" :name="place.name" class="card-trip-add" />
+    <TripPlanButton :place-id="place.id" :name="place.name" icon-only class="card-trip-add" />
   </article>
 </template>
 
 <style scoped>
 .photo-card .card-link { height: auto; }
-.card-trip-add { margin-top: 8px; width: 100%; }
+.photo-card { position: relative; }
+.card-trip-add { position: absolute; top: 10px; right: 10px; z-index: 1; }
+@media (max-width: 580px) { .card-trip-add { top: 6px; right: 6px; } }
 .card-search-link { display: block; margin-top: 8px; padding: 10px; border: 1px solid #e5c5cc; border-radius: 4px; background: #fffdfa; }
 .card-search-link:hover { background: #fff0f3; }
 .card-search-link:focus-visible { outline: 3px solid #a83750; outline-offset: 3px; }

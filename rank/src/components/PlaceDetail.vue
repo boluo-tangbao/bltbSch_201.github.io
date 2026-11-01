@@ -122,7 +122,7 @@ onBeforeUnmount(() => {
   <article class="guide-detail has-chapters" :style="{ '--city-color': color }">
     <header class="detail-heading">
       <p class="detail-kicker"><i class="city-dot" :style="{ background: color }"></i><span>{{ place.city }}</span><span aria-hidden="true">/</span><span>{{ tierLabel(place.tier) }}</span><span v-if="rank" aria-hidden="true">/</span><span v-if="rank">档内第 {{ rank }} 名</span></p>
-      <h1 :id="targetId({ kind: 'heading' })" tabindex="-1">{{ place.name }}</h1><p :id="targetId({ kind: 'summary' })" tabindex="-1" class="detail-summary">{{ place.summary }}</p>
+      <div class="detail-title-row"><h1 :id="targetId({ kind: 'heading' })" tabindex="-1">{{ place.name }}</h1><TripPlanButton :place-id="place.id" :name="place.name" /></div><p :id="targetId({ kind: 'summary' })" tabindex="-1" class="detail-summary">{{ place.summary }}</p>
       <div class="detail-timeliness" aria-label="信息日期">
         <dl class="detail-date-grid">
           <div><dt>体验到访</dt><dd><time v-if="place.visitedAt" :datetime="place.visitedAt">{{ place.visitedAt }}</time><span v-else>未记录</span></dd><small>作者实地逛店的记录日期</small></div>
@@ -133,7 +133,6 @@ onBeforeUnmount(() => {
       </div>
       <div v-if="address" class="detail-facts detail-address"><span><small>地址</small>{{ address }}</span></div>
       <div v-if="place.tags.length" class="tags detail-tags" aria-label="逛店地点标签"><span v-for="item in place.tags" :key="item"># {{ item }}</span></div>
-      <TripPlanButton :place-id="place.id" :name="place.name" />
     </header>
     <nav ref="chapterNav" class="detail-chapters" aria-label="地点章节导航">
       <button v-for="chapter in chapters" :key="chapter.key" type="button" :aria-controls="chapterId(chapter.key)" :aria-current="activeChapter === chapter.key ? 'location' : undefined" @click="goToChapter(chapter.key)">{{ chapter.label }}</button>
@@ -199,6 +198,8 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
+.detail-title-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.detail-title-row h1 { min-width: 0; }
 .guide-detail.has-chapters { overflow: visible; }
 .detail-chapters { position: sticky; top: 0; z-index: 600; display: flex; gap: 4px; overflow-x: auto; padding: 6px 16px; border-top: 1px solid #dfb8c3; border-bottom: 1px solid #dfb8c3; background: var(--manga-paper, #fffaf1); }
 .detail-chapters button { flex: none; min-height: 44px; padding: 7px 14px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: #755d6a; font: inherit; font-size: 13px; font-weight: 700; }

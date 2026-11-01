@@ -38,7 +38,7 @@ onBeforeUnmount(release)
 <template>
   <button v-if="!stops.length&&!plan.selecting.value" type="button" class="trip-plan-launcher" @click="plan.setSelecting(true)"><span aria-hidden="true">↗</span> 规划逛店</button>
   <aside v-if="stops.length||plan.selecting.value" class="trip-plan-dock" aria-label="本次逛店清单">
-    <div><strong>{{plan.selecting.value?'正在挑选想逛的地方':'本次逛店清单'}} · {{ groups.length }} 站</strong><small>{{plan.selecting.value?'点「想逛」选地点，也可进入介绍挑具体店铺':'选好下一站，带着清单出发'}}</small></div>
+    <div><strong>{{plan.selecting.value?'正在挑选想逛的地方':'本次逛店清单'}} · {{ groups.length }} 站</strong><small>{{plan.selecting.value?'点心形加入清单，也可进入介绍挑具体店铺':'选好下一站，带着清单出发'}}</small></div>
     <div class="trip-dock-actions"><template v-if="plan.selecting.value"><button type="button" class="button dark" @click="finishSelecting">{{stops.length?'选好了，规划路线':'退出选店'}}</button></template><template v-else><button type="button" class="text-button" @click="plan.setSelecting(true)">继续选店</button><button type="button" class="button dark" aria-haspopup="dialog" @click="openPlanner">整理与导出</button></template></div>
   </aside>
   <dialog ref="dialog" class="trip-plan-dialog" aria-labelledby="trip-plan-title" @close="plannerOpen=false">

@@ -66,7 +66,7 @@ defineExpose({ revealShop })
     <p v-if="group.more && bucket.key === 'history'" class="shop-history-intro">保留曾被探店、攻略或实访收录的记录，当前营业尚未确认。</p>
     <ul class="shop-list">
       <li v-for="(shop, index) in bucket.shops" v-show="index < visibleCount(section.key, group.more, bucket.key)" :id="placeId ? searchTargetId(placeId, { kind: 'shop', name: shop.name }) : undefined" :key="shop.name" class="shop-row" tabindex="-1">
-        <div class="shop-row-title"><div class="shop-name-location"><h4>{{ shop.name }}</h4><span v-if="shop.floor" class="shop-location"><template v-if="shop.inactive">原位置：</template>{{ shop.floor }}</span></div><span class="shop-status" :class="'is-' + shop.displayStatus">{{ shop.statusText }}</span></div>
+        <div class="shop-row-title"><div class="shop-name-location"><h4>{{ shop.name }}</h4><span v-if="shop.floor" class="shop-location"><template v-if="shop.inactive">原位置：</template>{{ shop.floor }}</span></div><span class="shop-status" :class="'is-' + shop.displayStatus">{{ shop.statusText }}</span><a v-if="placeId" class="shop-correction" :href="shopFeedbackUrl(base, placeId, shop.name)" :aria-label="`${shop.name}：反馈纠错`" title="反馈这家店的信息"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5 4 4M4 20l4.5-1L20 7.5a2.8 2.8 0 0 0-4-4L4.5 15Z" /></svg></a></div>
         <p v-if="shop.description" class="shop-description">{{ shop.description }}</p>
         <dl v-if="shop.kind || shop.limited || shop.inactive" class="shop-facts">
           <template v-if="shop.inactive"><dt>营业历史</dt><dd class="shop-history">{{ shop.inactive.history }}</dd></template>
@@ -88,7 +88,7 @@ defineExpose({ revealShop })
         <ul v-if="shop.accounts?.length" class="shop-accounts" :aria-label="shop.name + (shop.inactive ? '的原账号' : '的官方账号')">
           <li v-for="account in shop.accounts" :key="account.platform + account.url"><a :href="account.url" target="_blank" rel="noopener noreferrer"><b>{{ platformLabel[account.platform] }}</b><span>{{ account.name }}<small v-if="account.handle">号：{{ account.handle }}</small></span><em v-if="account.scope === 'brand'">品牌号</em><span aria-hidden="true">↗</span></a></li>
         </ul>
-        <div v-if="placeId" class="shop-feedback"><TripPlanButton v-if="shop.displayStatus === 'open'" :place-id="placeId" :name="shop.name" :shop-name="shop.name" /><a :href="shopFeedbackUrl(base, placeId, shop.name)" :aria-label="`${shop.name}：信息有变化`">信息有变化？反馈纠错 →</a></div>
+        <TripPlanButton v-if="placeId && shop.displayStatus === 'open'" class="shop-trip-add" :place-id="placeId" :name="shop.name" :shop-name="shop.name" />
       </li>
     </ul>
     <div v-if="bucket.shops.length > visibleCount(section.key, group.more, bucket.key)" class="shop-expand-actions">
@@ -127,8 +127,11 @@ defineExpose({ revealShop })
 .shop-list,.shop-accounts { list-style: none; padding: 0; margin: 0; }
 .shop-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 12px; }
 .shop-row { min-width: 0; padding: 16px; border: 1px solid #e5c5cc; background: #fffdfa; }
-.shop-feedback { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; border-top: 1px dashed #e5c5cc; padding-top: 6px; }
-.shop-feedback a { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; color: #84394e; font-size: 12px; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.shop-trip-add { margin-top: 14px; }
+.shop-correction { display: inline-flex; flex: none; align-items: center; justify-content: center; width: 44px; height: 44px; margin: -6px -8px 0 -3px; border-radius: 50%; color: #8b7b81; }
+.shop-correction svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.shop-correction:hover { color: #a83750; background: #fff0f4; }
+.shop-correction:focus-visible { outline: 2px solid #a83750; outline-offset: 2px; }
 .shop-row { scroll-margin-top: 80px; }
 .shop-row:focus { outline: 2px solid #a83750; outline-offset: 3px; }
 .shop-row-title { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }

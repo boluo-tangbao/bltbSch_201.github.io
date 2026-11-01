@@ -18,7 +18,7 @@ for (const width of [390, 1440]) {
     await context.route('https://github.com/**', route => route.fulfill({ contentType: 'text/html', body: '<h1>Test destination</h1>' }))
     await page.goto(base + (width === 390 ? 'guide/' : '') + placeDetailHash(placeId, shop.name))
     const row = page.locator('.shop-row').filter({ has: page.getByRole('heading', { name: shop.name, exact: true }) })
-    await row.getByRole('link', { name: `${shop.name}：信息有变化`, exact: true }).click()
+    await row.getByRole('link', { name: `${shop.name}：反馈纠错`, exact: true }).click()
     await expect(page.getByRole('heading', { name: '店铺信息纠错', exact: true })).toBeVisible()
     await expect(page.locator('.feedback-context')).toContainText(shop.name)
     await expect(page.locator('.feedback-context')).toContainText('广州')
