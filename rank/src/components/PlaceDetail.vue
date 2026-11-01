@@ -123,7 +123,15 @@ onBeforeUnmount(() => {
     <header class="detail-heading">
       <p class="detail-kicker"><i class="city-dot" :style="{ background: color }"></i><span>{{ place.city }}</span><span aria-hidden="true">/</span><span>{{ tierLabel(place.tier) }}</span><span v-if="rank" aria-hidden="true">/</span><span v-if="rank">档内第 {{ rank }} 名</span></p>
       <h1 :id="targetId({ kind: 'heading' })" tabindex="-1">{{ place.name }}</h1><p :id="targetId({ kind: 'summary' })" tabindex="-1" class="detail-summary">{{ place.summary }}</p>
-      <div class="detail-facts"><span v-if="place.visitedAt"><small>到访</small>{{ place.visitedAt }}</span><span><small>更新</small>{{ place.updatedAt }}</span><span v-if="address"><small>地址</small>{{ address }}</span></div>
+      <div class="detail-timeliness" aria-label="信息日期">
+        <dl class="detail-date-grid">
+          <div><dt>体验到访</dt><dd><time v-if="place.visitedAt" :datetime="place.visitedAt">{{ place.visitedAt }}</time><span v-else>未记录</span></dd><small>作者实地逛店的记录日期</small></div>
+          <div><dt>店单核对</dt><dd><time v-if="shopDirectory" :datetime="shopDirectory.checkedAt">{{ shopDirectory.checkedAt }}</time><span v-else>暂无核对记录</span></dd><small>店铺资料的整理核对日期</small></div>
+        </dl>
+        <p class="detail-date-note"><template v-if="shopDirectory">店单核对不代表当天逐店实访，各店营业状态与依据见店铺一览。</template><template v-else>到访日期未记录时保留未知，内容更新不代表重新实访。</template></p>
+        <p class="detail-content-date">内容更新 <time :datetime="place.updatedAt">{{ place.updatedAt }}</time><span> · 页面文字、图片等内容的维护日期</span></p>
+      </div>
+      <div v-if="address" class="detail-facts detail-address"><span><small>地址</small>{{ address }}</span></div>
       <div v-if="place.tags.length" class="tags detail-tags" aria-label="逛店地点标签"><span v-for="item in place.tags" :key="item"># {{ item }}</span></div>
       <TripPlanButton :place-id="place.id" :name="place.name" />
     </header>

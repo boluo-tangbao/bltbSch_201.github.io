@@ -21,7 +21,7 @@ function toggle(id: string) {
     <div class="update-body">
       <div class="update-summary"><span class="update-kind">{{ updateLabel(update) }}</span><strong v-if="updateItems(update).length > 1">{{ updateItems(update).length }} 个地点</strong></div>
       <div class="update-places"><a v-for="item in visibleItems(update)" :key="item.placeId" :href="`${guideUrl}#/place/${item.placeId}`"><span>{{ names.get(item.placeId) }}</span><small v-if="update.type === 'tier-change'">{{ tierLabel(item.fromTier!) }} → {{ tierLabel(item.toTier!) }}</small></a><button v-if="!showAllPlaces && updateItems(update).length > 2" type="button" class="update-more" :aria-expanded="expanded.includes(update.id)" @click="toggle(update.id)">{{ expanded.includes(update.id) ? '收起' : `展开其余 ${updateItems(update).length - 2} 处` }} <span aria-hidden="true">{{ expanded.includes(update.id) ? '−' : '＋' }}</span></button></div>
-      <p>{{ update.note }}</p>
+      <p>{{ update.summary || update.note }}</p>
     </div>
   </li></ol>
 </template>

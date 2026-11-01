@@ -174,3 +174,15 @@ test('published Suzhou locations work when online address resolution is unavaila
     assert.equal(new URL(navigationUrl(p)).pathname, '/marker')
   }
 })
+
+
+test('reader summaries are optional and bounded while maintenance notes remain required', () => {
+  const update = { id: 'summary-test', placeId: place.id, date: '2026-09-18', type: 'edited', note: '原始维护说明', summary: '补充楼层信息，部分店铺仍待核实。' }
+  assert.deepEqual(validateEntries(site, [place], [update]), [])
+  const { summary, ...legacy } = update
+  assert.deepEqual(validateEntries(site, [place], [legacy]), [])
+  for (const invalid of ['', '   ', null, 12, '字'.repeat(201)]) {
+    assert.ok(validateEntries(site, [place], [{ ...update, summary: invalid }]).some(error => error.includes('summary')))
+  }
+  assert.ok(validateEntries(site, [place], [{ ...update, note: '' }]).some(error => error.includes('note')))
+})

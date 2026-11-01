@@ -107,6 +107,7 @@ export function validateData(site, groups, updates, imageExists = () => true, di
     if (!['added', 'tier-change', 'ranking-change', 'edited'].includes(u.type)) fail('updates.json', u.id, '无效更新类型')
     if (u.category !== undefined && (u.type !== 'edited' || !['content', 'gallery', 'map'].includes(u.category))) fail('updates.json', u.id, 'category 仅用于 edited，且只能是 content、gallery 或 map')
     if (typeof u.note !== 'string' || !u.note.trim()) fail('updates.json', u.id, '必须填写更新原因 note')
+    if (u.summary !== undefined && (typeof u.summary !== 'string' || !u.summary.trim() || u.summary.length > 200)) fail('updates.json', u.id, 'summary 必须为 1—200 字的读者更新摘要')
     let targets = []
     if (u.type === 'tier-change') {
       if (u.placeIds !== undefined) fail('updates.json', u.id, '批量调档请使用 changes，而不是 placeIds')

@@ -110,3 +110,31 @@
 .city-legend button[aria-pressed=true], .tag-filter button[aria-pressed=true] { box-shadow: none; }
 .photo-card .card-link { box-shadow: 0 2px 6px #29293214; }
 .photo-card .card-link:hover, .photo-card .card-link:focus-visible { transform: translateY(-2px); box-shadow: 0 4px 12px #29293224; }
+
+.photo-board, .photo-board .tier-label { overflow: visible; }
+.tier-label h3 { z-index: 4; }
+.tier-meaning-link { position: relative; display: inline-flex; align-items: center; gap: 5px; text-decoration: underline dotted; text-underline-offset: 5px; }
+.tier-help-mark { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; border: 1px solid currentColor; border-radius: 50%; font: 11px sans-serif; opacity: .65; }
+.tier-hint { position: absolute; z-index: 20; left: 0; bottom: calc(100% + 8px); width: min(260px, 70vw); padding: 12px 14px; border: 1px solid #292932; border-radius: 4px; background: #fffaf1; color: #382e37; box-shadow: 3px 3px 0 #efb1bb; font: 13px/1.7 'Microsoft YaHei', sans-serif; text-align: left; opacity: 0; visibility: hidden; pointer-events: none; }
+.tier-hint small { display: block; margin-top: 4px; color: #a83750; font-size: 11px; }
+.tier-meaning-link:hover .tier-hint, .tier-meaning-link:focus-visible .tier-hint { opacity: 1; visibility: visible; }
+.criteria-section dt[id] { scroll-margin-top: 110px; }
+.criteria-section dt[id]:focus { outline: 2px solid #a83750; outline-offset: 5px; background: #fff0f3; }
+
+/* Separate first-hand experience, directory research and page maintenance dates. */
+.detail-timeliness { margin-top: 22px; padding-top: 16px; border-top: 1px solid #d5bfc5; }
+.detail-date-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; max-width: 620px; margin: 0; }
+.detail-date-grid > div { min-width: 0; padding: 12px 14px; border: 1px solid #e5ced4; border-radius: 4px; background: #fffaf4; }
+.detail-date-grid dt { color: #735763; font-size: 12px; }
+.detail-date-grid dd { margin: 5px 0; color: #382e37; font-size: 17px; font-weight: 750; overflow-wrap: anywhere; }
+.detail-date-grid small { color: #796b72; font-size: 11px; line-height: 1.7; }
+.detail-heading .detail-date-note, .detail-heading .detail-content-date { margin: 10px 0 0; font-size: 11px; line-height: 1.8; color: #796b72; }
+.detail-heading .detail-content-date { font-size: 10px; }
+.detail-heading .detail-content-date time { margin-left: 5px; }
+.detail-heading .detail-address { margin-top: 14px; padding-top: 0; border-top: 0; }
+@media (max-width: 580px) {
+  .detail-date-grid { gap: 8px; }
+  .detail-date-grid > div { padding: 10px; }
+  .detail-date-grid dd { font-size: 15px; }
+  .detail-heading .detail-content-date span { display: block; }
+}

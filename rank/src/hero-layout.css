@@ -62,3 +62,18 @@
   .guide-page .compact-map-hero > .mascot-moments { --portrait-size: 40px; }
   .qa-page > .compact-qa-hero h1 { font-size: 21px; }
 }
+
+@media (min-width: 581px) {
+  .board-page .compact-board-hero { padding: 12px 20px; margin-top: 14px; margin-bottom: 18px; gap: 4px 20px; }
+  .board-page .compact-board-hero h1 { margin: 5px 0 2px; font-size: clamp(28px, 3vw, 34px); }
+  .board-page .board-section > .section-heading { margin-bottom: 8px; }
+  .board-page .board-tools-content { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; }
+  .board-page .browse-filters { flex: 1 1 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; }
+  .board-page .browse-city-legend .city-legend { margin: 0; }
+  .board-page .common-tags .tag-filter { margin: 0; gap: 5px; }
+  .board-page .common-tags .tag-filter button { min-height: 32px; padding: 4px 9px; font-size: 12px; }
+  .board-page .browse-tags { flex-basis: 100%; margin: 2px 0; }
+  .board-page .active-filters { margin: 2px 0; }
+  .board-page .photo-options { width: 100%; margin: 4px 0 8px; gap: 12px; }
+  .board-page .filter-bar { margin-bottom: 8px; }
+}

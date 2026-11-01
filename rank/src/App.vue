@@ -42,6 +42,14 @@ const route = ref(location.hash)
 const main = ref<HTMLElement>()
 const exportOpen = ref(false)
 const toolsOpen = ref(false)
+const criteriaOpen = ref(false)
+async function showTierMeaning(id: string) {
+  criteriaOpen.value = true
+  await nextTick()
+  const target = document.getElementById(`tier-meaning-${id}`)
+  target?.focus({ preventScroll: true })
+  target?.scrollIntoView({ block: 'center', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })
+}
 let restoreFrame = 0
 function restoreBoardFocus() {
   if (restoreFrame) window.cancelAnimationFrame(restoreFrame)
@@ -132,7 +140,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
         </div>
         <div v-if="!all.length && !hasFilters" class="empty-intro"><span class="empty-icon" aria-hidden="true">＋</span><div><strong>规划中，还在路上待访问</strong><p>等亲自来，再写~</p></div><span class="empty-pill">待填充</span></div>
         <div v-if="hasFilters && !filtered.length" class="no-results" role="status"><strong>没有找到匹配的条目</strong><span>试试其他关键词、城市或标签。</span><button class="text-button" @click="reset">重置筛选 ↗</button></div>
-        <div v-if="boardSections.length" class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels, 'comfortable-view': boardView === 'comfortable' }"><section v-for="tier in boardSections" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ tier.index + 1 }}</span><h3 :id="`tier-${tier.id}`">{{ tier.label }}</h3><span class="tier-count">{{ tier.places.length }} 处地点</span></div><div class="tier-content"><div v-if="!tier.places.length" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in tier.places" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="`${guideUrl}${placeDetailHash(p.id, query)}`" :rank="site.rankWithinTier ? rankOf(p) : undefined" :priority="p.id === firstPhotoId" :comfortable="boardView === 'comfortable'" :badge="recentBadge(p.id, updates, site.recentDays)" :match="searchMatches.get(p.id)" /></div></div></section></div>
+        <div v-if="boardSections.length" class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels, 'comfortable-view': boardView === 'comfortable' }"><section v-for="tier in boardSections" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ tier.index + 1 }}</span><h3 :id="`tier-${tier.id}`"><a class="tier-meaning-link" :aria-label="`${tier.label}：查看档位说明`" :href="`#tier-meaning-${tier.id}`" :aria-describedby="`tier-hint-${tier.id}`" @click.prevent="showTierMeaning(tier.id)">{{ tier.label }}<span class="tier-help-mark" aria-hidden="true">?</span><span :id="`tier-hint-${tier.id}`" class="tier-hint" role="tooltip">{{ site.tierDescriptions[tier.id] }}<small>点击查看完整排序说明 ↓</small></span></a></h3><span class="tier-count">{{ tier.places.length }} 处地点</span></div><div class="tier-content"><div v-if="!tier.places.length" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in tier.places" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="`${guideUrl}${placeDetailHash(p.id, query)}`" :rank="site.rankWithinTier ? rankOf(p) : undefined" :priority="p.id === firstPhotoId" :comfortable="boardView === 'comfortable'" :badge="recentBadge(p.id, updates, site.recentDays)" :match="searchMatches.get(p.id)" /></div></div></section></div>
         <p v-if="boardSections.length" class="board-caption"><span>推荐度从上到下递减</span><span>{{ site.rankWithinTier ? '同档分先后 · 从左到右，从上到下' : '同档不分先后' }}</span></p>
       </section>
 
@@ -141,7 +149,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
         <div class="guide-entry-copy"><h2 id="guide-entry-title">不知道在哪里？怎么去？那就去地图找找</h2><p>同样的城市颜色，对应地图上的位置。详细评价与到访路线也在这里。</p><a :href="guideUrl" class="button dark">打开地图与介绍 ↗</a></div>
       </section>
       <div class="bottom-grid"><section class="updates-section" aria-labelledby="updates-title"><div class="section-heading"><div><span class="section-number">02</span><h2 id="updates-title">最近更新</h2></div><a :href="updatesUrl" target="_blank" rel="noopener noreferrer" class="updates-all-link">查看全部 ↗<span class="sr-only">（新标签页）</span></a></div><UpdateList :updates="updates.slice(0, 2)" :places="all" /></section>
-      <section class="criteria-section" aria-labelledby="criteria-title"><div class="section-heading"><div><span class="section-number">03</span><h2 id="criteria-title">关于这份榜单</h2></div></div><p class="criteria-copy">{{ site.criteria }}</p><div class="criteria-scale"><span v-for="t in tiers" :key="t.id"><i :style="{ background: t.color }"></i>{{ t.label }}</span></div><details><summary>查看各档标准与排序规则</summary><dl><template v-for="t in tiers" :key="t.id"><dt>{{ t.label }}</dt><dd>{{ site.tierDescriptions[t.id] }}</dd></template></dl><p>{{ site.rankWithinTier ? '同档有先后，卡片编号表示该档内的完整排名；筛选后保留原排名。' : '同档不分先后。' }}</p><p>到访日期未提供时显示“未记录”；内容更新日期由作者维护。</p></details><p class="personal-note">仅代表个人体验，供你出发前参考。</p></section></div>
+      <section class="criteria-section" aria-labelledby="criteria-title"><div class="section-heading"><div><span class="section-number">03</span><h2 id="criteria-title">关于这份榜单</h2></div></div><p class="criteria-copy">{{ site.criteria }}</p><div class="criteria-scale"><span v-for="t in tiers" :key="t.id"><i :style="{ background: t.color }"></i>{{ t.label }}</span></div><details :open="criteriaOpen" @toggle="criteriaOpen = ($event.target as HTMLDetailsElement).open"><summary>查看各档标准与排序规则</summary><dl><template v-for="t in tiers" :key="t.id"><dt :id="`tier-meaning-${t.id}`" tabindex="-1">{{ t.label }}</dt><dd>{{ site.tierDescriptions[t.id] }}</dd></template></dl><p>{{ site.rankWithinTier ? '同档有先后，卡片编号表示该档内的完整排名；筛选后保留原排名。' : '同档不分先后。' }}</p><p>到访日期未提供时显示“未记录”；内容更新日期由作者维护。</p></details><p class="personal-note">仅代表个人体验，供你出发前参考。</p></section></div>
       <Guestbook />
     </template>
 
