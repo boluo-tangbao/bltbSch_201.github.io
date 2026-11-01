@@ -11,12 +11,13 @@ const props = defineProps<{ directory: ShopDirectory; visitedAt?: string | null;
 const base = import.meta.env.BASE_URL
 const today = useShopToday()
 const visibleCounts = ref<Record<string, number>>({})
+const inactiveExpanded = ref(false)
 const groupKey = (section: string, more = false, bucket = '') => `${section}-${more ? 'evidence' : 'open'}-${bucket}`
 const visibleCount = (section: string, more = false, bucket = '') => visibleCounts.value[groupKey(section, more, bucket)] ?? 5
 function expand(section: string, more = false, bucket = '') {
   visibleCounts.value[groupKey(section, more, bucket)] = visibleCount(section, more, bucket) + 5
 }
-watch(() => props.directory, () => { visibleCounts.value = {} })
+watch(() => props.directory, () => { visibleCounts.value = {}; inactiveExpanded.value = false })
 const shops = computed(() => props.directory.shops.map(shop => {
   const status = shopDisplayStatus(shop, today.value)
   const sourceTime = shop.sources.find(source => source.dateLabel)?.dateLabel
@@ -38,7 +39,10 @@ function revealShop(name: string) {
     for (const group of [{ key: '', shops: section.open }, ...pendingShopGroups(section.evidence)]) {
       const more = group.key !== ''
       const index = group.shops.findIndex(shop => shop.name === name)
-      if (index >= 0) visibleCounts.value[groupKey(section.key, more, group.key)] = Math.max(visibleCount(section.key, more, group.key), Math.ceil((index + 1) / 5) * 5)
+      if (index >= 0) {
+        visibleCounts.value[groupKey(section.key, more, group.key)] = Math.max(visibleCount(section.key, more, group.key), Math.ceil((index + 1) / 5) * 5)
+        if (section.key === 'inactive') inactiveExpanded.value = true
+      }
     }
   }
 }
@@ -52,9 +56,9 @@ defineExpose({ revealShop })
       <span>核对 {{ directory.checkedAt }}</span>
     </header>
     <p v-if="directory.notice" class="shop-directory-notice">{{ directory.notice }}</p>
-    <p class="shop-directory-intro">每栏及待核实子组先展示5条，每次展开再增加5条；待核实区默认收起，历史探店记录不代表当前营业。</p>
-    <div v-for="section in sections" :key="section.key" class="shop-directory-section" :class="'shop-directory-' + section.key">
-    <header class="shop-section-heading"><h3>{{ section.title }}</h3><div class="shop-section-actions"><span><template v-if="section.key === 'inactive'">记录 {{ section.open.length }} 家</template><template v-else>确认 {{ section.open.length }} {{ sectionUnit(section.key) }}</template><template v-if="section.evidence.length"> · 待核实 {{ section.evidence.length }} {{ sectionUnit(section.key) }}</template></span></div></header>
+    <p class="shop-directory-intro">每栏及待核实子组先展示5条，每次展开再增加5条；待核实与停止营业默认收起，历史探店记录不代表当前营业。</p>
+    <component :is="section.key === 'inactive' ? 'details' : 'div'" v-for="section in sections" :key="section.key" class="shop-directory-section" :class="'shop-directory-' + section.key" :open="section.key === 'inactive' ? inactiveExpanded : undefined" @toggle="section.key === 'inactive' && (inactiveExpanded = ($event.target as HTMLDetailsElement).open)">
+    <component :is="section.key === 'inactive' ? 'summary' : 'header'" class="shop-section-heading"><h3>{{ section.title }}</h3><span class="shop-section-actions"><template v-if="section.key === 'inactive'">记录 {{ section.open.length }} 家</template><template v-else>确认 {{ section.open.length }} {{ sectionUnit(section.key) }}</template><template v-if="section.evidence.length"> · 待核实 {{ section.evidence.length }} {{ sectionUnit(section.key) }}</template></span><span v-if="section.key === 'inactive'" class="shop-history-toggle">{{ inactiveExpanded ? '收起' : '展开' }} <span aria-hidden="true">{{ inactiveExpanded ? '−' : '+' }}</span></span></component>
     <p v-if="section.key === 'limited'" class="shop-limited-intro">快闪店、慢闪店与店内限时主题统一归入快闪活动，按项计数，不计入常规门店家数。活动结束不代表所在常设店关闭。</p>
     <p v-if="section.key === 'inactive'" class="shop-inactive-intro">“已停止营业”指彻底关店或迁往其他地点的旧店；装修暂停另行标注，同一商场换楼层的店铺继续按新位置展示。</p>
     <p v-if="!section.open.length" class="shop-directory-empty">暂没有已确认营业的店铺，可展开更多查看已有线索。</p>
@@ -66,7 +70,7 @@ defineExpose({ revealShop })
     <p v-if="group.more && bucket.key === 'history'" class="shop-history-intro">保留曾被探店、攻略或实访收录的记录，当前营业尚未确认。</p>
     <ul class="shop-list">
       <li v-for="(shop, index) in bucket.shops" v-show="index < visibleCount(section.key, group.more, bucket.key)" :id="placeId ? searchTargetId(placeId, { kind: 'shop', name: shop.name }) : undefined" :key="shop.name" class="shop-row" tabindex="-1">
-        <div class="shop-row-title"><div class="shop-name-location"><h4>{{ shop.name }}</h4><span v-if="shop.floor" class="shop-location"><template v-if="shop.inactive">原位置：</template>{{ shop.floor }}</span></div><span class="shop-status" :class="'is-' + shop.displayStatus">{{ shop.statusText }}</span><a v-if="placeId" class="shop-correction" :href="shopFeedbackUrl(base, placeId, shop.name)" :aria-label="`${shop.name}：反馈纠错`" title="反馈这家店的信息"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5 4 4M4 20l4.5-1L20 7.5a2.8 2.8 0 0 0-4-4L4.5 15Z" /></svg></a></div>
+        <div class="shop-row-title"><div class="shop-name-location"><h4>{{ shop.name }}</h4><span v-if="shop.floor" class="shop-location"><template v-if="shop.inactive">原位置：</template>{{ shop.floor }}</span><div class="shop-state-line"><span class="shop-status" :class="'is-' + shop.displayStatus">{{ shop.statusText }}</span></div></div><div v-if="placeId" class="shop-row-tools"><TripPlanButton v-if="shop.displayStatus === 'open'" :place-id="placeId" :name="shop.name" :shop-name="shop.name" icon-only plain /><a class="shop-correction" :href="shopFeedbackUrl(base, placeId, shop.name)" :aria-label="`${shop.name}：反馈纠错`" title="反馈这家店的信息"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5 4 4M4 20l4.5-1L20 7.5a2.8 2.8 0 0 0-4-4L4.5 15Z" /></svg></a></div></div>
         <p v-if="shop.description" class="shop-description">{{ shop.description }}</p>
         <dl v-if="shop.kind || shop.limited || shop.inactive" class="shop-facts">
           <template v-if="shop.inactive"><dt>营业历史</dt><dd class="shop-history">{{ shop.inactive.history }}</dd></template>
@@ -88,7 +92,6 @@ defineExpose({ revealShop })
         <ul v-if="shop.accounts?.length" class="shop-accounts" :aria-label="shop.name + (shop.inactive ? '的原账号' : '的官方账号')">
           <li v-for="account in shop.accounts" :key="account.platform + account.url"><a :href="account.url" target="_blank" rel="noopener noreferrer"><b>{{ platformLabel[account.platform] }}</b><span>{{ account.name }}<small v-if="account.handle">号：{{ account.handle }}</small></span><em v-if="account.scope === 'brand'">品牌号</em><span aria-hidden="true">↗</span></a></li>
         </ul>
-        <TripPlanButton v-if="placeId && shop.displayStatus === 'open'" class="shop-trip-add" :place-id="placeId" :name="shop.name" :shop-name="shop.name" />
       </li>
     </ul>
     <div v-if="bucket.shops.length > visibleCount(section.key, group.more, bucket.key)" class="shop-expand-actions">
@@ -97,7 +100,7 @@ defineExpose({ revealShop })
     </div>
     </component>
     </template>
-    </div>
+    </component>
   </section>
 </template>
 
@@ -127,8 +130,16 @@ defineExpose({ revealShop })
 .shop-list,.shop-accounts { list-style: none; padding: 0; margin: 0; }
 .shop-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 12px; }
 .shop-row { min-width: 0; padding: 16px; border: 1px solid #e5c5cc; background: #fffdfa; }
-.shop-trip-add { margin-top: 14px; }
-.shop-correction { display: inline-flex; flex: none; align-items: center; justify-content: center; width: 44px; height: 44px; margin: -6px -8px 0 -3px; border-radius: 50%; color: #8b7b81; }
+.shop-row-tools { display: flex; flex: none; align-items: center; margin: -6px -8px 0 0; }
+.shop-state-line { margin-top: 6px; line-height: 1.5; }
+.shop-correction { display: inline-flex; flex: none; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; color: #8b7b81; }
+.shop-directory-inactive > summary { cursor: pointer; list-style: none; min-height: 44px; margin-bottom: 0; align-items: center; }
+.shop-directory-inactive > summary::-webkit-details-marker { display: none; }
+.shop-directory-inactive > summary h3 { color: #79626b; }
+.shop-history-toggle { margin-left: auto; color: #79626b; font-size: 12px; }
+.shop-history-toggle span { margin-left: 8px; }
+.shop-directory-inactive[open] > summary { margin-bottom: 14px; }
+.shop-directory-inactive > summary:focus-visible { outline: 2px solid #a83750; outline-offset: 4px; }
 .shop-correction svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .shop-correction:hover { color: #a83750; background: #fff0f4; }
 .shop-correction:focus-visible { outline: 2px solid #a83750; outline-offset: 2px; }

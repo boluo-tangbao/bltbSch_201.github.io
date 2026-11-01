@@ -16,6 +16,12 @@ for (const route of ['', 'guide/']) {
         await page.goto(`${base}${route}#/place/${placeId}`, { waitUntil: 'domcontentloaded' })
         await expect(page.locator('.shop-directory')).toBeVisible()
         for (const section of await page.locator('.shop-directory-section').all()) {
+          if (await section.evaluate(element => element.tagName === 'DETAILS')) {
+            await expect(section).toHaveJSProperty('open', false)
+            await expect(section.locator('.shop-row').filter({ visible: true })).toHaveCount(0)
+            await section.locator(':scope > summary').click()
+            await expect(section).toHaveJSProperty('open', true)
+          }
           const confirmed = section.locator('.shop-directory-confirmed .shop-row')
           await expect(confirmed.filter({ visible: true })).toHaveCount(Math.min(5, await confirmed.count()))
           const expand = section.locator('.shop-directory-confirmed .shop-expand')
@@ -86,7 +92,9 @@ for (const route of ['', 'guide/']) {
       await page.reload({ waitUntil: 'domcontentloaded' })
       for (const section of await page.locator('.shop-directory-section').all()) {
         const rows = section.locator('.shop-directory-confirmed .shop-row')
-        await expect(rows.filter({ visible: true })).toHaveCount(Math.min(5, await rows.count()))
+        const inactive = await section.evaluate(element => element.tagName === 'DETAILS')
+        if (inactive) await expect(section).toHaveJSProperty('open', false)
+        await expect(rows.filter({ visible: true })).toHaveCount(inactive ? 0 : Math.min(5, await rows.count()))
       }
       await page.goto(`${base}${route}#/place/guangzhou-shop-001?find=${encodeURIComponent('灵感谷')}`, { waitUntil: 'domcontentloaded' })
       const result = page.locator('.shop-row').filter({ has: page.getByRole('heading', { name: '灵感谷', exact: true }) })
