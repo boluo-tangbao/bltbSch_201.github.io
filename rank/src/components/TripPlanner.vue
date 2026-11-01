@@ -8,6 +8,8 @@ import { useTripPlan } from '../utils/useTripPlan'
 import { useShopToday } from '../utils/shopToday'
 import CopyButton from './CopyButton.vue'
 import ExportPanel from './ExportPanel.vue'
+import TripJourney from './TripJourney.vue'
+import {groupTripStops} from '../utils/tripRouting'
 
 const props = defineProps<{ places: Place[] }>()
 const plan = useTripPlan(), today = useShopToday(), dialog = ref<HTMLDialogElement>()
@@ -15,15 +17,18 @@ const site = siteData as Site
 const guideUrl = new URL(`${import.meta.env.BASE_URL}guide/`, location.origin).href
 const stops = computed(() => resolveTripStops(plan.entries.value, props.places, directoryData as Record<string, ShopDirectory>, today.value))
 const text = computed(() => tripPlanText(stops.value, guideUrl))
-const selectedPlaces = computed(() => [...new Set(stops.value.map(stop => stop.placeId))].map(id => props.places.find(place => place.id === id)!))
+const groups=computed(()=>groupTripStops(stops.value,props.places))
+const selectedPlaces = computed(() => props.places.filter(place=>stops.value.some(stop=>stop.placeId===place.id)))
 const updatedAt = computed(() => [site.updatedAt, ...selectedPlaces.value.map(place => place.updatedAt)].filter(Boolean).sort().at(-1) || null)
 const rankingOpen = ref(false), documentUrl = ref('')
+const plannerOpen=ref(false)
+function openPlanner(){plannerOpen.value=true;dialog.value?.showModal()}
 function release() { if (documentUrl.value) URL.revokeObjectURL(documentUrl.value); documentUrl.value = '' }
 function exportPlan() { release(); documentUrl.value = URL.createObjectURL(new Blob([tripPlanHtml(stops.value, guideUrl, today.value)], { type: 'text/html;charset=utf-8' })) }
-function clear() { plan.clear(); dialog.value?.close() }
+function clear() { plan.clear();try{sessionStorage.removeItem('tangbao-trip-routing-session-v1')}catch{};dialog.value?.close() }
 watch(stops, value => {
   release()
-  if (value.length !== plan.entries.value.length) plan.replace(value.map(({ placeId, shopName }) => ({ placeId, ...(shopName ? { shopName } : {}) })))
+  if (value.length !== plan.entries.value.length) plan.replace(value.map(({ placeId, shopName,custom }) => ({ placeId, ...(shopName ? { shopName } : {}),...(custom?{custom}:{}) })))
   if (!value.length) { dialog.value?.close(); rankingOpen.value = false }
 }, { immediate: true })
 onBeforeUnmount(release)
@@ -31,25 +36,13 @@ onBeforeUnmount(release)
 
 <template>
   <aside v-if="stops.length" class="trip-plan-dock" aria-label="本次逛店清单">
-    <div><strong>本次逛店清单 · {{ stops.length }} 站</strong><small>按你的顺序，带着清单出发</small></div>
-    <button type="button" class="button dark" aria-haspopup="dialog" @click="dialog?.showModal()">整理与导出</button>
+    <div><strong>本次逛店清单 · {{ groups.length }} 站</strong><small>选店、规划路线，带着清单出发</small></div>
+    <button type="button" class="button dark" aria-haspopup="dialog" @click="openPlanner">整理与导出</button>
   </aside>
-  <dialog ref="dialog" class="trip-plan-dialog" aria-labelledby="trip-plan-title">
+  <dialog ref="dialog" class="trip-plan-dialog" aria-labelledby="trip-plan-title" @close="plannerOpen=false">
     <header class="trip-plan-heading"><div><p class="section-label">THIS TRIP</p><h2 id="trip-plan-title">本次逛店清单</h2></div><button type="button" class="trip-plan-close" aria-label="关闭本次清单" @click="dialog?.close()">×</button></header>
     <p class="trip-plan-note">加入地点或具体店铺，按逛店顺序调整。仅保留本次浏览，关闭标签页后清空。</p>
-    <ol class="trip-plan-stops">
-      <li v-for="(stop, index) in stops" :key="tripEntryKey(stop)" class="trip-plan-stop">
-        <span class="trip-plan-number">{{ index + 1 }}</span>
-        <div class="trip-plan-stop-copy">
-          <h3>{{ stop.name }}</h3><p>{{ stop.city }} · {{ stop.placeName }}<template v-if="stop.floor"> · {{ stop.floor }}</template></p>
-          <p>地址：{{ stop.address || '地址待补充' }}</p>
-          <p v-if="stop.period" class="trip-plan-period">{{ stop.status }} · {{ stop.period }}</p>
-          <p v-if="stop.checkedAt" class="trip-plan-note">店单核对 {{ stop.checkedAt }}</p>
-          <div class="trip-plan-links"><a :href="tripStopUrl(stop, guideUrl)" @click="dialog?.close()">查看详情 →</a><a v-if="stop.navigation" :href="stop.navigation" target="_blank" rel="noopener noreferrer">高德导航 ↗</a></div>
-          <div class="trip-plan-order"><button type="button" :disabled="index === 0" :aria-label="`上移：${stop.name}`" @click="plan.move(stop, -1)">↑ 上移</button><button type="button" :disabled="index === stops.length - 1" :aria-label="`下移：${stop.name}`" @click="plan.move(stop, 1)">↓ 下移</button><button type="button" :aria-label="`移除：${stop.name}`" @click="plan.remove(stop)">移除</button></div>
-        </div>
-      </li>
-    </ol>
+    <TripJourney v-if="stops.length&&plannerOpen" :places="places" :guide-url="guideUrl" @details="dialog?.close()" />
     <footer class="trip-plan-actions">
       <button type="button" class="button dark" :disabled="!stops.length" @click="exportPlan">生成清单文件</button>
       <a v-if="documentUrl" class="button trip-plan-download" :href="documentUrl" :download="`本次逛店清单-${today}.html`">下载清单（HTML）↓</a>
@@ -57,7 +50,7 @@ onBeforeUnmount(release)
       <button type="button" class="button" :disabled="!selectedPlaces.length" @click="rankingOpen = true">导出所选地点榜单</button>
       <button type="button" class="text-button" @click="clear">清空本次清单</button>
     </footer>
-    <p class="trip-plan-note">清单文件保留手动顺序、地址、楼层与档期，可离线阅读；地点榜单沿用原排名。详情和导航需联网。</p>
+    <p class="trip-plan-note">清单文件保留当前顺序、地址、楼层与档期，可离线阅读；地点榜单沿用原排名。详情和导航需联网。</p>
   </dialog>
   <ExportPanel v-if="rankingOpen" :site="site" :places="selectedPlaces" :all-places="places" current-label="本次清单" scope="本次逛店清单" :updated-at="updatedAt" @close="rankingOpen = false" />
 </template>
