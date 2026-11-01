@@ -40,9 +40,9 @@ const chapterNav = ref<HTMLElement>()
 const sideNavOpen = ref(false)
 const activeChapter = ref('overview')
 const chapterId = (key: string) => `place-${props.place.id}-${key}`
+const hasVideo = computed(() => placeClips(bilibiliCatalog as BilibiliCatalog, props.place.id).length > 0)
 const chapters = computed(() => [
-  ...(detailParagraphs.value.length || visitNotes.value.length ? [{ key: 'overview', label: '介绍' }] : []),
-  ...(placeClips(bilibiliCatalog as BilibiliCatalog, props.place.id).length ? [{ key: 'video', label: '视频' }] : []),
+  ...(detailParagraphs.value.length || visitNotes.value.length || hasVideo.value ? [{ key: 'overview', label: '介绍' }] : []),
   ...(shopDirectory.value ? [{ key: 'shops', label: '店铺' }] : []),
   ...(props.place.gallery.length ? [{ key: 'gallery', label: '图集' }] : []),
   ...(address.value ? [{ key: 'nearby', label: '周边' }] : []),
@@ -145,10 +145,10 @@ onBeforeUnmount(() => {
         <button type="button" @click="goToTop">回到顶部 ↑</button>
       </div>
     </nav>
-    <section v-if="detailParagraphs.length || visitNotes.length" :id="chapterId('overview')" class="detail-body detail-review detail-chapter" aria-labelledby="review-heading">
+    <section v-if="detailParagraphs.length || visitNotes.length || hasVideo" :id="chapterId('overview')" class="detail-body detail-review detail-chapter" aria-labelledby="review-heading">
       <header class="detail-review-heading">
         <div><p class="section-label">PLACE OVERVIEW</p><h2 id="review-heading">商圈介绍</h2></div>
-        <span v-if="detailParagraphs.length" class="detail-review-meta">{{ detailParagraphs.length }} 段介绍</span>
+        <div class="detail-review-tools" :class="{ 'has-video': hasVideo }"><span v-if="detailParagraphs.length" class="detail-review-meta">{{ detailParagraphs.length }} 段介绍</span><BilibiliClips v-if="hasVideo" :id="chapterId('video')" :key="place.id" :place-id="place.id" :place-name="place.name" /></div>
       </header>
       <p v-if="detailParagraphs.length" class="detail-review-deck">环境、店铺分布与逛店体验</p>
       <div v-if="detailParagraphs.length" class="detail-prose">
@@ -159,7 +159,6 @@ onBeforeUnmount(() => {
         <ul class="detail-visit-list"><li v-for="(note, index) in visitNotes" :id="targetId({ kind: 'note', index })" :key="index" tabindex="-1"><span class="detail-visit-mark" aria-hidden="true">↗</span><p><template v-for="(part, partIndex) in note" :key="partIndex"><strong v-if="part.strong" :class="richTextClasses(part)">{{ part.text }}</strong><span v-else :class="richTextClasses(part)">{{ part.text }}</span></template></p></li></ul>
       </aside>
     </section>
-    <div v-if="chapters.some(chapter => chapter.key === 'video')" :id="chapterId('video')" class="detail-chapter"><BilibiliClips :key="place.id" :place-id="place.id" :place-name="place.name" /></div>
     <ShopDirectory v-if="shopDirectory" ref="shopDirectoryView" :id="chapterId('shops')" class="detail-chapter" :place-id="place.id" :directory="shopDirectory" :visited-at="place.visitedAt" />
     <div v-if="place.gallery.length" :id="chapterId('gallery')" class="detail-chapter"><PlaceGallery :images="place.gallery" :color="color" /></div>
     <section v-if="address" :id="chapterId('nearby')" class="place-mini-map detail-chapter" aria-labelledby="nearby-map-heading">
@@ -198,6 +197,14 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
+.detail-review-heading { align-items: flex-end; gap: 12px; }
+.detail-review-tools { display: flex; flex: none; align-items: center; gap: 16px; }
+.detail-review-tools.has-video .detail-review-meta { padding: 0; border: 0; border-radius: 0; white-space: nowrap; }
+@media (max-width: 580px) {
+  .detail-review-heading { align-items: flex-end; gap: 6px; }
+  .detail-review-tools.has-video .detail-review-meta { display: none; }
+}
+@media (max-width: 360px) { .detail-review-heading h2 { font-size: 20px; } }
 .detail-title-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .detail-title-row h1 { min-width: 0; }
 .guide-detail.has-chapters { overflow: visible; }

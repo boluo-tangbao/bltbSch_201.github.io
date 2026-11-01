@@ -55,8 +55,8 @@ async function load() {
     <label v-if="entries.length > 1 && !loaded">选择片段 <select v-model="selectedId" :aria-label="placeName + '的视频片段'"><option v-for="(entry, index) in entries" :key="entry.clip.id" :value="entry.clip.id">片段 {{ index + 1 }}</option></select></label>
     <p v-if="!ready" role="status">{{ selected?.error ? '片段配置暂不可用：' + selected.error : '片段起点待确认，暂不提供播放器。' }}</p>
     <div v-if="ready || externalUrl" class="clip-actions">
-      <button v-if="ready" type="button" class="clip-load" aria-label="加载此片段播放器" aria-haspopup="dialog" @click="load"><span class="clip-play-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="m9 5 11 7-11 7Z" fill="currentColor" /></svg></span><span>观看视频片段</span><span class="clip-spark" aria-hidden="true">↗</span></button>
-      <a v-if="externalUrl" :href="externalUrl" target="_blank" rel="noopener noreferrer" class="clip-external"><img class="clip-tv-mark" :src="tvIconUrl" width="28" height="26" alt="" aria-hidden="true" decoding="async" /><span>去 B 站观看 ↗</span></a>
+      <button v-if="ready" type="button" class="clip-load" aria-label="加载此片段播放器" title="观看这个商圈的视频片段" aria-haspopup="dialog" @click="load"><span class="clip-play-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m10 8 6 4-6 4Z" fill="currentColor" /></svg></span><span class="clip-entry-copy"><span>看视频</span><small>弹窗播放</small></span></button>
+      <a v-if="externalUrl" :href="externalUrl" target="_blank" rel="noopener noreferrer" class="clip-external" aria-label="去 B 站观看 ↗" title="去 B 站观看 ↗"><img class="clip-tv-mark" :src="tvIconUrl" width="28" height="26" alt="" aria-hidden="true" decoding="async" /><span class="clip-external-copy"><span>去 B 站</span><span>观看 <span aria-hidden="true">↗</span></span></span></a>
     </div>
     <dialog ref="cinema" class="clip-cinema" :aria-label="placeName + ' · 视频片段'" @cancel.prevent="closePlayer" @close="!cinema?.open && releasePlayer()" @click.self="closePlayer">
       <template v-if="loaded">
@@ -69,19 +69,23 @@ async function load() {
 </template>
 
 <style scoped>
-.bilibili-clips { margin: 0; padding: 0 48px 38px; border: 0; border-radius: 0; background: none; font-size: 14px; overflow-wrap: anywhere; }
-.clip-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 12px 20px; padding: 0; }
-.clip-load, .clip-external { display: inline-flex; align-items: center; justify-content: center; gap: 12px; max-width: 100%; min-height: 56px; padding: 12px 20px; border: 2px solid var(--manga-ink, #292830); color: var(--manga-ink, #292830); font: inherit; font-weight: 850; text-decoration: none; transition: transform .16s ease, box-shadow .16s ease; }
-.clip-load { position: relative; min-height: 44px; padding: 6px 14px 6px 8px; gap: 9px; border: 1px solid #dca8b8; border-radius: 999px; background: linear-gradient(120deg, #ffe0eb, #fff7fa); box-shadow: 0 3px 10px #a8375010; font-size: 13px; }
-.clip-play-mark { display: grid; place-items: center; width: 28px; height: 28px; flex: none; border-radius: 50%; background: #a83750; color: #fff; }
-.clip-play-mark svg { width: 16px; height: 16px; }
-.clip-spark { color: #a83750; font-size: 16px; }
-.clip-external { min-height: 44px; padding: 0; gap: 7px; border: 0; background: transparent; color: #79626b; font-size: 12px; font-weight: 600; }
-.clip-tv-mark { display: block; width: 20px; height: 19px; flex: none; object-fit: contain; }
-.clip-load:hover { transform: translateY(-2px); box-shadow: 0 5px 14px #a8375020; }
-.clip-external:hover { color: #a83750; }
-.clip-load:active, .clip-external:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--manga-ink, #292830); }
-.clip-load:focus-visible, .clip-external:focus-visible { outline: 3px solid #a83750; outline-offset: 6px; }
+.bilibili-clips { display: inline-flex; flex: none; align-items: center; gap: 8px; margin: 0; padding: 0; border: 0; background: none; font-size: 12px; }
+.clip-actions { display: inline-flex; align-items: center; gap: 2px; padding: 2px; border: 1px solid #e0bdc8; border-radius: 10px; background: #fff8f8; }
+.clip-load, .clip-external { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; border: 0; border-radius: 7px; background: transparent; text-decoration: none; transition: background .18s, color .18s; }
+.clip-load { gap: 7px; padding: 0 8px; color: #a83750; font: 600 12px/1.4 system-ui, sans-serif; white-space: nowrap; cursor: pointer; }
+.clip-play-mark { display: grid; place-items: center; width: 23px; height: 23px; border: 1px solid #d49eaf; border-radius: 50%; color: #a83750; }
+.clip-play-mark svg { width: 21px; height: 21px; }
+.clip-entry-copy { display: grid; gap: 3px; text-align: left; line-height: 1.25; }
+.clip-entry-copy small { color: #96727e; font-size: 9px; font-weight: 400; }
+.clip-external { position: relative; gap: 5px; width: 70px; color: #79626b; font: 400 10px/1.25 system-ui, sans-serif; white-space: nowrap; }
+.clip-external-copy { display: grid; gap: 3px; text-align: left; }
+.clip-external::before { content: ''; position: absolute; left: -1px; width: 1px; height: 18px; background: #ecd5dd; }
+.clip-tv-mark { display: block; width: 18px; height: 17px; object-fit: contain; filter: saturate(.65); }
+@media (hover: hover) {
+  .clip-load:hover, .clip-external:hover { background: #f9e5eb90; color: #7f243c; }
+}
+.clip-load:active { background: #f4dce4; }
+.clip-load:focus-visible, .clip-external:focus-visible { outline: 2px solid #a83750; outline-offset: 2px; }
 .bilibili-clips label { display: block; margin-top: 10px; }
 .bilibili-clips select { display: block; width: 100%; max-width: 100%; min-height: 44px; margin-top: 4px; }
 .clip-cinema { width: min(1040px, calc(100vw - 32px), calc((100dvh - 160px) * 16 / 9)); max-width: calc(100vw - 24px); max-height: calc(100dvh - 24px); padding: 0; margin: auto; overflow: auto; border: 1px solid #f3c7d640; border-radius: 18px; background: #201d25; color: #fff5f8; box-shadow: 0 32px 100px #0009, 0 0 60px #d975a015; }
@@ -103,11 +107,9 @@ async function load() {
 .cinema-footer select { width: auto; margin: 0; border: 1px solid #ffffff30; border-radius: 6px; background: #29242e; color: #fff5f8; }
 .clip-cinema :is(button, a, select):focus-visible { outline: 2px solid #f2a8c2; outline-offset: 3px; }
 @keyframes cinema-enter { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
-@media (max-width: 800px) {
-  .bilibili-clips { padding: 0 28px 32px; }
-}
 @media (max-width: 580px) {
-  .clip-actions { gap: 6px 14px; }
+  .clip-load { gap: 5px; padding: 0 5px; }
+  .clip-external { width: 60px; font-size: 9px; }
   .clip-cinema { border-radius: 12px; }
   .cinema-heading { padding: 12px; }
   .cinema-heading h2 { font-size: 15px; }

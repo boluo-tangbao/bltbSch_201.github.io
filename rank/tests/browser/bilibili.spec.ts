@@ -17,6 +17,13 @@ for (const width of [1440, 390, 320]) test(`cinema dialog preserves page height 
   const trigger = widget.getByRole('button', { name: '加载此片段播放器', exact: true })
   await expect(dialog).not.toBeVisible()
   await expect(widget.locator('iframe')).toHaveCount(0)
+  const heading = page.locator('.detail-review-heading')
+  await expect(heading.locator('.bilibili-clips')).toHaveCount(1)
+  const headingBounds = await heading.boundingBox(), actionsBounds = await widget.locator('.clip-actions').boundingBox()
+  expect(actionsBounds!.y).toBeGreaterThanOrEqual(headingBounds!.y)
+  expect(actionsBounds!.y + actionsBounds!.height).toBeLessThanOrEqual(headingBounds!.y + headingBounds!.height + 1)
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+  if (width !== 320) await heading.screenshot({ path: `test-results/evidence/video-entry-${width}.png`, animations: 'disabled' })
   const height = await widget.evaluate(el => el.getBoundingClientRect().height)
   const overflow = await page.evaluate(() => document.body.style.overflow)
   await trigger.click()
@@ -66,7 +73,7 @@ for (const [city, videoId, bvid, count] of [
       await page.goto(`${base}guide/?video=${clip.videoId}&p=1&t=${clip.startSeconds}#/place/${clip.placeId}`)
       const widget = page.locator('.bilibili-clips')
       await expect(widget).toHaveCount(1)
-      expect(await widget.evaluate(el => el.previousElementSibling?.classList.contains('detail-review'))).toBe(true)
+      expect(await widget.evaluate(el => !!el.closest('.detail-review-heading'))).toBe(true)
       await expect(page.locator('.shop-directory .bilibili-clips')).toHaveCount(0)
       await expect(widget.locator('iframe, select, h3, .clip-video-title, .clip-selection')).toHaveCount(0)
       await expect(widget.getByRole('link', { name: '去 B 站观看 ↗' })).toHaveAttribute('href', clip.reviewUrl)
@@ -85,7 +92,7 @@ for (const [city, videoId, bvid, count] of [
   }
 })
 
-test('all real entries sit after the place introduction and never load Bilibili by opening or navigating', async ({ page }) => {
+test('all real entries sit in the introduction heading and never load Bilibili by opening or navigating', async ({ page }) => {
   const requests: string[] = []
   page.on('request', r => { if (thirdParty(r.url())) requests.push(r.url()) })
   await page.goto(base)
@@ -97,7 +104,7 @@ test('all real entries sit after the place introduction and never load Bilibili 
     await expect(widget).not.toContainText(catalog.videos[0].title)
     await expect(widget).not.toContainText(formatVideoTime(clip.startSeconds))
     await expect(widget.locator('h3, .clip-video-title, .clip-selection')).toHaveCount(0)
-    expect(await widget.evaluate(el => el.previousElementSibling?.classList.contains('detail-review'))).toBe(true)
+    expect(await widget.evaluate(el => !!el.closest('.detail-review-heading'))).toBe(true)
     await expect(page.locator('.shop-directory .bilibili-clips')).toHaveCount(0)
     await expect(widget.locator('iframe, video')).toHaveCount(0)
     await expect(widget.locator('.clip-tv-mark')).toHaveJSProperty('src', base + 'brand/bilibili-tv.svg')
