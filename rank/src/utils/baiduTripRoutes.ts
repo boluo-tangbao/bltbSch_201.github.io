@@ -51,7 +51,7 @@ async function query(api:any,from:TripGroup,to:TripGroup,a:any,b:any,mode:Travel
 export async function queryTripOptions(from:TripGroup,to:TripGroup,signal:AbortSignal,force=false):Promise<RouteChoice[]>{
   if(from.city!==to.city)return []
   const api=await loadBaiduMaps()
-  const locate=(group:TripGroup)=>group.place?pointForPlace(api,group.place):group.address?geocodeWithBaidu(api,group.address,group.city):Promise.resolve(null)
+  const locate=(group:TripGroup)=>group.place?pointForPlace(api,group.place):group.address?geocodeWithBaidu(api,group.address,group.city,false):Promise.resolve(null)
   const [a,b]=await Promise.all([locate(from),locate(to)])
   if(!a||!b||signal.aborted)return []
   const values=await Promise.allSettled((['walk','bus','car'] as const).map(async mode=>{

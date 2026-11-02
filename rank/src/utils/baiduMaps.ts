@@ -64,9 +64,9 @@ function writeCache(cache: Record<string, [number, number]>) {
   try { localStorage.setItem(CACHE_KEY, JSON.stringify(cache)) } catch { /* cache is optional */ }
 }
 
-export async function geocodeWithBaidu(api: BMapApi, address: string, city = ''): Promise<BaiduPoint | null> {
+export async function geocodeWithBaidu(api: BMapApi, address: string, city = '', persist = true): Promise<BaiduPoint | null> {
   const key = `${city}|${address}`
-  const cache = readCache()
+  const cache = persist ? readCache() : {}
   if (cache[key]) return new api.Point(cache[key][0], cache[key][1])
   const point = await new Promise<BaiduPoint | null>((resolve) => {
     let settled = false
@@ -83,7 +83,7 @@ export async function geocodeWithBaidu(api: BMapApi, address: string, city = '')
       finish(null)
     }
   })
-  if (point) { cache[key] = [point.lng, point.lat]; writeCache(cache) }
+  if (point && persist) { cache[key] = [point.lng, point.lat]; writeCache(cache) }
   return point
 }
 

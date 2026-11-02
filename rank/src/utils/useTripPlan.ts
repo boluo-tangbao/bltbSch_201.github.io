@@ -3,7 +3,14 @@ import type { TripEntry } from './tripPlan'
 import { readTripEntries, tripEntryKey } from './tripPlan'
 
 const key = 'tangbao-trip-plan-session-v1'
-function read() { try { return readTripEntries(sessionStorage.getItem(key)) } catch { return [] } }
+function read() {
+  try {
+    const stored = readTripEntries(sessionStorage.getItem(key))
+    const publicEntries = stored.filter(entry => !entry.custom)
+    if (publicEntries.length !== stored.length) sessionStorage.setItem(key, JSON.stringify(publicEntries))
+    return publicEntries
+  } catch { return [] }
+}
 const entries = ref<TripEntry[]>(read())
 const selectionKey = 'tangbao-trip-selecting-session-v1'
 function readSelecting(){try{return sessionStorage.getItem(selectionKey)==='true'}catch{return false}}
@@ -17,7 +24,8 @@ function restore() {
 }
 function replace(next: TripEntry[]) {
   entries.value = next
-  try { sessionStorage.setItem(key, JSON.stringify(next)) } catch { /* The current page still supports a temporary plan. */ }
+  // Personal addresses and notes stay in memory until the visitor explicitly encrypts a saved trip.
+  try { sessionStorage.setItem(key, JSON.stringify(next.filter(entry => !entry.custom))) } catch { /* The current page still supports a temporary plan. */ }
 }
 
 export function useTripPlan() {

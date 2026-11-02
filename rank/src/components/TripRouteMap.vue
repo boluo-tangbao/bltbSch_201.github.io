@@ -15,7 +15,7 @@ async function draw(){
     if(!map){map=new api.Map(canvas.value,{enableMapClick:false});map.enableScrollWheelZoom(true);map.addControl(new api.ScaleControl({anchor:2}));map.addControl(new api.ZoomControl({anchor:3}))}
     map.clearOverlays();const points=[]
     for(let i=0;i<props.groups.length;i++){
-      const group=props.groups[i]!,point=group.place?await pointForPlace(api,group.place):group.address?await geocodeWithBaidu(api,group.address,group.city):null
+      const group=props.groups[i]!,point=group.place?await pointForPlace(api,group.place):group.address?await geocodeWithBaidu(api,group.address,group.city,false):null
       if(current!==revision)return;if(!point)continue;points.push(point)
       const selected=props.selected===group.id
       const label=new api.Label(`<button style="font:13px sans-serif;padding:6px 9px;border:2px solid #a83750;border-radius:5px;color:${selected?'#fffaf1':'#84394e'};background:${selected?'#a83750':'#fffaf1'}">${i+1}. ${escapeMapHtml(group.name)}${group.entries.filter(e=>e.shopName||e.custom).length?' · '+group.entries.filter(e=>e.shopName||e.custom).length+'店':''}</button>`,{position:point,offset:new api.Size(-15,-16)})

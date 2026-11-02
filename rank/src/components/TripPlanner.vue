@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import type { Place, ShopDirectory, Site } from '../types'
 import directoryData from '../data/shop-directories.json'
 import siteData from '../data/site.json'
@@ -10,6 +10,7 @@ import CopyButton from './CopyButton.vue'
 import ExportPanel from './DeferredExport.vue'
 import DeferredFeature from './DeferredFeature.vue'
 import {groupTripStops} from '../utils/tripRouting'
+import { reviewTripEntries, routingKey, type SavedTrip } from '../utils/tripArchive'
 
 const props = defineProps<{ places: Place[] }>()
 const plan = useTripPlan(), today = useShopToday(), dialog = ref<HTMLDialogElement>()
@@ -18,6 +19,15 @@ const guideUrl = new URL(`${import.meta.env.BASE_URL}guide/`, location.origin).h
 const stops = computed(() => resolveTripStops(plan.entries.value, props.places, directoryData as Record<string, ShopDirectory>, today.value))
 const text = computed(() => tripPlanText(stops.value, guideUrl))
 const groups=computed(()=>groupTripStops(stops.value,props.places))
+const unavailable = computed(() => reviewTripEntries(plan.entries.value, props.places, directoryData as Record<string, ShopDirectory>, today.value))
+const archiveOpen = ref(false), journeyRevision = ref(0)
+const loadArchive = () => import('./TripArchive.vue')
+function openArchive() { dialog.value?.close(); archiveOpen.value = true }
+async function restoreTrip(trip: SavedTrip) {
+  try { sessionStorage.setItem(routingKey, JSON.stringify(trip.preferences)) } catch { /* The current selection still works without session storage. */ }
+  plan.replace(trip.entries); plan.setSelecting(false); journeyRevision.value++; archiveOpen.value = false
+  await nextTick(); openPlanner()
+}
 const selectedPlaces = computed(() => props.places.filter(place=>stops.value.some(stop=>stop.placeId===place.id)))
 const updatedAt = computed(() => [site.updatedAt, ...selectedPlaces.value.map(place => place.updatedAt)].filter(Boolean).sort().at(-1) || null)
 const rankingOpen = ref(false), documentUrl = ref('')
@@ -30,22 +40,24 @@ function exportPlan() { release(); documentUrl.value = URL.createObjectURL(new B
 function clear() { plan.clear();try{sessionStorage.removeItem('tangbao-trip-routing-session-v1')}catch{};dialog.value?.close() }
 watch(stops, value => {
   release()
-  if (value.length !== plan.entries.value.length) plan.replace(value.map(({ placeId, shopName,custom }) => ({ placeId, ...(shopName ? { shopName } : {}),...(custom?{custom}:{}) })))
-  if (!value.length) { dialog.value?.close(); rankingOpen.value = false }
+  if (!plan.entries.value.length) { dialog.value?.close(); rankingOpen.value = false }
 }, { immediate: true })
 onBeforeUnmount(release)
 </script>
 
 <template>
-  <button v-if="!stops.length&&!plan.selecting.value" type="button" class="trip-plan-launcher" @click="plan.setSelecting(true)"><span aria-hidden="true">↗</span> 规划逛店</button>
-  <aside v-if="stops.length||plan.selecting.value" class="trip-plan-dock" aria-label="本次逛店清单">
+  <button v-if="!plan.entries.value.length&&!plan.selecting.value" type="button" class="trip-plan-launcher" @click="plan.setSelecting(true)"><span aria-hidden="true">↗</span> 规划逛店</button>
+  <button v-if="!plan.entries.value.length&&!plan.selecting.value" type="button" class="trip-saved-launcher" aria-haspopup="dialog" @click="openArchive">本机行程</button>
+  <aside v-if="plan.entries.value.length||plan.selecting.value" class="trip-plan-dock" aria-label="本次逛店清单">
     <div><strong>{{plan.selecting.value?'正在挑选想逛的地方':'本次逛店清单'}} · {{ groups.length }} 站</strong><small>{{plan.selecting.value?'点心形加入清单，也可进入介绍挑具体店铺':'选好下一站，带着清单出发'}}</small></div>
     <div class="trip-dock-actions"><template v-if="plan.selecting.value"><button type="button" class="button dark" @click="finishSelecting">{{stops.length?'选好了，规划路线':'退出选店'}}</button></template><template v-else><button type="button" class="text-button" @click="plan.setSelecting(true)">继续选店</button><button type="button" class="button dark" aria-haspopup="dialog" @click="openPlanner">整理与导出</button></template></div>
   </aside>
   <dialog ref="dialog" class="trip-plan-dialog" aria-labelledby="trip-plan-title" @close="plannerOpen=false">
     <header class="trip-plan-heading"><div><p class="section-label">THIS TRIP</p><h2 id="trip-plan-title">本次逛店清单</h2></div><button type="button" class="trip-plan-close" aria-label="关闭本次清单" @click="dialog?.close()">×</button></header>
-    <p class="trip-plan-note">加入地点或具体店铺，按逛店顺序调整。仅保留本次浏览，关闭标签页后清空。</p>
-    <DeferredFeature v-if="stops.length&&plannerOpen" inline :loader="loadJourney" title="行程规划" :places="places" :guide-url="guideUrl" @details="dialog?.close()" />
+    <p class="trip-plan-note">本次清单默认临时使用，关闭标签页后清空；需下次继续，可主动加密保存到本机。自填地址和备注仅本页暂存，刷新或切换页面前请加密保存。</p>
+    <button type="button" class="button" @click="openArchive">保存／恢复行程</button>
+    <section v-if="unavailable.length" class="trip-plan-unavailable" aria-label="原计划中需调整的条目"><h3>原计划中需调整</h3><p class="trip-plan-note">这些条目保留在原计划中，暂不参加路线与当前清单导出。</p><ul><li v-for="item in unavailable" :key="tripEntryKey(item.entry)">{{ item.name }} · {{ item.reason }} <button type="button" class="text-button" :aria-label="`移除失效条目：${item.name}`" @click="plan.remove(item.entry)">移除</button></li></ul></section>
+    <DeferredFeature v-if="stops.length&&plannerOpen" :key="journeyRevision" inline :loader="loadJourney" title="行程规划" :places="places" :guide-url="guideUrl" @details="dialog?.close()" />
     <footer class="trip-plan-actions">
       <button type="button" class="button dark" :disabled="!stops.length" @click="exportPlan">生成清单文件</button>
       <a v-if="documentUrl" class="button trip-plan-download" :href="documentUrl" :download="`本次逛店清单-${today}.html`">下载清单（HTML）↓</a>
@@ -55,6 +67,7 @@ onBeforeUnmount(release)
     </footer>
     <p class="trip-plan-note">清单文件保留当前顺序、地址、楼层与档期，可离线阅读；地点榜单沿用原排名。详情和导航需联网。</p>
   </dialog>
+  <DeferredFeature v-if="archiveOpen" :loader="loadArchive" title="本机行程" :entries="plan.entries.value" :places="places" :directories="directoryData" @close="archiveOpen = false" @restore="restoreTrip" />
   <ExportPanel v-if="rankingOpen" :site="site" :places="selectedPlaces" :all-places="places" current-label="本次清单" scope="本次逛店清单" :updated-at="updatedAt" @close="rankingOpen = false" />
 </template>
 
@@ -64,6 +77,8 @@ onBeforeUnmount(release)
 .trip-plan-dock > div { min-width: 0; }
 .trip-plan-launcher { position:fixed;z-index:850;right:20px;bottom:max(20px,env(safe-area-inset-bottom));display:flex;align-items:center;gap:8px;min-height:44px;padding:10px 18px;border:1px solid var(--ui-accent, #a83750);border-radius:28px;background:#fffaf1;color:#84394e;font:inherit;font-size:14px;box-shadow:2px 3px 0 #efb1bb;cursor:pointer; }
 .trip-plan-launcher span { font-size:20px; }
+.trip-saved-launcher { position: fixed; z-index: 850; left: 20px; bottom: max(20px, env(safe-area-inset-bottom)); min-height: 44px; padding: 10px 14px; border: 1px solid var(--ui-border); border-radius: var(--ui-radius-control); background: var(--ui-surface); color: var(--ui-accent); font: inherit; font-size: 13px; }
+.trip-plan-unavailable { margin-top: 16px; padding: 12px; border: 1px solid var(--ui-border); font-size: 13px; overflow-wrap: anywhere; }
 .trip-plan-launcher:focus-visible { outline:3px solid var(--ui-accent, #a83750);outline-offset:4px; }
 .trip-dock-actions { display:flex;align-items:center;gap:10px;flex:none; }
 .trip-plan-dock strong { display: block; font-size: 15px; }

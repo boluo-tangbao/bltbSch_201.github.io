@@ -14,6 +14,7 @@ import {mallHours} from '../utils/mallHours'
 import {chinaDateTime,chooseRoute,evaluateTrip,formatTripTime,groupTripStops,legKey,modeNames,optimizeTrip,parseDeparture,type ModePreference,type RouteMatrix,type TripGroup,type VisitSetting} from '../utils/tripRouting'
 import TripRouteMap from './TripRouteMap.vue'
 import CopyButton from './CopyButton.vue'
+import { sessionTripPreferences } from '../utils/tripArchive'
 
 const props=defineProps<{places:Place[];guideUrl:string}>()
 const emit=defineEmits<{details:[]}>()
@@ -24,16 +25,14 @@ const selected=ref(groups.value[0]?.id||'')
 const active=computed(()=>groups.value.find(g=>g.id===selected.value)||groups.value[0])
 const departure=ref(chinaDateTime()),clockRead=ref(`系统时间 ${departure.value.replace('T',' ')}（上海）`)
 const modes=reactive<Record<string,ModePreference>>({}),visits=reactive<Record<string,VisitSetting>>({})
+const routeEnabled=ref(false)
+function enableRoutes(){routeEnabled.value=true;void analyse(true)}
 const completedPrefix=ref<string[]>([]),matrix=ref<RouteMatrix>({}),busy=ref(false),message=ref(''),progress=ref('')
 const metadataKey='tangbao-trip-routing-session-v1'
 try{
+  Object.assign(modes,sessionTripPreferences().modes);Object.assign(visits,sessionTripPreferences().visits)
   const data=JSON.parse(sessionStorage.getItem(metadataKey)||'{}')
   if(Array.isArray(data.prefix)&&data.prefix.length<=120&&data.prefix.every((id:unknown)=>typeof id==='string'))completedPrefix.value=data.prefix
-  if(data.modes&&typeof data.modes==='object')for(const [key,value] of Object.entries(data.modes).slice(0,200))if(['auto','walk','bus','car'].includes(value as string))modes[key]=value as ModePreference
-  if(data.visits&&typeof data.visits==='object')for(const [key,value] of Object.entries(data.visits).slice(0,120)){
-    const v=value as VisitSetting
-    if(v&&Number.isFinite(v.minutes)&&v.minutes>=0&&v.minutes<=240)visits[key]={minutes:v.minutes,...(/^([01]\d|2[0-3]):[0-5]\d$/.test(v.close||'')?{close:v.close}:{})}
-  }
 }catch{/* A session without storage still works. */}
 function validPrefix(){return completedPrefix.value.length>1&&completedPrefix.value.every((id,i)=>groups.value[i]?.id===id)}
 const completed=computed(()=>validPrefix()?completedPrefix.value.length-1:0)
@@ -51,7 +50,7 @@ function setVisit(id:string,field:'close'|'minutes',event:Event){const input=eve
 function resetClose(id:string){delete visits[id]?.close;save();void analyse(true)}
 function readClock(){departure.value=chinaDateTime();clockRead.value=`系统时间 ${departure.value.replace('T',' ')}（上海）`}
 function manualTime(){clockRead.value='本次手动出发时间；刷新或完成路段后读取新的系统时间。';void analyse(false)}
-function replaceOrder(order:TripGroup[]){plan.replace(order.flatMap(g=>g.entries.map(({placeId,shopName,custom})=>({placeId,...(shopName?{shopName}:{}),...(custom?{custom}:{})}))))}
+function replaceOrder(order:TripGroup[]){const available=new Set(resolved.value.map(tripEntryKey));const unavailable=plan.entries.value.filter(e=>!available.has(tripEntryKey(e)));plan.replace([...order.flatMap(g=>g.entries.map(({placeId,shopName,custom})=>({placeId,...(shopName?{shopName}:{}),...(custom?{custom}:{})}))),...unavailable])}
 function move(index:number,offset:number){const target=index+offset;if(target<0||target>=groups.value.length||(completed.value&&(index<=completed.value||target<=completed.value)))return;const next=[...groups.value];[next[index],next[target]]=[next[target]!,next[index]!];replaceOrder(next);void analyse(false)}
 function removeGroup(index:number){if(completed.value&&index<=completed.value)return;const id=groups.value[index]!.id;plan.replace(plan.entries.value.filter(e=>e.placeId!==id))}
 function setMode(key:string,event:Event){if(evaluation.value.legs.find(l=>l.key===key)?.done)return;modes[key]=(event.target as HTMLSelectElement).value as ModePreference;save();void analyse(false)}
@@ -59,6 +58,7 @@ function complete(index:number){if(index<completed.value||index>=groups.value.le
 function resetProgress(){completedPrefix.value=[];readClock();save();void analyse(true,true)}
 let revision=0,controller:AbortController|undefined
 async function analyse(optimize=false,force=false){
+  if(!routeEnabled.value)return
   controller?.abort();const current=++revision;controller=new AbortController();const signal=controller.signal
   if(!Number.isFinite(settings.value.start)){message.value='请填写有效的出发时间。';busy.value=false;return}
   if(groups.value.length<2){message.value='再加入一站，就可以计算通勤。';busy.value=false;return}
@@ -150,12 +150,12 @@ const nextOptions=computed(()=>nextLeg.value?matrix.value[nextLeg.value.key]||[]
      </div>
     </li>
    </ol></section>
-   <section class="journey-map-panel" aria-label="行程地图"><h3>这些店，分别在哪？</h3><TripRouteMap :groups="groups" :selected="active?.id||''" :route="nextLeg?.done?undefined:nextLeg?.choice" @select="selected=$event" />
+   <section class="journey-map-panel" aria-label="行程地图"><h3>这些店，分别在哪？</h3><TripRouteMap v-if="routeEnabled" :groups="groups" :selected="active?.id||''" :route="nextLeg?.done?undefined:nextLeg?.choice" @select="selected=$event" /><div v-else class="route-permission"><p class="muted">启用后会向百度地图发送所选地点及自填地址，用于定位和查询通勤；备注不发送。</p><button type="button" class="primary" @click="enableRoutes">启用地图与通勤查询</button></div>
     <div v-if="nextLeg&&!nextLeg.done" class="next-leg"><p>下一段：{{nextLeg.from.name}} → {{nextLeg.to.name}}</p><label>交通方式<select aria-label="下一段出行方式" :value="nextPreference" @change="setMode(nextLeg.key,$event)"><option v-for="(name,key) in modeNames" :key="key" :value="key">{{name}}</option></select></label><p v-if="nextLeg.choice" class="muted">当前方案：{{modeNames[nextLeg.choice.mode]}} · 约 {{Math.ceil(nextLeg.choice.seconds/60)}} 分钟</p><p v-else class="muted">{{busy?'正在查询交通方案…':'此段尚未查到时间'}}</p><small v-if="nextOptions.length&&nextOptions.length<3" class="muted">部分交通方式暂无可用方案，最快取当前可用结果。</small></div>
     <p v-else-if="nextLeg?.done" class="muted">此段已完成，继续查看后面的行程。</p><p v-else class="muted">这是最后一站。</p>
    </section>
   </div>
-  <section class="journey-commute" aria-label="完整通勤时间"><h3>这一路，要花多久？</h3><div class="journey-actions departure-controls"><label>出发时间（上海时间）<input v-model="departure" type="datetime-local" step="1" required aria-label="出发时间（上海时间）" @change="manualTime"></label><button type="button" :disabled="busy" @click="analyse(false,true)">重新计算时间</button><button type="button" :disabled="busy" @click="analyse(true)">重新优化顺序</button><button v-if="completed" type="button" class="link-button" @click="resetProgress">重置完成进度</button></div>
+  <section class="journey-commute" aria-label="完整通勤时间"><h3>这一路，要花多久？</h3><div class="journey-actions departure-controls"><label>出发时间（上海时间）<input v-model="departure" type="datetime-local" step="1" required aria-label="出发时间（上海时间）" @change="manualTime"></label><button type="button" :disabled="busy||!routeEnabled" @click="analyse(false,true)">重新计算时间</button><button type="button" :disabled="busy||!routeEnabled" @click="analyse(true)">重新优化顺序</button><button v-if="completed" type="button" class="link-button" @click="resetProgress">重置完成进度</button></div>
    <p class="muted">{{clockRead}}</p><p class="journey-status" role="status">{{busy?progress:message}}</p>
    <div v-for="leg in evaluation.legs" :key="leg.key" class="journey-leg" :class="{'is-done':leg.done}"><div><p>{{leg.index+1}}. {{leg.from.name}} → {{leg.to.name}}</p><p v-if="leg.done" class="muted">已结束这段旅途</p><template v-else><p v-if="leg.choice" class="muted">地图估时 {{Math.ceil(leg.choice.seconds/60)}} 分钟 · {{formatTripTime(leg.departure)}} 出发 → {{formatTripTime(leg.arrival)}} 到达</p><p v-else class="muted">{{busy?'正在查询…':'此段暂未查到时间，请在地图确认。'}}</p><p :class="['closed','during','tight'].includes(leg.risk)?'journey-warning':'muted'">{{leg.arrival===null?'前段时间待补齐，闭店风险尚不能确定':riskLabel(leg.risk)}}<template v-if="leg.close"> · {{hoursLabel(leg.to.id)}} {{formatTripTime(leg.close)}}</template></p><p v-if="leg.earlyShopWarning" class="journey-warning">预计逛店跨过20:00，部分店可能提前收店，请先确认目标店。</p></template></div><div class="leg-controls"><select :aria-label="`第${leg.index+1}段交通方式`" :value="modes[leg.key]||'auto'" :disabled="leg.done" @change="setMode(leg.key,$event)"><option v-for="(name,key) in modeNames" :key="key" :value="key">{{name}}</option></select><button type="button" :disabled="leg.done" @click="complete(leg.index)">{{leg.done?'✓ 已完成':'已完成'}}</button></div></div>
    <div class="journey-total" aria-live="polite"><strong v-if="evaluation.legs.length&&completed===evaluation.legs.length">本次行程已完成</strong><template v-else><span>剩余通勤</span><strong>{{evaluation.complete&&Number.isFinite(settings.start)?`约 ${Math.ceil(evaluation.knownSeconds/60)} 分钟`:'全程尚未算完整'}}</strong><span v-if="!evaluation.complete">已知部分 {{Math.ceil(evaluation.knownSeconds/60)}} 分钟</span></template><small>已完成 {{completed}} / {{evaluation.legs.length}} 段<template v-if="evaluation.risks.length"> · {{evaluation.risks.length}} 站存在闭店风险</template></small></div>
