@@ -16,6 +16,7 @@ playwright-report/
 /rank/public/images/previews/
 /rank/src/data/media-previews.json
 /rank/src/data/portrait-previews.json
+/rank/src/data/original-links.json
 /rank/public/characters.json
 /rank/.npm-cache/
 

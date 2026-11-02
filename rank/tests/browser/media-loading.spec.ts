@@ -8,6 +8,7 @@ const photoPlace = published.find(p => p.gallery.some((g: any) => g.type !== 'vi
 const videoPlace = published.find(p => p.gallery.filter((g: any) => g.type === 'video').length > 1)
 const mediaUrl = (src: string) => base + src.split('/').map(encodeURIComponent).join('/')
 const previews = JSON.parse(readFileSync('src/data/media-previews.json', 'utf8'))
+const originalLinks = JSON.parse(readFileSync('src/data/original-links.json', 'utf8'))
 
 test('board requests responsive previews without downloading original covers', async ({ page }) => {
   const requests: string[] = []
@@ -70,7 +71,7 @@ test('gallery loads a screen-sized image, preserves originals and recovers from 
   await expect(page.locator('.full-image-original')).toHaveClass(/is-ready/)
   expect(requests).not.toContain(mediaUrl(photo.src))
   expect(originals).toBe(2)
-  await expect(page.getByRole('link', { name: '打开原图' })).toHaveAttribute('href', mediaUrl(photo.src).slice(new URL(base).origin.length))
+  await expect(page.getByRole('link', { name: '打开原图' })).toHaveAttribute('href', originalLinks[photo.src] || mediaUrl(photo.src).slice(new URL(base).origin.length))
   for (const width of [1440, 768, 375]) {
     await page.setViewportSize({ width, height: 900 })
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
@@ -105,7 +106,7 @@ test('video previews make no MP4 requests until clicked and switching replaces t
   await expect(player.locator('source')).toHaveAttribute('src', mediaUrl(previews[videos[1].src].playback).slice(new URL(base).origin.length))
   await expect.poll(() => player.evaluate(video => video.readyState)).toBeGreaterThanOrEqual(2)
   expect(requests.every(url => url.includes('/images/previews/'))).toBe(true)
-  await expect(page.getByRole('link', { name: '打开原视频' })).toHaveAttribute('href', mediaUrl(videos[1].src).slice(new URL(base).origin.length))
+  await expect(page.getByRole('link', { name: '打开原视频' })).toHaveAttribute('href', originalLinks[videos[1].src] || mediaUrl(videos[1].src).slice(new URL(base).origin.length))
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
   await page.getByRole('button', { name: '关闭大图' }).click()
   await expect(player).toHaveCount(0)

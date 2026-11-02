@@ -6,7 +6,8 @@ const base = process.env.BROWSE_TEST_BASE || 'http://127.0.0.1:4173/bltbSch_201.
 const groups = JSON.parse(readFileSync('src/data/places.json', 'utf8'))
 const place = groups['上海'].find((p: any) => p.id === 'shanghai-shop-021')
 const paths: string[] = [...new Set<string>([place.cover, ...place.gallery.flatMap((g: any) => g.type === 'video' ? (g.poster ? [g.poster] : []) : [g.src])])]
-const asset = (path: string) => new URL(path.split('/').map(encodeURIComponent).join('/'), base).href
+const previews = JSON.parse(readFileSync('src/data/media-previews.json', 'utf8'))
+const asset = (path: string) => new URL((previews[path]?.display || path).split('/').map(encodeURIComponent).join('/'), base).href
 const urls = new Set(paths.map(asset))
 const pixel = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/l9sAAAAASUVORK5CYII=', 'base64')
 mkdirSync('test-results/evidence', { recursive: true })

@@ -14,6 +14,7 @@ const usedRankAssets = publishedRankAssets({
  mediaPreviews: json('rank/src/data/media-previews.json'),
  portraitPreviews: json('rank/src/data/portrait-previews.json'),
  characters: json('rank/public/characters.json'),
+ originalLinks: json('rank/src/data/original-links.json'),
 })
 const rankDist = resolve(root, 'rank/dist')
 for (const asset of usedRankAssets) {
@@ -44,4 +45,4 @@ cpSync(rankDist,resolve(out,'rank'),{recursive:true,filter:source=>{
 }})
 writeFileSync(resolve(out,'.nojekyll'),'')
 console.log('Pages 构建完成：主站与活动网页素材位于 _site/，榜单位于 _site/rank/；未复制活动原素材。')
-console.log(`发布包精简：排除 ${skippedFiles} 个未使用素材／系统文件，减少 ${(skippedBytes / 1024 ** 2).toFixed(2)} MiB；本地原件保持不变，output/ 设计稿不发布。`)
+console.log(`发布包精简：排除 ${skippedFiles} 个已分离原件／未使用素材／系统文件，减少 ${(skippedBytes / 1024 ** 2).toFixed(2)} MiB；本地原件保持不变，output/ 设计稿不发布。`)

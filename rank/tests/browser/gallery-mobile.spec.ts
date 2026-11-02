@@ -7,6 +7,7 @@ const photos = places.find(p => p.published && p.gallery.length >= 4 && p.galler
 const single = places.find(p => p.published && p.gallery.length === 1)
 const videoPlace = places.find(p => p.published && p.gallery.some((g: any) => g.type === 'video'))
 const previews = JSON.parse(readFileSync('src/data/media-previews.json', 'utf8'))
+const originals = JSON.parse(readFileSync('src/data/original-links.json', 'utf8'))
 const mediaUrl = (src: string) => new URL(src.split('/').map(encodeURIComponent).join('/'), base).href
 mkdirSync('test-results/evidence', { recursive: true })
 
@@ -95,7 +96,7 @@ test('only neighbouring display photos preload and originals remain opt-in', asy
   const expected = [displays[0], displays[1], displays.at(-1)]
   await expect.poll(() => [...new Set(requests.filter(url => displays.includes(url)))].sort()).toEqual(expected.sort())
   expect(requests.some(url => photos.gallery.some((g: any) => url === mediaUrl(g.src)))).toBe(false)
-  await expect(page.getByRole('link', { name: '打开原图' })).toHaveAttribute('href', new URL(mediaUrl(photos.gallery[0].src)).pathname)
+  await expect(page.getByRole('link', { name: '打开原图' })).toHaveAttribute('href', originals[photos.gallery[0].src] || new URL(mediaUrl(photos.gallery[0].src)).pathname)
 })
 
 test('mobile controls fit at small widths and in landscape with at least 44px targets', async ({ page }) => {

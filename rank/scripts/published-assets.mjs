@@ -1,17 +1,20 @@
 import { basename } from 'node:path'
 
-export function publishedRankAssets({ places, mediaPreviews, portraitPreviews, characters }) {
+export function publishedRankAssets({ places, mediaPreviews, portraitPreviews, characters, originalLinks = {} }) {
   const used = new Set()
   const add = path => { if (path) used.add(path) }
   const media = path => {
     if (!path) return
-    add(path)
+    const preview = mediaPreviews[path]
+    const separateOriginal = originalLinks[path] && preview?.small && preview.large && (preview.display || preview.playback)
+    if (!separateOriginal) add(path)
     for (const preview of Object.values(mediaPreviews[path] ?? {})) add(preview)
   }
   for (const place of Object.values(places).flat()) {
     if (!place.published) continue
     media(place.cover)
     media(place.mapSnapshot?.src)
+    add(place.mapSnapshot?.src) // Map fallback uses the original URL directly.
     for (const item of place.gallery) { media(item.src); media(item.poster) }
   }
   for (const [file, preview] of Object.entries(portraitPreviews)) {

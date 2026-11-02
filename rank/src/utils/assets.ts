@@ -1,8 +1,14 @@
 import previewData from '../data/media-previews.json'
 import portraitData from '../data/portrait-previews.json'
+import originalData from '../data/original-links.json'
 
 const previews = previewData as Record<string, { tiny?: string; small: string; large: string; display?: string; playback?: string }>
 const portraits = portraitData as Record<string, string>
+const originals = originalData as Record<string, string>
+
+export function originalUrl(path: string) {
+  return (import.meta.env.PROD && originals[path]) || assetUrl(path)
+}
 
 export function assetUrl(path: string) {
   return `${import.meta.env.BASE_URL}${path.split('/').map(encodeURIComponent).join('/')}`

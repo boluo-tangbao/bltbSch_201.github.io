@@ -1,5 +1,5 @@
 import type { Place, Site, Update } from '../types'
-import { assetUrl } from './assets'
+import { displayUrl, playbackUrl } from './assets'
 import { baiduMapUrl, cityColor, hasCoordinates, placeAddress } from './cities'
 import { tiers, tierLabel, updateItems, updateLabel } from './model'
 import { richTextHtml, richTextStyles } from './richText'
@@ -14,7 +14,7 @@ export function escapeHtml(value: string) {
 }
 async function embeddedImage(path: string, signal?: AbortSignal) {
   const timeout = AbortSignal.timeout(15000)
-  const response = await fetch(assetUrl(path), { signal: signal ? AbortSignal.any([signal, timeout]) : timeout })
+  const response = await fetch(displayUrl(path), { signal: signal ? AbortSignal.any([signal, timeout]) : timeout })
   if (!response.ok) throw new Error(`图片加载失败：${path}`)
   const blob = await response.blob()
   signal?.throwIfAborted()
@@ -53,7 +53,7 @@ export async function exportDocument(site: Site, places: Place[], allPlaces: Pla
     for (const p of places.filter(p => p.tier === t.id)) {
       await exportCheckpoint(options)
     const rank = allPlaces.filter(x => x.tier === p.tier).findIndex(x => x.id === p.id) + 1
-    cards.push(`<article style="border-color:${cityColor(p.city, site.cityColors)}"><p>${e(p.city)}${site.rankWithinTier ? ` · 档内第 ${rank} 名` : ''}</p><h3>${e(p.name)}</h3>${p.cover ? `<img src="${images.get(p.cover)}" alt="${e(p.city + ' · ' + p.name)}">` : '<p>暂无图片</p>'}<p class="prose">${e(p.summary)}</p><p>到访：${e(p.visitedAt || '未记录')} · 内容更新：${e(p.updatedAt)}</p>${p.tags.length ? `<p>标签：${p.tags.map(e).join(' / ')}</p>` : ''}${paragraph('详细评价', p.details)}${p.visitNotes?.length ? `<h4>菠萝の建议</h4><ul>${p.visitNotes.map(note => `<li class="prose"><strong>${richText(note)}</strong></li>`).join('')}</ul>` : ''}${(options.includeGallery === false ? [] : p.gallery).map(g => g.type === 'video' ? `<figure><video controls preload="metadata" aria-label="${e(g.alt)}"${g.poster ? ` poster="${images.get(g.poster)}"` : ''}><source src="${e(new URL(assetUrl(g.src), location.origin).href)}" type="video/mp4"></video><figcaption>${e(g.alt)}</figcaption></figure>` : `<figure><img src="${images.get(g.src)}" alt="${e(g.alt)}"><figcaption>${e(g.alt)}</figcaption></figure>`).join('')}${p.location ? `<h4>位置与导航</h4><p>${e(placeAddress(p) || '详细地址待补充')}</p>${hasCoordinates(p) ? `<p>WGS84：${p.location.lat}, ${p.location.lng}</p>` : '<p>地址已记录，坐标由百度地图在线解析。</p>'}<a href="${e(baiduMapUrl(p)!)}">在百度地图查看</a>` : '<p>位置待补充。</p>'}<p><a href="${website}guide/#/place/${p.id}">查看最新介绍</a></p></article>`)
+    cards.push(`<article style="border-color:${cityColor(p.city, site.cityColors)}"><p>${e(p.city)}${site.rankWithinTier ? ` · 档内第 ${rank} 名` : ''}</p><h3>${e(p.name)}</h3>${p.cover ? `<img src="${images.get(p.cover)}" alt="${e(p.city + ' · ' + p.name)}">` : '<p>暂无图片</p>'}<p class="prose">${e(p.summary)}</p><p>到访：${e(p.visitedAt || '未记录')} · 内容更新：${e(p.updatedAt)}</p>${p.tags.length ? `<p>标签：${p.tags.map(e).join(' / ')}</p>` : ''}${paragraph('详细评价', p.details)}${p.visitNotes?.length ? `<h4>菠萝の建议</h4><ul>${p.visitNotes.map(note => `<li class="prose"><strong>${richText(note)}</strong></li>`).join('')}</ul>` : ''}${(options.includeGallery === false ? [] : p.gallery).map(g => g.type === 'video' ? `<figure><video controls preload="metadata" aria-label="${e(g.alt)}"${g.poster ? ` poster="${images.get(g.poster)}"` : ''}><source src="${e(new URL(playbackUrl(g.src), location.origin).href)}" type="video/mp4"></video><figcaption>${e(g.alt)}</figcaption></figure>` : `<figure><img src="${images.get(g.src)}" alt="${e(g.alt)}"><figcaption>${e(g.alt)}</figcaption></figure>`).join('')}${p.location ? `<h4>位置与导航</h4><p>${e(placeAddress(p) || '详细地址待补充')}</p>${hasCoordinates(p) ? `<p>WGS84：${p.location.lat}, ${p.location.lng}</p>` : '<p>地址已记录，坐标由百度地图在线解析。</p>'}<a href="${e(baiduMapUrl(p)!)}">在百度地图查看</a>` : '<p>位置待补充。</p>'}<p><a href="${website}guide/#/place/${p.id}">查看最新介绍</a></p></article>`)
       options.onProgress?.({ stage: '整理图文', completed: ++completed, total: places.length })
     }
     content.push(`<section><h2 style="background:${t.color}">${t.label}</h2>${cards.join('') || '<p>暂无条目</p>'}</section>`)

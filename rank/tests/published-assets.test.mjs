@@ -12,8 +12,8 @@ const places = { 上海: [
 const metadata = {
   places,
   mediaPreviews: {
-    'images/places/cover.jpg': { small: 'images/previews/cover-320.webp', display: 'images/previews/cover-1280.webp' },
-    'images/places/movie.mp4': { small: 'images/previews/movie-320.webp', playback: 'images/previews/movie-playback.mp4' },
+    'images/places/cover.jpg': { small: 'images/previews/cover-320.webp', large: 'images/previews/cover-640.webp', display: 'images/previews/cover-1280.webp' },
+    'images/places/movie.mp4': { small: 'images/previews/movie-320.webp', large: 'images/previews/movie-640.webp', playback: 'images/previews/movie-playback.mp4' },
     'images/places/draft.jpg': { small: 'images/previews/draft-320.webp' },
   },
   portraitPreviews: { 'pixel-current.webp': 'images/previews/current-pixel.webp', 'pixel-side.webp': 'images/previews/side-pixel.webp' },
@@ -46,4 +46,18 @@ test('all currently published originals remain deployable without needing genera
     assert.equal(shouldPublishRankAsset(path, used), true, path)
     assert.equal(existsSync(new URL('../public/' + path, import.meta.url)), true, path)
   }
+})
+
+test('originals are omitted only with a separate source and complete browser media; missing previews retain local files', () => {
+  const originalLinks = { 'images/places/cover.jpg': 'https://github.com/example/cover', 'images/places/movie.mp4': 'https://github.com/example/movie', 'images/places/photo.jpg': 'https://github.com/example/photo' }
+  const used = publishedRankAssets({ ...metadata, originalLinks })
+  assert.equal(used.has('images/places/cover.jpg'), false)
+  assert.equal(used.has('images/places/movie.mp4'), false)
+  assert.equal(used.has('images/places/photo.jpg'), true)
+  assert.equal(used.has('images/places/map.png'), true)
+  assert.equal(used.has('images/previews/cover-1280.webp'), true)
+  assert.equal(used.has('images/previews/movie-playback.mp4'), true)
+  const missing = publishedRankAssets({ ...metadata, originalLinks, mediaPreviews: {} })
+  assert.equal(missing.has('images/places/cover.jpg'), true)
+  assert.equal(missing.has('images/places/movie.mp4'), true)
 })

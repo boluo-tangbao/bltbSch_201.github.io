@@ -1,6 +1,6 @@
 import type { Place, Site } from '../types'
 import { tiers } from './model'
-import { assetUrl } from './assets'
+import { displayUrl } from './assets'
 import { cityColor } from './cities'
 import { exportCheckpoint, waitForExport, type ExportTask } from './exportTask'
 
@@ -43,7 +43,7 @@ async function loadImage(src: string, signal?: AbortSignal) {
     img.onload = () => { cleanup(); resolve(img) }
     img.onerror = () => fail(new Error(`图片加载失败：${src}，请检查素材后重试。`))
     signal?.addEventListener('abort', abort, { once: true })
-    img.src = assetUrl(src)
+    img.src = displayUrl(src)
   })
 }
 function cover(ctx: CanvasRenderingContext2D, img: HTMLImageElement, x: number, y: number, w: number, h: number, position: [number, number] = [50, 50]) {

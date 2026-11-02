@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import type { Place } from '../types'
-import { assetUrl, displayUrl, playbackUrl, previewUrl, previewSrcset } from '../utils/assets'
+import { assetUrl, displayUrl, originalUrl, playbackUrl, previewUrl, previewSrcset } from '../utils/assets'
 import GalleryPhoto from './GalleryPhoto.vue'
 
 const props = defineProps<{ images: Place['gallery']; color: string }>()
@@ -147,7 +147,7 @@ onBeforeUnmount(() => {
           </video>
           <GalleryPhoto v-else :key="currentImage.src" v-model:zoom="zoom" :src="currentImage.src" :alt="currentImage.alt" @navigate="showRelativeImage" />
           </div>
-          <figcaption><span>{{ currentImage.alt }}</span><a :href="assetUrl(currentImage.src)" target="_blank" rel="noopener noreferrer">{{ currentImage.type === 'video' ? '打开原视频' : '打开原图' }} ↗</a><a v-if="currentImage.sourceUrl" :href="currentImage.sourceUrl" target="_blank" rel="noopener noreferrer">来源：{{ currentImage.sourceName || '原始页面' }} ↗</a><span v-else-if="currentImage.sourceName">来源：{{ currentImage.sourceName }}</span></figcaption>
+          <figcaption><span>{{ currentImage.alt }}</span><a :href="originalUrl(currentImage.src)" target="_blank" rel="noopener noreferrer" title="查看原件；GitHub 文件页提供下载入口">{{ currentImage.type === 'video' ? '打开原视频' : '打开原图' }} ↗</a><a v-if="currentImage.sourceUrl" :href="currentImage.sourceUrl" target="_blank" rel="noopener noreferrer">来源：{{ currentImage.sourceName || '原始页面' }} ↗</a><span v-else-if="currentImage.sourceName">来源：{{ currentImage.sourceName }}</span></figcaption>
         </figure>
         <nav class="gallery-pagination" aria-label="图集翻页">
           <button class="gallery-tool" type="button" aria-label="上一个素材" title="上一个素材" :disabled="images.length < 2" @click="showRelativeImage(-1)">‹</button>

@@ -96,7 +96,7 @@ npm run dev
 
 开发地址：`http://127.0.0.1:5173/bltbSch_201.github.io/rank/`。
 
-图片总榜和现场图集自动使用 320/640px WebP 预览，进入可视区域才加载。点击照片后先显示预览并请求 1280px 网页大图，原图可通过单独入口打开；加载失败可重试。视频只显示封面，点击后才创建播放器并请求优化后的 MP4，原视频也有单独入口。原始图片和视频保持不变，完整内容导出仍使用原图。
+图片总榜和现场图集自动使用 320/640px WebP 预览，进入可视区域才加载。点击照片后先显示预览并请求 1280px 网页大图；加载失败可重试。视频只显示封面，点击后才请求优化后的 MP4。图片榜单与完整内容导出使用网页高清图，HTML 中的视频使用转码版。原始图片和视频保持不变，“打开原图／原视频”在正式构建中打开对应 GitHub 固定版本文件页，可在那里查看或下载；开发模式仍打开本地原件。
 
 `npm run dev` 和 `npm run build` 自动运行 `prepare:media`，为已公开条目的封面、图集和视频生成预览（无封面的视频自动提取首帧）。预览和索引分别位于忽略的 `rank/public/images/previews/` 与 `rank/src/data/media-previews.json`，无需手动提交或填写缩略图路径；构建产物会带上预览。修改素材后重新启动开发服务或构建。生成使用 [Sharp](https://sharp.pixelplumbing.com/api-resize/) 和随 npm 依赖安装的 FFmpeg，无需额外安装系统工具。
 
@@ -121,7 +121,9 @@ npm run preview
 4. 合并输出到 `_site/`：保留主站页面、assets 和公开 images，新榜单放在 `_site/rank/`。活动原始素材 `content/activities/` 不进入部署目录；组装后执行活动验收。
 5. Pages 上传与部署作业完成并显示绿色成功后，再访问实际站点确认。只有部署作业拥有 `pages: write` 与 `id-token: write`。
 
-组装时自动按已公开条目、媒体预览和角色清单筛选榜单素材：未引用的照片、旧像素头像、过期预览及系统文件不上传，`output/` 设计稿也不发布。本地原件不删除；已使用的原图、原视频、地图备份和角色原画保留，原图查看与完整导出不变。新增照片须先加入公开条目，单纯放进 `rank/public/images/places/` 不会出现在正式网站。
+上传前的空间维护：主站与活动验收成功后，`scripts/prepare-pages-upload.mjs --apply` 仅在 GitHub 托管运行机器内清理已用完的 `rank/dist`、`rank/public`、`content/activities` 和 `.git/lfs/objects` 临时副本，为上传操作生成的未压缩 tar 预留空间。`_site/` 与活动生成缓存保留，本地和 Git 仓库原件不受影响；本地运行不加参数只预览，`--apply` 会被拒绝。日志输出发布目录大小、释放量与磁盘余量，余量不足会提前报出明确错误。发布目录超过 Pages 文档的 1 GB 时另行提示，不自动压缩或移除公开原图／原视频。
+
+组装时自动按已公开条目、媒体预览和角色清单筛选榜单素材：未引用的照片、旧像素头像、过期预览及系统文件不上传，`output/` 设计稿也不发布。2026-11-02原件分离：`prepare-media.mjs` 同时生成忽略提交的 `original-links.json`，核对原件与 HEAD 中的 Git blob／LFS SHA-256 一致，再生成固定提交版本的 GitHub 文件入口。只有同时有完整网页替代素材和原件入口的店铺媒体，才从 Pages 包中排除；未提交、已修改或缺少替代素材的原件保留站内副本，避免断链。地图备份、角色原画及全部本地原件保持原样。本轮实测发布目录由 1774 MiB 降至约 262 MiB，不需要新增存储账户。新增照片须先加入公开条目，单纯放进 `rank/public/images/places/` 不会出现在正式网站。
 
 Vite 默认 base 为 `/bltbSch_201.github.io/rank/`；CI 从 `configure-pages` 返回的真实 `base_path` 推导路径。图片、脚本、CSS 和详情链接都支持仓库子路径，详情使用 `#/place/稳定ID`，刷新不需要服务端路由。
 

@@ -88,6 +88,8 @@ jobs:
         env:
           PLAYWRIGHT_CHANNEL: chromium
           SITE_BASE: ${{ steps.pages.outputs.base_path }}/
+      - name: Free disposable build copies and check archive space
+        run: node scripts/prepare-pages-upload.mjs --apply
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site

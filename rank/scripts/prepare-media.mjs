@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { execFileSync } from 'node:child_process'
 import sharp from 'sharp'
 import ffmpeg from '@ffmpeg-installer/ffmpeg'
+import { prepareOriginalLinks } from './prepare-original-links.mjs'
 import { mascots, pixelMascotById, pixelPortraitVariants } from '../src/data/mascots.ts'
 
 function publicPath(publicRoot, source) {
@@ -117,4 +118,5 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const root = fileURLToPath(new URL('../', import.meta.url))
   await prepareCharacters(root)
   await prepareMedia(root)
+  prepareOriginalLinks(root, JSON.parse(readFileSync(resolve(root, 'src/data/media-previews.json'), 'utf8')))
 }

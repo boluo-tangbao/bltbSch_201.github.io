@@ -20,6 +20,7 @@ if (args.has('--cache')) targets.push(
   'data/anime-events.json', 'data/activities.json',
   'rank/public/images/previews', 'rank/public/characters.json',
   'rank/src/data/media-previews.json', 'rank/src/data/portrait-previews.json',
+  'rank/src/data/original-links.json',
 )
 
 const tracked = execFileSync('git', ['ls-files', '-z'], { cwd: root, encoding: 'utf8', windowsHide: true })
