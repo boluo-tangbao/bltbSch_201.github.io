@@ -24,4 +24,4 @@ export function previewServer(port=4180) {
  })
  return new Promise(done=>server.listen(port,'127.0.0.1',()=>done(server)))
 }
-if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){await previewServer();console.log('站点预览：http://127.0.0.1:4180'+previewBase)}
+if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){const port=Number(process.env.PREVIEW_PORT||4180);await previewServer(port);console.log('站点预览：http://127.0.0.1:'+port+previewBase)}

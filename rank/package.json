@@ -15,7 +15,8 @@
     "test": "node --test tests/*.test.mjs",
     "build": "node scripts/prepare-trip-nearby.mjs && npm run validate:data && npm run prepare:media && vue-tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1",
-    "test:browser": "playwright test"
+    "test:browser": "playwright test",
+    "test:acceptance": "playwright test --config playwright.acceptance.config.ts"
   },
   "dependencies": {
     "vue": "^3.5.43"

@@ -34,6 +34,8 @@ if(process.argv.includes('--migration')&&existsSync(baseline)) {
 if(process.argv.includes('--static')) {console.log('活动元数据、源素材数量、网页素材及部署原素材排除验证通过。');process.exit(0)}
 const server=await previewServer(4181),browser=await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL||'msedge',headless:true})
 const page=await browser.newPage(),errors=[],failed=[];page.on('pageerror',error=>errors.push(error.message));page.on('response',response=>{if(response.status()>=400)failed.push(response.url())})
+const statisticsRequests=[]
+await page.route(url=>url.hostname.includes('busuanzi')||/\/busuanzi(?:\/|$)/i.test(url.pathname),route=>{statisticsRequests.push(route.request().url());return route.abort()})
 const base='http://127.0.0.1:4181'+previewBase
 mkdirSync(new URL('../test-results/activities/',import.meta.url),{recursive:true})
 let devServer
@@ -150,6 +152,8 @@ try{
  for(const file of ['index.html','sports.html','art.html','anime.html','travel.html','activities.html','assets/css/style.css','assets/js/activities.js','assets/generated/activities/manifest.json',videoEvent.media.find(m=>m.type==='video').src])assert.ok((await page.request.get(devBase+file)).ok(),file);
  await page.goto(devBase+'rank/');const devLink=page.getByRole('link',{name:'活动记录',exact:true});await devLink.waitFor();await devLink.click();await page.locator('.event-card').first().waitFor();assert.equal(await page.locator('.event-card').count(),acg.length);
  assert.deepEqual(errors,[]);assert.deepEqual(failed,[])
+ assert.deepEqual(statisticsRequests,[], '主站／活动验收不应请求真实访问统计（请求已拦截）')
+ assert.equal(await page.locator('script[src*="busuanzi"]').count(),0)
 
  console.log('验证通过：原素材完整、页面资源、五主题筛选、预览开关与旧链接、三种屏宽、照片视频、分享与 rank 入口。')
 }finally{if(devServer)await devServer.close();await browser.close();await new Promise(done=>server.close(done))}

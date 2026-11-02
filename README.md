@@ -121,6 +121,10 @@ npm run preview
 4. 合并输出到 `_site/`：保留主站页面、assets 和公开 images，新榜单放在 `_site/rank/`。活动原始素材 `content/activities/` 不进入部署目录；组装后执行活动验收。
 5. Pages 上传与部署作业完成并显示绿色成功后，再访问实际站点确认。只有部署作业拥有 `pages: write` 与 `id-token: write`。
 
+2026-11-02自动验收：组装 `_site/` 后先执行 `node scripts/verify-published-site.mjs`，检查全部发布页面、HTML/CSS/模块引用、榜单媒体清单、原件固定版本入口、店铺出处与 900 MiB 体积预算。安装浏览器并完成主站／活动验收后，在 `rank/` 执行 `npm run test:acceptance`；只针对 `_site/`，按 1440／390／320px 检查全部公开地点，以及店单展开、图集、视频容器、搜索、行程和导出。任一验收失败则停止本次发布，原线上网站保留；清理临时素材与上传 Pages 均在验收后进行。
+
+结果显示在 GitHub Actions 运行摘要；附件 `site-acceptance-report` 保留 7 天，包含资源报告、浏览器 HTML 报告和失败截图／操作 trace。下载后打开 `html/index.html` 查看测试步骤，详细截图和 trace 位于 `browser/`。诊断报告上传失败不会覆盖验收本身的结果。外部访问在核心浏览器验收中隔离，B 站仅检查本站播放器容器；第三方登录、实际路线、营业状态和外部服务实时可用性不算已验证，也不自动判为本站故障。本地先构建、组装，再运行上述两个命令即可复现；生成报告位于忽略提交的 `test-results/acceptance/`，不进入网站发布包。
+
 上传前的空间维护：主站与活动验收成功后，`scripts/prepare-pages-upload.mjs --apply` 仅在 GitHub 托管运行机器内清理已用完的 `rank/dist`、`rank/public`、`content/activities` 和 `.git/lfs/objects` 临时副本，为上传操作生成的未压缩 tar 预留空间。`_site/` 与活动生成缓存保留，本地和 Git 仓库原件不受影响；本地运行不加参数只预览，`--apply` 会被拒绝。日志输出发布目录大小、释放量与磁盘余量，余量不足会提前报出明确错误。发布目录超过 Pages 文档的 1 GB 时另行提示，不自动压缩或移除公开原图／原视频。
 
 组装时自动按已公开条目、媒体预览和角色清单筛选榜单素材：未引用的照片、旧像素头像、过期预览及系统文件不上传，`output/` 设计稿也不发布。2026-11-02原件分离：`prepare-media.mjs` 同时生成忽略提交的 `original-links.json`，核对原件与 HEAD 中的 Git blob／LFS SHA-256 一致，再生成固定提交版本的 GitHub 文件入口。只有同时有完整网页替代素材和原件入口的店铺媒体，才从 Pages 包中排除；未提交、已修改或缺少替代素材的原件保留站内副本，避免断链。地图备份、角色原画及全部本地原件保持原样。本轮实测发布目录由 1774 MiB 降至约 262 MiB，不需要新增存储账户。新增照片须先加入公开条目，单纯放进 `rank/public/images/places/` 不会出现在正式网站。

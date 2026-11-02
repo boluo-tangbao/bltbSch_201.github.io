@@ -80,6 +80,11 @@ jobs:
           key: activities-v1-${{ runner.os }}-${{ hashFiles('content/activities/**', 'scripts/prepare-activities.mjs') }}
           restore-keys: activities-v1-${{ runner.os }}-
       - run: node scripts/assemble-site.mjs
+      - name: Verify final published resources
+        id: resources
+        run: node scripts/verify-published-site.mjs
+        env:
+          SITE_BASE: ${{ steps.pages.outputs.base_path }}/
       - name: Install activity browser checker
         run: npx playwright install --with-deps chromium
         working-directory: rank
@@ -88,6 +93,28 @@ jobs:
         env:
           PLAYWRIGHT_CHANNEL: chromium
           SITE_BASE: ${{ steps.pages.outputs.base_path }}/
+      - name: Verify ranking on desktop and mobile
+        id: acceptance
+        run: npm run test:acceptance
+        working-directory: rank
+        env:
+          SITE_BASE: ${{ steps.pages.outputs.base_path }}/
+          PLAYWRIGHT_CHANNEL: chromium
+      - name: Write acceptance summary
+        continue-on-error: true
+        if: ${{ !cancelled() && (steps.resources.outcome == 'success' || steps.resources.outcome == 'failure') }}
+        run: node scripts/acceptance-summary.mjs
+      - name: Save acceptance reports and failure evidence
+        continue-on-error: true
+        if: ${{ !cancelled() && (steps.resources.outcome == 'success' || steps.resources.outcome == 'failure') }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: site-acceptance-report
+          path: |
+            test-results/acceptance/
+            test-results/activities/
+          retention-days: 7
+          if-no-files-found: ignore
       - name: Free disposable build copies and check archive space
         run: node scripts/prepare-pages-upload.mjs --apply
       - uses: actions/upload-pages-artifact@v5
