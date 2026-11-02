@@ -3,7 +3,7 @@ import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import type { Place } from '../types'
 import { tierLabel } from '../utils/model'
 import { baiduMapUrl, googleMapsUrl, navigationUrl, placeAddress } from '../utils/cities'
-import AddressMap from './AddressMap.vue'
+import AddressMap from './DeferredAddressMap.vue'
 import PlaceGallery from './PlaceGallery.vue'
 import ShopDirectory from './ShopDirectory.vue'
 import BilibiliClips from './BilibiliClips.vue'
@@ -40,6 +40,7 @@ const chapterNav = ref<HTMLElement>()
 const sideNavOpen = ref(false)
 const activeChapter = ref('overview')
 const chapterId = (key: string) => `place-${props.place.id}-${key}`
+const addressMap = ref<InstanceType<typeof AddressMap>>()
 const hasVideo = computed(() => placeClips(bilibiliCatalog as BilibiliCatalog, props.place.id).length > 0)
 const chapters = computed(() => [
   ...(detailParagraphs.value.length || visitNotes.value.length || hasVideo.value ? [{ key: 'overview', label: '介绍' }] : []),
@@ -91,6 +92,7 @@ function handleResize() {
   scheduleChapterUpdate()
 }
 function goToChapter(key: string) {
+  if (key === 'nearby' || key === 'directions') addressMap.value?.activate()
   const section = document.getElementById(chapterId(key))
   if (!section) return
   activeChapter.value = key
@@ -163,7 +165,7 @@ onBeforeUnmount(() => {
     <div v-if="place.gallery.length" :id="chapterId('gallery')" class="detail-chapter"><PlaceGallery :images="place.gallery" :color="color" /></div>
     <section v-if="address" :id="chapterId('nearby')" class="place-mini-map detail-chapter" aria-labelledby="nearby-map-heading">
       <div class="place-mini-map-heading"><div><p class="section-label">AROUND HERE</p><h2 id="nearby-map-heading">地点周边</h2></div><span>百度地图 · 无需访客登录 · 可拖动、缩放</span></div>
-      <AddressMap :place="place" :color="color" />
+      <AddressMap ref="addressMap" :place="place" :color="color" />
       <p class="map-caption">百度在线地图异常时，可显示配置过的每月 500m 备份图。</p>
       <div v-if="place.nearbyVisits?.length" class="nearby-visits">
         <h3>附近参观与打卡</h3>

@@ -7,8 +7,8 @@ import { resolveTripStops, tripEntryKey, tripPlanHtml, tripPlanText, tripStopUrl
 import { useTripPlan } from '../utils/useTripPlan'
 import { useShopToday } from '../utils/shopToday'
 import CopyButton from './CopyButton.vue'
-import ExportPanel from './ExportPanel.vue'
-import TripJourney from './TripJourney.vue'
+import ExportPanel from './DeferredExport.vue'
+import DeferredFeature from './DeferredFeature.vue'
 import {groupTripStops} from '../utils/tripRouting'
 
 const props = defineProps<{ places: Place[] }>()
@@ -22,6 +22,7 @@ const selectedPlaces = computed(() => props.places.filter(place=>stops.value.som
 const updatedAt = computed(() => [site.updatedAt, ...selectedPlaces.value.map(place => place.updatedAt)].filter(Boolean).sort().at(-1) || null)
 const rankingOpen = ref(false), documentUrl = ref('')
 const plannerOpen=ref(false)
+const loadJourney = () => import('./TripJourney.vue')
 function openPlanner(){plannerOpen.value=true;dialog.value?.showModal()}
 function finishSelecting(){plan.setSelecting(false);if(stops.value.length)openPlanner()}
 function release() { if (documentUrl.value) URL.revokeObjectURL(documentUrl.value); documentUrl.value = '' }
@@ -44,7 +45,7 @@ onBeforeUnmount(release)
   <dialog ref="dialog" class="trip-plan-dialog" aria-labelledby="trip-plan-title" @close="plannerOpen=false">
     <header class="trip-plan-heading"><div><p class="section-label">THIS TRIP</p><h2 id="trip-plan-title">本次逛店清单</h2></div><button type="button" class="trip-plan-close" aria-label="关闭本次清单" @click="dialog?.close()">×</button></header>
     <p class="trip-plan-note">加入地点或具体店铺，按逛店顺序调整。仅保留本次浏览，关闭标签页后清空。</p>
-    <TripJourney v-if="stops.length&&plannerOpen" :places="places" :guide-url="guideUrl" @details="dialog?.close()" />
+    <DeferredFeature v-if="stops.length&&plannerOpen" inline :loader="loadJourney" title="行程规划" :places="places" :guide-url="guideUrl" @details="dialog?.close()" />
     <footer class="trip-plan-actions">
       <button type="button" class="button dark" :disabled="!stops.length" @click="exportPlan">生成清单文件</button>
       <a v-if="documentUrl" class="button trip-plan-download" :href="documentUrl" :download="`本次逛店清单-${today}.html`">下载清单（HTML）↓</a>
