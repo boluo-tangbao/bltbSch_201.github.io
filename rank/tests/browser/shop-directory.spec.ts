@@ -2,9 +2,11 @@ import { test, expect } from '@playwright/test'
 import { readFileSync } from 'node:fs'
 import type { ShopDirectory } from '../../src/types'
 import { mergeShopSources, shopDisplayStatus } from '../../src/utils/shopDirectory'
+import { shopSourceUrl } from '../../src/utils/shopSourceUrl'
 
 const base = 'http://127.0.0.1:4173/bltbSch_201.github.io/rank/'
 const directories: Record<string, ShopDirectory> = JSON.parse(readFileSync('src/data/shop-directories.json', 'utf8'))
+const originalLinks = JSON.parse(readFileSync('src/data/original-links.json', 'utf8'))
 const placeIds = ['guangzhou-shop-001', 'shanghai-shop-003', 'shanghai-shop-008']
 
 for (const route of ['', 'guide/']) {
@@ -77,12 +79,12 @@ for (const route of ['', 'guide/']) {
               await expect(row.locator('.shop-status')).toHaveText('待验证')
               await expect(row.locator('.shop-history-source')).toHaveCount(0)
             }
-            await expect(row.locator('.shop-evidence-note')).toContainText(shop.note!)
+            await expect(row.locator('.shop-evidence-note')).toHaveCount(0)
             const links = row.locator('.shop-sources').first().locator('a')
             const sources = mergeShopSources(shop)
             await expect(links).toHaveCount(sources.length)
             for (const [index, source] of sources.entries()) {
-              await expect(links.nth(index)).toHaveAttribute('href', source.url)
+              await expect(links.nth(index)).toHaveAttribute('href', shopSourceUrl(source.url!, originalLinks))
             }
           }
         }

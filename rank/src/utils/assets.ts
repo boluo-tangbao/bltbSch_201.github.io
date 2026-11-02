@@ -1,10 +1,12 @@
 import previewData from '../data/media-previews.json'
 import portraitData from '../data/portrait-previews.json'
 import originalData from '../data/original-links.json'
+import { shopSourceUrl } from './shopSourceUrl'
 
 const previews = previewData as Record<string, { tiny?: string; small: string; large: string; display?: string; playback?: string }>
 const portraits = portraitData as Record<string, string>
 const originals = originalData as Record<string, string>
+export const sourceUrl = (url?: string) => url ? shopSourceUrl(url, originals) : undefined
 
 export function originalUrl(path: string) {
   return (import.meta.env.PROD && originals[path]) || assetUrl(path)

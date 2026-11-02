@@ -6,6 +6,7 @@ import { searchTargetId } from '../utils/search'
 import { shopFeedbackUrl } from '../utils/shopFeedback'
 import { useShopToday } from '../utils/shopToday'
 import TripPlanButton from './TripPlanButton.vue'
+import { sourceUrl } from '../utils/assets'
 
 const props = defineProps<{ directory: ShopDirectory; visitedAt?: string | null; placeId?: string }>()
 const base = import.meta.env.BASE_URL
@@ -78,14 +79,14 @@ defineExpose({ revealShop })
           <template v-if="shop.hostShop"><dt>所在店铺</dt><dd class="shop-host">{{ shop.hostShop }}</dd></template>
           <template v-if="shop.limited"><dt>{{ shop.limited.scope === 'theme' ? '主题期' : '开放期' }}</dt><dd class="shop-period">{{ shop.limited.period }}</dd></template>
         </dl>
-        <p v-if="group.more && shop.historySource" class="shop-history-source">攻略／实访出处：<a :href="shop.historySource.url" target="_blank" rel="noopener noreferrer">{{ shop.historySource.label }}</a> · {{ shop.historySource.time }}</p>
+        <p v-if="group.more && shop.historySource" class="shop-history-source">攻略／实访出处：<a :href="sourceUrl(shop.historySource.url)" target="_blank" rel="noopener noreferrer">{{ shop.historySource.label }}</a> · {{ shop.historySource.time }}</p>
         <p v-else-if="shop.displayStatus === 'evidence'" class="shop-time"><template v-if="shop.sourceTime">线索更新：{{ shop.sourceTime }}</template><template v-else>来源核对：<time :datetime="directory.checkedAt">{{ directory.checkedAt }}</time></template></p>
         <p v-if="shop.limited && shop.authorVisited" class="shop-author-visit">作者到访记录<time v-if="visitedAt" :datetime="visitedAt">（{{ visitedAt }}）</time></p>
-        <p v-if="shop.note && (shop.inactive || shop.limited || !shop.accounts?.length)" class="shop-evidence-note"><b>依据说明</b>{{ shop.note }}</p>
+        <p v-if="shop.note && (shop.inactive || shop.limited)" class="shop-evidence-note"><b>依据说明</b>{{ shop.note }}</p>
         <template v-if="shop.inactive || (shop.limited ? shop.displayStatus !== 'open' : !shop.accounts?.length)">
         <p class="shop-source-label">依据出处</p>
         <ul class="shop-sources" :aria-label="shop.name + '的来源依据'">
-          <li v-for="source in shop.evidenceSources" :key="source.url ?? JSON.stringify([source.labels, source.dates])"><a v-if="source.url" :href="source.url" target="_blank" rel="noopener noreferrer">{{ source.labels.join('／') }} ↗</a><span v-else>{{ source.labels.join('／') }}</span><small class="shop-source-role">{{ source.roles.join('、') }}<template v-if="!source.roles.includes('营业／位置')">（不作为当前营业确认）</template></small><span v-if="source.dates.length"> · {{ source.dates.join('；') }}</span></li>
+          <li v-for="source in shop.evidenceSources" :key="source.url ?? JSON.stringify([source.labels, source.dates])"><a v-if="source.url" :href="sourceUrl(source.url)" target="_blank" rel="noopener noreferrer">{{ source.labels.join('／') }} ↗</a><span v-else>{{ source.labels.join('／') }}</span><small class="shop-source-role">{{ source.roles.join('、') }}<template v-if="!source.roles.includes('营业／位置')">（不作为当前营业确认）</template></small><span v-if="source.dates.length"> · {{ source.dates.join('；') }}</span></li>
         </ul>
         </template>
         <p v-if="shop.accounts?.length" class="shop-source-label">{{ shop.inactive ? '原账号' : '官方账号' }}</p>
