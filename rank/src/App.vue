@@ -83,6 +83,7 @@ const hasFilters = computed(() => !!city.value || !!tag.value || !!query.value.t
 const boardSections = computed(() => tiers.map((tier, index) => ({ ...tier, index, places: filtered.value.filter(place => place.tier === tier.id) })).filter(section => !hasFilters.value || section.places.length))
 const guideUrl = computed(() => linkTo(`${import.meta.env.BASE_URL}guide/`))
 const updatesUrl = `${import.meta.env.BASE_URL}updates/`
+const citiesUrl = `${import.meta.env.BASE_URL}cities/`
 function browseBoard() {
   const heading = document.getElementById('board-title')
   heading?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' })
@@ -156,7 +157,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
     <section v-else-if="currentPlace" class="detail-page"><a :href="`#place-card-${currentPlace.id}`" class="back-link">← 返回榜单</a><a :href="`${guideUrl}#/place/${currentPlace.id}`" class="button">地图与地点目录 ↗</a><PlaceDetail :key="currentPlace.id" :search-query="parsePlaceRoute(route)?.query" :place="currentPlace" :rank="site.rankWithinTier ? rankOf(currentPlace) : undefined" :color="cityColor(currentPlace.city, colors)" /></section>
     <section v-else class="not-found"><p class="eyebrow">这一站暂未收录</p><h1>没有找到这个条目</h1><p>链接可能有误，或条目尚未公开。</p><a href="#/" class="button dark">返回榜单</a></section>
   </main>
-  <TripPlanner :places="all" />
-  <footer class="site-footer"><span><b>{{ site.author }}</b> · 一站一更新，纯主观感受，你们永远对。</span><VisitCounter /></footer>
+  <TripPlanner :places="all" :current-place="currentPlace" />
+  <footer class="site-footer"><span><b>{{ site.author }}</b> · 一站一更新，纯主观感受，你们永远对。 <a :href="citiesUrl">城市逛店指南 ↗</a></span><VisitCounter /></footer>
   <ExportPanel v-if="exportOpen" :site="site" :places="filtered" :all-places="all" :scope="scope" :updated-at="contentDate" @close="exportOpen = false" />
 </template>

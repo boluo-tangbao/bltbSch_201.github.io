@@ -1,0 +1,51 @@
+import { mkdirSync, writeFileSync } from 'node:fs'
+import { dirname, isAbsolute, relative, resolve } from 'node:path'
+import { filterPlaces, flattenPlaces, tierLabel } from '../rank/src/utils/model.ts'
+import { placeAddress } from '../rank/src/utils/cities.ts'
+import { richTextHtml, richTextStyles, parseRichText } from '../rank/src/utils/richText.ts'
+
+const escape = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c])
+const plain = text => parseRichText(text).map(part => part.text).join('')
+
+export function generateDiscoveryPages({ siteRoot, rankBase, origin = 'https://boluo-tangbao.github.io', groups, site, previews }) {
+  const host = new URL(origin)
+  if (host.protocol !== 'https:' || host.username || host.password || host.pathname !== '/' || host.search || host.hash) throw new Error('SITE_ORIGIN 必须是 HTTPS 网站源地址')
+  if (!/^\/(?:[^?#]+\/)?rank\/$/.test(rankBase) || rankBase.includes('..')) throw new Error('榜单发布路径无效')
+  const homeBase = rankBase.slice(0, -5), publicPlaces = filterPlaces(flattenPlaces(groups))
+  const cities = [...new Set(publicPlaces.map(place => place.city))]
+  const publicUrl = path => new URL(path, host).href
+  const cityPath = city => `${rankBase}cities/${encodeURIComponent(city)}/`
+  const placePath = place => `${rankBase}places/${place.id}/`
+  const put = (file, text) => {
+    const root = resolve(siteRoot, 'rank'), path = resolve(root, file), rel = relative(root, path)
+    if (rel.startsWith('..') || isAbsolute(rel)) throw new Error('生成页面路径越界')
+    mkdirSync(dirname(path), { recursive: true }); writeFileSync(path, text)
+  }
+  const imagePath = place => place.cover && (previews[place.cover]?.large || previews[place.cover]?.small)
+  const imageTag = place => imagePath(place) ? `<img class="place-cover" src="${escape(rankBase + imagePath(place))}" alt="${escape(place.city + ' · ' + place.name)}" loading="lazy" width="640" height="400">` : ''
+  const latest = list => list.map(place => place.updatedAt).sort().at(-1)
+  const dates = place => `<p class="dates">体验到访：${escape(place.visitedAt || '未记录')} · 内容更新：<time datetime="${escape(place.updatedAt)}">${escape(place.updatedAt)}</time></p>`
+  const layout = ({ title, description, path, body, modified, image, schema }) => `<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="${escape(description)}"><meta name="referrer" content="strict-origin-when-cross-origin"><title>${escape(title)} · 汤包的逛店手记</title><link rel="canonical" href="${escape(publicUrl(path))}"><meta property="og:type" content="${schema['@type'] === 'Article' ? 'article' : 'website'}"><meta property="og:title" content="${escape(title)}"><meta property="og:description" content="${escape(description)}"><meta property="og:url" content="${escape(publicUrl(path))}"><meta property="og:site_name" content="汤包的逛店手记">${image ? `<meta property="og:image" content="${escape(publicUrl(rankBase + image))}">` : ''}<meta name="twitter:card" content="${image ? 'summary_large_image' : 'summary'}"><link rel="stylesheet" href="${escape(rankBase)}discovery.css"><script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', ...schema, url: publicUrl(path), ...(modified ? { dateModified: modified } : {}) }).replaceAll('<', '\\u003c')}</script></head><body><header class="site-nav"><a href="${escape(rankBase)}">汤包的逛店手记</a><nav aria-label="主导航"><a href="${escape(rankBase)}cities/">城市指南</a><a href="${escape(rankBase)}guide/">地图与店单</a><a href="${escape(homeBase)}">个人主页</a></nav></header><main>${body}</main><footer><p>${escape(site.author)} · 个人评价与资料整理</p><a href="${escape(homeBase)}sitemap.xml">网站页面索引</a></footer></body></html>`
+  const placeCard = place => `<li><article>${imageTag(place)}<div><p class="eyebrow">${escape(place.city)} · ${escape(tierLabel(place.tier))}</p><h2><a href="${escape(placePath(place))}">${escape(place.name)}</a></h2><p>${escape(place.summary)}</p>${dates(place)}<a href="${escape(placePath(place))}">阅读介绍 ↗</a></div></article></li>`
+  const entries = []
+  for (const place of publicPlaces) {
+    const path = placePath(place), description = `${place.city} · ${place.name}：${plain(place.summary)}`.slice(0, 180)
+    const guide = `${rankBase}guide/#/place/${place.id}`
+    const body = `<nav class="breadcrumbs" aria-label="当前位置"><a href="${escape(rankBase)}cities/">城市指南</a> / <a href="${escape(cityPath(place.city))}">${escape(place.city)}</a></nav><article><p class="eyebrow">${escape(place.city)} · ${escape(tierLabel(place.tier))} · ${escape(site.author)}的个人评价</p><h1>${escape(place.name)}</h1><p class="summary">${escape(place.summary)}</p><ul class="tags">${place.tags.map(tag => `<li>${escape(tag)}</li>`).join('')}</ul>${dates(place)}<p class="note">评价保留原到访背景；内容更新不代表重新实访。营业、楼层与活动档期请查看当前店单。</p><div class="actions"><a class="button" href="${escape(guide)}">查看当前店单、地图与行程 ↗</a></div>${imageTag(place)}<section aria-labelledby="review-heading"><h2 id="review-heading">逛店介绍</h2>${place.details.split(/\r?\n+/).filter(Boolean).map(paragraph => `<p>${richTextHtml(paragraph)}</p>`).join('')}</section>${place.visitNotes?.length ? `<section><h2>作者的逛店建议</h2><ul>${place.visitNotes.map(note => `<li>${richTextHtml(note)}</li>`).join('')}</ul></section>` : ''}${placeAddress(place) ? `<p>地址：${escape(placeAddress(place))}</p>` : ''}<p><a href="${escape(guide)}">查看照片、原始出处及最新店单 ↗</a></p></article><section><h2>继续逛${escape(place.city)}</h2><a href="${escape(cityPath(place.city))}">比较同城的其他地点 ↗</a></section>`
+    put(`places/${place.id}/index.html`, layout({ title: `${place.city} ${place.name}逛店指南`, description, path, body, modified: place.updatedAt, image: imagePath(place), schema: { '@type': 'Article', headline: `${place.city} ${place.name}逛店指南`, description, author: { '@type': 'Person', name: site.author } } }))
+    entries.push({ path, date: place.updatedAt })
+  }
+  for (const city of cities) {
+    const list = publicPlaces.filter(place => place.city === city), path = cityPath(city)
+    const title = `${city}逛店指南`, description = `${site.author}整理的${city}逛店指南，收录${list.length}处地点的个人评价、照片与当前店单入口。`
+    put(`cities/${city}/index.html`, layout({ title, description, path, modified: latest(list), image: imagePath(list[0]), schema: { '@type': 'CollectionPage', name: title, description }, body: `<nav class="breadcrumbs"><a href="${escape(rankBase)}cities/">全部城市</a></nav><p class="eyebrow">CITY GUIDE</p><h1>${escape(title)}</h1><p class="summary">${escape(description)}</p><p class="note">按作者原榜单顺序排列；适合什么玩法、值不值得专程去，请结合每处地点的短评与到访日期判断。</p><a class="button" href="${escape(rankBase)}?filters=1&amp;city=${encodeURIComponent(city)}">筛选${escape(city)}榜单与规划行程 ↗</a><ul class="place-list">${list.map(placeCard).join('')}</ul>` }))
+    entries.push({ path, date: latest(list) })
+  }
+  const path = `${rankBase}cities/`, title = '城市逛店指南', description = `${site.author}的城市逛店手记：按城市阅读地点评价，再查看当前店单与规划路线。`
+  put('cities/index.html', layout({ title, description, path, modified: latest(publicPlaces), schema: { '@type': 'CollectionPage', name: title, description }, body: `<p class="eyebrow">CITY GUIDES</p><h1>${title}</h1><p class="summary">${escape(description)}</p><p class="note">这里记录作者收录的逛店地点，未覆盖的城市和店铺不代表没有值得去的地方。</p><ul class="city-list">${cities.map(city => `<li><a href="${escape(cityPath(city))}"><h2>${escape(city)}</h2><span>${publicPlaces.filter(p => p.city === city).length}处逛店地点 →</span></a></li>`).join('')}</ul>` }))
+  entries.push({ path, date: latest(publicPlaces) })
+  put('discovery.css', `*{box-sizing:border-box}body{margin:0;background:#fffaf1;color:#292830;font:16px/1.85 "Microsoft YaHei","PingFang SC",system-ui,sans-serif}a{color:#a83750;text-underline-offset:4px;overflow-wrap:anywhere}a:focus-visible{outline:3px solid #a83750;outline-offset:4px}.site-nav,main,footer{max-width:1080px;margin:auto;padding:24px}.site-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:2px solid #292830}.site-nav>a{font-weight:800;text-decoration:none}.site-nav nav{display:flex;flex-wrap:wrap;gap:16px}main{padding-top:36px;overflow-wrap:anywhere}h1{font-size:clamp(30px,5vw,48px);line-height:1.35;margin:12px 0 20px}h2{font-size:23px;line-height:1.5}p{margin:12px 0}section{margin-top:32px}.eyebrow{font-size:13px;color:#a83750;font-weight:700}.summary{font-size:18px}.dates,.note,footer,.breadcrumbs{font-size:13px;color:#79626b}.button{display:inline-flex;align-items:center;min-height:44px;margin:8px 0;padding:10px 16px;border-radius:8px;background:#a83750;color:white;text-decoration:none}.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}.tags li{padding:3px 10px;background:#fff0f4;border-radius:8px;font-size:13px;color:#a83750}.place-cover{display:block;max-width:100%;width:640px;height:auto;margin:24px 0;border-radius:12px}.place-list,.city-list{list-style:none;padding:0;display:grid;gap:20px}.place-list{grid-template-columns:repeat(2,minmax(0,1fr))}.place-list article,.city-list a{display:block;padding:20px;border:1px solid #e5c5cc;border-radius:12px;background:#fffdfa}.place-list .place-cover{margin:0 0 16px;width:100%;aspect-ratio:1.6;object-fit:cover}.city-list{grid-template-columns:repeat(2,minmax(0,1fr))}.city-list a{text-decoration:none}.city-list h2{margin:0}.city-list span{color:#79626b;font-size:14px}footer{border-top:1px solid #e5c5cc}footer a,.site-nav a{min-height:44px;display:inline-flex;align-items:center}@media(max-width:600px){.site-nav{display:block}.site-nav nav{gap:12px}.site-nav,main,footer{padding:18px}.place-list,.city-list{grid-template-columns:1fr}.summary{font-size:16px}}${richTextStyles}`)
+  const sitemap = [{ path: homeBase }, { path: rankBase }, ...entries]
+  writeFileSync(resolve(siteRoot, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${sitemap.map(entry => `<url><loc>${escape(publicUrl(entry.path))}</loc>${entry.date ? `<lastmod>${escape(entry.date)}</lastmod>` : ''}</url>`).join('')}</urlset>`)
+  return { places: publicPlaces.length, cities: cities.length }
+}

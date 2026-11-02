@@ -4,6 +4,7 @@ import { resolve, dirname, extname, relative } from 'node:path'
 import { execFileSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
 import { publishedRankAssets, shouldPublishRankAsset } from '../rank/scripts/published-assets.mjs'
+import { generateDiscoveryPages } from './generate-discovery-pages.mjs'
 const root = resolve(fileURLToPath(new URL('../', import.meta.url)))
 const out = resolve(root, '_site')
 await prepareActivities()
@@ -44,5 +45,9 @@ cpSync(rankDist,resolve(out,'rank'),{recursive:true,filter:source=>{
  return include
 }})
 writeFileSync(resolve(out,'.nojekyll'),'')
+const rankBase = readFileSync(resolve(out, 'rank/index.html'), 'utf8').match(/src="([^"]*\/)assets\/[^"/]+\.js"/)?.[1]
+if (!rankBase) throw new Error('无法读取榜单构建路径，停止生成城市指南')
+const discovery = generateDiscoveryPages({ siteRoot: out, rankBase, origin: process.env.SITE_ORIGIN || 'https://boluo-tangbao.github.io', groups: json('rank/src/data/places.json'), site: json('rank/src/data/site.json'), previews: json('rank/src/data/media-previews.json') })
+console.log(`城市指南：${discovery.cities}座城、${discovery.places}处地点，已生成独立介绍、分享元信息和 sitemap.xml。`)
 console.log('Pages 构建完成：主站与活动网页素材位于 _site/，榜单位于 _site/rank/；未复制活动原素材。')
 console.log(`发布包精简：排除 ${skippedFiles} 个已分离原件／未使用素材／系统文件，减少 ${(skippedBytes / 1024 ** 2).toFixed(2)} MiB；本地原件保持不变，output/ 设计稿不发布。`)

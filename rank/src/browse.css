@@ -122,7 +122,13 @@
 .criteria-section dt[id]:focus { outline: 2px solid #a83750; outline-offset: 5px; background: #fff0f3; }
 
 /* Separate first-hand experience, directory research and page maintenance dates. */
-.detail-timeliness { margin-top: 22px; padding-top: 16px; border-top: 1px solid #d5bfc5; }
+.detail-timeliness { margin-top: 16px; border-top: 1px solid var(--ui-border); }
+.detail-timeliness > summary { min-height: var(--ui-touch); padding: 12px 0; cursor: pointer; color: var(--ui-muted); font-size: 12px; line-height: 1.8; }
+.detail-date-preview { margin-left: 12px; }
+.detail-timeliness > summary:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 3px; }
+.detail-highlights-label { margin: 4px 0; color: var(--ui-accent); font-size: 12px; font-weight: 700; }
+.detail-place-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.detail-place-actions > button { min-height: var(--ui-touch); }
 .detail-date-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; max-width: 620px; margin: 0; }
 .detail-date-grid > div { min-width: 0; padding: 12px 14px; border: 1px solid #e5ced4; border-radius: 4px; background: #fffaf4; }
 .detail-date-grid dt { color: #735763; font-size: 12px; }
@@ -137,4 +143,18 @@
   .detail-date-grid > div { padding: 10px; }
   .detail-date-grid dd { font-size: 15px; }
   .detail-heading .detail-content-date span { display: block; }
+  .detail-date-preview { display: block; margin-left: 16px; font-size: 12px; }
+  body { background: var(--ui-paper); }
+  .guide-detail .detail-heading { padding: 24px 20px 16px; background: var(--ui-surface); }
+  .guide-detail .detail-heading h1 { font-size: 28px; line-height: 1.4; letter-spacing: -.02em; }
+  .detail-title-row { flex-wrap: wrap; gap: 4px 12px; }
+  body:has(.trip-plan-entry) .detail-title-row .trip-plan-add { display: none; }
+  .detail-highlights .detail-summary { font-family: inherit; font-size: 15px; line-height: 1.8; color: var(--ui-ink); }
+  .detail-highlights .detail-tags { gap: 6px; margin: 12px 0 0; }
+  .detail-highlights .detail-tags span { padding: 4px 8px; border: 0; border-radius: var(--ui-radius-control); background: var(--ui-accent-soft); color: var(--ui-accent); box-shadow: none; transform: none; font-size: 12px; font-weight: 400; letter-spacing: 0; }
+  .detail-heading .detail-address { font-size: 12px; line-height: 1.8; }
+  .detail-heading .detail-address > span { display: block; padding: 0; border: 0; overflow-wrap: anywhere; }
+  .detail-heading .detail-address small { margin-right: 8px; }
+  .detail-chapters { box-shadow: none; }
+  .guide-detail .detail-visit-notes { border: 1px solid var(--ui-border); border-radius: var(--ui-radius-card); box-shadow: none; }
 }

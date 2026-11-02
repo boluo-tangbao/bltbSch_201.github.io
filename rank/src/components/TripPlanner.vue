@@ -12,7 +12,7 @@ import DeferredFeature from './DeferredFeature.vue'
 import {groupTripStops} from '../utils/tripRouting'
 import { reviewTripEntries, routingKey, type SavedTrip } from '../utils/tripArchive'
 
-const props = defineProps<{ places: Place[] }>()
+const props = defineProps<{ places: Place[]; currentPlace?: Place }>()
 const plan = useTripPlan(), today = useShopToday(), dialog = ref<HTMLDialogElement>()
 const site = siteData as Site
 const guideUrl = new URL(`${import.meta.env.BASE_URL}guide/`, location.origin).href
@@ -21,6 +21,9 @@ const text = computed(() => tripPlanText(stops.value, guideUrl))
 const groups=computed(()=>groupTripStops(stops.value,props.places))
 const unavailable = computed(() => reviewTripEntries(plan.entries.value, props.places, directoryData as Record<string, ShopDirectory>, today.value))
 const archiveOpen = ref(false), journeyRevision = ref(0)
+const shareOpen = ref(false)
+const loadShare = () => import('./PublicRouteShare.vue')
+function openShare() { dialog.value?.close(); shareOpen.value = true }
 const loadArchive = () => import('./TripArchive.vue')
 function openArchive() { dialog.value?.close(); archiveOpen.value = true }
 async function restoreTrip(trip: SavedTrip) {
@@ -34,7 +37,8 @@ const rankingOpen = ref(false), documentUrl = ref('')
 const plannerOpen=ref(false)
 const loadJourney = () => import('./TripJourney.vue')
 function openPlanner(){plannerOpen.value=true;dialog.value?.showModal()}
-function finishSelecting(){plan.setSelecting(false);if(stops.value.length)openPlanner()}
+function finishSelecting(){plan.setSelecting(false);if(plan.entries.value.length)openPlanner()}
+function addCurrentPlace() { if (props.currentPlace) plan.toggle({ placeId: props.currentPlace.id }) }
 function release() { if (documentUrl.value) URL.revokeObjectURL(documentUrl.value); documentUrl.value = '' }
 function exportPlan() { release(); documentUrl.value = URL.createObjectURL(new Blob([tripPlanHtml(stops.value, guideUrl, today.value)], { type: 'text/html;charset=utf-8' })) }
 function clear() { plan.clear();try{sessionStorage.removeItem('tangbao-trip-routing-session-v1')}catch{};dialog.value?.close() }
@@ -46,11 +50,14 @@ onBeforeUnmount(release)
 </script>
 
 <template>
-  <button v-if="!plan.entries.value.length&&!plan.selecting.value" type="button" class="trip-plan-launcher" @click="plan.setSelecting(true)"><span aria-hidden="true">↗</span> 规划逛店</button>
-  <button v-if="!plan.entries.value.length&&!plan.selecting.value" type="button" class="trip-saved-launcher" aria-haspopup="dialog" @click="openArchive">本机行程</button>
+  <div v-if="!plan.entries.value.length&&!plan.selecting.value" class="trip-plan-entry" aria-label="逛店清单操作">
+    <button type="button" class="trip-saved-launcher" aria-haspopup="dialog" @click="openArchive">本机行程</button>
+    <button v-if="currentPlace" type="button" class="trip-current-add" @click="addCurrentPlace">加入清单</button>
+    <button type="button" class="trip-plan-launcher" :class="{ 'has-current-place': currentPlace }" @click="plan.setSelecting(true)"><span aria-hidden="true">＋</span> 规划逛店</button>
+  </div>
   <aside v-if="plan.entries.value.length||plan.selecting.value" class="trip-plan-dock" aria-label="本次逛店清单">
     <div><strong>{{plan.selecting.value?'正在挑选想逛的地方':'本次逛店清单'}} · {{ groups.length }} 站</strong><small>{{plan.selecting.value?'点心形加入清单，也可进入介绍挑具体店铺':'选好下一站，带着清单出发'}}</small></div>
-    <div class="trip-dock-actions"><template v-if="plan.selecting.value"><button type="button" class="button dark" @click="finishSelecting">{{stops.length?'选好了，规划路线':'退出选店'}}</button></template><template v-else><button type="button" class="text-button" @click="plan.setSelecting(true)">继续选店</button><button type="button" class="button dark" aria-haspopup="dialog" @click="openPlanner">整理与导出</button></template></div>
+    <div class="trip-dock-actions"><template v-if="plan.selecting.value"><button type="button" class="button dark" @click="finishSelecting">{{plan.entries.value.length?'查看清单':'退出选店'}}</button></template><template v-else><button type="button" class="text-button" @click="plan.setSelecting(true)">继续选店</button><button type="button" class="button dark" aria-haspopup="dialog" @click="openPlanner">查看清单</button></template></div>
   </aside>
   <dialog ref="dialog" class="trip-plan-dialog" aria-labelledby="trip-plan-title" @close="plannerOpen=false">
     <header class="trip-plan-heading"><div><p class="section-label">THIS TRIP</p><h2 id="trip-plan-title">本次逛店清单</h2></div><button type="button" class="trip-plan-close" aria-label="关闭本次清单" @click="dialog?.close()">×</button></header>
@@ -62,12 +69,14 @@ onBeforeUnmount(release)
       <button type="button" class="button dark" :disabled="!stops.length" @click="exportPlan">生成清单文件</button>
       <a v-if="documentUrl" class="button trip-plan-download" :href="documentUrl" :download="`本次逛店清单-${today}.html`">下载清单（HTML）↓</a>
       <CopyButton :text="text" label="复制本次清单" />
+      <button type="button" class="button" aria-haspopup="dialog" @click="openShare">分享公开路线</button>
       <button type="button" class="button" :disabled="!selectedPlaces.length" @click="rankingOpen = true">导出所选地点榜单</button>
       <button type="button" class="text-button" @click="clear">清空本次清单</button>
     </footer>
     <p class="trip-plan-note">清单文件保留当前顺序、地址、楼层与档期，可离线阅读；地点榜单沿用原排名。详情和导航需联网。</p>
   </dialog>
   <DeferredFeature v-if="archiveOpen" :loader="loadArchive" title="本机行程" :entries="plan.entries.value" :places="places" :directories="directoryData" @close="archiveOpen = false" @restore="restoreTrip" />
+  <DeferredFeature v-if="shareOpen" :loader="loadShare" title="公开路线分享" :entries="plan.entries.value" :places="places" :directories="directoryData" @close="shareOpen = false; openPlanner()" />
   <ExportPanel v-if="rankingOpen" :site="site" :places="selectedPlaces" :all-places="places" current-label="本次清单" scope="本次逛店清单" :updated-at="updatedAt" @close="rankingOpen = false" />
 </template>
 
@@ -104,12 +113,21 @@ onBeforeUnmount(release)
 .trip-plan-actions { border-top: 1px solid var(--ui-border, #e5c5cc); padding-top: 16px; }
 .trip-plan-actions > .button { min-height: 44px; font-size: 12px; }
 .trip-plan-download { overflow-wrap: anywhere; }
+.trip-current-add { display: none; }
 @media (max-width: 580px) {
-  .trip-plan-dock { padding: 10px; gap: 8px; }
+  :global(body:has(.trip-plan-entry)), :global(body:has(.trip-plan-dock)) { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
+  .trip-plan-entry, .trip-plan-dock { position: fixed; z-index: 850; inset: auto 0 0; width: 100%; transform: none; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); border: 0; border-top: 1px solid var(--ui-border); background: var(--ui-surface); box-shadow: 0 -3px 16px #2928300a; }
+  .trip-plan-entry > button { position: static; min-height: 44px; margin: 0; border-radius: var(--ui-radius-control); box-shadow: none; font: inherit; font-size: 13px; cursor: pointer; }
+  .trip-plan-entry .trip-saved-launcher { padding: 8px; border: 0; background: none; color: var(--ui-muted); }
+  .trip-plan-entry .trip-plan-launcher, .trip-plan-entry .trip-current-add { justify-content: center; min-width: 136px; padding: 10px 20px; border: 1px solid var(--ui-accent); background: var(--ui-accent); color: var(--ui-surface); }
+  .trip-plan-entry .trip-current-add { display: inline-flex; }
+  .trip-plan-entry .trip-plan-launcher.has-current-place { display: none; }
   .trip-plan-dock strong { font-size: 13px; }
-  .trip-plan-dock small { font-size: 10px; }
+  .trip-plan-dock small { font-size: 12px; line-height: 1.5; }
+  .trip-dock-actions { gap: 4px; }
   .trip-plan-dock button { font-size: 12px; padding: 7px 10px; }
   .trip-plan-dialog { padding: 16px; }
+  .trip-plan-entry button:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 2px; }
 }
-@media (max-width: 800px) { :global(body:has(.trip-plan-dock) .detail-side-nav) { bottom: calc(110px + env(safe-area-inset-bottom)); } }
+@media (max-width: 800px) { :global(body:has(.trip-plan-dock) .detail-side-nav), :global(body:has(.trip-plan-entry) .detail-side-nav) { bottom: calc(110px + env(safe-area-inset-bottom)); } }
 </style>

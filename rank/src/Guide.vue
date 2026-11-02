@@ -90,7 +90,7 @@ function tierColor(p: Place) { return tiers.find(t => t.id === p.tier)?.color ||
       </div>
     </div>
   </main>
-  <TripPlanner :places="all" />
+  <TripPlanner :places="all" :current-place="selected" />
   <footer class="site-footer"><span>{{ site.author }} · 榜单、地图、介绍同步更新</span><VisitCounter /></footer>
 </template>
 

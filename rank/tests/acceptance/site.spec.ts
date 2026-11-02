@@ -77,6 +77,7 @@ test('舒适视图短评支持悬停与键盘，出发提醒展开并定位原�
   await expect(page.locator('.visit-notices')).toContainText(notice.label)
   await noOverflow(page)
   if (info.project.name !== 'narrow-mobile') await page.locator('.detail-heading').screenshot({ path: `../test-results/acceptance/visit-notices-${info.project.name}.png` })
+  if (!notice.sortDate) await page.locator('.visit-notices-history > summary').click()
   await page.locator('.visit-notices li button').filter({ hasText: notice.name }).click()
   const target = page.locator('.shop-row').filter({ has: page.getByRole('heading', { name: notice.name, exact: true }) })
   await expect(page.locator('.shop-directory-inactive')).toHaveJSProperty('open', true)
@@ -111,6 +112,51 @@ test('访问统计：进入页面、刷新与切换介绍都不加载计数服�
   for (const place of places.slice(0, 2)) {
     await page.goto('guide/' + placeDetailHash(place.id))
     await expect(page.locator('.visit-counter')).toContainText('本地预览不计入访问')
+  }
+})
+
+test('详情先读看点，日期和历史可展开；直接加入并恢复清单', async ({ page }, info) => {
+  const place = places.find(p => directories[p.id] && visitNotices(directories[p.id]).notices.some(n => !n.sortDate))!
+  await page.goto('guide/' + placeDetailHash(place.id))
+  await expect(page.locator('.detail-highlights')).toContainText(place.summary)
+  const dates = page.locator('.detail-timeliness')
+  await expect(dates).toHaveJSProperty('open', false)
+  await expect(page.locator('.detail-date-grid')).toBeHidden()
+  await dates.locator('summary').click()
+  await expect(page.locator('.detail-date-grid')).toBeVisible()
+  await expect(page.locator('.detail-date-grid')).toContainText(place.visitedAt || '未记录')
+  await dates.locator('summary').click()
+  const history = page.locator('.visit-notices-history')
+  await expect(history).toHaveJSProperty('open', false)
+  await history.locator('summary').click()
+  await expect(history.locator('li').first()).toBeVisible()
+  await history.locator('summary').click()
+  const mobile = info.project.name !== 'desktop'
+  await (mobile ? page.locator('.trip-plan-entry .trip-current-add') : page.locator('.detail-title-row .trip-plan-add')).click()
+  await expect(page.locator('.trip-plan-dock')).toContainText('1 站')
+  // After the bottom action becomes "view", the heading can still remove this place.
+  const headingAdd = page.locator('.detail-title-row .trip-plan-add')
+  await expect(headingAdd).toHaveAttribute('aria-pressed', 'true')
+  await page.getByRole('button', { name: '查看清单', exact: true }).click()
+  await expect(page.locator('.trip-plan-dialog')).toContainText(place.name)
+  await page.getByRole('button', { name: '关闭本次清单', exact: true }).click()
+  await page.reload()
+  await expect(page.locator('.trip-plan-dock')).toContainText('1 站')
+  if (mobile) {
+    await page.locator('.site-footer').scrollIntoViewIfNeeded()
+    const footer = await page.locator('.site-footer').boundingBox()
+    const dock = await page.locator('.trip-plan-dock').boundingBox()
+    expect(footer!.y + footer!.height, '底栏应给页尾内容留出阅读空间').toBeLessThanOrEqual(dock!.y)
+  }
+  await page.locator('.detail-title-row .trip-plan-add').click()
+  await expect(page.getByRole('button', { name: '本机行程', exact: true })).toBeVisible()
+  await page.getByRole('button', { name: '本机行程', exact: true }).click()
+  await expect(page.getByRole('dialog', { name: '本机保存的行程', exact: true })).toBeVisible()
+  await page.getByRole('button', { name: '关闭本机行程', exact: true }).click()
+  await noOverflow(page)
+  if (mobile) {
+    await page.locator('.detail-heading').evaluate(element => element.scrollIntoView({ block: 'start' }))
+    await page.screenshot({ path: `../test-results/acceptance/mobile-reading-${info.project.name}.png` })
   }
 })
 
@@ -200,7 +246,7 @@ test('搜索、行程与导出：只选择一个地点并生成可读取文件',
   await card.getByRole('button', { name: /加入本次清单/ }).click()
   await expect(page.locator('.trip-plan-dock')).toContainText('1 站')
   expect(features, '选地点不应提前加载行程面板').toEqual([])
-  await page.getByRole('button', { name: '选好了，规划路线', exact: true }).click()
+  await page.getByRole('button', { name: '查看清单', exact: true }).click()
   const planner = page.locator('.trip-plan-dialog')
   await expect(planner).toContainText(place.name)
   await expect(planner.locator('.stop-selector').first()).toBeVisible()

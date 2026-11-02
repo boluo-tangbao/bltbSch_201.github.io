@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useTripPlan } from '../utils/useTripPlan'
-const props = defineProps<{ placeId: string; name: string; shopName?: string; iconOnly?: boolean; plain?: boolean }>()
+const props = defineProps<{ placeId: string; name: string; shopName?: string; iconOnly?: boolean; plain?: boolean; alwaysVisible?: boolean }>()
 const plan = useTripPlan()
 const entry = computed(() => ({ placeId: props.placeId, ...(props.shopName ? { shopName: props.shopName } : {}) }))
 const selected = computed(() => plan.contains(entry.value))
 </script>
 
 <template>
-  <button v-if="plan.selecting.value" type="button" class="trip-plan-add" :class="{ 'is-icon-only': iconOnly, 'is-plain': plain }" :aria-pressed="selected" :aria-label="`${selected ? '从本次清单移除' : '加入本次清单'}：${name}`" :title="`${selected ? '已加入本次清单' : '想逛'} · ${name}`" @click.stop="plan.toggle(entry)">
+  <button v-if="alwaysVisible || plan.selecting.value" type="button" class="trip-plan-add" :class="{ 'is-icon-only': iconOnly, 'is-plain': plain }" :aria-pressed="selected" :aria-label="`${selected ? '从本次清单移除' : '加入本次清单'}：${name}`" :title="`${selected ? '已加入本次清单' : '想逛'} · ${name}`" @click.stop="plan.toggle(entry)">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z" /></svg>
-    <span v-if="!iconOnly">{{ selected ? '已选' : '想逛' }}</span>
+    <span v-if="!iconOnly">{{ alwaysVisible ? (selected ? '已加入清单' : '加入清单') : (selected ? '已选' : '想逛') }}</span>
   </button>
 </template>
 

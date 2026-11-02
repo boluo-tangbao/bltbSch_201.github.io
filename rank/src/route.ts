@@ -1,0 +1,10 @@
+import { createApp } from 'vue'
+import RouteApp from './RouteApp.vue'
+import './style.css'
+import './v2.css'
+import './community.css'
+import './manga-theme.css'
+import './browse.css'
+import './hero-layout.css'
+import './design-system.css'
+createApp(RouteApp).mount('#app')

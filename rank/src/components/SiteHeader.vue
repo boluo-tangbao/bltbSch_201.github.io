@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import BrandEmblem from './BrandEmblem.vue'
 
-const props = defineProps<{ active: 'board' | 'guide' | 'qa' | 'updates'; boardUrl?: string; guideUrl?: string }>()
+const props = defineProps<{ active: 'board' | 'guide' | 'qa' | 'updates' | 'route'; boardUrl?: string; guideUrl?: string }>()
 const base = import.meta.env.BASE_URL
 const boardHref = computed(() => props.active === 'board' ? '#/' : props.boardUrl || base)
 const guideHref = computed(() => props.active === 'guide' ? '#/' : props.guideUrl || `${base}guide/`)

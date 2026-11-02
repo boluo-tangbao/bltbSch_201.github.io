@@ -9,20 +9,30 @@ const emit = defineEmits<{ shop: [name: string]; directory: [] }>()
 const today = useShopToday()
 const info = computed(() => visitNotices(props.directory, today.value))
 const visible = ref(5)
-watch(() => props.directory, () => { visible.value = 5 })
+const historyVisible = ref(5)
+const currentNotices = computed(() => info.value.notices.filter(notice => notice.sortDate))
+const historyNotices = computed(() => info.value.notices.filter(notice => !notice.sortDate))
+watch(() => props.directory, () => { visible.value = 5; historyVisible.value = 5 })
 </script>
 
 <template>
   <aside class="visit-notices" aria-label="出发前留意">
     <div class="visit-notices-heading"><h2>出发前留意</h2><button type="button" @click="emit('directory')">查看店单与依据 ↓</button></div>
     <p class="visit-notices-counts">已确认：<span>{{ info.regular }}家常规谷店</span><span v-if="info.ongoing"> · {{ info.ongoing }}项快闪进行中</span><span v-if="info.upcoming"> · {{ info.upcoming }}项快闪即将开始</span><span v-if="info.unknown"> · {{ info.unknown }}项快闪档期见原文</span></p>
-    <template v-if="info.notices.length">
+    <template v-if="currentNotices.length">
       <ul>
-        <li v-for="notice in info.notices.slice(0, visible)" :key="notice.name"><button type="button" @click="emit('shop', notice.name)"><span class="visit-notice-label">{{ notice.label }}</span><span class="visit-notice-name">{{ notice.name }}<small>{{ notice.detail }}</small></span><span aria-hidden="true">↘</span></button></li>
+        <li v-for="notice in currentNotices.slice(0, visible)" :key="notice.name"><button type="button" @click="emit('shop', notice.name)"><span class="visit-notice-label">{{ notice.label }}</span><span class="visit-notice-name">{{ notice.name }}<small>{{ notice.detail }}</small></span><span aria-hidden="true">↘</span></button></li>
       </ul>
-      <button v-if="info.notices.length > visible" class="visit-notices-more" type="button" @click="visible += 5">再看{{ Math.min(5, info.notices.length - visible) }}条提醒</button>
+      <button v-if="currentNotices.length > visible" class="visit-notices-more" type="button" @click="visible += 5">再看{{ Math.min(5, currentNotices.length - visible) }}条提醒</button>
     </template>
-    <p class="visit-notices-note">快闪提示未来7天内的开始／截止日，按中国时区计算；停业与迁出请查看原记录。实时营业及库存以店铺为准。</p>
+    <details v-if="historyNotices.length" :key="directory.area" class="visit-notices-history">
+      <summary>停业与迁址记录 <span>{{ historyNotices.length }}条</span></summary>
+      <ul>
+        <li v-for="notice in historyNotices.slice(0, historyVisible)" :key="notice.name"><button type="button" @click="emit('shop', notice.name)"><span class="visit-notice-label">{{ notice.label }}</span><span class="visit-notice-name">{{ notice.name }}<small>{{ notice.detail }}</small></span><span aria-hidden="true">↘</span></button></li>
+      </ul>
+      <button v-if="historyNotices.length > historyVisible" class="visit-notices-more" type="button" @click="historyVisible += 5">再看{{ Math.min(5, historyNotices.length - historyVisible) }}条记录</button>
+    </details>
+    <p class="visit-notices-note"><template v-if="currentNotices.length">快闪提示未来7天内的开始／截止日，按中国时区计算。</template>实时营业及库存以店铺为准。</p>
   </aside>
 </template>
 
@@ -41,5 +51,10 @@ watch(() => props.directory, () => { visible.value = 5 })
 .visit-notice-label { flex: none; color: var(--ui-accent); font-size: 12px; }
 .visit-notice-name { min-width: 0; flex: 1; font-size: 13px; overflow-wrap: anywhere; }
 .visit-notice-name small { display: block; margin-top: 4px; font-size: 12px; color: var(--ui-muted); }
+.visit-notices-history { border-top: 1px solid var(--ui-border); }
+.visit-notices-history summary { min-height: var(--ui-touch); padding: 12px 0; cursor: pointer; font-size: 13px; color: var(--ui-muted); }
+.visit-notices-history summary span { margin-left: 8px; }
+.visit-notices-history ul { margin-top: 0; }
+.visit-notices :is(button, summary):focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 3px; }
 @media (max-width: 580px) { .visit-notices { padding: 12px; } .visit-notices li button { gap: 8px; } .visit-notice-label { max-width: 8em; white-space: normal; } }
 </style>

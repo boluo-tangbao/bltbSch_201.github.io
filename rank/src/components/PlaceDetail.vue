@@ -15,11 +15,16 @@ import { assetUrl } from '../utils/assets'
 import { useShopToday } from '../utils/shopToday'
 import TripPlanButton from './TripPlanButton.vue'
 import VisitNotices from './VisitNotices.vue'
+import DeferredFeature from './DeferredFeature.vue'
+import site from '../data/site.json'
 import bilibiliCatalog from '../data/bilibili-videos.json'
 import { placeClips } from '../utils/bilibili'
 import type { BilibiliCatalog } from '../types/bilibili'
 
 const props = defineProps<{ place: Place; rank?: number; color: string; searchQuery?: string }>()
+const shareOpen = ref(false)
+const loadShare = () => import('./PlaceShare.vue')
+watch(() => props.place.id, () => { shareOpen.value = false })
 const today = useShopToday()
 const address = computed(() => placeAddress(props.place))
 const nearbyNavigation = (address: string) => `https://uri.amap.com/search?${new URLSearchParams({ keyword: address, callnative: '1', src: 'tangbao-shop-ranking' })}`
@@ -133,19 +138,23 @@ onBeforeUnmount(() => {
   <article class="guide-detail has-chapters" :style="{ '--city-color': color }">
     <header class="detail-heading">
       <p class="detail-kicker"><i class="city-dot" :style="{ background: color }"></i><span>{{ place.city }}</span><span aria-hidden="true">/</span><span>{{ tierLabel(place.tier) }}</span><span v-if="rank" aria-hidden="true">/</span><span v-if="rank">档内第 {{ rank }} 名</span></p>
-      <div class="detail-title-row"><h1 :id="targetId({ kind: 'heading' })" tabindex="-1">{{ place.name }}</h1><TripPlanButton :place-id="place.id" :name="place.name" /></div><p :id="targetId({ kind: 'summary' })" tabindex="-1" class="detail-summary">{{ place.summary }}</p>
-      <div class="detail-timeliness" aria-label="信息日期">
+      <div class="detail-title-row"><h1 :id="targetId({ kind: 'heading' })" tabindex="-1">{{ place.name }}</h1><div class="detail-place-actions"><TripPlanButton :place-id="place.id" :name="place.name" always-visible /><button type="button" class="text-button" aria-haspopup="dialog" @click="shareOpen = true">分享地点</button></div></div>
+      <div class="detail-highlights"><p class="detail-highlights-label">逛店看点</p><p :id="targetId({ kind: 'summary' })" tabindex="-1" class="detail-summary">{{ place.summary }}</p>
+        <div v-if="place.tags.length" class="tags detail-tags" aria-label="逛店地点标签"><span v-for="item in place.tags" :key="item"># {{ item }}</span></div>
+      </div>
+      <VisitNotices v-if="shopDirectory" :directory="shopDirectory" @shop="showShop" @directory="goToChapter('shops')" />
+      <div v-if="address" class="detail-facts detail-address"><span><small>地址</small>{{ address }}</span></div>
+      <details :key="place.id" class="detail-timeliness" aria-label="信息日期">
+        <summary><span>到访与资料日期</span><span class="detail-date-preview">{{ shopDirectory ? `店单核对 ${shopDirectory.checkedAt}` : `内容更新 ${place.updatedAt}` }}</span></summary>
         <dl class="detail-date-grid">
           <div><dt>体验到访</dt><dd><time v-if="place.visitedAt" :datetime="place.visitedAt">{{ place.visitedAt }}</time><span v-else>未记录</span></dd><small>作者实地逛店的记录日期</small></div>
           <div><dt>店单核对</dt><dd><time v-if="shopDirectory" :datetime="shopDirectory.checkedAt">{{ shopDirectory.checkedAt }}</time><span v-else>暂无核对记录</span></dd><small>店铺资料的整理核对日期</small></div>
         </dl>
         <p class="detail-date-note"><template v-if="shopDirectory">店单核对不代表当天逐店实访，各店营业状态与依据见店铺一览。</template><template v-else>到访日期未记录时保留未知，内容更新不代表重新实访。</template></p>
         <p class="detail-content-date">内容更新 <time :datetime="place.updatedAt">{{ place.updatedAt }}</time><span> · 页面文字、图片等内容的维护日期</span></p>
-      </div>
-      <VisitNotices v-if="shopDirectory" :directory="shopDirectory" @shop="showShop" @directory="goToChapter('shops')" />
-      <div v-if="address" class="detail-facts detail-address"><span><small>地址</small>{{ address }}</span></div>
-      <div v-if="place.tags.length" class="tags detail-tags" aria-label="逛店地点标签"><span v-for="item in place.tags" :key="item"># {{ item }}</span></div>
+      </details>
     </header>
+    <DeferredFeature v-if="shareOpen" :loader="loadShare" title="地点分享" :place="place" :author="site.author" :checked-at="shopDirectory?.checkedAt" @close="shareOpen = false" />
     <nav ref="chapterNav" class="detail-chapters" aria-label="地点章节导航">
       <button v-for="chapter in chapters" :key="chapter.key" type="button" :aria-controls="chapterId(chapter.key)" :aria-current="activeChapter === chapter.key ? 'location' : undefined" @click="goToChapter(chapter.key)">{{ chapter.label }}</button>
     </nav>
@@ -269,6 +278,8 @@ onBeforeUnmount(() => {
 @media (max-width: 580px) {
   .detail-chapters { gap: 0; padding: 4px 6px; }
   .detail-chapters button { padding: 7px 11px; font-size: 12px; }
+  .detail-side-nav { padding: 0; border: 1px solid var(--ui-border); border-radius: var(--ui-radius-control); background: var(--ui-surface); box-shadow: none; }
+  .detail-side-nav .side-nav-toggle { min-height: var(--ui-touch); background: var(--ui-surface); color: var(--ui-accent); }
 }
 .text-red.text-red { color: #c62828; background: none; }
 .text-large { font-size: 1.25em; font-weight: 800; line-height: 1.6; }
