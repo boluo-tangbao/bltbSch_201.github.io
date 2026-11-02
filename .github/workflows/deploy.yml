@@ -85,6 +85,8 @@ jobs:
         run: node scripts/verify-published-site.mjs
         env:
           SITE_BASE: ${{ steps.pages.outputs.base_path }}/
+      - name: Generate author review report
+        run: node scripts/generate-shop-review.mjs --output test-results/acceptance/shop-review.md
       - name: Install activity browser checker
         run: npx playwright install --with-deps chromium
         working-directory: rank

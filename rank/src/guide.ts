@@ -6,4 +6,6 @@ import './community.css'
 import './manga-theme.css'
 import './browse.css'
 import './hero-layout.css'
+import './design-system.css'
+
 createApp(Guide).mount('#app')

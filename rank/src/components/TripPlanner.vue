@@ -61,31 +61,31 @@ onBeforeUnmount(release)
 :global(body:has(.trip-plan-dock)) { padding-bottom: 100px; }
 .trip-plan-dock { position: fixed; z-index: 850; bottom: max(12px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: space-between; gap: 12px; width: min(760px, calc(100% - 28px)); padding: 12px 16px; border: 2px solid #292932; background: #fffaf1; box-shadow: 4px 4px 0 #efb1bb; }
 .trip-plan-dock > div { min-width: 0; }
-.trip-plan-launcher { position:fixed;z-index:850;right:20px;bottom:max(20px,env(safe-area-inset-bottom));display:flex;align-items:center;gap:8px;min-height:44px;padding:10px 18px;border:1px solid #a83750;border-radius:28px;background:#fffaf1;color:#84394e;font:inherit;font-size:14px;box-shadow:2px 3px 0 #efb1bb;cursor:pointer; }
+.trip-plan-launcher { position:fixed;z-index:850;right:20px;bottom:max(20px,env(safe-area-inset-bottom));display:flex;align-items:center;gap:8px;min-height:44px;padding:10px 18px;border:1px solid var(--ui-accent, #a83750);border-radius:28px;background:#fffaf1;color:#84394e;font:inherit;font-size:14px;box-shadow:2px 3px 0 #efb1bb;cursor:pointer; }
 .trip-plan-launcher span { font-size:20px; }
-.trip-plan-launcher:focus-visible { outline:3px solid #a83750;outline-offset:4px; }
+.trip-plan-launcher:focus-visible { outline:3px solid var(--ui-accent, #a83750);outline-offset:4px; }
 .trip-dock-actions { display:flex;align-items:center;gap:10px;flex:none; }
 .trip-plan-dock strong { display: block; font-size: 15px; }
-.trip-plan-dock small { display: block; margin-top: 3px; color: #79626b; font-size: 12px; }
+.trip-plan-dock small { display: block; margin-top: 3px; color: var(--ui-muted, #79626b); font-size: 12px; }
 .trip-plan-dock button { flex: none; min-height: 44px; }
 .trip-plan-dialog { width: min(900px, calc(100% - 24px)); max-height: calc(100dvh - 36px); margin: auto; padding: 24px; border: 2px solid #292932; background: #fffaf1; color: #292932; overflow-y: auto; }
 .trip-plan-dialog::backdrop { background: #29293288; }
 .trip-plan-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .trip-plan-heading h2 { margin: 0; font-size: 26px; }
-.trip-plan-close { flex: none; width: 44px; height: 44px; border: 1px solid #d8bdc5; background: #fffdfa; color: #84394e; font-size: 26px; }
-.trip-plan-note { margin: 10px 0; color: #79626b; font-size: 12px; line-height: 1.8; }
+.trip-plan-close { flex: none; width: 44px; height: 44px; border: 1px solid #d8bdc5; background: var(--ui-surface, #fffdfa); color: #84394e; font-size: 26px; }
+.trip-plan-note { margin: 10px 0; color: var(--ui-muted, #79626b); font-size: 12px; line-height: 1.8; }
 .trip-plan-stops { list-style: none; margin: 20px 0; padding: 0; }
-.trip-plan-stop { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 10px; padding: 16px 0; border-top: 1px solid #e5c5cc; }
-.trip-plan-number { color: #a83750; font-weight: 800; }
+.trip-plan-stop { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 10px; padding: 16px 0; border-top: 1px solid var(--ui-border, #e5c5cc); }
+.trip-plan-number { color: var(--ui-accent, #a83750); font-weight: 800; }
 .trip-plan-stop-copy { min-width: 0; overflow-wrap: anywhere; font-size: 13px; line-height: 1.8; }
 .trip-plan-stop h3 { margin: 0 0 5px; font-size: 16px; }
 .trip-plan-stop p { margin: 4px 0; }
 .trip-plan-period { color: #84394e; }
 .trip-plan-links,.trip-plan-order,.trip-plan-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .trip-plan-links a { display: inline-flex; align-items: center; min-height: 44px; margin-right: 10px; color: #84394e; text-decoration: underline; text-underline-offset: 3px; }
-.trip-plan-order button { min-height: 44px; padding: 6px 10px; border: 1px solid #d8bdc5; border-radius: 4px; background: #fffdfa; color: #84394e; font: inherit; font-size: 12px; }
+.trip-plan-order button { min-height: 44px; padding: 6px 10px; border: 1px solid #d8bdc5; border-radius: 4px; background: var(--ui-surface, #fffdfa); color: #84394e; font: inherit; font-size: 12px; }
 .trip-plan-dialog button:disabled { opacity: .45; cursor: default; }
-.trip-plan-actions { border-top: 1px solid #e5c5cc; padding-top: 16px; }
+.trip-plan-actions { border-top: 1px solid var(--ui-border, #e5c5cc); padding-top: 16px; }
 .trip-plan-actions > .button { min-height: 44px; font-size: 12px; }
 .trip-plan-download { overflow-wrap: anywhere; }
 @media (max-width: 580px) {

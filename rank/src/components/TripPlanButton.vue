@@ -15,19 +15,19 @@ const selected = computed(() => plan.contains(entry.value))
 </template>
 
 <style scoped>
-.trip-plan-add { display: inline-flex; flex: none; align-items: center; justify-content: center; gap: 7px; min-height: 44px; max-width: 100%; padding: 0 16px; border: 1px solid #e5d6da; border-radius: 999px; background: #fffdfa; color: #695a60; font: 600 13px/1.2 system-ui, sans-serif; cursor: pointer; transition: color .18s, background .18s, border-color .18s, box-shadow .18s; }
+.trip-plan-add { display: inline-flex; flex: none; align-items: center; justify-content: center; gap: 7px; min-height: 44px; max-width: 100%; padding: 0 16px; border: 1px solid #e5d6da; border-radius: 999px; background: var(--ui-surface, #fffdfa); color: #695a60; font: 600 13px/1.2 system-ui, sans-serif; cursor: pointer; transition: color .18s, background .18s, border-color .18s, box-shadow .18s; }
 .trip-plan-add svg { width: 18px; height: 18px; fill: transparent; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; transition: fill .18s; }
-.trip-plan-add[aria-pressed=true] { background: #fff0f4; border-color: #dba6b5; color: #a83750; }
+.trip-plan-add[aria-pressed=true] { background: var(--ui-accent-soft, #fff0f4); border-color: #dba6b5; color: var(--ui-accent, #a83750); }
 .trip-plan-add[aria-pressed=true] svg { fill: currentColor; }
 .trip-plan-add.is-icon-only { position: relative; isolation: isolate; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; box-shadow: none; }
 .trip-plan-add.is-icon-only::before { content: ''; position: absolute; inset: 6px; z-index: -1; border-radius: 50%; background: #fffdfaf5; box-shadow: 0 1px 5px #26202b20; transition: background .18s; }
 .trip-plan-add.is-icon-only svg { width: 15px; height: 15px; }
-.trip-plan-add.is-icon-only[aria-pressed=true]::before { background: #fff0f4; }
+.trip-plan-add.is-icon-only[aria-pressed=true]::before { background: var(--ui-accent-soft, #fff0f4); }
 .trip-plan-add.is-plain::before { background: transparent; box-shadow: none; }
-.trip-plan-add.is-plain[aria-pressed=true]::before { background: #fff0f4; }
-@media (hover: hover) { .trip-plan-add:hover { color: #a83750; border-color: #c48a9a; background: #fff0f4; box-shadow: 0 2px 8px #a8375014; } }
+.trip-plan-add.is-plain[aria-pressed=true]::before { background: var(--ui-accent-soft, #fff0f4); }
+@media (hover: hover) { .trip-plan-add:hover { color: var(--ui-accent, #a83750); border-color: #c48a9a; background: var(--ui-accent-soft, #fff0f4); box-shadow: 0 2px 8px #a8375014; } }
 .trip-plan-add.is-icon-only:hover { background: transparent; box-shadow: none; }
-.trip-plan-add.is-icon-only:hover::before { background: #fff0f4; }
-.trip-plan-add:focus-visible { outline: 3px solid #a83750; outline-offset: 3px; }
+.trip-plan-add.is-icon-only:hover::before { background: var(--ui-accent-soft, #fff0f4); }
+.trip-plan-add:focus-visible { outline: 3px solid var(--ui-accent, #a83750); outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { .trip-plan-add, .trip-plan-add svg { transition: none; } }
 </style>

@@ -65,7 +65,7 @@ test('全部公开地点：介绍可访问，手机页面不溢出', async ({ pa
   })
 })
 
-test('店单：常规说明隐藏、默认折叠、每次增加五条', async ({ page }) => {
+test('店单：常规说明隐藏、默认折叠、每次增加五条', async ({ page }, info) => {
   const ids = Object.keys(directories).filter(id => places.some(p => p.id === id))
   const sample = ids.find(id => shopDirectoryGroups(directories[id].shops).regular.open.length > 5)
   expect(sample, '至少一个可检验分页的店单').toBeTruthy()
@@ -74,6 +74,7 @@ test('店单：常规说明隐藏、默认折叠、每次增加五条', async ({
   await expect(regular.locator('.shop-evidence-note')).toHaveCount(0)
   const rows = regular.locator('.shop-directory-confirmed .shop-row:visible')
   await expect(rows).toHaveCount(5)
+  if (info.project.name !== 'narrow-mobile') await rows.first().screenshot({ path: `../test-results/acceptance/shop-style-${info.project.name}.png`, animations: 'disabled' })
   await regular.locator('.shop-directory-confirmed .shop-expand').click()
   await expect(rows).toHaveCount(Math.min(10, shopDirectoryGroups(directories[sample!].shops).regular.open.length))
   for (const more of await page.locator('.shop-directory-more').all()) {

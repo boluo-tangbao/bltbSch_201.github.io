@@ -6,4 +6,6 @@ import './community.css'
 import './manga-theme.css'
 import './updates.css'
 
+import './design-system.css'
+
 createApp(Updates).mount('#app')

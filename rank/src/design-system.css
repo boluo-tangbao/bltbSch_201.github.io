@@ -1,0 +1,33 @@
+/* Shared visitor UI vocabulary. Export artwork and city identity colors stay separate. */
+:root {
+  --ui-ink: #292830;
+  --ui-muted: #79626b;
+  --ui-paper: #fffaf1;
+  --ui-surface: #fffdfa;
+  --ui-accent: #a83750;
+  --ui-accent-soft: #fff0f4;
+  --ui-border: #e5c5cc;
+  --ui-success-bg: #e8f3ed;
+  --ui-success: #347357;
+  --ui-pending-bg: #eaf0f8;
+  --ui-pending: #45698d;
+  --ui-closed-bg: #f9e4e8;
+  --ui-closed: #983b52;
+  --ui-radius-control: 8px;
+  --ui-radius-card: 12px;
+  --ui-radius-dialog: 16px;
+  --ui-touch: 44px;
+  --ui-space-1: 4px;
+  --ui-space-2: 8px;
+  --ui-space-3: 12px;
+  --ui-space-4: 16px;
+  --ui-text-small: 12px;
+  --ui-text-control: 13px;
+  --ui-text-card-title: 16px;
+}
+.button { min-height: var(--ui-touch); border: 1px solid var(--ui-border); border-radius: var(--ui-radius-control); box-shadow: none; font-size: var(--ui-text-control); }
+.button.dark { background: var(--ui-accent); border-color: var(--ui-accent); color: var(--ui-surface); }
+.button:hover { transform: none; box-shadow: none; background: var(--ui-accent-soft); }
+.button.dark:hover { background: #8b2c44; }
+.button:focus-visible, .text-button:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 3px; }
+.button:disabled { cursor: not-allowed; opacity: .55; }

@@ -72,12 +72,12 @@ async function load() {
 .bilibili-clips { display: inline-flex; flex: none; align-items: center; gap: 8px; margin: 0; padding: 0; border: 0; background: none; font-size: 12px; }
 .clip-actions { display: inline-flex; align-items: center; gap: 2px; padding: 2px; border: 1px solid #e0bdc8; border-radius: 10px; background: #fff8f8; }
 .clip-load, .clip-external { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; border: 0; border-radius: 7px; background: transparent; text-decoration: none; transition: background .18s, color .18s; }
-.clip-load { gap: 7px; padding: 0 8px; color: #a83750; font: 600 12px/1.4 system-ui, sans-serif; white-space: nowrap; cursor: pointer; }
-.clip-play-mark { display: grid; place-items: center; width: 23px; height: 23px; border: 1px solid #d49eaf; border-radius: 50%; color: #a83750; }
+.clip-load { gap: 7px; padding: 0 8px; color: var(--ui-accent, #a83750); font: 600 12px/1.4 system-ui, sans-serif; white-space: nowrap; cursor: pointer; }
+.clip-play-mark { display: grid; place-items: center; width: 23px; height: 23px; border: 1px solid #d49eaf; border-radius: 50%; color: var(--ui-accent, #a83750); }
 .clip-play-mark svg { width: 21px; height: 21px; }
 .clip-entry-copy { display: grid; gap: 3px; text-align: left; line-height: 1.25; }
 .clip-entry-copy small { color: #96727e; font-size: 9px; font-weight: 400; }
-.clip-external { position: relative; gap: 5px; width: 70px; color: #79626b; font: 400 10px/1.25 system-ui, sans-serif; white-space: nowrap; }
+.clip-external { position: relative; gap: 5px; width: 70px; color: var(--ui-muted, #79626b); font: 400 10px/1.25 system-ui, sans-serif; white-space: nowrap; }
 .clip-external-copy { display: grid; gap: 3px; text-align: left; }
 .clip-external::before { content: ''; position: absolute; left: -1px; width: 1px; height: 18px; background: #ecd5dd; }
 .clip-tv-mark { display: block; width: 18px; height: 17px; object-fit: contain; filter: saturate(.65); }
@@ -85,7 +85,7 @@ async function load() {
   .clip-load:hover, .clip-external:hover { background: #f9e5eb90; color: #7f243c; }
 }
 .clip-load:active { background: #f4dce4; }
-.clip-load:focus-visible, .clip-external:focus-visible { outline: 2px solid #a83750; outline-offset: 2px; }
+.clip-load:focus-visible, .clip-external:focus-visible { outline: 2px solid var(--ui-accent, #a83750); outline-offset: 2px; }
 .bilibili-clips label { display: block; margin-top: 10px; }
 .bilibili-clips select { display: block; width: 100%; max-width: 100%; min-height: 44px; margin-top: 4px; }
 .clip-cinema { width: min(1040px, calc(100vw - 32px), calc((100dvh - 160px) * 16 / 9)); max-width: calc(100vw - 24px); max-height: calc(100dvh - 24px); padding: 0; margin: auto; overflow: auto; border: 1px solid #f3c7d640; border-radius: 18px; background: #201d25; color: #fff5f8; box-shadow: 0 32px 100px #0009, 0 0 60px #d975a015; }
