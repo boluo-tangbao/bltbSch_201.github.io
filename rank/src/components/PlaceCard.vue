@@ -8,9 +8,10 @@ defineProps<{ place: Place; rank?: number; badge: string; color: string; href: s
 </script>
 <template>
   <article :id="`place-card-${place.id}`" class="place-card photo-card" :class="{ 'has-search-match': !!match }" :style="{ '--city-color': color }">
-    <a :href="href" class="card-link" :aria-label="`${place.city}，${place.name}${rank ? `，档内第 ${rank} 名` : ''}，查看介绍`" :title="`${place.city} · ${place.name}`">
+    <a :href="href" class="card-link" :aria-label="`${place.city}，${place.name}${rank ? `，档内第 ${rank} 名` : ''}，查看介绍`" :aria-describedby="comfortable && place.summary ? `card-summary-${place.id}` : undefined" :title="`${place.city} · ${place.name}`">
       <div class="card-photo"><PlaceImage :src="place.cover" :alt="`${place.city} · ${place.name}`" :position="place.coverPosition" :priority="priority" :sizes="comfortable ? '(max-width: 580px) calc((100vw - 72px) / 2), (max-width: 1000px) 300px, 280px' : undefined" /></div>
       <div class="photo-caption"><span>{{ place.name }}</span><small>{{ place.city }}<span v-if="rank" class="rank-number"> · #{{ rank }}</span><span v-if="badge"> · {{ badge }}</span></small></div>
+      <p v-if="comfortable && place.summary" :id="`card-summary-${place.id}`" class="card-summary">{{ place.summary }}</p>
     </a>
     <a v-if="match" :href="href" class="card-search-link" :aria-label="`${place.name}的搜索匹配说明，查看详情`"><SearchMatch :match="match" /></a>
     <TripPlanButton :place-id="place.id" :name="place.name" icon-only class="card-trip-add" />
@@ -20,7 +21,13 @@ defineProps<{ place: Place; rank?: number; badge: string; color: string; href: s
 <style scoped>
 .photo-card .card-link { height: auto; }
 .photo-card { position: relative; }
-.photo-card > .card-trip-add.trip-plan-add { position: absolute; top: 4px; right: 4px; z-index: 1; }
+.card-summary { margin: 0; padding: 12px; background: var(--ui-surface, #fffdfa); color: var(--ui-ink, #292830); font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
+@media (hover: none) { .card-summary { padding: 0 10px 12px; } }
+@media (hover: hover) {
+  .card-summary { position: absolute; z-index: 2; inset: 4px 4px auto; max-height: calc(100% - 8px); overflow-y: auto; border: 1px solid var(--ui-border, #e5c5cc); border-radius: var(--ui-radius-control, 8px); opacity: 0; visibility: hidden; }
+  .card-link:hover .card-summary, .card-link:focus-visible .card-summary { opacity: 1; visibility: visible; }
+}
+.photo-card > .card-trip-add.trip-plan-add { position: absolute; top: 4px; right: 4px; z-index: 3; }
 @media (max-width: 580px) { .photo-card > .card-trip-add.trip-plan-add { top: 0; right: 0; } }
 .card-search-link { display: block; margin-top: 8px; padding: 10px; border: 1px solid #e5c5cc; border-radius: 4px; background: #fffdfa; }
 .card-search-link:hover { background: #fff0f3; }

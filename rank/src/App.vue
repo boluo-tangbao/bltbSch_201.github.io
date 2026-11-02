@@ -134,7 +134,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
               <label v-if="boardView === 'compact'"><input v-model="showLabels" type="checkbox" />显示名称与城市</label>
               <ShareFilters :city="city" :tag="tag" :query="query" />
               <button type="button" class="button mobile-export" @click="exportOpen = true">导出榜单</button>
-              <span class="board-view-hint">点击卡片查看详情<span v-if="boardView === 'compact'" class="compact-hover-hint"> · 悬停隐藏店名</span><span v-else> · 图片下方显示店名与城市</span></span>
+              <span class="board-view-hint">点击卡片查看详情<span v-if="boardView === 'compact'" class="compact-hover-hint"> · 悬停隐藏店名</span><span v-else> · 图片下方显示店名与城市<span class="compact-hover-hint"> · 悬停查看短评</span></span></span>
             </div>
           </div>
         </div>

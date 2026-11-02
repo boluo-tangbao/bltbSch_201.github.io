@@ -14,6 +14,7 @@ import { createPlaceSearchIndex, matchPlaces, searchTargetId } from '../utils/se
 import { assetUrl } from '../utils/assets'
 import { useShopToday } from '../utils/shopToday'
 import TripPlanButton from './TripPlanButton.vue'
+import VisitNotices from './VisitNotices.vue'
 import bilibiliCatalog from '../data/bilibili-videos.json'
 import { placeClips } from '../utils/bilibili'
 import type { BilibiliCatalog } from '../types/bilibili'
@@ -53,6 +54,14 @@ let scrollFrame = 0
 let searchFrame = 0
 let desktopNav = false
 const targetId = (target: Parameters<typeof searchTargetId>[1]) => searchTargetId(props.place.id, target)
+async function showShop(name: string) {
+  shopDirectoryView.value?.revealShop(name)
+  await nextTick()
+  const element = document.getElementById(targetId({ kind: 'shop', name }))
+  element?.focus({ preventScroll: true })
+  element?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' })
+  activeChapter.value = 'shops'
+}
 function locateSearchMatch() {
   if (searchFrame) cancelAnimationFrame(searchFrame)
   if (!props.searchQuery?.trim()) return
@@ -133,6 +142,7 @@ onBeforeUnmount(() => {
         <p class="detail-date-note"><template v-if="shopDirectory">店单核对不代表当天逐店实访，各店营业状态与依据见店铺一览。</template><template v-else>到访日期未记录时保留未知，内容更新不代表重新实访。</template></p>
         <p class="detail-content-date">内容更新 <time :datetime="place.updatedAt">{{ place.updatedAt }}</time><span> · 页面文字、图片等内容的维护日期</span></p>
       </div>
+      <VisitNotices v-if="shopDirectory" :directory="shopDirectory" @shop="showShop" @directory="goToChapter('shops')" />
       <div v-if="address" class="detail-facts detail-address"><span><small>地址</small>{{ address }}</span></div>
       <div v-if="place.tags.length" class="tags detail-tags" aria-label="逛店地点标签"><span v-for="item in place.tags" :key="item"># {{ item }}</span></div>
     </header>

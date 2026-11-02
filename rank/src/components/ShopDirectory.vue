@@ -7,6 +7,7 @@ import { shopFeedbackUrl } from '../utils/shopFeedback'
 import { useShopToday } from '../utils/shopToday'
 import TripPlanButton from './TripPlanButton.vue'
 import { sourceUrl } from '../utils/assets'
+import { limitedCountdown } from '../utils/visitNotices'
 
 const props = defineProps<{ directory: ShopDirectory; visitedAt?: string | null; placeId?: string }>()
 const base = import.meta.env.BASE_URL
@@ -23,7 +24,7 @@ const shops = computed(() => props.directory.shops.map(shop => {
   const status = shopDisplayStatus(shop, today.value)
   const sourceTime = shop.sources.find(source => source.dateLabel)?.dateLabel
     ?? latestSourceDate(shop.sources)
-  return { ...shop, displayStatus: status, statusText: shopStatusLabel(shop, today.value), historySource: shopHistorySource(shop), sourceTime, authorVisited: sourcePredatesVisit(shop.sources, props.visitedAt), evidenceSources: mergeShopSources(shop) }
+  return { ...shop, countdown: limitedCountdown(shop, today.value), displayStatus: status, statusText: shopStatusLabel(shop, today.value), historySource: shopHistorySource(shop), sourceTime, authorVisited: sourcePredatesVisit(shop.sources, props.visitedAt), evidenceSources: mergeShopSources(shop) }
 }))
 const sections = computed(() => {
   const grouped = shopDirectoryGroups(shops.value, today.value)
@@ -72,6 +73,7 @@ defineExpose({ revealShop })
     <ul class="shop-list">
       <li v-for="(shop, index) in bucket.shops" v-show="index < visibleCount(section.key, group.more, bucket.key)" :id="placeId ? searchTargetId(placeId, { kind: 'shop', name: shop.name }) : undefined" :key="shop.name" class="shop-row" tabindex="-1">
         <div class="shop-row-title"><div class="shop-name-location"><h4>{{ shop.name }}</h4><span v-if="shop.floor" class="shop-location"><template v-if="shop.inactive">原位置：</template>{{ shop.floor }}</span><div class="shop-state-line"><span class="shop-status" :class="'is-' + shop.displayStatus">{{ shop.statusText }}</span></div></div><div v-if="placeId" class="shop-row-tools"><TripPlanButton v-if="shop.displayStatus === 'open'" :place-id="placeId" :name="shop.name" :shop-name="shop.name" icon-only plain /><a class="shop-correction" :href="shopFeedbackUrl(base, placeId, shop.name)" :aria-label="`${shop.name}：反馈纠错`" title="反馈这家店的信息"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5 4 4M4 20l4.5-1L20 7.5a2.8 2.8 0 0 0-4-4L4.5 15Z" /></svg></a></div></div>
+        <p v-if="shop.countdown" class="shop-countdown">{{ shop.countdown.label }} · {{ shop.countdown.date }}</p>
         <p v-if="shop.description" class="shop-description">{{ shop.description }}</p>
         <dl v-if="shop.kind || shop.limited || shop.inactive" class="shop-facts">
           <template v-if="shop.inactive"><dt>营业历史</dt><dd class="shop-history">{{ shop.inactive.history }}</dd></template>
@@ -127,6 +129,7 @@ defineExpose({ revealShop })
 .shop-limited-intro,.shop-inactive-intro { font-size: 12px; line-height: 1.8; color: var(--ui-muted, #79626b); }
 .shop-limited-intro { margin: -4px 0 16px; }
 .shop-period { font-weight: 700; }
+.shop-countdown { margin: 8px 0; color: var(--ui-accent); font-size: 12px; line-height: 1.8; }
 .shop-description { margin: 10px 0; font-size: 13px; line-height: 1.8; color: #534a52; overflow-wrap: anywhere; }
 .shop-list,.shop-accounts { list-style: none; padding: 0; margin: 0; }
 .shop-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 12px; }

@@ -2,6 +2,7 @@ import { test, expect, type Page } from '@playwright/test'
 import { readFileSync } from 'node:fs'
 import { flattenPlaces } from '../../src/utils/model'
 import { shopDirectoryGroups } from '../../src/utils/shopDirectory'
+import { visitNotices } from '../../src/utils/visitNotices'
 import { placeDetailHash } from '../../src/utils/search'
 import { openMobileTools } from '../browser/browse-tools'
 
@@ -42,6 +43,63 @@ test.afterEach(async ({ page }, info) => {
 async function noOverflow(page: Page) {
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), '页面不应横向溢出').toBe(true)
 }
+
+test('舒适视图短评支持悬停与键盘，出发提醒展开并定位原始店铺记录', async ({ page }, info) => {
+  await page.clock.setFixedTime(new Date('2026-11-02T04:00:00Z'))
+  await page.goto('')
+  await openMobileTools(page)
+  await page.getByRole('button', { name: '舒适', exact: true }).click()
+  const card = page.locator('.place-card').filter({ has: page.locator('.card-summary') }).first()
+  const link = card.locator('.card-link')
+  const summary = card.locator('.card-summary')
+  const id = (await card.getAttribute('id'))!.replace('place-card-', '')
+  await expect(summary).toHaveText(places.find(p => p.id === id)!.summary)
+  if (await page.evaluate(() => matchMedia('(hover: hover)').matches)) {
+    await page.getByRole('heading', { name: '图片总榜', exact: true }).hover()
+    await expect(summary).toBeHidden()
+    await link.hover()
+    await expect(summary).toBeVisible()
+    await page.getByRole('heading', { name: '图片总榜', exact: true }).hover()
+    await link.focus()
+    await page.keyboard.press('Tab')
+    await page.keyboard.press('Shift+Tab')
+    await expect(link).toBeFocused()
+    await expect(summary).toBeVisible()
+  } else await expect(summary).toBeVisible()
+  await noOverflow(page)
+  if (info.project.name === 'desktop') await card.screenshot({ path: '../test-results/acceptance/comfortable-summary.png' })
+
+  const sample = Object.keys(directories).find(id => visitNotices(directories[id], '2026-11-02').notices.length)!
+  const notice = visitNotices(directories[sample], '2026-11-02').notices[0]
+  await page.goto('guide/' + placeDetailHash(sample))
+  await expect(page.locator('.shop-directory-inactive')).toHaveJSProperty('open', false)
+  await expect(page.locator('.detail-date-grid')).toContainText(directories[sample].checkedAt)
+  await expect(page.locator('.visit-notices')).toContainText(notice.label)
+  await noOverflow(page)
+  if (info.project.name !== 'narrow-mobile') await page.locator('.detail-heading').screenshot({ path: `../test-results/acceptance/visit-notices-${info.project.name}.png` })
+  await page.locator('.visit-notices li button').filter({ hasText: notice.name }).click()
+  const target = page.locator('.shop-row').filter({ has: page.getByRole('heading', { name: notice.name, exact: true }) })
+  await expect(page.locator('.shop-directory-inactive')).toHaveJSProperty('open', true)
+  await expect(target).toBeVisible()
+  await expect(target).toBeFocused()
+  await page.reload()
+  await expect(page.locator('.shop-directory-inactive')).toHaveJSProperty('open', false)
+})
+
+test.describe('触屏短评', () => {
+  test.use({ hasTouch: true })
+  test('舒适视图直接显示短评，紧凑视图保留原布局', async ({ page }, info) => {
+    await page.goto('')
+    await openMobileTools(page)
+    await page.getByRole('button', { name: '舒适', exact: true }).click()
+    await expect(page.locator('.card-summary').first()).toBeVisible()
+    expect(await page.evaluate(() => matchMedia('(hover: none)').matches)).toBe(true)
+    await noOverflow(page)
+    if (info.project.name === 'mobile') await page.locator('.tier-row').first().screenshot({ path: '../test-results/acceptance/comfortable-touch.png' })
+    await page.getByRole('button', { name: '紧凑', exact: true }).click()
+    await expect(page.locator('.card-summary')).toHaveCount(0)
+  })
+})
 
 test('访问统计：进入页面、刷新与切换介绍都不加载计数服务', async ({ page }) => {
   for (const entry of ['', 'guide/', 'qa/', 'updates/']) {
