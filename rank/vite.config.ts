@@ -35,7 +35,7 @@ const personalSitePreview = {
       }
       if (!pathname.startsWith(homeBase) || pathname.startsWith(rankBase)) return next()
       const file = pathname.slice(homeBase.length) || 'index.html'
-      if (!homeFiles.has(file) && !/^images\/(?!anime\/events\/).+\.(webp|png|jpe?g|svg)$/i.test(file) && !/^assets\/.+\.(css|js|json|webp|mp4)$/i.test(file)) return next()
+      if (!homeFiles.has(file) && !/^images\/(?!anime\/events\/).+\.(webp|png|jpe?g|svg)$/i.test(file) && !/^assets\/.+\.(css|js|json|webp|mp4|svg)$/i.test(file)) return next()
       const target = resolve(homeRoot, file), relativePath = relative(homeRoot, target)
       if (relativePath.startsWith('..') || isAbsolute(relativePath) || !existsSync(target)) return next()
       response.setHeader('Content-Type', mimeTypes[extname(target)] || 'application/octet-stream')
