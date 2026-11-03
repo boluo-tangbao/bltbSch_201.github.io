@@ -1,4 +1,8 @@
+.home-page { background: #f2eff2; isolation: isolate; }
+.home-page::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(135deg, rgba(255, 249, 251, .70), rgba(241, 248, 252, .64)), url("../../images/akane-background.webp") center center / cover no-repeat; }
 .home-hero { min-height: 0; padding-top: 24px; padding-bottom: 44px; }
+.home-hero::before { display: none; }
+.home-hero .hero-content { padding: 24px; border: 1px solid rgba(255, 255, 255, .75); border-radius: 16px; background: rgba(255, 253, 254, .72); backdrop-filter: blur(6px); }
 .home-hero .navbar { position: static; gap: 24px; width: 100%; margin: 0 auto 40px; max-width: 1120px; }
 .home-hero .nav-links { flex-wrap: wrap; justify-content: flex-end; gap: 4px; font-size: 14px; }
 .home-hero .nav-links a { padding: 8px; }
@@ -28,6 +32,8 @@
   .home-entry-copy { padding: 12px; }
 }
 @media (max-width: 680px) {
+  .home-page::before { background-position: center, 78% center; }
+  .home-hero .hero-content { padding: 18px; }
   .home-hero { padding: 18px 6% 28px; }
   .home-hero .navbar { flex-direction: column; gap: 8px; margin-bottom: 22px; }
   .home-hero .nav-links { justify-content: flex-start; gap: 0 4px; font-size: 12px; }
