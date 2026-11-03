@@ -2,13 +2,13 @@ import type { Place, ShopDirectory } from '../types/index.ts'
 import { parseRichText } from './richText.ts'
 import { shopCalendarDate, shopDisplayStatus } from './shopDirectory.ts'
 
-export type SearchTarget = { kind: 'heading' | 'summary' } | { kind: 'paragraph' | 'note'; index: number } | { kind: 'shop'; name: string }
+export type SearchTarget = { kind: 'heading' | 'summary' } | { kind: 'paragraph' | 'note'; index: number } | { kind: 'shop' | 'tag'; name: string }
 export interface PlaceSearchMatch { label: string; text: string; terms: string[]; target?: SearchTarget; location?: string }
 interface SearchField { label: string; text: string; normalized: string; target: SearchTarget; location?: string }
 export type PlaceSearchIndex = Map<string, SearchField[]>
 
 export function searchTargetId(placeId: string, target: SearchTarget) {
-  const suffix = target.kind === 'shop' ? `shop-${encodeURIComponent(target.name)}` : 'index' in target ? `${target.kind}-${target.index}` : target.kind
+  const suffix = 'name' in target ? `${target.kind}-${encodeURIComponent(target.name)}` : 'index' in target ? `${target.kind}-${target.index}` : target.kind
   return `place-${placeId}-search-${suffix}`
 }
 
@@ -47,7 +47,7 @@ export function createPlaceSearchIndex(places: Place[], directories: Record<stri
     for (const [index, paragraph] of (place.details ?? '').split(/\r?\n+/).map(text => text.trim()).filter(Boolean).entries()) add('介绍提及', parseRichText(paragraph).map(part => part.text).join(''), { kind: 'paragraph', index })
     for (const [index, note] of (place.visitNotes ?? []).entries()) add('探访建议', parseRichText(note).map(part => part.text).join(''), { kind: 'note', index })
     add('城市', place.city)
-    for (const tag of place.tags) add('标签', tag)
+    for (const tag of place.tags) add('标签', tag, { kind: 'tag', name: tag })
     return [place.id, fields]
   }))
 }

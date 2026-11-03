@@ -50,6 +50,7 @@ const addressMap = ref<InstanceType<typeof AddressMap>>()
 const hasVideo = computed(() => placeClips(bilibiliCatalog as BilibiliCatalog, props.place.id).length > 0)
 const chapters = computed(() => [
   ...(detailParagraphs.value.length || visitNotes.value.length || hasVideo.value ? [{ key: 'overview', label: '介绍' }] : []),
+  ...(props.place.tags.length ? [{ key: 'tags', label: '标签' }] : []),
   ...(shopDirectory.value ? [{ key: 'shops', label: '店铺' }] : []),
   ...(props.place.gallery.length ? [{ key: 'gallery', label: '图集' }] : []),
   ...(address.value ? [{ key: 'nearby', label: '周边' }] : []),
@@ -140,9 +141,8 @@ onBeforeUnmount(() => {
       <p class="detail-kicker"><i class="city-dot" :style="{ background: color }"></i><span>{{ place.city }}</span><span aria-hidden="true">/</span><span>{{ tierLabel(place.tier) }}</span><span v-if="rank" aria-hidden="true">/</span><span v-if="rank">档内第 {{ rank }} 名</span></p>
       <div class="detail-title-row"><h1 :id="targetId({ kind: 'heading' })" tabindex="-1">{{ place.name }}</h1><div class="detail-place-actions"><TripPlanButton :place-id="place.id" :name="place.name" always-visible /><button type="button" class="text-button" aria-haspopup="dialog" @click="shareOpen = true">分享地点</button></div></div>
       <div class="detail-highlights"><p class="detail-highlights-label">逛店看点</p><p :id="targetId({ kind: 'summary' })" tabindex="-1" class="detail-summary">{{ place.summary }}</p>
-        <div v-if="place.tags.length" class="tags detail-tags" aria-label="逛店地点标签"><span v-for="item in place.tags" :key="item"># {{ item }}</span></div>
       </div>
-      <VisitNotices v-if="shopDirectory" :directory="shopDirectory" @shop="showShop" @directory="goToChapter('shops')" />
+      <VisitNotices v-if="shopDirectory" :place-id="place.id" :directory="shopDirectory" @shop="showShop" @directory="goToChapter('shops')" />
       <div v-if="address" class="detail-facts detail-address"><span><small>地址</small>{{ address }}</span></div>
       <details :key="place.id" class="detail-timeliness" aria-label="信息日期">
         <summary><span>到访与资料日期</span><span class="detail-date-preview">{{ shopDirectory ? `店单核对 ${shopDirectory.checkedAt}` : `内容更新 ${place.updatedAt}` }}</span></summary>
@@ -179,6 +179,10 @@ onBeforeUnmount(() => {
         <header class="detail-visit-heading"><div><p class="section-label">bltb's picks</p><h3 id="visit-notes-heading">菠萝の建议</h3></div></header>
         <ul class="detail-visit-list"><li v-for="(note, index) in visitNotes" :id="targetId({ kind: 'note', index })" :key="index" tabindex="-1"><span class="detail-visit-mark" aria-hidden="true">↗</span><p><template v-for="(part, partIndex) in note" :key="partIndex"><strong v-if="part.strong" :class="richTextClasses(part)">{{ part.text }}</strong><span v-else :class="richTextClasses(part)">{{ part.text }}</span></template></p></li></ul>
       </aside>
+    </section>
+    <section v-if="place.tags.length" :id="chapterId('tags')" class="detail-body detail-chapter detail-tags-section" :aria-labelledby="chapterId('tags-heading')">
+      <h2 :id="chapterId('tags-heading')">标签</h2>
+      <div class="tags detail-tags" aria-label="逛店地点标签"><span v-for="item in place.tags" :id="targetId({ kind: 'tag', name: item })" :key="item" tabindex="-1"># {{ item }}</span></div>
     </section>
     <ShopDirectory v-if="shopDirectory" ref="shopDirectoryView" :id="chapterId('shops')" class="detail-chapter" :place-id="place.id" :directory="shopDirectory" :visited-at="place.visitedAt" />
     <div v-if="place.gallery.length" :id="chapterId('gallery')" class="detail-chapter"><PlaceGallery :images="place.gallery" :color="color" /></div>
@@ -218,10 +222,16 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
+.guide-detail .detail-tags-section { padding: 24px 30px; border-top: 1px solid var(--ui-border); background: var(--ui-surface); }
+.detail-tags-section h2 { margin: 0; font-size: 18px; }
+.detail-tags-section .detail-tags { margin: 12px 0 0; gap: 8px; }
+.detail-tags-section .detail-tags span { padding: 5px 10px; border: 1px solid var(--ui-border); border-radius: var(--ui-radius-control); background: var(--ui-accent-soft); color: var(--ui-accent); box-shadow: none; transform: none; font-size: 13px; font-weight: 400; letter-spacing: 0; }
+.detail-tags-section .detail-tags span:focus { outline: 2px solid var(--ui-accent); outline-offset: 3px; }
 .detail-review-heading { align-items: flex-end; gap: 12px; }
 .detail-review-tools { display: flex; flex: none; align-items: center; gap: 16px; }
 .detail-review-tools.has-video .detail-review-meta { padding: 0; border: 0; border-radius: 0; white-space: nowrap; }
 @media (max-width: 580px) {
+  .guide-detail .detail-tags-section { padding: 20px; }
   .detail-review-heading { align-items: flex-end; gap: 6px; }
   .detail-review-tools.has-video .detail-review-meta { display: none; }
 }

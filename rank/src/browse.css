@@ -77,7 +77,20 @@
 }
 
 /* A reading option for the same ranked places; the compact photo board stays intact. */
-.photo-options .board-view-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; font-size: 12px; }
+.board-heading { flex-wrap: wrap; gap: 12px; }
+.board-heading .board-view-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; margin-left: auto; font-size: 12px; }
+.board-heading .board-view-controls button { min-height: 44px; padding: 8px 12px; }
+.mobile-detail-browse { display: none; }
+@media (max-width: 800px) {
+  .guide-has-detail .mobile-detail-browse { display: inline-flex; align-items: center; min-height: 44px; margin-bottom: 12px; padding: 8px 12px; border: 1px solid var(--ui-border); border-radius: var(--ui-radius-control); background: var(--ui-surface); color: var(--ui-accent); font: inherit; cursor: pointer; }
+  .mobile-detail-browse:focus-visible { outline: 3px solid var(--ui-accent); outline-offset: 3px; }
+  .guide-has-detail:not(.guide-browse-open) .guide-browser,
+  .guide-has-detail:not(.guide-browse-open) .place-directory { display: none; }
+}
+@media (max-width: 580px) {
+  .board-heading .board-view-controls > span { display: none; }
+  .board-heading .board-view-controls button { padding: 8px; font-size: 12px; }
+}
 .board-view-controls > span { margin-right: 3px; }
 .board-view-controls button { min-height: 32px; padding: 4px 10px; border: 1px solid #d5a5b2; border-radius: 4px; background: var(--manga-paper); color: var(--manga-ink); font: inherit; font-weight: 700; cursor: pointer; }
 .board-view-controls button[aria-pressed=true] { border-color: var(--manga-ink); background: var(--manga-ink); color: #fffaf1; }
@@ -150,8 +163,6 @@
   .detail-title-row { flex-wrap: wrap; gap: 4px 12px; }
   body:has(.trip-plan-entry) .detail-title-row .trip-plan-add { display: none; }
   .detail-highlights .detail-summary { font-family: inherit; font-size: 15px; line-height: 1.8; color: var(--ui-ink); }
-  .detail-highlights .detail-tags { gap: 6px; margin: 12px 0 0; }
-  .detail-highlights .detail-tags span { padding: 4px 8px; border: 0; border-radius: var(--ui-radius-control); background: var(--ui-accent-soft); color: var(--ui-accent); box-shadow: none; transform: none; font-size: 12px; font-weight: 400; letter-spacing: 0; }
   .detail-heading .detail-address { font-size: 12px; line-height: 1.8; }
   .detail-heading .detail-address > span { display: block; padding: 0; border: 0; overflow-wrap: anywhere; }
   .detail-heading .detail-address small { margin-right: 8px; }

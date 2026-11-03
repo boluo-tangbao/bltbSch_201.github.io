@@ -116,7 +116,12 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
       </section>
 
       <section class="board-section" aria-labelledby="board-title">
-        <div class="section-heading"><div><span class="section-number">01</span><h2 id="board-title">图片总榜</h2><span class="desktop-note">{{ site.rankWithinTier ? '同档按顺序排名' : '同档不分先后' }}</span></div><button class="button dark desktop-export" @click="exportOpen = true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 15v5h16v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>导出榜单</button></div>
+        <div class="section-heading board-heading"><div><span class="section-number">01</span><h2 id="board-title">图片总榜</h2><span class="desktop-note">{{ site.rankWithinTier ? '同档按顺序排名' : '同档不分先后' }}</span></div>
+          <div class="board-view-controls" role="group" aria-label="榜单视图">
+                <span>榜单视图</span>
+                <button type="button" :aria-pressed="boardView === 'compact'" @click="boardView = 'compact'">紧凑</button>
+                <button type="button" :aria-pressed="boardView === 'comfortable'" @click="boardView = 'comfortable'">舒适</button>
+          </div><button class="button dark desktop-export" @click="exportOpen = true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 15v5h16v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>导出榜单</button></div>
         <div class="filter-bar">
           <label class="city-filter"><span class="sr-only">城市筛选</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 10c0 5-6 10-6 10S6 15 6 10a6 6 0 1 1 12 0Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2" stroke="currentColor" stroke-width="1.5"/></svg><select v-model="city" aria-label="城市筛选"><option value="">全部城市</option><option v-if="city && !cities.includes(city)" :value="city">{{ city }}（暂无条目）</option><option v-for="c in cities" :key="c">{{ c }}</option></select></label>
           <label class="search-filter"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.5"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.5"/></svg><input v-model="query" type="search" placeholder="搜索地点、店铺、城市或标签…" aria-label="关键词搜索" /></label>
@@ -127,11 +132,6 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
           <div id="board-tools-content" class="board-tools-content" :class="{ 'is-open': toolsOpen }">
             <BrowseFilters :cities="cities" :colors="colors" :tags="tags" :city="city" :tag="tag" :query="query" @city="city = $event" @tag="tag = $event" @query="query = $event" />
             <div class="photo-options">
-              <div class="board-view-controls" role="group" aria-label="榜单视图">
-                <span>榜单视图</span>
-                <button type="button" :aria-pressed="boardView === 'compact'" @click="boardView = 'compact'">紧凑</button>
-                <button type="button" :aria-pressed="boardView === 'comfortable'" @click="boardView = 'comfortable'">舒适</button>
-              </div>
               <label v-if="boardView === 'compact'"><input v-model="showLabels" type="checkbox" />显示名称与城市</label>
               <ShareFilters :city="city" :tag="tag" :query="query" />
               <button type="button" class="button mobile-export" @click="exportOpen = true">导出榜单</button>

@@ -34,6 +34,8 @@ if(process.argv.includes('--migration')&&existsSync(baseline)) {
 if(process.argv.includes('--static')) {console.log('活动元数据、源素材数量、网页素材及部署原素材排除验证通过。');process.exit(0)}
 const server=await previewServer(4181),browser=await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL||'msedge',headless:true})
 const page=await browser.newPage(),errors=[],failed=[];page.on('pageerror',error=>errors.push(error.message));page.on('response',response=>{if(response.status()>=400)failed.push(response.url())})
+// Activity checks do not exercise the hover console; move out if resizing leaves it under the mouse.
+await page.addLocatorHandler(page.locator('#site-console.sc-open'),async()=>{await page.mouse.move(0,0);await page.keyboard.press('Escape')})
 const statisticsRequests=[]
 await page.route(url=>url.hostname.includes('busuanzi')||/\/busuanzi(?:\/|$)/i.test(url.pathname),route=>{statisticsRequests.push(route.request().url());return route.abort()})
 const base='http://127.0.0.1:4181'+previewBase

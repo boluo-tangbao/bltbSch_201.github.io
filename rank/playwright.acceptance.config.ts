@@ -1,5 +1,12 @@
 import { defineConfig } from '@playwright/test'
+import { readFileSync } from 'node:fs'
+import { visitNotices } from './src/utils/visitNotices'
+import { visitNoticeStorageKey } from './src/utils/visitNoticeSeen'
 const siteBase = (process.env.SITE_BASE || '/bltbSch_201.github.io/').replace(/\/?$/, '/')
+const baseURL = `http://127.0.0.1:4190${siteBase}rank/`
+// Existing task flows represent returning visitors; dedicated notice tests start fresh.
+const directories = JSON.parse(readFileSync(new URL('./src/data/shop-directories.json', import.meta.url), 'utf8'))
+const reminderState = { cookies: [], origins: [{ origin: new URL(baseURL).origin, localStorage: Object.entries(directories).map(([id, directory]) => ({ name: visitNoticeStorageKey(id), value: JSON.stringify(visitNotices(directory as Parameters<typeof visitNotices>[0])) })) }] }
 export default defineConfig({
   testDir: './tests/acceptance', timeout: 45000, globalTimeout: 240000,
   workers: 1, retries: 0, forbidOnly: true,
@@ -7,7 +14,7 @@ export default defineConfig({
   reporter: [['list'], ['html', { outputFolder: '../test-results/acceptance/html', open: 'never' }], ['json', { outputFile: '../test-results/acceptance/browser.json' }]],
   use: {
     channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined),
-    baseURL: `http://127.0.0.1:4190${siteBase}rank/`, headless: true,
+    baseURL, headless: true, storageState: reminderState,
     screenshot: 'only-on-failure', trace: 'retain-on-failure', actionTimeout: 10000,
     serviceWorkers: 'block',
   },

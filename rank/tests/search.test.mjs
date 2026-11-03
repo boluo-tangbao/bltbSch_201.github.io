@@ -100,3 +100,10 @@ test('explicit search navigation round trips special characters without changing
   assert.equal(placeDetailHash(place.id), '#/place/' + place.id)
   for (const hash of ['#/place/', '#place-card-test-place', '#/place/test-place/extra']) assert.equal(parsePlaceRoute(hash), undefined)
 })
+
+test('tag-only matches target the relocated tag rather than the place heading', () => {
+  const entry = { ...place, tags: ['标签专用 A&B'] }
+  const match = matchPlaces(createPlaceSearchIndex([entry]), '标签专用').get(entry.id)
+  assert.deepEqual(match.target, { kind: 'tag', name: '标签专用 A&B' })
+  assert.equal(searchTargetId(entry.id, match.target), `place-${entry.id}-search-tag-${encodeURIComponent('标签专用 A&B')}`)
+})

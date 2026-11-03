@@ -2,12 +2,17 @@ import { test, expect } from '@playwright/test'
 import { readFileSync } from 'node:fs'
 import { flattenPlaces, filterPlaces } from '../../src/utils/model'
 import type { PlacesByCity } from '../../src/types'
+import { visitNotices } from '../../src/utils/visitNotices'
+import { visitNoticeStorageKey } from '../../src/utils/visitNoticeSeen'
 
 const places = filterPlaces(flattenPlaces(JSON.parse(readFileSync('src/data/places.json', 'utf8')) as PlacesByCity))
 const planKey = 'tangbao-trip-plan-session-v1'
 test.beforeEach(async ({ page, context, baseURL }) => {
   expect(new URL(baseURL!).hostname).toBe('127.0.0.1')
   await page.clock.install({ time: new Date('2026-11-02T04:00:00Z') })
+  const directories = JSON.parse(readFileSync('src/data/shop-directories.json', 'utf8'))
+  const seen = Object.entries(directories).map(([id, directory]) => [visitNoticeStorageKey(id), JSON.stringify(visitNotices(directory as Parameters<typeof visitNotices>[0], '2026-11-02'))])
+  await context.addInitScript(entries => { for (const [key, value] of entries) localStorage.setItem(key, value) }, seen)
   await context.route('**/*', route => new URL(route.request().url()).origin === new URL(baseURL!).origin ? route.continue() : route.abort())
   await context.addInitScript(() => {
     Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: async (text: string) => { (window as any).__sharedText = text } } })

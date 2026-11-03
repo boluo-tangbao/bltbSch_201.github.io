@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs'
 import { flattenPlaces } from '../../src/utils/model'
 import { shopDirectoryGroups } from '../../src/utils/shopDirectory'
 import { visitNotices } from '../../src/utils/visitNotices'
-import { placeDetailHash } from '../../src/utils/search'
+import { createPlaceSearchIndex, matchPlaces, placeDetailHash, searchTargetId } from '../../src/utils/search'
 import { openMobileTools } from '../browser/browse-tools'
 
 const json = (path: string) => JSON.parse(readFileSync(path, 'utf8'))
@@ -44,6 +44,67 @@ async function noOverflow(page: Page) {
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), '页面不应横向溢出').toBe(true)
 }
 
+test('标签独立成章，顶部和侧边导航及搜索直达均定位标签区', async ({ page }) => {
+  const index = createPlaceSearchIndex(places, directories)
+  const sample = places.flatMap(place => place.tags.map(tag => ({ place, tag }))).find(({ place, tag }) => matchPlaces(index, tag).get(place.id)?.label === '标签')!
+  await page.goto('guide/' + placeDetailHash(sample.place.id))
+  await expect(page.locator('.detail-heading .detail-tags')).toHaveCount(0)
+  const chapter = page.locator('.detail-tags-section')
+  const topLink = page.locator('.detail-chapters').getByRole('button', { name: '标签', exact: true })
+  await expect(topLink).toHaveAttribute('aria-controls', `place-${sample.place.id}-tags`)
+  await topLink.click()
+  await expect(chapter).toBeInViewport()
+  await expect(topLink).toHaveAttribute('aria-current', 'location')
+  const side = page.locator('.detail-side-nav')
+  if (!await side.getByRole('button', { name: '标签', exact: true }).isVisible()) await side.locator('.side-nav-toggle').click()
+  await side.getByRole('button', { name: '标签', exact: true }).click()
+  await expect(chapter).toBeInViewport()
+  await page.goto('guide/' + placeDetailHash(sample.place.id, sample.tag))
+  const target = page.locator(`[id="${searchTargetId(sample.place.id, { kind: 'tag', name: sample.tag })}"]`)
+  await expect(target).toBeFocused()
+  await expect(target).toBeInViewport()
+  await expect(page.locator('.detail-chapters').getByRole('button', { name: '标签', exact: true })).toHaveAttribute('aria-current', 'location')
+  await noOverflow(page)
+})
+
+test('榜单视图入口始终可见，不展开筛选也能切换并记住偏好', async ({ page }) => {
+  await page.goto('')
+  const controls = page.getByRole('group', { name: '榜单视图' })
+  await expect(controls).toBeVisible()
+  await expect(controls.getByRole('button', { name: '紧凑', exact: true })).toHaveAttribute('aria-pressed', 'true')
+  if (await page.locator('.mobile-tools-toggle').isVisible()) await expect(page.locator('.mobile-tools-toggle')).toHaveAttribute('aria-expanded', 'false')
+  await controls.getByRole('button', { name: '舒适', exact: true }).click()
+  await expect(page.locator('.photo-board')).toHaveClass(/comfortable-view/)
+  await page.reload()
+  await expect(controls.getByRole('button', { name: '舒适', exact: true })).toHaveAttribute('aria-pressed', 'true')
+  await controls.getByRole('button', { name: '紧凑', exact: true }).click()
+  await expect(page.locator('.photo-board')).not.toHaveClass(/comfortable-view/)
+  await noOverflow(page)
+})
+
+test('手机直达详情优先显示地点，延迟加载后仍定位正确，地图可按需展开', async ({ page }) => {
+  const sample = places[0]
+  await page.route('**/assets/PlaceDetail-*.js', async route => {
+    await new Promise(done => setTimeout(done, 800))
+    await route.continue()
+  })
+  await page.goto('guide/' + placeDetailHash(sample.id))
+  const heading = page.locator('.guide-detail .detail-heading h1')
+  await expect(heading).toHaveText(sample.name)
+  if (page.viewportSize()!.width <= 800) {
+    await expect(page.locator('#guide-browser')).toBeHidden()
+    await expect.poll(async () => (await heading.boundingBox())!.y).toBeGreaterThanOrEqual(0)
+    await expect.poll(async () => (await heading.boundingBox())!.y).toBeLessThan(400)
+    const toggle = page.locator('.mobile-detail-browse')
+    await toggle.click()
+    await expect(page.locator('#guide-browser')).toBeVisible()
+    await toggle.click()
+    await expect(page.locator('#guide-browser')).toBeHidden()
+    await expect(heading).toBeInViewport()
+  } else await expect(page.locator('#guide-browser')).toBeVisible()
+  await noOverflow(page)
+})
+
 test('舒适视图短评支持悬停与键盘，出发提醒展开并定位原始店铺记录', async ({ page }, info) => {
   await page.clock.setFixedTime(new Date('2026-11-02T04:00:00Z'))
   await page.goto('')
@@ -72,8 +133,12 @@ test('舒适视图短评支持悬停与键盘，出发提醒展开并定位原�
   const sample = Object.keys(directories).find(id => visitNotices(directories[id], '2026-11-02').notices.length)!
   const notice = visitNotices(directories[sample], '2026-11-02').notices[0]
   await page.goto('guide/' + placeDetailHash(sample))
+  // This test targets notices, not the hover console left under the mouse after navigation.
+  await page.mouse.move(0, 0)
+  await expect(page.locator('.sc-panel')).toBeHidden()
   await expect(page.locator('.shop-directory-inactive')).toHaveJSProperty('open', false)
   await expect(page.locator('.detail-date-grid')).toContainText(directories[sample].checkedAt)
+  if (!await page.locator('.visit-notices-dialog').evaluate((dialog: HTMLDialogElement) => dialog.open)) await page.locator('.visit-notices-trigger').click()
   await expect(page.locator('.visit-notices')).toContainText(notice.label)
   await noOverflow(page)
   if (info.project.name !== 'narrow-mobile') await page.locator('.detail-heading').screenshot({ path: `../test-results/acceptance/visit-notices-${info.project.name}.png` })
@@ -127,10 +192,12 @@ test('详情先读看点，日期和历史可展开；直接加入并恢复清�
   await expect(page.locator('.detail-date-grid')).toContainText(place.visitedAt || '未记录')
   await dates.locator('summary').click()
   const history = page.locator('.visit-notices-history')
+  await page.locator('.visit-notices-trigger').click()
   await expect(history).toHaveJSProperty('open', false)
   await history.locator('summary').click()
   await expect(history.locator('li').first()).toBeVisible()
   await history.locator('summary').click()
+  await page.getByRole('button', { name: '知道了，继续看介绍' }).click()
   const mobile = info.project.name !== 'desktop'
   await (mobile ? page.locator('.trip-plan-entry .trip-current-add') : page.locator('.detail-title-row .trip-plan-add')).click()
   await expect(page.locator('.trip-plan-dock')).toContainText('1 站')
