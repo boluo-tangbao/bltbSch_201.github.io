@@ -120,7 +120,14 @@ try{
  await page.screenshot({path:resolve('test-results/activities/share-390.png')});
  await page.locator('.event-back').click();await page.locator('#event-album').waitFor({state:'hidden'});await page.waitForFunction(y=>Math.abs(scrollY-y)<5,savedScroll);
  assert.equal(await page.locator('#event-year').inputValue(),photoEvent.year);
- await page.reload();await page.locator('.event-card').first().waitFor();await page.waitForFunction(y=>Math.abs(scrollY-y)<5,savedScroll);
+ // Restore against delayed data too, rather than relying on a warm browser cache.
+ await page.route('**/assets/generated/activities/manifest.json',async route=>{
+  await new Promise(done=>setTimeout(done,150));await route.continue();
+ });
+ await page.reload();await page.locator('.event-card').first().waitFor();
+ assert.equal(await page.evaluate(()=>history.scrollRestoration),'manual');
+ await page.waitForFunction(y=>Math.abs(scrollY-y)<5,savedScroll);
+ await page.unroute('**/assets/generated/activities/manifest.json');
  await page.locator('.event-card').last().click();await page.locator('#event-album').waitFor({state:'visible'});await page.goBack();await page.locator('#event-album').waitFor({state:'hidden'});await page.waitForFunction(y=>Math.abs(scrollY-y)<5,savedScroll);
  await page.goto(base+'activities.html#event/'+eventId);await page.locator('#event-album').waitFor({state:'visible'});
  await page.evaluate(()=>Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async()=>{throw new Error('blocked')}}}));
@@ -150,6 +157,15 @@ try{
  await devServer.listen();
  const devBase='http://127.0.0.1:4182'+previewBase;
  for(const file of ['index.html','sports.html','art.html','anime.html','travel.html','activities.html','assets/css/style.css','assets/js/activities.js','assets/generated/activities/manifest.json',videoEvent.media.find(m=>m.type==='video').src])assert.ok((await page.request.get(devBase+file)).ok(),file);
+ // All five Vite entries must load the one shared script from the home assets.
+ for(const file of ['rank/','rank/guide/','rank/qa/','rank/updates/','rank/route/']) {
+  const html=await (await page.request.get(devBase+file)).text();
+  const scripts=[...html.matchAll(/<script\b[^>]*\bsrc="([^"]*site-console\.js[^"]*)"/g)];
+  assert.equal(scripts.length,1,file+' 控制台脚本应仅加载一次');
+  const scriptUrl=new URL(scripts[0][1],devBase+file);
+  assert.equal(scriptUrl.pathname,new URL(devBase+'assets/js/site-console.js').pathname,file+' 控制台路径');
+  assert.ok((await page.request.get(scriptUrl.href)).ok(),file+' 控制台资源');
+ }
  await page.goto(devBase+'rank/');const devLink=page.getByRole('link',{name:'活动记录',exact:true});await devLink.waitFor();await devLink.click();await page.locator('.event-card').first().waitFor();assert.equal(await page.locator('.event-card').count(),acg.length);
  assert.deepEqual(errors,[]);assert.deepEqual(failed,[])
  assert.deepEqual(statisticsRequests,[], '主站／活动验收不应请求真实访问统计（请求已拦截）')

@@ -1,6 +1,9 @@
 (() => {
  const section = document.getElementById('event-records');
  if (!section) return;
+ // The list is rebuilt after an async fetch; native reload restoration can run
+ // later and overwrite scrollRoute's saved position (or clamp it while hidden).
+ history.scrollRestoration = 'manual';
  const $ = id => document.getElementById(id);
  const dialog = $('event-dialog'), viewer = $('event-dialog-body');
  let events = [], activeEvent = null, activeIndex = 0, category = '', year = '', previousFocus = null, previousOverflow = '';

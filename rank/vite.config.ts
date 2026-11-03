@@ -59,8 +59,19 @@ const criticalPortraits = {
   },
 }
 
+// Inject after Vite rewrites HTML assets: this shared script lives outside rank/.
+const siteConsole = {
+  name: 'shared-site-console',
+  transformIndexHtml: {
+    order: 'post' as const,
+    handler() {
+      return [{ tag: 'script', attrs: { src: `${homeBase}assets/js/site-console.js?v=5`, defer: true }, injectTo: 'body' as const }]
+    },
+  },
+}
+
 export default defineConfig({
-  plugins: [personalSitePreview, criticalPortraits, vue()],
+  plugins: [personalSitePreview, criticalPortraits, vue(), siteConsole],
   base: rankBase,
   build: {
     rolldownOptions: {
