@@ -1,0 +1,60 @@
+import { test, expect } from '@playwright/test'
+
+test('控制台悬停展开，侧签与面板之间移动不收起，离开后收起', async ({ page }) => {
+  await page.goto('./')
+  const tab = page.locator('.sc-launcher')
+  const panel = page.locator('.sc-panel')
+  await expect(tab).toHaveAttribute('aria-expanded', 'false')
+  await expect(page.locator('[data-close]')).toHaveCount(0)
+  await tab.hover()
+  await expect(tab).toHaveAttribute('aria-expanded', 'true')
+  await panel.hover()
+  await expect(panel).toBeVisible()
+  await page.locator('[data-volume]').fill('24')
+  await page.mouse.move(0, 0)
+  await expect(tab).toHaveAttribute('aria-expanded', 'false')
+  await expect(panel).toBeHidden()
+  await expect(panel).toHaveAttribute('inert', '')
+  await tab.hover()
+  await panel.hover()
+  await page.mouse.move(0, 0)
+  await panel.hover()
+  await expect(tab).toHaveAttribute('aria-expanded', 'true')
+  // A click on a mouse-hovered tab must not toggle the drawer closed.
+  await tab.click()
+  await expect(tab).toHaveAttribute('aria-expanded', 'true')
+  await page.mouse.move(0, 0)
+  await expect(panel).toBeHidden()
+})
+
+test('控制台支持键盘展开、Esc收起和焦点返回', async ({ page }) => {
+  await page.goto('./')
+  const tab = page.locator('.sc-launcher')
+  await tab.focus()
+  await tab.press('Enter')
+  await expect(page.locator('[data-home]')).toBeFocused()
+  await page.keyboard.press('Escape')
+  await expect(tab).toBeFocused()
+  await expect(tab).toHaveAttribute('aria-expanded', 'false')
+  await tab.press('Space')
+  await expect(page.locator('.sc-panel')).toBeVisible()
+  await page.keyboard.press('Escape')
+  await expect(page.locator('.sc-panel')).toBeHidden()
+})
+
+test('触屏点击侧签展开和收起', async ({ browser, baseURL }, testInfo) => {
+  const context = await browser.newContext({ baseURL, hasTouch: true, viewport: testInfo.project.use.viewport })
+  try {
+    const page = await context.newPage()
+    await page.goto('./')
+    const tab = page.locator('.sc-launcher')
+    await tab.tap()
+    await expect(tab).toHaveAttribute('aria-expanded', 'true')
+    await expect(page.locator('.sc-panel')).toBeVisible()
+    await tab.tap()
+    await expect(tab).toHaveAttribute('aria-expanded', 'false')
+    await expect(page.locator('.sc-panel')).toBeHidden()
+  } finally {
+    await context.close()
+  }
+})

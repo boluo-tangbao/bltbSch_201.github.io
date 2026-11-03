@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import BrandEmblem from './BrandEmblem.vue'
+import FallingPlaceTags from './FallingPlaceTags.vue'
 
 const props = defineProps<{ active: 'board' | 'guide' | 'qa' | 'updates' | 'route'; boardUrl?: string; guideUrl?: string }>()
 const base = import.meta.env.BASE_URL
@@ -25,6 +26,7 @@ const homeHref = `${base}../`
       </nav>
     </div>
   </header>
+  <FallingPlaceTags />
 </template>
 
 <style scoped>

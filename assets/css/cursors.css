@@ -2,7 +2,7 @@
    Apply only to a precise hovering pointer; touch and forced-color UI stay native. */
 @media (hover: hover) and (pointer: fine) and (forced-colors: none) {
   html, body { cursor: url("../cursors/pineapple.svg") 2 2, auto; }
-  :is(a[href], button, summary, select, label[for], input[type="checkbox"], input[type="radio"], [role="button"], [role="link"]):not(:disabled, [aria-disabled="true"], .event-media:not(.is-video), .gallery-photo-surface, .place-gallery-image-preview) {
+  :is(a[href], button, summary, select, label[for], input[type="checkbox"], input[type="radio"], [role="button"], [role="link"]):not(:disabled, [aria-disabled="true"], .event-media:not(.is-video), .gallery-photo-surface, .place-gallery-image-preview, .falling-place-tag) {
     /* Components set their own pointer rule; change just this semantic state. */
     cursor: url("../cursors/pineapple-link.svg") 2 2, pointer !important;
   }

@@ -117,6 +117,7 @@ async function initializePixelGallery() {
 }
 
 document.addEventListener("click", function (event) {
+  if (document.documentElement.dataset.siteEffects === "off" || window.matchMedia("(prefers-reduced-motion: reduce)").matches || event.target.closest("#site-console")) return;
   createRipple(event.clientX, event.clientY);
   createSparkles(event.clientX, event.clientY);
 });

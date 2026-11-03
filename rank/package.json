@@ -20,7 +20,8 @@
     "review:shops": "node ../scripts/generate-shop-review.mjs"
   },
   "dependencies": {
-    "vue": "^3.5.43"
+    "vue": "^3.5.43",
+    "matter-js": "0.20.0"
   },
   "devDependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
@@ -30,6 +31,7 @@
     "sharp": "^0.35.4",
     "typescript": "5.9.3",
     "vite": "^8.3.0",
-    "vue-tsc": "^3.3.11"
+    "vue-tsc": "^3.3.11",
+    "@types/matter-js": "0.20.2"
   }
 }

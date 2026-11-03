@@ -6,7 +6,7 @@ const root=fileURLToPath(new URL('../_site/',import.meta.url))
 export const previewBase = (process.env.SITE_BASE || '/bltbSch_201.github.io/').replace(/\/?$/, '/')
 export function previewServer(port=4180) {
  const base=previewBase
- const types={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.json':'application/json','.webp':'image/webp','.jpg':'image/jpeg','.png':'image/png','.svg':'image/svg+xml','.woff2':'font/woff2','.mp4':'video/mp4'}
+ const types={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.json':'application/json','.webp':'image/webp','.jpg':'image/jpeg','.png':'image/png','.svg':'image/svg+xml','.woff2':'font/woff2','.mp4':'video/mp4','.mp3':'audio/mpeg','.m4a':'audio/mp4','.wav':'audio/wav','.ogg':'audio/ogg','.flac':'audio/flac'}
  const server=createServer((req,res)=>{
   let pathname
   try{pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname)}catch{res.writeHead(400);res.end();return}
