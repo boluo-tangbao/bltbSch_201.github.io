@@ -10,6 +10,7 @@ import { cityColor } from './utils/cities'
 import { useStoredFilters } from './utils/filters'
 import { useShopToday } from './utils/shopToday'
 import TripPlanner from './components/TripPlanner.vue'
+import PlaceCompare from './components/PlaceCompare.vue'
 import BrowseFilters from './components/BrowseFilters.vue'
 import SearchMatch from './components/SearchMatch.vue'
 import ShareFilters from './components/ShareFilters.vue'
@@ -88,6 +89,7 @@ function tierColor(p: Place) { return tiers.find(t => t.id === p.tier)?.color ||
   <a href="#guide-main" class="skip-link" @click.prevent="main?.focus()">跳到正文</a>
   <SiteHeader active="guide" :board-url="linkTo(base)" />
   <main ref="main" id="guide-main" tabindex="-1" class="page-shell guide-page" :class="{ 'guide-map-view': guideView === 'map', 'guide-has-detail': !!selected, 'guide-browse-open': mobileBrowseOpen }">
+    <div class="guide-compare-entry"><PlaceCompare :places="all" :current-place="selected" /></div>
     <div id="guide-browser" class="guide-browser">
     <div class="guide-hero compact-map-hero"><div class="map-hero-line"><h1>去哪逛？</h1><p>挑个城市，开逛～</p><a :href="boardUrl" class="button" aria-label="回到图片总榜">← 总榜</a></div><MascotMoments class="mascot-embedded mascot-inline" priority :ids="['aqua', 'emilia']" rotate-all label="地图手记角色" /></div>
     <div class="filter-bar"><label class="city-filter"><span class="sr-only">城市筛选</span><select v-model="city" aria-label="城市筛选"><option value="">全部城市</option><option v-if="city && !cities.includes(city)" :value="city">{{ city }}（暂无条目）</option><option v-for="c in cities" :key="c">{{ c }}</option></select></label><label class="search-filter"><input v-model="query" type="search" aria-label="关键词搜索" placeholder="搜索地点、店铺、城市或标签…" /></label><div class="filter-result"><span role="status">{{ filtered.length }} 个结果</span><button class="text-button" :disabled="!city && !tag && !query.trim()" @click="reset">重置</button></div></div>
@@ -114,6 +116,7 @@ function tierColor(p: Place) { return tiers.find(t => t.id === p.tier)?.color ||
 </template>
 
 <style scoped>
+.guide-compare-entry { display: flex; justify-content: flex-end; margin-bottom: 8px; }
 .guide-browse-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 0 16px; }
 .guide-browse-actions .guide-view-switch { flex: 1; min-width: 0; margin: 0; }
 </style>

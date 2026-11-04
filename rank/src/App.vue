@@ -15,6 +15,7 @@ import { cityColor } from './utils/cities'
 import { useStoredFilters } from './utils/filters'
 import { useShopToday } from './utils/shopToday'
 import TripPlanner from './components/TripPlanner.vue'
+import PlaceCompare from './components/PlaceCompare.vue'
 import ExportPanel from './components/DeferredExport.vue'
 import Guestbook from './components/Guestbook.vue'
 import VisitCounter from './components/VisitCounter.vue'
@@ -117,6 +118,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
 
       <section class="board-section" aria-labelledby="board-title">
         <div class="section-heading board-heading"><div><span class="section-number">01</span><h2 id="board-title">图片总榜</h2><span class="desktop-note">{{ site.rankWithinTier ? '同档按顺序排名' : '同档不分先后' }}</span></div>
+          <PlaceCompare :places="all" />
           <div class="board-view-controls" role="group" aria-label="榜单视图">
                 <span>榜单视图</span>
                 <button type="button" :aria-pressed="boardView === 'compact'" @click="boardView = 'compact'">紧凑</button>
