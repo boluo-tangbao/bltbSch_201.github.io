@@ -1,5 +1,6 @@
 import type { Place, ShopDirectory } from '../types/index.ts'
 import { tierLabel } from './model.ts'
+import { placeAddress } from './cities.ts'
 import { limitedPhase, shopCalendarDate, shopDirectoryGroups } from './shopDirectory.ts'
 
 export function comparisonFacts(place: Place, directory?: ShopDirectory, today = shopCalendarDate()) {
@@ -12,7 +13,7 @@ export function comparisonFacts(place: Place, directory?: ShopDirectory, today =
     regular: groups ? `${groups.regular.open.length} 家` : '店单未整理',
     ongoing: groups ? `${countPhase('ongoing')} 项` : '店单未整理',
     upcoming: groups ? `${countPhase('upcoming')} 项` : '店单未整理',
-    address: (typeof place.location === 'string' ? place.location : place.location?.address) || '地址待补充',
+    address: placeAddress(place) || '地址待补充',
     checked: directory?.checkedAt || '尚未核对',
     visited: place.visitedAt || '未记录',
   }

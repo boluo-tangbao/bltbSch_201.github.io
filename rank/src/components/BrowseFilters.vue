@@ -3,8 +3,8 @@ import { computed, ref, useId } from 'vue'
 import CityLegend from './CityLegend.vue'
 import TagLegend from './TagLegend.vue'
 
-const props = defineProps<{ cities: string[]; colors: Record<string, string>; tags: string[]; city: string; tag: string; query: string }>()
-const emit = defineEmits<{ city: [value: string]; tag: [value: string]; query: [value: string] }>()
+const props = defineProps<{ cities: string[]; colors: Record<string, string>; tags: string[]; city: string; tag: string }>()
+const emit = defineEmits<{ city: [value: string]; tag: [value: string] }>()
 // 仅调整筛选入口顺序，不修改地点标签或搜索匹配规则。
 const preferredTags = ['扭蛋', '同人', '中古', '寄售', '手办模型', 'lolita']
 const commonTags = computed(() => preferredTags.filter(tag => props.tags.includes(tag)))

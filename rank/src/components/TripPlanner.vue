@@ -3,7 +3,7 @@ import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import type { Place, ShopDirectory, Site } from '../types'
 import directoryData from '../data/shop-directories.json'
 import siteData from '../data/site.json'
-import { resolveTripStops, tripEntryKey, tripPlanHtml, tripPlanText, tripStopUrl } from '../utils/tripPlan'
+import { resolveTripStops, tripEntryKey, tripPlanHtml, tripPlanText } from '../utils/tripPlan'
 import { useTripPlan } from '../utils/useTripPlan'
 import { useShopToday } from '../utils/shopToday'
 import CopyButton from './CopyButton.vue'
@@ -42,7 +42,7 @@ function addCurrentPlace() { if (props.currentPlace) plan.toggle({ placeId: prop
 function release() { if (documentUrl.value) URL.revokeObjectURL(documentUrl.value); documentUrl.value = '' }
 function exportPlan() { release(); documentUrl.value = URL.createObjectURL(new Blob([tripPlanHtml(stops.value, guideUrl, today.value)], { type: 'text/html;charset=utf-8' })) }
 function clear() { plan.clear();try{sessionStorage.removeItem('tangbao-trip-routing-session-v1')}catch{};dialog.value?.close() }
-watch(stops, value => {
+watch(stops, () => {
   release()
   if (!plan.entries.value.length) { dialog.value?.close(); rankingOpen.value = false }
 }, { immediate: true })

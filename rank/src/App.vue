@@ -132,7 +132,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
         <div class="board-tools">
           <button type="button" class="mobile-tools-toggle" :aria-expanded="toolsOpen" aria-controls="board-tools-content" @click="toolsOpen = !toolsOpen"><span>{{ toolsOpen ? '收起筛选与工具' : '筛选与工具' }}<small v-if="tag"> · # {{ tag }}</small></span><span aria-hidden="true">{{ toolsOpen ? '−' : '+' }}</span></button>
           <div id="board-tools-content" class="board-tools-content" :class="{ 'is-open': toolsOpen }">
-            <BrowseFilters :cities="cities" :colors="colors" :tags="tags" :city="city" :tag="tag" :query="query" @city="city = $event" @tag="tag = $event" @query="query = $event" />
+            <BrowseFilters :cities="cities" :colors="colors" :tags="tags" :city="city" :tag="tag" @city="city = $event" @tag="tag = $event" />
             <div class="photo-options">
               <label v-if="boardView === 'compact'"><input v-model="showLabels" type="checkbox" />显示名称与城市</label>
               <ShareFilters :city="city" :tag="tag" :query="query" />

@@ -29,7 +29,7 @@ export function parseRouteResult(result:any,mode:TravelMode):RouteChoice{
   if(!plans[0])throw new Error('未找到可用路线')
   return plans[0]
 }
-async function query(api:any,from:TripGroup,to:TripGroup,a:any,b:any,mode:TravelMode,signal:AbortSignal):Promise<RouteChoice>{
+async function query(api:any,from:TripGroup,a:any,b:any,mode:TravelMode,signal:AbortSignal):Promise<RouteChoice>{
   return limited(()=>new Promise((resolve,reject)=>{
     if(signal.aborted){reject(new Error('查询已取消'));return}
     let settled=false,service:any
@@ -57,7 +57,7 @@ export async function queryTripOptions(from:TripGroup,to:TripGroup,signal:AbortS
   const values=await Promise.allSettled((['walk','bus','car'] as const).map(async mode=>{
     const key=JSON.stringify([a.lng,a.lat,b.lng,b.lat,mode]),old=cache.get(key)
     if(!force&&old&&(!old.pending||!old.signal.aborted)&&old.expires>Date.now())return old.value
-    const value=query(api,from,to,a,b,mode,signal)
+    const value=query(api,from,a,b,mode,signal)
     cache.set(key,{expires:Date.now()+180000,value,signal,pending:true})
     try{const result=await value;const entry=cache.get(key);if(entry?.value===value)entry.pending=false;return result}catch(error){if(cache.get(key)?.value===value)cache.delete(key);throw error}
   }))
