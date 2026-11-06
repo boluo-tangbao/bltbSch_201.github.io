@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "title": "#Luna、初音ミク - Check this out",
+    "src": "assets/music/%23Luna%E3%80%81%E5%88%9D%E9%9F%B3%E3%83%9F%E3%82%AF%20-%20Check%20this%20out.mp3"
+  },
+  {
+    "title": "阿兰、三Z-STUDIO - 一颗方糖悬滞的时间",
+    "src": "assets/music/%E9%98%BF%E5%85%B0%E3%80%81%E4%B8%89Z-STUDIO%20-%20%E4%B8%80%E9%A2%97%E6%96%B9%E7%B3%96%E6%82%AC%E6%BB%9E%E7%9A%84%E6%97%B6%E9%97%B4.mp3"
+  },
+  {
+    "title": "二宮愛、DJ OKAWARI - Speed of Light",
+    "src": "assets/music/%E4%BA%8C%E5%AE%AE%E6%84%9B%E3%80%81DJ%20OKAWARI%20-%20Speed%20of%20Light.mp3"
+  },
+  {
+    "title": "高瀬統也、野田愛実 - I can't stop loving you (feat. 野田愛実)",
+    "src": "assets/music/%E9%AB%98%E7%80%AC%E7%B5%B1%E4%B9%9F%E3%80%81%E9%87%8E%E7%94%B0%E6%84%9B%E5%AE%9F%20-%20I%20can%27t%20stop%20loving%20you%20%28feat.%20%E9%87%8E%E7%94%B0%E6%84%9B%E5%AE%9F%29.mp3"
+  },
+  {
+    "title": "犬儒乐队 - 志铭",
+    "src": "assets/music/%E7%8A%AC%E5%84%92%E4%B9%90%E9%98%9F%20-%20%E5%BF%97%E9%93%AD.mp3"
+  },
+  {
+    "title": "ChiliChill乐团 - 搬家前，短暂夜",
+    "src": "assets/music/ChiliChill%E4%B9%90%E5%9B%A2%20-%20%E6%90%AC%E5%AE%B6%E5%89%8D%EF%BC%8C%E7%9F%AD%E6%9A%82%E5%A4%9C.mp3"
+  },
+  {
+    "title": "FELT - Can't look away",
+    "src": "assets/music/FELT%20-%20Can%27t%20look%20away.mp3"
+  },
+  {
+    "title": "HACHI - さよならfrequency (再见frequency)",
+    "src": "assets/music/HACHI%20-%20%E3%81%95%E3%82%88%E3%81%AA%E3%82%89frequency%20%28%E5%86%8D%E8%A7%81frequency%29.mp3"
+  },
+  {
+    "title": "HOYO-MiX - No Ceiling",
+    "src": "assets/music/HOYO-MiX%20-%20No%20Ceiling.mp3"
+  },
+  {
+    "title": "しゃろう - 2#23 AM",
+    "src": "assets/music/%E3%81%97%E3%82%83%E3%82%8D%E3%81%86%20-%202%2323%20AM.mp3"
+  }
+]

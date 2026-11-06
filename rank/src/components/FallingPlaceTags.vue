@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 import placeData from '../data/places.json'
+import siteData from '../data/site.json'
 import type { PlacesByCity } from '../types'
+import { cityColor } from '../utils/cities'
 import { filterPlaces, flattenPlaces } from '../utils/model'
 import { placeTagBatch, placeTagTier } from '../utils/placeTags'
 import { placeDetailHash } from '../utils/search'
@@ -148,7 +150,7 @@ onBeforeUnmount(() => {
       <div class="place-toy-toolbar" :style="{ left: `${layout.lanes[1]!.left}px`, width: `${layout.lanes[1]!.width}px`, top: `${layout.top - 44}px` }"><button v-if="!collapsed" type="button" @click="replay">{{ reduced ? '换一批' : '再掉一次' }}</button><button type="button" :aria-expanded="!collapsed" @click="toggle">{{ collapsed ? '展开标签' : '收起' }}</button></div>
       <template v-if="!collapsed">
         <div v-for="(lane, side) in layout.lanes" :key="side" class="place-toy-stage" :class="{ 'is-ready': ready[side], 'is-static': reduced }" :data-side="side" :data-state="ready[side] ? resting[side] ? 'resting' : 'falling' : 'loading'" :style="{ left: `${lane.left}px`, width: `${lane.width}px`, top: `${layout.top}px`, height: `${layout.height}px` }">
-          <a v-for="(place, index) in laneTags(side)" :key="place.id" class="falling-place-tag" :href="`${guideBase}${placeDetailHash(place.id)}`" :aria-label="`${place.city} · ${place.name}，${placeTagTier(place).label}，查看介绍`" :title="`${place.city} · ${place.name} · ${placeTagTier(place).label}`" :data-place-id="place.id" :data-tier="place.tier" :style="{ '--tag-color': placeTagTier(place).color }" draggable="false" @pointerdown="down($event, side, index)" @pointermove="move" @pointerup="up" @pointercancel="cancelDrag" @lostpointercapture="cancelDrag" @click="click">{{ place.name }}</a>
+          <a v-for="(place, index) in laneTags(side)" :key="place.id" class="falling-place-tag" :href="`${guideBase}${placeDetailHash(place.id)}`" :aria-label="`${place.city} · ${place.name}，${placeTagTier(place).label}，查看介绍`" :title="`${place.city} · ${place.name} · ${placeTagTier(place).label}`" :data-place-id="place.id" :data-tier="place.tier" :style="{ '--tag-color': placeTagTier(place).color, '--tag-text-color': cityColor(place.city, siteData.cityColors) }" draggable="false" @pointerdown="down($event, side, index)" @pointermove="move" @pointerup="up" @pointercancel="cancelDrag" @lostpointercapture="cancelDrag" @click="click">{{ place.name }}</a>
         </div>
       </template>
     </template>
@@ -162,7 +164,7 @@ onBeforeUnmount(() => {
 .place-toy-toolbar button { min-height: 44px; padding: 4px 0; border: 0; background: none; color: var(--ui-muted); font: inherit; font-size: 11px; cursor: pointer; }
 .place-toy-toolbar button:hover { color: var(--ui-accent); }
 .place-toy-stage { position: absolute; overflow: hidden; overflow: clip; pointer-events: none; }
-.falling-place-tag { position: absolute; left: 0; top: 0; display: inline-flex; align-items: center; justify-content: center; width: max-content; max-width: 180px; min-height: 44px; padding: 10px 16px; border: 2px solid color-mix(in srgb, var(--tag-color) 60%, white); border-radius: 999px; background: color-mix(in srgb, var(--tag-color) 28%, white); color: #65515b; box-shadow: inset 0 2px 0 #ffffffa6, 0 3px 5px #49384412; font: 400 15px/1.5 'YouYuan', 'Yuanti SC', 'Hiragino Maru Gothic ProN', 'Guide Cartoon', 'Microsoft YaHei', sans-serif; letter-spacing: .025em; text-align: center; overflow-wrap: anywhere; user-select: none; -webkit-user-select: none; touch-action: none; cursor: grab !important; visibility: hidden; transform-origin: center; pointer-events: auto; }
+.falling-place-tag { position: absolute; left: 0; top: 0; display: inline-flex; align-items: center; justify-content: center; width: max-content; max-width: 180px; min-height: 44px; padding: 10px 16px; border: 2px solid color-mix(in srgb, var(--tag-color) 60%, white); border-radius: 999px; background: color-mix(in srgb, var(--tag-color) 28%, white); color: var(--tag-text-color); box-shadow: inset 0 2px 0 #ffffffa6, 0 3px 5px #49384412; font: 700 15px/1.5 'YouYuan', 'Yuanti SC', 'Hiragino Maru Gothic ProN', 'Guide Cartoon', 'Microsoft YaHei', sans-serif; letter-spacing: .025em; text-align: center; overflow-wrap: anywhere; user-select: none; -webkit-user-select: none; touch-action: none; cursor: grab !important; visibility: hidden; transform-origin: center; pointer-events: auto; }
 .is-ready .falling-place-tag { visibility: visible; }
 .falling-place-tag.is-held { z-index: 2; cursor: grabbing !important; box-shadow: inset 0 2px 0 #fff9, 0 6px 14px #49384428; }
 .falling-place-tag:focus-visible { z-index: 3; outline: 3px solid var(--ui-accent); outline-offset: -5px; }

@@ -35,7 +35,11 @@ for(const file of tracked) {
 }
 // 同时包含尚未提交的新页面和资源，本地验收不依赖 Git 暂存状态。
 for(const entry of readdirSync(root,{withFileTypes:true}))if(entry.isFile()&&extname(entry.name)==='.html')cpSync(resolve(root,entry.name),resolve(out,entry.name))
-cpSync(resolve(root,'assets'),resolve(out,'assets'),{recursive:true})
+const musicDir = resolve(root, 'assets/music')
+const kugouDir = resolve(musicDir, 'KugouMusic')
+cpSync(resolve(root,'assets'),resolve(out,'assets'),{recursive:true,filter:source=>
+ source !== kugouDir && !(dirname(source) === musicDir && extname(source).toLowerCase() === '.flac')
+})
 if(existsSync(resolve(root,'images')))cpSync(resolve(root,'images'),resolve(out,'images'),{recursive:true,filter:source=>!['images/anime/events','images/anime/event-web'].some(dir=>source===resolve(root,dir))})
 cpSync(rankDist,resolve(out,'rank'),{recursive:true,filter:source=>{
  const info = statSync(source)
