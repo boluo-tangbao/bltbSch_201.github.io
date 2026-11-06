@@ -3,6 +3,7 @@
   const script = document.currentScript;
   const root = new URL('../../', script.src);
   const storageKey = `site-console:${root.pathname}`;
+  const playbackKey = `${storageKey}:playback`;
   let saved = {};
   try { saved = JSON.parse(localStorage.getItem(storageKey)) || {}; } catch { /* Preferences are optional. */ }
   const state = {
@@ -120,11 +121,12 @@
   async function play() {
     const request = selection;
     try { await audio.play(); if (request === selection) status('正在播放 · 收起控制台也会继续'); }
-    catch (error) { if (request === selection && error.name !== 'AbortError') status(error.name === 'NotAllowedError' ? '请再点击播放，允许浏览器播放音乐。' : '这首音频暂时无法播放，请换一首或检查文件。'); }
+    catch (error) { if (request === selection && error.name !== 'AbortError') status(error.name === 'NotAllowedError' ? '浏览器需要你点击播放才能继续。' : '这首音频暂时无法播放，请换一首或检查文件。'); }
   }
   function select(position, autoplay = false, resume = 0) {
     selection++; audio.pause(); index = (position + queue.length) % queue.length;
     const track = queue[index]; audio.src = track.src;
+    if (resume) audio.currentTime = resume;
     audio.onloadedmetadata = () => { if (resume && Number.isFinite(audio.duration)) audio.currentTime = Math.min(resume, Math.max(0, audio.duration - 0.1)); updateTime(); };
     $('.sc-title').textContent = track.title; $('.sc-count').textContent = `${index + 1} / ${queue.length}${localQueue ? ' · 本机音乐' : ' · 网站歌单'}`;
     $('[data-play]').disabled = false;
@@ -144,7 +146,25 @@
   audio.addEventListener('timeupdate', () => { updateTime(); if (Date.now() - lastSaved > 5000) { savePosition(); lastSaved = Date.now(); } });
   audio.addEventListener('ended', () => { if (queue.length > 1) select(index + 1, true); else { audio.currentTime = 0; savePosition(); status('播放完毕，可以再听一次。'); } });
   audio.addEventListener('error', () => status('无法读取这首音频，请换一首或检查文件。'));
-  window.addEventListener('pagehide', savePosition);
+  window.addEventListener('pagehide', () => {
+    savePosition();
+    try {
+      if (localQueue) sessionStorage.removeItem(playbackKey);
+      else if (queue[index]) sessionStorage.setItem(playbackKey, JSON.stringify({
+        track: state.track, time: state.time, playing: !audio.paused && !audio.ended,
+      }));
+    } catch { /* Playback works without storage. */ }
+  });
+  function restorePlayback() {
+    if (localQueue || !queue.length) return;
+    let playback;
+    try { playback = JSON.parse(sessionStorage.getItem(playbackKey)); } catch { /* Fall back to saved progress. */ }
+    const previous = queue.findIndex(track => track.src === (playback?.track ?? state.track));
+    const time = playback?.time ?? state.time;
+    select(Math.max(0, previous), previous >= 0 && playback?.playing === true,
+      previous >= 0 && Number.isFinite(time) ? Math.max(0, time) : 0);
+  }
+  window.addEventListener('pageshow', event => { if (event.persisted) restorePlayback(); });
   $('[data-add]').addEventListener('click', () => $('[data-files]').click());
   $('[data-files]').addEventListener('change', event => {
     const files = Array.from(event.target.files || []).filter(file => file.type.startsWith('audio/') || /\.(mp3|m4a|ogg|wav|flac)$/i.test(file.name));
@@ -158,6 +178,6 @@
     queue = tracks.filter(track => track && typeof track.title === 'string' && typeof track.src === 'string').flatMap(track => {
       try { const url = new URL(track.src, root); return /^https?:$/.test(url.protocol) ? [{ title: track.title, src: url.href }] : []; } catch { return []; }
     });
-    if (queue.length) { const previous = queue.findIndex(track => track.src === state.track); select(previous < 0 ? 0 : previous, false, previous < 0 ? 0 : state.time); }
+    restorePlayback();
   }).catch(() => status('网站歌单暂未加载，可选择本机音乐。'));
 })();
