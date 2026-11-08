@@ -23,7 +23,7 @@
 └── _site/                   自动生成的部署产物，忽略提交
 ```
 
-公开页面地址保持不变。`activities.html` 查看全部活动；`activities.html?topic=acg`、`?topic=sports`、`?topic=art`、`?topic=travel`、`?topic=life` 分别只查看二次元、体育、艺术、旅行、生活主题。每个主题视图的统计、类型、年份和相册均限制在该主题。
+公开页面地址保持不变。`activities.html` 查看全部活动；`activities.html?topic=acg`、`?topic=sports`、`?topic=art`、`?topic=travel`、`?topic=life` 分别只查看二次元、体育、艺术、旅行、生活主题；`?topic=other` 查看其他主题（如校招宣讲）。每个主题视图的统计、类型、年份和相册均限制在该主题。
 
 `activities.html#event/稳定ID` 可直接分享、刷新；加上 `?topic=acg` 等查询参数也可分享。跨主题引用使用不带 topic 的普通链接，例如艺术页可链接 `activities.html#event/euphonium-2025`；活动仍属于二次元。禁止复制记录或素材来实现交叉展示。旧 `anime.html#event/稳定ID` 自动跳到相应二次元相册，包括关闭预览时。
 
@@ -36,8 +36,9 @@
 ## 下次新增活动
 
 1. 用户在 `content/activities/` 新建“日期：活动名称”文件夹，直接放入图片和视频；两者混放，不改原文件名，不压缩原文件。
-2. Agent 核对活动名称、日期原文、唯一主要主题与活动类型，在该目录维护 `event.json`。主题不清楚时先询问，不根据照片内容猜分类。无需再填写第二份配置表。
-3. Agent 生成、构建和验收；用户通过 GitHub Desktop 查看变更并提交，正常发布流程负责生成网页素材。
+2. 视频放入活动目录后，在仓库根目录运行 `node scripts/compress-local-videos.mjs`。脚本将原件按原路径备份到忽略提交的 `.local-media/video-originals/`，校验后用 H.264/AAC 网页副本替换活动目录内的视频，压缩清单保存在 `data/video-copies.json`。单个副本需小于 100 MiB，已登记副本再次构建时直接使用。商圈视频也由同一脚本处理。
+3. Agent 核对活动名称、日期原文、唯一主要主题与活动类型，在该目录维护 `event.json`。主题不清楚时先询问，不根据照片内容猜分类。无需再填写第二份配置表。
+4. Agent 生成、构建和验收；用户通过 GitHub Desktop 查看变更并提交，正常发布流程负责生成网页素材。
 
 精确日期模板：
 
@@ -54,12 +55,13 @@
 
 日期不确定时，`date` 填 `null`，`dateLabel` 保留以年份开头的原文（例如 `2025下半年`），不要补造具体日期。文件夹仍可使用这个原文。修改活动名称或移动活动文件夹时保持 `id` 不变，已有链接靠 ID 识别。
 
-- `topic`：唯一主要主题，必须为 `acg`、`sports`、`art`、`travel` 或 `life`。整场活动的照片和视频继承该主题。动漫主题演奏会归二次元，艺术栏目可添加普通链接引用。
+- `topic`：唯一主要主题，必须为 `acg`、`sports`、`art`、`travel`、`life` 或 `other`。整场活动的照片和视频继承该主题。动漫主题演奏会归二次元，艺术栏目可添加普通链接引用。
 - `category`：主题内的活动类型，例如“快闪与联动”“展会”“演出与聚会”；可增加简短类型名，页面自动生成按钮。
 - 可选 `cover`：本场图片或视频的原始文件名，不填则采用按文件名排序的第一个素材，视频会自动提取封面。
 - 可选 `note`：个人感想，显示在相册标题下，纯文本。
+- 可选 `bvid`：B 站视频号，例如 `BV1h64z6YEmH`，在活动相册内嵌入播放器。只有 B 站视频的活动也可登记，列表显示视频占位封面，进入相册后加载播放器。
 
-支持 `.jpg`、`.jpeg`、`.png`、`.webp`、`.mp4`、`.mov`。活动目录自动扫描，缺失或错误的 `event.json`、重复 ID、无效日期、多个 topic 或封面找不到都会报错。每场元数据和原始素材均需要提交，包括 MP4 的现有 Git LFS 管理。
+支持 `.jpg`、`.jpeg`、`.png`、`.webp`、`.mp4`、`.mov`。活动目录自动扫描，缺失或错误的 `event.json`、重复 ID、无效日期、多个 topic 或封面找不到都会报错。每场元数据、照片和压缩视频副本需要提交。视频原件保存在本地归档目录。
 
 ## 修改页面与样式
 
@@ -85,6 +87,6 @@ node scripts/preview-site.mjs
 
 `npm run dev` 在 rank 启动前也会生成活动，Vite 可访问主站页面、assets 与公开图片。完整部署预览默认为 `http://127.0.0.1:4180/bltbSch_201.github.io/`；使用 `SITE_BASE=/` 等环境变量可更改主站前缀。浏览器验收默认使用已安装的 Edge；Linux/CI 设置 `PLAYWRIGHT_CHANNEL=chromium` 并先安装 Playwright Chromium。
 
-`verify-activities.mjs --static` 只执行元数据、逐场素材数量和部署排除检查。完整验收还覆盖全部活动、五主题隔离（额外主题使用测试响应，不写真实记录）、类型与年份、直接分享、旧链接、预览开关、图片放大、视频实际播放及关闭、返回列表、rank 入口、页面与资源访问和 390/768/1440px 布局。截图保存在忽略的 `test-results/activities/`。日常验收按当前元数据和原始素材动态检查。长期迁移基线保存于 [activity-migration-baseline.json](activity-migration-baseline.json)，不放临时测试目录；必要时追加 `--migration` 校验149个迁移原件的SHA-256，普通新增活动不更新或套用这份历史基线。2026-10-19整理前已存在差异：历史基线中的4张ChinaJoy照片不在现目录，现存145项哈希一致；保留原基线，不将完整迁移核验记为通过。
+`verify-activities.mjs --static` 只执行元数据、逐场素材数量和部署排除检查。完整验收还覆盖全部活动、六主题隔离（额外主题使用测试响应，不写真实记录）、类型与年份、直接分享、旧链接、预览开关、图片放大、视频实际播放及关闭、返回列表、rank 入口、页面与资源访问和 390/768/1440px 布局。截图保存在忽略的 `test-results/activities/`。日常验收按当前元数据和原始素材动态检查。长期迁移基线保存于 [activity-migration-baseline.json](activity-migration-baseline.json)，不放临时测试目录；必要时追加 `--migration` 校验149个迁移原件的SHA-256，普通新增活动不更新或套用这份历史基线。2026-10-19整理前已存在差异：历史基线中的4张ChinaJoy照片不在现目录，现存145项哈希一致；保留原基线，不将完整迁移核验记为通过。
 
 GitHub Pages 工作流继续从 main 部署，使用通用脚本组装和验收；活动生成缓存可复用。用户只提交源码、元数据和原始素材，生成产物自动处理。店铺维护另遵守 [固定维护规则](shop-directory-rules.md)。

@@ -17,6 +17,7 @@ assert.deepEqual(new Set(data.map(e=>e.id)),new Set(source.map(e=>e.id)))
 for(const event of source) {
  const record=data.find(e=>e.id===event.id),files=activityFiles(event.folder)
  assert.equal(record.topic,event.topic);assert.equal(record.category,event.category);assert.equal(record.date,event.date);assert.equal(record.dateLabel,event.date||event.dateLabel)
+ assert.equal(record.bvid,event.bvid)
  assert.equal(record.photos,files.filter(f=>!['.mp4','.mov'].includes(extname(f).toLowerCase())).length)
  assert.equal(record.videos,files.filter(f=>['.mp4','.mov'].includes(extname(f).toLowerCase())).length)
  assert.deepEqual(record.media.map(m=>m.file),files)
@@ -34,6 +35,7 @@ if(process.argv.includes('--migration')&&existsSync(baseline)) {
 if(process.argv.includes('--static')) {console.log('活动元数据、源素材数量、网页素材及部署原素材排除验证通过。');process.exit(0)}
 const server=await previewServer(4181),browser=await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL||'msedge',headless:true})
 const page=await browser.newPage(),errors=[],failed=[];page.on('pageerror',error=>errors.push(error.message));page.on('response',response=>{if(response.status()>=400)failed.push(response.url())})
+await page.route('https://player.bilibili.com/**',route=>route.fulfill({contentType:'text/html',body:'<!doctype html><title>B站播放器测试占位</title>'}))
 // Activity checks do not exercise the hover console; move out if resizing leaves it under the mouse.
 await page.addLocatorHandler(page.locator('#site-console.sc-open'),async()=>{await page.mouse.move(0,0);await page.keyboard.press('Escape')})
 const statisticsRequests=[]
@@ -61,6 +63,8 @@ try{
   await expect(page.locator('#event-album-title')).toHaveText(event.name);
   await expect(page.locator('#event-album')).toBeVisible();
   await expect(page.locator('.event-media')).toHaveCount(event.media.length);
+  await expect(page.locator('.event-bilibili')).toHaveCount(event.bvid ? 1 : 0);
+  if(event.bvid)await expect(page.locator('.event-bilibili')).toHaveAttribute('src', 'https://player.bilibili.com/player.html?bvid='+event.bvid+'&autoplay=0');
  }
  await page.goto(base+'activities.html#event/'+videoEvent.id);await page.locator('.event-media').nth(videoEvent.media.findIndex(m=>m.type==='video')).click();await page.waitForFunction(()=>document.querySelector('#event-dialog video')?.readyState>=1);assert.ok(await page.locator('video').evaluate(v=>v.duration>0));await page.locator('video').evaluate(v=>v.play());await page.waitForFunction(()=>document.querySelector('video')?.currentTime>.25);await page.locator('#event-close').click();await page.locator('video').waitFor({state:'detached'});assert.equal(await page.locator('video').count(),0)
  await page.goto(base+'activities.html#event/not-found');await page.locator('.event-card').first().waitFor();assert.equal(await page.locator('.event-card').count(),data.length)
@@ -79,10 +83,10 @@ try{
  await page.goto(base+'activities.html#event-records');await page.locator('.event-card').first().waitFor();assert.equal(await page.locator('.event-card').count(),data.length+1);await page.locator('#event-topic').selectOption('life');assert.equal(await page.locator('.event-card').count(),data.filter(e=>e.topic==='life').length+1);await page.getByRole('link',{name:'查看 '+life.name+'，'+life.dateLabel,exact:true}).click();await page.locator('#event-album').waitFor({state:'visible'});assert.equal(await page.locator('#event-album-title').innerText(),'测试生活记录');
  await page.goto(base+'anime.html#event/'+acg[0].id);await page.waitForURL('**/activities.html?topic=acg#event/'+acg[0].id);await page.locator('#event-album').waitFor({state:'visible'});
  await page.unroute('**/assets/generated/activities/manifest.json');
- // 全部五个主题、主题内类型和年份；只拦截响应，不写入真实数据。
- const fixtures=['sports','art','travel','life'].map(topic=>({...data[0],id:topic+'-fixture',name:'测试'+topic,topic,category:'测试分类'}));
+ // 全部六个主题、主题内类型和年份；只拦截响应，不写入真实数据。
+ const fixtures=['sports','art','travel','life','other'].map(topic=>({...data[0],id:topic+'-fixture',name:'测试'+topic,topic,category:'测试分类'}));
  await page.route('**/assets/generated/activities/manifest.json',route=>route.fulfill({json:[...fixtures,...data]}));
- for(const topic of ['acg','sports','art','travel','life']) {
+ for(const topic of ['acg','sports','art','travel','life','other']) {
   const expected=[...fixtures,...data].filter(e=>e.topic===topic);
   await page.goto(base+'activities.html?topic='+topic+'#event-records');await page.locator('.event-card').first().waitFor();
   assert.equal(await page.locator('.event-card').count(),expected.length);
@@ -173,5 +177,5 @@ try{
  assert.deepEqual(statisticsRequests,[], '主站／活动验收不应请求真实访问统计（请求已拦截）')
  assert.equal(await page.locator('script[src*="busuanzi"]').count(),0)
 
- console.log('验证通过：原素材完整、页面资源、五主题筛选、预览开关与旧链接、三种屏宽、照片视频、分享与 rank 入口。')
+ console.log('验证通过：原素材完整、页面资源、六主题筛选、预览开关与旧链接、三种屏宽、照片视频、分享与 rank 入口。')
 }finally{if(devServer)await devServer.close();await browser.close();await new Promise(done=>server.close(done))}

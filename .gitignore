@@ -11,6 +11,7 @@ playwright-report/
 
 # Keep original photo/video archives locally; publish curated web assets only.
 /rank/source-media/
+/.local-media/
 
 # Local music originals and downloads. Publish the MP3 copies.
 /assets/music/*.flac

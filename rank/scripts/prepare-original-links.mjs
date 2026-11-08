@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto'
 import { execFileSync } from 'node:child_process'
 import { readFileSync, writeFileSync } from 'node:fs'
 import { relative, resolve } from 'node:path'
+import { isVideoCopy } from '../../scripts/video-copies.mjs'
 
 export function prepareOriginalLinks(root, previews) {
   const git = args => execFileSync('git', args, { cwd: root, encoding: 'utf8', windowsHide: true })
@@ -14,6 +15,7 @@ export function prepareOriginalLinks(root, previews) {
     return [path, meta.split(' ')[2]]
   }))
   for (const [path, preview] of Object.entries(previews)) {
+    if (path.endsWith('.mp4') && isVideoCopy(resolve(root, 'public', path))) continue
     if (!path.startsWith('images/places/') || !preview.small || !preview.large || !(preview.display || preview.playback)) continue
     const repoPath = prefix + path, sha = tracked.get(repoPath)
     if (!sha) continue

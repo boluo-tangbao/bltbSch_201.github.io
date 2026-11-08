@@ -1,10 +1,11 @@
 import { createRequire } from 'node:module'
 import { createHash } from 'node:crypto'
-import { existsSync, mkdirSync, readdirSync, statSync, writeFileSync, unlinkSync, createReadStream, renameSync } from 'node:fs'
+import { existsSync, mkdirSync, readdirSync, statSync, writeFileSync, unlinkSync, createReadStream, renameSync, copyFileSync } from 'node:fs'
 import { resolve, extname, relative, isAbsolute } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { execFileSync } from 'node:child_process'
 import { readActivities } from './activity-metadata.mjs'
+import { isVideoCopy } from './video-copies.mjs'
 const require = createRequire(new URL('../rank/package.json', import.meta.url))
 const sharp = require('sharp'), ffmpeg = require('@ffmpeg-installer/ffmpeg').path
 const root = fileURLToPath(new URL('../', import.meta.url))
@@ -37,8 +38,11 @@ export async function prepareActivities() {
    const isVideo = ['.mp4','.mov'].includes(ext)
    for (const file of [small,full,...(isVideo?[video]:[])]) used.add(file)
    if (isVideo && !existsSync(resolve(output, video))) {
+    if (isVideoCopy(input)) copyFileSync(input, resolve(output, video))
+    else {
     console.log('转码视频：' + event.folder + '/' + file)
     execFileSync(ffmpeg, ['-hide_banner','-loglevel','error','-y','-i',input,'-map','0:v:0','-map','0:a?','-vf',"scale='min(1280,iw)':-2",'-c:v','libx264','-preset','fast','-crf','27','-threads','2','-pix_fmt','yuv420p','-c:a','aac','-b:a','96k','-movflags','+faststart',resolve(output,video)], {stdio:'inherit'})
+    }
    }
    if (!existsSync(resolve(output,small)) || !existsSync(resolve(output,full))) {
     let image = input
@@ -54,9 +58,9 @@ export async function prepareActivities() {
    media.push({ file, type:isVideo?'video':'image', preview:url+small, src:url+(isVideo?video:full), poster:isVideo?url+full:undefined })
    webBytes += statSync(resolve(output,small)).size+statSync(resolve(output,full)).size+(isVideo?statSync(resolve(output,video)).size:0)
   }
-  if (!media.length) throw new Error('活动没有可展示的素材：'+event.folder)
+  if (!media.length && !event.bvid) throw new Error('活动没有可展示的素材：'+event.folder)
   const photos=media.filter(item=>item.type==='image').length
-  records.push({id:event.id,name,date,dateLabel:date||dateLabel,year:dateLabel.slice(0,4),category:event.category,topic:event.topic,photos,videos:media.length-photos,cover:(event.cover ? media.find(item=>item.file===event.cover) : media[0]).preview,...(event.note?{note:event.note}:{}),media})
+  records.push({id:event.id,name,date,dateLabel:date||dateLabel,year:dateLabel.slice(0,4),category:event.category,topic:event.topic,photos,videos:media.length-photos,cover:(event.cover ? media.find(item=>item.file===event.cover) : media[0])?.preview,...(event.note?{note:event.note}:{}),...(event.bvid?{bvid:event.bvid}:{}),media})
   console.log('活动相册：'+name+' · '+media.length+' 个素材')
  }
  // 仅在全部活动生成成功后清理失效缓存，旧素材不会继续被打包。

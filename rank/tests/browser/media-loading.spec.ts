@@ -106,7 +106,7 @@ test('video previews make no MP4 requests until clicked and switching replaces t
   await expect(player.locator('source')).toHaveAttribute('src', mediaUrl(previews[videos[1].src].playback).slice(new URL(base).origin.length))
   await expect.poll(() => player.evaluate(video => video.readyState)).toBeGreaterThanOrEqual(2)
   expect(requests.every(url => url.includes('/images/previews/'))).toBe(true)
-  await expect(page.getByRole('link', { name: '打开原视频' })).toHaveAttribute('href', originalLinks[videos[1].src] || mediaUrl(videos[1].src).slice(new URL(base).origin.length))
+  await expect(page.getByRole('link', { name: '打开视频文件' })).toHaveAttribute('href', originalLinks[videos[1].src] || mediaUrl(videos[1].src).slice(new URL(base).origin.length))
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
   await page.getByRole('button', { name: '关闭大图' }).click()
   await expect(player).toHaveCount(0)

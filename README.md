@@ -69,7 +69,7 @@
 
 ## 活动相册与主站文件结构
 
-每场原始图片、视频与唯一元数据混放在 `content/activities/日期：活动名称/`，Agent 维护其中的 `event.json`；无需重复配置表。保留稳定 ID 和日期原文，主题支持 acg、sports、art、travel、life，每场只有一个主要主题。
+每场原始图片、视频与唯一元数据混放在 `content/activities/日期：活动名称/`，Agent 维护其中的 `event.json`；无需重复配置表。保留稳定 ID 和日期原文，主题支持 acg、sports、art、travel、life、other（其他），每场只有一个主要主题。
 
 全部记录在 `activities.html`；各栏目通过 `?topic=主题` 进入相应列表。`anime.html` 只显示三场可关闭的二次元预览，rank 入口也只看二次元。其他栏目可用普通分享链接引用同场活动，无需复制记录。
 
@@ -112,7 +112,7 @@ npm run dev
 
 开发地址：`http://127.0.0.1:5173/bltbSch_201.github.io/rank/`。
 
-图片总榜和现场图集自动使用 320/640px WebP 预览，进入可视区域才加载。点击照片后先显示预览并请求 1280px 网页大图；加载失败可重试。视频只显示封面，点击后才请求优化后的 MP4。图片榜单与完整内容导出使用网页高清图，HTML 中的视频使用转码版。原始图片和视频保持不变，“打开原图／原视频”在正式构建中打开对应 GitHub 固定版本文件页，可在那里查看或下载；开发模式仍打开本地原件。
+图片总榜和现场图集自动使用 320/640px WebP 预览，进入可视区域才加载。点击照片后先显示预览并请求 1280px 网页大图；加载失败可重试。视频只显示封面，点击后才请求优化后的 MP4。图片榜单与完整内容导出使用网页高清图，HTML 中的视频使用转码版。图片原件保留，“打开原图”在正式构建中打开对应 GitHub 固定版本文件页。视频原件按原路径归档于本地 `.local-media/video-originals/`，仓库中的 MP4 为普通 Git 管理的网页副本，“打开视频文件”提供站内副本。新增视频先运行 `node scripts/compress-local-videos.mjs`，再构建、提交。
 
 `npm run dev` 和 `npm run build` 自动运行 `prepare:media`，为已公开条目的封面、图集和视频生成预览（无封面的视频自动提取首帧）。预览和索引分别位于忽略的 `rank/public/images/previews/` 与 `rank/src/data/media-previews.json`，无需手动提交或填写缩略图路径；构建产物会带上预览。修改素材后重新启动开发服务或构建。生成使用 [Sharp](https://sharp.pixelplumbing.com/api-resize/) 和随 npm 依赖安装的 FFmpeg，无需额外安装系统工具。
 

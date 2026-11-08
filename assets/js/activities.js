@@ -9,7 +9,7 @@
  let events = [], activeEvent = null, activeIndex = 0, category = '', year = '', previousFocus = null, previousOverflow = '';
  const params = new URLSearchParams(location.search);
  const scope = params.get('topic');
- const topicLabels = {acg:'二次元',sports:'体育',art:'艺术',travel:'旅行',life:'生活'};
+ const topicLabels = {acg:'二次元',sports:'体育',art:'艺术',travel:'旅行',life:'生活',other:'其他'};
  const scopedTopic = Object.hasOwn(topicLabels, scope) ? scope : '';
  const topicLabel = topicLabels[scopedTopic] || '';
  let selectedTopic = Object.hasOwn(topicLabels, params.get('filterTopic')) ? params.get('filterTopic') : '';
@@ -27,7 +27,7 @@
   section.querySelector('.event-back').textContent = '← 返回' + topicLabel + '活动记录';
  }
  const make = (tag, className, text) => { const node = document.createElement(tag); if (className) node.className = className; if (text !== undefined) node.textContent = text; return node; };
- const counts = event => [event.photos ? event.photos+' 张照片' : '', event.videos ? event.videos+' 段视频' : ''].filter(Boolean).join(' · ');
+ const counts = event => [event.photos ? event.photos+' 张照片' : '', event.videos ? event.videos+' 段视频' : '', event.bvid ? 'B站视频' : ''].filter(Boolean).join(' · ');
  function thumbnail(src, alt) { const image = make('img'); image.src=src; image.alt=alt; image.loading='lazy'; image.decoding='async'; return image; }
  function renderIndex() {
   const filtered=events.filter(event=>(!selectedTopic||event.topic===selectedTopic)&&(!category||event.category===category)&&(!year||event.year===year));
@@ -35,7 +35,7 @@
   filtered.forEach(event=>{
    const card=make('a','event-card'); card.href='#event/'+event.id; card.setAttribute('aria-label','查看 '+event.name+'，'+event.dateLabel);
    card.addEventListener('click',click=>{if(click.button!==0||click.ctrlKey||click.metaKey||click.shiftKey||click.altKey)return;listPosition={scrollY:window.scrollY,id:event.id};history.replaceState({...history.state,activitiesList:listPosition},'',location.href);});
-   card.append(thumbnail(event.cover,event.name+'的现场记录'));
+   card.append(event.cover ? thumbnail(event.cover,event.name+'的现场记录') : make('div','event-cover-placeholder','B站视频记录'));
    const copy=make('div','event-card-copy');copy.append(make('span','event-card-category',event.category),make('h3','',event.name));
    const bottom=make('div','event-card-bottom'), date=make('time','',event.dateLabel); if(event.date)date.dateTime=event.date;
    bottom.append(date,make('span','',counts(event)));copy.append(bottom,make('span','event-open-hint','翻开这次记录 ↗'));card.append(copy);$('event-grid').append(card);
@@ -53,13 +53,20 @@
   $('event-share-status').textContent='';$('event-share-fallback').hidden=true;
   $('event-index').hidden=!!event; $('event-album').hidden=!event;
   document.title=event?event.name+' | 活动记录':baseTitle;
+  $('event-media-grid').replaceChildren();
   if(!event){renderIndex();if(id)$('event-result').textContent='没有找到这场活动，下面是已有记录。';return;}
   $('event-album-title').textContent=event.name;
   $('event-album-category').textContent=event.category;
   $('event-album-meta').textContent=event.dateLabel+' · '+counts(event)+' · 个人参加记录';
   $('event-album-note').textContent=event.note || '';
   $('event-album-note').hidden=!event.note;
-  $('event-media-grid').replaceChildren();
+  if(event.bvid){
+   const player=make('iframe','event-bilibili');
+   player.title=event.name+' · B站视频';
+   player.src='https://player.bilibili.com/player.html?bvid='+encodeURIComponent(event.bvid)+'&autoplay=0';
+   player.allow='fullscreen';player.allowFullscreen=true;player.referrerPolicy='strict-origin-when-cross-origin';
+   $('event-media-grid').append(player);
+  }
   event.media.forEach((item,index)=>{
    const label=(item.type==='video'?'视频':'照片')+' '+String(index+1).padStart(2,'0');
    const button=make('button','event-media'+(item.type==='video'?' is-video':''));button.type='button';button.setAttribute('aria-label',(item.type==='video'?'播放':'放大')+' '+event.name+' · '+label);button.setAttribute('aria-haspopup','dialog');

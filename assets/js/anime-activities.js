@@ -19,10 +19,11 @@
   if(!previews.length){section.hidden=true;return;}
   for(const event of previews){
    const card=make('a','event-card');card.href='activities.html?topic=acg#event/'+event.id;card.setAttribute('aria-label','查看 '+event.name+'，'+event.dateLabel);
-   const image=make('img');image.src=event.cover;image.alt=event.name+'的现场记录';image.loading='lazy';image.decoding='async';card.append(image);
+   if(event.cover){const image=make('img');image.src=event.cover;image.alt=event.name+'的现场记录';image.loading='lazy';image.decoding='async';card.append(image);}
+   else card.append(make('div','event-cover-placeholder','B站视频记录'));
    const copy=make('div','event-card-copy');copy.append(make('span','event-card-category',event.category),make('h3','',event.name));
    const bottom=make('div','event-card-bottom'),date=make('time','',event.dateLabel);if(event.date)date.dateTime=event.date;
-   const total=[event.photos?event.photos+' 张照片':'',event.videos?event.videos+' 段视频':''].filter(Boolean).join(' · ');
+   const total=[event.photos?event.photos+' 张照片':'',event.videos?event.videos+' 段视频':'',event.bvid?'B站视频':''].filter(Boolean).join(' · ');
    bottom.append(date,make('span','',total));copy.append(bottom,make('span','event-open-hint','查看这次记录 ↗'));card.append(copy);grid.append(card);
   }
   status.hidden=true;

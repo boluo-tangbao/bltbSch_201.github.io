@@ -6,6 +6,7 @@ import { execFileSync } from 'node:child_process'
 import sharp from 'sharp'
 import ffmpeg from '@ffmpeg-installer/ffmpeg'
 import { prepareOriginalLinks } from './prepare-original-links.mjs'
+import { isVideoCopy } from '../../scripts/video-copies.mjs'
 import { mascots, pixelMascotById, pixelPortraitVariants } from '../src/data/mascots.ts'
 
 function publicPath(publicRoot, source) {
@@ -90,6 +91,12 @@ export async function prepareMedia(root) {
   for (const source of videos) {
     const path = publicPath(publicRoot, source)
     const input = readFileSync(path)
+    if (isVideoCopy(path)) {
+      manifest[source].playback = source
+      originalVideoBytes += input.length
+      playbackBytes += input.length
+      continue
+    }
     const hash = createHash('sha256').update(input).update('h264-longedge1280-crf25-faststart-v1').digest('hex').slice(0, 20)
     const playback = `images/previews/${hash}-playback.mp4`
     const destination = publicPath(publicRoot, playback)

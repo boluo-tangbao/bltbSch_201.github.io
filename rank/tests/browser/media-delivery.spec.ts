@@ -20,15 +20,15 @@ test('the assembled site displays photos and plays videos locally; only explicit
     if (links[path] && url.origin === new URL(base).origin) originalsRequested.push(path)
   })
   for (const video of [false, true]) {
-    const place = places.find(p => p.published && p.gallery.some((g: any) => links[g.src] && (g.type === 'video') === video))
-    const media = place.gallery.find((g: any) => links[g.src] && (g.type === 'video') === video)
-    expect(existsSync('../_site/rank/' + media.src)).toBe(false)
+    const place = places.find(p => p.published && p.gallery.some((g: any) => (video || links[g.src]) && (g.type === 'video') === video))
+    const media = place.gallery.find((g: any) => (video || links[g.src]) && (g.type === 'video') === video)
+    expect(existsSync('../_site/rank/' + media.src)).toBe(video)
     await page.goto(base + 'guide/#/place/' + place.id)
     await page.locator('.place-gallery').getByRole('button', { name: `${video ? '播放' : '查看'}：${media.alt}`, exact: true }).click()
     const dialog = page.locator('.place-gallery-lightbox')
-    await expect(dialog.getByRole('link', { name: video ? '打开原视频' : '打开原图' })).toHaveAttribute('href', links[media.src])
+    await expect(dialog.getByRole('link', { name: video ? '打开视频文件' : '打开原图' })).toHaveAttribute('href', links[media.src] || new URL(media.src.split('/').map(encodeURIComponent).join('/'), base).pathname)
     if (video) {
-      await expect(dialog.locator('video source')).toHaveAttribute('src', /images\/previews\/.+\.mp4$/)
+      await expect(dialog.locator('video source')).toHaveAttribute('src', /images\/places\/.+\.mp4$/)
       expect(existsSync('../_site/rank/' + previews[media.src].playback)).toBe(true)
     } else {
       const image = dialog.locator('.full-image-original')

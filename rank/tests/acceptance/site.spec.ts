@@ -267,13 +267,13 @@ test('店单：常规说明隐藏、默认折叠、每次增加五条', async ({
 
 test('图集与视频：高清图、原件链接、站内播放和弹窗关闭', async ({ page }) => {
   for (const isVideo of [false, true]) {
-    const place = places.find(p => p.gallery.some(g => originals[g.src] && (g.type === 'video') === isVideo))
+    const place = places.find(p => p.gallery.some(g => (isVideo || originals[g.src]) && (g.type === 'video') === isVideo))
     expect(place, '缺少图集验收样例').toBeTruthy()
-    const media = place!.gallery.find(g => originals[g.src] && (g.type === 'video') === isVideo)!
+    const media = place!.gallery.find(g => (isVideo || originals[g.src]) && (g.type === 'video') === isVideo)!
     await page.goto('guide/' + placeDetailHash(place!.id))
     await page.locator('.place-gallery').getByRole('button', { name: `${isVideo ? '播放' : '查看'}：${media.alt}`, exact: true }).first().click()
     const viewer = page.locator('.place-gallery-lightbox')
-    await expect(viewer.getByRole('link', { name: isVideo ? '打开原视频' : '打开原图' })).toHaveAttribute('href', originals[media.src])
+    await expect(viewer.getByRole('link', { name: isVideo ? '打开视频文件' : '打开原图' })).toHaveAttribute('href', originals[media.src] || new URL('../' + media.src.split('/').map(encodeURIComponent).join('/'), page.url()).pathname)
     if (isVideo) {
       await expect.poll(() => viewer.locator('video').evaluate(v => (v as HTMLVideoElement).readyState)).toBeGreaterThanOrEqual(1)
     } else {

@@ -9,8 +9,12 @@ async function initializeLatestEvent() {
     const event = events[0];
     if (!event) return;
     const image = entry.querySelector('img');
-    image.src = event.cover;
-    image.alt = `${event.name}的现场记录`;
+    if (event.cover) {
+      image.src = event.cover;
+      image.alt = `${event.name}的现场记录`;
+    } else {
+      image.remove();
+    }
     entry.href = `activities.html#event/${encodeURIComponent(event.id)}`;
     document.getElementById('home-latest-event-caption').textContent = `${event.dateLabel} · ${event.name}`;
   } catch {
