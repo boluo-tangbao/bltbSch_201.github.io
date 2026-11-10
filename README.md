@@ -17,6 +17,8 @@
 
 ## 文档入口
 
+2026-11-09后续重构方案：原始照片／视频本地归档并另行备份，GitHub 管理缩略图、压缩高清查看图、必要的网页视频和封面；云端构建仅依赖已提交的网页素材。此为目标方案，当前生成与忽略规则尚未切换；具体保存范围、阅读体验要求、迁移步骤及验收见 [素材归档与重构目标](docs/visual-assets.md#素材归档与重构目标2026-11-09)。
+
 2026-11-04商圈对比：总榜与地图／详情页新增“商圈对比”，支持按城市、名称或标签选取最多3个公开地点，并排查看个人档位、短评、标签、常规店铺、进行中／即将开始快闪和日期；可只看不同项。地点固定附在各商圈名称下方，不参与差异筛选；对比面板不展示待核实线索或档期待核项。详情入口在有空位时预选当前商圈，选择在本机记住，可移除或清空。手机表格横向滚动并固定项目列。计数复用原店单规则，闭店和已结束活动不混入，店单未整理明确标示；不以店铺数量判胜负或推断实时库存。
 
 2026-11-03商圈标签玩具：rank交互页面的左右背景留白加入可掉落、碰撞、抓取和点击的柔色胶囊，不增加页头高度，名称取已公开地点，颜色随原榜单档位同步。拖动不会误跳转，轻点进入详情；提供再掉一次与收起；按正文实际边界自适应两侧范围，窄屏空间不足时隐藏且不加载物理模块，保持首屏榜单可见。Matter.js模块按需加载，停稳／隐藏／收起后暂停或清理，系统减少动态效果时使用静态链接。维护位置与验收见[共享视觉规则](docs/visual-rules.md)。
@@ -127,7 +129,7 @@ npm run preview
 
 浏览器检查使用已安装的 Microsoft Edge：`npm run test:browser`。没有 Edge 的环境可安装 Playwright Chromium 并把 `playwright.config.ts` 的 `channel` 配置移除。检查包含空榜单、测试条目、隐藏数据、详情直达/刷新/返回、筛选恢复、375/768/1440px 无溢出、两种 PNG 导出、分页、错误提示和重试。虚构测试数据仅写到忽略的 `.fixture-app/`，不修改正式 JSON、不进入部署产物。截图与实际导出文件在 `rank/test-results/evidence/`。
 
-导出使用独立 Canvas 海报版式：黑白、酸黄色、窄体大标题、斜切档位条和城市色标，宽 1200px、单页高不超过 3000px，按完整卡片行分页。弹窗提供版式示意与生成后的实际分页预览；简洁排序图为三列、短评长图为两列，保留原始档内排名与完整名称／短评。等待字体和同源图片载入后生成 PNG，每页单独下载，手机可长按图片保存。默认导出当前筛选，也可选择全榜。单条名称最长 160 字，城市 80 字，短评 600 字；长篇内容请放 `details`。英文标题使用本地打包的 Barlow Condensed ExtraBold，来自 Google Fonts，许可保存在 `rank/src/assets/fonts/OFL-Barlow-Condensed.txt`，导出不依赖在线字体服务。
+导出使用独立 Canvas 海报版式：Day 粉白／Night 绿黑双色主题、窄体大标题、斜切档位条和城市色标，宽 1200px、单页高不超过 3000px，按完整卡片行分页。弹窗提供版式示意与生成后的实际分页预览；简洁排序图为三列、短评长图为两列，保留原始档内排名与完整名称／短评。等待字体和同源图片载入后生成 PNG，每页单独下载，手机可长按图片保存。默认导出当前筛选，也可选择全榜。单条名称最长 160 字，城市 80 字，短评 600 字；长篇内容请放 `details`。英文标题使用本地打包的 Barlow Condensed ExtraBold，来自 Google Fonts，许可保存在 `rank/src/assets/fonts/OFL-Barlow-Condensed.txt`，导出不依赖在线字体服务。
 
 ## 首次 Pages 部署和以后自动发布
 
@@ -166,3 +168,7 @@ Vite 默认 base 为 `/bltbSch_201.github.io/rank/`；CI 从 `configure-pages` �
 - **增加原站其他文件类型**：`scripts/assemble-site.mjs` 保留已跟踪的静态文件，新增特殊扩展名时在白名单补充；assets、images 与根目录 HTML 在本地预览中也包含尚未提交的文件。
 
 实现时核对的官方资料：[Vue 快速开始](https://vuejs.org/guide/quick-start.html)、[Vite Pages 部署](https://vite.dev/guide/static-deploy.html#github-pages)、[GitHub 自定义工作流](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。
+
+## Day / Night 访客风格
+
+榜单、地图、QA、更新与行程页共用 Day version／Night version 切换，入口位于页头与导出弹窗。默认粉白 Day；绿黑 Night 为深色阅读配色。选择保存在浏览器并在同源页面间同步；禁用本地存储时仍可切换，但不保证刷新记忆。网页、弹窗示意、PNG 海报和 HTML 存档使用同一套主题，保留城市识别色、档位、照片及原排序。切换主题会释放旧导出结果，正在生成的导出会取消，避免当前配色与下载内容不一致。配色维护于 `rank/src/utils/themePalette.ts`，网页与弹窗适配位于 `rank/src/themes.css`。

@@ -43,6 +43,10 @@
       "tier": "hang",
       "order": 10,
       "summary": "位置好、门类全，南京路上最夯选择。",
+      "changeNotice": {
+        "title": "店铺布局有调整",
+        "summary": "2026年10月楼层与店铺布局调整，原评价和图集保留改造前体验，请结合最新店单安排行程。"
+      },
       "details": "**谷子集市、寄售、同人谷、galgame、K-pop**应有尽有。\n\n再加上地理位置的bonus，它不一定每一项都做到最强，但胜在无敌的全面性。",
       "visitNotes": [
         "留意活动档期：这里会有地偶表演、小型漫展和快闪咖啡等活动。",
@@ -2276,18 +2280,10 @@
           "sourceUrl": "https://www.sohu.com/a/914156719_121123945"
         },
         {
-          "src": "images/places/Guangzhou/官方账号补充/nikaido-front.webp",
-          "alt": "二阶堂谷屋门面（官方路线视频截图）",
-          "group": "店铺外景",
-          "sourceName": "二阶堂谷屋顺平博物馆官方小红书",
-          "sourceUrl": "https://www.xiaohongshu.com/explore/6ac4837200000000150066ec"
-        },
-        {
           "src": "images/places/Guangzhou/官方账号补充/nikaido-route.mp4",
           "alt": "烈士陵园A口至二阶堂谷屋路线（官方视频）",
           "group": "店铺外景",
           "type": "video",
-          "poster": "images/places/Guangzhou/官方账号补充/nikaido-front.webp",
           "sourceName": "二阶堂谷屋顺平博物馆官方小红书",
           "sourceUrl": "https://www.xiaohongshu.com/explore/6ac4837200000000150066ec"
         },
@@ -2339,13 +2335,6 @@
           "group": "店铺内景",
           "sourceName": "搜狐号·南梦柯漫（2025 探店）",
           "sourceUrl": "https://www.sohu.com/a/914156719_121123945"
-        },
-        {
-          "src": "images/places/Guangzhou/官方账号补充/nikaido-inside.webp",
-          "alt": "二阶堂谷屋痛柜展示（官方路线视频截图）",
-          "group": "店铺内景",
-          "sourceName": "二阶堂谷屋顺平博物馆官方小红书",
-          "sourceUrl": "https://www.xiaohongshu.com/explore/6ac4837200000000150066ec"
         },
         {
           "src": "images/places/Guangzhou/官方账号补充/nikaido-atlus.webp",
@@ -2559,13 +2548,6 @@
           "alt": "逛店小食",
           "group": "额外活动",
           "sourceName": "作者‘2026-01-21’直拍"
-        },
-        {
-          "src": "images/places/Guangzhou/官方账号补充/west-miku-02.webp",
-          "alt": "西区YOOOOSHOP洛天依打卡装置（官方图）",
-          "group": "额外活动",
-          "sourceName": "YOOOOSHOP广州官方小红书",
-          "sourceUrl": "https://www.xiaohongshu.com/explore/6983292d000000001a035794"
         }
       ],
       "visitedAt": "2026-01-21",
@@ -2812,13 +2794,6 @@
           "alt": "商场入口",
           "group": "商圈外部",
           "sourceName": "作者‘2026-01-19’直拍"
-        },
-        {
-          "src": "images/places/Guangzhou/官方账号补充/tianhe-route-04.webp",
-          "alt": "时尚天河入口指路：APM体育中心南站A口（千格谷官方图）",
-          "group": "商圈外部",
-          "sourceName": "千格谷官方小红书",
-          "sourceUrl": "https://www.xiaohongshu.com/explore/6ab74851000000000a024e4c"
         },
         {
           "src": "images/places/Guangzhou/时尚天河/内部图.png",
@@ -3251,14 +3226,6 @@
           "src": "images/places/Suzhou/SUONE/photo-03.webp",
           "alt": "恰谷恰谷",
           "group": "店铺外景",
-          "sourceName": "作者‘2026-09-19’直拍"
-        },
-        {
-          "src": "images/places/Suzhou/SUONE/video-01.mp4",
-          "alt": "逛店通道",
-          "group": "店铺外景",
-          "type": "video",
-          "poster": "images/places/Suzhou/SUONE/video-01.webp",
           "sourceName": "作者‘2026-09-19’直拍"
         },
         {

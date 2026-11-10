@@ -60,7 +60,19 @@ export async function prepareActivities() {
   }
   if (!media.length && !event.bvid) throw new Error('活动没有可展示的素材：'+event.folder)
   const photos=media.filter(item=>item.type==='image').length
-  records.push({id:event.id,name,date,dateLabel:date||dateLabel,year:dateLabel.slice(0,4),category:event.category,topic:event.topic,photos,videos:media.length-photos,cover:(event.cover ? media.find(item=>item.file===event.cover) : media[0])?.preview,...(event.note?{note:event.note}:{}),...(event.bvid?{bvid:event.bvid}:{}),media})
+  let cover = (event.cover ? media.find(item=>item.file===event.cover) : media[0])?.preview
+  if (event.previewImage) {
+   const input = resolve(dir,event.previewImage)
+   const hash = createHash('sha256').update('activity-cover-v1:').update(await sharp(input).toBuffer()).digest('hex').slice(0,20)
+   for (const [width,quality] of [[480,78],[1600,85]]) {
+    const file = hash+'-'+width+'.webp'
+    used.add(file)
+    if (!existsSync(resolve(output,file))) await sharp(input).rotate().resize({width,height:width,fit:'inside',withoutEnlargement:true}).webp({quality}).toFile(resolve(output,file))
+   }
+   cover = 'assets/generated/activities/media/'+hash+'-480.webp'
+  }
+  if (!cover) throw new Error('活动缺少预览图：'+event.folder)
+  records.push({id:event.id,name,date,dateLabel:date||dateLabel,year:dateLabel.slice(0,4),category:event.category,topic:event.topic,photos,videos:media.length-photos,cover,...(event.note?{note:event.note}:{}),...(event.bvid?{bvid:event.bvid}:{}),media})
   console.log('活动相册：'+name+' · '+media.length+' 个素材')
  }
  // 仅在全部活动生成成功后清理失效缓存，旧素材不会继续被打包。

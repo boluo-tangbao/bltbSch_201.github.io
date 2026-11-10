@@ -28,6 +28,10 @@ export function readActivities() {
   const files=activityFiles(folder)
   if(event.bvid!==undefined&&(typeof event.bvid!=='string'||!/^BV[0-9A-Za-z]{10}$/.test(event.bvid)))fail('bvid 应为有效的 BV 视频号')
   if(!files.length&&!event.bvid)fail('没有支持的图片或视频')
+  if(event.previewImage!==undefined) {
+   if(typeof event.previewImage!=='string'||!/^preview\/[^/\\]+\.(jpg|jpeg|png|webp)$/i.test(event.previewImage)||!statSync(resolve(activityRoot,folder,event.previewImage),{throwIfNoEntry:false})?.isFile())fail('previewImage 应为本活动 preview/ 目录下存在的图片')
+  }
+  if(!files.length&&!event.previewImage)fail('仅有 B 站链接时须提供 previewImage 作为活动预览图')
   if(event.cover!==undefined&&(typeof event.cover!=='string'||!files.includes(event.cover)))fail('cover 应为本场素材的原始文件名')
   if(event.note!==undefined&&typeof event.note!=='string')fail('note 应为感想文字')
   return {...event,folder,date,dateLabel,year:dateLabel.slice(0,4)}

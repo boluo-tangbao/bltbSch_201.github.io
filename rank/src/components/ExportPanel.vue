@@ -8,6 +8,8 @@ import updateData from '../data/updates.json'
 import { publicUpdates } from '../utils/model'
 import { previewUrl } from '../utils/assets'
 import '../export-poster.css'
+import ThemeSwitch from './ThemeSwitch.vue'
+import { theme } from '../utils/theme'
 const props = defineProps<{ site: Site; places: Place[]; allPlaces: Place[]; scope: string; updatedAt: string | null; currentLabel?: string }>()
 const emit = defineEmits<{ close: [] }>()
 const dialog = ref<HTMLDialogElement>()
@@ -32,7 +34,8 @@ const release = () => { results.value.forEach(r => URL.revokeObjectURL(r.url)); 
 onMounted(() => dialog.value?.showModal())
 onBeforeUnmount(() => { disposed = true; controller?.abort(); release(); dialog.value?.close() })
 onUnmounted(() => previousFocus?.focus())
-watch([mode, all, includeGallery, () => props.places], () => { if (!busy.value) { release(); error.value = ''; cancelled.value = false } })
+watch([mode, all, includeGallery, theme, () => props.places], () => { if (!busy.value) { release(); error.value = ''; cancelled.value = false } })
+watch(theme, () => { controller?.abort(); release() })
 function cancel() { controller?.abort() }
 async function generate() {
   if (busy.value || !selectedPlaces.value.length) return
@@ -42,13 +45,13 @@ async function generate() {
   busy.value = true; error.value = ''; cancelled.value = false; release()
   try {
     if (mode.value === 'full') {
-      const generated = await exportDocument(props.site, selectedPlaces.value, props.allPlaces, publicUpdates(updateData as Update[], props.allPlaces), all.value ? '全榜 · 全部城市' : props.scope, props.updatedAt, { ...options, includeGallery: includeGallery.value })
+      const generated = await exportDocument(props.site, selectedPlaces.value, props.allPlaces, publicUpdates(updateData as Update[], props.allPlaces), all.value ? '全榜 · 全部城市' : props.scope, props.updatedAt, { ...options, theme: theme.value, includeGallery: includeGallery.value })
       if (disposed || task.signal.aborted) URL.revokeObjectURL(generated.url)
       else documentResult.value = generated
       return
     }
     const url = new URL(location.href); url.search = ''; url.hash = ''
-    const generated = await exportRanking({ ...options, site: props.site, places: selectedPlaces.value, allPlaces: props.allPlaces, mode: mode.value, scope: all.value ? '全榜 · 全部城市' : props.scope, updatedAt: props.updatedAt, websiteUrl: url.href })
+    const generated = await exportRanking({ ...options, theme: theme.value, site: props.site, places: selectedPlaces.value, allPlaces: props.allPlaces, mode: mode.value, scope: all.value ? '全榜 · 全部城市' : props.scope, updatedAt: props.updatedAt, websiteUrl: url.href })
     if (disposed || task.signal.aborted) generated.forEach(r => URL.revokeObjectURL(r.url))
     else results.value = generated
   } catch (e) {
@@ -68,6 +71,7 @@ async function generate() {
     </header>
     <div class="studio-layout">
       <div class="studio-controls">
+        <div class="studio-theme"><span>页面与导出风格</span><ThemeSwitch :disabled="busy" /></div>
         <fieldset :disabled="busy" class="studio-fieldset"><legend><span>01 /</span> 选择版式</legend>
           <label v-for="format in formats" :key="format.value" class="studio-format">
             <input v-model="mode" type="radio" :value="format.value" name="mode" :aria-label="`${format.name} · ${format.detail}`" />

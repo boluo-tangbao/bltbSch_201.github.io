@@ -58,8 +58,10 @@ export async function prepareMedia(root) {
   for (const place of Object.values(groups).flat()) {
     if (!place.published) continue
     if (place.cover) sources.set(place.cover, place.cover)
+    if (place.mapSnapshot?.src) sources.set(place.mapSnapshot.src, place.mapSnapshot.src)
     for (const media of place.gallery) {
       sources.set(media.src, media.type === 'video' ? media.poster || media.src : media.src)
+      if (media.poster) sources.set(media.poster, media.poster)
       if (media.type === 'video') videos.add(media.src)
     }
   }

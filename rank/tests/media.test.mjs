@@ -18,12 +18,18 @@ test('previews preserve originals, ignore drafts, reuse outputs and invalidate c
     const originalPath = join(root, 'public', source)
     await sharp({ create: { width: 1800, height: 1200, channels: 3, background: '#3a6f52' } }).png().toFile(originalPath)
     const original = readFileSync(originalPath)
+    const poster = 'images/places/poster.png', snapshot = 'images/places/map.png'
+    for (const file of [poster,snapshot]) writeFileSync(join(root,'public',file),original)
     writeFileSync(join(root, 'src/data/places.json'), JSON.stringify({ city: [
-      { published: true, cover: source, gallery: [{ src: source }] },
+      { published: true, cover: source, mapSnapshot: { src: snapshot }, gallery: [{ src: source, poster }] },
       { published: false, cover: 'images/places/missing-draft.jpg', gallery: [] },
     ] }))
     const first = await prepareMedia(root)
-    assert.deepEqual(Object.keys(first), [source])
+    assert.deepEqual(Object.keys(first), [source,snapshot,poster])
+    for (const file of [poster,snapshot]) {
+      assert.ok(statSync(join(root,'public',first[file].small)).size > 0)
+      assert.deepEqual(readFileSync(join(root,'public',file)),original)
+    }
     assert.deepEqual(readFileSync(originalPath), original)
     for (const [key, width] of [['tiny', 160], ['small', 320], ['large', 640], ['display', 1280]]) {
       const meta = await sharp(readFileSync(join(root, 'public', first[source][key]))).metadata()

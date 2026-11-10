@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Place } from '../types'
 import PlaceImage from './PlaceImage.vue'
+import PlaceChangeNotice from './PlaceChangeNotice.vue'
 import SearchMatch from './SearchMatch.vue'
 import TripPlanButton from './TripPlanButton.vue'
 import type { PlaceSearchMatch } from '../utils/search'
@@ -13,6 +14,7 @@ defineProps<{ place: Place; rank?: number; badge: string; color: string; href: s
       <div class="photo-caption"><span>{{ place.name }}</span><small>{{ place.city }}<span v-if="rank" class="rank-number"> · #{{ rank }}</span><span v-if="badge"> · {{ badge }}</span></small></div>
       <p v-if="comfortable && place.summary" :id="`card-summary-${place.id}`" class="card-summary">{{ place.summary }}</p>
     </a>
+    <a v-if="place.changeNotice" :href="href" class="card-change-link" :aria-label="`${place.name}：${place.changeNotice.title}，查看详情`"><PlaceChangeNotice :notice="place.changeNotice" :compact="!comfortable" /></a>
     <a v-if="match" :href="href" class="card-search-link" :aria-label="`${place.name}的搜索匹配说明，查看详情`"><SearchMatch :match="match" /></a>
     <TripPlanButton :place-id="place.id" :name="place.name" icon-only class="card-trip-add" />
   </article>
@@ -21,12 +23,10 @@ defineProps<{ place: Place; rank?: number; badge: string; color: string; href: s
 <style scoped>
 .photo-card .card-link { height: auto; }
 .photo-card { position: relative; }
+.card-change-link { display: block; text-decoration: none; }
+.card-change-link:focus-visible { outline: 3px solid var(--ui-accent); outline-offset: 3px; }
 .card-summary { margin: 0; padding: 12px; background: var(--ui-surface, #fffdfa); color: var(--ui-ink, #292830); font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
-@media (hover: none) { .card-summary { padding: 0 10px 12px; } }
-@media (hover: hover) {
-  .card-summary { position: absolute; z-index: 2; inset: 4px 4px auto; max-height: calc(100% - 8px); overflow-y: auto; border: 1px solid var(--ui-border, #e5c5cc); border-radius: var(--ui-radius-control, 8px); opacity: 0; visibility: hidden; }
-  .card-link:hover .card-summary, .card-link:focus-visible .card-summary { opacity: 1; visibility: visible; }
-}
+.card-summary { padding: 0 10px 12px; }
 .photo-card > .card-trip-add.trip-plan-add { position: absolute; top: 4px; right: 4px; z-index: 3; }
 @media (max-width: 580px) { .photo-card > .card-trip-add.trip-plan-add { top: 0; right: 0; } }
 .card-search-link { display: block; margin-top: 8px; padding: 10px; border: 1px solid #e5c5cc; border-radius: 4px; background: #fffdfa; }

@@ -18,6 +18,8 @@ for(const event of source) {
  const record=data.find(e=>e.id===event.id),files=activityFiles(event.folder)
  assert.equal(record.topic,event.topic);assert.equal(record.category,event.category);assert.equal(record.date,event.date);assert.equal(record.dateLabel,event.date||event.dateLabel)
  assert.equal(record.bvid,event.bvid)
+ assert.ok(record.cover,'活动必须有预览封面：'+event.name)
+ assert.ok(existsSync(new URL('../_site/'+record.cover,import.meta.url)))
  assert.equal(record.photos,files.filter(f=>!['.mp4','.mov'].includes(extname(f).toLowerCase())).length)
  assert.equal(record.videos,files.filter(f=>['.mp4','.mov'].includes(extname(f).toLowerCase())).length)
  assert.deepEqual(record.media.map(m=>m.file),files)

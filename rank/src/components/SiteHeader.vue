@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import BrandEmblem from './BrandEmblem.vue'
 import FallingPlaceTags from './FallingPlaceTags.vue'
+import ThemeSwitch from './ThemeSwitch.vue'
 
 const props = defineProps<{ active: 'board' | 'guide' | 'qa' | 'updates' | 'route'; boardUrl?: string; guideUrl?: string }>()
 const base = import.meta.env.BASE_URL
@@ -25,6 +26,7 @@ const homeHref = `${base}../`
         </div>
       </nav>
     </div>
+    <div class="theme-toolbar"><ThemeSwitch /></div>
   </header>
   <FallingPlaceTags />
 </template>

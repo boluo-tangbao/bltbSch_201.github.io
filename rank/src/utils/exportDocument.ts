@@ -1,3 +1,4 @@
+import { themePalettes, type Theme } from './themePalette'
 import type { Place, Site, Update } from '../types'
 import { displayUrl, playbackUrl } from './assets'
 import { baiduMapUrl, cityColor, hasCoordinates, placeAddress } from './cities'
@@ -29,7 +30,7 @@ async function embeddedImage(path: string, signal?: AbortSignal) {
     reader.readAsDataURL(blob)
   })
 }
-export async function exportDocument(site: Site, places: Place[], allPlaces: Place[], updates: Update[], scope: string, updatedAt: string | null, options: ExportTask & { includeGallery?: boolean } = {}) {
+export async function exportDocument(site: Site, places: Place[], allPlaces: Place[], updates: Update[], scope: string, updatedAt: string | null, options: ExportTask & { includeGallery?: boolean; theme?: Theme } = {}) {
   const imagePaths = documentImagePaths(places, options.includeGallery ?? true)
   const images = new Map<string, string>()
   options.signal?.throwIfAborted()
@@ -41,6 +42,7 @@ export async function exportDocument(site: Site, places: Place[], allPlaces: Pla
   }
   options.onProgress?.({ stage: '整理图文', completed: 0, total: places.length })
   await exportCheckpoint(options)
+  const palette = themePalettes[options.theme ?? 'day']
   const e = escapeHtml
   const website = new URL(import.meta.env.BASE_URL, location.origin).href
   const richText = richTextHtml
@@ -66,7 +68,7 @@ export async function exportDocument(site: Site, places: Place[], allPlaces: Pla
     const names = items.map(item => `${e(placeById.get(item.placeId)!.name)}${update.type === 'tier-change' ? `（${e(tierLabel(item.fromTier!))} → ${e(tierLabel(item.toTier!))}）` : ''}`).join('、')
     return `<li>${e(update.date)} · ${e(updateLabel(update))} · ${names}<p class="prose">${e(update.note)}</p></li>`
   }).filter(Boolean).join('')
-  const html = `<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(site.title)} · 完整内容</title><style>body{font:16px/1.8 "Microsoft YaHei",sans-serif;max-width:980px;margin:40px auto;padding:0 20px;color:#303c2b;background:#f8f7f3;overflow-wrap:anywhere}h1{font-size:32px}h2{padding:10px 18px;border-radius:5px}h3{font-size:24px;margin:10px 0}h4{margin:20px 0 5px}article{border:4px solid;padding:24px;background:white;margin:20px 0;border-radius:8px}img,video{display:block;max-width:100%;max-height:600px;object-fit:contain}figure{margin:24px 0}figcaption{font-size:14px;color:#76836a}.prose{white-space:pre-wrap}.prose strong{font-weight:800;color:#415f32}a{color:#4e7138}.legend{display:flex;gap:15px;flex-wrap:wrap}.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:7px}blockquote{border-left:3px solid #cad4be;padding-left:18px;margin-left:0}@media print{body{background:white;margin:0;max-width:none}h2,h3,h4{break-after:avoid}img{max-height:400px}a{color:inherit}article{border-width:2px}}${richTextStyles}</style></head><body><header><p>完整内容存档 · ${e(scope)}</p><h1>${e(site.title)}</h1><p>${e(site.author)} · 内容更新：${e(updatedAt || '暂无内容更新')}</p><p>${e(site.description)}</p><div class="legend">${legend || '尚未收录城市'}</div><p>所选图片已包含在文件中，可离线阅读。视频与导航需要联网。</p><p><a href="${website}">访问最新榜单</a></p></header>${content.join('')}<section><h2>评价标准</h2><p>${e(site.criteria)}</p><p>${site.rankWithinTier ? '同档分先后；筛选后保留原档内排名。' : '同档不分先后。'}</p><ul>${tiers.map(t => `<li>${t.label}：${e(site.tierDescriptions[t.id])}</li>`).join('')}</ul></section><section><h2>更新记录</h2>${history ? `<ul>${history}</ul>` : '<p>暂无更新记录</p>'}</section></body></html>`
+  const html = `<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(site.title)} · 完整内容</title><style>body{font:16px/1.8 "Microsoft YaHei",sans-serif;max-width:980px;margin:40px auto;padding:0 20px;color:#303c2b;background:#f8f7f3;overflow-wrap:anywhere}h1{font-size:32px}h2{padding:10px 18px;border-radius:5px}h3{font-size:24px;margin:10px 0}h4{margin:20px 0 5px}article{border:4px solid;padding:24px;background:white;margin:20px 0;border-radius:8px}img,video{display:block;max-width:100%;max-height:600px;object-fit:contain}figure{margin:24px 0}figcaption{font-size:14px;color:#76836a}.prose{white-space:pre-wrap}.prose strong{font-weight:800;color:#415f32}a{color:#4e7138}.legend{display:flex;gap:15px;flex-wrap:wrap}.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:7px}blockquote{border-left:3px solid #cad4be;padding-left:18px;margin-left:0}@media print{body{background:white;margin:0;max-width:none}h2,h3,h4{break-after:avoid}img{max-height:400px}a{color:inherit}article{border-width:2px}}${richTextStyles}body{color:${palette.text};background:${palette.paper}}article{background:${palette.surface}}header{border-bottom:5px solid ${palette.accent};padding-bottom:24px}h1,a,.prose strong{color:${palette.accentText}}h2{background:${palette.header};color:${palette.headerText}}h2[style]{color:#171b1c}figcaption{color:${palette.muted}}</style></head><body><header><p>完整内容存档 · ${e(scope)}</p><h1>${e(site.title)}</h1><p>${e(site.author)} · 内容更新：${e(updatedAt || '暂无内容更新')}</p><p>${e(site.description)}</p><div class="legend">${legend || '尚未收录城市'}</div><p>所选图片已包含在文件中，可离线阅读。视频与导航需要联网。</p><p><a href="${website}">访问最新榜单</a></p></header>${content.join('')}<section><h2>评价标准</h2><p>${e(site.criteria)}</p><p>${site.rankWithinTier ? '同档分先后；筛选后保留原档内排名。' : '同档不分先后。'}</p><ul>${tiers.map(t => `<li>${t.label}：${e(site.tierDescriptions[t.id])}</li>`).join('')}</ul></section><section><h2>更新记录</h2>${history ? `<ul>${history}</ul>` : '<p>暂无更新记录</p>'}</section></body></html>`
   await exportCheckpoint(options)
   options.onProgress?.({ stage: '打包文件', completed: 0, total: 0 })
   await exportCheckpoint(options)

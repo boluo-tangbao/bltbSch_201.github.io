@@ -27,9 +27,14 @@ const site = siteData as Site
 const colors = site.cityColors || {}
 const showLabels = ref(true)
 type BoardView = 'compact' | 'comfortable'
+const tierActions: Record<string, string> = { hang: '值得专程去', top: '很值得一逛', above: '带着目的去', npc: '顺路可以逛', bad: '不太推荐' }
 const boardViewKey = 'tangbao-rank-view-v1'
 function savedBoardView(): BoardView {
-  try { return localStorage.getItem(boardViewKey) === 'comfortable' ? 'comfortable' : 'compact' } catch { return 'compact' }
+  try {
+    const saved = localStorage.getItem(boardViewKey)
+    if (saved === 'compact' || saved === 'comfortable') return saved
+  } catch {}
+  return new URLSearchParams(location.search).get('city')?.trim() ? 'comfortable' : 'compact'
 }
 const boardView = ref<BoardView>(savedBoardView())
 watch(boardView, value => { try { localStorage.setItem(boardViewKey, value) } catch {} })
@@ -137,13 +142,13 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
               <label v-if="boardView === 'compact'"><input v-model="showLabels" type="checkbox" />显示名称与城市</label>
               <ShareFilters :city="city" :tag="tag" :query="query" />
               <button type="button" class="button mobile-export" @click="exportOpen = true">导出榜单</button>
-              <span class="board-view-hint">点击卡片查看详情<span v-if="boardView === 'compact'" class="compact-hover-hint"> · 悬停隐藏店名</span><span v-else> · 图片下方显示店名与城市<span class="compact-hover-hint"> · 悬停查看短评</span></span></span>
+              <span class="board-view-hint">点击卡片查看详情<span v-if="boardView === 'compact'" class="compact-hover-hint"> · 悬停隐藏店名</span><span v-else> · 图片下方显示店名、城市与短评</span></span>
             </div>
           </div>
         </div>
         <div v-if="!all.length && !hasFilters" class="empty-intro"><span class="empty-icon" aria-hidden="true">＋</span><div><strong>规划中，还在路上待访问</strong><p>等亲自来，再写~</p></div><span class="empty-pill">待填充</span></div>
         <div v-if="hasFilters && !filtered.length" class="no-results" role="status"><strong>没有找到匹配的条目</strong><span>试试其他关键词、城市或标签。</span><button class="text-button" @click="reset">重置筛选 ↗</button></div>
-        <div v-if="boardSections.length" class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels, 'comfortable-view': boardView === 'comfortable' }"><section v-for="tier in boardSections" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ tier.index + 1 }}</span><h3 :id="`tier-${tier.id}`"><a class="tier-meaning-link" :aria-label="`${tier.label}：查看档位说明`" :href="`#tier-meaning-${tier.id}`" :aria-describedby="`tier-hint-${tier.id}`" @click.prevent="showTierMeaning(tier.id)">{{ tier.label }}<span class="tier-help-mark" aria-hidden="true">?</span><span :id="`tier-hint-${tier.id}`" class="tier-hint" role="tooltip">{{ site.tierDescriptions[tier.id] }}<small>点击查看完整排序说明 ↓</small></span></a></h3><span class="tier-count">{{ tier.places.length }} 处地点</span></div><div class="tier-content"><div v-if="!tier.places.length" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in tier.places" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="`${guideUrl}${placeDetailHash(p.id, query)}`" :rank="site.rankWithinTier ? rankOf(p) : undefined" :priority="p.id === firstPhotoId" :comfortable="boardView === 'comfortable'" :badge="recentBadge(p.id, updates, site.recentDays)" :match="searchMatches.get(p.id)" /></div></div></section></div>
+        <div v-if="boardSections.length" class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels, 'comfortable-view': boardView === 'comfortable' }"><section v-for="tier in boardSections" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ tier.index + 1 }}</span><h3 :id="`tier-${tier.id}`"><a class="tier-meaning-link" :aria-label="`${tier.label}：查看档位说明`" :href="`#tier-meaning-${tier.id}`" :aria-describedby="`tier-hint-${tier.id}`" @click.prevent="showTierMeaning(tier.id)">{{ tier.label }}<span class="tier-help-mark" aria-hidden="true">?</span><span :id="`tier-hint-${tier.id}`" class="tier-hint" role="tooltip">{{ site.tierDescriptions[tier.id] }}<small>点击查看完整排序说明 ↓</small></span></a></h3><span class="tier-action">{{ tierActions[tier.id] }}</span><span class="tier-count">{{ tier.places.length }} 处地点</span></div><div class="tier-content"><div v-if="!tier.places.length" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in tier.places" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="`${guideUrl}${placeDetailHash(p.id, query)}`" :rank="site.rankWithinTier ? rankOf(p) : undefined" :priority="p.id === firstPhotoId" :comfortable="boardView === 'comfortable'" :badge="recentBadge(p.id, updates, site.recentDays)" :match="searchMatches.get(p.id)" /></div></div></section></div>
         <p v-if="boardSections.length" class="board-caption"><span>推荐度从上到下递减</span><span>{{ site.rankWithinTier ? '同档分先后 · 从左到右，从上到下' : '同档不分先后' }}</span></p>
       </section>
 
@@ -163,3 +168,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
   <footer class="site-footer"><span><b>{{ site.author }}</b> · 一站一更新，纯主观感受，你们永远对。 <a :href="citiesUrl">城市逛店指南 ↗</a></span><VisitCounter /></footer>
   <ExportPanel v-if="exportOpen" :site="site" :places="filtered" :all-places="all" :scope="scope" :updated-at="contentDate" @close="exportOpen = false" />
 </template>
+
+<style scoped>
+.photo-board .tier-action { display: block; font-size: 12px; line-height: 1.5; font-weight: 500; margin: 6px 0; }
+</style>

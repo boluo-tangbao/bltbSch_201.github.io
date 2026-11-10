@@ -2,7 +2,7 @@
 import { nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import type { Place } from '../types'
 import { baiduMapConfigured, escapeMapHtml, loadBaiduMaps, pointForPlace } from '../utils/baiduMaps'
-import { assetUrl } from '../utils/assets'
+import { displayUrl } from '../utils/assets'
 import { placeAddress } from '../utils/cities'
 import AddressActions from './AddressActions.vue'
 
@@ -53,7 +53,7 @@ onBeforeUnmount(() => { revision++; map?.destroy?.() })
     <div v-show="!failed" ref="container" class="address-map-canvas" :aria-label="`${place.name} 的百度地图`"></div>
     <div v-if="failed" class="address-map-fallback">
       <p role="status">{{ status }}<button v-if="baiduMapConfigured()" class="text-button" @click="render">重试</button></p>
-      <figure v-if="place.mapSnapshot"><img :src="assetUrl(place.mapSnapshot.src)" :alt="place.mapSnapshot.alt" /><figcaption>{{ place.mapSnapshot.updatedAt }} · 500m 备份图</figcaption></figure>
+      <figure v-if="place.mapSnapshot"><img :src="displayUrl(place.mapSnapshot.src)" :alt="place.mapSnapshot.alt" loading="lazy" decoding="async" /><figcaption>{{ place.mapSnapshot.updatedAt }} · 500m 备份图</figcaption></figure>
       <p class="fallback-address">{{ placeAddress(place) }}</p>
       <AddressActions :place="place" />
     </div>
