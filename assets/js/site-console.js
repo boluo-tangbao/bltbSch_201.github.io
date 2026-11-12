@@ -16,7 +16,7 @@
   const persist = () => { try { localStorage.setItem(storageKey, JSON.stringify(state)); } catch { /* Playback works without storage. */ } };
   const stylesheet = document.createElement('link');
   stylesheet.rel = 'stylesheet';
-  stylesheet.href = new URL('assets/css/site-console.css?v=6', root).href;
+  stylesheet.href = new URL('assets/css/site-console.css?v=8', root).href;
   document.head.append(stylesheet);
   const host = document.createElement('aside');
   host.id = 'site-console';

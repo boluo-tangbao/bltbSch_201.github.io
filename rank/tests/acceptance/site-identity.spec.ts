@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 import { mkdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 
-test('统一入口可往返，手机控制台随页头滚动且不覆盖榜单操作', async ({ page, baseURL }, info) => {
+test('统一入口可往返，手机控制台滚动后仍可见并避开行程栏', async ({ page, baseURL }, info) => {
   const origin = new URL(baseURL!).origin
   await page.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort())
   const narrow = page.viewportSize()!.width <= 900
@@ -36,9 +36,27 @@ test('统一入口可往返，手机控制台随页头滚动且不覆盖榜单�
     await viewButtons.getByRole('button', { name: '舒适', exact: true }).click()
     const box = await viewButtons.boundingBox()
     const triggerBox = await launcher.boundingBox()
-    expect(box!.y).toBeGreaterThanOrEqual(triggerBox!.y + triggerBox!.height)
+    expect(triggerBox!.y).toBeGreaterThanOrEqual(box!.y + box!.height)
+    const tripBar = await page.locator('.trip-plan-entry, .trip-plan-dock').boundingBox()
+    expect(triggerBox!.y + triggerBox!.height).toBeLessThanOrEqual(tripBar!.y)
     await page.mouse.wheel(0, 600)
-    await expect.poll(async () => (await launcher.boundingBox())!.y + triggerBox!.height).toBeLessThanOrEqual(0)
+    await expect.poll(() => page.evaluate(() => scrollY)).toBeGreaterThan(200)
+    await expect(launcher).toBeInViewport()
+    expect(Math.abs((await launcher.boundingBox())!.y - triggerBox!.y)).toBeLessThan(1)
+    await page.mouse.move(0, 0)
+    await expect(launcher).toHaveCSS('opacity', '0.74')
+    const idleColor = await launcher.evaluate(el => getComputedStyle(el).color)
+    if (info.project.name === 'mobile') await launcher.screenshot({ path: resolve(evidence, 'console-idle-390.png') })
+    await launcher.hover()
+    await expect(launcher).toHaveCSS('opacity', '1')
+    expect(await launcher.evaluate(el => getComputedStyle(el).color)).not.toBe(idleColor)
+    await expect(page.locator('.sc-panel')).toBeHidden()
+    if (info.project.name === 'mobile') await launcher.screenshot({ path: resolve(evidence, 'console-lit-390.png') })
+    await launcher.click()
+    await expect(page.locator('.sc-panel')).toBeVisible()
+    await page.getByRole('button', { name: '关闭控制台', exact: true }).click()
+    await expect(page.locator('.sc-panel')).toBeHidden()
+    if (info.project.name === 'mobile') await page.screenshot({ path: resolve(evidence, 'console-follow-scroll-390.png') })
     await page.getByRole('button', { name: /^商圈对比/ }).click()
     await expect(page.getByRole('dialog', { name: '商圈对比', exact: true })).toBeVisible()
     await page.keyboard.press('Escape')
