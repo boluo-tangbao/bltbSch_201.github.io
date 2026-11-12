@@ -1,0 +1,22 @@
+/* Shared identity and controls; each section keeps its own accent palette. */
+.logo strong { display: block; font-size: 18px; line-height: 1.4; letter-spacing: .03em; }
+.logo small, .discovery-brand small { display: block; margin-top: 4px; font-size: 11px; line-height: 1.5; font-weight: 500; letter-spacing: .02em; }
+.navbar .logo { flex: none; }
+.navbar .nav-links { align-items: center; flex-wrap: wrap; }
+.navbar .nav-links a { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; }
+.navbar .nav-links a[aria-current="page"] { font-weight: 700; text-decoration: underline; text-underline-offset: 5px; }
+.navbar :focus-visible, .btn:focus-visible { outline: 3px solid var(--aqua-deep, #a83750); outline-offset: 3px; }
+body .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; border-radius: 8px; font-size: 13px; box-shadow: none; }
+body .btn:hover { transform: none; }
+.site-nav { flex-wrap: wrap; }
+.site-nav nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; }
+.site-nav .discovery-brand { flex-direction: column; align-items: flex-start; justify-content: center; line-height: 1.4; }
+@media (max-width: 900px) {
+  .navbar .nav-links { gap: 0 4px; }
+  .navbar .nav-links a { padding: 8px; }
+  .theme-toolbar { align-items: center; flex-wrap: wrap; gap: 8px; }
+}
+@media (max-width: 680px) {
+  .navbar .logo strong { font-size: 18px; }
+  .navbar .nav-links a { font-size: 12px; }
+}

@@ -16,14 +16,14 @@
   const persist = () => { try { localStorage.setItem(storageKey, JSON.stringify(state)); } catch { /* Playback works without storage. */ } };
   const stylesheet = document.createElement('link');
   stylesheet.rel = 'stylesheet';
-  stylesheet.href = new URL('assets/css/site-console.css?v=4', root).href;
+  stylesheet.href = new URL('assets/css/site-console.css?v=5', root).href;
   document.head.append(stylesheet);
   const host = document.createElement('aside');
   host.id = 'site-console';
   host.setAttribute('aria-label', '网站控制台');
   host.innerHTML = `
     <section class="sc-panel" id="sc-panel" role="dialog" aria-labelledby="sc-heading" aria-hidden="true" inert>
-      <div class="sc-heading"><h2 id="sc-heading">随身控制台</h2></div>
+      <div class="sc-heading"><h2 id="sc-heading">随身控制台</h2><button type="button" class="sc-close" aria-label="关闭控制台">关闭</button></div>
       <nav class="sc-destinations" aria-label="精选入口">
         <a class="sc-destination sc-home" data-home aria-label="个人主页"><span class="sc-destination-label"><strong>个人主页</strong><span aria-hidden="true">↗</span></span><span class="sc-destination-note">生活里的小小收藏</span></a>
         <a class="sc-destination sc-board" data-board aria-label="逛店榜单"><span class="sc-destination-label"><strong>逛店榜单</strong><span aria-hidden="true">↗</span></span><span class="sc-destination-note">下一站，去哪里？</span></a>
@@ -46,6 +46,22 @@
   const $ = selector => host.querySelector(selector);
   const panel = $('.sc-panel'), launcher = $('.sc-launcher');
   const hoverAvailable = matchMedia('(any-hover: hover)');
+  const inlineLayout = matchMedia('(max-width: 900px)');
+  const findInlineTarget = () => document.querySelector('.theme-toolbar, .navbar .nav-links, .site-nav nav');
+  function placeLauncher() {
+    const inlineTarget = findInlineTarget();
+    if (inlineLayout.matches && inlineTarget) inlineTarget.append(launcher);
+    else host.append(launcher);
+  }
+  placeLauncher();
+  // The shared script can finish before the rank app mounts its header.
+  if (!findInlineTarget()) {
+    const headerObserver = new MutationObserver(() => {
+      if (findInlineTarget()) { placeLauncher(); headerObserver.disconnect(); }
+    });
+    headerObserver.observe(document.body, { childList: true, subtree: true });
+  }
+  inlineLayout.addEventListener('change', () => { close(false); placeLauncher(); });
   let closeTimer;
   function open(focusContent = false) {
     clearTimeout(closeTimer);
@@ -66,24 +82,25 @@
     launcher.setAttribute('aria-label', '展开控制台');
   }
   host.addEventListener('pointerenter', event => {
-    if (event.pointerType === 'mouse' && hoverAvailable.matches) open();
+    if (!inlineLayout.matches && event.pointerType === 'mouse' && hoverAvailable.matches) open();
   });
   host.addEventListener('pointerleave', event => {
-    if (event.pointerType !== 'mouse' || !hoverAvailable.matches) return;
+    if (inlineLayout.matches || event.pointerType !== 'mouse' || !hoverAvailable.matches) return;
     clearTimeout(closeTimer);
     // Bridge the moving tab and panel while the drawer slides under the pointer.
     closeTimer = setTimeout(() => close(false), 140);
   });
   launcher.addEventListener('click', event => {
-    if (event.pointerType === 'mouse' && hoverAvailable.matches && event.detail > 0) return open();
+    if (!inlineLayout.matches && event.pointerType === 'mouse' && hoverAvailable.matches && event.detail > 0) return open();
     if (host.classList.contains('sc-open')) return close();
-    open(event.detail === 0);
+    open(inlineLayout.matches || event.detail === 0);
   });
+  $('.sc-close').addEventListener('click', () => close());
   host.addEventListener('focusout', event => {
-    if (event.relatedTarget && !host.contains(event.relatedTarget)) close(false);
+    if (event.relatedTarget && !host.contains(event.relatedTarget) && event.relatedTarget !== launcher) close(false);
   });
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && host.classList.contains('sc-open')) { event.preventDefault(); close(); } });
-  document.addEventListener('click', event => { if (!host.contains(event.target) && host.classList.contains('sc-open')) close(false); });
+  document.addEventListener('click', event => { if (!host.contains(event.target) && !launcher.contains(event.target) && host.classList.contains('sc-open')) close(false); });
   for (const [key, path] of Object.entries({ home: './', board: 'rank/' })) $(`[data-${key}]`).href = new URL(path, root).href;
   function applyPreferences() {
     document.documentElement.dataset.siteEffects = state.effects ? 'on' : 'off';

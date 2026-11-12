@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test'
 
 test('控制台悬停展开，侧签与面板之间移动不收起，离开后收起', async ({ page }) => {
+  test.skip(page.viewportSize()!.width <= 900, '窄屏使用页头按钮，悬停不再打开控制台')
   await page.goto('./')
   const tab = page.locator('.sc-launcher')
   const panel = page.locator('.sc-panel')
@@ -51,7 +52,8 @@ test('触屏点击侧签展开和收起', async ({ browser, baseURL }, testInfo)
     await tab.tap()
     await expect(tab).toHaveAttribute('aria-expanded', 'true')
     await expect(page.locator('.sc-panel')).toBeVisible()
-    await tab.tap()
+    if (page.viewportSize()!.width <= 900) await page.getByRole('button', { name: '关闭控制台', exact: true }).tap()
+    else await tab.tap()
     await expect(tab).toHaveAttribute('aria-expanded', 'false')
     await expect(page.locator('.sc-panel')).toBeHidden()
   } finally {

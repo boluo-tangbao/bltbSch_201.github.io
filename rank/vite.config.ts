@@ -78,7 +78,7 @@ const siteConsole = {
   transformIndexHtml: {
     order: 'post' as const,
     handler() {
-      return [{ tag: 'script', attrs: { src: `${homeBase}assets/js/site-console.js?v=6`, defer: true }, injectTo: 'body' as const }]
+      return [{ tag: 'script', attrs: { src: `${homeBase}assets/js/site-console.js?v=7`, defer: true }, injectTo: 'body' as const }]
     },
   },
 }
