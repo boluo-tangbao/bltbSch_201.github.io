@@ -10,6 +10,8 @@
   --accent: #d5f34a; --line: var(--edition-line); --muted: var(--edition-muted);
   --ui-ink: #e4eadb; --ui-muted: var(--edition-muted); --ui-paper: var(--edition-paper); --ui-surface: var(--edition-surface); --ui-accent: #d5f34a; --ui-accent-soft: var(--edition-soft); --ui-border: var(--edition-line);
   --ui-success-bg: #263e31; --ui-success: #b1e2be; --ui-pending-bg: #293b49; --ui-pending: #b5d7f1; --ui-closed-bg: #442b36; --ui-closed: #f0becd;
+  --ui-table-heading: var(--edition-header);
+  --nearby-frame-bg: var(--edition-paper);
   background: var(--edition-paper); color: var(--edition-text);
 }
 :root[data-theme="night"] body { color: var(--edition-text); background: radial-gradient(circle, #b2ce8c13 .8px, transparent 1px) 0 0 / 12px 12px, var(--edition-paper); }
@@ -41,6 +43,8 @@
 :root[data-theme="night"] :is(.suggestion-form input,.suggestion-form textarea,.suggestion-form select,.search-filter input,.city-filter select,.tag-filter button,.city-legend button,.board-view-controls button,.share-filters button,.directory-filters input) { background: var(--edition-paper); color: #e4eadb; border-color: var(--edition-line); }
 :root[data-theme="night"] input::placeholder,:root[data-theme="night"] textarea::placeholder { color: #a5b299; }
 :root[data-theme="night"] .button { background: var(--edition-surface); color: var(--edition-text); border-color: var(--edition-line); }
+:root[data-theme="night"] :is(.button:not(.dark),.guide-hero .button:not(.dark),.skip-link) { background: var(--edition-surface); color: var(--edition-text); border-color: var(--edition-line); }
+:root[data-theme="night"] :is(.button:not(.dark),.guide-hero .button:not(.dark)):hover { background: var(--edition-soft); color: var(--edition-text); border-color: var(--edition-accent); }
 :root[data-theme="night"] .button.dark { background: #d5f34a; color: #171b1c; border-color: #d5f34a; }
 :root[data-theme="night"] .button:hover { background: var(--edition-soft); }
 :root[data-theme="night"] .button.dark:hover { background: #e1ff70; }
@@ -51,6 +55,47 @@
 :root[data-theme="night"] :is(.shop-directory,.shop-card,.shop-directory-card,.shop-item,.route-panel,.trip-panel,.route-stop,.updates-archive) { background: var(--edition-surface); color: var(--edition-text); border-color: var(--edition-line); }
 :root[data-theme="night"] :is(.shop-description,.shop-facts dd,.shop-directory-intro) { color: var(--edition-muted); }
 :root[data-theme="night"] :is(.shop-directory-notice,.shop-expand,.shop-accounts a:hover) { background: var(--edition-soft); color: var(--edition-text); border-color: var(--edition-line); }
+
+/* Nested surfaces also need a palette: changing only their parent leaves Day panels behind. */
+:root[data-theme="night"] :is(.atlas-heading,.guide-detail .detail-heading) { background: linear-gradient(117deg, var(--edition-surface) 0 72%, var(--edition-soft) 72.2%); color: var(--edition-text); }
+:root[data-theme="night"] :is(.directory-heading,.mobile-guide-switch,.detail-destination,.detail-visit-notes,.feedback-context,.map-status,.map-notice,.community-error,.feedback-status,.video-pending) { background: var(--edition-soft); color: var(--edition-text); border-color: var(--edition-line); }
+:root[data-theme="night"] :is(.directory-city-group summary,.place-directory .directory-place,.city-map-tabs,.city-place-list,.atlas-map .map-welcome,.place-map,.place-address-map,.trip-map,.place-gallery-item,.place-gallery-image-preview,.quiet-empty,.hero .byline,.tier-board) { background: var(--edition-paper); color: var(--edition-text); border-color: var(--edition-line); }
+:root[data-theme="night"] :is(.place-gallery,.place-mini-map,.detail-side-nav,.detail-date-grid > div,.detail-visit-list li,.nearby-visit,.nearby-visit-frame,.nearby-dialog,.trip-plan-dialog,.trip-plan-dock,.catalog-grid article,.video-excerpt,.card-search-link,.tier-hint,.mascot-bio,.mascot-angle) { background: var(--edition-surface); color: var(--edition-text); border-color: var(--edition-line); }
+:root[data-theme="night"] :is(.place-gallery-nav button,.place-address-map > a,.map-snapshot-fallback img + span,.map-missing-address button,.address-actions a,.copy-button,.copy-fallback input,.copy-fallback textarea,.clip-actions,.nearby-dialog-close,.trip-plan-close,.trip-plan-order button) { background: var(--edition-paper); color: var(--edition-accent); border-color: var(--edition-line); }
+:root[data-theme="night"] :is(.place-gallery-nav small,.city-map-tabs small,.detail-visit-icon,.shop-status:not(.is-open,.is-evidence,.is-closed),.trip-journey .tag) { background: var(--edition-soft); color: var(--edition-text); }
+:root[data-theme="night"] :is(.atlas-heading > div > p:last-child,.atlas-count span,.directory-city-count,.directory-heading > span,.detail-kicker,.detail-facts,.detail-facts small,.detail-date-grid dt,.detail-date-grid small,.detail-date-note,.detail-content-date,.detail-review-deck,.detail-review-meta,.place-gallery-intro,.place-gallery-source,.map-caption,.map-missing-address,.map-address-fallback li > p,.nearby-visit p,.nearby-visit .nearby-visit-hint,.faq details p,.feedback-list li small,.form-count,.trip-plan-dock small,.trip-journey .muted,.selected-shops small,.journey-dialog small) { color: var(--edition-muted); }
+:root[data-theme="night"] :is(.detail-prose p,.detail-visit-list p,.detail-destination p:last-child,.guide-empty-detail p,.city-place-list strong,.nearby-visit h4,.nearby-dialog-content p) { color: var(--edition-text); }
+:root[data-theme="night"] :is(.atlas-count strong,.atlas-heading .eyebrow,.section-label,.detail-navigation,.detail-visit-mark,.nearby-visit-links a,.nearby-dialog-kicker,.feedback-context > strong,.feedback-context > a,.trip-journey a,.trip-journey .link-button,.journey-status,.journey-warning,.update-more,.update-kind,.compact-hover-hint) { color: var(--edition-accent); }
+:root[data-theme="night"] .detail-prose strong { background: linear-gradient(transparent 68%, var(--edition-soft) 68%); color: var(--edition-accent); }
+:root[data-theme="night"] :is(.update-kind,.update-more) { background: var(--edition-soft); color: var(--edition-accent); border-color: var(--edition-line); }
+:root[data-theme="night"] .guide-detail .detail-heading h1 { text-shadow: 2px 2px 0 var(--edition-soft); }
+:root[data-theme="night"] .guide-hero h1 { color: var(--edition-text); text-shadow: 2px 2px 0 var(--edition-soft); }
+:root[data-theme="night"] .detail-date-grid dd { color: var(--edition-text); }
+:root[data-theme="night"] .side-nav-title { color: var(--edition-muted); }
+:root[data-theme="night"] :is(.trip-plan-period,.trip-plan-links a,.tier-hint small) { color: var(--edition-accent); }
+:root[data-theme="night"] .mascot-bio :is(p,small) { color: var(--edition-muted); }
+:root[data-theme="night"] .copy-button.is-share { background: transparent; color: var(--edition-ink); }
+:root[data-theme="night"] .copy-button.is-share:hover { background: transparent; color: var(--edition-ink); }
+:root[data-theme="night"] .falling-place-tag { background: color-mix(in srgb, var(--tag-color) 22%, var(--edition-paper)); color: var(--edition-text); border-color: color-mix(in srgb, var(--tag-color) 60%, var(--edition-line)); box-shadow: inset 0 1px 0 #ffffff15; }
+:root[data-theme="night"] :is(.directory-place,.directory-city-group summary,.place-gallery-nav button,.copy-button,.address-actions a,.map-missing-address button,.card-search-link,.mascot-angle,.clip-load,.clip-external):hover { background: var(--edition-soft); color: var(--edition-text); }
+:root[data-theme="night"] :is(.suggestion-form input,.suggestion-form select,.suggestion-form textarea):focus { background: var(--edition-paper); color: var(--edition-text); }
+:root[data-theme="night"] .trip-journey select:disabled { background: var(--edition-soft); }
+:root[data-theme="night"] :is(.visit-notices-acknowledge,.trip-archive button.primary,.trip-current-add,.trip-plan-entry .trip-plan-launcher,.trip-journey .primary) { background: var(--edition-accent); color: var(--edition-ink); border-color: var(--edition-accent); }
+:root[data-theme="night"] .journey-stops > li.is-active { box-shadow: inset 3px 0 var(--edition-accent); }
+:root[data-theme="night"] .is-active .stop-selector > span { background: var(--edition-accent); color: var(--edition-ink); }
+:root[data-theme="night"] :is(.detail-side-nav,.detail-visit-notes,.trip-plan-dock,.place-gallery-item,.community-panel,.place-directory) { box-shadow: 4px 4px 0 var(--edition-header); }
+
+/* The shared console is outside the Vue app, but follows the visitor's theme too. */
+:root[data-theme="night"] #site-console { color: var(--edition-text); }
+:root[data-theme="night"] #site-console :is(.sc-panel,.sc-home,.sc-board,.sc-launcher) { background: linear-gradient(155deg, var(--edition-surface), var(--edition-paper)); color: var(--edition-text); border-color: var(--edition-line); box-shadow: none; }
+:root[data-theme="night"] #site-console :is(button,.sc-playlist button) { background: var(--edition-paper); color: var(--edition-text); border-color: var(--edition-line); }
+:root[data-theme="night"] #site-console :is(h2,h3,.sc-title) { color: var(--edition-text); }
+:root[data-theme="night"] #site-console :is(.sc-muted,.sc-status,summary) { color: var(--edition-muted); }
+:root[data-theme="night"] #site-console :is(button:hover,.sc-playlist button[aria-current="true"],.sc-play) { background: var(--edition-soft); color: var(--edition-accent); border-color: var(--edition-accent); }
+:root[data-theme="night"] #site-console :is(.sc-section,.sc-section button) { border-color: var(--edition-line); }
+:root[data-theme="night"] #site-console .sc-disc { box-shadow: 0 0 0 6px var(--edition-soft); }
+:root[data-theme="night"] #site-console .sc-disc span { background: var(--edition-accent); color: var(--edition-ink); }
+:root[data-theme="night"] #site-console input { accent-color: var(--edition-accent); }
 
 /* Keep selected controls distinct from the neutral and hover surfaces. */
 :root[data-theme="night"] :is(.guide-view-switch button,.city-map-tabs button,.city-place-list button,.detail-chapters button,.detail-side-nav button,.compare-candidates button,.trip-plan-add) { background: var(--edition-paper); color: var(--edition-text); border-color: var(--edition-line); }

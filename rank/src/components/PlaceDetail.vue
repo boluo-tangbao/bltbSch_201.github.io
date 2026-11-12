@@ -262,21 +262,21 @@ onBeforeUnmount(() => {
 .nearby-visit { min-width: 0; padding: 8px; border: 1px solid #e5c5cc; background: #fffdfa; overflow-wrap: anywhere; }
 .nearby-visit-frame { height: 100%; padding: 18px; border: 1px solid #e5c5cc; }
 .nearby-visit h4 { margin: 14px 0 0; font-size: 16px; line-height: 1.5; }
-.nearby-visit p { margin: 9px 0; color: #695862; font-size: 13px; line-height: 1.7; }
-.nearby-visit .nearby-visit-hint { margin-bottom: 0; color: #8b6374; }
+.nearby-visit p { margin: 9px 0; color: var(--ui-muted, #695862); font-size: 13px; line-height: 1.7; }
+.nearby-visit .nearby-visit-hint { margin-bottom: 0; color: var(--ui-muted, #8b6374); }
 .nearby-visit-links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 14px; }
 .nearby-visit-links a { color: #a83750; font-size: 13px; font-weight: 700; }
 .nearby-visit-brand { display: flex; align-items: center; justify-content: center; width: 100%; height: 100px; padding: 12px; border: 0; background: #1d2739; color: white; cursor: pointer; }
 .nearby-visit-brand:focus-visible { outline: 3px solid #a83750; outline-offset: 3px; }
 .nearby-visit-brand img { max-width: 150px; width: auto; max-height: 100%; object-fit: contain; }
 .nearby-visit--mihoyo { border-color: #77bce1; background: repeating-linear-gradient(135deg, #d8efff 0 8px, #f5fbff 8px 16px); }
-.nearby-visit--mihoyo .nearby-visit-frame { border-color: #a6d9ee; background: radial-gradient(circle at 92% 13%, #c6eaff 0 3px, transparent 4px), #f7fcff; }
+.nearby-visit--mihoyo .nearby-visit-frame { border-color: #a6d9ee; background: var(--nearby-frame-bg, radial-gradient(circle at 92% 13%, #c6eaff 0 3px, transparent 4px), #f7fcff); }
 .nearby-visit--mihoyo .nearby-visit-brand { background: linear-gradient(110deg, #273957, #4889bc); }
 .nearby-visit--hypergryph { border-color: #b3a780; background: repeating-linear-gradient(135deg, #dfc274 0 6px, #2f3540 6px 12px); }
-.nearby-visit--hypergryph .nearby-visit-frame { border-color: #d2c7a8; background: #f8f7f0; }
+.nearby-visit--hypergryph .nearby-visit-frame { border-color: #d2c7a8; background: var(--nearby-frame-bg, #f8f7f0); }
 .nearby-visit--hypergryph .nearby-visit-brand { background: #252a31; }
 .nearby-visit--museum { border-color: #78a6a6; background: repeating-linear-gradient(135deg, #d5eae5 0 8px, #f1f5e8 8px 16px); }
-.nearby-visit--museum .nearby-visit-frame { border-color: #aed0ca; background: #f8fcf8; }
+.nearby-visit--museum .nearby-visit-frame { border-color: #aed0ca; background: var(--nearby-frame-bg, #f8fcf8); }
 .nearby-visit--museum .nearby-visit-brand { padding: 0; background: #243647; }
 .nearby-visit--museum .nearby-visit-brand img { width: 100%; max-width: none; height: 100%; object-fit: cover; }
 .nearby-dialog { width: min(520px, calc(100% - 32px)); max-height: calc(100% - 32px); padding: 0; border: 1px solid #d4b3bd; border-radius: 12px; background: #fffaf5; color: #382e37; box-shadow: 0 20px 70px #24151d55; }

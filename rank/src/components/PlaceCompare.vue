@@ -114,7 +114,7 @@ onBeforeUnmount(close)
 .compare-table { width: 100%; border-collapse: separate; border-spacing: 0; table-layout: fixed; text-align: left; font-size: 13px; line-height: 1.7; }
 .compare-table th, .compare-table td { padding: 14px; border-right: 1px solid var(--ui-border); border-bottom: 1px solid var(--ui-border); overflow-wrap: anywhere; vertical-align: top; }
 .compare-table tr > :last-child { border-right: 0; }.compare-table tbody tr:last-child > * { border-bottom: 0; }
-.compare-table tr > :first-child { position: sticky; left: 0; z-index: 1; width: 110px; background: #fff4ef; font-weight: 500; }
+.compare-table tr > :first-child { position: sticky; left: 0; z-index: 1; width: 110px; background: var(--ui-table-heading, #fff4ef); font-weight: 500; }
 .compare-table thead th:not(:first-child) { background: var(--ui-paper); }
 .compare-cover { height: 110px; margin-bottom: 10px; overflow: hidden; border-radius: 8px; background: var(--ui-accent-soft); }
 .compare-cover :deep(img) { width: 100%; height: 100%; object-fit: cover; }.compare-cover :deep(.image-placeholder) { height: 100%; font-size: 12px; }
