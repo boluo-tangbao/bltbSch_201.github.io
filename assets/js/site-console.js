@@ -16,7 +16,7 @@
   const persist = () => { try { localStorage.setItem(storageKey, JSON.stringify(state)); } catch { /* Playback works without storage. */ } };
   const stylesheet = document.createElement('link');
   stylesheet.rel = 'stylesheet';
-  stylesheet.href = new URL('assets/css/site-console.css?v=5', root).href;
+  stylesheet.href = new URL('assets/css/site-console.css?v=6', root).href;
   document.head.append(stylesheet);
   const host = document.createElement('aside');
   host.id = 'site-console';
@@ -41,7 +41,7 @@
       </section>
       <section class="sc-section" aria-labelledby="sc-effects-heading"><h3 id="sc-effects-heading">浏览偏好</h3><label class="sc-check">点击星光<input type="checkbox" data-effects></label><label class="sc-check">菠萝鼠标<input type="checkbox" data-cursor></label></section>
     </section>
-    <button type="button" class="sc-launcher" aria-label="展开控制台" aria-controls="sc-panel" aria-expanded="false"><span class="sc-tab-title" aria-hidden="true">控制台</span></button>`;
+    <button type="button" class="sc-launcher" aria-label="展开控制台" aria-controls="sc-panel" aria-expanded="false"><svg class="sc-launcher-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M5 3v7m0 5v6M12 3v2m0 5v11M19 3v10m0 5v3"/><circle cx="5" cy="12.5" r="2.5"/><circle cx="12" cy="7.5" r="2.5"/><circle cx="19" cy="15.5" r="2.5"/></svg><span class="sc-tab-title" aria-hidden="true">控制台</span></button>`;
   document.body.append(host);
   const $ = selector => host.querySelector(selector);
   const panel = $('.sc-panel'), launcher = $('.sc-launcher');

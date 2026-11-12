@@ -46,6 +46,7 @@ test('统一入口可往返，手机控制台随页头滚动且不覆盖榜单�
     await launcher.click()
     await page.keyboard.press('Escape')
     await expect(launcher).toBeFocused()
+    await expect(page.locator('.sc-panel')).toBeHidden()
     await fits()
     if (info.project.name === 'mobile') await page.screenshot({ path: resolve(evidence, 'identity-board-390.png') })
     await page.setViewportSize({ width: 1440, height: 1000 })
