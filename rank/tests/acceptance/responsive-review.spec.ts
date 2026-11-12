@@ -14,7 +14,11 @@ test('响应式视觉抽查：首页选图、榜单、详情、放大与返回',
   await page.goto('../')
   await fits()
   const background = await page.locator('body').evaluate(el => getComputedStyle(el, '::before').backgroundImage)
-  expect(background).toContain('akane-background-960.webp')
+  const viewportWidth = page.viewportSize()!.width
+  const expectedBackground = viewportWidth <= 680 ? 'images/responsive/akane-background-960.webp'
+    : viewportWidth <= 1280 ? 'images/responsive/akane-background-1280.webp'
+      : 'images/akane-background.webp'
+  expect(background).toContain(expectedBackground)
   const cover = page.locator('.home-entry img').first()
   await expect.poll(() => cover.evaluate(img => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0)
   expect(await cover.evaluate(img => (img as HTMLImageElement).currentSrc)).toContain('anime-320.webp')
