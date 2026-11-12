@@ -25,6 +25,22 @@ test('统一入口可往返，手机控制台滚动后仍可见并避开行程�
       await expect(page.locator('.sc-panel')).toBeHidden()
     }
     if (path === '../' && info.project.name === 'mobile') await page.screenshot({ path: resolve(evidence, 'identity-home-390.png') })
+    if (path === '../') {
+      const cityLink = page.getByRole('group', { name: '按城市逛', exact: true }).getByRole('link').first()
+      const city = await cityLink.innerText()
+      await cityLink.click()
+      await expect(page.getByRole('combobox', { name: '城市筛选', exact: true })).toHaveValue(city)
+      await expect(page.locator('.comfortable-view')).toBeVisible()
+      const cityLabels = await page.locator('.photo-card .photo-caption small').allTextContents()
+      expect(cityLabels.length).toBeGreaterThan(0)
+      expect(cityLabels.every(text => text.includes(city))).toBe(true)
+      await page.locator('.photo-card .card-link').first().click()
+      await expect(page.locator('.guide-detail h1')).toBeVisible()
+      expect(new URL(page.url()).pathname).toContain('/rank/guide/')
+      await page.goto('../')
+      await page.getByRole('group', { name: '按城市逛', exact: true }).getByRole('link', { name: '全部城市', exact: true }).click()
+      await expect(page.getByRole('combobox', { name: '城市筛选', exact: true })).toHaveValue('')
+    }
   }
   await page.goto('')
   await expect(page.locator('.brand-copy')).toContainText('菠萝汤包scho · 生活手记')

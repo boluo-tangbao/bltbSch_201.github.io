@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { createReadStream, existsSync, readFileSync } from 'node:fs'
 import { extname, isAbsolute, relative, resolve } from 'node:path'
 import { directorySummary } from './scripts/directory-summary.mjs'
+import { fillHomeCityLinks } from '../scripts/home-city-links.mjs'
 
 const summaryId = '\0virtual:directory-summary'
 const directorySummaryPlugin: Plugin = {
@@ -53,6 +54,10 @@ const personalSitePreview = {
       if (relativePath.startsWith('..') || isAbsolute(relativePath) || !existsSync(target)) return next()
       response.setHeader('Content-Type', mimeTypes[extname(target)] || 'application/octet-stream')
       response.setHeader('Cache-Control', 'no-cache')
+      if (file === 'index.html') {
+        response.end(fillHomeCityLinks(readFileSync(target, 'utf8'), JSON.parse(readFileSync(resolve(homeRoot, 'rank/src/data/places.json'), 'utf8')), rankBase))
+        return
+      }
       createReadStream(target).on('error', () => response.destroy()).pipe(response)
     })
   },
