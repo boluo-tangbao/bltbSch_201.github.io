@@ -7,8 +7,14 @@ import { placeDetailHash } from '../../src/utils/search'
 const places = flattenPlaces(JSON.parse(readFileSync('src/data/places.json', 'utf8'))).filter(p => p.published)
 const directories = JSON.parse(readFileSync('src/data/shop-directories.json', 'utf8'))
 const sample = places.slice(0, 4)
-test.beforeEach(async ({ context, baseURL }) => {
+test.beforeEach(async ({ page, context, baseURL }) => {
   await context.route('**/*', route => new URL(route.request().url()).origin === new URL(baseURL!).origin ? route.continue() : route.abort())
+  // A retained mouse position can open the hover console after navigation.
+  // Dismiss it normally before comparison actions; console interactions have their own tests.
+  await page.addLocatorHandler(page.locator('#site-console.sc-open'), async () => {
+    await page.mouse.move(0, 0)
+    await page.keyboard.press('Escape')
+  })
 })
 
 test('商圈对比支持筛选、三项上限、逐行数据、差异筛选及跨页记忆', async ({ page }) => {
