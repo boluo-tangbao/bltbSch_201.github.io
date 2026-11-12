@@ -1,0 +1,546 @@
+{
+  "date": "2026-11-10",
+  "scope": "Local _site; static import closure excludes dynamic imports; calculated gzip not observed transfer",
+  "graphs": {
+    "index.html": {
+      "files": [
+        {
+          "file": "rank\\assets\\main-XumCCJoo.js",
+          "bytes": 18314,
+          "gzip": 7465
+        },
+        {
+          "file": "rank\\assets\\design-system-CAWaVT-2.js",
+          "bytes": 126654,
+          "gzip": 35210
+        },
+        {
+          "file": "rank\\assets\\cities-BtLIM_Mi.js",
+          "bytes": 61457,
+          "gzip": 23859
+        },
+        {
+          "file": "rank\\assets\\richText-D_wsNoOf.js",
+          "bytes": 907,
+          "gzip": 562
+        },
+        {
+          "file": "rank\\assets\\hero-layout-E4W8EyWI.js",
+          "bytes": 469831,
+          "gzip": 104993
+        },
+        {
+          "file": "rank\\assets\\updates-COkmxoxr.js",
+          "bytes": 36456,
+          "gzip": 11064
+        },
+        {
+          "file": "rank\\assets\\PlaceCompare-Ck9mgYoh.js",
+          "bytes": 15618,
+          "gzip": 6521
+        },
+        {
+          "file": "rank\\assets\\assets-CXNxPLTa.js",
+          "bytes": 220998,
+          "gzip": 22761
+        },
+        {
+          "file": "rank\\assets\\browse-B72Ai7rW.js",
+          "bytes": 17819,
+          "gzip": 7592
+        },
+        {
+          "file": "rank\\assets\\tripPlan-BktKynmw.js",
+          "bytes": 4116,
+          "gzip": 2161
+        },
+        {
+          "file": "rank\\assets\\TripPlanButton-BZ-P1d7i.js",
+          "bytes": 1605,
+          "gzip": 897
+        },
+        {
+          "file": "rank\\assets\\community-C5q4flcz.js",
+          "bytes": 951,
+          "gzip": 712
+        },
+        {
+          "file": "rank\\assets\\community-CDI0vC76.js",
+          "bytes": 157,
+          "gzip": 151
+        },
+        {
+          "file": "rank\\assets\\MascotMoments-X-94MiY6.js",
+          "bytes": 12402,
+          "gzip": 5229
+        },
+        {
+          "file": "rank\\assets\\VisitCounter-Cz1MD6l3.js",
+          "bytes": 1492,
+          "gzip": 958
+        },
+        {
+          "file": "rank\\assets\\UpdateList-DFfBxl3h.js",
+          "bytes": 1834,
+          "gzip": 1047
+        }
+      ],
+      "bytes": 990611,
+      "gzip": 231182
+    },
+    "guide/index.html": {
+      "files": [
+        {
+          "file": "rank\\assets\\guide-ClXJQoy2.js",
+          "bytes": 16832,
+          "gzip": 6940
+        },
+        {
+          "file": "rank\\assets\\design-system-CAWaVT-2.js",
+          "bytes": 126654,
+          "gzip": 35210
+        },
+        {
+          "file": "rank\\assets\\cities-BtLIM_Mi.js",
+          "bytes": 61457,
+          "gzip": 23859
+        },
+        {
+          "file": "rank\\assets\\richText-D_wsNoOf.js",
+          "bytes": 907,
+          "gzip": 562
+        },
+        {
+          "file": "rank\\assets\\hero-layout-E4W8EyWI.js",
+          "bytes": 469831,
+          "gzip": 104993
+        },
+        {
+          "file": "rank\\assets\\PlaceCompare-Ck9mgYoh.js",
+          "bytes": 15618,
+          "gzip": 6521
+        },
+        {
+          "file": "rank\\assets\\assets-CXNxPLTa.js",
+          "bytes": 220998,
+          "gzip": 22761
+        },
+        {
+          "file": "rank\\assets\\browse-B72Ai7rW.js",
+          "bytes": 17819,
+          "gzip": 7592
+        },
+        {
+          "file": "rank\\assets\\tripPlan-BktKynmw.js",
+          "bytes": 4116,
+          "gzip": 2161
+        },
+        {
+          "file": "rank\\assets\\MascotMoments-X-94MiY6.js",
+          "bytes": 12402,
+          "gzip": 5229
+        },
+        {
+          "file": "rank\\assets\\VisitCounter-Cz1MD6l3.js",
+          "bytes": 1492,
+          "gzip": 958
+        },
+        {
+          "file": "rank\\assets\\AddressActions-xlRZy0Fh.js",
+          "bytes": 675,
+          "gzip": 461
+        },
+        {
+          "file": "rank\\assets\\baiduMaps-CAHAzjWf.js",
+          "bytes": 3068,
+          "gzip": 1647
+        }
+      ],
+      "bytes": 951869,
+      "gzip": 218894
+    }
+  },
+  "covers": [
+    {
+      "name": "又又中心",
+      "tiny": 6272,
+      "small": 21104,
+      "large": 68880,
+      "display": 213380
+    },
+    {
+      "name": "第一百货",
+      "tiny": 5586,
+      "small": 17494,
+      "large": 49690,
+      "display": 65124
+    },
+    {
+      "name": "南京路百联",
+      "tiny": 3610,
+      "small": 12060,
+      "large": 35604,
+      "display": 109716
+    },
+    {
+      "name": "新世界城",
+      "tiny": 3806,
+      "small": 13082,
+      "large": 43614,
+      "display": 88676
+    },
+    {
+      "name": "华盛小亭",
+      "tiny": 7778,
+      "small": 26338,
+      "large": 86052,
+      "display": 143544
+    },
+    {
+      "name": "百米香榭",
+      "tiny": 5318,
+      "small": 17086,
+      "large": 53850,
+      "display": 104326
+    },
+    {
+      "name": "五角场百联",
+      "tiny": 4392,
+      "small": 14692,
+      "large": 47312,
+      "display": 128510
+    },
+    {
+      "name": "迪美",
+      "tiny": 4186,
+      "small": 13326,
+      "large": 38898,
+      "display": 52862
+    },
+    {
+      "name": "静安大悦城",
+      "tiny": 3828,
+      "small": 12980,
+      "large": 22246,
+      "display": 29524
+    },
+    {
+      "name": "五角场万达广场",
+      "tiny": 4474,
+      "small": 14718,
+      "large": 49018,
+      "display": 130624
+    },
+    {
+      "name": "外文书店",
+      "tiny": 4748,
+      "small": 17426,
+      "large": 60752,
+      "display": 236652
+    },
+    {
+      "name": "悦荟广场",
+      "tiny": 8482,
+      "small": 28512,
+      "large": 74564,
+      "display": 216334
+    },
+    {
+      "name": "TPY中心",
+      "tiny": 3688,
+      "small": 11488,
+      "large": 36572,
+      "display": 58780
+    },
+    {
+      "name": "鑫耀光环live二期",
+      "tiny": 4770,
+      "small": 16686,
+      "large": 56418,
+      "display": 168296
+    },
+    {
+      "name": "金桥LaLaport",
+      "tiny": 3008,
+      "small": 8874,
+      "large": 18830,
+      "display": 22108
+    },
+    {
+      "name": "美罗城",
+      "tiny": 4812,
+      "small": 17380,
+      "large": 54192,
+      "display": 122202
+    },
+    {
+      "name": "长宁龙之梦",
+      "tiny": 3898,
+      "small": 11560,
+      "large": 29378,
+      "display": 50148
+    },
+    {
+      "name": "长宁巴黎春天",
+      "tiny": 4098,
+      "small": 13726,
+      "large": 42778,
+      "display": 56246
+    },
+    {
+      "name": "环球港",
+      "tiny": 5350,
+      "small": 17818,
+      "large": 55656,
+      "display": 206804
+    },
+    {
+      "name": "悦沢书店",
+      "tiny": 6636,
+      "small": 19896,
+      "large": 61894,
+      "display": 234776
+    },
+    {
+      "name": "南方百联lab",
+      "tiny": 7446,
+      "small": 23722,
+      "large": 73250,
+      "display": 102910
+    },
+    {
+      "name": "少女乐队乐器店",
+      "tiny": 4496,
+      "small": 13594,
+      "large": 38264,
+      "display": 116550
+    },
+    {
+      "name": "地王广场",
+      "tiny": 4848,
+      "small": 8164,
+      "large": 8164,
+      "display": 10580
+    },
+    {
+      "name": "动漫星城（西区）",
+      "tiny": 5222,
+      "small": 15234,
+      "large": 45980,
+      "display": 189050
+    },
+    {
+      "name": "动漫星城（东区）",
+      "tiny": 5624,
+      "small": 17912,
+      "large": 64804,
+      "display": 324832
+    },
+    {
+      "name": "时尚天河",
+      "tiny": 3944,
+      "small": 11334,
+      "large": 23106,
+      "display": 26970
+    },
+    {
+      "name": "北京路谷店",
+      "tiny": 4264,
+      "small": 14852,
+      "large": 41996,
+      "display": 52722
+    },
+    {
+      "name": "龙湖相城天街",
+      "tiny": 4614,
+      "small": 15286,
+      "large": 48640,
+      "display": 198584
+    },
+    {
+      "name": "星悦汇",
+      "tiny": 4128,
+      "small": 13638,
+      "large": 43858,
+      "display": 182736
+    },
+    {
+      "name": "SUONE金地广场",
+      "tiny": 5510,
+      "small": 16302,
+      "large": 45704,
+      "display": 154222
+    }
+  ],
+  "sharing": {
+    "index.html": {
+      "description": false,
+      "og:title": false,
+      "og:description": false,
+      "og:image": false,
+      "og:url": false,
+      "twitter:card": false,
+      "canonical": false
+    },
+    "activities.html": {
+      "description": false,
+      "og:title": false,
+      "og:description": false,
+      "og:image": false,
+      "og:url": false,
+      "twitter:card": false,
+      "canonical": false
+    },
+    "rank/index.html": {
+      "description": true,
+      "og:title": false,
+      "og:description": false,
+      "og:image": false,
+      "og:url": false,
+      "twitter:card": false,
+      "canonical": false
+    },
+    "rank/cities/上海/index.html": {
+      "description": true,
+      "og:title": true,
+      "og:description": true,
+      "og:image": true,
+      "og:url": true,
+      "twitter:card": true,
+      "canonical": true
+    }
+  },
+  "homeImages": [
+    {
+      "file": "images/akane-background.webp",
+      "bytes": 507298,
+      "width": 2048,
+      "height": 1382
+    },
+    {
+      "file": "images/anime.webp",
+      "bytes": 110814,
+      "width": 960,
+      "height": 640
+    },
+    {
+      "file": "images/art.webp",
+      "bytes": 86542,
+      "width": 960,
+      "height": 640
+    },
+    {
+      "file": "images/travel.webp",
+      "bytes": 119822,
+      "width": 960,
+      "height": 640
+    }
+  ],
+  "search": {
+    "environment": "Node.js on local desktop, not phone rendering or INP",
+    "indexMedianMs": 0.49600000000003774,
+    "indexP95Ms": 1.1632999999999925,
+    "queries": {
+      "animate": {
+        "hits": 3,
+        "medianMs": 0.014200000000016644,
+        "p95Ms": 0.03809999999998581
+      },
+      "模玩熊": {
+        "hits": 6,
+        "medianMs": 0.012500000000045475,
+        "p95Ms": 0.019199999999955253
+      },
+      "上海": {
+        "hits": 23,
+        "medianMs": 0.013599999999996726,
+        "p95Ms": 0.021000000000015007
+      },
+      "中古": {
+        "hits": 12,
+        "medianMs": 0.017499999999984084,
+        "p95Ms": 0.017899999999997362
+      }
+    }
+  },
+  "floorPlans": [
+    {
+      "name": "第一百货",
+      "alt": "楼层导览",
+      "file": "images/previews/2dd9c6e9c8ae76500188-1280.webp",
+      "width": 1280,
+      "height": 1707,
+      "bytes": 268468
+    },
+    {
+      "name": "悦荟广场",
+      "alt": "楼层导览",
+      "file": "images/previews/42c2edc81545a442654d-1280.webp",
+      "width": 1279,
+      "height": 1948,
+      "bytes": 187100
+    },
+    {
+      "name": "鑫耀光环live二期",
+      "alt": "商圈导览",
+      "file": "images/previews/1bbdfd39391e51c046fc-1280.webp",
+      "width": 1280,
+      "height": 1707,
+      "bytes": 243436
+    },
+    {
+      "name": "长宁龙之梦",
+      "alt": "周边地下街导览",
+      "file": "images/previews/930f451e505deedc8d34-1280.webp",
+      "width": 1280,
+      "height": 1141,
+      "bytes": 136714
+    },
+    {
+      "name": "动漫星城（西区）",
+      "alt": "公园前街区导览",
+      "file": "images/previews/9ae00ab8daee193767b1-1280.webp",
+      "width": 1280,
+      "height": 710,
+      "bytes": 74152
+    },
+    {
+      "name": "动漫星城（东区）",
+      "alt": "公园前街区导览",
+      "file": "images/previews/9ae00ab8daee193767b1-1280.webp",
+      "width": 1280,
+      "height": 710,
+      "bytes": 74152
+    },
+    {
+      "name": "时尚天河",
+      "alt": "商场楼层导览",
+      "file": "images/previews/b3df04081b7f86b1a6ca-1280.webp",
+      "width": 1067,
+      "height": 605,
+      "bytes": 75760
+    }
+  ],
+  "backgroundExperiments": [
+    {
+      "width": 960,
+      "quality": 72,
+      "bytes": 107994,
+      "note": "In-memory encoding experiment, visual quality unreviewed; not published"
+    },
+    {
+      "width": 1280,
+      "quality": 72,
+      "bytes": 160348,
+      "note": "In-memory encoding experiment, visual quality unreviewed; not published"
+    }
+  ],
+  "build": "Rebuilt Vite + assembled _site on 2026-11-10 from commit 4d5240f",
+  "tests": {
+    "unit": {
+      "passed": 18,
+      "failed": 0
+    },
+    "browser": "No result: local acceptance runner did not progress beyond webserver startup; stopped. In-app navigation failed due to missing network policy."
+  }
+}
