@@ -8,7 +8,9 @@ const baseURL = `http://127.0.0.1:4190${siteBase}rank/`
 const directories = JSON.parse(readFileSync(new URL('./src/data/shop-directories.json', import.meta.url), 'utf8'))
 const reminderState = { cookies: [], origins: [{ origin: new URL(baseURL).origin, localStorage: Object.entries(directories).map(([id, directory]) => ({ name: visitNoticeStorageKey(id), value: JSON.stringify(visitNotices(directory as Parameters<typeof visitNotices>[0])) })) }] }
 export default defineConfig({
-  testDir: './tests/acceptance', timeout: 45000, globalTimeout: 240000,
+  // Three viewport projects run serially; allow slower CI runners to finish the suite.
+  // Keep each test bounded to 45 seconds so stalled interactions still fail promptly.
+  testDir: './tests/acceptance', timeout: 45000, globalTimeout: 600000,
   workers: 1, retries: 0, forbidOnly: true,
   outputDir: '../test-results/acceptance/browser',
   reporter: [['list'], ['html', { outputFolder: '../test-results/acceptance/html', open: 'never' }], ['json', { outputFile: '../test-results/acceptance/browser.json' }]],

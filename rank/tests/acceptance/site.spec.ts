@@ -105,7 +105,7 @@ test('手机直达详情优先显示地点，延迟加载后仍定位正确，�
   await noOverflow(page)
 })
 
-test('舒适视图短评支持悬停与键盘，出发提醒展开并定位原始店铺记录', async ({ page }, info) => {
+test('舒适视图短评始终可读且支持键盘，出发提醒展开并定位原始店铺记录', async ({ page }, info) => {
   await page.clock.setFixedTime(new Date('2026-11-02T04:00:00Z'))
   await page.goto('')
   await openMobileTools(page)
@@ -115,9 +115,11 @@ test('舒适视图短评支持悬停与键盘，出发提醒展开并定位原�
   const summary = card.locator('.card-summary')
   const id = (await card.getAttribute('id'))!.replace('place-card-', '')
   await expect(summary).toHaveText(places.find(p => p.id === id)!.summary)
+  await expect(summary).toBeVisible()
+  await expect(link).toHaveAttribute('aria-describedby', `card-summary-${id}`)
   if (await page.evaluate(() => matchMedia('(hover: hover)').matches)) {
     await page.getByRole('heading', { name: '图片总榜', exact: true }).hover()
-    await expect(summary).toBeHidden()
+    await expect(summary).toBeVisible()
     await link.hover()
     await expect(summary).toBeVisible()
     await page.getByRole('heading', { name: '图片总榜', exact: true }).hover()
@@ -126,7 +128,7 @@ test('舒适视图短评支持悬停与键盘，出发提醒展开并定位原�
     await page.keyboard.press('Shift+Tab')
     await expect(link).toBeFocused()
     await expect(summary).toBeVisible()
-  } else await expect(summary).toBeVisible()
+  }
   await noOverflow(page)
   if (info.project.name === 'desktop') await card.screenshot({ path: '../test-results/acceptance/comfortable-summary.png' })
 
