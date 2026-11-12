@@ -141,9 +141,9 @@ onBeforeUnmount(() => {
     <header class="detail-heading">
       <p class="detail-kicker"><i class="city-dot" :style="{ background: color }"></i><span>{{ place.city }}</span><span aria-hidden="true">/</span><span>{{ tierLabel(place.tier) }}</span><span v-if="rank" aria-hidden="true">/</span><span v-if="rank">档内第 {{ rank }} 名</span></p>
       <div class="detail-title-row"><h1 :id="targetId({ kind: 'heading' })" tabindex="-1">{{ place.name }}</h1><div class="detail-place-actions"><TripPlanButton :place-id="place.id" :name="place.name" always-visible /><button type="button" class="text-button" aria-haspopup="dialog" @click="shareOpen = true">分享地点</button></div></div>
-      <div class="detail-highlights"><p class="detail-highlights-label">逛店看点</p><p :id="targetId({ kind: 'summary' })" tabindex="-1" class="detail-summary">{{ place.summary }}</p>
+      <div class="detail-highlights"><p class="detail-highlights-label">{{ place.changeNotice ? '原体验短评' : '逛店看点' }}</p><p :id="targetId({ kind: 'summary' })" tabindex="-1" class="detail-summary">{{ place.summary }}</p>
       </div>
-      <PlaceChangeNotice v-if="place.changeNotice" :notice="place.changeNotice" />
+      <PlaceChangeNotice v-if="place.changeNotice" :notice="place.changeNotice" detail :visited-at="place.visitedAt" :has-directory="!!shopDirectory" @directory="goToChapter('shops')" />
       <VisitNotices v-if="shopDirectory" :place-id="place.id" :directory="shopDirectory" @shop="showShop" @directory="goToChapter('shops')" />
       <div v-if="address" class="detail-facts detail-address"><span><small>地址</small>{{ address }}</span></div>
       <details :key="place.id" class="detail-timeliness" aria-label="信息日期">

@@ -1,5 +1,15 @@
 [
   {
+    "id": "first-department-provisional-tier-20261112",
+    "date": "2026-11-12",
+    "type": "tier-change",
+    "placeId": "shanghai-shop-001",
+    "fromTier": "hang",
+    "toTier": "top",
+    "note": "用户确认：暂时评价跌为顶级第四位，在五角场百联后；待装修完成后考虑是否正式调整次序。保留2026-07-13原体验及改造前图集、原店单依据和核对日期。",
+    "summary": "第一百货装修期间暂列顶级档第4、排在五角场百联后，装修完成后再考虑是否正式调整次序。"
+  },
+  {
     "id": "yuehui-directory-20261030",
     "date": "2026-10-31",
     "type": "edited",

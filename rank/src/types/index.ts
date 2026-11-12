@@ -22,7 +22,7 @@ export interface PlaceEntry {
   aliases?: string[]
   summary: string; details: string; visitNotes?: string[]; tags: string[]
   /** Author-confirmed changes that qualify the original experience; remove after reassessment. */
-  changeNotice?: { title: string; summary: string }
+  changeNotice?: { title: string; summary: string; ratingNote?: string }
   cover: string | null; coverPosition?: [number, number]
   gallery: GalleryMedia[]
   visitedAt: string | null; updatedAt: string; published: boolean

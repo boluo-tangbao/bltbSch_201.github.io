@@ -70,6 +70,7 @@ export function validateData(site, groups, updates, imageExists = () => true, di
     if (!Array.isArray(p.tags) || p.tags.some(t => typeof t !== 'string')) fail('places.json', p.id, 'tags 必须是文字数组')
     if (p.aliases !== undefined && !validAliases(p.aliases)) fail('places.json', p.id, 'aliases 必须是不重复的 1–160 字别名数组，不能有首尾空格')
     if (p.changeNotice !== undefined && (!p.changeNotice || typeof p.changeNotice !== 'object' || Array.isArray(p.changeNotice) || ['title', 'summary'].some(key => typeof p.changeNotice[key] !== 'string' || !p.changeNotice[key].trim()))) fail('places.json', p.id, 'changeNotice 必须填写变化标题和说明')
+    if (p.changeNotice?.ratingNote !== undefined && (typeof p.changeNotice.ratingNote !== 'string' || !p.changeNotice.ratingNote.trim())) fail('places.json', p.id, '暂定评价 ratingNote 必须为非空文字')
     if (p.visitedAt !== null && !validDate(p.visitedAt, true)) fail('places.json', p.id, 'visitedAt 必须为真实年月、日期或 null')
     if (!validDate(p.updatedAt)) fail('places.json', p.id, 'updatedAt 必须为真实 YYYY-MM-DD 日期')
     if (p.nearbyVisits !== undefined) {
