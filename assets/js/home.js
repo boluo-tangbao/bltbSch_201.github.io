@@ -10,6 +10,8 @@ async function initializeLatestEvent() {
     if (!event) return;
     const image = entry.querySelector('img');
     if (event.cover) {
+      image.removeAttribute('srcset');
+      image.removeAttribute('sizes');
       image.src = event.cover;
       image.alt = `${event.name}的现场记录`;
     } else {

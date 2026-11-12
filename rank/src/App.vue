@@ -2,7 +2,7 @@
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import siteData from './data/site.json'
 import placeData from './data/places.json'
-import directoryData from './data/shop-directories.json'
+import directoryData from 'virtual:directory-summary'
 import updateData from './data/updates.json'
 import type { Place, PlacesByCity, ShopDirectory, Site, Update } from './types'
 import { createPlaceSearchIndex, matchPlaces, parsePlaceRoute, placeDetailHash } from './utils/search'

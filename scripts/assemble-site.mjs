@@ -5,6 +5,8 @@ import { execFileSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
 import { publishedRankAssets, shouldPublishRankAsset } from '../rank/scripts/published-assets.mjs'
 import { generateDiscoveryPages } from './generate-discovery-pages.mjs'
+import { pageMetadata } from './page-metadata.mjs'
+import './prepare-home-images.mjs'
 const root = resolve(fileURLToPath(new URL('../', import.meta.url)))
 const out = resolve(root, '_site')
 await prepareActivities()
@@ -51,6 +53,28 @@ cpSync(rankDist,resolve(out,'rank'),{recursive:true,filter:source=>{
 writeFileSync(resolve(out,'.nojekyll'),'')
 const rankBase = readFileSync(resolve(out, 'rank/index.html'), 'utf8').match(/src="([^"]*\/)assets\/[^"/]+\.js"/)?.[1]
 if (!rankBase) throw new Error('无法读取榜单构建路径，停止生成城市指南')
+const origin = process.env.SITE_ORIGIN || 'https://boluo-tangbao.github.io'
+const homeBase = rankBase.replace(/rank\/$/, '')
+const descriptions = {
+ 'index.html': '菠萝汤包scho的生活手记：亲自逛过的店、到过的活动，以及运动、艺术、二次元与旅行记录。',
+ 'activities.html': '菠萝汤包scho参加过的活动，按主题与年份浏览现场照片和视频。',
+ 'sports.html': '菠萝汤包scho的运动兴趣与体育活动记录。',
+ 'art.html': '菠萝汤包scho的艺术兴趣、音乐与现场活动记录。',
+ 'anime.html': '菠萝汤包scho的二次元生活：城市逛店、活动记录与喜欢的作品。',
+ 'travel.html': '菠萝汤包scho的旅行与城市体验记录。',
+ 'rank/index.html': '菠萝汤包scho的个人逛店体验榜，按城市、地点与标签查找真实体验和店铺资料。',
+ 'rank/guide/index.html': '按地图查找城市逛店地点，阅读个人短评、店铺资料与照片，规划逛店清单。',
+ 'rank/qa/index.html': '关于汤包逛店体验榜的评价标准、资料与使用说明。',
+ 'rank/updates/index.html': '汤包逛店体验榜的地点、评价、图片及地图更新记录。',
+ 'rank/route/index.html': '预览朋友分享的公开逛店路线，确认后加入自己的逛店清单。',
+}
+for (const [file, description] of Object.entries(descriptions)) {
+ const target = resolve(out, file)
+ if (!existsSync(target)) continue
+ const url = new URL(homeBase + (file.endsWith('index.html') ? file.slice(0, -10) : file), origin).href
+ const image = new URL(homeBase + 'images/anime.webp', origin).href
+ writeFileSync(target, pageMetadata(readFileSync(target, 'utf8'), { url, description, image }))
+}
 const discovery = generateDiscoveryPages({ siteRoot: out, rankBase, origin: process.env.SITE_ORIGIN || 'https://boluo-tangbao.github.io', groups: json('rank/src/data/places.json'), site: json('rank/src/data/site.json'), previews: json('rank/src/data/media-previews.json') })
 console.log(`城市指南：${discovery.cities}座城、${discovery.places}处地点，已生成独立介绍、分享元信息和 sitemap.xml。`)
 console.log('Pages 构建完成：主站与活动网页素材位于 _site/，榜单位于 _site/rank/；未复制活动原素材。')

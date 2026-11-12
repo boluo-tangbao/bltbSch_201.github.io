@@ -55,3 +55,6 @@
 @media (prefers-reduced-motion: reduce) {
   .home-entry { transition: none; }
 }
+
+@media (max-width: 1280px) { .home-page::before { background-image: linear-gradient(135deg, rgba(255, 249, 251, .70), rgba(241, 248, 252, .64)), url("../../images/responsive/akane-background-1280.webp"); } }
+@media (max-width: 680px) { .home-page::before { background-image: linear-gradient(135deg, rgba(255, 249, 251, .70), rgba(241, 248, 252, .64)), url("../../images/responsive/akane-background-960.webp"); } }

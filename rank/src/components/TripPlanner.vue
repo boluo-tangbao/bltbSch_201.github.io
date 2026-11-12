@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import type { Place, ShopDirectory, Site } from '../types'
-import directoryData from '../data/shop-directories.json'
+import directoryData from 'virtual:directory-summary'
 import siteData from '../data/site.json'
 import { resolveTripStops, tripEntryKey, tripPlanHtml, tripPlanText } from '../utils/tripPlan'
 import { useTripPlan } from '../utils/useTripPlan'

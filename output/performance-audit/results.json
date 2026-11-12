@@ -542,5 +542,25 @@
       "failed": 0
     },
     "browser": "No result: local acceptance runner did not progress beyond webserver startup; stopped. In-app navigation failed due to missing network policy."
+  },
+  "responsiveReview": {
+    "date": "2026-11-12",
+    "browser": "Desktop Edge, viewport resizing",
+    "viewports": [
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        844
+      ]
+    ],
+    "existingTestsPassed": 12,
+    "flowTestsPassed": 2,
+    "failed": 0,
+    "loopbackIssue": "restricted connection returned EACCES; allowed test process succeeded",
+    "observedIssue": "Collapsed site-console launcher overlaps part of right-hand board controls",
+    "realDevicePerformanceTested": false
   }
 }

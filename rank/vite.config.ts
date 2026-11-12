@@ -1,8 +1,21 @@
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath } from 'node:url'
 import { createReadStream, existsSync, readFileSync } from 'node:fs'
 import { extname, isAbsolute, relative, resolve } from 'node:path'
+import { directorySummary } from './scripts/directory-summary.mjs'
+
+const summaryId = '\0virtual:directory-summary'
+const directorySummaryPlugin: Plugin = {
+  name: 'directory-summary',
+  resolveId(id: string) { if (id === 'virtual:directory-summary') return summaryId },
+  load(id: string) {
+    if (id !== summaryId) return
+    const file = fileURLToPath(new URL('./src/data/shop-directories.json', import.meta.url))
+    this.addWatchFile(file)
+    return `export default ${JSON.stringify(directorySummary(JSON.parse(readFileSync(file, 'utf8'))))}`
+  },
+}
 
 const rankBase = process.env.SITE_BASE || '/bltbSch_201.github.io/rank/'
 const homeBase = rankBase.replace(/rank\/$/, '')
@@ -71,7 +84,7 @@ const siteConsole = {
 }
 
 export default defineConfig({
-  plugins: [personalSitePreview, criticalPortraits, vue(), siteConsole],
+  plugins: [personalSitePreview, criticalPortraits, vue(), siteConsole, directorySummaryPlugin],
   base: rankBase,
   build: {
     rolldownOptions: {

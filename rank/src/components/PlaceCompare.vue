@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import type { Place, ShopDirectory } from '../types'
-import directoryData from '../data/shop-directories.json'
+import directoryData from 'virtual:directory-summary'
 import { comparisonFacts, comparisonRows } from '../utils/placeComparison'
 import { placeDetailHash } from '../utils/search'
 import { useShopToday } from '../utils/shopToday'
