@@ -838,5 +838,29 @@
       "shanghai-shop-007"
     ],
     "note": "档内顺序调整。"
+  },
+  {
+    "id": "ranking-order-20261113-948dd3f14573",
+    "date": "2026-11-13",
+    "type": "ranking-change",
+    "placeIds": [
+      "guangzhou-shop-005",
+      "shanghai-shop-003",
+      "shanghai-shop-007",
+      "shanghai-shop-010",
+      "shanghai-shop-011",
+      "shanghai-shop-013",
+      "shanghai-shop-014",
+      "shanghai-shop-015",
+      "shanghai-shop-016",
+      "shanghai-shop-017",
+      "shanghai-shop-018",
+      "shanghai-shop-019",
+      "shanghai-shop-020",
+      "shanghai-shop-021",
+      "suzhou-shop-001",
+      "suzhou-shop-003"
+    ],
+    "note": "档内顺序调整。"
   }
 ]
