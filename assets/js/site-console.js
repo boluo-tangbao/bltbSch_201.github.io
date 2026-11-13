@@ -26,7 +26,7 @@
       <div class="sc-heading"><h2 id="sc-heading">随身控制台</h2><button type="button" class="sc-close" aria-label="关闭控制台">关闭</button></div>
       <nav class="sc-destinations" aria-label="精选入口">
         <a class="sc-destination sc-home" data-home aria-label="个人主页"><span class="sc-destination-label"><strong>个人主页</strong><span aria-hidden="true">↗</span></span><span class="sc-destination-note">生活里的小小收藏</span></a>
-        <a class="sc-destination sc-board" data-board aria-label="逛店榜单"><span class="sc-destination-label"><strong>逛店榜单</strong><span aria-hidden="true">↗</span></span><span class="sc-destination-note">下一站，去哪里？</span></a>
+        <a class="sc-destination sc-board" data-board aria-label="图片榜单"><span class="sc-destination-label"><strong>图片榜单</strong><span aria-hidden="true">↗</span></span><span class="sc-destination-note">下一站，去哪里？</span></a>
       </nav>
       <div id="sc-theme-slot"></div>
       <section class="sc-section" aria-labelledby="sc-music-heading">

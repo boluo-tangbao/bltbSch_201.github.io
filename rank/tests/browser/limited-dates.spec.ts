@@ -9,9 +9,9 @@ test('activities and a selected trip update after China midnight without closing
   await expect(row('测试即将开始快闪').locator('.shop-status')).toHaveText('即将开始')
   await expect(row('测试未知年份快闪').locator('.shop-status')).toHaveText('档期见原文')
   await expect(page.locator('.shop-directory-more')).not.toHaveAttribute('open')
-  await page.getByRole('button', { name: '规划逛店', exact: true }).click()
-  await row('测试本期主题').getByRole('button', { name: '加入本次清单：测试本期主题', exact: true }).click()
-  await row('测试常设店').getByRole('button', { name: '加入本次清单：测试常设店', exact: true }).click()
+  await page.locator('.trip-plan-entry').getByRole('button', { name: '开始选店', exact: true }).click()
+  await row('测试本期主题').getByRole('button', { name: '加入想逛清单：测试本期主题', exact: true }).click()
+  await row('测试常设店').getByRole('button', { name: '加入想逛清单：测试常设店', exact: true }).click()
   // Both shops belong to the same place, so the itinerary groups them into one stop.
   await expect(page.locator('.trip-plan-dock')).toContainText('1 站')
   await expect(row('测试本期主题').locator('.trip-plan-add')).toHaveAttribute('aria-pressed', 'true')

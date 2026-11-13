@@ -22,7 +22,7 @@ test.afterEach(async ({ page }) => {
 
 test('加密保存、跨标签恢复、加密备份导入；私有字段不进普通存储和请求', async ({ page, context }, info) => {
   await page.goto('')
-  await page.getByRole('button', { name: '规划逛店', exact: true }).click()
+  await page.locator('.trip-plan-entry').getByRole('button', { name: '开始选店', exact: true }).click()
   await page.locator('.place-card .trip-plan-add').first().click()
   await page.getByRole('button', { name: '查看清单', exact: true }).click()
   const planner = page.locator('.trip-plan-dialog')
@@ -84,7 +84,7 @@ test('加密保存、跨标签恢复、加密备份导入；私有字段不进�
   await importedRow.getByRole('button', { name: '确认删除此行程', exact: true }).click()
   await expect(reopened.locator('.archive-list > li')).toHaveCount(1)
   await reopened.locator('.archive-list > li').first().getByRole('button', { name: '查看并恢复', exact: true }).click()
-  await reopened.getByRole('button', { name: '恢复到本次清单', exact: true }).click()
+  await reopened.getByRole('button', { name: '恢复到想逛清单', exact: true }).click()
   await expect(fresh.locator('.trip-plan-dialog')).toBeVisible()
   await expect(fresh.getByRole('button', { name: '启用地图与通勤查询', exact: true })).toBeVisible()
   await fresh.locator('.stop-selector').last().click()
@@ -102,7 +102,7 @@ test('加密保存、跨标签恢复、加密备份导入；私有字段不进�
 
 test('存储失败不降级为明文，恶意文件被拒绝而不会执行或清空当前清单', async ({ page }) => {
   await page.goto('')
-  await page.getByRole('button', { name: '规划逛店', exact: true }).click()
+  await page.locator('.trip-plan-entry').getByRole('button', { name: '开始选店', exact: true }).click()
   await page.locator('.place-card .trip-plan-add').first().click()
   await page.getByRole('button', { name: '查看清单', exact: true }).click()
   await page.getByRole('button', { name: '保存／恢复行程', exact: true }).click()
@@ -151,7 +151,7 @@ test('恢复保留过期条目并标明原因，闲置自动锁定，多个标�
   expect(await page.evaluate(key => localStorage.getItem(key), archiveKey)).toBe('changed-by-another-tab')
   await archive.getByRole('button', { name: '查看并恢复', exact: true }).click()
   await expect(archive.locator('.archive-review')).toContainText('地点已移除或暂不公开')
-  await archive.getByRole('button', { name: '恢复到本次清单', exact: true }).click()
+  await archive.getByRole('button', { name: '恢复到想逛清单', exact: true }).click()
   await expect(page.locator('.trip-plan-unavailable')).toContainText('旧活动')
   expect(await page.evaluate(() => sessionStorage.getItem('tangbao-trip-plan-session-v1'))).toContain('旧活动')
 })

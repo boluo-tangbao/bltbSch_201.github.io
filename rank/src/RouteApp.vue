@@ -26,7 +26,7 @@ function add() {
   if (merged.length > 120) { message.value = '加入后超过120项，请先整理当前清单。'; return }
   plan.replace(merged.filter((entry, index, all) => all.findIndex(other => tripEntryKey(other) === tripEntryKey(entry)) === index))
   plan.setSelecting(false)
-  message.value = '已加入你的本次清单，原有选择保留。可从底部查看、调整或保存。'
+  message.value = '已加入你的想逛清单，原有选择保留。可从底部查看、调整或保存。'
 }
 </script>
 
@@ -39,12 +39,12 @@ function add() {
       <p>以下按分享顺序展示，地点、楼层与档期已按当前店单重新读取。</p>
       <p v-if="entries.length !== route.entries.length" role="status">{{ route.entries.length - entries.length }} 项已结束、停业、重复或无法对应当前店单的选择未加入。出发前请查看原文与店铺公告。</p>
       <ol class="public-route-stops"><li v-for="(stop, i) in stops" :key="i"><h2>{{ stop.name }}</h2><p>{{ stop.city }} · {{ stop.placeName }}<template v-if="stop.floor"> · {{ stop.floor }}</template></p><p>{{ stop.address || '地址待补充' }}</p><p v-if="stop.period">{{ stop.status }} · {{ stop.period }}</p><a :href="tripStopUrl(stop, guideUrl)">查看介绍与当前店单 ↗</a></li></ol>
-      <button type="button" class="button dark" :disabled="!missing.length" @click="add">{{ entries.length && !missing.length ? '已在我的清单中' : '加入我的清单' }}</button>
+      <button type="button" class="button dark" :disabled="!missing.length" @click="add">{{ entries.length && !missing.length ? '已加入' : '加入想逛清单' }}</button>
       <p role="status">{{ message }}</p>
-      <p class="route-note">打开链接只预览；点击加入后才合并到你的本次清单。此链接不包含对方的行程名称、自填内容、出行设置或地图轨迹。</p>
+      <p class="route-note">打开链接只预览；点击加入后才合并到你的想逛清单。此链接不包含对方的行程名称、自填内容、出行设置或地图轨迹。</p>
     </template>
     <p v-else role="status">路线链接不完整或无法读取，请让朋友重新复制公开路线链接。</p>
-    <a :href="boardUrl">回到图片总榜 ↗</a>
+    <a :href="boardUrl">返回图片榜单 ↗</a>
   </main>
   <TripPlanner :places="places" />
 </template>

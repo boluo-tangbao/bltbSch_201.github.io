@@ -182,11 +182,11 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
       <section class="hero compact-board-hero" aria-labelledby="page-title">
         <div class="hero-copy"><p class="eyebrow"><span></span> 本人亲测 随逛随更新</p><h1 id="page-title">{{ site.title }}<span class="title-dot">。</span></h1></div>
         <div class="byline"><span>{{ site.author }}</span><span>{{ contentDate ? `更新 ${contentDate}` : '等我逛完第一站～' }}</span></div>
-        <div class="hero-actions"><div class="hero-counts" aria-label="榜单概况"><span><strong>{{ all.length }}</strong> 处逛店地点</span><span><strong>{{ cities.length }}</strong> 座城</span></div><div class="hero-browse-links"><a href="#board-title" @click.prevent="browseBoard">看榜单 ↓</a><a :href="guideUrl">看地图 ↗</a></div></div>
+        <div class="hero-actions"><div class="hero-counts" aria-label="榜单概况"><span><strong>{{ all.length }}</strong> 处逛店地点</span><span><strong>{{ cities.length }}</strong> 座城</span></div><div class="hero-browse-links"><a href="#board-title" @click.prevent="browseBoard">图片榜单 ↓</a><a :href="guideUrl">地图找店 ↗</a></div></div>
       </section>
 
       <section class="board-section" aria-labelledby="board-title">
-        <div class="section-heading board-heading"><div><span class="section-number">01</span><h2 id="board-title">图片总榜</h2><span class="desktop-note">{{ site.rankWithinTier ? '同档按顺序排名' : '同档不分先后' }}</span></div>
+        <div class="section-heading board-heading"><div><span class="section-number">01</span><h2 id="board-title">图片榜单</h2><span class="desktop-note">{{ site.rankWithinTier ? '同档按顺序排名' : '同档不分先后' }}</span></div>
           <div class="board-view-controls" role="group" aria-label="榜单视图">
                 <span>榜单视图</span>
                 <button type="button" :aria-pressed="boardView === 'compact'" @click="boardView = 'compact'">紧凑</button>
@@ -206,7 +206,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
               <PlaceCompare v-if="isHome" :places="all" />
               <ShareFilters :city="city" :tag="tag" :query="query" />
               <button type="button" class="button" @click="exportOpen = true">导出榜单</button>
-              <button v-if="!plan.selecting.value" type="button" class="button" @click="plan.setSelecting(true)">选择想逛的地方</button>
+              <button v-if="!plan.selecting.value" type="button" class="button" @click="plan.setSelecting(true)">开始选店</button>
               <span class="board-view-hint">点击卡片查看详情<span v-if="boardView === 'compact'" class="compact-hover-hint"> · 悬停隐藏店名</span><span v-else> · 图片下方显示店名、城市与短评</span></span>
             </div>
           </div>
@@ -219,15 +219,15 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
 
       <section class="guide-entry" aria-labelledby="guide-entry-title">
         <MascotMoments class="mascot-embedded mascot-map-entry" :ids="['aqua', 'emilia']" rotate-all label="地图入口角色" />
-        <div class="guide-entry-copy"><h2 id="guide-entry-title">不知道在哪里？怎么去？那就去地图找找</h2><p>同样的城市颜色，对应地图上的位置。详细评价与到访路线也在这里。</p><a :href="guideUrl" class="button dark">打开地图与介绍 ↗</a></div>
+        <div class="guide-entry-copy"><h2 id="guide-entry-title">不知道在哪里？怎么去？那就去地图找找</h2><p>同样的城市颜色，对应地图上的位置。详细评价与到访路线也在这里。</p><a :href="guideUrl" class="button dark">地图找店 ↗</a></div>
       </section>
       <div class="bottom-grid"><section class="updates-section" aria-labelledby="updates-title"><div class="section-heading"><div><span class="section-number">02</span><h2 id="updates-title">最近更新</h2></div><a :href="updatesUrl" target="_blank" rel="noopener noreferrer" class="updates-all-link">查看全部 ↗<span class="sr-only">（新标签页）</span></a></div><UpdateList :updates="updates.slice(0, 2)" :places="all" /></section>
       <section class="criteria-section" aria-labelledby="criteria-title"><div class="section-heading"><div><span class="section-number">03</span><h2 id="criteria-title">关于这份榜单</h2></div></div><p class="criteria-copy">{{ site.criteria }}</p><div class="criteria-scale"><span v-for="t in tiers" :key="t.id"><i :style="{ background: t.color }"></i>{{ t.label }}</span></div><details :open="criteriaOpen" @toggle="criteriaOpen = ($event.target as HTMLDetailsElement).open"><summary>查看各档标准与排序规则</summary><dl><template v-for="t in tiers" :key="t.id"><dt :id="`tier-meaning-${t.id}`" tabindex="-1">{{ t.label }}</dt><dd>{{ site.tierDescriptions[t.id] }}</dd></template></dl><p>{{ site.rankWithinTier ? '同档有先后，卡片编号表示该档内的完整排名；筛选后保留原排名。' : '同档不分先后。' }}</p><p>到访日期未提供时显示“未记录”；内容更新日期由作者维护。</p></details><p class="personal-note">仅代表个人体验，供你出发前参考。</p></section></div>
       <Guestbook />
     </div>
 
-    <section v-if="currentPlace" class="detail-page"><nav class="detail-navigation" aria-label="地点浏览操作"><a :href="`#place-card-${currentPlace.id}`" class="back-link" @click="returnToBoard">← 返回图片总榜</a><div class="detail-secondary-actions"><a :href="`${guideUrl}#/place/${currentPlace.id}`">地图与地点目录 ↗</a><PlaceCompare :places="all" :current-place="currentPlace" /></div></nav><PlaceDetail :key="currentPlace.id" @ready="detailReady" :search-query="parsePlaceRoute(route)?.query" :place="currentPlace" :rank="site.rankWithinTier ? rankOf(currentPlace) : undefined" :color="cityColor(currentPlace.city, colors)" /></section>
-    <section v-else-if="!isHome" class="not-found"><p class="eyebrow">这一站暂未收录</p><h1>没有找到这个条目</h1><p>链接可能有误，或条目尚未公开。</p><a href="#/" class="button dark">返回榜单</a></section>
+    <section v-if="currentPlace" class="detail-page"><nav class="detail-navigation" aria-label="地点浏览操作"><a :href="`#place-card-${currentPlace.id}`" class="back-link" @click="returnToBoard">← 返回图片榜单</a><div class="detail-secondary-actions"><a :href="`${guideUrl}#/place/${currentPlace.id}`">地图找店 ↗</a><PlaceCompare :places="all" :current-place="currentPlace" /></div></nav><PlaceDetail :key="currentPlace.id" @ready="detailReady" :search-query="parsePlaceRoute(route)?.query" :place="currentPlace" :rank="site.rankWithinTier ? rankOf(currentPlace) : undefined" :color="cityColor(currentPlace.city, colors)" /></section>
+    <section v-else-if="!isHome" class="not-found"><p class="eyebrow">这一站暂未收录</p><h1>没有找到这个条目</h1><p>链接可能有误，或条目尚未公开。</p><a href="#/" class="button dark">返回图片榜单</a></section>
   </main>
   <TripPlanner :places="all" :current-place="currentPlace" />
   <footer class="site-footer"><span><b>{{ site.author }}</b> · 一站一更新，纯主观感受，你们永远对。 <a :href="citiesUrl">城市逛店指南 ↗</a></span><VisitCounter /></footer>

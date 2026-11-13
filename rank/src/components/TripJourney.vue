@@ -137,7 +137,7 @@ const nextOptions=computed(()=>nextLeg.value?matrix.value[nextLeg.value.key]||[]
  <section class="trip-journey">
   <div class="journey-toolbar"><strong>{{groups.length}} 站 · {{resolved.filter(e=>e.shopName&&!e.period).length}} 家选店<template v-if="resolved.some(e=>e.period)"> · {{resolved.filter(e=>e.period).length}} 项活动</template></strong><div class="journey-actions"><button type="button" @click="openCatalog">＋ 从榜单添加</button><button type="button" class="primary" @click="openCustom()">＋ 自己补一站</button></div></div>
   <div class="journey-layout">
-   <section class="journey-plan" aria-label="想逛的名单"><h3>想逛的名单</h3><ol class="journey-stops">
+   <section class="journey-plan" aria-label="想逛清单"><h3>想逛清单</h3><ol class="journey-stops">
     <li v-for="(group,index) in groups" :key="group.id" :class="{'is-active':active?.id===group.id}">
      <button type="button" class="stop-selector" :aria-expanded="active?.id===group.id" @click="selected=group.id"><span>{{index+1}}</span><strong>{{group.name}}</strong></button>
      <div v-if="active?.id===group.id" class="stop-expanded">

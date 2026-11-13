@@ -44,6 +44,9 @@
   .board-page .compact-board-hero .hero-browse-links { gap: 12px; font-size: 11px; }
   .guide-page .compact-map-hero { gap: 8px; padding: 10px 12px; margin-top: 16px; margin-bottom: 20px; }
   .map-hero-line { gap: 8px; }
+  .guide-page .compact-map-hero .map-hero-line { flex: 1; flex-wrap: wrap; }
+  .guide-page .compact-map-hero .map-hero-line > p { order: 1; flex-basis: 100%; }
+  .guide-page .compact-map-hero .map-hero-line > .button { margin-left: auto; min-height: 44px; }
   .guide-page .compact-map-hero h1 { font-size: 20px; }
   .guide-page .compact-map-hero .map-hero-line > p { font-size: 11px; }
   .guide-page .compact-map-hero .button { padding: 6px 8px; min-height: 32px; font-size: 11px; }

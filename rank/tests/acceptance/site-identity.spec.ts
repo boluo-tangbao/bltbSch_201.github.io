@@ -14,7 +14,7 @@ test('统一入口可往返，手机控制台滚动后仍可见并避开行程�
     await page.goto(path)
     await expect(page.locator('.logo')).toContainText('汤包的生活手记')
     await expect(page.locator('.nav-links a[aria-current="page"]')).toHaveCount(1)
-    await expect(page.locator('.nav-links').getByRole('link', { name: '逛店榜单', exact: true })).toHaveAttribute('href', 'rank/')
+    await expect(page.locator('.nav-links').getByRole('link', { name: '图片榜单', exact: true })).toHaveAttribute('href', 'rank/')
     await expect(page.locator('.nav-links').getByRole('link', { name: '个人主页', exact: true })).toHaveAttribute('href', 'index.html')
     await fits()
     if (narrow) {

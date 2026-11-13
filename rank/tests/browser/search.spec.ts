@@ -25,7 +25,7 @@ test('HIPPIHO search identifies the parent place and remains available through d
   await expect(page.locator('[id="' + targetId + '"]')).toBeFocused()
   await expect(page.locator('[id="' + targetId + '"]')).toBeInViewport()
   await expect(page.getByRole('searchbox')).toHaveValue('hippiho')
-  await page.getByRole('link', { name: '返回图片总榜' }).click()
+  await page.getByRole('link', { name: '返回图片榜单' }).click()
   await expect(page.locator('#place-card-' + hipp.id + ' .card-link')).toBeFocused()
   await expect(page.locator('.place-card')).toHaveCount(1)
 })

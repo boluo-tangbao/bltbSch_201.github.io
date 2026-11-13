@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 import { mkdirSync } from 'node:fs'
 
 const base = process.env.BROWSE_TEST_BASE || 'http://127.0.0.1:4173/bltbSch_201.github.io/rank/'
-const names = ['图片总榜', '地图与介绍', 'QA 与建议', '活动记录', '个人主页']
+const names = ['图片榜单', '地图找店', 'QA 与建议', '活动记录', '个人主页']
 mkdirSync('test-results/evidence', { recursive: true })
 
 test('pixel brand loads on every ranking page and matches the favicon', async ({ page }) => {
@@ -58,7 +58,7 @@ test('compact navigation keeps the adaptive brand and two-line links in a single
       expect(box!.x + box!.width).toBeLessThanOrEqual(width)
       expect(await link.evaluate(el => el.scrollWidth <= el.clientWidth)).toBe(true)
     }
-    const labels = [['图片', '总榜'], ['地图', '介绍'], ['QA与', '建议']]
+    const labels = [['图片', '榜单'], ['地图', '找店'], ['QA与', '建议']]
     for (const [i, lines] of labels.entries()) {
       const link = nav.getByRole('link', { name: names[i], exact: true })
       const upper = link.locator('.header-label').nth(0)
@@ -116,7 +116,7 @@ test('compact links and active navigation are consistent on guide, QA and update
     await expect(nav.getByRole('link', { name: /个人主页/ })).toBeInViewport()
     await expect(nav.getByRole('link', { name: /活动记录/ })).toHaveAttribute('href', '/bltbSch_201.github.io/rank/../activities.html?topic=acg#event-records')
     await expect(nav.getByRole('link', { name: /个人主页/ })).toHaveAttribute('href', '/bltbSch_201.github.io/rank/../')
-    if (route === 'guide/') await expect(nav.getByRole('link', { name: /地图与介绍/ })).toHaveAttribute('aria-current', 'page')
+    if (route === 'guide/') await expect(nav.getByRole('link', { name: /地图找店/ })).toHaveAttribute('aria-current', 'page')
     if (route === 'qa/') await expect(nav.getByRole('link', { name: /QA 与建议/ })).toHaveAttribute('aria-current', 'page')
   }
 })

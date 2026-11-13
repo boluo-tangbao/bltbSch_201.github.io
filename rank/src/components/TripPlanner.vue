@@ -50,34 +50,34 @@ onBeforeUnmount(release)
 </script>
 
 <template>
-  <div v-if="!plan.entries.value.length&&!plan.selecting.value" class="trip-plan-entry" :class="{ 'is-browsing': !currentPlace }" aria-label="逛店清单操作">
+  <div v-if="!plan.entries.value.length&&!plan.selecting.value" class="trip-plan-entry" :class="{ 'is-browsing': !currentPlace }" aria-label="想逛清单操作">
     <button type="button" class="trip-saved-launcher" aria-haspopup="dialog" @click="openArchive">本机行程</button>
     <button v-if="currentPlace" type="button" class="trip-current-add" @click="addCurrentPlace">加入清单</button>
-    <button type="button" class="trip-plan-launcher" :class="{ 'has-current-place': currentPlace }" @click="plan.setSelecting(true)"><span aria-hidden="true">＋</span> 规划逛店</button>
+    <button type="button" class="trip-plan-launcher" :class="{ 'has-current-place': currentPlace }" @click="plan.setSelecting(true)"><span aria-hidden="true">＋</span> 开始选店</button>
   </div>
-  <aside v-if="plan.entries.value.length||plan.selecting.value" class="trip-plan-dock" aria-label="本次逛店清单">
-    <div><strong>{{plan.selecting.value?'正在挑选想逛的地方':'本次逛店清单'}} · {{ groups.length }} 站</strong><small>{{plan.selecting.value?'点心形加入清单，也可进入介绍挑具体店铺':'选好下一站，带着清单出发'}}</small></div>
+  <aside v-if="plan.entries.value.length||plan.selecting.value" class="trip-plan-dock" aria-label="想逛清单">
+    <div><strong>{{plan.selecting.value?'正在挑选想逛的地方':'想逛清单'}} · {{ groups.length }} 站</strong><small>{{plan.selecting.value?'点心形加入清单，也可进入介绍挑具体店铺':'选好下一站，带着清单出发'}}</small></div>
     <div class="trip-dock-actions"><template v-if="plan.selecting.value"><button type="button" class="button dark" @click="finishSelecting">{{plan.entries.value.length?'查看清单':'退出选店'}}</button></template><template v-else><button type="button" class="text-button" @click="plan.setSelecting(true)">继续选店</button><button type="button" class="button dark" aria-haspopup="dialog" @click="openPlanner">查看清单</button></template></div>
   </aside>
   <dialog ref="dialog" class="trip-plan-dialog" aria-labelledby="trip-plan-title" @close="plannerOpen=false">
-    <header class="trip-plan-heading"><div><p class="section-label">THIS TRIP</p><h2 id="trip-plan-title">本次逛店清单</h2></div><button type="button" class="trip-plan-close" aria-label="关闭本次清单" @click="dialog?.close()">×</button></header>
-    <p class="trip-plan-note">本次清单默认临时使用，关闭标签页后清空；需下次继续，可主动加密保存到本机。自填地址和备注仅本页暂存，刷新或切换页面前请加密保存。</p>
+    <header class="trip-plan-heading"><div><p class="section-label">THIS TRIP</p><h2 id="trip-plan-title">想逛清单</h2></div><button type="button" class="trip-plan-close" aria-label="关闭想逛清单" @click="dialog?.close()">×</button></header>
+    <p class="trip-plan-note">想逛清单默认临时使用，关闭标签页后清空；需下次继续，可主动加密保存到本机。自填地址和备注仅本页暂存，刷新或切换页面前请加密保存。</p>
     <button type="button" class="button" @click="openArchive">保存／恢复行程</button>
     <section v-if="unavailable.length" class="trip-plan-unavailable" aria-label="原计划中需调整的条目"><h3>原计划中需调整</h3><p class="trip-plan-note">这些条目保留在原计划中，暂不参加路线与当前清单导出。</p><ul><li v-for="item in unavailable" :key="tripEntryKey(item.entry)">{{ item.name }} · {{ item.reason }} <button type="button" class="text-button" :aria-label="`移除失效条目：${item.name}`" @click="plan.remove(item.entry)">移除</button></li></ul></section>
     <DeferredFeature v-if="stops.length&&plannerOpen" :key="journeyRevision" inline :loader="loadJourney" title="行程规划" :places="places" :guide-url="guideUrl" @details="dialog?.close()" />
     <footer class="trip-plan-actions">
       <button type="button" class="button dark" :disabled="!stops.length" @click="exportPlan">生成清单文件</button>
-      <a v-if="documentUrl" class="button trip-plan-download" :href="documentUrl" :download="`本次逛店清单-${today}.html`">下载清单（HTML）↓</a>
-      <CopyButton :text="text" label="复制本次清单" />
+      <a v-if="documentUrl" class="button trip-plan-download" :href="documentUrl" :download="`想逛清单-${today}.html`">下载清单（HTML）↓</a>
+      <CopyButton :text="text" label="复制想逛清单" />
       <button type="button" class="button" aria-haspopup="dialog" @click="openShare">分享公开路线</button>
       <button type="button" class="button" :disabled="!selectedPlaces.length" @click="rankingOpen = true">导出所选地点榜单</button>
-      <button type="button" class="text-button" @click="clear">清空本次清单</button>
+      <button type="button" class="text-button" @click="clear">清空想逛清单</button>
     </footer>
     <p class="trip-plan-note">清单文件保留当前顺序、地址、楼层与档期，可离线阅读；地点榜单沿用原排名。详情和导航需联网。</p>
   </dialog>
   <DeferredFeature v-if="archiveOpen" :loader="loadArchive" title="本机行程" :entries="plan.entries.value" :places="places" :directories="directoryData" @close="archiveOpen = false" @restore="restoreTrip" />
   <DeferredFeature v-if="shareOpen" :loader="loadShare" title="公开路线分享" :entries="plan.entries.value" :places="places" :directories="directoryData" @close="shareOpen = false; openPlanner()" />
-  <ExportPanel v-if="rankingOpen" :site="site" :places="selectedPlaces" :all-places="places" current-label="本次清单" scope="本次逛店清单" :updated-at="updatedAt" @close="rankingOpen = false" />
+  <ExportPanel v-if="rankingOpen" :site="site" :places="selectedPlaces" :all-places="places" current-label="想逛清单" scope="想逛清单" :updated-at="updatedAt" @close="rankingOpen = false" />
 </template>
 
 <style scoped>

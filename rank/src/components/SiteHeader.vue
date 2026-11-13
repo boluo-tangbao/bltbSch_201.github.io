@@ -31,8 +31,8 @@ onBeforeUnmount(() => themeObserver?.disconnect())
     <div class="header-inner">
       <a :href="boardHref" class="brand" aria-label="菠萝汤包scho · 汤包的逛店手记"><BrandEmblem /><span class="brand-copy">汤包的逛店手记<small>菠萝汤包scho · 生活手记</small></span></a>
       <nav aria-label="主导航">
-        <a :href="boardHref" aria-label="逛店榜单" :aria-current="active === 'board' ? 'page' : undefined"><span class="header-label">逛店</span><span class="header-label">榜单</span></a>
-        <a :href="guideHref" aria-label="地图与介绍" :aria-current="active === 'guide' ? 'page' : undefined"><span class="header-label">地图<span class="header-wide-only">与</span></span><span class="header-label">介绍</span></a>
+        <a :href="boardHref" aria-label="图片榜单" :aria-current="active === 'board' ? 'page' : undefined"><span class="header-label">图片</span><span class="header-label">榜单</span></a>
+        <a :href="guideHref" aria-label="地图找店" :aria-current="active === 'guide' ? 'page' : undefined"><span class="header-label">地图</span><span class="header-label">找店</span></a>
         <a :href="qaHref" aria-label="QA 与建议" :aria-current="active === 'qa' ? 'page' : undefined"><span class="header-label">QA<span class="header-wide-only"> 与</span><span class="header-compact-only">与</span></span><span class="header-label">建议</span></a>
         <div class="header-secondary">
           <a :href="`${base}../activities.html?topic=acg#event-records`">活动记录 <span aria-hidden="true">↗</span></a>

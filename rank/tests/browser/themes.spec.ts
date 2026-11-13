@@ -36,7 +36,7 @@ test('visitor theme persists across pages, reloads and mobile layouts', async ({
     await expect(option).toHaveCSS('color', 'rgb(23, 27, 28)')
   }
   await page.screenshot({ path: 'test-results/evidence/themes-night.png' })
-  await page.getByRole('button', { name: '规划逛店', exact: true }).click()
+  await page.locator('.trip-plan-entry').getByRole('button', { name: '开始选店', exact: true }).click()
   const heart = page.locator('.trip-plan-add.is-icon-only').first()
   await heart.click()
   await heart.hover()

@@ -163,7 +163,7 @@ test('explicit keyboard load creates one non-autoplay iframe; close and detail n
     await widget.screenshot({ path: `test-results/evidence/bilibili-closed-${width}.png` })
     await load.click()
     await page.keyboard.press('Escape')
-    await page.getByRole('link', { name: '关闭介绍 ×' }).click()
+    await page.getByRole('link', { name: '返回地图找店' }).click()
     await expect(page.locator('iframe[src*="bilibili"]')).toHaveCount(0)
     await page.goto(`${base}guide/#/place/${clip.placeId}`)
     await expect(page.locator('iframe[src*="bilibili"]')).toHaveCount(0)

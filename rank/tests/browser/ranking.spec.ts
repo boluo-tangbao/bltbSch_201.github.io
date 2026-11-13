@@ -21,7 +21,7 @@ test('empty board: responsive layout, filters, invalid detail, exports', async (
   await expect(page.getByRole('searchbox')).toHaveValue('')
   await page.goto(empty + '#/place/missing'); await expect(page.getByRole('heading', { name: '没有找到这个条目' })).toBeVisible()
   await page.reload(); await expect(page.getByRole('heading', { name: '没有找到这个条目' })).toBeVisible()
-  await page.getByRole('link', { name: '返回榜单', exact: true }).click()
+  await page.getByRole('link', { name: '返回图片榜单', exact: true }).click()
   await page.locator('.mobile-tools-toggle').click()
   await page.getByRole('button', { name: '导出榜单' }).click()
   await page.getByRole('button', { name: '生成图片', exact: true }).click()
