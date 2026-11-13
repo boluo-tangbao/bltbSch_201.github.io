@@ -89,12 +89,11 @@ function tierColor(p: Place) { return tiers.find(t => t.id === p.tier)?.color ||
   <a href="#guide-main" class="skip-link" @click.prevent="main?.focus()">跳到正文</a>
   <SiteHeader active="guide" :board-url="linkTo(base)" />
   <main ref="main" id="guide-main" tabindex="-1" class="page-shell guide-page" :class="{ 'guide-map-view': guideView === 'map', 'guide-has-detail': !!selected, 'guide-browse-open': mobileBrowseOpen }">
-    <div class="guide-compare-entry"><PlaceCompare :places="all" :current-place="selected" /></div>
     <div id="guide-browser" class="guide-browser">
     <div class="guide-hero compact-map-hero"><div class="map-hero-line"><h1>去哪逛？</h1><p>挑个城市，开逛～</p><a :href="boardUrl" class="button" aria-label="回到图片总榜">← 总榜</a></div><MascotMoments class="mascot-embedded mascot-inline" priority :ids="['aqua', 'emilia']" rotate-all label="地图手记角色" /></div>
     <div class="filter-bar"><label class="city-filter"><span class="sr-only">城市筛选</span><select v-model="city" aria-label="城市筛选"><option value="">全部城市</option><option v-if="city && !cities.includes(city)" :value="city">{{ city }}（暂无条目）</option><option v-for="c in cities" :key="c">{{ c }}</option></select></label><label class="search-filter"><input v-model="query" type="search" aria-label="关键词搜索" placeholder="搜索地点、店铺、城市或标签…" /></label><div class="filter-result"><span role="status">{{ filtered.length }} 个结果</span><button class="text-button" :disabled="!city && !tag && !query.trim()" @click="reset">重置</button></div></div>
     <BrowseFilters :cities="cities" :colors="colors" :tags="tags" :city="city" :tag="tag" @city="city = $event" @tag="tag = $event" />
-    <div class="guide-browse-actions"><nav class="guide-view-switch" aria-label="地图与地点列表切换"><button type="button" :aria-pressed="guideView === 'map'" aria-controls="guide-atlas" @click="guideView = 'map'">地图</button><button type="button" :aria-pressed="guideView === 'list'" aria-controls="guide-directory" @click="guideView = 'list'">地点列表 · {{ filtered.length }}</button></nav><ShareFilters :city="city" :tag="tag" :query="query" /></div>
+    <div class="guide-browse-actions"><nav class="guide-view-switch" aria-label="地图与地点列表切换"><button type="button" :aria-pressed="guideView === 'map'" aria-controls="guide-atlas" @click="guideView = 'map'">地图</button><button type="button" :aria-pressed="guideView === 'list'" aria-controls="guide-directory" @click="guideView = 'list'">地点列表 · {{ filtered.length }}</button></nav><PlaceCompare v-if="!selected" :places="all" /><ShareFilters :city="city" :tag="tag" :query="query" /></div>
     <div v-show="guideView === 'map'" id="guide-atlas" class="guide-map-panel">
       <PlaceMap :places="filtered" :total-places="all.length" :colors="colors" :selected-id="filtered.some(p => p.id === selected?.id) ? selected?.id : undefined" @select="select" />
     </div>
@@ -104,7 +103,7 @@ function tierColor(p: Place) { return tiers.find(t => t.id === p.tier)?.color ||
       <div class="guide-main-column">
         <section ref="detailContainer" tabindex="-1" class="selected-detail" :class="{ 'is-awaiting-place': isIndex && !selected }" aria-label="当前地点介绍">
           <button v-if="selected" ref="mobileBrowseToggle" type="button" class="mobile-detail-browse" :aria-expanded="mobileBrowseOpen" aria-controls="guide-browser" @click="toggleMobileBrowse">{{ mobileBrowseOpen ? '收起地图与筛选' : '展开地图与筛选' }}</button>
-          <template v-if="selected"><p v-if="!filtered.some(p => p.id === selected!.id)" class="map-notice">当前查看的地点不在筛选结果中。<button class="text-button" @click="reset">显示全部地点</button></p><div class="detail-navigation"><a :href="boardUrl">← 返回图片总榜</a><a href="#/">关闭介绍 ×</a></div><PlaceDetail ref="detail" @ready="detailReady" :key="selected.id" :search-query="parsePlaceRoute(route)?.query" :place="selected" :rank="site.rankWithinTier ? rankOf(selected) : undefined" :color="cityColor(selected.city, colors)" /></template>
+          <template v-if="selected"><p v-if="!filtered.some(p => p.id === selected!.id)" class="map-notice">当前查看的地点不在筛选结果中。<button class="text-button" @click="reset">显示全部地点</button></p><div class="detail-navigation"><a :href="boardUrl">← 返回图片总榜</a><div class="detail-secondary-actions"><PlaceCompare :places="all" :current-place="selected" /><a href="#/">关闭介绍 ×</a></div></div><PlaceDetail ref="detail" @ready="detailReady" :key="selected.id" :search-query="parsePlaceRoute(route)?.query" :place="selected" :rank="site.rankWithinTier ? rankOf(selected) : undefined" :color="cityColor(selected.city, colors)" /></template>
           <div v-else-if="!isIndex" class="guide-empty-detail"><h2>没有找到这个条目</h2><p>链接可能有误，或条目尚未公开。</p><a href="#/" class="button">返回地图目录</a></div>
           <div v-else class="guide-empty-detail"><MascotMoments class="mascot-embedded mascot-empty" :ids="['ichinose', 'mordred', 'hestia', 'zero-two', 'eris', 'marin']" rotate-all label="地点介绍角色" /><div class="guide-empty-copy"><h2>每一站，都有一段介绍</h2><p>从地点目录选择一处逛店地点，查看评价、周边和导航。</p></div></div>
         </section>
@@ -116,7 +115,6 @@ function tierColor(p: Place) { return tiers.find(t => t.id === p.tier)?.color ||
 </template>
 
 <style scoped>
-.guide-compare-entry { display: flex; justify-content: flex-end; margin-bottom: 8px; }
-.guide-browse-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 0 16px; }
+.guide-browse-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 0 16px; }
 .guide-browse-actions .guide-view-switch { flex: 1; min-width: 0; margin: 0; }
 </style>

@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs'
 import { flattenPlaces } from '../../src/utils/model'
 import { comparisonFacts, comparisonRows } from '../../src/utils/placeComparison'
 import { placeDetailHash } from '../../src/utils/search'
+import { openMobileTools } from '../browser/browse-tools'
 
 const places = flattenPlaces(JSON.parse(readFileSync('src/data/places.json', 'utf8'))).filter(p => p.published)
 const directories = JSON.parse(readFileSync('src/data/shop-directories.json', 'utf8'))
@@ -19,6 +20,7 @@ test.beforeEach(async ({ page, context, baseURL }) => {
 
 test('商圈对比支持筛选、三项上限、逐行数据、差异筛选及跨页记忆', async ({ page }) => {
   await page.goto('./')
+  await openMobileTools(page)
   const launch = page.getByRole('button', { name: /^商圈对比/ })
   await launch.click()
   const dialog = page.getByRole('dialog', { name: '商圈对比', exact: true })
@@ -67,6 +69,7 @@ test('商圈对比支持筛选、三项上限、逐行数据、差异筛选及�
   await expect(dialog.getByRole('table')).toHaveCount(0)
   await page.keyboard.press('Escape')
   await page.reload()
+  await openMobileTools(page)
   await page.getByRole('button', { name: /^商圈对比/ }).click()
   await expect(dialog.getByText('已选 0 / 3')).toBeVisible()
 })

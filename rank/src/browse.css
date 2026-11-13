@@ -8,15 +8,19 @@
 }
 
 /* Browsing layout is independent of the shared portrait artwork and sizes. */
-.mobile-tools-toggle, .photo-options .mobile-export { display: none; }
+.mobile-tools-toggle { display: none; }
+.photo-options .button { min-height: var(--ui-touch); font-size: 12px; }
+.detail-secondary-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-left: auto; }
+.detail-navigation { flex-wrap: wrap; gap: 8px 16px; }
+.detail-navigation > a, .detail-secondary-actions > a { display: inline-flex; align-items: center; min-height: var(--ui-touch); }
+.detail-secondary-actions .compare-launch { font-size: 12px; }
+.detail-navigation > .back-link { font-size: 14px; font-weight: 700; }
 @media (max-width: 580px) {
-  .board-page .desktop-export { display: none; }
   .mobile-tools-toggle { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 44px; margin: 0 0 12px; padding: 8px 12px; border: 1px solid #d8bdc5; border-radius: 4px; background: #fffaf1; color: var(--manga-ink); font: inherit; font-size: 13px; font-weight: 700; text-align: left; }
   .mobile-tools-toggle > span:first-child { min-width: 0; overflow-wrap: anywhere; }
   .mobile-tools-toggle small { color: #a83750; font-size: 12px; }
   .board-tools-content { display: none; }
   .board-tools-content.is-open { display: block; padding: 0 4px 12px; }
-  .photo-options .mobile-export { display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; }
   .board-tools-content .photo-options { gap: 10px; }
   .board-tools-content .board-view-controls button { min-height: 44px; }
 }
@@ -161,7 +165,7 @@
   .guide-detail .detail-heading { padding: 24px 20px 16px; background: var(--ui-surface); }
   .guide-detail .detail-heading h1 { font-size: 28px; line-height: 1.4; letter-spacing: -.02em; }
   .detail-title-row { flex-wrap: wrap; gap: 4px 12px; }
-  body:has(.trip-plan-entry) .detail-title-row .trip-plan-add { display: none; }
+  body:has(.trip-plan-entry:not(.is-browsing)) .detail-title-row .trip-plan-add { display: none; }
   .detail-highlights .detail-summary { font-family: inherit; font-size: 15px; line-height: 1.8; color: var(--ui-ink); }
   .detail-heading .detail-address { font-size: 12px; line-height: 1.8; }
   .detail-heading .detail-address > span { display: block; padding: 0; border: 0; overflow-wrap: anywhere; }

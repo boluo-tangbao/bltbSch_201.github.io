@@ -32,7 +32,6 @@ export function useStoredFilters() {
   window.addEventListener('popstate', restore)
   onBeforeUnmount(() => window.removeEventListener('popstate', restore))
   function linkTo(path: string) {
-    if (!urlMode.value) return path
     const url = new URL(urlWithFilters(new URL(path, location.href).href, { city: city.value, tag: tag.value, query: query.value }))
     return `${url.pathname}${url.search}${url.hash}`
   }

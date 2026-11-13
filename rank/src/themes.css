@@ -91,7 +91,7 @@
 :root[data-theme="night"] :is(.directory-place,.directory-city-group summary,.place-gallery-nav button,.copy-button,.address-actions a,.map-missing-address button,.card-search-link,.mascot-angle,.clip-load,.clip-external):hover { background: var(--edition-soft); color: var(--edition-text); }
 :root[data-theme="night"] :is(.suggestion-form input,.suggestion-form select,.suggestion-form textarea):focus { background: var(--edition-paper); color: var(--edition-text); }
 :root[data-theme="night"] .trip-journey select:disabled { background: var(--edition-soft); }
-:root[data-theme="night"] :is(.visit-notices-acknowledge,.trip-archive button.primary,.trip-current-add,.trip-plan-entry .trip-plan-launcher,.trip-journey .primary) { background: var(--edition-accent); color: var(--edition-ink); border-color: var(--edition-accent); }
+:root[data-theme="night"] :is(.visit-notices-acknowledge,.trip-archive button.primary,.trip-current-add,.trip-plan-entry:not(.is-browsing) .trip-plan-launcher,.trip-journey .primary) { background: var(--edition-accent); color: var(--edition-ink); border-color: var(--edition-accent); }
 :root[data-theme="night"] .journey-stops > li.is-active { box-shadow: inset 3px 0 var(--edition-accent); }
 :root[data-theme="night"] .is-active .stop-selector > span { background: var(--edition-accent); color: var(--edition-ink); }
 :root[data-theme="night"] :is(.detail-side-nav,.detail-visit-notes,.trip-plan-dock,.place-gallery-item,.community-panel,.place-directory) { box-shadow: 4px 4px 0 var(--edition-header); }

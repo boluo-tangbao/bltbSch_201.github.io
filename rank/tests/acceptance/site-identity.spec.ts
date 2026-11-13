@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { mkdirSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { openMobileTools } from '../browser/browse-tools'
 
 test('统一入口可往返，手机控制台滚动后仍可见并避开行程栏', async ({ page, baseURL }, info) => {
   const origin = new URL(baseURL!).origin
@@ -36,7 +37,7 @@ test('统一入口可往返，手机控制台滚动后仍可见并避开行程�
       expect(cityLabels.every(text => text.includes(city))).toBe(true)
       await page.locator('.photo-card .card-link').first().click()
       await expect(page.locator('.guide-detail h1')).toBeVisible()
-      expect(new URL(page.url()).pathname).toContain('/rank/guide/')
+      expect(new URL(page.url()).pathname).toMatch(/\/rank\/$/)
       await page.goto('../')
       await page.getByRole('group', { name: '按城市逛', exact: true }).getByRole('link', { name: '全部城市', exact: true }).click()
       await expect(page.getByRole('combobox', { name: '城市筛选', exact: true })).toHaveValue('')
@@ -73,6 +74,7 @@ test('统一入口可往返，手机控制台滚动后仍可见并避开行程�
     await page.getByRole('button', { name: '关闭控制台', exact: true }).click()
     await expect(page.locator('.sc-panel')).toBeHidden()
     if (info.project.name === 'mobile') await page.screenshot({ path: resolve(evidence, 'console-follow-scroll-390.png') })
+    await openMobileTools(page)
     await page.getByRole('button', { name: /^商圈对比/ }).click()
     await expect(page.getByRole('dialog', { name: '商圈对比', exact: true })).toBeVisible()
     await page.keyboard.press('Escape')

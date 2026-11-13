@@ -50,7 +50,7 @@ onBeforeUnmount(release)
 </script>
 
 <template>
-  <div v-if="!plan.entries.value.length&&!plan.selecting.value" class="trip-plan-entry" aria-label="逛店清单操作">
+  <div v-if="!plan.entries.value.length&&!plan.selecting.value" class="trip-plan-entry" :class="{ 'is-browsing': !currentPlace }" aria-label="逛店清单操作">
     <button type="button" class="trip-saved-launcher" aria-haspopup="dialog" @click="openArchive">本机行程</button>
     <button v-if="currentPlace" type="button" class="trip-current-add" @click="addCurrentPlace">加入清单</button>
     <button type="button" class="trip-plan-launcher" :class="{ 'has-current-place': currentPlace }" @click="plan.setSelecting(true)"><span aria-hidden="true">＋</span> 规划逛店</button>
@@ -115,7 +115,7 @@ onBeforeUnmount(release)
 .trip-plan-download { overflow-wrap: anywhere; }
 .trip-current-add { display: none; }
 @media (max-width: 580px) {
-  :global(body:has(.trip-plan-entry)), :global(body:has(.trip-plan-dock)) { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
+  :global(body:has(.trip-plan-entry:not(.is-browsing))), :global(body:has(.trip-plan-dock)) { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
   .trip-plan-entry, .trip-plan-dock { position: fixed; z-index: 850; inset: auto 0 0; width: 100%; transform: none; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); border: 0; border-top: 1px solid var(--ui-border); background: var(--ui-surface); box-shadow: 0 -3px 16px #2928300a; }
   .trip-plan-entry > button { position: static; min-height: 44px; margin: 0; border-radius: var(--ui-radius-control); box-shadow: none; font: inherit; font-size: 13px; cursor: pointer; }
   .trip-plan-entry .trip-saved-launcher { padding: 8px; border: 0; background: none; color: var(--ui-muted); }
@@ -129,5 +129,7 @@ onBeforeUnmount(release)
   .trip-plan-dialog { padding: 16px; }
   .trip-plan-entry button:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 2px; }
 }
-@media (max-width: 800px) { :global(body:has(.trip-plan-dock) .detail-side-nav), :global(body:has(.trip-plan-entry) .detail-side-nav) { bottom: calc(110px + env(safe-area-inset-bottom)); } }
+.trip-plan-entry.is-browsing { position: static; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; width: auto; margin: 20px auto; padding: 0 16px; border: 0; background: none; box-shadow: none; transform: none; }
+.trip-plan-entry.is-browsing > button { position: static; min-width: 0; min-height: 44px; padding: 8px 12px; border: 1px solid var(--ui-border); border-radius: var(--ui-radius-control); background: var(--ui-surface); color: var(--ui-muted); box-shadow: none; font: inherit; font-size: 13px; }
+@media (max-width: 800px) { :global(body:has(.trip-plan-dock) .detail-side-nav), :global(body:has(.trip-plan-entry:not(.is-browsing)) .detail-side-nav) { bottom: calc(110px + env(safe-area-inset-bottom)); } }
 </style>
