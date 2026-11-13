@@ -1,13 +1,21 @@
-import { test, expect } from '@playwright/test'
+import { test, expect, type Page } from '@playwright/test'
 import { mkdirSync } from 'node:fs'
 
 const base = process.env.BROWSE_TEST_BASE || 'http://127.0.0.1:4173/bltbSch_201.github.io/rank/'
+async function switchTheme(page: Page, name: 'Day' | 'Night') {
+  await page.locator('.sc-launcher').click()
+  await page.locator('#sc-theme-slot').getByRole('button', { name: `${name} version`, exact: true }).click()
+  await page.mouse.move(0, 0)
+  await page.keyboard.press('Escape')
+  await expect(page.locator('.sc-panel')).toBeHidden()
+}
+
 test('visitor theme persists across pages, reloads and mobile layouts', async ({ page }) => {
   await page.goto(base)
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'day')
   mkdirSync('test-results/evidence', { recursive: true })
   await page.screenshot({ path: 'test-results/evidence/themes-day.png' })
-  await page.getByRole('button', { name: 'Night version', exact: true }).click()
+  await switchTheme(page, 'Night')
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'night')
   await expect(page.locator('.site-header nav a[aria-current]')).toHaveCSS('background-color', 'rgb(213, 243, 74)')
   // Selection must stay readable, including while the pointer remains over it.
@@ -38,13 +46,13 @@ test('visitor theme persists across pages, reloads and mobile layouts', async ({
   for (const route of ['', 'guide/', 'qa/', 'updates/', 'route/']) {
     await page.goto(base + route)
     await expect(page.locator('html')).toHaveAttribute('data-theme', 'night')
-    await expect(page.getByRole('button', { name: 'Night version', exact: true })).toHaveAttribute('aria-pressed', 'true')
+    await expect(page.locator('#sc-theme-slot button[aria-pressed="true"]')).toHaveText(/Night/)
     for (const width of [320, 768, 1440]) {
       await page.setViewportSize({ width, height: 900 })
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
     }
   }
-  await page.getByRole('button', { name: 'Day version', exact: true }).click()
+  await switchTheme(page, 'Day')
   await page.reload()
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'day')
 })
@@ -54,7 +62,11 @@ test('studio preview and actual PNG follow the theme and discard obsolete downlo
   await page.getByRole('button', { name: '导出榜单', exact: true }).click()
   const dialog = page.getByRole('dialog')
   for (const [theme, rgb] of [['Day', [255, 226, 232]], ['Night', [32, 41, 37]]] as const) {
-    await dialog.getByRole('button', { name: `${theme} version`, exact: true }).click()
+    const settings = await page.context().newPage()
+    await settings.goto(base)
+    await switchTheme(settings, theme)
+    await settings.close()
+    await expect(page.locator('html')).toHaveAttribute('data-theme', theme.toLowerCase())
     await expect(dialog.locator('.download-list img')).toHaveCount(0)
     mkdirSync('test-results/evidence', { recursive: true })
     await page.screenshot({ path: `test-results/evidence/export-theme-${theme.toLowerCase()}.png` })
@@ -82,6 +94,6 @@ test('disabled browser storage still permits switching themes', async ({ page })
     Storage.prototype.setItem = () => { throw new Error('Storage blocked') }
   })
   await page.goto(base)
-  await page.getByRole('button', { name: 'Night version', exact: true }).click()
+  await switchTheme(page, 'Night')
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'night')
 })

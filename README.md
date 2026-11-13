@@ -171,4 +171,4 @@ Vite 默认 base 为 `/bltbSch_201.github.io/rank/`；CI 从 `configure-pages` �
 
 ## Day / Night 访客风格
 
-榜单、地图、QA、更新与行程页共用 Day version／Night version 切换，入口位于页头与导出弹窗。默认粉白 Day；绿黑 Night 为深色阅读配色。选择保存在浏览器并在同源页面间同步；禁用本地存储时仍可切换，但不保证刷新记忆。网页、弹窗示意、PNG 海报和 HTML 存档使用同一套主题，保留城市识别色、档位、照片及原排序。切换主题会释放旧导出结果，正在生成的导出会取消，避免当前配色与下载内容不一致。配色维护于 `rank/src/utils/themePalette.ts`，网页与弹窗适配位于 `rank/src/themes.css`。
+榜单、地图、QA、更新与行程页共用 Day version／Night version 切换，入口集中在控制台的“页面风格”区；导出弹窗显示当前沿用的风格。默认粉白 Day；绿黑 Night 为深色阅读配色。选择保存在浏览器并在同源页面间同步；禁用本地存储时仍可切换，但不保证刷新记忆。网页、弹窗示意、PNG 海报和 HTML 存档使用同一套主题，保留城市识别色、档位、照片及原排序。切换主题会释放旧导出结果，正在生成的导出会取消，避免当前配色与下载内容不一致。配色维护于 `rank/src/utils/themePalette.ts`，网页与弹窗适配位于 `rank/src/themes.css`。

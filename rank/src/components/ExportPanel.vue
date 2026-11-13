@@ -8,7 +8,6 @@ import updateData from '../data/updates.json'
 import { publicUpdates } from '../utils/model'
 import { previewUrl } from '../utils/assets'
 import '../export-poster.css'
-import ThemeSwitch from './ThemeSwitch.vue'
 import { theme } from '../utils/theme'
 const props = defineProps<{ site: Site; places: Place[]; allPlaces: Place[]; scope: string; updatedAt: string | null; currentLabel?: string }>()
 const emit = defineEmits<{ close: [] }>()
@@ -71,7 +70,7 @@ async function generate() {
     </header>
     <div class="studio-layout">
       <div class="studio-controls">
-        <div class="studio-theme"><span>页面与导出风格</span><ThemeSwitch :disabled="busy" /></div>
+        <div class="studio-theme"><span>导出风格</span><span>{{ theme === 'night' ? 'Night version' : 'Day version' }} · 与页面一致</span></div>
         <fieldset :disabled="busy" class="studio-fieldset"><legend><span>01 /</span> 选择版式</legend>
           <label v-for="format in formats" :key="format.value" class="studio-format">
             <input v-model="mode" type="radio" :value="format.value" name="mode" :aria-label="`${format.name} · ${format.detail}`" />

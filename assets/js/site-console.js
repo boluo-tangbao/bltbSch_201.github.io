@@ -28,6 +28,7 @@
         <a class="sc-destination sc-home" data-home aria-label="个人主页"><span class="sc-destination-label"><strong>个人主页</strong><span aria-hidden="true">↗</span></span><span class="sc-destination-note">生活里的小小收藏</span></a>
         <a class="sc-destination sc-board" data-board aria-label="逛店榜单"><span class="sc-destination-label"><strong>逛店榜单</strong><span aria-hidden="true">↗</span></span><span class="sc-destination-note">下一站，去哪里？</span></a>
       </nav>
+      <div id="sc-theme-slot"></div>
       <section class="sc-section" aria-labelledby="sc-music-heading">
         <h3 id="sc-music-heading">背景音乐</h3>
         <div class="sc-record"><div class="sc-disc" aria-hidden="true"><span></span></div><div><strong class="sc-title">音乐准备中</strong><p class="sc-muted sc-count">等待添加网站歌单</p></div></div>
@@ -47,7 +48,7 @@
   const panel = $('.sc-panel'), launcher = $('.sc-launcher');
   const hoverAvailable = matchMedia('(any-hover: hover)');
   const inlineLayout = matchMedia('(max-width: 900px)');
-  const findInlineTarget = () => document.querySelector('.theme-toolbar, .navbar .nav-links, .site-nav nav');
+  const findInlineTarget = () => document.querySelector('.site-header .header-inner nav, .navbar .nav-links, .site-nav nav');
   function placeLauncher() {
     const inlineTarget = findInlineTarget();
     if (inlineLayout.matches && inlineTarget) inlineTarget.append(launcher);

@@ -1,8 +1,15 @@
-.theme-toolbar { display: flex; justify-content: flex-end; max-width: 1200px; margin: auto; padding: 0 36px 10px; }
 .theme-switch { display: inline-flex; gap: 3px; padding: 3px; border: 1px solid var(--edition-line); border-radius: 6px; background: var(--edition-surface); color: var(--edition-text); }
 .theme-switch button { min-height: 36px; padding: 6px 12px; border: 0; border-radius: 3px; background: transparent; color: inherit; font-family: inherit; font-size: 12px; font-weight: 600; line-height: 1.4; white-space: nowrap; }
 .theme-switch button[aria-pressed="true"] { background: var(--edition-accent); color: #171b1c; }
 .theme-switch button:focus-visible { outline: 2px solid var(--edition-accent-text); outline-offset: 2px; }
+#site-console .theme-switch { display: flex; width: 100%; gap: 4px; padding: 4px; border-color: var(--edition-line); background: var(--edition-paper); }
+#sc-theme-slot { container-type: inline-size; container-name: console-theme; }
+#site-console .theme-switch button { flex: 1; min-width: 0; gap: 4px; min-height: 44px; padding: 8px; border: 0; border-radius: 5px; background: transparent; color: var(--edition-text); font-size: 13px; }
+@container console-theme (max-width: 280px) {
+  #site-console #sc-theme-heading { display: none; }
+  #site-console .theme-switch .theme-label { display: none; }
+  #site-console .theme-switch .theme-icon { font-size: 22px; line-height: 1; }
+}
 .studio-theme { display: grid; gap: 10px; margin-bottom: 25px; font-size: 12px; font-weight: 700; }
 .studio-theme .theme-switch { width: fit-content; }
 :root[data-theme="night"] {
@@ -100,6 +107,8 @@
 :root[data-theme="night"] #site-console .sc-disc { box-shadow: 0 0 0 6px var(--edition-soft); }
 :root[data-theme="night"] #site-console .sc-disc span { background: var(--edition-accent); color: var(--edition-ink); }
 :root[data-theme="night"] #site-console input { accent-color: var(--edition-accent); }
+:root[data-theme] #site-console .theme-switch button[aria-pressed="true"] { background: var(--edition-accent); color: #171b1c; }
+:root[data-theme] #site-console .theme-switch button:focus-visible { outline: 2px solid var(--edition-accent-text); outline-offset: 2px; }
 
 /* Keep selected controls distinct from the neutral and hover surfaces. */
 :root[data-theme="night"] :is(.guide-view-switch button,.city-map-tabs button,.city-place-list button,.detail-chapters button,.detail-side-nav button,.compare-candidates button,.trip-plan-add) { background: var(--edition-paper); color: var(--edition-text); border-color: var(--edition-line); }
@@ -121,8 +130,6 @@
 :root[data-theme="night"] .trip-plan-add.is-icon-only::before { background: var(--edition-surface); }
 :root[data-theme="night"] .trip-plan-add:is(.is-icon-only,.is-plain)[aria-pressed="true"]::before { background: var(--edition-accent); }
 :root[data-theme="night"] :is(button,a,input,select,textarea,summary):focus-visible { outline: 3px solid var(--edition-accent); outline-offset: 3px; }
-@media (max-width: 800px) { .theme-toolbar { padding-inline: 24px; } }
-@media (max-width: 580px) { .theme-toolbar { padding: 0 12px 8px; } .theme-switch button { min-height: 36px; padding: 6px 10px; } }
 
 /* The export studio uses the same palette as the selected page theme. */
 :root[data-theme] .export-studio { --export-ink: var(--edition-text); --export-acid: var(--edition-accent); --export-paper: var(--edition-paper); }

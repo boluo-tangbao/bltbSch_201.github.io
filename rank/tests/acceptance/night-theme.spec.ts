@@ -8,7 +8,6 @@ test('Night panels cover comparison, atlas, directory, detail and dialogs', asyn
   expect(new URL(base).hostname).toBe('127.0.0.1')
   const places = flattenPlaces(JSON.parse(readFileSync('src/data/places.json', 'utf8'))).filter(p => p.published)
   await page.route('**/*', route => new URL(route.request().url()).origin === new URL(base).origin ? route.continue() : route.abort())
-  await page.addLocatorHandler(page.locator('#site-console.sc-open'), async () => { await page.mouse.move(0, 0); await page.keyboard.press('Escape') })
   const noLightPanels = async () => {
     const light = await page.evaluate(() => [...document.querySelectorAll('body *')].flatMap(el => {
       if (!(el instanceof HTMLElement) || !el.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true }) || !el.getBoundingClientRect().width) return []
@@ -26,7 +25,11 @@ test('Night panels cover comparison, atlas, directory, detail and dialogs', asyn
   }
   mkdirSync('test-results/evidence', { recursive: true })
   await page.goto(base)
-  await page.getByRole('button', { name: 'Night version', exact: true }).click()
+  await page.locator('.sc-launcher').click()
+  await page.locator('#sc-theme-slot').getByRole('button', { name: 'Night version', exact: true }).click()
+  await page.mouse.move(0, 0)
+  await page.keyboard.press('Escape')
+  await page.addLocatorHandler(page.locator('#site-console.sc-open'), async () => { await page.mouse.move(0, 0); await page.keyboard.press('Escape') })
   for (const width of [page.viewportSize()!.width]) {
     await page.setViewportSize({ width, height: 1000 })
     await page.goto(base + 'guide/')

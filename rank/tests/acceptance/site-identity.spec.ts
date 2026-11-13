@@ -46,7 +46,7 @@ test('统一入口可往返，手机控制台滚动后仍可见并避开行程�
   await expect(page.locator('.brand-copy')).toContainText('菠萝汤包scho · 生活手记')
   await fits()
   if (narrow) {
-    const launcher = page.locator('.theme-toolbar > .sc-launcher')
+    const launcher = page.locator('.site-header .header-inner nav > .sc-launcher')
     await expect(launcher).toBeVisible()
     const viewButtons = page.getByRole('group', { name: '榜单视图' })
     await viewButtons.getByRole('button', { name: '舒适', exact: true }).click()

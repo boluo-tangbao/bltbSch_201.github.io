@@ -14,7 +14,6 @@ body .btn:hover { transform: none; }
 @media (max-width: 900px) {
   .navbar .nav-links { gap: 0 4px; }
   .navbar .nav-links a { padding: 8px; }
-  .theme-toolbar { align-items: center; flex-wrap: wrap; gap: 8px; }
 }
 @media (max-width: 680px) {
   .navbar .logo strong { font-size: 18px; }

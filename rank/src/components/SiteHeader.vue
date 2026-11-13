@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onMounted, onBeforeUnmount, ref } from 'vue'
 import BrandEmblem from './BrandEmblem.vue'
 import FallingPlaceTags from './FallingPlaceTags.vue'
 import ThemeSwitch from './ThemeSwitch.vue'
@@ -10,6 +10,20 @@ const boardHref = computed(() => props.active === 'board' ? '#/' : props.boardUr
 const guideHref = computed(() => props.active === 'guide' ? '#/' : props.guideUrl || `${base}guide/`)
 const qaHref = `${base}qa/`
 const homeHref = `${base}../`
+const themeTarget = ref<HTMLElement | null>(null)
+let themeObserver: MutationObserver | undefined
+onMounted(() => {
+  const connect = () => {
+    themeTarget.value = document.getElementById('sc-theme-slot')
+    if (themeTarget.value) themeObserver?.disconnect()
+  }
+  connect()
+  if (!themeTarget.value) {
+    themeObserver = new MutationObserver(connect)
+    themeObserver.observe(document.body, { childList: true, subtree: true })
+  }
+})
+onBeforeUnmount(() => themeObserver?.disconnect())
 </script>
 
 <template>
@@ -26,8 +40,10 @@ const homeHref = `${base}../`
         </div>
       </nav>
     </div>
-    <div class="theme-toolbar"><ThemeSwitch /></div>
   </header>
+  <Teleport v-if="themeTarget" :to="themeTarget">
+    <section class="sc-section" aria-labelledby="sc-theme-heading"><h3 id="sc-theme-heading">页面风格</h3><ThemeSwitch /></section>
+  </Teleport>
   <FallingPlaceTags />
 </template>
 
