@@ -5,8 +5,18 @@ import { resolve, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 export const activityRoot = fileURLToPath(new URL('../content/activities/', import.meta.url))
 export const mediaExtensions = new Set(['.jpg','.jpeg','.png','.webp','.mp4','.mov'])
-export function activityFiles(folder) {
- return readdirSync(resolve(activityRoot,folder)).filter(file=>statSync(resolve(activityRoot,folder,file)).isFile()&&mediaExtensions.has(extname(file).toLowerCase())).sort((a,b)=>a.localeCompare(b,'zh-CN',{numeric:true}))
+export function activityFiles(folder, root = activityRoot) {
+ const files=[]
+ const walk=prefix=>{
+  for(const entry of readdirSync(resolve(root,folder,prefix),{withFileTypes:true})) {
+   const file=prefix ? prefix+'/'+entry.name : entry.name
+   if(entry.name.startsWith('.') || file==='preview')continue
+   if(entry.isDirectory())walk(file)
+   else if(entry.isFile()&&mediaExtensions.has(extname(file).toLowerCase()))files.push(file)
+  }
+ }
+ walk('')
+ return files.sort((a,b)=>a.localeCompare(b,'zh-CN',{numeric:true}))
 }
 export function readActivities() {
  const ids=new Set()

@@ -4,7 +4,7 @@ import { existsSync, mkdirSync, readdirSync, statSync, writeFileSync, unlinkSync
 import { resolve, extname, relative, isAbsolute } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { execFileSync } from 'node:child_process'
-import { readActivities } from './activity-metadata.mjs'
+import { activityFiles, readActivities } from './activity-metadata.mjs'
 import { isVideoCopy } from './video-copies.mjs'
 const require = createRequire(new URL('../rank/package.json', import.meta.url))
 const sharp = require('sharp'), ffmpeg = require('@ffmpeg-installer/ffmpeg').path
@@ -21,7 +21,7 @@ export async function prepareActivities() {
   if (rel.startsWith('..') || isAbsolute(rel)) throw new Error('素材目录越界')
   const {date, dateLabel, name} = event
   const media = []
-  for (const file of readdirSync(dir).sort((a,b)=>a.localeCompare(b,'zh-CN',{numeric:true}))) {
+  for (const file of activityFiles(event.folder)) {
    const input = resolve(dir, file), stat = statSync(input), ext = extname(file).toLowerCase()
    if (!stat.isFile() || !['.jpg','.jpeg','.png','.webp','.mp4','.mov'].includes(ext)) continue
    originals += stat.size

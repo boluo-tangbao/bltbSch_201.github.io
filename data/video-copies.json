@@ -82,5 +82,25 @@
   "rank/public/images/places/Suzhou/Xingyuehui/video-01.mp4": {
     "sha256": "ec6d0b1d3acb76daaad1cd085f90f395a28f10e2d0fbb6954725db38972debde",
     "originalSha256": "198fd7f0cffbf28bac688eb2c1594a91efe1e424417b2abf6642c4fe1874402c"
+  },
+  "content/activities/2026-7-31：鹰角fes期间的四平路玛格萝妮聚会+饭后only/1794627506902.mp4": {
+    "sha256": "2fef56542f1d56070cceb5f7c310c235ee09921cbcfc473593b49ba36cafde52",
+    "originalSha256": "fb80345869770f52c62292cecba2f7ce09dc1d53aa9103f8e9518e90a28f0f10"
+  },
+  "content/activities/2026-7-31：鹰角fes期间的四平路玛格萝妮聚会+饭后only/1794627513331.mp4": {
+    "sha256": "ca867146eeaf65a1a6ad9dec962b1d26b8e6581ea23971a98f0fe98e91f81280",
+    "originalSha256": "e15cd3e48794444916f9b86cecb482ecd16afb029d4ee1ee335dc23647af1ea7"
+  },
+  "content/activities/2026-7-31：鹰角fes期间的四平路玛格萝妮聚会+饭后only/晚上 音乐only/1794627517495.mp4": {
+    "sha256": "6432e5b7cb98b4e0d204d50ac1ea9b1362cfa977b788d7268e385a4a2da2a540",
+    "originalSha256": "c0707514d6f70ed2087b3d5658bf38a1cd4cc88cd761e88adb9605d80fa45477"
+  },
+  "content/activities/2026-8-1：ChinaJoy/1794627409362.mp4": {
+    "sha256": "fedbf7620fcbfa74100776a73b2b1309582384a20fe66ef8cb58e591b04c76bd",
+    "originalSha256": "07f9cc9ffbc36b5045d813529745e03d6651cac5cb3a1c473d334de149dcb8de"
+  },
+  "content/activities/2026-8-1：ChinaJoy/1794627410860.mp4": {
+    "sha256": "8d82fbc3fedadc6af6c9e97879607fe0394c56b920c3550215d4f02c5e8d6410",
+    "originalSha256": "8bcf300a54f07f0db2595b90a95de04fad5ded3591241493675f5ed8bf7c63c1"
   }
 }
