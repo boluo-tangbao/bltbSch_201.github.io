@@ -66,3 +66,18 @@
 .event-share-status:empty { display: none; }
 .event-share-fallback { display: block; margin-top: 10px; color: var(--muted); font-size: 12px; }
 .event-share-fallback input { display: block; width: 100%; margin-top: 5px; padding: 8px; border: 1px solid var(--line); border-radius: 5px; background: white; color: var(--ink); font: inherit; font-size: 16px; }
+
+/* Activity form is the main navigation; themes may overlap. */
+.activities-page .page-hero { min-height: 0; padding-bottom: 26px; }
+.activities-page .navbar { margin-bottom: 34px; }
+.activities-page .page-hero h1 { font-size: clamp(36px, 6vw, 60px); margin-bottom: 14px; }
+.activities-page .page-hero-text { margin-bottom: 0; font-size: 16px; }
+.activities-page .hero-buttons { margin-top: 18px; }
+.activities-page .event-section-header { margin: 22px 0 16px; }
+.activities-page .event-section-header h2 { font-size: clamp(25px, 4vw, 34px); }
+.event-type-tabs { padding: 16px 0 0; gap: 8px; }
+.event-type-tabs button { padding: 8px 13px; }
+.event-toolbar { margin-top: 12px; }
+.event-topic-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 12px; }
+.event-topic-tags span { background: #e9f7f8; color: #246875; border-radius: 12px; padding: 3px 7px; font-size: 11px; }
+@media(max-width:600px) { .activities-page .navbar { margin-bottom: 28px; } .event-type-tabs { flex-wrap: nowrap; gap: 5px; } .event-type-tabs button { padding: 8px 10px; font-size: 12px; white-space: nowrap; } }

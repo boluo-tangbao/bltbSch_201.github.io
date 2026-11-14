@@ -1,3 +1,4 @@
+import { hasActivityTopic } from '../assets/js/activity-topics.js'
 import { createHash } from 'node:crypto'
 import { activityRoot, activityFiles, readActivities } from './activity-metadata.mjs'
 import { createRequire } from 'node:module'
@@ -9,14 +10,14 @@ import { previewServer, previewBase } from './preview-site.mjs'
 const require=createRequire(new URL('../rank/package.json',import.meta.url))
 const {chromium,expect}=require('@playwright/test')
 const data=JSON.parse(readFileSync(new URL('../assets/generated/activities/manifest.json',import.meta.url),'utf8'))
-const source=readActivities(), acg=data.filter(e=>e.topic==='acg')
+const source=readActivities(), acg=data.filter(e=>hasActivityTopic(e,'acg'))
 const photoEvent=data.find(e=>e.media.filter(m=>m.type==='image').length>=2), videoEvent=data.find(e=>e.media.some(m=>m.type==='video'))
 assert.ok(photoEvent);assert.ok(videoEvent)
 assert.equal(data.length,source.length)
 assert.deepEqual(new Set(data.map(e=>e.id)),new Set(source.map(e=>e.id)))
 for(const event of source) {
  const record=data.find(e=>e.id===event.id),files=activityFiles(event.folder)
- assert.equal(record.topic,event.topic);assert.equal(record.category,event.category);assert.equal(record.date,event.date);assert.equal(record.dateLabel,event.date||event.dateLabel)
+ assert.deepEqual(record.topics,event.topics);assert.equal(record.topic,event.topic);assert.equal(record.category,event.category);assert.equal(record.date,event.date);assert.equal(record.dateLabel,event.date||event.dateLabel)
  assert.equal(record.bvid,event.bvid)
  assert.ok(record.cover,'活动必须有预览封面：'+event.name)
  assert.ok(existsSync(new URL('../_site/'+record.cover,import.meta.url)))
@@ -73,7 +74,7 @@ try{
  await page.goto(base+'rank/');const link=page.getByRole('link',{name:'活动记录',exact:true});await link.waitFor();await link.click();await page.locator('.event-card').first().waitFor();assert.equal(await page.locator('.event-card').count(),acg.length)
  
  // 模拟未来生活活动，只在测试响应中加入，不写入真实网站数据。
- const life={...data[0],id:'life-fixture',name:'测试生活记录',topic:'life',category:'生活日常'};
+ const life={...data[0],id:'life-fixture',name:'测试生活记录',topic:'life',topics:['life'],category:'其他'};
  await page.route('**/assets/generated/activities/manifest.json',route=>route.fulfill({json:[life,...data]}));
  await page.goto(base+'anime.html');await page.locator('#event-preview-grid .event-card').first().waitFor();
  assert.equal(await page.locator('.event-card').count(),Math.min(3,acg.length));assert.equal(await page.locator('#event-album').count(),0);
@@ -82,14 +83,14 @@ try{
  await previewLink.click();await page.locator('#event-album').waitFor({state:'visible'});assert.ok(page.url().includes('activities.html?topic=acg'));
  await page.goto(base+'activities.html?topic=acg#event-records');await page.locator('.event-card').first().waitFor();assert.equal(await page.locator('.event-card').count(),acg.length);assert.equal(await page.getByText('测试生活记录',{exact:true}).count(),0);assert.equal(await page.locator('#event-topic-control').isVisible(),false);assert.equal(await page.locator('#event-total').innerText(),String(acg.length));
  await page.goto(base+'activities.html?topic=acg#event/life-fixture');await page.locator('.event-card').first().waitFor();assert.equal(await page.locator('#event-album').isVisible(),false);assert.equal(await page.getByText('测试生活记录',{exact:true}).count(),0);
- await page.goto(base+'activities.html#event-records');await page.locator('.event-card').first().waitFor();assert.equal(await page.locator('.event-card').count(),data.length+1);await page.locator('#event-topic').selectOption('life');assert.equal(await page.locator('.event-card').count(),data.filter(e=>e.topic==='life').length+1);await page.getByRole('link',{name:'查看 '+life.name+'，'+life.dateLabel,exact:true}).click();await page.locator('#event-album').waitFor({state:'visible'});assert.equal(await page.locator('#event-album-title').innerText(),'测试生活记录');
+ await page.goto(base+'activities.html#event-records');await page.locator('.event-card').first().waitFor();assert.equal(await page.locator('.event-card').count(),data.length+1);await page.locator('#event-topic').selectOption('life');assert.equal(await page.locator('.event-card').count(),data.filter(e=>hasActivityTopic(e,'life')).length+1);await page.getByRole('link',{name:'查看 '+life.name+'，'+life.dateLabel,exact:true}).click();await page.locator('#event-album').waitFor({state:'visible'});assert.equal(await page.locator('#event-album-title').innerText(),'测试生活记录');
  await page.goto(base+'anime.html#event/'+acg[0].id);await page.waitForURL('**/activities.html?topic=acg#event/'+acg[0].id);await page.locator('#event-album').waitFor({state:'visible'});
  await page.unroute('**/assets/generated/activities/manifest.json');
  // 全部六个主题、主题内类型和年份；只拦截响应，不写入真实数据。
- const fixtures=['sports','art','travel','life','other'].map(topic=>({...data[0],id:topic+'-fixture',name:'测试'+topic,topic,category:'测试分类'}));
+ const fixtures=['sports','art','travel','life','other'].map(topic=>({...data[0],id:topic+'-fixture',name:'测试'+topic,topic,topics:[topic],category:'其他'}));
  await page.route('**/assets/generated/activities/manifest.json',route=>route.fulfill({json:[...fixtures,...data]}));
  for(const topic of ['acg','sports','art','travel','life','other']) {
-  const expected=[...fixtures,...data].filter(e=>e.topic===topic);
+  const expected=[...fixtures,...data].filter(e=>hasActivityTopic(e,topic));
   await page.goto(base+'activities.html?topic='+topic+'#event-records');await page.locator('.event-card').first().waitFor();
   assert.equal(await page.locator('.event-card').count(),expected.length);
   assert.equal(await page.locator('#event-topic-control').isVisible(),false);

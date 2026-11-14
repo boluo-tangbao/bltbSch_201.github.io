@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>艺术 | 汤包的生活手记</title>
   <link rel="stylesheet" href="assets/css/style.css?v=8" />
+  <link rel="stylesheet" href="assets/css/activities.css?v=5" />
 </head>
 
 <body>
@@ -40,6 +41,13 @@
   </header>
 
   <main class="detail-main">
+    <section class="event-section event-preview" id="event-records" data-topic="art" data-preview-count="3" aria-labelledby="event-section-title">
+      <header class="event-section-header"><div><span class="event-kicker">MEMORIES / ART</span><h2 id="event-section-title">最近的艺术活动</h2><p>音乐、展览与舞台上的回忆，也包括与二次元交汇的现场。</p></div><a class="event-all-link" href="activities.html?topic=art#event-records">查看艺术活动记录 ↗</a></header>
+      <p id="event-preview-status" class="event-status" role="status">正在加载活动预览…</p>
+      <div class="event-grid" id="event-preview-grid"></div>
+      <noscript><a href="activities.html?topic=art">前往艺术活动记录</a></noscript>
+    </section>
+
     <section class="detail-layout">
       <article class="detail-panel">
         <h2>沉浸式的审美体验</h2>
@@ -72,6 +80,7 @@
   </footer>
 
   <script src="assets/js/script.js?v=9"></script>
+  <script type="module" src="assets/js/anime-activities.js?v=4"></script>
   <script src="assets/js/site-console.js?v=11" defer></script>
 </body>
 </html>

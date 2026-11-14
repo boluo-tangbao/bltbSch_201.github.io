@@ -72,7 +72,7 @@ export async function prepareActivities() {
    cover = 'assets/generated/activities/media/'+hash+'-480.webp'
   }
   if (!cover) throw new Error('活动缺少预览图：'+event.folder)
-  records.push({id:event.id,name,date,dateLabel:date||dateLabel,year:dateLabel.slice(0,4),category:event.category,topic:event.topic,photos,videos:media.length-photos,cover,...(event.note?{note:event.note}:{}),...(event.bvid?{bvid:event.bvid}:{}),media})
+  records.push({id:event.id,name,date,dateLabel:date||dateLabel,year:dateLabel.slice(0,4),category:event.category,categoryDetail:event.categoryDetail,topic:event.topic,topics:event.topics,photos,videos:media.length-photos,cover,...(event.note?{note:event.note}:{}),...(event.bvid?{bvid:event.bvid}:{}),media})
   console.log('活动相册：'+name+' · '+media.length+' 个素材')
  }
  // 仅在全部活动生成成功后清理失效缓存，旧素材不会继续被打包。

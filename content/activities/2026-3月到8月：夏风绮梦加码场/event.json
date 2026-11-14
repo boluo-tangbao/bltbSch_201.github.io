@@ -4,5 +4,9 @@
   "date": "2026-07-11",
   "dateLabel": "2026-07-11",
   "topic": "acg",
-  "category": "演出与聚会"
+  "category": "演出与聚会",
+  "topics": [
+    "acg",
+    "art"
+  ]
 }

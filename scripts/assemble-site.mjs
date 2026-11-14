@@ -65,6 +65,7 @@ const descriptions = {
  'art.html': '菠萝汤包scho的艺术兴趣、音乐与现场活动记录。',
  'anime.html': '菠萝汤包scho的二次元生活：城市逛店、活动记录与喜欢的作品。',
  'travel.html': '菠萝汤包scho的旅行与城市体验记录。',
+ 'japan-travel.html': '菠萝汤包scho的日本旅行专题：旅程手记、城市见闻与圣地巡礼。',
  'rank/index.html': '菠萝汤包scho的个人逛店体验榜，按城市、地点与标签查找真实体验和店铺资料。',
  'rank/guide/index.html': '按地图查找城市逛店地点，阅读个人短评、店铺资料与照片，规划逛店清单。',
  'rank/qa/index.html': '关于汤包逛店体验榜的评价标准、资料与使用说明。',

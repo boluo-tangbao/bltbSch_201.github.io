@@ -1,3 +1,5 @@
+import { validateActivityTopics } from '../assets/js/activity-topics.js'
+import { activityCategory, activityCategoryDetail } from '../assets/js/activity-categories.js'
 import { readdirSync, readFileSync, statSync } from 'node:fs'
 import { resolve, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -7,7 +9,7 @@ export function activityFiles(folder) {
  return readdirSync(resolve(activityRoot,folder)).filter(file=>statSync(resolve(activityRoot,folder,file)).isFile()&&mediaExtensions.has(extname(file).toLowerCase())).sort((a,b)=>a.localeCompare(b,'zh-CN',{numeric:true}))
 }
 export function readActivities() {
- const topics=new Set(['acg','sports','art','travel','life','other']),ids=new Set()
+ const ids=new Set()
  return readdirSync(activityRoot,{withFileTypes:true}).filter(entry=>entry.isDirectory()).map(entry=>{
   const folder=entry.name
   let event
@@ -17,7 +19,8 @@ export function readActivities() {
   if(typeof event.id!=='string'||!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(event.id)||ids.has(event.id))fail('ID 必须唯一，使用小写字母、数字和连字符')
   ids.add(event.id)
   if(typeof event.name!=='string'||!event.name.trim())fail('缺少活动名称')
-  if(!topics.has(event.topic))fail('唯一 topic 应为 acg、sports、art、travel、life 或 other')
+  let topicTags
+  try {topicTags=validateActivityTopics(event)} catch(error) {fail(error.message)}
   if(typeof event.category!=='string'||!event.category.trim())fail('缺少活动类型 category')
   if(event.date!==null&&event.date!==undefined) {
    if(typeof event.date!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(event.date)||!Number.isFinite(Date.parse(event.date))||new Date(event.date).toISOString().slice(0,10)!==event.date)fail('date 必须为真实的 YYYY-MM-DD 日期；不确定时填 null')
@@ -34,6 +37,6 @@ export function readActivities() {
   if(!files.length&&!event.previewImage)fail('仅有 B 站链接时须提供 previewImage 作为活动预览图')
   if(event.cover!==undefined&&(typeof event.cover!=='string'||!files.includes(event.cover)))fail('cover 应为本场素材的原始文件名')
   if(event.note!==undefined&&typeof event.note!=='string')fail('note 应为感想文字')
-  return {...event,folder,date,dateLabel,year:dateLabel.slice(0,4)}
+  return {...event,topic:event.topic||topicTags[0],topics:topicTags,categoryDetail:activityCategoryDetail(event),category:activityCategory(event),folder,date,dateLabel,year:dateLabel.slice(0,4)}
  })
 }

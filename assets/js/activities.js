@@ -1,3 +1,5 @@
+import { activityTopicLabels, activityTopics, hasActivityTopic } from './activity-topics.js';
+import { activityCategories, normalizeActivityCategory, activityCategory, activityCategoryDetail } from './activity-categories.js';
 (() => {
  const section = document.getElementById('event-records');
  if (!section) return;
@@ -9,12 +11,12 @@
  let events = [], activeEvent = null, activeIndex = 0, category = '', year = '', previousFocus = null, previousOverflow = '';
  const params = new URLSearchParams(location.search);
  const scope = params.get('topic');
- const topicLabels = {acg:'二次元',sports:'体育',art:'艺术',travel:'旅行',life:'生活',other:'其他'};
+ const topicLabels = activityTopicLabels;
  const scopedTopic = Object.hasOwn(topicLabels, scope) ? scope : '';
  const topicLabel = topicLabels[scopedTopic] || '';
  let selectedTopic = Object.hasOwn(topicLabels, params.get('filterTopic')) ? params.get('filterTopic') : '';
  if(scopedTopic)selectedTopic='';
- category=params.get('category')||'';year=params.get('year')||'';
+ category=normalizeActivityCategory(params.get('category')||'');year=params.get('year')||'';
  let listPosition=history.state?.activitiesList||null;
  const baseTitle = topicLabel ? topicLabel + '活动记录 | Life Gallery' : document.title;
  document.title = baseTitle;
@@ -30,13 +32,13 @@
  const counts = event => [event.photos ? event.photos+' 张照片' : '', event.videos ? event.videos+' 段视频' : '', event.bvid ? 'B站视频' : ''].filter(Boolean).join(' · ');
  function thumbnail(src, alt) { const image = make('img'); image.src=src; image.alt=alt; image.loading='lazy'; image.decoding='async'; return image; }
  function renderIndex() {
-  const filtered=events.filter(event=>(!selectedTopic||event.topic===selectedTopic)&&(!category||event.category===category)&&(!year||event.year===year));
+  const filtered=events.filter(event=>(!selectedTopic||hasActivityTopic(event,selectedTopic))&&(!category||event.category===category)&&(!year||event.year===year));
   $('event-grid').replaceChildren();
   filtered.forEach(event=>{
    const card=make('a','event-card'); card.href='#event/'+event.id; card.setAttribute('aria-label','查看 '+event.name+'，'+event.dateLabel);
    card.addEventListener('click',click=>{if(click.button!==0||click.ctrlKey||click.metaKey||click.shiftKey||click.altKey)return;listPosition={scrollY:window.scrollY,id:event.id};history.replaceState({...history.state,activitiesList:listPosition},'',location.href);});
    card.append(event.cover ? thumbnail(event.cover,event.name+'的现场记录') : make('div','event-cover-placeholder','B站视频记录'));
-   const copy=make('div','event-card-copy');copy.append(make('span','event-card-category',event.category),make('h3','',event.name));
+   const copy=make('div','event-card-copy');copy.append(make('span','event-card-category',event.category+(event.category==='其他'&&event.categoryDetail&&event.categoryDetail!=='其他'?' · '+event.categoryDetail:'')),make('h3','',event.name));const tags=make('div','event-topic-tags');for(const topic of activityTopics(event))tags.append(make('span','',topicLabels[topic]));copy.append(tags);
    const bottom=make('div','event-card-bottom'), date=make('time','',event.dateLabel); if(event.date)date.dateTime=event.date;
    bottom.append(date,make('span','',counts(event)));copy.append(bottom,make('span','event-open-hint','翻开这次记录 ↗'));card.append(copy);$('event-grid').append(card);
   });
@@ -56,7 +58,7 @@
   $('event-media-grid').replaceChildren();
   if(!event){renderIndex();if(id)$('event-result').textContent='没有找到这场活动，下面是已有记录。';return;}
   $('event-album-title').textContent=event.name;
-  $('event-album-category').textContent=event.category;
+  $('event-album-category').textContent=event.category+' · '+activityTopics(event).map(topic=>topicLabels[topic]).join(' / ');
   $('event-album-meta').textContent=event.dateLabel+' · '+counts(event)+' · 个人参加记录';
   $('event-album-note').textContent=event.note || '';
   $('event-album-note').hidden=!event.note;
@@ -122,16 +124,15 @@
  $('event-filters').addEventListener('click',event=>{const button=event.target.closest('button[data-category]');if(!button)return;category=button.dataset.category;for(const item of $('event-filters').querySelectorAll('button'))item.setAttribute('aria-pressed',String(item===button));syncFilters();renderIndex();});
  $('event-year').addEventListener('change',event=>{year=event.target.value;syncFilters();renderIndex();});
  function updateCategories() {
-  const available = events.filter(event => !selectedTopic || event.topic === selectedTopic);
-  const values = ['', ...new Set(available.map(event => event.category))];
+  const values = ['', ...activityCategories];
   if (!values.includes(category)) category = '';
   $('event-filters').replaceChildren();
-  for (const value of values) { const button = make('button', '', value || '全部分类'); button.type='button';button.dataset.category=value;button.setAttribute('aria-pressed',String(value===category));$('event-filters').append(button); }
+  for (const value of values) { const button = make('button', '', value || '全部活动'); button.type='button';button.dataset.category=value;button.setAttribute('aria-pressed',String(value===category));$('event-filters').append(button); }
  }
  function restoreFilters() {
   const current=new URLSearchParams(location.search);
   selectedTopic=!scopedTopic&&Object.hasOwn(topicLabels,current.get('filterTopic'))?current.get('filterTopic'):'';
-  category=current.get('category')||'';year=current.get('year')||'';
+  category=normalizeActivityCategory(current.get('category')||'');year=current.get('year')||'';
   updateCategories();
   if(!Array.from($('event-year').options).some(option=>option.value===year))year='';
   $('event-topic').value=selectedTopic;$('event-year').value=year;
@@ -139,7 +140,7 @@
  $('event-topic').addEventListener('change',event=>{selectedTopic=event.target.value;updateCategories();syncFilters();renderIndex();});
  async function load(){
   try{
-   const response=await fetch('assets/generated/activities/manifest.json');if(!response.ok)throw new Error('load');events=await response.json();if(!Array.isArray(events))throw new Error('invalid');if(scopedTopic)events=events.filter(event=>event.topic===scopedTopic);updateCategories();
+   const response=await fetch('assets/generated/activities/manifest.json');if(!response.ok)throw new Error('load');events=await response.json();if(!Array.isArray(events))throw new Error('invalid');events=events.map(event=>({...event,categoryDetail:activityCategoryDetail(event),category:activityCategory(event),topics:activityTopics(event)}));if(scopedTopic)events=events.filter(event=>hasActivityTopic(event,scopedTopic));updateCategories();
    $('event-total').textContent=events.length;$('event-photos').textContent=events.reduce((n,e)=>n+e.photos,0);$('event-videos').textContent=events.reduce((n,e)=>n+e.videos,0);
    for(const value of [...new Set(events.map(event=>event.year))].sort().reverse()){const option=make('option','',value+' 年');option.value=value;$('event-year').append(option);}
    if(!Array.from($('event-year').options).some(option=>option.value===year))year='';
