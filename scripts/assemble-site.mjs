@@ -1,3 +1,4 @@
+import { validatePilgrimage } from '../assets/js/pilgrimage-data.js'
 import { prepareActivities } from './prepare-activities.mjs'
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs'
 import { resolve, dirname, extname, relative } from 'node:path'
@@ -10,6 +11,7 @@ import { fillHomeCityLinks } from './home-city-links.mjs'
 import './prepare-home-images.mjs'
 const root = resolve(fileURLToPath(new URL('../', import.meta.url)))
 const out = resolve(root, '_site')
+validatePilgrimage(JSON.parse(readFileSync(resolve(root,'assets/data/pilgrimage.json'),'utf8')))
 await prepareActivities()
 if (!existsSync(resolve(root,'rank/dist/index.html'))) throw new Error('请先在 rank/ 运行 npm run build')
 const json = path => JSON.parse(readFileSync(resolve(root, path), 'utf8'))
@@ -65,6 +67,7 @@ const descriptions = {
  'art.html': '菠萝汤包scho的艺术兴趣、音乐与现场活动记录。',
  'anime.html': '菠萝汤包scho的二次元生活：城市逛店、活动记录与喜欢的作品。',
  'travel.html': '菠萝汤包scho的旅行与城市体验记录。',
+ 'pilgrimage.html': '菠萝汤包scho的圣地巡礼记录：按作品、地点浏览实拍对照与到访手记。',
  'japan-travel.html': '菠萝汤包scho的日本旅行专题：旅程手记、城市见闻与圣地巡礼。',
  'rank/index.html': '菠萝汤包scho的个人逛店体验榜，按城市、地点与标签查找真实体验和店铺资料。',
  'rank/guide/index.html': '按地图查找城市逛店地点，阅读个人短评、店铺资料与照片，规划逛店清单。',

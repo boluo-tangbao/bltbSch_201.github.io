@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "works": [
+    {
+      "id": "demo-work-a",
+      "title": "示例作品 A",
+      "description": "虚构作品，用来演示一部作品关联多个地点。"
+    },
+    {
+      "id": "demo-work-b",
+      "title": "示例作品 B",
+      "description": "虚构作品，与作品 A 共用一个巡礼地点。"
+    }
+  ],
+  "places": [
+    {
+      "id": "demo-bridge",
+      "name": "示意桥边",
+      "region": "示例地区",
+      "city": "示例小镇",
+      "description": "虚构地点：两部作品在这里留下不同的场景。"
+    },
+    {
+      "id": "demo-station",
+      "name": "示意车站",
+      "region": "示例地区",
+      "city": "示例小镇",
+      "description": "虚构地点，用于展示同一作品的另一处取景地。"
+    }
+  ],
+  "visits": [
+    {
+      "id": "demo-first",
+      "placeId": "demo-bridge",
+      "dateLabel": "第一次到访（演示）",
+      "note": "沿着桥边走一走，记录与画面相似的角度。此处为虚构示例。",
+      "photos": [
+        {
+          "id": "first-photo",
+          "preview": "assets/images/pilgrimage-demo/photo.svg",
+          "full": "assets/images/pilgrimage-demo/photo.svg",
+          "alt": "桥边实拍示意"
+        }
+      ]
+    },
+    {
+      "id": "demo-second",
+      "placeId": "demo-bridge",
+      "dateLabel": "第二次到访（演示）",
+      "note": "同一地点可以再次记录，不必重复建立地点。此处为虚构示例。",
+      "photos": [
+        {
+          "id": "second-photo",
+          "preview": "assets/images/pilgrimage-demo/photo.svg",
+          "full": "assets/images/pilgrimage-demo/photo.svg",
+          "alt": "再次到访示意"
+        }
+      ]
+    },
+    {
+      "id": "demo-station-visit",
+      "placeId": "demo-station",
+      "dateLabel": "到访日期示意",
+      "note": "车站实拍示意。",
+      "photos": [
+        {
+          "id": "station-photo",
+          "preview": "assets/images/pilgrimage-demo/photo.svg",
+          "full": "assets/images/pilgrimage-demo/photo.svg",
+          "alt": "车站实拍示意"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "demo-scene-a",
+      "workId": "demo-work-a",
+      "placeId": "demo-bridge",
+      "episode": "场景信息示意",
+      "caption": "这里可以写具体场景与取景角度。",
+      "reference": {
+        "preview": "assets/images/pilgrimage-demo/reference.svg",
+        "full": "assets/images/pilgrimage-demo/reference.svg",
+        "alt": "作品画面示意",
+        "sourceLabel": "本站绘制的演示插画"
+      },
+      "matches": [
+        {
+          "visitId": "demo-first",
+          "photoId": "first-photo"
+        },
+        {
+          "visitId": "demo-second",
+          "photoId": "second-photo"
+        }
+      ]
+    },
+    {
+      "id": "demo-scene-b",
+      "workId": "demo-work-b",
+      "placeId": "demo-bridge",
+      "caption": "同一地点也可以关联另一部作品。",
+      "reference": {
+        "preview": "assets/images/pilgrimage-demo/reference.svg",
+        "full": "assets/images/pilgrimage-demo/reference.svg",
+        "alt": "另一部作品的画面示意",
+        "sourceLabel": "本站绘制的演示插画"
+      },
+      "matches": []
+    },
+    {
+      "id": "demo-scene-station",
+      "workId": "demo-work-a",
+      "placeId": "demo-station",
+      "reference": {
+        "preview": "assets/images/pilgrimage-demo/reference.svg",
+        "full": "assets/images/pilgrimage-demo/reference.svg",
+        "alt": "车站场景示意",
+        "sourceLabel": "本站绘制的演示插画"
+      },
+      "matches": [
+        {
+          "visitId": "demo-station-visit",
+          "photoId": "station-photo"
+        }
+      ]
+    }
+  ]
+}
