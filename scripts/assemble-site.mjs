@@ -1,3 +1,4 @@
+import { validateTravelMap } from '../assets/js/travel-map-data.js'
 import { prepareJapanTravel } from './prepare-japan-travel.mjs'
 import { validatePilgrimage } from '../assets/js/pilgrimage-data.js'
 import { prepareActivities } from './prepare-activities.mjs'
@@ -15,6 +16,8 @@ const out = resolve(root, '_site')
 validatePilgrimage(JSON.parse(readFileSync(resolve(root,'assets/data/pilgrimage.json'),'utf8')))
 await prepareActivities()
 await prepareJapanTravel()
+validateTravelMap(JSON.parse(readFileSync(resolve(root,'assets/data/pilgrimage-map.json'),'utf8')),JSON.parse(readFileSync(resolve(root,'content/pilgrimage/records.json'),'utf8')).cities.map(city=>city.id))
+if(!existsSync(resolve(root,'assets/data/japan-boundary.geojson')))throw new Error('缺少离线日本底图')
 if (!existsSync(resolve(root,'rank/dist/index.html'))) throw new Error('请先在 rank/ 运行 npm run build')
 const json = path => JSON.parse(readFileSync(resolve(root, path), 'utf8'))
 const usedRankAssets = publishedRankAssets({

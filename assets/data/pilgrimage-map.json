@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "readAt": "2026-11-16",
+  "boundary": {
+    "file": "assets/data/japan-boundary.geojson",
+    "name": "Natural Earth 1:50m · Japan",
+    "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+    "license": "Public domain",
+    "licenseUrl": "https://www.naturalearthdata.com/about/terms-of-use/"
+  },
+  "referenceLicense": {
+    "name": "CC BY-NC-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "documentation": "https://navi.anitabi.cn/docs/api/"
+  },
+  "subjects": [
+    {
+      "id": 115908,
+      "title": "吹响吧！上低音号",
+      "url": "https://anitabi.cn/map?bangumiId=115908"
+    },
+    {
+      "id": 431767,
+      "title": "Girls Band Cry",
+      "url": "https://anitabi.cn/map?bangumiId=431767"
+    },
+    {
+      "id": 428735,
+      "title": "MyGO",
+      "url": "https://anitabi.cn/map?bangumiId=428735",
+      "sourceUrl": "https://api.anitabi.cn/bangumi/428735/lite",
+      "sourceTitle": "BanG Dream! It's MyGO!!!!!",
+      "readAt": "2026-11-16"
+    },
+    {
+      "id": 454684,
+      "title": "Ave Mujica",
+      "url": "https://anitabi.cn/map?bangumiId=454684",
+      "sourceUrl": "https://api.anitabi.cn/bangumi/454684/lite",
+      "sourceTitle": "BanG Dream! Ave Mujica",
+      "readAt": "2026-11-16"
+    },
+    {
+      "id": 328609,
+      "title": "孤独摇滚",
+      "url": "https://anitabi.cn/map?bangumiId=328609",
+      "sourceUrl": "https://api.anitabi.cn/bangumi/328609/lite",
+      "sourceTitle": "ぼっち・ざ・ろっく！",
+      "readAt": "2026-11-16"
+    }
+  ],
+  "areas": [
+    {
+      "id": "area-tokyo",
+      "cityId": "tokyo",
+      "name": "东京",
+      "coordinates": [
+        139.753616,
+        35.69389
+      ],
+      "precision": "region",
+      "source": {
+        "name": "国土地理院地名検索",
+        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA",
+        "query": "東京都千代田区",
+        "result": "東京都千代田区"
+      },
+      "note": "标记是城市／区域入口，不是照片的精确拍摄点。"
+    },
+    {
+      "id": "area-chiba",
+      "cityId": "chiba",
+      "name": "千叶",
+      "coordinates": [
+        140.106064,
+        35.607037
+      ],
+      "precision": "region",
+      "source": {
+        "name": "国土地理院地名検索",
+        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%8D%83%E8%91%89%E7%9C%8C%E5%8D%83%E8%91%89%E5%B8%82",
+        "query": "千葉県千葉市",
+        "result": "千葉県千葉市"
+      },
+      "note": "标记是城市／区域入口，不是照片的精确拍摄点。"
+    },
+    {
+      "id": "area-kawasaki",
+      "cityId": "kawasaki",
+      "name": "川崎",
+      "coordinates": [
+        139.703033,
+        35.530865
+      ],
+      "precision": "region",
+      "source": {
+        "name": "国土地理院地名検索",
+        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E5%B7%9D%E5%B4%8E%E5%B8%82",
+        "query": "神奈川県川崎市",
+        "result": "神奈川県川崎市"
+      },
+      "note": "标记是城市／区域入口，不是照片的精确拍摄点。"
+    },
+    {
+      "id": "area-kamakura",
+      "cityId": "kamakura",
+      "name": "镰仓／藤泽一带",
+      "coordinates": [
+        139.546936,
+        35.319225
+      ],
+      "precision": "region",
+      "source": {
+        "name": "国土地理院地名検索",
+        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E9%8E%8C%E5%80%89%E5%B8%82",
+        "query": "神奈川県鎌倉市",
+        "result": "神奈川県鎌倉市"
+      },
+      "note": "镰仓、藤泽与江之岛是同一个旅行分组，标记仅表示区域入口。"
+    }
+  ],
+  "references": [
+    {
+      "id": "anitabi-115908-qys7i1",
+      "pid": "qys7i1",
+      "subjectId": 115908,
+      "name": "宇治橋西詰交差点",
+      "cityId": "uji",
+      "city": "宇治",
+      "works": [
+        "吹响吧！上低音号"
+      ],
+      "coordinates": [
+        135.805459,
+        34.892285
+      ],
+      "precision": "source-map",
+      "note": "宇治桥西侧路口。可从桥与宇治川沿岸开始认识作品中的宇治。",
+      "origin": "Google Maps",
+      "originUrl": "https://www.google.com/maps/d/viewer?mid=13mgdlajJV0HxpqKf6ri2NnEHFBc&ll=34.892285%2C135.805459&z=17",
+      "sourceUrl": "https://api.anitabi.cn/bangumi/115908/points/detail",
+      "anitabiUrl": "https://anitabi.cn/map?bangumiId=115908&pid=qys7i1",
+      "coordinateNote": "原记录未返回 geo；坐标转录自出处链接的 ll 参数，仅供定位参考。"
+    },
+    {
+      "id": "anitabi-115908-qys7ia",
+      "pid": "qys7ia",
+      "subjectId": 115908,
+      "name": "大吉山（仏徳山）登山口",
+      "cityId": "uji",
+      "city": "宇治",
+      "works": [
+        "吹响吧！上低音号"
+      ],
+      "coordinates": [
+        135.810794,
+        34.892848
+      ],
+      "precision": "source-map",
+      "note": "大吉山（佛德山）的登山口，位于宇治神社一带的步行区域。",
+      "origin": "Google Maps",
+      "originUrl": "https://www.google.com/maps/d/viewer?mid=13mgdlajJV0HxpqKf6ri2NnEHFBc&ll=34.892848%2C135.810794&z=17",
+      "sourceUrl": "https://api.anitabi.cn/bangumi/115908/points/detail",
+      "anitabiUrl": "https://anitabi.cn/map?bangumiId=115908&pid=qys7ia",
+      "coordinateNote": "原记录未返回 geo；坐标转录自出处链接的 ll 参数，仅供定位参考。"
+    },
+    {
+      "id": "anitabi-115908-qys7k4",
+      "pid": "qys7k4",
+      "subjectId": 115908,
+      "name": "大吉山展望台",
+      "cityId": "uji",
+      "city": "宇治",
+      "works": [
+        "吹响吧！上低音号"
+      ],
+      "coordinates": [
+        135.81259,
+        34.892674
+      ],
+      "precision": "source-map",
+      "note": "俯瞰宇治的山上展望台；这是资料地点，本站尚无个人到访照片。",
+      "origin": "Google Maps",
+      "originUrl": "https://www.google.com/maps/d/viewer?mid=13mgdlajJV0HxpqKf6ri2NnEHFBc&ll=34.892674%2C135.81259&z=17",
+      "sourceUrl": "https://api.anitabi.cn/bangumi/115908/points/detail",
+      "anitabiUrl": "https://anitabi.cn/map?bangumiId=115908&pid=qys7k4",
+      "coordinateNote": "原记录未返回 geo；坐标转录自出处链接的 ll 参数，仅供定位参考。"
+    }
+  ]
+}
