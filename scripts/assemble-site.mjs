@@ -1,3 +1,4 @@
+import { prepareJapanTravel } from './prepare-japan-travel.mjs'
 import { validatePilgrimage } from '../assets/js/pilgrimage-data.js'
 import { prepareActivities } from './prepare-activities.mjs'
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs'
@@ -13,6 +14,7 @@ const root = resolve(fileURLToPath(new URL('../', import.meta.url)))
 const out = resolve(root, '_site')
 validatePilgrimage(JSON.parse(readFileSync(resolve(root,'assets/data/pilgrimage.json'),'utf8')))
 await prepareActivities()
+await prepareJapanTravel()
 if (!existsSync(resolve(root,'rank/dist/index.html'))) throw new Error('请先在 rank/ 运行 npm run build')
 const json = path => JSON.parse(readFileSync(resolve(root, path), 'utf8'))
 const usedRankAssets = publishedRankAssets({

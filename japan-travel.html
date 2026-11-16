@@ -1,43 +1,8 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>日本旅行 | 汤包的生活手记</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=8" />
-  <link rel="stylesheet" href="assets/css/topics.css?v=1" />
-</head>
-<body>
-  <div class="click-layer" id="clickLayer"></div>
-  <header class="page-hero">
-    <nav class="navbar">
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>日本旅行 | 汤包的生活手记</title><meta name="description" content="按城市浏览日本旅行、作品巡礼和地点照片。"><link rel="stylesheet" href="assets/css/style.css?v=8"><link rel="stylesheet" href="assets/css/japan-travel.css?v=1"></head><body class="japan-page"><header class="page-hero"><nav class="navbar">
       <a class="logo" href="index.html" aria-label="汤包的生活手记 · 个人主页"><strong>汤包的生活手记</strong><small>菠萝汤包scho · 个人主页</small></a>
       <div class="nav-links">
         <a href="index.html">个人主页</a><a href="rank/">图片榜单</a><a href="activities.html">活动记录</a>
         <a href="sports.html">体育</a><a href="art.html">艺术</a><a href="anime.html">二次元</a><a href="travel.html">旅行</a>
       </div>
-    </nav>
-    <div class="page-hero-content">
-      <p class="eyebrow">TRAVEL / JAPAN</p>
-      <h1>日本旅行</h1>
-      <p class="page-hero-text">把路上的见闻留在这里，也去看看喜欢的作品里，那些真实存在的风景。</p>
-      <div class="hero-buttons"><a class="btn primary" href="#journeys">旅程手记 ↓</a><a class="btn secondary" href="#pilgrimage">圣地巡礼 ↓</a><a class="btn secondary" href="travel.html">返回旅行</a></div>
-    </div>
-  </header>
-  <main class="detail-main">
-    <section class="topic-section" id="journeys" aria-labelledby="journeys-title">
-      <h2 id="journeys-title">旅程手记</h2>
-      <p>城市、街道、吃过的食物，以及一路上的小事。</p>
-      <div class="topic-empty">日本旅行的照片与手记待整理，整理后会收录在这里。</div>
-    </section>
-    <section class="topic-section" id="pilgrimage" aria-labelledby="pilgrimage-title">
-      <h2 id="pilgrimage-title">圣地巡礼</h2>
-      <p>沿着作品里的场景，走进真实的街道。</p>
-      <div class="topic-links"><a class="topic-link" href="pilgrimage.html"><small>ANIME PILGRIMAGE</small><h3>按作品逛 ↗</h3><p>从喜欢的作品出发，寻找真实世界中的风景。</p></a><a class="topic-link" href="pilgrimage.html?view=places"><small>PLACES</small><h3>按地点逛 ↗</h3><p>按地区寻找地点，翻看实拍对照与到访手记。</p></a></div>
-    </section>
-  </main>
-  <footer><p>© 2026 菠萝汤包scho · 汤包的生活手记 · Japan</p></footer>
-  <script src="assets/js/script.js?v=9"></script>
-  <script src="assets/js/site-console.js?v=11" defer></script>
-</body>
-</html>
+    </nav><div class="page-hero-content"><p class="eyebrow">JAPAN / TRAVEL NOTES</p><h1>日本旅行</h1><p class="page-hero-text">把旅途见闻与作品里的风景，留在同一份城市手记里。</p><a class="j-back" href="travel.html">← 返回旅行</a></div></header><main class="detail-main j-main"><p id="j-trip" class="j-trip"></p><section id="j-index"><nav class="j-tabs" aria-label="旅行浏览方式"><button type="button" data-view="cities" aria-pressed="true">按城市</button><button type="button" data-view="records" aria-pressed="false">全部记录</button></nav><div class="j-filters"><label class="j-search">搜索<input type="search" id="j-search" placeholder="城市、作品、地点或场景"></label><label>城市<select id="j-city"><option value="">全部城市</option></select></label><label>作品<select id="j-work"><option value="">全部作品</option></select></label></div><p id="j-count" class="j-muted" role="status">正在翻开旅行记录…</p><div id="j-grid" class="j-grid"></div><div id="j-empty" class="j-empty" hidden>没有找到相关记录，试试其他关键词。<button type="button" id="j-clear">清除筛选</button></div></section><section id="j-detail" tabindex="-1" hidden></section><p id="j-error" class="j-empty" role="alert" hidden>旅行记录暂时未能加载。<button type="button" onclick="location.reload()">重新加载</button></p><section id="j-sources" class="j-sources" aria-label="图片来源"></section><noscript><p>请启用 JavaScript 浏览城市与图片记录。</p></noscript></main><dialog id="j-viewer"><button type="button" id="j-close" aria-label="关闭图片">×</button><div id="j-viewer-body"></div><div class="j-viewer-controls"><button type="button" id="j-prev">← 上一张</button><span id="j-position" role="status"></span><button type="button" id="j-next">下一张 →</button></div><p id="j-caption"></p><a id="j-original" target="_blank" rel="noopener noreferrer">新页查看原尺寸图片 ↗</a></dialog><footer><p>© 2026 菠萝汤包scho · 汤包的生活手记 · 日本旅行</p></footer><script type="module" src="assets/js/japan-travel.js?v=1"></script><script src="assets/js/script.js?v=9"></script></body></html>

@@ -1,4 +1,5 @@
 import {validatePilgrimage,placeWorkIds,workPlaceIds,placeVisits,placeCover} from './pilgrimage-data.js';
+if(new URLSearchParams(location.search).get('demo')!=='1'){const target=new URL('japan-travel.html',location.href);target.search=location.search;target.searchParams.set('view','records');location.replace(target.href);}else{
 const $=id=>document.getElementById(id),params=new URLSearchParams(location.search),demo=params.get('demo')==='1';
 let data,view=params.get('view')==='places'?'places':'works',previousFocus;
 const make=(tag,cls,text)=>{const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el;};
@@ -26,3 +27,5 @@ $('p-close').onclick=()=>$('p-viewer').close();$('p-viewer').addEventListener('c
 for(const button of document.querySelectorAll('[data-view]'))button.onclick=()=>{view=button.dataset.view;sync();renderList();};$('p-search').oninput=()=>{sync();renderList();};$('p-region').onchange=()=>{sync();renderList();};window.addEventListener('hashchange',()=>data&&render(true));window.addEventListener('popstate',()=>{if(!data)return;const p=new URLSearchParams(location.search);view=p.get('view')==='places'?'places':'works';$('p-search').value=p.get('q')||'';$('p-region').value=p.get('region')||'';render(true);});
 async function load(){try{const response=await fetch('assets/data/pilgrimage'+(demo?'-demo':'')+'.json');if(!response.ok)throw Error('load');data=validatePilgrimage(await response.json());$('p-demo').hidden=!demo;$('p-search').value=params.get('q')||'';for(const region of [...new Set(data.places.map(p=>p.region).filter(Boolean))].sort()){$('p-region').append(new Option(region,region));}$('p-region').value=params.get('region')||'';render(!!location.hash);}catch(error){console.error(error);$('p-index').hidden=true;$('p-detail').hidden=true;$('p-error').hidden=false;}}
 load();
+
+}

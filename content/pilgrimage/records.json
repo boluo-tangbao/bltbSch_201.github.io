@@ -1,0 +1,227 @@
+{
+  "version": 1,
+  "sourceRoot": "2026-8：东京",
+  "trip": {
+    "id": "tokyo-trip-2026-08",
+    "title": "2026年8月东京与周边旅行",
+    "start": "2026-08-13",
+    "end": "2026-08-21",
+    "sourceFile": "圣地巡礼补充.txt",
+    "photoCredit": "现实照片均为作者本人拍摄",
+    "referenceCredit": "动画画面来自 Anitabi Map 和作者手动截图；未逐张区分来源",
+    "referenceUrl": "https://anitabi.cn/map/"
+  },
+  "cities": [
+    {
+      "id": "tokyo",
+      "name": "东京",
+      "description": "按片区走进作品中的东京。"
+    },
+    {
+      "id": "chiba",
+      "name": "千叶",
+      "description": "春物与 Fate UBW 的沿海街景。"
+    },
+    {
+      "id": "kawasaki",
+      "name": "川崎",
+      "description": "车站、商店街与 Girls Band Cry 的巡礼记录。"
+    },
+    {
+      "id": "kamakura",
+      "name": "镰仓",
+      "description": "本次行程中的镰仓、藤泽与江之岛一带。"
+    }
+  ],
+  "records": [
+    {
+      "id": "tokyo-mygo-mujica",
+      "cityId": "tokyo",
+      "title": "MyGO / Ave Mujica 巡礼",
+      "type": "pilgrimage",
+      "works": [
+        "MyGO",
+        "Ave Mujica"
+      ],
+      "sections": [
+        {
+          "folder": "东京/北区——飞鸟山公园/MYGO",
+          "label": "飞鸟山公园"
+        },
+        {
+          "folder": "东京/台场/Ave Mujica",
+          "label": "台场海滨公园"
+        },
+        {
+          "folder": "东京/富士见坂/MYGO & MUJICA",
+          "label": "富士见坂"
+        },
+        {
+          "folder": "东京/池袋/MYGO & MUJICA",
+          "label": "池袋站前与东口沿线",
+          "note": "“305路”指池袋东口至春日通和音羽池袋线处六岔路口的沿线路段。"
+        },
+        {
+          "folder": "东京/池袋/东池袋/MYGO & MUJICA",
+          "label": "东池袋"
+        },
+        {
+          "folder": "东京/池袋/鬼子母神前站/MYGO & MUJICA",
+          "label": "鬼子母神前站及周边"
+        }
+      ]
+    },
+    {
+      "id": "tokyo-koibito",
+      "cityId": "tokyo",
+      "title": "恋人不行！巡礼",
+      "type": "pilgrimage",
+      "works": [
+        "恋人不行！"
+      ],
+      "sections": [
+        {
+          "folder": "东京/台场/恋人不行！",
+          "label": "台场"
+        }
+      ]
+    },
+    {
+      "id": "tokyo-oshinoko",
+      "cityId": "tokyo",
+      "title": "推子巡礼",
+      "type": "pilgrimage",
+      "works": [
+        "推子"
+      ],
+      "sections": [
+        {
+          "folder": "东京/台场/推子",
+          "label": "台场海滨公园"
+        }
+      ]
+    },
+    {
+      "id": "tokyo-saekano",
+      "cityId": "tokyo",
+      "title": "路人女主的养成方法巡礼",
+      "type": "pilgrimage",
+      "works": [
+        "路人女主的养成方法"
+      ],
+      "sections": [
+        {
+          "folder": "东京/台场/路人女主的养成方法",
+          "label": "Tokyo Big Sight"
+        }
+      ]
+    },
+    {
+      "id": "tokyo-lycoris",
+      "cityId": "tokyo",
+      "title": "Lycoris 巡礼",
+      "type": "pilgrimage",
+      "works": [
+        "Lycoris"
+      ],
+      "sections": [
+        {
+          "folder": "东京/晴空塔/Lycoris",
+          "label": "押上站前"
+        }
+      ]
+    },
+    {
+      "id": "tokyo-botan",
+      "cityId": "tokyo",
+      "title": "上伊娜牡丹巡礼",
+      "type": "pilgrimage",
+      "works": [
+        "上伊娜牡丹"
+      ],
+      "sections": [
+        {
+          "folder": "东京/晴空塔/上伊娜牡丹",
+          "label": "晴空塔"
+        }
+      ]
+    },
+    {
+      "id": "chiba-fate-ubw",
+      "cityId": "chiba",
+      "title": "Fate UBW 巡礼",
+      "type": "pilgrimage",
+      "works": [
+        "Fate UBW"
+      ],
+      "sections": [
+        {
+          "folder": "千叶/Fate UBW",
+          "label": "海滨幕张站附近"
+        }
+      ]
+    },
+    {
+      "id": "chiba-oregairu",
+      "cityId": "chiba",
+      "title": "春物巡礼",
+      "type": "pilgrimage",
+      "works": [
+        "春物"
+      ],
+      "cover": "稻毛高中.jpg",
+      "sections": [
+        {
+          "folder": "千叶/春物",
+          "label": "稻毛与海滨公园",
+          "notesFile": "说明.txt"
+        }
+      ]
+    },
+    {
+      "id": "kawasaki-gbc",
+      "cityId": "kawasaki",
+      "title": "Girls Band Cry 巡礼",
+      "type": "pilgrimage",
+      "works": [
+        "Girls Band Cry"
+      ],
+      "sections": [
+        {
+          "folder": "川崎/Girl Band Cry",
+          "label": "川崎站与周边商店街"
+        }
+      ]
+    },
+    {
+      "id": "kamakura-bocchi",
+      "cityId": "kamakura",
+      "title": "孤独摇滚巡礼",
+      "type": "pilgrimage",
+      "works": [
+        "孤独摇滚"
+      ],
+      "sections": [
+        {
+          "folder": "镰仓/孤独摇滚",
+          "label": "江之岛"
+        }
+      ]
+    },
+    {
+      "id": "kamakura-aobuta",
+      "cityId": "kamakura",
+      "title": "青春猪头少年巡礼",
+      "type": "pilgrimage",
+      "works": [
+        "青春猪头少年"
+      ],
+      "sections": [
+        {
+          "folder": "镰仓/青春猪头少年",
+          "label": "藤泽、七里滨与江之岛"
+        }
+      ]
+    }
+  ]
+}
