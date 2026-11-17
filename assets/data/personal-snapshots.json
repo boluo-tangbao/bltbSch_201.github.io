@@ -1,0 +1,53 @@
+[
+  {
+    "id": "music-nine",
+    "title": "构成 bltbSch 的九张专辑",
+    "heading": "构成 bltbSch 的",
+    "highlight": "九张专辑",
+    "sticker": "我的音乐成分！",
+    "description": "把音乐偏好拼成九宫格，给这个阶段的自己留一张快照。",
+    "tags": [
+      "♫ 音乐",
+      "九宫格",
+      "趣味存档"
+    ],
+    "countLabel": "09",
+    "recordedAt": "2026-11-17",
+    "preview": "assets/images/snapshots/music-nine-preview.webp",
+    "fullImage": "assets/images/snapshots/music-nine-view.webp"
+  },
+  {
+    "id": "games-nine",
+    "title": "构成 bltbSch 的九部游戏",
+    "heading": "构成 bltbSch 的",
+    "highlight": "九部游戏",
+    "sticker": "我的游戏成分！",
+    "description": "把游戏偏好拼成九宫格，给这个阶段的自己留一张快照。",
+    "tags": [
+      "✚ 游戏",
+      "九宫格",
+      "趣味存档"
+    ],
+    "countLabel": "09",
+    "recordedAt": "2026-11-17",
+    "preview": "assets/images/snapshots/games-nine-preview.webp",
+    "fullImage": "assets/images/snapshots/games-nine-view.webp"
+  },
+  {
+    "id": "anime-nine",
+    "title": "构成 bltbSch 的九部动画",
+    "heading": "构成 bltbSch 的",
+    "highlight": "九部动画",
+    "sticker": "我的动画成分！",
+    "description": "把动画偏好拼成九宫格，给这个阶段的自己留一张快照。",
+    "tags": [
+      "✦ 动画",
+      "九宫格",
+      "趣味存档"
+    ],
+    "countLabel": "09",
+    "recordedAt": "2026-11-17",
+    "preview": "assets/images/snapshots/anime-nine-preview.webp",
+    "fullImage": "assets/images/snapshots/anime-nine-view.webp"
+  }
+]

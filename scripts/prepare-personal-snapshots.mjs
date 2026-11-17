@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto'
-import { existsSync, mkdirSync, readFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -7,8 +7,16 @@ import { fileURLToPath } from 'node:url'
 const root = fileURLToPath(new URL('../', import.meta.url))
 const sharp = createRequire(resolve(root, 'rank/package.json'))('sharp')
 const records = JSON.parse(readFileSync(resolve(root, 'content/personal-snapshots/records.json'), 'utf8'))
+const ids = new Set()
+const publicRecords = []
 
 for (const record of records) {
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(record.id) || ids.has(record.id)) throw new Error('个人切片 ID 无效或重复')
+  ids.add(record.id)
+  for (const field of ['title', 'heading', 'highlight', 'sticker', 'description', 'recordedAt']) {
+    if (typeof record[field] !== 'string' || !record[field].trim()) throw new Error(`${record.id} 缺少 ${field}`)
+  }
+  if (!Array.isArray(record.tags) || record.tags.some(tag => typeof tag !== 'string')) throw new Error(`${record.id} 标签格式错误`)
   const original = resolve(root, record.source.archive)
   if (existsSync(original)) {
     const hash = createHash('sha256').update(readFileSync(original)).digest('hex')
@@ -27,5 +35,10 @@ for (const record of records) {
       throw new Error(`${record.id} 网页图片规格不符：${record[key]}`)
     }
   }
+  const { id, title, heading, highlight, sticker, description, tags, countLabel, recordedAt, preview, fullImage } = record
+  publicRecords.push({ id, title, heading, highlight, sticker, description, tags, countLabel, recordedAt, preview, fullImage })
 }
+const manifest = resolve(root, 'assets/data/personal-snapshots.json')
+mkdirSync(dirname(manifest), { recursive: true })
+writeFileSync(manifest, JSON.stringify(publicRecords, null, 2) + '\n')
 console.log(`个人切片：已检查 ${records.length} 份记录的预览与高清图；原件仅本地保留。`)

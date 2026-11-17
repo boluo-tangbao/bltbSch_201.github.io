@@ -80,6 +80,21 @@
 .snapshots-palette > span { color: var(--slice-accent); font-size: 22px; line-height: 1; }
 .snapshots-palette:hover { background: #ffffff20; }
 .snapshot-card { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1fr); align-items: center; gap: clamp(24px, 5vw, 64px); padding: 34px; border: 1px solid #ffffff24; border-radius: 18px; background: linear-gradient(115deg, #ffffff14, #ffffff04); }
+.snapshot-window { position: relative; display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: none; border-radius: 18px; }
+.snapshot-window::-webkit-scrollbar { display: none; }
+.snapshot-window > .snapshot-card { position: relative; flex: 0 0 100%; min-width: 0; scroll-snap-align: start; scroll-snap-stop: always; }
+.snapshot-window:focus-visible { outline: 3px solid var(--slice-highlight); outline-offset: 5px; }
+.snapshot-controls { position: relative; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 20px; margin-top: 24px; }
+.snapshot-controls[hidden] { display: none; }
+.snapshot-controls button { min-height: 44px; border: 1px solid #ffffff40; background: #ffffff0a; color: #fff9ff; border-radius: 99px; font: inherit; font-size: 12px; cursor: pointer; }
+.snapshot-controls button:hover { background: #ffffff20; }
+.snapshot-arrows { display: flex; align-items: center; gap: 10px; }
+.snapshot-arrows button { width: 44px; font-size: 20px; }
+.snapshot-position { min-width: 56px; text-align: center; font-size: 12px; font-variant-numeric: tabular-nums; color: var(--slice-accent); }
+.snapshot-dots { display: flex; flex-wrap: wrap; gap: 8px; }
+.snapshot-dots button { padding: 6px 14px; }
+.snapshot-dots button[aria-current="true"] { background: var(--slice-highlight); color: #272237; border-color: var(--slice-highlight); font-weight: 700; }
+.snapshot-play { padding: 6px 14px; }
 .snapshot-art { position: relative; display: block; justify-self: center; width: min(100%, 278px); margin: 4px 0; border: 7px solid #fff; border-radius: 12px; background: #fff; color: #282333; box-shadow: 12px 14px 0 var(--slice-accent), 0 16px 40px #0004; transform: rotate(-4deg); transition: transform .25s, box-shadow .25s; }
 .snapshot-art:hover { transform: rotate(-1deg) translateY(-4px); box-shadow: 8px 18px 0 var(--slice-accent), 0 20px 44px #0004; }
 .snapshot-art img { display: block; width: 100%; height: auto; border-radius: 5px; }
@@ -132,6 +147,13 @@ body:has(.snapshot-dialog[open]) { overflow: hidden; }
   .snapshot-open { display: flex; gap: 10px; }
   .snapshot-number { font-size: 130px; bottom: 0; }
   .snapshot-dialog { padding: 18px 14px; }
+  .snapshot-controls { gap: 12px 8px; }
+  .snapshot-dots { order: -1; width: 100%; gap: 6px; }
+  .snapshot-dots button { padding-inline: 10px; font-size: 11px; }
+  .snapshot-arrows { gap: 5px; }
+  .snapshot-position { min-width: 48px; font-size: 11px; }
+  .snapshot-arrows button { width: 40px; }
+  .snapshot-controls .snapshot-play { padding-inline: 10px; font-size: 11px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html:has(.home-page) { scroll-behavior: auto; }

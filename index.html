@@ -10,7 +10,7 @@
   <link rel="preload" as="image" href="images/responsive/akane-background-960.webp" media="(max-width: 680px)" />
   <link rel="preload" as="image" href="images/responsive/akane-background-1280.webp" media="(min-width: 681px) and (max-width: 1280px)" />
   <link rel="preload" as="image" href="images/akane-background.webp" media="(min-width: 1281px)" />
-  <link rel="stylesheet" href="assets/css/home.css?v=5" />
+  <link rel="stylesheet" href="assets/css/home.css?v=6" />
 </head>
 
 <body class="home-page">
@@ -199,7 +199,8 @@
         </div>
         <button class="snapshots-palette" type="button" hidden><span aria-hidden="true">◒</span> 换个配色</button>
       </div>
-      <article class="snapshot-card" id="snapshot-music-nine">
+      <div class="snapshot-window" tabindex="0" role="region" aria-roledescription="轮播" aria-label="个人切片展示窗">
+      <article class="snapshot-card" id="snapshot-music-nine" data-snapshot-id="music-nine">
         <a class="snapshot-art" href="assets/images/snapshots/music-nine-view.webp" data-snapshot-open aria-label="放大查看构成 bltbSch 的九张专辑">
           <span class="snapshot-sticker" aria-hidden="true">我的音乐成分！</span>
           <img src="assets/images/snapshots/music-nine-preview.webp" alt="构成 bltbSch 的九张专辑，包含 Hisohiso Banashi、Elma、Red、黑色柳丁等九张封面" width="312" height="480" loading="lazy" decoding="async" />
@@ -215,6 +216,12 @@
         </div>
         <span class="snapshot-number" aria-hidden="true">09</span>
       </article>
+      </div>
+      <div class="snapshot-controls" hidden>
+        <div class="snapshot-arrows"><button type="button" data-snapshot-prev aria-label="上一份切片">←</button><span class="snapshot-position">01 / 03</span><button type="button" data-snapshot-next aria-label="下一份切片">→</button></div>
+        <div class="snapshot-dots" role="group" aria-label="选择个人切片"></div>
+        <button type="button" class="snapshot-play" aria-label="暂停自动轮播">暂停轮播 Ⅱ</button>
+      </div>
       <div class="snapshots-footer"><span>TO BE CONTINUED<span aria-hidden="true"> …</span></span><p>下次再看看，又会选些什么。</p></div>
       <p class="snapshots-status" role="status" aria-live="polite"></p>
     </section>
@@ -248,14 +255,14 @@
   <dialog id="snapshot-dialog" class="snapshot-dialog" aria-labelledby="snapshot-dialog-title">
     <div class="snapshot-dialog-header">
       <div><span class="snapshots-eyebrow">PERSONAL SNAPSHOT / 001</span><h2 id="snapshot-dialog-title">构成 bltbSch 的九张专辑</h2></div>
-      <button type="button" class="snapshot-close" aria-label="关闭专辑拼图" autofocus>×</button>
+      <button type="button" class="snapshot-close" aria-label="关闭个人切片" autofocus>×</button>
     </div>
     <p class="snapshot-dialog-caption">收录于 2026.11.17 · 图片由本人提供</p>
     <img id="snapshot-full-image" alt="构成 bltbSch 的九张专辑完整结果图" width="1041" height="1600" />
     <p class="snapshot-image-status" role="status" hidden>图片暂时没有加载出来，<a href="assets/images/snapshots/music-nine-view.webp" target="_blank" rel="noopener">单独打开高清图 ↗</a></p>
     <a class="snapshot-image-link" href="assets/images/snapshots/music-nine-view.webp" target="_blank" rel="noopener">单独打开高清图 ↗</a>
   </dialog>
-  <script src="assets/js/home.js?v=3"></script>
+  <script src="assets/js/home.js?v=4"></script>
   <script src="assets/js/site-console.js?v=11" defer></script>
 </body>
 </html>
