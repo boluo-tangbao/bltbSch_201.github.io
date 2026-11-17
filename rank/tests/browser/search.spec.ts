@@ -93,7 +93,7 @@ test('keyword, city and tag conditions compose, normalize width and clear withou
   if (!await otherTagButton.isVisible()) await page.locator('.more-tags-toggle').click()
   await otherTagButton.click()
   await expect(page.locator('.place-card')).toHaveCount(0)
-  await page.getByRole('button', { name: '移除标签：' + otherTag, exact: true }).click()
+  await page.getByRole('button', { name: '全部标签', exact: true }).click()
   await expect(page.locator('.place-card')).toHaveCount(1)
   await page.getByRole('searchbox').fill('[')
   await expect(page.locator('.place-card')).toHaveCount(0)

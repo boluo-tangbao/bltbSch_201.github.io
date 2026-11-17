@@ -1,4 +1,4 @@
-/* Scrapbook tools: a taped label, ink outlines and small paper action stamps. */
+/* Scrapbook tools: a taped label and four colored icon stickers without button boxes. */
 .board-tools { margin: 8px 4px 18px 0; border: 2px solid var(--ui-ink); border-radius: 4px 18px 4px 4px; background: var(--ui-surface); overflow: hidden; box-shadow: 4px 4px 0 var(--ui-menu-shadow); }
 .board-tools .mobile-tools-toggle { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 62px; margin: 0; padding: 12px 16px; border: 0; border-radius: 0; background: radial-gradient(var(--ui-border) .8px, transparent .8px) right center / 8px 8px; color: var(--ui-ink); font: inherit; text-align: left; cursor: pointer; }
 .mobile-tools-toggle > svg { flex: none; color: var(--ui-accent); }
@@ -12,13 +12,23 @@
 .board-tools .mobile-tools-toggle:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: -5px; }
 .board-tools .board-tools-content { display: none; }
 .board-tools .board-tools-content.is-open { display: block; padding: 0 16px 16px; border-top: 1px dashed var(--ui-border); }
-.board-tools .photo-options { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin: 12px 0 0; padding-top: 12px; border-top: 1px dashed var(--ui-border); }
-.board-action-group { display: flex; flex-wrap: wrap; align-items: start; gap: 8px; }
-.board-action-group > .button, .board-action-group .copy-button { display: flex; align-items: center; justify-content: center; gap: 8px; min-width: 0; min-height: 48px; height: auto; padding: 8px 12px; border: 1px solid var(--ui-border); border-bottom: 3px solid var(--ui-menu-shadow); border-radius: 4px; background: var(--ui-paper); color: var(--ui-ink); font: 400 18px/1.45 var(--ui-font-playful); box-shadow: none; cursor: pointer; transition: transform .16s ease, background .16s ease; }
+.board-tools .photo-options { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin: 14px 0 0; padding-top: 2px; border-top: 0; }
+.board-action-group { --compare-ink: #4264a8; --compare-paper: #eaf0ff; --share-ink: #8751aa; --share-paper: #f3eafa; --export-ink: #a2601b; --export-paper: #fff0d6; --select-ink: #b2456c; --select-paper: #ffe8ef; display: flex; flex-wrap: wrap; align-items: start; gap: 8px; }
+:root[data-theme="night"] .board-action-group { --compare-ink: #b5d7f1; --compare-paper: #293b49; --share-ink: #d7b7f2; --share-paper: #3d304d; --export-ink: #efc28c; --export-paper: #493827; --select-ink: #f0becd; --select-paper: #442b36; }
+.board-action-group > .button, .board-action-group .copy-button { display: flex; align-items: center; justify-content: center; gap: 10px; min-width: 0; min-height: 60px; height: auto; padding: 6px 10px; border: 0; border-radius: 28px; background: transparent; color: var(--action-ink); font: 400 18px/1.45 var(--ui-font-playful); box-shadow: none; cursor: pointer; transition: transform .16s ease; }
+.board-action-group .button:has(.menu-icon-compare) { --action-ink: var(--compare-ink); --action-paper: var(--compare-paper); }
+.board-action-group .copy-button:has(.menu-icon-share) { --action-ink: var(--share-ink); --action-paper: var(--share-paper); }
+.board-action-group .button:has(.menu-icon-export) { --action-ink: var(--export-ink); --action-paper: var(--export-paper); }
+.board-action-group .button:has(.menu-icon-heart) { --action-ink: var(--select-ink); --action-paper: var(--select-paper); }
 .board-action-group .menu-tile-copy, .board-action-group .copy-button-label { display: block; min-width: 0; }
 .board-action-group .menu-tile-caption { display: none; }
-.board-action-group .menu-tile-icon { flex: none; width: 19px; height: 19px; color: var(--ui-accent); }
-.board-action-group .button:hover, .board-action-group .copy-button:hover { background: var(--ui-accent-soft); transform: translateY(-2px) rotate(-1deg); }
+.board-action-group .menu-icon-badge { display: grid; place-items: center; flex: none; width: 44px; height: 44px; color: var(--action-ink); background: var(--action-paper); box-shadow: 2px 3px 0 color-mix(in srgb, var(--action-ink) 18%, transparent); }
+.board-action-group .menu-tile-icon { display: block; flex: none; width: 28px; height: 28px; }
+.board-action-group .menu-icon-compare { border-radius: 42% 58% 48% 52% / 55% 45% 55% 45%; }
+.board-action-group .menu-icon-share { border-radius: 56% 44% 58% 42% / 42% 55% 45% 58%; }
+.board-action-group .menu-icon-export { border-radius: 48% 52% 40% 60% / 60% 45% 55% 40%; }
+.board-action-group .menu-icon-heart { border-radius: 58% 42% 50% 50% / 45% 58% 42% 55%; }
+.board-action-group .button:hover, .board-action-group .copy-button:hover { background: transparent; transform: translateY(-2px); }
 .board-tools .common-tags .tag-filter button, .board-tools .browse-tags .tag-filter button, .board-tools .city-legend button { font-family: var(--ui-font-playful); font-size: 16px; font-weight: 400; }
 .board-page .board-heading h2, .board-page .board-view-controls button { font-family: var(--ui-font-playful); font-weight: 400; }
 .board-page .board-view-controls button { font-size: 16px; }
@@ -29,7 +39,15 @@
 .board-label-toggle input:checked::after { background: var(--ui-surface); transform: translateX(12px); }
 .board-label-toggle input:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 3px; }
 .board-page .board-view-hint { margin: 8px 2px 12px; color: var(--ui-muted); font-size: 11px; line-height: 1.6; }
-@media (max-width: 740px) { .board-action-group { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; } .board-action-group > .button, .board-action-group .copy-button { width: 100%; } }
+@media (max-width: 740px) {
+  .board-action-group { position: relative; isolation: isolate; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
+  .board-action-group > .button, .board-action-group .copy-button { width: 100%; }
+  /* Two rough, translucent strokes sit in the gaps only while all four actions are present. */
+  .board-action-group:has(> :nth-child(4))::before,
+  .board-action-group:has(> :nth-child(4))::after { content: ''; position: absolute; z-index: -1; pointer-events: none; background: color-mix(in srgb, var(--ui-accent-soft) 70%, var(--ui-menu-shadow)); }
+  .board-action-group:has(> :nth-child(4))::before { left: 7%; top: calc(50% - 5px); width: 86%; height: 10px; transform: rotate(-2deg); clip-path: polygon(0 35%, 9% 10%, 19% 30%, 30% 0, 43% 20%, 59% 10%, 73% 30%, 89% 0, 100% 30%, 98% 80%, 86% 70%, 72% 100%, 57% 75%, 42% 100%, 27% 70%, 12% 90%, 1% 75%); }
+  .board-action-group:has(> :nth-child(4))::after { left: calc(50% - 5px); top: 7%; width: 10px; height: 86%; transform: rotate(3deg); clip-path: polygon(25% 0, 85% 1%, 65% 16%, 100% 30%, 75% 45%, 100% 60%, 70% 76%, 90% 91%, 60% 100%, 15% 98%, 30% 81%, 0 65%, 20% 48%, 0 31%, 20% 16%); }
+}
 @media (max-width: 580px) {
   .mobile-tools-toggle .tools-summary { display: none; }
   .mobile-tools-toggle .tools-summary + .tools-chevron { margin-left: auto; }
@@ -38,6 +56,11 @@
   .board-tools .board-tools-content.is-open { padding: 0 12px 12px; }
   .board-tools .photo-options { align-items: stretch; gap: 8px; }
   .board-label-toggle { width: 100%; }
-  .board-action-group > .button, .board-action-group .copy-button { padding: 8px; font-size: 17px; }
+  .board-action-group > .button, .board-action-group .copy-button { flex-direction: row; gap: 8px; min-height: 60px; padding: 6px 8px; font-size: 17px; }
+  .board-action-group .menu-tile-copy, .board-action-group .copy-button-label { flex: none; width: 2em; line-height: 1.2; text-align: left; white-space: normal; overflow-wrap: anywhere; }
+  .board-action-group .copy-button.is-copied .copy-button-label { width: 3em; font-size: 14px; }
+  .board-action-group .menu-icon-badge { width: 40px; height: 40px; }
+  .board-action-group .compare-launch { position: relative; }
+  .board-action-group .compare-launch-count { position: absolute; top: 3px; right: 4px; color: var(--action-ink); font-size: 11px; line-height: 1; }
 }
 @media (prefers-reduced-motion: reduce) { .board-action-group .button, .board-action-group .copy-button, .mobile-tools-toggle .tools-chevron, .board-label-toggle input::after { transition: none; } .board-action-group .button:hover, .board-action-group .copy-button:hover { transform: none; } }

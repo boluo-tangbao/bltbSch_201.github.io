@@ -40,7 +40,7 @@ test('连续浏览地点：页面返回、系统返回及前进均保留筛选�
     await expect(page.getByRole('searchbox', { name: '关键词搜索' })).toHaveValue('上海')
     await expect(page.getByRole('button', { name: '舒适', exact: true })).toHaveAttribute('aria-pressed', 'true')
     await expect(page.locator('.place-card')).toHaveCount(count)
-    await expect(page.getByRole('button', { name: '移除标签：中古', exact: true })).toBeVisible()
+    await expect(page.getByRole('button', { name: '# 中古', exact: true })).toHaveAttribute('aria-pressed', 'true')
     if (!useBrowserBack) {
       await page.goForward()
       await expect(page.locator('.detail-heading h1')).toBeVisible()
@@ -131,6 +131,19 @@ test('浏览阶段工具降级，进入选店和已有清单后主操作保持�
   await page.locator('.trip-entry-toggle').click()
   await expect(page.locator('.trip-entry-actions')).toBeHidden()
   await openMobileTools(page)
+  const selectedTag = page.getByRole('button', { name: '# lolita', exact: true })
+  await selectedTag.click()
+  await expect(selectedTag).toHaveAttribute('aria-pressed', 'true')
+  await expect(page.locator('.active-filters')).toHaveCount(0)
+  const icons = page.locator('.board-action-group .menu-icon-badge')
+  await expect(icons).toHaveCount(4)
+  for (const icon of await icons.all()) {
+    await expect(icon).toBeVisible()
+    expect((await icon.boundingBox())!.width).toBeGreaterThanOrEqual(40)
+  }
+  await page.locator('.board-tools').screenshot({ path: resolve(evidence, `tools-selected-tag-${info.project.name}.png`), style: '#site-console, .sc-launcher { visibility: hidden !important; }' })
+  await selectedTag.click()
+  await expect(selectedTag).toHaveAttribute('aria-pressed', 'false')
   await page.locator('.board-tools').screenshot({ path: resolve(evidence, `tools-${info.project.name}.png`) })
   await page.locator('.mobile-tools-toggle').click()
   await expect(page.getByLabel('城市筛选')).toHaveValue('上海')

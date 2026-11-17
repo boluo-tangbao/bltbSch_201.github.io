@@ -57,7 +57,7 @@ onBeforeUnmount(close)
 </script>
 
 <template>
-  <button type="button" class="button compare-launch" aria-haspopup="dialog" @click="open"><MenuIcon v-if="menuTile" name="compare" /><span class="menu-tile-copy">商圈对比<span v-if="selected.length"> · {{ selected.length }}</span><small v-if="menuTile" class="menu-tile-caption" aria-hidden="true">COMPARE</small></span></button>
+  <button type="button" class="button compare-launch" aria-haspopup="dialog" @click="open"><MenuIcon v-if="menuTile" name="compare" /><span class="menu-tile-copy">商圈对比<span v-if="selected.length" class="compare-launch-count"> · {{ selected.length }}</span><small v-if="menuTile" class="menu-tile-caption" aria-hidden="true">COMPARE</small></span></button>
   <Teleport to="body">
     <dialog ref="dialog" class="place-compare" aria-labelledby="place-compare-title" @close="unlock">
       <header class="compare-heading"><div><h2 id="place-compare-title">商圈对比</h2><p>今天去哪逛？放在一起看看。</p></div><button type="button" class="button" autofocus @click="close">关闭</button></header>

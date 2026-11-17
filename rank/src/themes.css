@@ -125,7 +125,6 @@
   font-weight: 700;
 }
 :root[data-theme="night"] :is(button[aria-pressed="true"],button[aria-current]:not([aria-current="false"])) :is(small,.compare-check) { color: var(--edition-ink); }
-:root[data-theme="night"] .active-filters button { background: var(--edition-accent); color: var(--edition-ink); border-color: var(--edition-accent); }
 :root[data-theme="night"] .comfortable-view .photo-caption small { color: var(--edition-muted); }
 :root[data-theme="night"] .trip-plan-add:is(.is-icon-only,.is-plain) { background: transparent; }
 :root[data-theme="night"] .trip-plan-add.is-icon-only { box-shadow: none; }
