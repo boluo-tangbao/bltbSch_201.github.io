@@ -1,5 +1,5 @@
 import { activityTopicLabels, activityTopics, hasActivityTopic } from './activity-topics.js';
-import { activityCategories, normalizeActivityCategory, activityCategory, activityCategoryDetail } from './activity-categories.js';
+import { activityCategories, normalizeActivityCategory, activityCategory, activityCategoryDetail, hasActivityCategory, activityCategoryLabel } from './activity-categories.js';
 (() => {
  const section = document.getElementById('event-records');
  if (!section) return;
@@ -32,13 +32,13 @@ import { activityCategories, normalizeActivityCategory, activityCategory, activi
  const counts = event => [event.photos ? event.photos+' 张照片' : '', event.videos ? event.videos+' 段视频' : '', event.bvid ? 'B站视频' : ''].filter(Boolean).join(' · ');
  function thumbnail(src, alt) { const image = make('img'); image.src=src; image.alt=alt; image.loading='lazy'; image.decoding='async'; return image; }
  function renderIndex() {
-  const filtered=events.filter(event=>(!selectedTopic||hasActivityTopic(event,selectedTopic))&&(!category||event.category===category)&&(!year||event.year===year));
+  const filtered=events.filter(event=>(!selectedTopic||hasActivityTopic(event,selectedTopic))&&(!category||hasActivityCategory(event,category))&&(!year||event.year===year));
   $('event-grid').replaceChildren();
   filtered.forEach(event=>{
    const card=make('a','event-card'); card.href='#event/'+event.id; card.setAttribute('aria-label','查看 '+event.name+'，'+event.dateLabel);
    card.addEventListener('click',click=>{if(click.button!==0||click.ctrlKey||click.metaKey||click.shiftKey||click.altKey)return;listPosition={scrollY:window.scrollY,id:event.id};history.replaceState({...history.state,activitiesList:listPosition},'',location.href);});
    card.append(event.cover ? thumbnail(event.cover,event.name+'的现场记录') : make('div','event-cover-placeholder','B站视频记录'));
-   const copy=make('div','event-card-copy');copy.append(make('span','event-card-category',event.category+(event.category==='其他'&&event.categoryDetail&&event.categoryDetail!=='其他'?' · '+event.categoryDetail:'')),make('h3','',event.name));const tags=make('div','event-topic-tags');for(const topic of activityTopics(event))tags.append(make('span','',topicLabels[topic]));copy.append(tags);
+   const copy=make('div','event-card-copy');copy.append(make('span','event-card-category',activityCategoryLabel(event)),make('h3','',event.name));const tags=make('div','event-topic-tags');for(const topic of activityTopics(event))tags.append(make('span','',topicLabels[topic]));copy.append(tags);
    const bottom=make('div','event-card-bottom'), date=make('time','',event.dateLabel); if(event.date)date.dateTime=event.date;
    bottom.append(date,make('span','',counts(event)));copy.append(bottom,make('span','event-open-hint','翻开这次记录 ↗'));card.append(copy);$('event-grid').append(card);
   });
@@ -58,7 +58,7 @@ import { activityCategories, normalizeActivityCategory, activityCategory, activi
   $('event-media-grid').replaceChildren();
   if(!event){renderIndex();if(id)$('event-result').textContent='没有找到这场活动，下面是已有记录。';return;}
   $('event-album-title').textContent=event.name;
-  $('event-album-category').textContent=event.category+' · '+activityTopics(event).map(topic=>topicLabels[topic]).join(' / ');
+  $('event-album-category').textContent=activityCategoryLabel(event)+' · '+activityTopics(event).map(topic=>topicLabels[topic]).join(' / ');
   $('event-album-meta').textContent=event.dateLabel+' · '+counts(event)+' · 个人参加记录';
   $('event-album-note').textContent=event.note || '';
   $('event-album-note').hidden=!event.note;

@@ -1,5 +1,5 @@
 import { activityTopics, activityTopicLabels, hasActivityTopic } from './activity-topics.js';
-import { activityCategory } from './activity-categories.js';
+import { activityCategoryLabel } from './activity-categories.js';
 (() => {
  const section = document.querySelector('.event-preview');
  const previewTopic = section?.dataset.topic || 'acg';
@@ -25,7 +25,7 @@ import { activityCategory } from './activity-categories.js';
    const card=make('a','event-card');card.href='activities.html?topic='+previewTopic+'#event/'+event.id;card.setAttribute('aria-label','查看 '+event.name+'，'+event.dateLabel);
    if(event.cover){const image=make('img');image.src=event.cover;image.alt=event.name+'的现场记录';image.loading='lazy';image.decoding='async';card.append(image);}
    else card.append(make('div','event-cover-placeholder','B站视频记录'));
-   const copy=make('div','event-card-copy');copy.append(make('span','event-card-category',activityCategory(event)),make('h3','',event.name));
+   const copy=make('div','event-card-copy');copy.append(make('span','event-card-category',activityCategoryLabel(event)),make('h3','',event.name));
    const tags=make('div','event-topic-tags');for(const topic of activityTopics(event))tags.append(make('span','',activityTopicLabels[topic]));copy.append(tags);
    const bottom=make('div','event-card-bottom'),date=make('time','',event.dateLabel);if(event.date)date.dateTime=event.date;
    const total=[event.photos?event.photos+' 张照片':'',event.videos?event.videos+' 段视频':'',event.bvid?'B站视频':''].filter(Boolean).join(' · ');

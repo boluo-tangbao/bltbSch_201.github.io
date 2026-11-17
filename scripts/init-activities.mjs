@@ -48,8 +48,8 @@ export async function initializeActivities(root,ask,log=console.log) {
   while(!category) {
    const answer=(await ask(`选择类型：${activityCategories.map((value,i)=>`${i+1}=${value}`).join('，')}：`)).trim()
    if(answer.toLowerCase()==='q')return created
-   if(/^[1-4]$/.test(answer))category=activityCategories[Number(answer)-1]
-   else log('请输入 1—4 的类型编号。')
+   if(/^[1-9]\d*$/.test(answer)&&Number(answer)<=activityCategories.length)category=activityCategories[Number(answer)-1]
+   else log(`请输入 1—${activityCategories.length} 的类型编号。`)
   }
   if(category==='快闪'&&!draft.name.endsWith('快闪'))draft.name+='快闪'
   const event={...draft,topics:selectedTopics,category}

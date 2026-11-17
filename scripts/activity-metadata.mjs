@@ -1,5 +1,5 @@
 import { validateActivityTopics } from '../assets/js/activity-topics.js'
-import { activityCategory, activityCategoryDetail } from '../assets/js/activity-categories.js'
+import { activityCategory, activityCategoryDetail, validateActivityCategories } from '../assets/js/activity-categories.js'
 import { readdirSync, readFileSync, statSync } from 'node:fs'
 import { resolve, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -35,6 +35,8 @@ export function readActivities(root = activityRoot) {
   let topicTags
   try {topicTags=validateActivityTopics(event)} catch(error) {fail(error.message)}
   if(typeof event.category!=='string'||!event.category.trim())fail('缺少活动类型 category')
+  let categories
+  try {categories=validateActivityCategories(event)} catch(error) {fail(error.message)}
   if(event.date!==null&&event.date!==undefined) {
    if(typeof event.date!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(event.date)||!Number.isFinite(Date.parse(event.date))||new Date(event.date).toISOString().slice(0,10)!==event.date)fail('date 必须为真实的 YYYY-MM-DD 日期；不确定时填 null')
   }
@@ -50,6 +52,6 @@ export function readActivities(root = activityRoot) {
   if(!files.length&&!event.previewImage)fail('仅有 B 站链接时须提供 previewImage 作为活动预览图')
   if(event.cover!==undefined&&(typeof event.cover!=='string'||!files.includes(event.cover)))fail('cover 应为本场素材的原始文件名')
   if(event.note!==undefined&&typeof event.note!=='string')fail('note 应为感想文字')
-  return {...event,topic:event.topic||topicTags[0],topics:topicTags,categoryDetail:activityCategoryDetail(event),category:activityCategory(event),folder,date,dateLabel,year:dateLabel.slice(0,4)}
+  return {...event,topic:event.topic||topicTags[0],topics:topicTags,categories,categoryDetail:activityCategoryDetail(event),category:activityCategory(event),folder,date,dateLabel,year:dateLabel.slice(0,4)}
  })
 }

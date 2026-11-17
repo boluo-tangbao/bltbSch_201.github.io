@@ -57,3 +57,10 @@ test('quit, skipped confirmation, and invalid folders do not create accidental p
  assert.equal(await initializeActivities(root,async()=>answers.shift(),()=>{}),0)
  assert.equal(missingActivityMetadata(root).length,3)
 })
+
+test('setup offers the new screening category',async t=>{
+ const root=fixture(t,['2026-1-1：观影会'])
+ const answers=['1','5','y']
+ assert.equal(await initializeActivities(root,async()=>answers.shift(),()=>{}),1)
+ assert.equal(readActivities(root)[0].category,'观影会')
+})

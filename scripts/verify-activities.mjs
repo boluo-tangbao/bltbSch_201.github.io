@@ -1,3 +1,4 @@
+import { hasActivityCategory } from '../assets/js/activity-categories.js'
 import { hasActivityTopic } from '../assets/js/activity-topics.js'
 import { createHash } from 'node:crypto'
 import { activityRoot, activityFiles, readActivities } from './activity-metadata.mjs'
@@ -17,7 +18,7 @@ assert.equal(data.length,source.length)
 assert.deepEqual(new Set(data.map(e=>e.id)),new Set(source.map(e=>e.id)))
 for(const event of source) {
  const record=data.find(e=>e.id===event.id),files=activityFiles(event.folder)
- assert.deepEqual(record.topics,event.topics);assert.equal(record.topic,event.topic);assert.equal(record.category,event.category);assert.equal(record.date,event.date);assert.equal(record.dateLabel,event.date||event.dateLabel)
+ assert.deepEqual(record.categories,event.categories);assert.deepEqual(record.topics,event.topics);assert.equal(record.topic,event.topic);assert.equal(record.category,event.category);assert.equal(record.date,event.date);assert.equal(record.dateLabel,event.date||event.dateLabel)
  assert.equal(record.bvid,event.bvid)
  assert.ok(record.cover,'活动必须有预览封面：'+event.name)
  assert.ok(existsSync(new URL('../_site/'+record.cover,import.meta.url)))
@@ -52,13 +53,21 @@ try{
   assert.equal(await page.locator('.event-card').count(),data.length);assert.equal(await page.locator('video').count(),0)
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true)
   await page.screenshot({path:resolve('test-results/activities/index-'+width+'.png')})
-  await page.locator('[data-category="'+photoEvent.category+'"]').click();assert.equal(await page.locator('.event-card').count(),data.filter(e=>e.category===photoEvent.category).length)
-  await page.locator('#event-year').selectOption(photoEvent.year);assert.equal(await page.locator('.event-card').count(),data.filter(e=>e.category===photoEvent.category&&e.year===photoEvent.year).length)
+  await page.locator('[data-category="'+photoEvent.category+'"]').click();assert.equal(await page.locator('.event-card').count(),data.filter(e=>hasActivityCategory(e,photoEvent.category)).length)
+  await page.locator('#event-year').selectOption(photoEvent.year);assert.equal(await page.locator('.event-card').count(),data.filter(e=>hasActivityCategory(e,photoEvent.category)&&e.year===photoEvent.year).length)
   await page.getByRole('link',{name:'查看 '+photoEvent.name+'，'+photoEvent.dateLabel,exact:true}).click();await page.locator('#event-album').waitFor({state:'visible'});assert.equal(await page.locator('.event-media').count(),photoEvent.media.length)
   await page.locator('.event-media').nth(photoEvent.media.findIndex(m=>m.type==='image')).click();await page.locator('#event-dialog[open] img').waitFor();await page.locator('#event-dialog img').evaluate(image=>image.decode());assert.equal(await page.locator('#event-dialog img').evaluate(image=>image.naturalWidth>0),true)
   await page.keyboard.press('ArrowRight');assert.equal(await page.locator('#event-position').innerText(),(photoEvent.media.findIndex(m=>m.type==='image')+2)+' / '+photoEvent.media.length);await page.keyboard.press('Escape');assert.equal(await page.locator('#event-dialog').evaluate(dialog=>dialog.open),false)
-  await page.screenshot({path:resolve('test-results/activities/album-'+width+'.png')});await page.locator('.event-back').click();assert.equal(await page.locator('.event-card').count(),data.filter(e=>e.category===photoEvent.category&&e.year===photoEvent.year).length)
+  await page.screenshot({path:resolve('test-results/activities/album-'+width+'.png')});await page.locator('.event-back').click();assert.equal(await page.locator('.event-card').count(),data.filter(e=>hasActivityCategory(e,photoEvent.category)&&e.year===photoEvent.year).length)
  }
+ // Mixed formats share one album and match every explicitly assigned category.
+ await page.goto(base+'activities.html');await page.locator('.event-card').first().waitFor();
+ for(const category of ['其他','演出','观影会']) {
+  await page.locator('[data-category="'+category+'"]').click();
+  const ids=await page.locator('.event-card').evaluateAll(cards=>cards.map(card=>card.hash.slice('#event/'.length)));
+  assert.deepEqual(ids,data.filter(event=>hasActivityCategory(event,category)).map(event=>event.id));
+ }
+ await page.locator('[data-category=""]').click();assert.equal(await page.locator('.event-card').count(),data.length);
  // 每个分享链接都可直接打开，包含模糊日期与纯视频相册。
  for(const event of data){
   await page.goto(base+'activities.html#event/'+event.id);
@@ -96,7 +105,7 @@ try{
   assert.equal(await page.locator('#event-topic-control').isVisible(),false);
   const target=expected[0];await page.locator('#event-year').selectOption(target.year);
   await page.locator('[data-category="'+target.category+'"]').click();
-  assert.equal(await page.locator('.event-card').count(),expected.filter(e=>e.year===target.year&&e.category===target.category).length);
+  assert.equal(await page.locator('.event-card').count(),expected.filter(e=>e.year===target.year&&hasActivityCategory(e,target.category)).length);
   await page.locator('.event-card').first().click();await page.locator('#event-album').waitFor({state:'visible'});
   await page.locator('.event-back').click();await page.locator('#event-album').waitFor({state:'hidden'});
   await page.goto(base+'activities.html#event-records');await page.locator('.event-card').first().waitFor();await page.locator('#event-topic').selectOption(topic);assert.equal(await page.locator('.event-card').count(),expected.length);
@@ -120,7 +129,7 @@ try{
  await page.locator('[data-category="'+photoEvent.category+'"]').click();await page.locator('#event-year').selectOption(photoEvent.year);
  assert.equal(new URL(page.url()).searchParams.get('category'),photoEvent.category);assert.equal(new URL(page.url()).searchParams.get('year'),photoEvent.year);
  await page.reload();await page.locator('.event-card').first().waitFor();assert.equal(await page.locator('#event-year').inputValue(),photoEvent.year);
- assert.equal(await page.locator('.event-card').count(),data.filter(e=>e.category===photoEvent.category&&e.year===photoEvent.year).length);
+ assert.equal(await page.locator('.event-card').count(),data.filter(e=>hasActivityCategory(e,photoEvent.category)&&e.year===photoEvent.year).length);
  const lastCard=page.locator('.event-card').last();await lastCard.scrollIntoViewIfNeeded();
  const savedScroll=await page.evaluate(()=>scrollY);await lastCard.click();await page.locator('#event-album').waitFor({state:'visible'});
  const eventId=new URL(page.url()).hash.slice(7);await page.reload();await page.locator('#event-album').waitFor({state:'visible'});
