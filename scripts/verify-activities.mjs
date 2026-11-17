@@ -48,6 +48,20 @@ const base='http://127.0.0.1:4181'+previewBase
 mkdirSync(new URL('../test-results/activities/',import.meta.url),{recursive:true})
 let devServer
 try{
+ // Check the hero before jumping to the album: anchor screenshots hid header collisions.
+ for(const width of [1440,1024,901,900,768,390,320]) {
+  await page.setViewportSize({width,height:1000});await page.goto(base+'activities.html?header='+width);
+  await page.locator('.event-card').first().waitFor();await page.evaluate(()=>document.fonts.ready);
+  const layout=await page.evaluate(()=>{
+   const nav=document.querySelector('.page-hero .navbar').getBoundingClientRect();
+   const content=document.querySelector('.page-hero-content').getBoundingClientRect();
+   const logo=document.querySelector('.navbar .logo').getBoundingClientRect();
+   const links=document.querySelector('.navbar .nav-links').getBoundingClientRect();
+   return {separated:nav.bottom+16<=content.top,navFits:nav.left>=0&&nav.right<=innerWidth,contentFits:document.documentElement.scrollWidth<=innerWidth,linksSeparated:logo.right<=links.left||links.right<=logo.left||logo.bottom<=links.top||links.bottom<=logo.top};
+  });
+  assert.deepEqual(layout,{separated:true,navFits:true,contentFits:true,linksSeparated:true},width+'px 页头导航与标题不得重叠或溢出');
+  await page.screenshot({path:resolve('test-results/activities/header-'+width+'.png')});
+ }
  for(const width of [1440,768,390]){
   await page.setViewportSize({width,height:1000});await page.goto(base+'activities.html?viewport='+width+'#event-records');await page.locator('.event-card').first().waitFor();
   assert.equal(await page.locator('.event-card').count(),data.length);assert.equal(await page.locator('video').count(),0)
