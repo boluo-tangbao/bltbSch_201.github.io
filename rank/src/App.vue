@@ -198,19 +198,21 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
           <div class="filter-result"><span role="status" aria-live="polite">{{ filtered.length }} 个结果</span><button class="text-button" :disabled="!hasFilters" @click="reset">重置</button></div>
         </div>
         <div class="board-tools">
-          <button type="button" class="mobile-tools-toggle" :aria-expanded="toolsOpen" aria-controls="board-tools-content" @click="toolsOpen = !toolsOpen"><span>{{ toolsOpen ? '收起筛选与工具' : '筛选与工具' }}<small v-if="tag"> · # {{ tag }}</small></span><span aria-hidden="true">{{ toolsOpen ? '−' : '+' }}</span></button>
+          <button type="button" class="mobile-tools-toggle" :aria-expanded="toolsOpen" aria-controls="board-tools-content" @click="toolsOpen = !toolsOpen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3" fill="var(--ui-paper)"/><circle cx="15" cy="17" r="3" fill="var(--ui-paper)"/></svg><span>筛选与工具<small v-if="tag"> · # {{ tag }}</small></span><span class="tools-summary">标签 · 对比 · 分享</span><span class="tools-chevron" aria-hidden="true">⌄</span></button>
           <div id="board-tools-content" class="board-tools-content" :class="{ 'is-open': toolsOpen }">
             <BrowseFilters :cities="cities" :colors="colors" :tags="tags" :city="city" :tag="tag" @city="city = $event" @tag="tag = $event" />
             <div class="photo-options">
-              <label v-if="boardView === 'compact'"><input v-model="showLabels" type="checkbox" />显示名称与城市</label>
+              <label v-if="boardView === 'compact'" class="board-label-toggle"><input v-model="showLabels" type="checkbox" role="switch" />显示名称与城市</label>
+              <div class="board-action-group" role="group" aria-label="榜单操作">
               <PlaceCompare v-if="isHome" :places="all" />
               <ShareFilters :city="city" :tag="tag" :query="query" />
               <button type="button" class="button" @click="exportOpen = true">导出榜单</button>
               <button v-if="!plan.selecting.value" type="button" class="button" @click="plan.setSelecting(true)">开始选店</button>
-              <span class="board-view-hint">点击卡片查看详情<span v-if="boardView === 'compact'" class="compact-hover-hint"> · 悬停隐藏店名</span><span v-else> · 图片下方显示店名、城市与短评</span></span>
+              </div>
             </div>
           </div>
         </div>
+        <p class="board-view-hint">点击卡片查看详情<span v-if="boardView === 'compact'" class="compact-hover-hint"> · 悬停隐藏店名</span><span v-else> · 图片下方显示店名、城市与短评</span></p>
         <div v-if="!all.length && !hasFilters" class="empty-intro"><span class="empty-icon" aria-hidden="true">＋</span><div><strong>规划中，还在路上待访问</strong><p>等亲自来，再写~</p></div><span class="empty-pill">待填充</span></div>
         <div v-if="hasFilters && !filtered.length" class="no-results" role="status"><strong>没有找到匹配的条目</strong><span>试试其他关键词、城市或标签。</span><button class="text-button" @click="reset">重置筛选 ↗</button></div>
         <div v-if="boardSections.length" class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels, 'comfortable-view': boardView === 'comfortable' }"><section v-for="tier in boardSections" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ tier.index + 1 }}</span><h3 :id="`tier-${tier.id}`"><a class="tier-meaning-link" :aria-label="`${tier.label}：查看档位说明`" :href="`#tier-meaning-${tier.id}`" :aria-describedby="`tier-hint-${tier.id}`" @click.prevent="showTierMeaning(tier.id)">{{ tier.label }}<span class="tier-help-mark" aria-hidden="true">?</span><span :id="`tier-hint-${tier.id}`" class="tier-hint" role="tooltip">{{ site.tierDescriptions[tier.id] }}<small>点击查看完整排序说明 ↓</small></span></a></h3><span class="tier-action">{{ tierActions[tier.id] }}</span><span class="tier-count">{{ tier.places.length }} 处地点</span></div><div class="tier-content"><div v-if="!tier.places.length" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in tier.places" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="linkTo(`${base}${placeDetailHash(p.id, query)}`)" :rank="site.rankWithinTier ? rankOf(p) : undefined" :priority="p.id === firstPhotoId" :comfortable="boardView === 'comfortable'" :badge="recentBadge(p.id, updates, site.recentDays)" :match="searchMatches.get(p.id)" /></div></div></section></div>

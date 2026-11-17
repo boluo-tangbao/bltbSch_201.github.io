@@ -35,7 +35,7 @@ test('控制台主题切换记住选择，跨页同步并用于导出', async ({
     await expect(page.locator('html')).toHaveAttribute('data-theme', 'night')
     await expect(page.locator('#sc-theme-slot .theme-switch')).toHaveCount(1)
   }
-  if (info.project.name !== 'desktop') await page.getByRole('button', { name: /^筛选与工具/ }).click()
+  await page.getByRole('button', { name: /^筛选与工具/ }).click()
   await page.getByRole('button', { name: '导出榜单', exact: true }).filter({ visible: true }).click()
   await expect(page.locator('.studio-theme')).toContainText('Night version')
   await expect(page.locator('.studio-theme button')).toHaveCount(0)

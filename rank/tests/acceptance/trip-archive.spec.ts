@@ -1,3 +1,4 @@
+import { openTripEntry } from '../browser/browse-tools'
 import { test, expect } from '@playwright/test'
 import { readFileSync } from 'node:fs'
 import { archiveKey, createArchive, encryptTrips, unlockArchive } from '../../src/utils/tripArchive'
@@ -22,6 +23,7 @@ test.afterEach(async ({ page }) => {
 
 test('加密保存、跨标签恢复、加密备份导入；私有字段不进普通存储和请求', async ({ page, context }, info) => {
   await page.goto('')
+  await openTripEntry(page)
   await page.locator('.trip-plan-entry').getByRole('button', { name: '开始选店', exact: true }).click()
   await page.locator('.place-card .trip-plan-add').first().click()
   await page.getByRole('button', { name: '查看清单', exact: true }).click()
@@ -59,6 +61,7 @@ test('加密保存、跨标签恢复、加密备份导入；私有字段不进�
   await archive.getByRole('button', { name: '关闭本机行程', exact: true }).click()
   const fresh = await context.newPage()
   await fresh.goto(page.url())
+  await openTripEntry(fresh)
   await fresh.getByRole('button', { name: '本机行程', exact: true }).click()
   const reopened = fresh.getByRole('dialog', { name: '本机保存的行程', exact: true })
   await expect(reopened).not.toContainText(privateName)
@@ -102,6 +105,7 @@ test('加密保存、跨标签恢复、加密备份导入；私有字段不进�
 
 test('存储失败不降级为明文，恶意文件被拒绝而不会执行或清空当前清单', async ({ page }) => {
   await page.goto('')
+  await openTripEntry(page)
   await page.locator('.trip-plan-entry').getByRole('button', { name: '开始选店', exact: true }).click()
   await page.locator('.place-card .trip-plan-add').first().click()
   await page.getByRole('button', { name: '查看清单', exact: true }).click()
@@ -132,6 +136,7 @@ test('恢复保留过期条目并标明原因，闲置自动锁定，多个标�
   await page.clock.install({ time: new Date('2026-11-02T04:00:00Z') })
   await page.goto('')
   await page.evaluate(({ key, raw }) => localStorage.setItem(key, raw), { key: archiveKey, raw })
+  await openTripEntry(page)
   await page.getByRole('button', { name: '本机行程', exact: true }).click()
   const archive = page.getByRole('dialog', { name: '本机保存的行程', exact: true })
   const unlock = async () => {

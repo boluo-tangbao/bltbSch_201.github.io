@@ -22,6 +22,7 @@ const groups=computed(()=>groupTripStops(stops.value,props.places))
 const unavailable = computed(() => reviewTripEntries(plan.entries.value, props.places, directoryData as Record<string, ShopDirectory>, today.value))
 const archiveOpen = ref(false), journeyRevision = ref(0)
 const shareOpen = ref(false)
+const entryOpen = ref(false)
 const loadShare = () => import('./PublicRouteShare.vue')
 function openShare() { dialog.value?.close(); shareOpen.value = true }
 const loadArchive = () => import('./TripArchive.vue')
@@ -51,9 +52,12 @@ onBeforeUnmount(release)
 
 <template>
   <div v-if="!plan.entries.value.length&&!plan.selecting.value" class="trip-plan-entry" :class="{ 'is-browsing': !currentPlace }" aria-label="想逛清单操作">
+    <button v-if="!currentPlace" type="button" class="trip-entry-toggle" :aria-expanded="entryOpen" aria-controls="trip-entry-actions" @click="entryOpen = !entryOpen"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 5h11v16H5V5h3M9 3h6v4H9zM9 12h6M9 16h4"/></svg><span><strong>想逛清单</strong><small>把心动的地方，串成下一次出发</small></span><span class="trip-entry-chevron" aria-hidden="true">⌄</span></button>
+    <div id="trip-entry-actions" class="trip-entry-actions" :class="{ 'is-open': entryOpen || currentPlace }">
     <button type="button" class="trip-saved-launcher" aria-haspopup="dialog" @click="openArchive">本机行程</button>
     <button v-if="currentPlace" type="button" class="trip-current-add" @click="addCurrentPlace">加入清单</button>
     <button type="button" class="trip-plan-launcher" :class="{ 'has-current-place': currentPlace }" @click="plan.setSelecting(true)"><span aria-hidden="true">＋</span> 开始选店</button>
+    </div>
   </div>
   <aside v-if="plan.entries.value.length||plan.selecting.value" class="trip-plan-dock" aria-label="想逛清单">
     <div><strong>{{plan.selecting.value?'正在挑选想逛的地方':'想逛清单'}} · {{ groups.length }} 站</strong><small>{{plan.selecting.value?'点心形加入清单，也可进入介绍挑具体店铺':'选好下一站，带着清单出发'}}</small></div>
@@ -114,10 +118,11 @@ onBeforeUnmount(release)
 .trip-plan-actions > .button { min-height: 44px; font-size: 12px; }
 .trip-plan-download { overflow-wrap: anywhere; }
 .trip-current-add { display: none; }
+.trip-entry-actions { display: contents; }
 @media (max-width: 580px) {
   :global(body:has(.trip-plan-entry:not(.is-browsing))), :global(body:has(.trip-plan-dock)) { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
   .trip-plan-entry, .trip-plan-dock { position: fixed; z-index: 850; inset: auto 0 0; width: 100%; transform: none; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); border: 0; border-top: 1px solid var(--ui-border); background: var(--ui-surface); box-shadow: 0 -3px 16px #2928300a; }
-  .trip-plan-entry > button { position: static; min-height: 44px; margin: 0; border-radius: var(--ui-radius-control); box-shadow: none; font: inherit; font-size: 13px; cursor: pointer; }
+  .trip-plan-entry button { position: static; min-height: 44px; margin: 0; border-radius: var(--ui-radius-control); box-shadow: none; font: inherit; font-size: 13px; cursor: pointer; }
   .trip-plan-entry .trip-saved-launcher { padding: 8px; border: 0; background: none; color: var(--ui-muted); }
   .trip-plan-entry .trip-plan-launcher, .trip-plan-entry .trip-current-add { justify-content: center; min-width: 136px; padding: 10px 20px; border: 1px solid var(--ui-accent); background: var(--ui-accent); color: var(--ui-surface); }
   .trip-plan-entry .trip-current-add { display: inline-flex; }
@@ -132,4 +137,17 @@ onBeforeUnmount(release)
 .trip-plan-entry.is-browsing { position: static; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; width: auto; margin: 20px auto; padding: 0 16px; border: 0; background: none; box-shadow: none; transform: none; }
 .trip-plan-entry.is-browsing > button { position: static; min-width: 0; min-height: 44px; padding: 8px 12px; border: 1px solid var(--ui-border); border-radius: var(--ui-radius-control); background: var(--ui-surface); color: var(--ui-muted); box-shadow: none; font: inherit; font-size: 13px; }
 @media (max-width: 800px) { :global(body:has(.trip-plan-dock) .detail-side-nav), :global(body:has(.trip-plan-entry:not(.is-browsing)) .detail-side-nav) { bottom: calc(110px + env(safe-area-inset-bottom)); } }
+.trip-plan-entry.is-browsing { display: block; width: min(540px, calc(100% - 40px)); margin: 28px auto; padding: 0; border: 1px solid var(--ui-border); border-radius: 14px; background: var(--ui-surface); overflow: hidden; }
+.trip-plan-entry.is-browsing .trip-entry-toggle { display: flex; align-items: center; gap: 14px; width: 100%; min-height: 72px; padding: 14px 18px; border: 0; border-radius: 0; background: transparent; color: var(--ui-accent); text-align: left; cursor: pointer; }
+.trip-entry-toggle > svg { flex: none; }
+.trip-entry-toggle strong { display: block; color: var(--ui-ink); font-size: 14px; font-weight: 650; }
+.trip-entry-toggle small { display: block; margin-top: 4px; color: var(--ui-muted); font-size: 12px; font-weight: 400; line-height: 1.6; }
+.trip-entry-chevron { margin-left: auto; font-size: 22px; transition: transform .18s ease; }
+.trip-entry-toggle[aria-expanded=true] .trip-entry-chevron { transform: rotate(180deg); }
+.trip-plan-entry.is-browsing .trip-entry-actions { display: none; }
+.trip-plan-entry.is-browsing .trip-entry-actions.is-open { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 18px; border-top: 1px solid var(--ui-border); }
+.trip-plan-entry.is-browsing .trip-entry-actions > button { position: static; flex: 1; justify-content: center; min-width: 0; min-height: 44px; padding: 8px 12px; border: 0; border-radius: 8px; background: var(--ui-paper); color: var(--ui-accent); box-shadow: none; font: inherit; font-size: 13px; cursor: pointer; }
+.trip-plan-entry.is-browsing .trip-entry-actions .trip-plan-launcher { background: var(--ui-accent); color: var(--ui-surface); }
+.trip-plan-entry.is-browsing button:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: -4px; }
+.trip-plan-entry.is-browsing .trip-entry-toggle:hover { background: var(--ui-accent-soft); }
 </style>

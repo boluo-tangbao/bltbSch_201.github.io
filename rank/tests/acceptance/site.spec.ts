@@ -1,3 +1,4 @@
+import { openTripEntry } from '../browser/browse-tools'
 import { test, expect, type Page } from '@playwright/test'
 import { readFileSync } from 'node:fs'
 import { flattenPlaces } from '../../src/utils/model'
@@ -219,6 +220,7 @@ test('详情先读看点，日期和历史可展开；直接加入并恢复清�
   }
   await page.locator('.detail-title-row .trip-plan-add').click()
   await expect(page.getByRole('button', { name: '本机行程', exact: true })).toBeVisible()
+  await openTripEntry(page)
   await page.getByRole('button', { name: '本机行程', exact: true }).click()
   await expect(page.getByRole('dialog', { name: '本机保存的行程', exact: true })).toBeVisible()
   await page.getByRole('button', { name: '关闭本机行程', exact: true }).click()
@@ -311,6 +313,7 @@ test('搜索、行程与导出：只选择一个地点并生成可读取文件',
   const card = page.locator(`#place-card-${place.id}`)
   await expect(card).toBeVisible()
   expect(features, '普通浏览和搜索不应加载导出／行程模块').toEqual([])
+  await openTripEntry(page)
   await page.locator('.trip-plan-entry').getByRole('button', { name: '开始选店', exact: true }).click()
   await card.getByRole('button', { name: /加入想逛清单/ }).click()
   await expect(page.locator('.trip-plan-dock')).toContainText('1 站')

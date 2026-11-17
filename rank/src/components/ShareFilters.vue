@@ -8,5 +8,5 @@ const url = computed(() => filterShareUrl(location.href, props))
 </script>
 
 <template>
-  <CopyButton :text="url" label="分享筛选" copied-label="链接已复制" variant="share" />
+  <CopyButton :text="url" label="分享筛选" copied-label="链接已复制" />
 </template>

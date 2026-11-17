@@ -1,3 +1,4 @@
+import { openMobileTools, openTripEntry } from '../browser/browse-tools'
 import { test, expect } from '@playwright/test'
 import { mkdirSync, readFileSync } from 'node:fs'
 import { flattenPlaces } from '../../src/utils/model'
@@ -69,6 +70,9 @@ test('Night panels cover comparison, atlas, directory, detail and dialogs', asyn
     await noLightPanels()
   }
   await page.goto(base)
+  await openTripEntry(page)
+  await openMobileTools(page)
+  await noLightPanels()
   await page.locator('.trip-plan-entry').getByRole('button', { name: '开始选店', exact: true }).click()
   await page.locator('.trip-plan-add.is-icon-only').first().click()
   await page.getByRole('button', { name: '查看清单', exact: true }).click()
