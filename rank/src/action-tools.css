@@ -64,3 +64,6 @@
   .board-action-group .compare-launch-count { position: absolute; top: 3px; right: 4px; color: var(--action-ink); font-size: 11px; line-height: 1; }
 }
 @media (prefers-reduced-motion: reduce) { .board-action-group .button, .board-action-group .copy-button, .mobile-tools-toggle .tools-chevron, .board-label-toggle input::after { transition: none; } .board-action-group .button:hover, .board-action-group .copy-button:hover { transform: none; } }
+
+/* The rank console opens above the active trip dock as well as the page content. */
+body:has(.board-page) #site-console { z-index: 900; }

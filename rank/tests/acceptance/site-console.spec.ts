@@ -1,6 +1,48 @@
 import { test, expect } from '@playwright/test'
-import { mkdirSync } from 'node:fs'
+import { mkdirSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { openTripEntry } from '../browser/browse-tools'
+
+test('手机控制台覆盖页尾清单与选店底栏，榜单说明保留原文并突出重点', async ({ page, context, baseURL }, info) => {
+  test.skip(page.viewportSize()!.width > 900, '手机层级回归')
+  await context.route('**/*', route => new URL(route.request().url()).origin === new URL(baseURL!).origin ? route.continue() : route.abort())
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await page.goto('./')
+  const evidence = resolve('../test-results/acceptance/rank-reading')
+  mkdirSync(evidence, { recursive: true })
+  const expectConsoleAbove = async (selector: string) => {
+    await page.locator('.sc-launcher').click()
+    await expect(page.locator('.sc-panel')).toBeVisible()
+    const overlap = await page.evaluate(target => {
+      const panel = document.querySelector('.sc-panel')!.getBoundingClientRect()
+      const card = document.querySelector(target)!.getBoundingClientRect()
+      const left = Math.max(panel.left, card.left, 0), right = Math.min(panel.right, card.right, innerWidth)
+      const top = Math.max(panel.top, card.top, 0), bottom = Math.min(panel.bottom, card.bottom, innerHeight)
+      return { width: right - left, height: bottom - top, consoleOnTop: !!document.elementFromPoint((left + right) / 2, (top + bottom) / 2)?.closest('#site-console') }
+    }, selector)
+    expect(overlap.width).toBeGreaterThan(0)
+    expect(overlap.height).toBeGreaterThan(0)
+    expect(overlap.consoleOnTop, '控制台在与清单相交的位置应实际绘制在上层').toBe(true)
+  }
+  await page.locator('.trip-plan-entry').scrollIntoViewIfNeeded()
+  await expectConsoleAbove('.trip-plan-entry')
+  await page.screenshot({ path: resolve(evidence, `console-${info.project.name}.png`) })
+  await page.getByRole('button', { name: '关闭控制台', exact: true }).click()
+  await openTripEntry(page)
+  await page.locator('.trip-plan-entry').getByRole('button', { name: '开始选店', exact: true }).click()
+  await expectConsoleAbove('.trip-plan-dock')
+  await page.getByRole('button', { name: '关闭控制台', exact: true }).click()
+  await page.getByRole('button', { name: '退出选店', exact: true }).click()
+  const criteria = page.locator('.criteria-copy')
+  await criteria.scrollIntoViewIfNeeded()
+  await expect(criteria.locator('mark')).toHaveCount(4)
+  const site = JSON.parse(readFileSync('src/data/site.json', 'utf8'))
+  expect((await criteria.textContent())!.replace(/\s/g, '')).toBe(site.criteria.replace(/\s/g, ''))
+  await page.locator('.criteria-section details > summary').click()
+  await expect(page.locator('#tier-meaning-hang')).toBeVisible()
+  await page.locator('.criteria-section').screenshot({ path: resolve(evidence, `criteria-${info.project.name}.png`), style: '.sc-launcher { visibility: hidden !important; }' })
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+})
 
 test('控制台主题切换记住选择，跨页同步并用于导出', async ({ page, context, baseURL }, info) => {
   await context.route('**/*', route => new URL(route.request().url()).origin === new URL(baseURL!).origin ? route.continue() : route.abort())
