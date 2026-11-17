@@ -134,20 +134,20 @@ onBeforeUnmount(release)
   .trip-plan-dialog { padding: 16px; }
   .trip-plan-entry button:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 2px; }
 }
-.trip-plan-entry.is-browsing { position: static; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; width: auto; margin: 20px auto; padding: 0 16px; border: 0; background: none; box-shadow: none; transform: none; }
-.trip-plan-entry.is-browsing > button { position: static; min-width: 0; min-height: 44px; padding: 8px 12px; border: 1px solid var(--ui-border); border-radius: var(--ui-radius-control); background: var(--ui-surface); color: var(--ui-muted); box-shadow: none; font: inherit; font-size: 13px; }
 @media (max-width: 800px) { :global(body:has(.trip-plan-dock) .detail-side-nav), :global(body:has(.trip-plan-entry:not(.is-browsing)) .detail-side-nav) { bottom: calc(110px + env(safe-area-inset-bottom)); } }
-.trip-plan-entry.is-browsing { display: block; width: min(540px, calc(100% - 40px)); margin: 28px auto; padding: 0; border: 1px solid var(--ui-border); border-radius: 14px; background: var(--ui-surface); overflow: hidden; }
-.trip-plan-entry.is-browsing .trip-entry-toggle { display: flex; align-items: center; gap: 14px; width: 100%; min-height: 72px; padding: 14px 18px; border: 0; border-radius: 0; background: transparent; color: var(--ui-accent); text-align: left; cursor: pointer; }
-.trip-entry-toggle > svg { flex: none; }
-.trip-entry-toggle strong { display: block; color: var(--ui-ink); font-size: 14px; font-weight: 650; }
+.trip-plan-entry.is-browsing { position: static; transform: none; display: block; width: min(540px, calc(100% - 40px)); margin: 28px auto; padding: 0; border: 2px solid var(--ui-ink); border-radius: 16px 4px 16px 4px; background: var(--ui-surface); box-shadow: 4px 4px 0 var(--ui-menu-shadow); overflow: visible; }
+.trip-plan-entry.is-browsing .trip-entry-toggle { position: relative; display: flex; align-items: center; gap: 14px; width: 100%; min-height: 78px; padding: 14px 18px; border: 0; border-radius: 0; background: transparent; color: var(--ui-accent); font: inherit; text-align: left; cursor: pointer; }
+.trip-entry-toggle > svg { box-sizing: content-box; flex: none; padding: 4px; border-radius: 0; }
+.trip-entry-toggle strong { display: block; color: var(--ui-ink); font-family: var(--ui-font-playful); font-size: 22px; font-weight: 400; }
 .trip-entry-toggle small { display: block; margin-top: 4px; color: var(--ui-muted); font-size: 12px; font-weight: 400; line-height: 1.6; }
 .trip-entry-chevron { margin-left: auto; font-size: 22px; transition: transform .18s ease; }
 .trip-entry-toggle[aria-expanded=true] .trip-entry-chevron { transform: rotate(180deg); }
 .trip-plan-entry.is-browsing .trip-entry-actions { display: none; }
-.trip-plan-entry.is-browsing .trip-entry-actions.is-open { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 18px; border-top: 1px solid var(--ui-border); }
-.trip-plan-entry.is-browsing .trip-entry-actions > button { position: static; flex: 1; justify-content: center; min-width: 0; min-height: 44px; padding: 8px 12px; border: 0; border-radius: 8px; background: var(--ui-paper); color: var(--ui-accent); box-shadow: none; font: inherit; font-size: 13px; cursor: pointer; }
-.trip-plan-entry.is-browsing .trip-entry-actions .trip-plan-launcher { background: var(--ui-accent); color: var(--ui-surface); }
+.trip-plan-entry.is-browsing .trip-entry-actions.is-open { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 18px; border-top: 1px dashed var(--ui-border); }
+.trip-plan-entry.is-browsing .trip-entry-actions > button { position: static; flex: 1; justify-content: center; min-width: 0; min-height: 52px; padding: 8px 12px; border: 1px solid var(--ui-border); border-bottom: 3px solid var(--ui-menu-shadow); border-radius: 4px; background: var(--ui-paper); color: var(--ui-accent); box-shadow: none; font-family: var(--ui-font-playful); font-size: 18px; font-weight: 400; cursor: pointer; }
+.trip-plan-entry.is-browsing .trip-entry-actions .trip-plan-launcher { border-bottom-color: var(--ui-accent); background: var(--ui-accent); color: var(--ui-surface); }
 .trip-plan-entry.is-browsing button:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: -4px; }
-.trip-plan-entry.is-browsing .trip-entry-toggle:hover { background: var(--ui-accent-soft); }
+.trip-plan-entry.is-browsing .trip-entry-toggle:hover { background: var(--ui-accent-soft); border-radius: 14px 2px 14px 2px; }
+.trip-plan-entry.is-browsing .trip-entry-toggle::before { content: ''; position: absolute; z-index: 1; top: -7px; left: 28px; width: 56px; height: 12px; border: 1px solid var(--ui-border); background: var(--ui-accent-soft); transform: rotate(-5deg); pointer-events: none; }
+@media (max-width: 360px) { .trip-plan-entry.is-browsing .trip-entry-toggle { padding: 12px; gap: 10px; } .trip-entry-toggle > svg { padding: 6px; } .trip-plan-entry.is-browsing .trip-entry-actions > button { font-size: 16px; } }
 </style>

@@ -11,6 +11,7 @@ import PlaceCard from './components/PlaceCard.vue'
 import PlaceDetail from './components/DeferredDetail.vue'
 import BrowseFilters from './components/BrowseFilters.vue'
 import ShareFilters from './components/ShareFilters.vue'
+import MenuIcon from './components/MenuIcon.vue'
 import { cityColor } from './utils/cities'
 import { useStoredFilters } from './utils/filters'
 import { urlWithFilters } from './utils/filterLinks'
@@ -198,16 +199,16 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
           <div class="filter-result"><span role="status" aria-live="polite">{{ filtered.length }} 个结果</span><button class="text-button" :disabled="!hasFilters" @click="reset">重置</button></div>
         </div>
         <div class="board-tools">
-          <button type="button" class="mobile-tools-toggle" :aria-expanded="toolsOpen" aria-controls="board-tools-content" @click="toolsOpen = !toolsOpen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3" fill="var(--ui-paper)"/><circle cx="15" cy="17" r="3" fill="var(--ui-paper)"/></svg><span>筛选与工具<small v-if="tag"> · # {{ tag }}</small></span><span class="tools-summary">标签 · 对比 · 分享</span><span class="tools-chevron" aria-hidden="true">⌄</span></button>
+          <button type="button" class="mobile-tools-toggle" :aria-expanded="toolsOpen" aria-controls="board-tools-content" @click="toolsOpen = !toolsOpen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3" fill="var(--ui-paper)"/><circle cx="15" cy="17" r="3" fill="var(--ui-paper)"/></svg><span class="tools-title">筛选与工具<small v-if="tag"> · # {{ tag }}</small></span><span class="tools-summary" aria-hidden="true">BROWSE NOTES</span><span class="tools-chevron" aria-hidden="true">⌄</span></button>
           <div id="board-tools-content" class="board-tools-content" :class="{ 'is-open': toolsOpen }">
             <BrowseFilters :cities="cities" :colors="colors" :tags="tags" :city="city" :tag="tag" @city="city = $event" @tag="tag = $event" />
             <div class="photo-options">
               <label v-if="boardView === 'compact'" class="board-label-toggle"><input v-model="showLabels" type="checkbox" role="switch" />显示名称与城市</label>
               <div class="board-action-group" role="group" aria-label="榜单操作">
-              <PlaceCompare v-if="isHome" :places="all" />
-              <ShareFilters :city="city" :tag="tag" :query="query" />
-              <button type="button" class="button" @click="exportOpen = true">导出榜单</button>
-              <button v-if="!plan.selecting.value" type="button" class="button" @click="plan.setSelecting(true)">开始选店</button>
+              <PlaceCompare v-if="isHome" :places="all" menu-tile />
+              <ShareFilters :city="city" :tag="tag" :query="query" menu-tile />
+              <button type="button" class="button" @click="exportOpen = true"><MenuIcon name="export" /><span class="menu-tile-copy">导出榜单<small class="menu-tile-caption" aria-hidden="true">EXPORT</small></span></button>
+              <button v-if="!plan.selecting.value" type="button" class="button" @click="plan.setSelecting(true)"><MenuIcon name="heart" /><span class="menu-tile-copy">开始选店<small class="menu-tile-caption" aria-hidden="true">LET’S GO</small></span></button>
               </div>
             </div>
           </div>

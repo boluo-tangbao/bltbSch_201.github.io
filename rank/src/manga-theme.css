@@ -1,4 +1,6 @@
 /* Manga-inspired framing across the ranking, guide, and QA pages. */
+/* Local ZCOOL KuaiLe subset includes menu labels and all current city/tag names.
+   Source: google/fonts ofl/zcoolkuaile; license: assets/fonts/OFL-ZCOOL-KuaiLe.txt. */
 @font-face {
   font-family: 'Guide Cartoon';
   src: url('./assets/fonts/zcool-kuaile-guide.woff2') format('woff2');

@@ -13,6 +13,8 @@
 .studio-theme { display: grid; gap: 10px; margin-bottom: 25px; font-size: 12px; font-weight: 700; }
 .studio-theme .theme-switch { width: fit-content; }
 :root[data-theme="night"] {
+  --ui-menu-cyan: #81d6de;
+  --ui-menu-shadow: #383742;
   --manga-ink: #e4eadb; --manga-pink: #d5f34a; --manga-blush: var(--edition-soft); --manga-paper: var(--edition-surface); --manga-marble: var(--edition-paper);
   --accent: #d5f34a; --line: var(--edition-line); --muted: var(--edition-muted);
   --ui-ink: #e4eadb; --ui-muted: var(--edition-muted); --ui-paper: var(--edition-paper); --ui-surface: var(--edition-surface); --ui-accent: #d5f34a; --ui-accent-soft: var(--edition-soft); --ui-border: var(--edition-line);

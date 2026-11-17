@@ -3,6 +3,9 @@
 
 /* Shared visitor UI vocabulary. Export artwork and city identity colors stay separate. */
 :root {
+  --ui-font-playful: 'Guide Cartoon', 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  --ui-menu-cyan: #237c86;
+  --ui-menu-shadow: #f5dce2;
   --ui-ink: #292830;
   --ui-muted: #79626b;
   --ui-paper: #fffaf1;

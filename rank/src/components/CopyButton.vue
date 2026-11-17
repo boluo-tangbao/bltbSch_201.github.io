@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { nextTick, onBeforeUnmount, ref, watch } from 'vue'
-const props = withDefaults(defineProps<{ text: string; label: string; copiedLabel?: string; variant?: 'plain' | 'share' }>(), { copiedLabel: '已复制', variant: 'plain' })
+const props = withDefaults(defineProps<{ text: string; label: string; copiedLabel?: string; variant?: 'plain' | 'share'; caption?: string }>(), { copiedLabel: '已复制', variant: 'plain' })
 const copied = ref(false), fallback = ref(false), field = ref<HTMLInputElement | HTMLTextAreaElement>()
 let timer: ReturnType<typeof setTimeout> | undefined
 let disposed = false
@@ -26,7 +26,7 @@ onBeforeUnmount(() => { disposed = true; clearTimeout(timer) })
 
 <template>
   <span class="copy-control">
-    <button type="button" class="copy-button" :class="{ 'is-share': variant === 'share', 'is-copied': copied }" :aria-label="label" :title="label" @click="copy"><span aria-live="polite">{{ copied ? copiedLabel : label }}</span></button>
+    <button type="button" class="copy-button" :class="{ 'is-share': variant === 'share', 'is-copied': copied }" :aria-label="label" :title="label" @click="copy"><slot name="icon" /><span class="copy-button-label"><span aria-live="polite">{{ copied ? copiedLabel : label }}</span><small v-if="caption" class="menu-tile-caption" aria-hidden="true">{{ caption }}</small></span></button>
     <span v-if="fallback" class="copy-fallback"><span role="status">暂时无法自动复制</span><textarea v-if="text.includes('\n')" ref="field" :value="text" readonly rows="5" :aria-label="`${label}内容`" @focus="field?.select()"></textarea><input v-else ref="field" :value="text" readonly :aria-label="`${label}内容`" @focus="field?.select()" /></span>
   </span>
 </template>
