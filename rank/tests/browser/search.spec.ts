@@ -86,7 +86,7 @@ test('keyword, city and tag conditions compose, normalize width and clear withou
   await expect(page.locator('.place-card')).toHaveCount(1)
   await page.getByLabel('城市筛选').selectOption('广州')
   await expect(page.locator('.place-card')).toHaveCount(0)
-  await page.getByRole('button', { name: '移除城市：广州', exact: true }).click()
+  await page.getByLabel('城市筛选').selectOption('')
   await expect(page.locator('.place-card')).toHaveCount(1)
   const otherTag = [...new Set(places.flatMap(place => place.tags))].find(tag => !hipp.tags.includes(tag))!
   const otherTagButton = page.getByRole('button', { name: '# ' + otherTag, exact: true })

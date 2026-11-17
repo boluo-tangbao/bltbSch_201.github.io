@@ -55,7 +55,7 @@ test('mobile tools start collapsed; tags compose and restore after opening', asy
   await expect(page.getByRole('button', { name: '移除关键词：' + place.name, exact: true })).toHaveCount(0)
   await page.getByRole('searchbox').fill('')
   await expect(page.getByRole('searchbox')).toHaveValue('')
-  await page.getByRole('button', { name: '移除城市：' + place.city, exact: true }).click()
+  await page.getByLabel('城市筛选').selectOption('')
   await expect(page.locator('.active-filters')).toHaveCount(0)
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
 })

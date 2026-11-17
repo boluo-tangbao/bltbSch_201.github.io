@@ -26,8 +26,7 @@ const moreTagsId = useId()
     <div v-if="moreTags.length" v-show="expanded" :id="moreTagsId" class="browse-tags">
       <TagLegend :tags="moreTags" :active="tag" label="其他标签" :show-all="false" @select="emit('tag', $event)" />
     </div>
-    <div v-if="city || tag" class="active-filters" aria-label="已选筛选条件">
-      <button v-if="city" type="button" :aria-label="`移除城市：${city}`" @click="emit('city', '')">{{ city }} <span aria-hidden="true">×</span></button>
+    <div v-if="tag" class="active-filters" aria-label="已选筛选条件">
       <button v-if="tag" type="button" :aria-label="`移除标签：${tag}`" @click="emit('tag', '')"># {{ tag }} <span aria-hidden="true">×</span></button>
     </div>
   </div>
