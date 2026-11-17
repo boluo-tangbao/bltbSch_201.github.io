@@ -102,6 +102,8 @@
 
 个人主页首屏提供逛店榜单、最近活动和生活记录三个照片入口；最近活动自动读取活动清单首条记录。角色相册位于旅游栏目之后，默认显示 6 位，可展开全部；入口样式与活动预览分别在 `assets/css/home.css`、`assets/js/home.js`，角色展开逻辑在 `assets/js/script.js`。
 
+角色相册之后的「此刻的我」收录趣味测试、喜好拼图及阶段小结，目前展示用户提供的九专辑图。收录日期不表示测试完成日期；不代写用户感想。新增记录时维护 `content/personal-snapshots/records.json` 和首页卡片，原图放在已忽略的 `.local-media/personal-snapshots/` 并记录 SHA-256，运行 `node scripts/prepare-personal-snapshots.mjs` 生成最长边 480px 预览与 1600px 高清 WebP，检查文字清晰度后将两份网页图片一并提交。更换素材使用新文件名以避免旧缓存；旧记录保留。组装时自动检查这些网页图片，云端使用已提交副本，不依赖本地原图。卡片支持点击放大、键盘关闭及更换配色，系统设置减少动态效果时停用装饰动画；没有 JavaScript 仍可打开高清图。
+
 ## 开发与验证
 
 使用 **Node.js 24 LTS** 和 npm；CI 使用相同主版本。Vue 3 + TypeScript + Vite，无后端、数据库或账号系统。TypeScript 固定为与 Vue 类型检查器兼容的 5.9.3，依赖锁文件已提交。

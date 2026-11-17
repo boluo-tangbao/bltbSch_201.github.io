@@ -10,7 +10,7 @@
   <link rel="preload" as="image" href="images/responsive/akane-background-960.webp" media="(max-width: 680px)" />
   <link rel="preload" as="image" href="images/responsive/akane-background-1280.webp" media="(min-width: 681px) and (max-width: 1280px)" />
   <link rel="preload" as="image" href="images/akane-background.webp" media="(min-width: 1281px)" />
-  <link rel="stylesheet" href="assets/css/home.css?v=4" />
+  <link rel="stylesheet" href="assets/css/home.css?v=5" />
 </head>
 
 <body class="home-page">
@@ -41,6 +41,7 @@
         <div class="hero-buttons">
           <a href="#sports" class="home-text-link">认识我的生活 ↓</a>
           <a href="#pixel-gallery" class="home-text-link">看看我的动画老婆们 ↓</a>
+          <a href="#personal-snapshots" class="home-text-link">翻翻此刻的我 ↓</a>
         </div>
       </div>
 
@@ -189,6 +190,35 @@
       <noscript><p>启用 JavaScript 可以浏览角色相册。</p></noscript>
     </section>
 
+    <section id="personal-snapshots" class="snapshots" aria-labelledby="snapshots-title" data-palette="violet">
+      <div class="snapshots-heading">
+        <div>
+          <span class="snapshots-eyebrow">ME, FOR NOW / 个人切片</span>
+          <h2 id="snapshots-title">此刻的我<span aria-hidden="true">✳</span></h2>
+          <p>喜好会变，快乐先存档。</p>
+        </div>
+        <button class="snapshots-palette" type="button" hidden><span aria-hidden="true">◒</span> 换个配色</button>
+      </div>
+      <article class="snapshot-card" id="snapshot-music-nine">
+        <a class="snapshot-art" href="assets/images/snapshots/music-nine-view.webp" data-snapshot-open aria-label="放大查看构成 bltbSch 的九张专辑">
+          <span class="snapshot-sticker" aria-hidden="true">我的音乐成分！</span>
+          <img src="assets/images/snapshots/music-nine-preview.webp" alt="构成 bltbSch 的九张专辑，包含 Hisohiso Banashi、Elma、Red、黑色柳丁等九张封面" width="312" height="480" loading="lazy" decoding="async" />
+          <span class="snapshot-art-hint">点开看看 <span aria-hidden="true">↗</span></span>
+        </a>
+        <div class="snapshot-copy">
+          <div class="snapshot-meta"><span>喜好拼图</span><span>NO. 001</span></div>
+          <h3>构成 bltbSch 的<br /><em>九张专辑</em></h3>
+          <p class="snapshot-description">把音乐偏好拼成九宫格，给这个阶段的自己留一张快照。</p>
+          <div class="snapshot-tags" aria-label="记录标签"><span>♫ 音乐</span><span>九宫格</span><span>趣味存档</span></div>
+          <a class="snapshot-open" href="assets/images/snapshots/music-nine-view.webp" data-snapshot-open>展开这份切片 <span aria-hidden="true">↗</span></a>
+          <p class="snapshot-date"><time datetime="2026-11-17">2026.11.17</time> 收录</p>
+        </div>
+        <span class="snapshot-number" aria-hidden="true">09</span>
+      </article>
+      <div class="snapshots-footer"><span>TO BE CONTINUED<span aria-hidden="true"> …</span></span><p>下次再看看，又会选些什么。</p></div>
+      <p class="snapshots-status" role="status" aria-live="polite"></p>
+    </section>
+
     <section id="gallery" class="gallery-section">
       <h2>生活相册</h2>
       <p>一些轻松的生活片段，可以之后慢慢替换成自己的照片。</p>
@@ -215,7 +245,17 @@
     </div>
   </dialog>
   <script src="assets/js/script.js?v=9"></script>
-  <script src="assets/js/home.js?v=2"></script>
+  <dialog id="snapshot-dialog" class="snapshot-dialog" aria-labelledby="snapshot-dialog-title">
+    <div class="snapshot-dialog-header">
+      <div><span class="snapshots-eyebrow">PERSONAL SNAPSHOT / 001</span><h2 id="snapshot-dialog-title">构成 bltbSch 的九张专辑</h2></div>
+      <button type="button" class="snapshot-close" aria-label="关闭专辑拼图" autofocus>×</button>
+    </div>
+    <p class="snapshot-dialog-caption">收录于 2026.11.17 · 图片由本人提供</p>
+    <img id="snapshot-full-image" alt="构成 bltbSch 的九张专辑完整结果图" width="1041" height="1600" />
+    <p class="snapshot-image-status" role="status" hidden>图片暂时没有加载出来，<a href="assets/images/snapshots/music-nine-view.webp" target="_blank" rel="noopener">单独打开高清图 ↗</a></p>
+    <a class="snapshot-image-link" href="assets/images/snapshots/music-nine-view.webp" target="_blank" rel="noopener">单独打开高清图 ↗</a>
+  </dialog>
+  <script src="assets/js/home.js?v=3"></script>
   <script src="assets/js/site-console.js?v=11" defer></script>
 </body>
 </html>

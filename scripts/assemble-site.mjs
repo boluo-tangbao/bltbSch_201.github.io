@@ -11,6 +11,7 @@ import { generateDiscoveryPages } from './generate-discovery-pages.mjs'
 import { pageMetadata } from './page-metadata.mjs'
 import { fillHomeCityLinks } from './home-city-links.mjs'
 import './prepare-home-images.mjs'
+import './prepare-personal-snapshots.mjs'
 const root = resolve(fileURLToPath(new URL('../', import.meta.url)))
 const out = resolve(root, '_site')
 validatePilgrimage(JSON.parse(readFileSync(resolve(root,'assets/data/pilgrimage.json'),'utf8')))

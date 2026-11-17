@@ -1,0 +1,15 @@
+[
+  {
+    "id": "music-nine",
+    "title": "构成 bltbSch 的九张专辑",
+    "recordedAt": "2026-11-17",
+    "source": {
+      "type": "user-provided",
+      "originalName": "构成bltbSch的九张专辑.png",
+      "archive": ".local-media/personal-snapshots/music-nine.png",
+      "sha256": "91e1a86074e35247562feb7e07c29902a272a28fe15f8e07506acbe22a5de5dc"
+    },
+    "preview": "assets/images/snapshots/music-nine-preview.webp",
+    "fullImage": "assets/images/snapshots/music-nine-view.webp"
+  }
+]
