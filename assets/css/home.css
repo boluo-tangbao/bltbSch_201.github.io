@@ -160,3 +160,109 @@ body:has(.snapshot-dialog[open]) { overflow: hidden; }
   .snapshots h2 > span { animation: none; }
   .snapshots :is(a, button) { transition: none; }
 }
+
+/* Life photo collection: paper, ink and quiet color from the rank pages. */
+.home-life {
+  --life-ink: #292830;
+  --life-paper: #fffaf1;
+  margin: 12px 0 56px;
+  scroll-margin-top: 24px;
+}
+.home-life-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+  padding: 20px 24px;
+  border-block: 2px solid var(--life-ink);
+  background: var(--life-paper);
+  color: var(--life-ink);
+}
+.home-life-kicker {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  color: #8b344a;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .08em;
+}
+.home-life-kicker > span { color: #ba8b96; }
+.home-life-heading h2 { margin: 6px 0 0; font-size: clamp(28px, 3.5vw, 40px); line-height: 1.3; letter-spacing: -.04em; }
+.home-life-heading h2 > span { color: #a83750; }
+.home-life-heading p { margin: 0 0 3px; font-size: 13px; line-height: 1.8; color: #67505a; }
+.home-life-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 26px; }
+.life-card {
+  --life-accent: #d8eee4;
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  border: 2px solid var(--life-ink);
+  border-radius: 8px;
+  background: var(--life-paper);
+  color: var(--life-ink);
+  box-shadow: 5px 5px 0 var(--life-accent);
+  scroll-margin-top: 24px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.life-card-art { --life-accent: #f3cbd3; }
+.life-card-anime { --life-accent: #dcd1ef; }
+.life-card-travel { --life-accent: #f4dfb1; }
+.life-card-photo { position: relative; overflow: hidden; aspect-ratio: 8 / 5; background: #e9e5de; border-bottom: 2px solid var(--life-ink); }
+.life-card-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.life-card-sports img { object-position: 50% 70%; }
+.life-card-art img { object-position: 50% 60%; }
+.life-card-anime img { object-position: 50% 40%; }
+.life-card-travel .life-card-photo { display: grid; place-items: center; background: #f5ecd9; }
+.home-travel-frame { position: relative; width: 100%; aspect-ratio: 1931 / 1080; overflow: hidden; }
+.life-card-photo img.home-travel-cover { position: absolute; bottom: 0; width: 100%; height: 200%; object-fit: fill; }
+.life-card-index {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--life-ink);
+  border-radius: 4px;
+  background: var(--life-accent);
+  color: var(--life-ink);
+  font-size: 13px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.life-card-caption { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 20px; }
+.life-card-label { display: block; font-size: 10px; font-weight: 700; line-height: 1.4; letter-spacing: .12em; color: #67505a; }
+.life-card-caption h3 { margin: 3px 0 0; font-size: 27px; line-height: 1.3; letter-spacing: .02em; }
+.life-card-arrow { display: grid; flex: none; place-items: center; width: 40px; height: 40px; border: 1px solid var(--life-ink); border-radius: 50%; background: var(--life-accent); font-size: 23px; line-height: 1; }
+.life-card:focus-visible { outline: 3px solid #a83750; outline-offset: 7px; }
+@media (hover: hover) {
+  .life-card:hover { transform: translate(-2px, -3px); box-shadow: 7px 8px 0 var(--life-accent); }
+}
+@media (max-width: 600px) {
+  .home-life { margin-top: 6px; margin-bottom: 40px; }
+  .home-life-heading { display: block; margin-bottom: 18px; padding: 16px; }
+  .home-life-kicker { font-size: 10px; }
+  .home-life-heading h2 { margin-top: 5px; font-size: 30px; }
+  .home-life-heading p { margin: 10px 0 0; font-size: 12px; }
+  .home-life-heading p br { display: none; }
+  .home-life-grid { gap: 20px 14px; }
+  .life-card { border-radius: 6px; box-shadow: 3px 4px 0 var(--life-accent); }
+  .life-card-photo { aspect-ratio: 4 / 5; }
+  .life-card-anime .life-card-photo { background: #e6dcf0; }
+  .life-card-anime img { object-fit: contain; padding-block: 12px; }
+  .life-card-index { top: 9px; left: 9px; width: 27px; height: 27px; font-size: 11px; }
+  .life-card-caption { padding: 12px 10px; gap: 5px; }
+  .life-card-label { font-size: 9px; letter-spacing: .08em; }
+  .life-card-caption h3 { font-size: 21px; }
+  .life-card-arrow { width: 30px; height: 30px; font-size: 19px; }
+}
+@media (max-width: 359px) {
+  .home-life-grid { column-gap: 10px; }
+  .life-card-caption { padding: 10px 8px; }
+  .life-card-caption h3 { font-size: 19px; }
+  .life-card-arrow { width: 26px; height: 26px; font-size: 17px; }
+}
+@media (prefers-reduced-motion: reduce) { .life-card { transition: none; } }
