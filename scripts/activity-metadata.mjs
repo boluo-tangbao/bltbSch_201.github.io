@@ -5,6 +5,8 @@ import { resolve, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 export const activityRoot = fileURLToPath(new URL('../content/activities/', import.meta.url))
 export const mediaExtensions = new Set(['.jpg','.jpeg','.png','.webp','.mp4','.mov'])
+export const activityFolders = (root = activityRoot) => readdirSync(root,{withFileTypes:true}).filter(entry=>entry.isDirectory()).map(entry=>entry.name)
+export const missingActivityMetadata = (root = activityRoot) => activityFolders(root).filter(folder=>!statSync(resolve(root,folder,'event.json'),{throwIfNoEntry:false}))
 export function activityFiles(folder, root = activityRoot) {
  const files=[]
  const walk=prefix=>{
@@ -18,12 +20,13 @@ export function activityFiles(folder, root = activityRoot) {
  walk('')
  return files.sort((a,b)=>a.localeCompare(b,'zh-CN',{numeric:true}))
 }
-export function readActivities() {
+export function readActivities(root = activityRoot) {
+ const missing=missingActivityMetadata(root)
+ if(missing.length)throw new Error(`以下 ${missing.length} 个活动缺少 event.json：\n${missing.map(folder=>'- '+folder).join('\n')}\n请在仓库根目录双击“补齐活动配置.cmd”，或运行 node scripts/init-activities.mjs；完成后将新配置和素材一起提交。`)
  const ids=new Set()
- return readdirSync(activityRoot,{withFileTypes:true}).filter(entry=>entry.isDirectory()).map(entry=>{
-  const folder=entry.name
+ return activityFolders(root).map(folder=>{
   let event
-  try {event=JSON.parse(readFileSync(resolve(activityRoot,folder,'event.json'),'utf8'))} catch(error) {throw new Error(`请维护 ${folder}/event.json：${error.message}`)}
+  try {event=JSON.parse(readFileSync(resolve(root,folder,'event.json'),'utf8'))} catch(error) {throw new Error(`请维护 ${folder}/event.json：${error.message}`)}
   const fail=message=>{throw new Error(`${folder}/event.json：${message}`)}
   if(!event||Array.isArray(event)||typeof event!=='object')fail('必须为 JSON 对象')
   if(typeof event.id!=='string'||!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(event.id)||ids.has(event.id))fail('ID 必须唯一，使用小写字母、数字和连字符')
@@ -38,11 +41,11 @@ export function readActivities() {
   const date=event.date||null,dateLabel=event.dateLabel||date
   if(typeof dateLabel!=='string'||!/^\d{4}/.test(dateLabel))fail('缺少以年份开头的日期原文 dateLabel')
   if(date&&dateLabel.slice(0,4)!==date.slice(0,4))fail('date 与 dateLabel 年份冲突')
-  const files=activityFiles(folder)
+  const files=activityFiles(folder,root)
   if(event.bvid!==undefined&&(typeof event.bvid!=='string'||!/^BV[0-9A-Za-z]{10}$/.test(event.bvid)))fail('bvid 应为有效的 BV 视频号')
   if(!files.length&&!event.bvid)fail('没有支持的图片或视频')
   if(event.previewImage!==undefined) {
-   if(typeof event.previewImage!=='string'||!/^preview\/[^/\\]+\.(jpg|jpeg|png|webp)$/i.test(event.previewImage)||!statSync(resolve(activityRoot,folder,event.previewImage),{throwIfNoEntry:false})?.isFile())fail('previewImage 应为本活动 preview/ 目录下存在的图片')
+   if(typeof event.previewImage!=='string'||!/^preview\/[^/\\]+\.(jpg|jpeg|png|webp)$/i.test(event.previewImage)||!statSync(resolve(root,folder,event.previewImage),{throwIfNoEntry:false})?.isFile())fail('previewImage 应为本活动 preview/ 目录下存在的图片')
   }
   if(!files.length&&!event.previewImage)fail('仅有 B 站链接时须提供 previewImage 作为活动预览图')
   if(event.cover!==undefined&&(typeof event.cover!=='string'||!files.includes(event.cover)))fail('cover 应为本场素材的原始文件名')
