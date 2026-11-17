@@ -16,7 +16,7 @@
   const persist = () => { try { localStorage.setItem(storageKey, JSON.stringify(state)); } catch { /* Playback works without storage. */ } };
   const stylesheet = document.createElement('link');
   stylesheet.rel = 'stylesheet';
-  stylesheet.href = new URL('assets/css/site-console.css?v=8', root).href;
+  stylesheet.href = new URL('assets/css/site-console.css?v=9', root).href;
   document.head.append(stylesheet);
   const host = document.createElement('aside');
   host.id = 'site-console';
@@ -114,6 +114,36 @@
   // One audio element survives panel closure and the rank app's internal navigation.
   const audio = new Audio();
   audio.preload = 'metadata'; audio.volume = state.volume;
+  let fadeFrame, leaving = false, departurePlaying = false, navigationTimer;
+  let audioContext, gain;
+  // Use a gain node after a user gesture, including on phones that fix media volume.
+  function unlockAudio() {
+    const Context = window.AudioContext || window.webkitAudioContext;
+    if (!Context) return;
+    try {
+      if (!audioContext) {
+        audioContext = new Context();
+        const source = audioContext.createMediaElementSource(audio);
+        gain = audioContext.createGain();
+        gain.gain.value = audio.volume;
+        source.connect(gain).connect(audioContext.destination);
+        audio.volume = 1;
+      }
+      void audioContext.resume().catch(() => {});
+    } catch { /* Retain native audio when Web Audio is unavailable. */ }
+  }
+  const volumeNow = () => gain ? gain.gain.value : audio.volume;
+  const setVolume = value => { if (gain) gain.gain.value = value; else audio.volume = value; };
+  function fadeVolume(target, duration) {
+    cancelAnimationFrame(fadeFrame);
+    const start = performance.now(), from = volumeNow();
+    function step(now) {
+      const progress = Math.min(1, (now - start) / duration);
+      setVolume(from + (target - from) * (progress * progress * (3 - 2 * progress)));
+      if (progress < 1) fadeFrame = requestAnimationFrame(step);
+    }
+    fadeFrame = requestAnimationFrame(step);
+  }
   let queue = [], index = -1, localQueue = false, lastSaved = 0, selection = 0;
   const status = message => { $('.sc-status').textContent = message; };
   const format = seconds => { const value = Number.isFinite(seconds) ? Math.floor(seconds) : 0; return `${Math.floor(value / 60).toString().padStart(2, '0')}:${(value % 60).toString().padStart(2, '0')}`; };
@@ -136,13 +166,22 @@
       button.addEventListener('click', () => select(position, !audio.paused)); return button;
     }));
   }
-  async function play() {
+  async function play({ fade = false, gesture = false } = {}) {
+    if (gesture || audioContext) unlockAudio();
     const request = selection;
-    try { await audio.play(); if (request === selection) status('正在播放 · 收起控制台也会继续'); }
+    cancelAnimationFrame(fadeFrame);
+    setVolume(fade ? 0 : state.volume);
+    try {
+      await audio.play();
+      if (request === selection) {
+        if (fade) fadeVolume(state.volume, 420);
+        status('正在播放 · 收起控制台也会继续');
+      }
+    }
     catch (error) { if (request === selection && error.name !== 'AbortError') status(error.name === 'NotAllowedError' ? '浏览器需要你点击播放才能继续。' : '这首音频暂时无法播放，请换一首或检查文件。'); }
   }
   function select(position, autoplay = false, resume = 0) {
-    selection++; audio.pause(); index = (position + queue.length) % queue.length;
+    selection++; cancelAnimationFrame(fadeFrame); setVolume(state.volume); audio.pause(); index = (position + queue.length) % queue.length;
     const track = queue[index]; audio.src = track.src;
     if (resume) audio.currentTime = resume;
     audio.onloadedmetadata = () => { if (resume && Number.isFinite(audio.duration)) audio.currentTime = Math.min(resume, Math.max(0, audio.duration - 0.1)); updateTime(); };
@@ -150,29 +189,30 @@
     $('[data-play]').disabled = false;
     $('[data-prev]').disabled = $('[data-next]').disabled = queue.length < 2;
     updateTime(); renderQueue(); status(resume ? '已记住上次进度，点击播放继续。' : '已就绪，点击播放。');
-    if (autoplay) void play();
+    if (autoplay) { audio.preload = 'auto'; void play({ fade: true }); }
   }
-  $('[data-play]').addEventListener('click', () => { if (audio.paused) void play(); else { audio.pause(); status('已暂停'); } });
+  $('[data-play]').addEventListener('click', () => { if (audio.paused) void play({ fade: true, gesture: true }); else { audio.pause(); status('已暂停'); } });
   $('[data-prev]').addEventListener('click', () => select(index - 1, !audio.paused));
   $('[data-next]').addEventListener('click', () => select(index + 1, !audio.paused));
   $('[data-seek]').addEventListener('input', event => { if (Number.isFinite(audio.duration)) { audio.currentTime = Number(event.target.value) / 100 * audio.duration; updateTime(); savePosition(); } });
   function updateVolume() { $('[data-volume]').value = String(Math.round(state.volume * 100)); $('[data-volume-label]').textContent = `${Math.round(state.volume * 100)}%`; }
   updateVolume();
-  $('[data-volume]').addEventListener('input', event => { state.volume = Number(event.target.value) / 100; audio.volume = state.volume; updateVolume(); persist(); });
+  $('[data-volume]').addEventListener('input', event => { state.volume = Number(event.target.value) / 100; cancelAnimationFrame(fadeFrame); setVolume(state.volume); updateVolume(); persist(); });
   audio.addEventListener('play', () => { host.classList.add('sc-playing'); $('[data-play]').textContent = '暂停'; });
   audio.addEventListener('pause', () => { host.classList.remove('sc-playing'); $('[data-play]').textContent = '播放'; savePosition(); });
   audio.addEventListener('timeupdate', () => { updateTime(); if (Date.now() - lastSaved > 5000) { savePosition(); lastSaved = Date.now(); } });
   audio.addEventListener('ended', () => { if (queue.length > 1) select(index + 1, true); else { audio.currentTime = 0; savePosition(); status('播放完毕，可以再听一次。'); } });
   audio.addEventListener('error', () => status('无法读取这首音频，请换一首或检查文件。'));
-  window.addEventListener('pagehide', () => {
+  function savePlayback() {
     savePosition();
     try {
       if (localQueue) sessionStorage.removeItem(playbackKey);
       else if (queue[index]) sessionStorage.setItem(playbackKey, JSON.stringify({
-        track: state.track, time: state.time, playing: !audio.paused && !audio.ended,
+        track: state.track, time: state.time, playing: leaving ? departurePlaying : !audio.paused && !audio.ended,
       }));
     } catch { /* Playback works without storage. */ }
-  });
+  }
+  window.addEventListener('pagehide', savePlayback);
   function restorePlayback() {
     if (localQueue || !queue.length) return;
     let playback;
@@ -182,7 +222,59 @@
     select(Math.max(0, previous), previous >= 0 && playback?.playing === true,
       previous >= 0 && Number.isFinite(time) ? Math.max(0, time) : 0);
   }
-  window.addEventListener('pageshow', event => { if (event.persisted) restorePlayback(); });
+  const veil = document.createElement('div');
+  veil.className = 'site-page-veil';
+  veil.setAttribute('aria-hidden', 'true');
+  veil.innerHTML = '<span>翻开下一页<span class="site-page-dots">…</span></span>';
+  document.body.append(veil);
+  function pageTarget(value) {
+    const url = new URL(value, location.href);
+    if (url.origin !== location.origin || !url.pathname.startsWith(root.pathname)) return null;
+    if (url.pathname === location.pathname && url.search === location.search) return null;
+    // Downloads, images, video and audio retain their ordinary browser behavior.
+    if (!url.pathname.endsWith('/') && !/\.html?$/.test(url.pathname)) return null;
+    return url;
+  }
+  function resetDeparture() {
+    clearTimeout(navigationTimer);
+    leaving = false;
+    cancelAnimationFrame(fadeFrame);
+    setVolume(state.volume);
+    document.documentElement.classList.remove('site-page-leaving');
+  }
+  function navigate(value) {
+    const url = pageTarget(value);
+    if (!url) { location.assign(value); return; }
+    if (leaving) return;
+    leaving = true;
+    departurePlaying = !audio.paused && !audio.ended;
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const duration = departurePlaying ? 280 : reduced ? 0 : 200;
+    if (!reduced) document.documentElement.classList.add('site-page-leaving');
+    if (departurePlaying) { unlockAudio(); fadeVolume(0, duration); }
+    // Start warming the destination while the existing page and music are still alive.
+    const preload = document.createElement('link');
+    preload.rel = 'prefetch'; preload.href = url.href; document.head.append(preload);
+    navigationTimer = setTimeout(() => {
+      if (departurePlaying) { cancelAnimationFrame(fadeFrame); setVolume(0); }
+      savePlayback();
+      location.assign(url.href);
+      // Failed/cancelled navigation must never leave an invisible, muted page.
+      navigationTimer = setTimeout(() => { resetDeparture(); }, 4000);
+    }, duration);
+  }
+  window.siteNavigate = navigate;
+  document.addEventListener('click', event => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const link = event.target.closest('a[href]');
+    if (!link || link.hasAttribute('download') || (link.target && link.target !== '_self') || link.hasAttribute('data-no-transition')) return;
+    if (!pageTarget(link.href)) return;
+    event.preventDefault();
+    navigate(link.href);
+  });
+  window.addEventListener('pageshow', event => {
+    if (event.persisted) { resetDeparture(); restorePlayback(); }
+  });
   $('[data-add]').addEventListener('click', () => $('[data-files]').click());
   $('[data-files]').addEventListener('change', event => {
     const files = Array.from(event.target.files || []).filter(file => file.type.startsWith('audio/') || /\.(mp3|m4a|ogg|wav|flac)$/i.test(file.name));

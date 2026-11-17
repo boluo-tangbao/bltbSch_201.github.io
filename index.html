@@ -6,11 +6,11 @@
 
   <title>汤包的生活手记 | 个人主页</title>
 
-  <link rel="stylesheet" href="assets/css/style.css?v=8" />
+  <link rel="stylesheet" href="assets/css/style.css?v=9" />
   <link rel="preload" as="image" href="images/responsive/akane-background-960.webp" media="(max-width: 680px)" />
   <link rel="preload" as="image" href="images/responsive/akane-background-1280.webp" media="(min-width: 681px) and (max-width: 1280px)" />
   <link rel="preload" as="image" href="images/akane-background.webp" media="(min-width: 1281px)" />
-  <link rel="stylesheet" href="assets/css/home.css?v=6" />
+  <link rel="stylesheet" href="assets/css/home.css?v=7" />
 </head>
 
 <body class="home-page">
@@ -19,14 +19,18 @@
   <header class="hero home-hero">
     <nav class="navbar">
       <a class="logo" href="index.html" aria-label="汤包的生活手记 · 个人主页"><strong>汤包的生活手记</strong><small>菠萝汤包scho · 个人主页</small></a>
-      <div class="nav-links">
-        <a href="index.html" aria-current="page">个人主页</a>
-        <a href="rank/">图片榜单</a>
-        <a href="activities.html">活动记录</a>
-        <a href="sports.html">体育</a>
-        <a href="art.html">艺术</a>
-        <a href="anime.html">二次元</a>
-        <a href="travel.html">旅行</a>
+      <div class="nav-links nav-links-grouped">
+        <div class="nav-group nav-primary" role="group" aria-label="主要入口">
+          <a href="index.html" aria-current="page">个人主页</a>
+          <a href="rank/">图片榜单</a>
+          <a href="activities.html">活动记录</a>
+        </div>
+        <div class="nav-group nav-topics" role="group" aria-label="生活分类">
+          <a href="sports.html">体育</a>
+          <a href="art.html">艺术</a>
+          <a href="anime.html">二次元</a>
+          <a href="travel.html">旅行</a>
+        </div>
       </div>
     </nav>
 
@@ -251,7 +255,7 @@
       <div class="pixel-dialog-copy"><span class="section-label">Anime Favorites</span><h2 id="pixel-character-name"></h2><p id="pixel-character-description"></p><p id="pixel-character-debut" class="pixel-character-debut"></p><a id="pixel-character-source" class="pixel-character-source" target="_blank" rel="noopener noreferrer" hidden></a><div class="pixel-dialog-controls"><button type="button" id="pixel-previous" aria-label="上一位角色">← 上一位</button><span id="pixel-character-position" aria-live="polite"></span><button type="button" id="pixel-next" aria-label="下一位角色">下一位 →</button></div></div>
     </div>
   </dialog>
-  <script src="assets/js/script.js?v=9"></script>
+  <script src="assets/js/script.js?v=10"></script>
   <dialog id="snapshot-dialog" class="snapshot-dialog" aria-labelledby="snapshot-dialog-title">
     <div class="snapshot-dialog-header">
       <div><span class="snapshots-eyebrow">PERSONAL SNAPSHOT / 001</span><h2 id="snapshot-dialog-title">构成 bltbSch 的九张专辑</h2></div>
@@ -263,6 +267,6 @@
     <a class="snapshot-image-link" href="assets/images/snapshots/music-nine-view.webp" target="_blank" rel="noopener">单独打开高清图 ↗</a>
   </dialog>
   <script src="assets/js/home.js?v=4"></script>
-  <script src="assets/js/site-console.js?v=11" defer></script>
+  <script src="assets/js/site-console.js?v=12" defer></script>
 </body>
 </html>

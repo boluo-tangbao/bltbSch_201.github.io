@@ -581,3 +581,44 @@ footer {
     padding: 24px;
   }
 }
+
+/* Keep primary destinations and life topics in deliberate, separate rows. */
+.nav-group { display: contents; }
+@media (max-width: 900px) {
+  .navbar .nav-links.nav-links-grouped {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    width: min(100%, 440px);
+  }
+  .nav-links-grouped .nav-group {
+    display: grid;
+    gap: 4px;
+    min-width: 0;
+  }
+  .nav-links-grouped .nav-primary {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 4px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+  }
+  .nav-links-grouped .nav-topics {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: 0 4px;
+  }
+  .navbar .nav-links-grouped a {
+    justify-content: center;
+    padding: 8px 4px;
+    white-space: nowrap;
+  }
+  .navbar .nav-primary a { font-size: 14px; font-weight: 650; color: var(--aqua-deep); }
+  .navbar .nav-topics a { font-size: 13px; }
+  .navbar .nav-links-grouped a[aria-current="page"] {
+    background: var(--aqua-deep);
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}

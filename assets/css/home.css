@@ -32,7 +32,7 @@
 .pixel-gallery-toggle:hover { background: var(--soft); }
 .home-entry:focus-visible, .home-text-link:focus-visible, .pixel-gallery-toggle:focus-visible { outline: 3px solid var(--aqua-deep); outline-offset: 4px; }
 @media (max-width: 900px) {
-  .home-hero .navbar { flex-direction: row; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
+  .home-hero .navbar { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
   .home-introduction { gap: 24px; }
   .home-entry { grid-template-columns: 100px minmax(0, 1fr); }
   .home-entry-copy { padding: 12px; }

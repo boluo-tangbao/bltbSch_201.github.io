@@ -129,7 +129,8 @@ function goToSectionPage(section) {
   }
 
   window.setTimeout(() => {
-    window.location.href = target;
+    if (window.siteNavigate) window.siteNavigate(target);
+    else window.location.href = target;
   }, 120);
 }
 
