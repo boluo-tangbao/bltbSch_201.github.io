@@ -73,6 +73,18 @@ async function setup({ reduced = false, playback, blocked = false, webAudio = fa
   return { audio, nodes, document, window, location, storage, advance, click, get gain() { return gain; }, async play() { nodes.get('[data-play]').emit('click'); await new Promise(resolve => setImmediate(resolve)); advance(450); } };
 }
 
+test('skipped cross-document transitions are handled without affecting normal navigation', async () => {
+  const app = await setup();
+  for (const type of ['pageswap', 'pagereveal']) {
+    app.window.emit(type, {});
+    app.window.emit(type, { viewTransition: { ready: Promise.reject(new DOMException('ViewTransition opt-in disabled', 'InvalidStateError')) } });
+  }
+  await new Promise(resolve => setImmediate(resolve));
+  app.click('https://example.test/demo/art.html');
+  app.advance(250);
+  assert.deepEqual(app.location.assigned, ['https://example.test/demo/art.html']);
+});
+
 test('playing music fades out before navigation, saves the final position, then fades in on the destination', async () => {
   const app = await setup(); await app.play();
   assert.equal(app.audio.volume, .5);

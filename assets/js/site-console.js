@@ -2,6 +2,11 @@
   if (document.getElementById('site-console')) return;
   const script = document.currentScript;
   const root = new URL('../../', script.src);
+  // A skipped cross-document animation still completes the navigation. Its ready
+  // promise rejects by design, so handle it on the transition, never globally.
+  for (const type of ['pageswap', 'pagereveal']) window.addEventListener(type, event => {
+    event.viewTransition?.ready.catch(() => {});
+  });
   const storageKey = `site-console:${root.pathname}`;
   const playbackKey = `${storageKey}:playback`;
   let saved = {};
@@ -14,10 +19,13 @@
     time: Number.isFinite(saved.time) ? Math.max(0, saved.time) : 0,
   };
   const persist = () => { try { localStorage.setItem(storageKey, JSON.stringify(state)); } catch { /* Playback works without storage. */ } };
-  const stylesheet = document.createElement('link');
-  stylesheet.rel = 'stylesheet';
-  stylesheet.href = new URL('assets/css/site-console.css?v=9', root).href;
-  document.head.append(stylesheet);
+  if (!document.querySelector('link[data-site-console-style]')) {
+    const stylesheet = document.createElement('link');
+    stylesheet.rel = 'stylesheet';
+    stylesheet.setAttribute('blocking', 'render');
+    stylesheet.href = new URL('assets/css/site-console.css?v=9', root).href;
+    document.head.append(stylesheet);
+  }
   const host = document.createElement('aside');
   host.id = 'site-console';
   host.setAttribute('aria-label', '网站控制台');

@@ -83,7 +83,10 @@ const siteConsole = {
   transformIndexHtml: {
     order: 'post' as const,
     handler() {
-      return [{ tag: 'script', attrs: { src: `${homeBase}assets/js/site-console.js?v=12`, defer: true }, injectTo: 'body' as const }]
+      return [
+        { tag: 'link', attrs: { rel: 'stylesheet', href: `${homeBase}assets/css/site-console.css?v=9`, 'data-site-console-style': '' }, injectTo: 'head' as const },
+        { tag: 'script', attrs: { src: `${homeBase}assets/js/site-console.js?v=13`, defer: true }, injectTo: 'body' as const },
+      ]
     },
   },
 }

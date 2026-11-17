@@ -169,6 +169,9 @@ try{
  // All five Vite entries must load the one shared script from the home assets.
  for(const file of ['rank/','rank/guide/','rank/qa/','rank/updates/','rank/route/']) {
   const html=await (await page.request.get(devBase+file)).text();
+  const styles=[...html.matchAll(/<link\b[^>]*\bdata-site-console-style[^>]*>/g)];
+  assert.equal(styles.length,1,file+' 控制台样式应在初始 HTML 中仅加载一次');
+  assert.ok(html.indexOf(styles[0][0])<html.indexOf('</head>'),file+' 转场样式必须在 head 中提前加载');
   const scripts=[...html.matchAll(/<script\b[^>]*\bsrc="([^"]*site-console\.js[^"]*)"/g)];
   assert.equal(scripts.length,1,file+' 控制台脚本应仅加载一次');
   const scriptUrl=new URL(scripts[0][1],devBase+file);
