@@ -87,15 +87,18 @@ html[data-site-cursor="off"] :is(a, button, summary, [role="button"], [role="lin
   display: grid; place-items: center; pointer-events: none;
   opacity: 0; transition: opacity .2s ease;
   background: linear-gradient(135deg, #edfafff5, #fdf1f8f5);
-  color: #286574; font: 600 15px/1.8 system-ui, "Microsoft YaHei", sans-serif;
-  letter-spacing: .12em;
+  padding: 24px; box-sizing: border-box;
 }
-html[data-theme="night"] .site-page-veil { background: linear-gradient(135deg, #1b2834f5, #302236f5); color: #e5d9ef; }
+html[data-theme="night"] .site-page-veil { background: linear-gradient(135deg, #1b2834f5, #302236f5); }
 .site-page-leaving .site-page-veil { opacity: 1; pointer-events: auto; }
-.site-page-dots { display: inline-block; animation: site-page-breathe 1s ease-in-out infinite alternate; }
-@keyframes site-page-breathe { to { opacity: .3; } }
-@media (prefers-reduced-motion: reduce) {
-  .site-page-dots { animation: none; }
-  .site-page-veil { transition: none; }
-}
+.site-page-message { display: flex; flex-direction: column; align-items: center; gap: 18px; max-width: 100%; }
+.site-page-message picture { display: block; width: min(270px, 68vw, 52svh); aspect-ratio: 1; border-radius: 18px; overflow: hidden; background: #f5eee2; box-shadow: 4px 5px 0 #e5c5cc88; }
+.site-page-loading-image { display: block; width: 100%; height: 100%; object-fit: contain; }
+.site-page-loading-copy { margin: 0; color: #544555; font: 600 clamp(17px, 4.6vw, 23px)/1.65 'Guide Cartoon', 'Microsoft YaHei', sans-serif; text-align: center; }
+.site-page-loading-copy span { display: block; }
+.site-page-loading-copy span:first-child { color: #a83750; }
+html[data-theme="night"] .site-page-loading-copy { color: #e5d9ef; }
+html[data-theme="night"] .site-page-loading-copy span:first-child { color: #f0becd; }
+@media (max-height: 420px) { .site-page-message { gap: 10px; } .site-page-loading-copy { font-size: 17px; line-height: 1.4; } }
+@media (prefers-reduced-motion: reduce) { .site-page-veil { transition: none; } }
 @media print { .site-page-veil { display: none; } }

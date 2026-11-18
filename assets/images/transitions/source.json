@@ -1,0 +1,13 @@
+{
+  "description": "用户指定的小睦切页动图；源链接后缀为 jpg，内容实际为 GIF。原字节保存，不重绘、不重编码。",
+  "sourceUrl": "https://tiebapic.baidu.com/forum/pic/item/008c2aca39dbb6fd3895e0344f24ab18962b37a9.jpg?tbpicau=2026-11-29-05_0c4da819ae3a340beba44d5a4fc8a62b",
+  "retrievedAt": "2026-11-18",
+  "file": "mutsumi-loading.gif",
+  "poster": "mutsumi-loading-poster.webp",
+  "sha256": "1640e01301afcfc2eccc19ce62392bcce35a8ff79ceb434b365f51ae5355a53e",
+  "bytes": 707051,
+  "width": 270,
+  "height": 270,
+  "frames": 40,
+  "durationMs": 3160
+}

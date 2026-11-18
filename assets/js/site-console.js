@@ -18,7 +18,7 @@
     const stylesheet = document.createElement('link');
     stylesheet.rel = 'stylesheet';
     stylesheet.setAttribute('blocking', 'render');
-    stylesheet.href = new URL('assets/css/site-console.css?v=10', root).href;
+    stylesheet.href = new URL('assets/css/site-console.css?v=12', root).href;
     document.head.append(stylesheet);
   }
   const host = document.createElement('aside');
@@ -228,7 +228,9 @@
   const veil = document.createElement('div');
   veil.className = 'site-page-veil';
   veil.setAttribute('aria-hidden', 'true');
-  veil.innerHTML = '<span>翻开下一页<span class="site-page-dots">…</span></span>';
+  const loadingGif = new URL('assets/images/transitions/mutsumi-loading.gif', root).href;
+  const loadingPoster = new URL('assets/images/transitions/mutsumi-loading-poster.webp', root).href;
+  veil.innerHTML = `<div class="site-page-message"><picture><source media="(prefers-reduced-motion: reduce)" srcset="${loadingPoster}"><img class="site-page-loading-image" src="${loadingGif}" width="270" height="270" decoding="async" alt=""></picture><p class="site-page-loading-copy"><span>已经在加载了，</span><span>不要压力一个小睦QWQ</span></p></div>`;
   document.body.append(veil);
   function pageTarget(value) {
     const url = new URL(value, location.href);
@@ -252,9 +254,10 @@
     leaving = true;
     departurePlaying = !audio.paused && !audio.ended;
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const duration = departurePlaying ? 280 : reduced ? 0 : 200;
+    const fadeDuration = departurePlaying ? 280 : 0;
+    const duration = reduced ? fadeDuration : 900;
     if (!reduced) document.documentElement.classList.add('site-page-leaving');
-    if (departurePlaying) { unlockAudio(); fadeVolume(0, duration); }
+    if (departurePlaying) { unlockAudio(); fadeVolume(0, fadeDuration); }
     // Start warming the destination while the existing page and music are still alive.
     const preload = document.createElement('link');
     preload.rel = 'prefetch'; preload.href = url.href; document.head.append(preload);

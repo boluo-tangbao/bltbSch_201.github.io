@@ -82,8 +82,10 @@ test('playing music fades out before navigation, saves the final position, then 
   assert.ok(app.audio.volume > 0 && app.audio.volume < .5);
   assert.equal(app.location.assigned.length, 0);
   app.audio.currentTime = 32.25;
-  app.advance(140);
+  app.advance(160);
   assert.equal(app.audio.volume, 0);
+  assert.equal(app.location.assigned.length, 0);
+  app.advance(600);
   assert.equal(app.location.assigned.length, 1);
   const playback = JSON.parse(app.storage.get('site-console:/demo/:playback'));
   assert.equal(playback.playing, true); assert.equal(playback.time, 32.25);
@@ -96,6 +98,9 @@ test('playing music fades out before navigation, saves the final position, then 
 test('paused music stays paused on the next page', async () => {
   const app = await setup(); app.audio.currentTime = 15;
   app.click('https://example.test/demo/travel.html'); app.advance(200);
+  assert.equal(app.location.assigned.length, 0);
+  app.advance(700);
+  assert.equal(app.location.assigned.length, 1);
   const playback = JSON.parse(app.storage.get('site-console:/demo/:playback'));
   assert.equal(playback.playing, false);
   const destination = await setup({ playback });
@@ -117,7 +122,7 @@ test('anchors, external links, assets, downloads, new tabs and app-handled click
 test('repeated clicks navigate once and a failed navigation restores audio and clears the veil', async () => {
   const app = await setup(); await app.play();
   const target = 'https://example.test/demo/art.html';
-  app.click(target); app.click(target); app.advance(280);
+  app.click(target); app.click(target); app.advance(900);
   assert.equal(app.location.assigned.length, 1);
   app.advance(4000);
   assert.equal(app.audio.volume, .5);
@@ -142,7 +147,7 @@ test('reduced motion with paused music navigates immediately without a timer', a
 
 test('back-forward cache clears the departure state and restores playback', async () => {
   const app = await setup(); await app.play();
-  app.click('https://example.test/demo/art.html'); app.advance(280);
+  app.click('https://example.test/demo/art.html'); app.advance(900);
   app.window.emit('pageshow', { persisted: true }); await new Promise(resolve => setImmediate(resolve)); app.advance(450);
   assert.equal(app.document.documentElement.classList.contains('site-page-leaving'), false);
   assert.equal(app.audio.paused, false); assert.equal(app.audio.volume, .5);
@@ -160,7 +165,7 @@ test('Web Audio fades the gain node while leaving native media volume fixed for 
   assert.equal(app.audio.volume, 1); assert.equal(app.gain.gain.value, .5);
   app.click('https://example.test/demo/art.html'); app.advance(140);
   assert.equal(app.audio.volume, 1); assert.ok(app.gain.gain.value > 0 && app.gain.gain.value < .5);
-  app.advance(140); assert.equal(app.gain.gain.value, 0);
+  app.advance(160); assert.equal(app.gain.gain.value, 0);
 });
 
 
