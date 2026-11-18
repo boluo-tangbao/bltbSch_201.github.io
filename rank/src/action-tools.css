@@ -82,6 +82,10 @@ body:has(.board-page) #site-console { z-index: 900; }
   border-radius: 12px; background: var(--compare-ink); color: var(--ui-surface);
   font: 700 12px/1 system-ui, sans-serif; vertical-align: middle; font-variant-numeric: tabular-nums;
 }
+:root[data-theme="night"] .board-action-group .compare-launch-tile .compare-launch-count {
+  background: var(--compare-paper);
+  color: var(--compare-ink);
+}
 .board-action-group > .compare-launch-tile:hover { background: var(--compare-paper); }
 .guide-action-group { margin-left: auto; align-items: center; }
 .guide-action-group .copy-button:focus-visible,
