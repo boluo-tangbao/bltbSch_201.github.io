@@ -132,6 +132,14 @@ test('reduced motion disables the veil while preserving the music buffer', async
   app.advance(140); assert.equal(app.location.assigned.length, 1);
 });
 
+test('reduced motion with paused music navigates immediately without a timer', async () => {
+  const app = await setup({ reduced: true });
+  const target = 'https://example.test/demo/rank/guide/#/place/shanghai-shop-001';
+  app.click(target);
+  assert.deepEqual(app.location.assigned, [target]);
+  assert.equal(app.document.documentElement.classList.contains('site-page-leaving'), false);
+});
+
 test('back-forward cache clears the departure state and restores playback', async () => {
   const app = await setup(); await app.play();
   app.click('https://example.test/demo/art.html'); app.advance(280);

@@ -258,13 +258,16 @@
     // Start warming the destination while the existing page and music are still alive.
     const preload = document.createElement('link');
     preload.rel = 'prefetch'; preload.href = url.href; document.head.append(preload);
-    navigationTimer = setTimeout(() => {
+    const depart = () => {
       if (departurePlaying) { cancelAnimationFrame(fadeFrame); setVolume(0); }
       savePlayback();
       location.assign(url.href);
       // Failed/cancelled navigation must never leave an invisible, muted page.
       navigationTimer = setTimeout(() => { resetDeparture(); }, 4000);
-    }, duration);
+    };
+    // No animation or music fade means no reason to defer the navigation.
+    if (duration > 0) navigationTimer = setTimeout(depart, duration);
+    else depart();
   }
   window.siteNavigate = navigate;
   document.addEventListener('click', event => {
