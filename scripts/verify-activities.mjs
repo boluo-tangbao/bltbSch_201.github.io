@@ -188,6 +188,16 @@ try{
  } finally {if(previousBase===undefined)delete process.env.SITE_BASE;else process.env.SITE_BASE=previousBase;}
  await devServer.listen();
  const devBase='http://127.0.0.1:4182'+previewBase;
+ // The shared departure GIF must work in both the assembled site and Vite's home-asset middleware.
+ const transitionGif='assets/images/transitions/mutsumi-loading.gif';
+ const originalGif=readFileSync(new URL('../'+transitionGif,import.meta.url));
+ for(const preview of [base,devBase]) {
+  const response=await page.request.get(preview+transitionGif);
+  assert.equal(response.status(),200,preview+' 切页 GIF');
+  assert.equal(response.headers()['content-type'],'image/gif',preview+' GIF 类型');
+  assert.deepEqual(await response.body(),originalGif,preview+' GIF 应保留完整原字节');
+  assert.ok((await page.request.get(preview+'assets/images/transitions/mutsumi-loading-poster.webp')).ok(),preview+' 切页静态预览');
+ }
  for(const file of ['index.html','sports.html','art.html','anime.html','travel.html','activities.html','assets/css/style.css','assets/js/activities.js','assets/generated/activities/manifest.json',videoEvent.media.find(m=>m.type==='video').src])assert.ok((await page.request.get(devBase+file)).ok(),file);
  // All five Vite entries must load the one shared script from the home assets.
  for(const file of ['rank/','rank/guide/','rank/qa/','rank/updates/','rank/route/']) {
