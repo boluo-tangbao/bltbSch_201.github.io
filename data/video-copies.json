@@ -162,5 +162,29 @@
   "content/activities/2026-7-11：bilibiliWorld/1794793501951.mp4": {
     "sha256": "abe3d102602c7535bd820b232a730074277c2d77603591f0c6615957b3dd3995",
     "originalSha256": "4f5fb7a843b8fc7b6852dac950be3d39c3ea846fe2fcb5672b16185ca75cfc90"
+  },
+  "content/activities/2026-04-17：杭州vs北京国安/VID20260417201031.mp4": {
+    "sha256": "0b210e0a9f8e811f73ec808e69d77d1330416afd10af6205a25de2bd50cb0f4a",
+    "originalSha256": "10c58a78ffea235772535c066d3e724f894ec57a2a4519479818787fd2e67e6f"
+  },
+  "content/activities/2026-04-17：杭州vs北京国安/VID20260417210831.mp4": {
+    "sha256": "089cc69d19be02d660905923f01c6fed7a3dca2c821184d0511a23e758d1483d",
+    "originalSha256": "38f37c9a84bbd31b00e17add03cfcbbc9729a2fdd94ef4337acf60e9c9bb62f9"
+  },
+  "content/activities/2026-04-17：杭州vs北京国安/VID20260417211139.mp4": {
+    "sha256": "e26f74e2162bf0e71c6255f34dc786f8f3e5dbeffdff873bc437baaa30601860",
+    "originalSha256": "bc754883aa63ba94995ae1efc43df1310b2c5234dc8d88bdbbd1192d3742dae8"
+  },
+  "content/activities/2026-04-17：杭州vs北京国安/VID20260417204912.mp4": {
+    "sha256": "c15771b65bf18c078579d5cf5f85d779d7d341cbeaca67261e4ccbcbf49d11e0",
+    "originalSha256": "80c8199187073c5dae1234256864d9a922463302c93e1f0fd85e81ee93bbb740"
+  },
+  "content/activities/2026-7-11：bilibiliWorld/1794793496686.mp4": {
+    "sha256": "1802819ffc929c89756ef5b608f570f6f97eef75dc7c69f10299d6ecc67658f4",
+    "originalSha256": "9bac95ce8142ef72e7f79eed7ff93bca940a2a6aff177ecd789a0d50333a8506"
+  },
+  "content/activities/2026-7-11：bilibiliWorld/1794793721343.mp4": {
+    "sha256": "493f3c92a246cef32195120679e45422355729a90876225e98fb7a772e0b3346",
+    "originalSha256": "a967f71c220bb565ae7ed2bf81385634518efd8af00033fa9d6e40898d793174"
   }
 }
