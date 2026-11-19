@@ -72,7 +72,6 @@
 .activities-page .navbar { position: relative; inset: auto; flex-wrap: wrap; gap: 18px 24px; margin-bottom: 34px; }
 .activities-page .page-hero h1 { font-size: clamp(36px, 6vw, 60px); margin-bottom: 14px; }
 .activities-page .page-hero-text { margin-bottom: 0; font-size: 16px; }
-.activities-page .hero-buttons { margin-top: 18px; }
 .activities-page .event-section-header { margin: 22px 0 16px; }
 .activities-page .event-section-header h2 { font-size: clamp(25px, 4vw, 34px); }
 .event-type-tabs { padding: 16px 0 0; gap: 8px; }

@@ -1,0 +1,163 @@
+body {
+  background: #f8f8f3;
+}
+
+.page-hero {
+  background: linear-gradient(165deg, #e9f6f1, #f8f8f3 85%);
+}
+
+.page-hero::before {
+  content: none;
+}
+
+.travel-journals {
+  padding-top: 2rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.travel-journals h2,
+.japan-directory h2,
+.journal-cover h3 {
+  margin: 0;
+  font-family: "Songti SC", "Noto Serif CJK SC", SimSun, serif;
+  line-height: 1.35;
+}
+
+.travel-journals h2,
+.japan-directory h2 {
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+}
+
+.journal-shelf {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  margin-top: 1.25rem;
+}
+
+.journal-cover {
+  min-width: 0;
+}
+
+.journal-cover img {
+  width: 100%;
+  height: clamp(12rem, 23vw, 18rem);
+  display: block;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.journal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .25rem 1rem;
+  margin: .85rem 0 .35rem;
+  color: #416157;
+  font-size: .925rem;
+}
+
+.journal-meta small {
+  font-size: .82rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .055em;
+}
+
+.journal-cover h3 {
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+}
+
+.journal-cover p,
+.japan-directory p {
+  margin: .35rem 0 0;
+  color: var(--muted);
+}
+
+.japan-directory {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: clamp(2.25rem, 5vw, 4rem) 0;
+  padding: 1.5rem 0;
+  border-block: 1px solid #b7c8be;
+}
+
+.japan-directory header {
+  flex: 1;
+}
+
+.japan-directory nav {
+  flex: 2.3;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.japan-directory a {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  padding: .4rem .2rem;
+}
+
+.japan-directory svg {
+  width: 2rem;
+  height: 2rem;
+  flex: none;
+  fill: none;
+  stroke: #41695f;
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+}
+
+.japan-directory strong,
+.japan-directory small {
+  display: block;
+}
+
+.japan-directory small {
+  color: var(--muted);
+  font-size: .875rem;
+}
+
+.journal-cover:hover h3,
+.japan-directory a:hover strong {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.journal-cover:focus-visible,
+.japan-directory a:focus-visible {
+  outline: 3px solid var(--aqua-deep);
+  outline-offset: 5px;
+}
+
+@media (max-width: 760px) {
+  .japan-directory {
+    display: block;
+  }
+
+  .japan-directory nav {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: .75rem 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .journal-shelf {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .journal-cover img {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .japan-directory nav {
+    flex-direction: column;
+  }
+}

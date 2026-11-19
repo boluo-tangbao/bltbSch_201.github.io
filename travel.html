@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>旅行 | 汤包的生活手记</title>
   <link rel="stylesheet" href="assets/css/style.css?v=9" />
-  <link rel="stylesheet" href="assets/css/topics.css?v=1" />
+  <link rel="stylesheet" href="assets/css/travel-index.css" />
   <link rel="stylesheet" href="assets/css/site-console.css?v=12" data-site-console-style />
 </head>
 
@@ -45,19 +45,35 @@
   </header>
 
   <main class="detail-main">
-    <section class="topic-section" id="china-travel" aria-labelledby="china-travel-title">
+    <section class="travel-journals" id="china-travel" aria-labelledby="china-travel-title">
       <h2 id="china-travel-title">国内旅行手记</h2>
-      <div class="topic-links">
-        <a class="topic-link" href="lanzhou-travel.html"><small>2026.04.01–04.05</small><h3>武威与兰州 · 清明西北行</h3><p>按天翻阅五天的行程与相册。</p></a>
-        <a class="topic-link" href="hangzhou-travel.html"><small>2026.04.17</small><h3>杭州 · 从车窗到钱塘江</h3><p>上海西站出发，从浙江省博物馆到钱塘江畔的一日手记。</p></a>
+      <div class="journal-shelf">
+        <a class="journal-cover" href="lanzhou-travel.html">
+          <img src="assets/lanzhou/536a6b9be58f34ac.webp" srcset="assets/lanzhou/536a6b9be58f34ac-s.webp 480w, assets/lanzhou/536a6b9be58f34ac.webp 1600w" sizes="(max-width: 640px) 90vw, (max-width: 1244px) 50vw, 620px" width="1600" height="898" loading="lazy" decoding="async" alt="兰州水墨丹霞的层叠山脊" />
+          <div class="journal-meta"><span>武威与兰州</span><small>2026.04.01–04.05</small></div>
+          <h3>清明西北行</h3>
+          <p>按天翻阅五天的行程与相册。</p>
+        </a>
+        <a class="journal-cover" href="hangzhou-travel.html">
+          <img src="assets/hangzhou/media/1795059262390.webp" srcset="assets/hangzhou/media/1795059262390-s.webp 480w, assets/hangzhou/media/1795059262390.webp 1600w" sizes="(max-width: 640px) 90vw, (max-width: 1244px) 40vw, 480px" width="1600" height="900" loading="lazy" decoding="async" alt="钱塘江上的钢桁架桥" />
+          <div class="journal-meta"><span>杭州</span><small><time datetime="2026-04-17">2026.04.17</time></small></div>
+          <h3>从车窗到钱塘江</h3>
+          <p>上海西站出发，从浙江省博物馆到钱塘江畔的一日手记。</p>
+        </a>
       </div>
     </section>
-    <section class="topic-section" aria-labelledby="japan-travel-title">
-      <h2 id="japan-travel-title">日本旅行</h2>
-      <div class="topic-links">
-        <a class="topic-link" href="japan-travel.html"><h3>地图浏览</h3><p>从东京及周边的地图进入各地的旅行手记。</p></a>
-        <a class="topic-link" href="japan-travel.html?view=records"><h3>全部旅行与巡礼记录</h3><p>按城市、作品或地点查找照片与手记。</p></a>
-      </div>
+    <section class="japan-directory" aria-labelledby="japan-travel-title">
+      <header><h2 id="japan-travel-title">日本旅行</h2><p>东京及周边</p></header>
+      <nav aria-labelledby="japan-travel-title">
+        <a href="japan-travel.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2.5 5 6-2 7 3 6-2v15l-6 2-7-3-6 2z M8.5 3v15 M15.5 6v15"/></svg>
+          <span><strong>地图浏览</strong><small>从地图上选择目的地</small></span>
+        </a>
+        <a href="japan-travel.html?view=records">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6c-3-2-6-2-10-2v15c4 0 7 0 10 2 3-2 6-2 10-2V4c-4 0-7 0-10 2Zm0 0v15"/></svg>
+          <span><strong>全部旅行与巡礼记录</strong><small>按城市、作品或地点查找</small></span>
+        </a>
+      </nav>
     </section>
     <section class="detail-layout">
       <article class="detail-panel">
