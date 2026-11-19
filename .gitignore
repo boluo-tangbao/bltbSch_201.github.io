@@ -13,7 +13,7 @@ playwright-report/
 /rank/source-media/
 /.local-media/
 
-# 这两次旅行的页面直接读取 assets 下的发布副本；拍摄素材仅在本地保留。
+# 旅行页读取 assets 下的展示副本；仅精选原图按具体文件纳入 Git。
 # 东京旅行仍从 content 中的原图构建，按具体旅行限定范围。
 /content/pilgrimage/2026-4：清明兰州武威/**/*.jpg
 /content/pilgrimage/2026-4：清明兰州武威/**/*.mp4

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>两座城之间 · 4 月 2 日的西北手记</title>
+  <link rel="stylesheet" href="assets/lanzhou/story.css">
+</head>
+<body>
+  <main class="book">
+    <header class="mast">
+      <a href="lanzhou-travel.html">← 清明西北行</a>
+      <span>四月二日 <i></i> 第二天</span>
+      <a href="lanzhou-travel.html#4.2">当天相册 ↗</a>
+    </header>
+    <div class="headline"><h1>两座城之间<span>。</span></h1><div class="route"><span>武威</span><i></i><span>兰州</span></div></div>
+    <nav id="periods" aria-label="按时段跳转" hidden></nav>
+    <section class="spread" aria-label="旅行幻灯片" id="spread">
+      <div class="visual" id="visual"></div>
+      <div class="note" aria-live="polite">
+        <div class="folio"><span id="counter"></span><span id="place"></span></div>
+        <h2 id="sceneTitle"></h2>
+        <p id="prose"></p>
+        <button class="clip" id="clip" hidden>▷ 看现场片段</button>
+      </div>
+    </section>
+    <div class="transport">
+      <button id="play" aria-pressed="false">▷ 播放手记</button>
+      <div class="track" aria-hidden="true"><span id="progress"></span></div>
+      <button id="back" aria-label="上一幕">←</button><button id="next" aria-label="下一幕">→</button>
+    </div>
+    <nav class="contents" aria-label="按章节跳转" id="contents"></nav>
+  </main>
+  <dialog id="cinema"><div><span id="clipTitle"></span><button id="dismiss" aria-label="关闭现场片段">关闭 ×</button></div><video controls playsinline preload="none"></video></dialog>
+  <script src="assets/lanzhou/days.js"></script>
+  <script src="assets/lanzhou/story.js"></script>
+</body>
+</html>

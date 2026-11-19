@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="2026 年 4 月 17 日的杭州照片手记。从上海西站出发，翻过博物馆的展柜、钱塘江边的塔与桥，再到晚上的球赛。">
+  <title>从车窗到钱塘江 · 杭州一日游</title>
+  <link rel="stylesheet" href="assets/lanzhou/story.css">
+  <link rel="stylesheet" href="assets/hangzhou/journal.css">
+  <script src="assets/hangzhou/journal.js" defer></script>
+</head>
+<body>
+  <main class="book">
+    <header class="mast">
+      <a href="travel.html">旅行手记</a>
+      <a href="#album">当天相册</a>
+    </header>
+
+    <section class="cover" aria-labelledby="main-title">
+      <div class="cover-copy">
+        <p class="date"><time datetime="2026-04-17">2026 年 4 月 17 日</time> · 杭州一日游</p>
+        <h1 id="main-title">从车窗到<br>钱塘江<span>。</span></h1>
+        <p class="cover-route">上海西站出发。白天看展、看塔和江，晚上去看球。</p>
+        <a class="read-link" href="#story">开始翻阅</a>
+      </div>
+      <figure class="cover-photo">
+        <img src="assets/hangzhou/media/1795059262390.webp" alt="钱塘江边的钢桁架桥伸向灰蓝色的江面" width="1600" height="900" fetchpriority="high">
+        <figcaption>钱塘江边</figcaption>
+      </figure>
+    </section>
+
+    <section class="journal-section" id="story" aria-labelledby="story-title">
+      <h2 class="section-title" id="story-title">精选手记</h2>
+      <nav class="periods" id="periods" aria-label="按时段翻阅"></nav>
+      <div class="spread" id="spread">
+        <div class="visual" id="visual"><div class="shot"><img id="story-photo" alt=""></div></div>
+        <div class="note" id="story-note" aria-live="polite">
+          <div class="folio"><span id="counter"></span><span id="place"></span></div>
+          <h3 id="scene-title"></h3>
+          <p id="prose"></p>
+          <button class="clip" id="story-clip" type="button" hidden>看现场片段</button>
+        </div>
+      </div>
+      <div class="transport">
+        <button id="play" type="button" aria-pressed="false">播放手记</button>
+        <div class="track" aria-hidden="true"><span id="progress"></span></div>
+        <button id="back" type="button" aria-label="上一页">←</button>
+        <button id="next" type="button" aria-label="下一页">→</button>
+      </div>
+      <nav class="contents" id="contents" aria-label="按站点翻阅"></nav>
+    </section>
+
+    <section class="journal-section" id="album" aria-labelledby="album-title">
+      <div class="album-heading">
+        <h2 class="section-title" id="album-title">当天相册</h2>
+        <p id="album-count"></p>
+      </div>
+      <div class="filters" id="filters" role="group" aria-label="筛选相册时段"></div>
+      <div id="album-groups"></div>
+      <aside class="match">
+        <p>当天晚上的比赛</p>
+        <a href="activities.html?topic=sports#event/hangzhou-vs-beijing-guoan-2026">杭州 vs 北京国安的现场记录</a>
+      </aside>
+    </section>
+  </main>
+
+  <dialog id="viewer" aria-labelledby="media-title">
+    <div class="viewer-bar">
+      <span id="media-title"></span>
+      <button type="button" id="close-viewer">关闭</button>
+    </div>
+    <div class="viewer-stage" id="stage"></div>
+    <div class="viewer-bar viewer-controls">
+      <button type="button" id="previous-media">上一项</button>
+      <span id="media-count" aria-live="polite"></span>
+      <a id="original-photo" target="_blank" rel="noopener noreferrer" hidden>打开原图 ↗</a>
+      <button type="button" id="next-media">下一项</button>
+    </div>
+  </dialog>
+</body>
+</html>
