@@ -20,9 +20,14 @@ test('响应式视觉抽查：首页选图、榜单、详情、放大与返回',
     : viewportWidth <= 1280 ? 'images/responsive/akane-background-1280.webp'
       : 'images/akane-background.webp'
   expect(background).toContain(expectedBackground)
-  const cover = page.locator('.home-entry img').first()
-  await expect.poll(() => cover.evaluate(img => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0)
-  expect(await cover.evaluate(img => (img as HTMLImageElement).currentSrc)).toContain('anime-320.webp')
+  const entry = page.locator('.home-entries .home-entry')
+  await expect(entry).toHaveCount(1)
+  await expect(entry).toContainText('最近活动')
+  await expect(entry).toHaveAttribute('href', /^activities\.html#event\//)
+  const cover = entry.locator('img')
+  if (await cover.count()) await expect.poll(() => cover.evaluate(img => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0)
+  await expect(page.getByRole('link', { name: /认识我的生活/ })).toHaveCount(0)
+  await expect(page.getByRole('heading', { name: '生活相册' })).toHaveCount(0)
   await capture('home')
   await page.goto('')
   await page.getByRole('group', { name: '榜单视图' }).getByRole('button', { name: '舒适', exact: true }).click()
