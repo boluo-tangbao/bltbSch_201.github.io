@@ -24,9 +24,6 @@
   .board-tools-content .photo-options { gap: 10px; }
   .board-tools-content .board-view-controls button { min-height: 44px; }
 }
-.hero-browse-links { display: flex; gap: 20px; margin-top: 16px; font-size: 13px; font-weight: 800; }
-.hero-browse-links a { color: #a83750; text-decoration: underline; text-underline-offset: 4px; }
-.hero-browse-links a:hover { color: #742038; }
 .filter-bar { padding: 5px 12px; gap: 12px; margin-bottom: 12px; border-width: 1.5px; box-shadow: 2px 2px 0 #f4b5bd; }
 .city-filter { gap: 6px; padding-right: 12px; }
 .city-filter select { min-height: 28px; }

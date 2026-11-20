@@ -72,7 +72,17 @@ defineExpose({ revealShop })
     <p v-if="group.more && bucket.key === 'history'" class="shop-history-intro">保留曾被探店、攻略或实访收录的记录，当前营业尚未确认。</p>
     <ul class="shop-list">
       <li v-for="(shop, index) in bucket.shops" v-show="index < visibleCount(section.key, group.more, bucket.key)" :id="placeId ? searchTargetId(placeId, { kind: 'shop', name: shop.name }) : undefined" :key="shop.name" class="shop-row" tabindex="-1">
-        <div class="shop-row-title"><div class="shop-name-location"><h4>{{ shop.name }}</h4><span v-if="shop.floor" class="shop-location"><template v-if="shop.inactive">原位置：</template>{{ shop.floor }}</span><div class="shop-state-line"><span class="shop-status" :class="'is-' + shop.displayStatus">{{ shop.statusText }}</span></div></div><div v-if="placeId" class="shop-row-tools"><TripPlanButton v-if="shop.displayStatus === 'open'" :place-id="placeId" :name="shop.name" :shop-name="shop.name" icon-only plain /><a class="shop-correction" :href="shopFeedbackUrl(base, placeId, shop.name)" :aria-label="`${shop.name}：反馈纠错`" title="反馈这家店的信息"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5 4 4M4 20l4.5-1L20 7.5a2.8 2.8 0 0 0-4-4L4.5 15Z" /></svg></a></div></div>
+        <div class="shop-row-title">
+          <div class="shop-name-location">
+            <h4>{{ shop.name }}</h4>
+            <span v-if="shop.floor" class="shop-location"><template v-if="shop.inactive">原位置：</template>{{ shop.floor }}</span>
+            <span class="shop-status" :class="'is-' + shop.displayStatus">{{ shop.statusText }}</span>
+          </div>
+          <div v-if="placeId" class="shop-row-tools">
+            <TripPlanButton v-if="shop.displayStatus === 'open'" :place-id="placeId" :name="shop.name" :shop-name="shop.name" icon-only plain />
+            <a class="shop-correction" :href="shopFeedbackUrl(base, placeId, shop.name)" :aria-label="`${shop.name}：反馈纠错`" title="反馈这家店的信息"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5 4 4M4 20l4.5-1L20 7.5a2.8 2.8 0 0 0-4-4L4.5 15Z" /></svg></a>
+          </div>
+        </div>
         <p v-if="shop.countdown" class="shop-countdown">{{ shop.countdown.label }} · {{ shop.countdown.date }}</p>
         <p v-if="shop.description" class="shop-description">{{ shop.description }}</p>
         <dl v-if="shop.kind || shop.limited || shop.inactive" class="shop-facts">
@@ -91,10 +101,19 @@ defineExpose({ revealShop })
           <li v-for="source in shop.evidenceSources" :key="source.url ?? JSON.stringify([source.labels, source.dates])"><a v-if="source.url" :href="sourceUrl(source.url)" target="_blank" rel="noopener noreferrer">{{ source.labels.join('／') }} ↗</a><span v-else>{{ source.labels.join('／') }}</span><small class="shop-source-role">{{ source.roles.join('、') }}<template v-if="!source.roles.includes('营业／位置')">（不作为当前营业确认）</template></small><span v-if="source.dates.length"> · {{ source.dates.join('；') }}</span></li>
         </ul>
         </template>
-        <p v-if="shop.accounts?.length" class="shop-source-label">{{ shop.inactive ? '原账号' : '官方账号' }}</p>
-        <ul v-if="shop.accounts?.length" class="shop-accounts" :aria-label="shop.name + (shop.inactive ? '的原账号' : '的官方账号')">
-          <li v-for="account in shop.accounts" :key="account.platform + account.url"><a :href="account.url" target="_blank" rel="noopener noreferrer"><b>{{ platformLabel[account.platform] }}</b><span>{{ account.name }}<small v-if="account.handle">号：{{ account.handle }}</small></span><em v-if="account.scope === 'brand'">品牌号</em><span aria-hidden="true">↗</span></a></li>
-        </ul>
+        <div v-if="shop.accounts?.length" class="shop-account-row">
+          <p class="shop-source-label">{{ shop.inactive ? '原' : '官方' }}<br />账号</p>
+          <ul class="shop-accounts" :aria-label="shop.name + (shop.inactive ? '的原账号' : '的官方账号')">
+            <li v-for="account in shop.accounts" :key="account.platform + account.url">
+              <a :href="account.url" target="_blank" rel="noopener noreferrer">
+                <b>{{ platformLabel[account.platform] }}</b>
+                <span>{{ account.name }}<small v-if="account.handle">号：{{ account.handle }}</small></span>
+                <em v-if="account.scope === 'brand'">品牌号</em>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </li>
     </ul>
     <div v-if="bucket.shops.length > visibleCount(section.key, group.more, bucket.key)" class="shop-expand-actions">
@@ -135,7 +154,6 @@ defineExpose({ revealShop })
 .shop-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 12px; }
 .shop-row { border-radius: var(--ui-radius-card, 12px); min-width: 0; padding: 16px; border: 1px solid var(--ui-border, #e5c5cc); background: var(--ui-surface, #fffdfa); }
 .shop-row-tools { display: flex; flex: none; align-items: center; margin: -6px -8px 0 0; }
-.shop-state-line { margin-top: 6px; line-height: 1.5; }
 .shop-correction { display: inline-flex; flex: none; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; color: #8b7b81; }
 .shop-directory-inactive > summary { cursor: pointer; list-style: none; min-height: 44px; margin-bottom: 0; align-items: center; }
 .shop-directory-inactive > summary::-webkit-details-marker { display: none; }
@@ -154,7 +172,7 @@ defineExpose({ revealShop })
 .shop-row h4 { display: inline; margin: 0; font-size: 16px; }
 .shop-location { display: inline-block; max-width: 100%; margin-left: 8px; color: var(--ui-muted, #79626b); font-size: 12px; font-weight: 400; vertical-align: baseline; }
 .shop-source-role { margin-left: 6px; color: var(--ui-muted, #79626b); font-size: 10px; }
-.shop-status { border-radius: 999px; font-size: 11px; padding: 3px 7px; background: #f3eee7; color: #756253; white-space: nowrap; }
+.shop-status { display: inline-block; margin-inline-start: 8px; border-radius: 999px; font-size: 11px; line-height: 1.4; padding: 3px 7px; background: #f3eee7; color: #756253; white-space: nowrap; }
 .shop-status.is-open { background: var(--ui-success-bg, #e8f3ed); color: var(--ui-success, #347357); }
 .shop-status.is-evidence { background: var(--ui-pending-bg, #eaf0f8); color: var(--ui-pending, #45698d); }
 .shop-status.is-closed { background: var(--ui-closed-bg, #f9e4e8); color: var(--ui-closed, #983b52); }
@@ -173,6 +191,8 @@ defineExpose({ revealShop })
 .shop-source-label { margin-top: 12px; font-size: 12px; font-weight: 700; color: var(--ui-muted, #79626b); }
 .shop-sources { padding-left: 18px; margin: 8px 0 12px; color: var(--ui-muted, #79626b); font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; }
 .shop-sources a { color: var(--ui-accent, #a83750); text-decoration: underline; text-underline-offset: 3px; }
+.shop-account-row { display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: start; gap: 10px; margin-top: 12px; }
+.shop-account-row .shop-source-label { margin: 2px 0 0; line-height: 1.4; }
 .shop-accounts { display: grid; gap: 6px; }
 .shop-accounts a { border-radius: var(--ui-radius-control, 8px); display: flex; align-items: flex-start; gap: 7px; padding: 8px; border: 1px solid #ead2d8; font-size: 12px; text-decoration: none; overflow-wrap: anywhere; }
 .shop-accounts a:hover { background: #fff0f3; }

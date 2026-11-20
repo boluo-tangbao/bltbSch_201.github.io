@@ -146,10 +146,6 @@ const base = import.meta.env.BASE_URL
 const guideUrl = computed(() => linkTo(`${import.meta.env.BASE_URL}guide/`))
 const updatesUrl = `${import.meta.env.BASE_URL}updates/`
 const citiesUrl = `${import.meta.env.BASE_URL}cities/`
-function browseBoard() {
-  const heading = document.getElementById('board-title')
-  heading?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' })
-}
 const isHome = computed(() => !route.value || route.value === '#' || route.value === '#/' || route.value === '#guestbook' || /^#place-card-[a-z0-9-]+$/.test(route.value))
 watch([boardView, showLabels, toolsOpen, city, tag, query], () => {
   if (!isHome.value || restoringBoard || !history.state?.[positionKey]) return
@@ -182,13 +178,26 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
   <main id="main-content" ref="main" tabindex="-1" class="page-shell board-page">
     <div v-show="isHome" class="board-browse-content" @click="openBoardPlace">
       <section class="hero compact-board-hero" aria-labelledby="page-title">
-        <div class="hero-copy"><p class="eyebrow"><span></span> 本人亲测 随逛随更新</p><h1 id="page-title">{{ site.title }}<span class="title-dot">。</span></h1></div>
-        <div class="byline"><span>{{ site.author }}</span><span>{{ contentDate ? `更新 ${contentDate}` : '等我逛完第一站～' }}</span></div>
-        <div class="hero-actions"><div class="hero-counts" aria-label="榜单概况"><span><strong>{{ all.length }}</strong> 处逛店地点</span><span><strong>{{ cities.length }}</strong> 座城</span></div><div class="hero-browse-links"><a href="#board-title" @click.prevent="browseBoard">图片榜单 ↓</a><a :href="guideUrl">地图找店 ↗</a></div></div>
+        <div class="hero-copy"><h1 id="page-title">{{ site.title }}<span class="title-dot">。</span></h1></div>
+        <div class="byline">
+          <span class="board-hero-author">{{ site.author }}</span>
+          <span class="board-hero-note">本人亲测 随逛随更新</span>
+          <span>{{ contentDate ? `更新 ${contentDate}` : '等我逛完第一站～' }}</span>
+        </div>
+        <div class="hero-counts" aria-label="榜单概况">
+          <span><strong>{{ all.length }}</strong> 处<span class="board-count-detail">逛店地点</span></span>
+          <span><strong>{{ cities.length }}</strong> <span class="board-count-detail">座</span>城</span>
+        </div>
       </section>
 
       <section class="board-section" aria-labelledby="board-title">
-        <div class="section-heading board-heading"><div><span class="section-number">01</span><h2 id="board-title">图片榜单</h2><span class="desktop-note">{{ site.rankWithinTier ? '同档按顺序排名' : '同档不分先后' }}</span></div>
+        <div class="section-heading board-heading">
+          <div>
+            <span class="section-number">01</span>
+            <h2 id="board-title">图片榜单</h2>
+            <span class="board-view-hint">点击卡片查看详情</span>
+            <span class="desktop-note">{{ site.rankWithinTier ? '同档按顺序排名' : '同档不分先后' }}</span>
+          </div>
           <div class="board-view-controls" role="group" aria-label="榜单视图">
                 <span>榜单视图</span>
                 <button type="button" :aria-pressed="boardView === 'compact'" @click="boardView = 'compact'">紧凑</button>
@@ -214,7 +223,8 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
             </div>
           </div>
         </div>
-        <p class="board-view-hint">点击卡片查看详情<span v-if="boardView === 'compact'" class="compact-hover-hint"> · 悬停隐藏店名</span><span v-else> · 图片下方显示店名、城市与短评</span></p>
+        <p v-if="boardView === 'compact'" class="board-view-hint compact-hover-hint">悬停隐藏店名</p>
+        <p v-else class="board-view-hint">图片下方显示店名、城市与短评</p>
         <div v-if="!all.length && !hasFilters" class="empty-intro"><span class="empty-icon" aria-hidden="true">＋</span><div><strong>规划中，还在路上待访问</strong><p>等亲自来，再写~</p></div><span class="empty-pill">待填充</span></div>
         <div v-if="hasFilters && !filtered.length" class="no-results" role="status"><strong>没有找到匹配的条目</strong><span>试试其他关键词、城市或标签。</span><button class="text-button" @click="reset">重置筛选 ↗</button></div>
         <div v-if="boardSections.length" class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels, 'comfortable-view': boardView === 'comfortable' }"><section v-for="tier in boardSections" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ tier.index + 1 }}</span><h3 :id="`tier-${tier.id}`"><a class="tier-meaning-link" :aria-label="`${tier.label}：查看档位说明`" :href="`#tier-meaning-${tier.id}`" :aria-describedby="`tier-hint-${tier.id}`" @click.prevent="showTierMeaning(tier.id)">{{ tier.label }}<span class="tier-help-mark" aria-hidden="true">?</span><span :id="`tier-hint-${tier.id}`" class="tier-hint" role="tooltip">{{ site.tierDescriptions[tier.id] }}<small>点击查看完整排序说明 ↓</small></span></a></h3><span class="tier-action">{{ tierActions[tier.id] }}</span><span class="tier-count">{{ tier.places.length }} 处地点</span></div><div class="tier-content"><div v-if="!tier.places.length" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in tier.places" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="linkTo(`${base}${placeDetailHash(p.id, query)}`)" :rank="site.rankWithinTier ? rankOf(p) : undefined" :priority="p.id === firstPhotoId" :comfortable="boardView === 'comfortable'" :badge="recentBadge(p.id, updates, site.recentDays)" :match="searchMatches.get(p.id)" /></div></div></section></div>
@@ -223,7 +233,10 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
 
       <section class="guide-entry" aria-labelledby="guide-entry-title">
         <MascotMoments class="mascot-embedded mascot-map-entry" :ids="['aqua', 'emilia']" rotate-all label="地图入口角色" />
-        <div class="guide-entry-copy"><h2 id="guide-entry-title">不知道在哪里？怎么去？那就去地图找找</h2><p>同样的城市颜色，对应地图上的位置。详细评价与到访路线也在这里。</p><a :href="guideUrl" class="button dark">地图找店 ↗</a></div>
+        <div class="guide-entry-copy">
+          <h2 id="guide-entry-title">不知道在哪里？怎么去？那就去地图找找</h2>
+          <a :href="guideUrl" class="button dark">地图找店 ↗</a>
+        </div>
       </section>
       <div class="bottom-grid"><section class="updates-section" aria-labelledby="updates-title"><div class="section-heading"><div><span class="section-number">02</span><h2 id="updates-title">最近更新</h2></div><a :href="updatesUrl" target="_blank" rel="noopener noreferrer" class="updates-all-link">查看全部 ↗<span class="sr-only">（新标签页）</span></a></div><UpdateList :updates="updates.slice(0, 2)" :places="all" /></section>
       <section class="criteria-section" aria-labelledby="criteria-title"><div class="section-heading"><div><span class="section-number">03</span><h2 id="criteria-title">关于这份榜单</h2></div></div><RankingCriteriaCopy class="criteria-copy" :text="site.criteria" /><div class="criteria-scale"><span v-for="t in tiers" :key="t.id"><i :style="{ background: t.color }"></i>{{ t.label }}</span></div><details :open="criteriaOpen" @toggle="criteriaOpen = ($event.target as HTMLDetailsElement).open"><summary>查看各档标准与排序规则</summary><dl><template v-for="t in tiers" :key="t.id"><dt :id="`tier-meaning-${t.id}`" tabindex="-1">{{ t.label }}</dt><dd><RankingCriteriaCopy :text="site.tierDescriptions[t.id]" compact /></dd></template></dl><p>{{ site.rankWithinTier ? '同档有先后，卡片编号表示该档内的完整排名；筛选后保留原排名。' : '同档不分先后。' }}</p><p>到访日期未提供时显示“未记录”；内容更新日期由作者维护。</p></details><p class="personal-note">仅代表个人体验，供你出发前参考。</p></section></div>
@@ -234,7 +247,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
     <section v-else-if="!isHome" class="not-found"><p class="eyebrow">这一站暂未收录</p><h1>没有找到这个条目</h1><p>链接可能有误，或条目尚未公开。</p><a href="#/" class="button dark">返回图片榜单</a></section>
   </main>
   <TripPlanner :places="all" :current-place="currentPlace" />
-  <footer class="site-footer"><span><b>{{ site.author }}</b> · 一站一更新，纯主观感受，你们永远对。 <a :href="citiesUrl">城市逛店指南 ↗</a></span><VisitCounter /></footer>
+  <footer class="site-footer"><span><b>{{ site.author }}</b> · 纯主观感受，你们永远对。 <a :href="citiesUrl">城市逛店指南 ↗</a></span><VisitCounter /></footer>
   <ExportPanel v-if="exportOpen" :site="site" :places="filtered" :all-places="all" :scope="scope" :updated-at="contentDate" @close="exportOpen = false" />
 </template>
 

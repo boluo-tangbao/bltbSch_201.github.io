@@ -54,7 +54,7 @@ test('shared filters override another browser history and survive details, retur
   if (!await tagButton.isVisible()) await page.locator('.more-tags-toggle').click()
   await tagButton.click()
   await page.getByRole('button', { name: '分享筛选', exact: true }).click()
-  await expect(page.getByRole('button', { name: '分享筛选', exact: true })).toHaveText('链接已复制')
+  await expect(page.getByRole('button', { name: '分享筛选', exact: true }).getByText('链接已复制', { exact: true })).toBeVisible()
   const link = await page.evaluate(() => (window as any).copiedText as string)
   const url = new URL(link)
   expect(url.searchParams.get('city')).toBe('上海')
@@ -108,7 +108,8 @@ test('shared links work with local storage blocked and header navigation keeps t
 
 test('copy failure offers a selected, read-only link instead of claiming success', async ({ page }) => {
   await mockClipboard(page, true)
-  await page.goto(base + 'guide/?filters=1&q=HIPPIHO#/place/' + hipp.id)
+  await page.goto(base + '?filters=1&q=HIPPIHO')
+  await openMobileTools(page)
   await page.getByRole('button', { name: '分享筛选', exact: true }).click()
   const field = page.getByRole('textbox', { name: '分享筛选内容', exact: true })
   await expect(field).toBeFocused()
@@ -173,34 +174,42 @@ test('sharing and result controls fit small and wide viewports', async ({ page }
       await page.setViewportSize({ width, height: 950 })
       await openMobileTools(page)
       const share = page.getByRole('button', { name: '分享筛选', exact: true })
-      const box = (await share.boundingBox())!
-      expect(box.height).toBeGreaterThanOrEqual(44)
-      expect(box.x).toBeGreaterThanOrEqual(0)
-      expect(box.x + box.width).toBeLessThanOrEqual(width)
+      if (route) {
+        await expect(share).toHaveCount(0)
+      } else {
+        const box = (await share.boundingBox())!
+        expect(box.height).toBeGreaterThanOrEqual(44)
+        expect(box.x).toBeGreaterThanOrEqual(0)
+        expect(box.x + box.width).toBeLessThanOrEqual(width)
+      }
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
     }
   }
 })
 
-test('search stays free of repeated labels and share uses an accessible irregular sticker', async ({ page }) => {
+test('search shows one match and the board share button supports the keyboard', async ({ page }) => {
   await mockClipboard(page)
   for (const route of ['', 'guide/']) {
     await page.goto(base + route + '?filters=1&q=HIPPIHO')
     await expect(page.locator('.active-filters')).toHaveCount(0)
-    await expect(page.locator('.search-match, .place-card mark, .directory-place mark')).toHaveCount(0)
+    await expect(page.locator('.search-match')).toHaveCount(1)
+    await expect(page.locator('.search-match mark')).toHaveText('HIPPIHO')
     await expect(page.getByRole('searchbox')).toHaveValue('HIPPIHO')
     const share = page.getByRole('button', { name: '分享筛选', exact: true })
-    await expect(share).toHaveClass(/is-share/)
-    expect(await share.evaluate(el => getComputedStyle(el, '::after').clipPath)).toContain('polygon(')
+    if (route) {
+      await expect(share).toHaveCount(0)
+      continue
+    }
     await page.setViewportSize({ width: 390, height: 1100 })
     await openMobileTools(page)
-    if (!route) await page.getByRole('button', { name: '舒适', exact: true }).click()
+    await expect(share.locator('.menu-icon-share')).toBeVisible()
+    await page.getByRole('button', { name: '舒适', exact: true }).click()
     await page.evaluate(() => document.fonts.ready)
     await share.scrollIntoViewIfNeeded()
-    await page.screenshot({ path: `test-results/evidence/search-sticker-${route ? 'guide' : 'board'}.png` })
+    await page.screenshot({ path: 'test-results/evidence/search-sticker-board.png' })
     await share.focus()
     await page.keyboard.press('Enter')
-    await expect(share).toHaveText('链接已复制')
+    await expect(share.getByText('链接已复制', { exact: true })).toBeVisible()
     await expect(share).toBeFocused()
     expect(new URL(await page.evaluate(() => (window as any).copiedText)).searchParams.get('q')).toBe('HIPPIHO')
     expect(await share.evaluate(el => el.scrollWidth <= el.clientWidth)).toBe(true)

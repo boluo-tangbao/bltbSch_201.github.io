@@ -61,23 +61,35 @@
 :root[data-theme="night"] .button.dark { background: #d5f34a; color: #171b1c; border-color: var(--edition-accent); }
 :root[data-theme="night"] .button:hover { background: var(--edition-soft); }
 :root[data-theme="night"] .button.dark:hover { background: #e1ff70; }
-:root[data-theme="night"] :is(.text-button,.back-link,.eyebrow,.hero-browse-links a,.updates-all-link) { color: var(--edition-accent-text); }
+:root[data-theme="night"] :is(.text-button,.back-link,.eyebrow,.updates-all-link) { color: var(--edition-accent-text); }
 :root[data-theme="night"] :is(.place-directory nav a[aria-current],.place-directory nav a:hover,.tags > span,.update-places a,.change-badge,.mobile-tools-toggle) { background: var(--edition-soft); color: #e4eadb; border-color: #738b4a; }
 :root[data-theme="night"] .site-footer { color: #e4eadb; background: var(--edition-header); border-color: var(--edition-header); }
 :root[data-theme="night"] .site-footer :is(b,a,strong) { color: var(--edition-accent-text); }
 :root[data-theme="night"] :is(.shop-directory,.shop-card,.shop-directory-card,.shop-item,.route-panel,.trip-panel,.route-stop,.updates-archive) { background: var(--edition-surface); color: var(--edition-text); border-color: var(--edition-line); }
 :root[data-theme="night"] :is(.shop-description,.shop-facts dd,.shop-directory-intro) { color: var(--edition-muted); }
 :root[data-theme="night"] :is(.shop-directory-notice,.shop-expand,.shop-accounts a:hover) { background: var(--edition-soft); color: var(--edition-text); border-color: var(--edition-line); }
+:root[data-theme="night"] .shop-accounts a { border-color: var(--edition-line); }
+:root[data-theme="night"] .shop-accounts b { color: var(--ui-closed); }
+:root[data-theme="night"] .shop-correction { color: var(--edition-muted); }
 
 /* Nested surfaces also need a palette: changing only their parent leaves Day panels behind. */
 :root[data-theme="night"] :is(.atlas-heading,.guide-detail .detail-heading) { background: linear-gradient(117deg, var(--edition-surface) 0 72%, var(--edition-soft) 72.2%); color: var(--edition-text); }
 :root[data-theme="night"] :is(.directory-heading,.mobile-guide-switch,.detail-destination,.detail-visit-notes,.feedback-context,.map-status,.map-notice,.community-error,.feedback-status,.video-pending) { background: var(--edition-soft); color: var(--edition-text); border-color: var(--edition-line); }
 :root[data-theme="night"] :is(.directory-city-group summary,.place-directory .directory-place,.city-map-tabs,.city-place-list,.atlas-map .map-welcome,.place-map,.place-address-map,.trip-map,.place-gallery-item,.place-gallery-image-preview,.quiet-empty,.hero .byline,.tier-board) { background: var(--edition-paper); color: var(--edition-text); border-color: var(--edition-line); }
+:root[data-theme="night"] .directory-rank { background: color-mix(in srgb, var(--tier-color) 25%, var(--edition-surface)); color: var(--edition-text); }
+:root[data-theme="night"] .directory-rank small { color: var(--edition-text); }
+:root[data-theme="night"] :is(.search-match,.search-match-location) { color: var(--edition-muted); }
+:root[data-theme="night"] .search-match-label { color: var(--edition-accent-text); }
 :root[data-theme="night"] :is(.place-gallery,.place-mini-map,.detail-side-nav,.detail-date-grid > div,.detail-visit-list li,.nearby-visit,.nearby-visit-frame,.nearby-dialog,.trip-plan-dialog,.trip-plan-dock,.catalog-grid article,.video-excerpt,.card-search-link,.tier-hint,.mascot-bio,.mascot-angle) { background: var(--edition-surface); color: var(--edition-text); border-color: var(--edition-line); }
 :root[data-theme="night"] :is(.place-gallery-nav button,.place-address-map > a,.map-snapshot-fallback img + span,.map-missing-address button,.address-actions a,.copy-button,.copy-fallback input,.copy-fallback textarea,.clip-actions,.nearby-dialog-close,.trip-plan-close,.trip-plan-order button) { background: var(--edition-paper); color: var(--edition-accent-text); border-color: var(--edition-line); }
 :root[data-theme="night"] :is(.place-gallery-nav small,.city-map-tabs small,.detail-visit-icon,.shop-status:not(.is-open,.is-evidence,.is-closed),.trip-journey .tag) { background: var(--edition-soft); color: var(--edition-text); }
 :root[data-theme="night"] :is(.atlas-heading > div > p:last-child,.atlas-count span,.directory-city-count,.directory-heading > span,.detail-kicker,.detail-facts,.detail-facts small,.detail-date-grid dt,.detail-date-grid small,.detail-date-note,.detail-content-date,.detail-review-deck,.detail-review-meta,.place-gallery-intro,.place-gallery-source,.map-caption,.map-missing-address,.map-address-fallback li > p,.nearby-visit p,.nearby-visit .nearby-visit-hint,.faq details p,.feedback-list li small,.form-count,.trip-plan-dock small,.trip-journey .muted,.selected-shops small,.journey-dialog small) { color: var(--edition-muted); }
 :root[data-theme="night"] :is(.detail-prose p,.detail-visit-list p,.detail-destination p:last-child,.guide-empty-detail p,.city-place-list strong,.nearby-visit h4,.nearby-dialog-content p) { color: var(--edition-text); }
+:root[data-theme="night"] .detail-visit-heading h3 { color: var(--edition-text); }
+:root[data-theme="night"] :is(.updates-heading p,.updates-total,.update-summary strong,.update-places small,.more-tags-toggle small,.clip-entry-copy small,.place-gallery-count,.place-gallery-group-heading span,.place-mini-map-heading > span) { color: var(--edition-muted); }
+:root[data-theme="night"] :is(.update-more span,.map-breadcrumb button,.place-gallery-count strong,.place-gallery-zoom) { color: var(--edition-accent-text); }
+:root[data-theme="night"] .place-gallery-video-badge { background: var(--edition-header); color: var(--edition-text); border-color: var(--edition-line); }
+:root[data-theme="night"] .place-gallery-zoom { padding: 0 4px; border-radius: 3px; background: var(--edition-header); opacity: 1; }
 :root[data-theme="night"] :is(.atlas-count strong,.atlas-heading .eyebrow,.section-label,.detail-navigation,.detail-visit-mark,.nearby-visit-links a,.nearby-dialog-kicker,.feedback-context > strong,.feedback-context > a,.trip-journey a,.trip-journey .link-button,.journey-status,.journey-warning,.update-more,.update-kind) { color: var(--edition-accent-text); }
 :root[data-theme="night"] .detail-prose strong { background: linear-gradient(transparent 68%, var(--edition-soft) 68%); color: var(--edition-accent-text); }
 :root[data-theme="night"] :is(.update-kind,.update-more) { background: var(--edition-soft); color: var(--edition-accent-text); border-color: var(--edition-line); }
@@ -125,6 +137,8 @@
   font-weight: 700;
 }
 :root[data-theme="night"] :is(button[aria-pressed="true"],button[aria-current]:not([aria-current="false"])) :is(small,.compare-check) { color: var(--edition-ink); }
+:root[data-theme="night"] .directory-place[aria-current] .directory-copy :is(strong,.search-match,.search-match-label,.search-match-location),
+:root[data-theme="night"] .city-place-list button[aria-current="true"] strong { color: var(--edition-ink); }
 :root[data-theme="night"] .comfortable-view .photo-caption small { color: var(--edition-muted); }
 :root[data-theme="night"] .trip-plan-add:is(.is-icon-only,.is-plain) { background: transparent; }
 :root[data-theme="night"] .trip-plan-add.is-icon-only { box-shadow: none; }

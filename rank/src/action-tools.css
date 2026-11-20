@@ -39,6 +39,7 @@
 .board-label-toggle input:checked::after { background: var(--ui-surface); transform: translateX(12px); }
 .board-label-toggle input:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 3px; }
 .board-page .board-view-hint { margin: 8px 2px 12px; color: var(--ui-muted); font-size: 11px; line-height: 1.6; }
+.board-page .board-heading .board-view-hint { margin: 0; }
 @media (max-width: 740px) {
   .board-action-group { position: relative; isolation: isolate; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
   .board-action-group > .button, .board-action-group .copy-button { width: 100%; }
@@ -87,8 +88,6 @@ body:has(.board-page) #site-console { z-index: 900; }
   color: var(--compare-ink);
 }
 .board-action-group > .compare-launch-tile:hover { background: var(--compare-paper); }
-.guide-action-group { margin-left: auto; align-items: center; }
-.guide-action-group .copy-button:focus-visible,
 .board-action-group > .compare-launch-tile:focus-visible { outline: 2px solid var(--action-ink); outline-offset: 4px; }
 @media (max-width: 580px) {
   .board-action-group > .compare-launch-tile { padding-inline: 8px; }
