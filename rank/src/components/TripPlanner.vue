@@ -134,7 +134,6 @@ onBeforeUnmount(release)
   .trip-plan-dialog { padding: 16px; }
   .trip-plan-entry button:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 2px; }
 }
-@media (max-width: 800px) { :global(body:has(.trip-plan-dock) .detail-side-nav), :global(body:has(.trip-plan-entry:not(.is-browsing)) .detail-side-nav) { bottom: calc(110px + env(safe-area-inset-bottom)); } }
 .trip-plan-entry.is-browsing { z-index: 0; isolation: isolate; position: static; transform: none; display: block; width: min(540px, calc(100% - 40px)); margin: 28px auto; padding: 0; border: 2px solid var(--ui-ink); border-radius: 16px 4px 16px 4px; background: var(--ui-surface); box-shadow: 4px 4px 0 var(--ui-menu-shadow); overflow: visible; }
 .trip-plan-entry.is-browsing .trip-entry-toggle { position: relative; display: flex; align-items: center; gap: 14px; width: 100%; min-height: 78px; padding: 14px 18px; border: 0; border-radius: 0; background: transparent; color: var(--ui-accent); font: inherit; text-align: left; cursor: pointer; }
 .trip-entry-toggle > svg { box-sizing: content-box; flex: none; padding: 4px; border-radius: 0; }

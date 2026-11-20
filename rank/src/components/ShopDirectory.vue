@@ -75,12 +75,12 @@ defineExpose({ revealShop })
         <div class="shop-row-title">
           <div class="shop-name-location">
             <h4>{{ shop.name }}</h4>
-            <span v-if="shop.floor" class="shop-location"><template v-if="shop.inactive">原位置：</template>{{ shop.floor }}</span>
             <span class="shop-status" :class="'is-' + shop.displayStatus">{{ shop.statusText }}</span>
           </div>
-          <div v-if="placeId" class="shop-row-tools">
-            <TripPlanButton v-if="shop.displayStatus === 'open'" :place-id="placeId" :name="shop.name" :shop-name="shop.name" icon-only plain />
-            <a class="shop-correction" :href="shopFeedbackUrl(base, placeId, shop.name)" :aria-label="`${shop.name}：反馈纠错`" title="反馈这家店的信息"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5 4 4M4 20l4.5-1L20 7.5a2.8 2.8 0 0 0-4-4L4.5 15Z" /></svg></a>
+          <div v-if="shop.floor || placeId" class="shop-row-tools">
+            <TripPlanButton v-if="placeId && shop.displayStatus === 'open'" :place-id="placeId" :name="shop.name" :shop-name="shop.name" icon-only plain />
+            <span v-if="shop.floor" class="shop-location"><template v-if="shop.inactive">原位置：</template>{{ shop.floor }}</span>
+            <a v-if="placeId" class="shop-correction" :href="shopFeedbackUrl(base, placeId, shop.name)" :aria-label="`${shop.name}：反馈纠错`" title="反馈这家店的信息"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5 4 4M4 20l4.5-1L20 7.5a2.8 2.8 0 0 0-4-4L4.5 15Z" /></svg></a>
           </div>
         </div>
         <p v-if="shop.countdown" class="shop-countdown">{{ shop.countdown.label }} · {{ shop.countdown.date }}</p>
@@ -153,7 +153,7 @@ defineExpose({ revealShop })
 .shop-list,.shop-accounts { list-style: none; padding: 0; margin: 0; }
 .shop-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 12px; }
 .shop-row { border-radius: var(--ui-radius-card, 12px); min-width: 0; padding: 16px; border: 1px solid var(--ui-border, #e5c5cc); background: var(--ui-surface, #fffdfa); }
-.shop-row-tools { display: flex; flex: none; align-items: center; margin: -6px -8px 0 0; }
+.shop-row-tools { display: flex; min-width: 0; max-width: 50%; align-items: center; margin: -6px -8px -6px 0; }
 .shop-correction { display: inline-flex; flex: none; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; color: #8b7b81; }
 .shop-directory-inactive > summary { cursor: pointer; list-style: none; min-height: 44px; margin-bottom: 0; align-items: center; }
 .shop-directory-inactive > summary::-webkit-details-marker { display: none; }
@@ -167,10 +167,10 @@ defineExpose({ revealShop })
 .shop-correction:focus-visible { outline: 2px solid var(--ui-accent, #a83750); outline-offset: 2px; }
 .shop-row { scroll-margin-top: 80px; }
 .shop-row:focus { outline: 2px solid var(--ui-accent, #a83750); outline-offset: 3px; }
-.shop-row-title { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.shop-row-title { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .shop-name-location { min-width: 0; flex: 1; line-height: 1.7; overflow-wrap: anywhere; }
 .shop-row h4 { display: inline; margin: 0; font-size: 16px; }
-.shop-location { display: inline-block; max-width: 100%; margin-left: 8px; color: var(--ui-muted, #79626b); font-size: 12px; font-weight: 400; vertical-align: baseline; }
+.shop-location { min-width: 0; color: var(--ui-muted, #79626b); font-size: 12px; line-height: 1.4; text-align: right; overflow-wrap: anywhere; }
 .shop-source-role { margin-left: 6px; color: var(--ui-muted, #79626b); font-size: 10px; }
 .shop-status { display: inline-block; margin-inline-start: 8px; border-radius: 999px; font-size: 11px; line-height: 1.4; padding: 3px 7px; background: #f3eee7; color: #756253; white-space: nowrap; }
 .shop-status.is-open { background: var(--ui-success-bg, #e8f3ed); color: var(--ui-success, #347357); }
@@ -191,12 +191,13 @@ defineExpose({ revealShop })
 .shop-source-label { margin-top: 12px; font-size: 12px; font-weight: 700; color: var(--ui-muted, #79626b); }
 .shop-sources { padding-left: 18px; margin: 8px 0 12px; color: var(--ui-muted, #79626b); font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; }
 .shop-sources a { color: var(--ui-accent, #a83750); text-decoration: underline; text-underline-offset: 3px; }
-.shop-account-row { display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: start; gap: 10px; margin-top: 12px; }
-.shop-account-row .shop-source-label { margin: 2px 0 0; line-height: 1.4; }
-.shop-accounts { display: grid; gap: 6px; }
-.shop-accounts a { border-radius: var(--ui-radius-control, 8px); display: flex; align-items: flex-start; gap: 7px; padding: 8px; border: 1px solid #ead2d8; font-size: 12px; text-decoration: none; overflow-wrap: anywhere; }
-.shop-accounts a:hover { background: #fff0f3; }
-.shop-accounts b { flex-shrink: 0; color: #b94660; }
+.shop-account-row { display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: start; gap: 10px; margin-top: 8px; padding-top: 4px; border-top: 1px solid var(--ui-border, #ead2d8); }
+.shop-account-row .shop-source-label { margin: 7px 0 0; line-height: 1.25; }
+.shop-accounts { display: grid; gap: 2px; }
+.shop-accounts a { border-radius: var(--ui-radius-control, 8px); display: flex; align-items: center; gap: 6px; min-height: 44px; padding: 5px 4px; font-size: 12px; line-height: 1.45; text-decoration: none; overflow-wrap: anywhere; }
+.shop-accounts a:hover { background: var(--ui-accent-soft, #fff0f3); }
+.shop-accounts b { flex: none; padding: 2px 4px; border-radius: 4px; background: var(--ui-accent-soft, #fff0f3); color: #b94660; font-size: 11px; }
+.shop-accounts a > span:last-child { margin-inline-start: auto; }
 .shop-accounts small { display: block; color: var(--ui-muted, #79626b); font-size: 11px; }
 .shop-accounts em { font-style: normal; font-size: 10px; color: var(--ui-muted, #79626b); white-space: nowrap; }
 @media (max-width: 600px) { .shop-list { grid-template-columns: 1fr; } .shop-row { padding: 14px; } .shop-expand { min-height: 44px; } }

@@ -68,7 +68,6 @@
 :root[data-theme="night"] :is(.shop-directory,.shop-card,.shop-directory-card,.shop-item,.route-panel,.trip-panel,.route-stop,.updates-archive) { background: var(--edition-surface); color: var(--edition-text); border-color: var(--edition-line); }
 :root[data-theme="night"] :is(.shop-description,.shop-facts dd,.shop-directory-intro) { color: var(--edition-muted); }
 :root[data-theme="night"] :is(.shop-directory-notice,.shop-expand,.shop-accounts a:hover) { background: var(--edition-soft); color: var(--edition-text); border-color: var(--edition-line); }
-:root[data-theme="night"] .shop-accounts a { border-color: var(--edition-line); }
 :root[data-theme="night"] .shop-accounts b { color: var(--ui-closed); }
 :root[data-theme="night"] .shop-correction { color: var(--edition-muted); }
 

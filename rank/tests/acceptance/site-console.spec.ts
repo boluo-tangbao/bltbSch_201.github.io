@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test'
+import type { Locator } from '@playwright/test'
 import { mkdirSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { openTripEntry } from '../browser/browse-tools'
@@ -131,6 +132,54 @@ test('控制台支持键盘展开、Esc收起和焦点返回', async ({ page }) 
   await expect(page.locator('.sc-panel')).toBeVisible()
   await page.keyboard.press('Escape')
   await expect(page.locator('.sc-panel')).toBeHidden()
+})
+
+test('详情导航与控制台默认错开，可分别拖动且松手不触发点击', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await page.goto('./#/place/guangzhou-shop-001')
+  const navigation = page.locator('.detail-side-nav')
+  const toggle = navigation.locator('.side-nav-toggle')
+  const launcher = page.locator('.sc-launcher')
+  await expect(toggle).toBeVisible()
+  await expect(launcher).toBeVisible()
+  const floatsOverlap = async () => {
+    const nav = (await navigation.boundingBox())!
+    const tab = (await launcher.boundingBox())!
+    return nav.x < tab.x + tab.width && tab.x < nav.x + nav.width &&
+      nav.y < tab.y + tab.height && tab.y < nav.y + nav.height
+  }
+  const navBox = (await navigation.boundingBox())!
+  const consoleBox = (await launcher.boundingBox())!
+  expect(await floatsOverlap()).toBe(false)
+
+  async function drag(handle: Locator, x: number, y: number) {
+    const box = (await handle.boundingBox())!
+    await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2)
+    await page.mouse.down()
+    await page.mouse.move(x, y, { steps: 8 })
+    await page.mouse.up()
+  }
+
+  const wasExpanded = await toggle.getAttribute('aria-expanded')
+  await drag(toggle, 55, 230)
+  await expect(navigation).toHaveAttribute('data-floating-position', '')
+  await expect(toggle).toHaveAttribute('aria-expanded', wasExpanded!)
+  expect((await navigation.boundingBox())!.x).toBeLessThan(navBox.x)
+  await toggle.click()
+  await expect(toggle).toHaveAttribute('aria-expanded', wasExpanded === 'true' ? 'false' : 'true')
+
+  if (page.viewportSize()!.width > 900) await launcher.hover()
+  await drag(launcher, 170, 430)
+  await expect(launcher).toHaveAttribute('data-floating-position', '')
+  await expect(launcher).toHaveAttribute('aria-expanded', 'false')
+  expect((await launcher.boundingBox())!.x).toBeLessThan(consoleBox.x)
+  const movedNav = (await navigation.boundingBox())!
+  await drag(launcher, movedNav.x + movedNav.width / 2, movedNav.y + movedNav.height / 2)
+  expect(await floatsOverlap()).toBe(false)
+  await launcher.click()
+  await expect(page.locator('.sc-panel')).toBeVisible()
+  await page.keyboard.press('Escape')
+  await expect(launcher).toBeFocused()
 })
 
 test('触屏点击侧签展开和收起', async ({ browser, baseURL }, testInfo) => {

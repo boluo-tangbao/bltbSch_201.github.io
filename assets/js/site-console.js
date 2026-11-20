@@ -18,7 +18,7 @@
     const stylesheet = document.createElement('link');
     stylesheet.rel = 'stylesheet';
     stylesheet.setAttribute('blocking', 'render');
-    stylesheet.href = new URL('assets/css/site-console.css?v=12', root).href;
+    stylesheet.href = new URL('assets/css/site-console.css?v=13', root).href;
     document.head.append(stylesheet);
   }
   const host = document.createElement('aside');
@@ -45,7 +45,7 @@
       </section>
       <section class="sc-section" aria-labelledby="sc-effects-heading"><h3 id="sc-effects-heading">浏览偏好</h3><label class="sc-check">点击星光<input type="checkbox" data-effects></label><label class="sc-check">菠萝鼠标<input type="checkbox" data-cursor></label></section>
     </section>
-    <button type="button" class="sc-launcher" aria-label="展开控制台" aria-controls="sc-panel" aria-expanded="false"><svg class="sc-launcher-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M5 3v7m0 5v6M12 3v2m0 5v11M19 3v10m0 5v3"/><circle cx="5" cy="12.5" r="2.5"/><circle cx="12" cy="7.5" r="2.5"/><circle cx="19" cy="15.5" r="2.5"/></svg><span class="sc-tab-title" aria-hidden="true">控制台</span></button>`;
+    <button type="button" class="sc-launcher" data-float-handle title="拖动移动控制台" aria-label="展开控制台" aria-controls="sc-panel" aria-expanded="false"><svg class="sc-launcher-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M5 3v7m0 5v6M12 3v2m0 5v11M19 3v10m0 5v3"/><circle cx="5" cy="12.5" r="2.5"/><circle cx="12" cy="7.5" r="2.5"/><circle cx="19" cy="15.5" r="2.5"/></svg><span class="sc-tab-title" aria-hidden="true">控制台</span></button>`;
   document.body.append(host);
   const $ = selector => host.querySelector(selector);
   const panel = $('.sc-panel'), launcher = $('.sc-launcher');
@@ -55,6 +55,7 @@
   function placeLauncher() {
     const inlineTarget = findInlineTarget();
     if (inlineLayout.matches && inlineTarget) inlineTarget.append(launcher);
+    else if (launcher.hasAttribute('data-floating-position')) document.body.append(launcher);
     else host.append(launcher);
   }
   placeLauncher();
@@ -86,19 +87,106 @@
     launcher.setAttribute('aria-label', '展开控制台');
   }
   host.addEventListener('pointerenter', event => {
-    if (!inlineLayout.matches && event.pointerType === 'mouse' && hoverAvailable.matches) open();
+    if (!launcher.hasAttribute('data-floating-position') && !inlineLayout.matches && event.pointerType === 'mouse' && hoverAvailable.matches) open();
   });
   host.addEventListener('pointerleave', event => {
-    if (inlineLayout.matches || event.pointerType !== 'mouse' || !hoverAvailable.matches) return;
+    if (launcher.hasAttribute('data-floating-position') || inlineLayout.matches || event.pointerType !== 'mouse' || !hoverAvailable.matches) return;
     clearTimeout(closeTimer);
     // Bridge the moving tab and panel while the drawer slides under the pointer.
     closeTimer = setTimeout(() => close(false), 140);
   });
   launcher.addEventListener('click', event => {
-    if (!inlineLayout.matches && event.pointerType === 'mouse' && hoverAvailable.matches && event.detail > 0) return open();
+    if (!launcher.hasAttribute('data-floating-position') && !inlineLayout.matches && event.pointerType === 'mouse' && hoverAvailable.matches && event.detail > 0) return open();
     if (host.classList.contains('sc-open')) return close();
     open(inlineLayout.matches || event.detail === 0);
   });
+  const floatInset = 8;
+  let drag;
+  let draggedHandle;
+  document.addEventListener('pointerdown', event => {
+    if (!event.isPrimary || event.button !== 0) return;
+    draggedHandle = null;
+    const handle = event.target.closest?.('[data-float-handle]');
+    if (!handle) return;
+    const floating = handle === launcher ? launcher : handle.closest('.detail-side-nav');
+    if (!floating) return;
+    drag = {
+      handle, floating, pointer: event.pointerId,
+      startX: event.clientX, startY: event.clientY,
+      origin: floating.getBoundingClientRect(), moved: false,
+    };
+  });
+  function positionFraction(position, available) {
+    return Math.max(0, Math.min(1, (position - floatInset) / Math.max(1, available - 2 * floatInset)));
+  }
+  function setFloatPosition(floating, left, top) {
+    const viewport = document.documentElement;
+    floating.style.setProperty('--float-x', positionFraction(left, viewport.clientWidth - floating.offsetWidth));
+    floating.style.setProperty('--float-y', positionFraction(top, viewport.clientHeight - floating.offsetHeight));
+  }
+  function separateFloats(floating) {
+    const other = floating === launcher ? document.querySelector('.detail-side-nav') : launcher;
+    if (!other?.getClientRects().length) return;
+    const current = floating.getBoundingClientRect(), reserved = other.getBoundingClientRect();
+    if (current.right <= reserved.left || reserved.right <= current.left ||
+        current.bottom <= reserved.top || reserved.bottom <= current.top) return;
+    const viewport = document.documentElement;
+    const positions = [
+      [current.left, reserved.top - current.height - floatInset],
+      [current.left, reserved.bottom + floatInset],
+      [reserved.left - current.width - floatInset, current.top],
+      [reserved.right + floatInset, current.top],
+    ].filter(([left, top]) =>
+      left >= 0 && top >= 0 && left + current.width <= viewport.clientWidth && top + current.height <= viewport.clientHeight);
+    const distance = ([left, top]) => Math.hypot(left - current.left, top - current.top);
+    positions.sort((a, b) => distance(a) - distance(b));
+    if (positions.length) setFloatPosition(floating, ...positions[0]);
+  }
+  document.addEventListener('pointermove', event => {
+    if (!drag || event.pointerId !== drag.pointer) return;
+    const dx = event.clientX - drag.startX, dy = event.clientY - drag.startY;
+    if (!drag.moved && Math.hypot(dx, dy) < 7) return;
+    const { handle, floating, origin } = drag;
+    if (!drag.moved) {
+      drag.moved = true;
+      draggedHandle = handle;
+      floating.setAttribute('data-floating-position', '');
+      handle.setAttribute('data-float-dragging', '');
+      if (handle === launcher) {
+        close(false);
+        if (!inlineLayout.matches) document.body.append(launcher);
+      }
+      handle.setPointerCapture(event.pointerId);
+    }
+    setFloatPosition(floating, origin.left + dx, origin.top + dy);
+  });
+  function finishDrag(event) {
+    if (!drag || event.pointerId !== drag.pointer) return;
+    const { handle, floating, moved } = drag;
+    drag = null;
+    handle.removeAttribute('data-float-dragging');
+    if (moved) separateFloats(floating);
+    else if (event.type === 'pointerup' && event.pointerType === 'touch' && floating.hasAttribute('data-floating-position')) {
+      // A touch engine may suppress the compatibility click after a drag.
+      const bounds = handle.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX > bounds.right ||
+          event.clientY < bounds.top || event.clientY > bounds.bottom) return;
+      draggedHandle = handle;
+      handle.click();
+    }
+  }
+  document.addEventListener('pointerup', finishDrag);
+  document.addEventListener('pointercancel', finishDrag);
+  document.addEventListener('lostpointercapture', event => {
+    if (event.target === drag?.handle) finishDrag(event);
+  });
+  document.addEventListener('click', event => {
+    if (event.detail > 0 && draggedHandle?.contains(event.target)) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      draggedHandle = null;
+    }
+  }, true);
   $('.sc-close').addEventListener('click', () => close());
   host.addEventListener('focusout', event => {
     if (event.relatedTarget && !host.contains(event.relatedTarget) && event.relatedTarget !== launcher) close(false);
