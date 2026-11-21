@@ -85,11 +85,18 @@
   const storyPhoto = get('story-photo');
   const playButton = get('play');
   let activePage = 0;
-  let timer;
+  const playback = createTravelStoryPlayback(
+    pages.map(({ id }) => [[imageUrl(id), imageUrl(id, true)]]),
+    drawPage,
+    (playing, atEnd) => {
+      playButton.textContent = playing ? '暂停播放' : atEnd ? '从头播放' : '播放手记';
+      playButton.setAttribute('aria-pressed', String(playing));
+    },
+  );
 
   const groupButtons = groups.map(group => {
     const first = pages.findIndex(page => page.group === group);
-    const jump = button(group.place, () => selectPage(first));
+    const jump = button(group.place, () => playback.go(first));
     const thumbnail = make('img');
     thumbnail.src = imageUrl(pages[first].id, true);
     thumbnail.alt = '';
@@ -99,15 +106,16 @@
     return jump;
   });
   const periodButtons = periods.map(period => {
-    const jump = button(period, () => selectPage(pages.findIndex(page => page.group.period === period)));
+    const jump = button(period, () => playback.go(pages.findIndex(page => page.group.period === period)));
     get('periods').append(jump);
     return jump;
   });
 
-  function drawPage() {
-    const page = pages[activePage];
-    storyPhoto.src = imageUrl(page.id);
-    storyPhoto.alt = page.title;
+  function drawPage(index, [photo]) {
+    activePage = index;
+    const page = pages[index];
+    if (photo) photo.alt = page.title;
+    storyPhoto.replaceChildren(photo || make('span', '照片暂时无法加载'));
     get('counter').textContent = `${String(activePage + 1).padStart(2, '0')} / ${String(pages.length).padStart(2, '0')}`;
     get('place').textContent = page.group.place;
     get('scene-title').textContent = page.title;
@@ -120,36 +128,13 @@
     periodButtons.forEach((item, index) => item.setAttribute('aria-current', String(page.group.period === periods[index])));
   }
 
-  function stop() {
-    clearInterval(timer);
-    timer = undefined;
-    playButton.textContent = activePage === pages.length - 1 ? '从头播放' : '播放手记';
-    playButton.setAttribute('aria-pressed', 'false');
-  }
-
-  function selectPage(index) {
-    activePage = Math.max(0, Math.min(index, pages.length - 1));
-    stop();
-    drawPage();
-  }
-
-  playButton.addEventListener('click', () => {
-    if (timer !== undefined) return stop();
-    if (activePage === pages.length - 1) selectPage(0);
-    playButton.textContent = '暂停播放';
-    playButton.setAttribute('aria-pressed', 'true');
-    timer = setInterval(() => {
-      activePage += 1;
-      drawPage();
-      if (activePage === pages.length - 1) stop();
-    }, 3500);
-  });
-  get('back').addEventListener('click', () => selectPage(activePage - 1));
-  get('next').addEventListener('click', () => selectPage(activePage + 1));
+  playButton.addEventListener('click', playback.toggle);
+  get('back').addEventListener('click', () => playback.step(-1));
+  get('next').addEventListener('click', () => playback.step(1));
   get('story').addEventListener('keydown', event => {
     if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
     event.preventDefault();
-    selectPage(activePage + (event.key === 'ArrowRight' ? 1 : -1));
+    playback.step(event.key === 'ArrowRight' ? 1 : -1);
   });
   let swipeStart;
   get('visual').addEventListener('touchstart', event => { swipeStart = event.touches[0]; }, { passive: true });
@@ -158,10 +143,10 @@
     const { clientX, clientY } = event.changedTouches[0];
     const dx = clientX - swipeStart.clientX;
     const dy = clientY - swipeStart.clientY;
-    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) selectPage(activePage + (dx < 0 ? 1 : -1));
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) playback.step(dx < 0 ? 1 : -1);
     swipeStart = undefined;
   }, { passive: true });
-  document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });
+  document.addEventListener('visibilitychange', () => { if (document.hidden) playback.stop(); });
 
   function mediaFor(group) {
     const media = group.photos.map((id, index) => ({
@@ -203,7 +188,7 @@
   }
 
   function openMedia(items, index, origin) {
-    stop();
+    playback.stop();
     viewerItems = items;
     trigger = origin;
     drawMedia(index);
@@ -233,7 +218,7 @@
     const section = make('section');
     section.className = 'album-period';
     section.append(make('h3', period));
-    const layouts = groups.filter(group => group.period === period).map(group => {
+    groups.filter(group => group.period === period).forEach(group => {
       const items = mediaFor(group);
       const layout = make('div');
       layout.className = 'album-group';
@@ -255,25 +240,22 @@
         return tile;
       });
       let expanded = false;
-      let filtered = false;
-      const toggle = button('', () => { expanded = !expanded; update(filtered); });
+      const previewCount = Math.min(2, group.photos.length || items.length);
+      const toggle = button('', () => { expanded = !expanded; update(); });
       toggle.className = 'album-toggle';
-      function update(showPeriod) {
-        filtered = showPeriod;
-        const showAll = filtered || expanded;
-        const visible = showAll ? tilesByIndex : tilesByIndex.slice(0, 3);
+      function update() {
+        const visible = expanded ? tilesByIndex : tilesByIndex.slice(0, previewCount);
         tiles.replaceChildren(...visible);
-        toggle.hidden = filtered || items.length <= 3;
+        toggle.hidden = items.length <= previewCount;
         toggle.textContent = expanded ? '收起这组' : `展开全部 ${items.length} 项`;
-        toggle.setAttribute('aria-expanded', String(showAll));
+        toggle.setAttribute('aria-expanded', String(expanded));
       }
       layout.append(heading, tiles, toggle);
       section.append(layout);
-      update(false);
-      return update;
+      update();
     });
     get('album-groups').append(section);
-    return { period, section, layouts };
+    return { period, section };
   });
 
   const filters = ['全部', ...periods].map(period => {
@@ -285,9 +267,8 @@
     filters.forEach(filter => filter.setAttribute('aria-pressed', String(filter.textContent === period)));
     for (const section of albumPeriods) {
       section.section.hidden = period !== '全部' && section.period !== period;
-      section.layouts.forEach(update => update(period === section.period));
     }
   }
   filterAlbum('全部');
-  selectPage(0);
+  playback.go(0);
 })();

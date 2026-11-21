@@ -74,11 +74,13 @@ function renderGroups(){
  }
  const section=el('section');section.className='group';const head=el('header'),name=el('div'),videos=g.media.filter(m=>m.video).length;
  name.append(el(g.period?'h3':'h2',g.label),el('small',(g.media.length-videos)+' 张照片'+(videos?' · '+videos+' 段视频':'')));head.append(name);
- const all=expanded.has(j)||filter!==-1||day.groups.length===1;
- if(filter===-1&&g.media.length>3&&day.groups.length>1){const toggle=el('button',all?'收起':'查看全部');toggle.onclick=()=>{all?expanded.delete(j):expanded.add(j);renderGroups();$('groups').querySelector('[data-group="'+j+'"]').scrollIntoView({block:'start'})};head.append(toggle)}
+ const all=expanded.has(j);
+ const photos=g.media.filter(m=>!m.video);
+ const featured=g.label.includes('水墨丹霞')?['1795060604471','1795060602726'].map(n=>photos.find(m=>m.name===n+'.jpg')).filter(Boolean):[];
+ const picks=[...new Set([...featured,...(photos.length?photos:g.media)])].slice(0,2);
+ if(g.media.length>picks.length){const toggle=el('button',all?'收起':'查看全部');toggle.setAttribute('aria-expanded',String(all));toggle.onclick=()=>{all?expanded.delete(j):expanded.add(j);renderGroups();const group=$('groups').querySelector('[data-group="'+j+'"]');group.scrollIntoView({block:'start'});group.querySelector('header button').focus({preventScroll:true})};head.append(toggle)}
  section.dataset.group=j;
  const grid=el('div');grid.className='tiles';
- const picks=g.label.includes('水墨丹霞')?['1795060604471','1795060602726','1795060602530'].map(n=>g.media.find(m=>m.name===n+'.jpg')).filter(Boolean):g.media.slice(0,3);
  for(const m of all?g.media:picks){const b=el('button'),img=el('img');img.src=src(m,true);img.loading='lazy';img.alt=g.label+' · '+(m.caption || m.name);b.append(img);if(m.video)b.append(el('b','▶ 视频'));b.onclick=()=>{sequence=g.media;index=sequence.indexOf(m);$('viewer').dataset.label=g.label;paintViewer();$('viewer').showModal()};grid.append(b)}
  section.append(head,grid);$('groups').append(section)
  })

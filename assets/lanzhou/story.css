@@ -47,6 +47,7 @@ h2{font-size:clamp(29px,3.3vw,48px);line-height:1.22;letter-spacing:-.045em;text
 @media(prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}}
 
 .shot img{object-fit:contain;background:#292820}
+.shot > span{display:grid;place-items:center;height:100%;padding:16px;color:#f3efe5}
 @media(min-width:701px){.contents{grid-template-columns:repeat(10,minmax(0,1fr))}}
 
 #periods{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(4px,1.5vw,18px);margin:0 0 15px}

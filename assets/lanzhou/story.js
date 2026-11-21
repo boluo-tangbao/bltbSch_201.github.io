@@ -36,14 +36,14 @@ const find = id => document.getElementById(id);
 const cinema = find('cinema');
 const video = cinema.querySelector('video');
 let current = 0;
-let timer = null;
-
-function stop() {
-  clearTimeout(timer);
-  timer = null;
-  find('play').textContent = current === chapters.length - 1 ? '↺ 从头播放' : '▷ 播放手记';
-  find('play').setAttribute('aria-pressed', 'false');
-}
+const playback = createTravelStoryPlayback(
+  chapters.map(chapter => chapter.photos.map(([name]) => [mediaPath(name), mediaPath(name, true)])),
+  draw,
+  (playing, atEnd) => {
+    find('play').textContent = playing ? 'Ⅱ 暂停播放' : atEnd ? '↺ 从头播放' : '▷ 播放手记';
+    find('play').setAttribute('aria-pressed', String(playing));
+  },
+);
 
 const periodNav = find('periods');
 {
@@ -51,12 +51,13 @@ const periodNav = find('periods');
   for (const period of new Set(sections.map(group => group.period))) {
     const button = document.createElement('button');
     button.textContent = period;
-    button.onclick = () => choose(starts[sections.findIndex(group => group.period === period)]);
+    button.onclick = () => playback.go(starts[sections.findIndex(group => group.period === period)]);
     periodNav.append(button);
   }
 }
 
-function draw() {
+function draw(index, images) {
+  current = index;
   const chapter = chapters[current];
   {
     for (const button of periodNav.children) {
@@ -64,13 +65,18 @@ function draw() {
     }
   }
   const visual = find('visual');
-  const shots = chapter.photos.map(([name, description]) => {
+  const shots = chapter.photos.map(([, description], photoIndex) => {
     const frame = document.createElement('div');
     frame.className = 'shot';
-    const photo = new Image();
-    photo.alt = description;
-    photo.src = mediaPath(name);
-    frame.append(photo);
+    const photo = images[photoIndex];
+    if (photo) {
+      photo.alt = description;
+      frame.append(photo);
+    } else {
+      const message = document.createElement('span');
+      message.textContent = '照片暂时无法加载';
+      frame.append(message);
+    }
     return frame;
   });
   visual.classList.toggle('pair', shots.length > 1);
@@ -92,23 +98,6 @@ function draw() {
   }
 }
 
-function choose(index) {
-  current = Math.max(0, Math.min(index, chapters.length - 1));
-  stop();
-  draw();
-}
-
-function play() {
-  find('play').textContent = 'Ⅱ 暂停播放';
-  find('play').setAttribute('aria-pressed', 'true');
-  timer = setTimeout(() => {
-    current++;
-    draw();
-    if (current === chapters.length - 1) stop();
-    else play();
-  }, 3500);
-}
-
 starts.forEach(index => {
   const chapter = chapters[index];
   const button = document.createElement('button');
@@ -116,18 +105,14 @@ starts.forEach(index => {
   photo.alt = '';
   photo.src = mediaPath(chapter.photos[0][0], true);
   button.append(photo, document.createTextNode(chapter.stop));
-  button.onclick = () => choose(index);
+  button.onclick = () => playback.go(index);
   find('contents').append(button);
 });
-find('play').onclick = () => {
-  if (timer !== null) return stop();
-  if (current === chapters.length - 1) choose(0);
-  play();
-};
-find('back').onclick = () => choose(current - 1);
-find('next').onclick = () => choose(current + 1);
+find('play').onclick = playback.toggle;
+find('back').onclick = () => playback.step(-1);
+find('next').onclick = () => playback.step(1);
 find('clip').onclick = () => {
-  stop();
+  playback.stop();
   const chapter = chapters[current];
   video.poster = mediaPath(chapter.video, true);
   video.src = mediaPath(chapter.video);
@@ -139,8 +124,8 @@ find('dismiss').onclick = () => cinema.close();
 cinema.onclose = () => { video.pause(); video.removeAttribute('src'); video.load(); };
 document.addEventListener('keydown', event => {
   if (cinema.open || event.altKey || event.ctrlKey || event.metaKey) return;
-  if (event.key === 'ArrowLeft') choose(current - 1);
-  if (event.key === 'ArrowRight') choose(current + 1);
+  if (event.key === 'ArrowLeft') playback.step(-1);
+  if (event.key === 'ArrowRight') playback.step(1);
 });
 let touchStart;
 find('visual').addEventListener('touchstart', event => {touchStart = event.touches[0];}, {passive:true});
@@ -148,8 +133,8 @@ find('visual').addEventListener('touchend', event => {
   if (!touchStart) return;
   const end = event.changedTouches[0];
   const dx = end.clientX - touchStart.clientX;
-  if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(end.clientY - touchStart.clientY)) choose(current + (dx < 0 ? 1 : -1));
+  if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(end.clientY - touchStart.clientY)) playback.step(dx < 0 ? 1 : -1);
   touchStart = null;
 });
-document.addEventListener('visibilitychange', () => {if (document.hidden) stop();});
-choose(0);
+document.addEventListener('visibilitychange', () => {if (document.hidden) playback.stop();});
+playback.go(0);
