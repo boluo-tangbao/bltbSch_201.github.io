@@ -14,7 +14,8 @@ test('统一入口可往返，手机控制台滚动后仍可见并避开行程�
     await page.goto(path)
     await expect(page.locator('.logo')).toContainText('汤包的生活手记')
     await expect(page.locator('.nav-links a[aria-current="page"]')).toHaveCount(1)
-    await expect(page.locator('.nav-links').getByRole('link', { name: '图片榜单', exact: true })).toHaveAttribute('href', 'rank/')
+    const rankingLabel = path === '../' ? '逛店榜单' : '图片榜单'
+    await expect(page.locator('.nav-links').getByRole('link', { name: rankingLabel, exact: true })).toHaveAttribute('href', 'rank/')
     await expect(page.locator('.nav-links').getByRole('link', { name: '个人主页', exact: true })).toHaveAttribute('href', 'index.html')
     await fits()
     if (narrow) {
@@ -27,7 +28,10 @@ test('统一入口可往返，手机控制台滚动后仍可见并避开行程�
     }
     if (path === '../' && info.project.name === 'mobile') await page.screenshot({ path: resolve(evidence, 'identity-home-390.png') })
     if (path === '../') {
-      const cityLink = page.getByRole('group', { name: '按城市逛', exact: true }).getByRole('link').first()
+      const cityLinks = page.getByRole('group', { name: '按城市逛', exact: true })
+      await expect(cityLinks).toBeInViewport()
+      expect((await cityLinks.boundingBox())!.y).toBeLessThan((await page.locator('#home-latest-event').boundingBox())!.y)
+      const cityLink = cityLinks.getByRole('link').first()
       const city = await cityLink.innerText()
       await cityLink.click()
       await expect(page.getByRole('combobox', { name: '城市筛选', exact: true })).toHaveValue(city)

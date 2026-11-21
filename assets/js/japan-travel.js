@@ -1,4 +1,5 @@
 import {mountTravelMap} from './travel-map.js';
+const viewTabs=document.querySelector('.j-tabs'),viewButtons=viewTabs.querySelectorAll('[data-view]'),compactView=matchMedia('(max-width: 700px)');
 const $=id=>document.getElementById(id),params=new URLSearchParams(location.search);let data,mapCatalog,mapComponent,mapFailure=false,view=['cities','records'].includes(params.get('view'))?params.get('view'):'map',photos=[],active=0,focusBefore,observer;
 const make=(tag,cls,text)=>{const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el;};
 const link=(text,href,cls)=>{const el=make('a',cls,text);el.href=href;return el;};
@@ -13,7 +14,7 @@ function filtered(){const q=$('j-search').value.trim().toLocaleLowerCase(),selec
 function renderIndex(){
   observer?.disconnect();const rows=filtered(),grid=$('j-grid');grid.replaceChildren();
   grid.hidden=view==='map';$('j-map').hidden=view!=='map';grid.classList.toggle('j-cities',view==='cities');
-  for(const button of document.querySelectorAll('[data-view]'))button.setAttribute('aria-pressed',String(button.dataset.view===view));
+  for(const button of viewButtons)button.setAttribute('aria-pressed',String(button.dataset.view===view));
   if(view==='map'){
     if(mapComponent)mapComponent.update(rows,{q:$('j-search').value,city:$('j-city').value,work:$('j-work').value});
     else if(mapFailure)$('j-map').textContent='地图暂时未能加载，可以切换到「按城市」或「全部记录」继续浏览。';
@@ -31,7 +32,15 @@ function openImage(index){focusBefore=document.activeElement;showImage(index);$(
 function renderRecord(row){const el=$('j-detail');photos=allImages(row);el.append(back('← 返回'+city(row.cityId).name,'#city/'+row.cityId),make('h1','j-title',row.title),make('p','j-muted',city(row.cityId).name+' · '+row.photos+' 张图片 · '+data.trip.start+' — '+data.trip.end+'（行程范围）'),...share('record',row.id));const jumps=make('nav','j-jumps');jumps.setAttribute('aria-label','片区与地点');row.sections.forEach((section,i)=>{const button=make('button','j-jump',section.label);button.type='button';button.onclick=()=>document.getElementById('j-section-'+i).scrollIntoView({behavior:'smooth',block:'start'});jumps.append(button);});el.append(jumps);let index=0;observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){const img=entry.target;img.src=img.dataset.src;observer.unobserve(img);}},{rootMargin:'200px'});row.sections.forEach((section,i)=>{const block=make('section','j-section');block.id='j-section-'+i;block.append(make('h2','',section.label));if(section.note)block.append(make('p','j-note',section.note));const grid=make('div','j-gallery');for(const item of section.images){const figure=make('figure','j-photo'),button=make('button');button.type='button';button.setAttribute('aria-label','查看 '+item.caption);if(large(item)){const placeholder=make('div','j-large-placeholder','原尺寸照片 · 点开查看');button.append(placeholder);}else{const img=make('img');img.alt=item.caption;img.width=item.width;img.height=item.height;img.dataset.src=item.src;img.decoding='async';button.append(img);observer.observe(img);}const imageIndex=index++;button.onclick=()=>openImage(imageIndex);figure.append(button,make('figcaption','',item.caption));grid.append(figure);}block.append(grid);el.append(block);});}
 function route(focus=false){if($('j-viewer').open)$('j-viewer').close();observer?.disconnect();const [kind,id]=location.hash.slice(1).split('/');const detail=kind==='city'||kind==='record';$('j-index').hidden=detail;$('j-detail').hidden=!detail;$('j-detail').replaceChildren();if(!detail){document.title='日本旅行 | 汤包的生活手记';renderIndex();return;}const row=kind==='city'?city(id):record(id);if(!row){$('j-detail').append(back('← 返回旅行列表','#'),make('h1','j-title','没有找到这条旅行记录'));return;}document.title=(row.title||row.name)+' | 日本旅行';if(kind==='city')renderCity(row);else renderRecord(row);if(focus){$('j-detail').focus({preventScroll:true});$('j-detail').scrollIntoView({behavior:'instant',block:'start'});}}
 $('j-close').onclick=()=>$('j-viewer').close();$('j-prev').onclick=()=>showImage(active-1);$('j-next').onclick=()=>showImage(active+1);$('j-viewer').addEventListener('keydown',event=>{if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();showImage(active+(event.key==='ArrowLeft'?-1:1));}});$('j-viewer').addEventListener('close',()=>{$('j-viewer-body').replaceChildren();focusBefore?.focus({preventScroll:true});});$('j-viewer').addEventListener('click',event=>{if(event.target!==$('j-viewer'))return;const r=$('j-viewer').getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)$('j-viewer').close();});
-for(const button of document.querySelectorAll('[data-view]'))button.onclick=()=>{view=button.dataset.view;sync();renderIndex();};for(const id of ['j-search','j-city','j-work'])$(id).addEventListener(id==='j-search'?'input':'change',()=>{sync();renderIndex();});$('j-clear').onclick=()=>{for(const id of ['j-search','j-city','j-work'])$(id).value='';sync();renderIndex();};
+for(const button of viewButtons)button.onclick=()=>{
+  if(view===button.dataset.view)return;
+  view=button.dataset.view;
+  sync();
+  if(!data)return;
+  renderIndex();
+  if(compactView.matches)viewTabs.scrollIntoView({block:'start',behavior:'instant'});
+};
+for(const id of ['j-search','j-city','j-work'])$(id).addEventListener(id==='j-search'?'input':'change',()=>{sync();renderIndex();});$('j-clear').onclick=()=>{for(const id of ['j-search','j-city','j-work'])$(id).value='';sync();renderIndex();};
 function restore(){const p=new URLSearchParams(location.search);view=['cities','records'].includes(p.get('view'))?p.get('view'):'map';$('j-search').value=p.get('q')||'';$('j-city').value=p.get('city')||'';$('j-work').value=p.get('work')||'';}
 window.addEventListener('hashchange',()=>data&&route(true));window.addEventListener('popstate',()=>{if(data){restore();route(true);}});
 async function load(){try{const response=await fetch('assets/generated/japan-travel/manifest.json');if(!response.ok)throw Error('load');data=await response.json();if(data.version!==1||!Array.isArray(data.records)||!Array.isArray(data.cities))throw Error('invalid');try{

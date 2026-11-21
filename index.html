@@ -10,7 +10,7 @@
   <link rel="preload" as="image" href="images/responsive/akane-background-960.webp" media="(max-width: 680px)" />
   <link rel="preload" as="image" href="images/responsive/akane-background-1280.webp" media="(min-width: 681px) and (max-width: 1280px)" />
   <link rel="preload" as="image" href="images/akane-background.webp" media="(min-width: 1281px)" />
-  <link rel="stylesheet" href="assets/css/home.css?v=13" />
+  <link rel="stylesheet" href="assets/css/home.css?v=14" />
   <link rel="stylesheet" href="assets/css/site-console.css?v=13" data-site-console-style />
 </head>
 
@@ -23,7 +23,7 @@
       <div class="nav-links nav-links-grouped">
         <div class="nav-group nav-primary" role="group" aria-label="主要入口">
           <a href="index.html" aria-current="page">个人主页</a>
-          <a href="rank/">图片榜单</a>
+          <a href="rank/">逛店榜单</a>
           <a href="activities.html">活动记录</a>
         </div>
         <div class="nav-group nav-topics" role="group" aria-label="生活分类">
@@ -50,15 +50,15 @@
       </div>
 
       <nav class="home-entries" aria-label="精选内容">
+        <div class="home-city-links" role="group" aria-label="按城市逛">
+          <strong>按城市逛</strong>
+          <!-- home-city-links:start --><!-- home-city-links:end -->
+          <a class="home-all-cities" href="rank/?filters=1">全部城市 <span aria-hidden="true">→</span></a>
+        </div>
         <a class="home-entry" id="home-latest-event" href="activities.html">
           <img src="images/art.webp" srcset="images/responsive/art-320.webp 320w, images/responsive/art-640.webp 640w, images/art.webp 960w" sizes="(max-width: 680px) 92px, (max-width: 900px) 100px, 132px" alt="钢琴与乐谱" width="960" height="640" decoding="async" />
           <span class="home-entry-copy"><small>EVENTS / 到场记录</small><strong>最近活动 <span aria-hidden="true">↗</span></strong><span id="home-latest-event-caption">翻开现场照片与视频</span></span>
         </a>
-        <div class="home-city-links" role="group" aria-label="按城市逛">
-          <span>按城市逛</span>
-          <!-- home-city-links:start --><!-- home-city-links:end -->
-          <a class="home-all-cities" href="rank/?filters=1">全部城市 <span aria-hidden="true">→</span></a>
-        </div>
       </nav>
     </div>
   </header>
