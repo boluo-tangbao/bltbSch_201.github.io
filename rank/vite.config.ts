@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { createReadStream, existsSync, readFileSync } from 'node:fs'
 import { extname, isAbsolute, relative, resolve } from 'node:path'
 import { directorySummary } from './scripts/directory-summary.mjs'
-import { fillHomeCityLinks } from '../scripts/home-city-links.mjs'
+import { fillHomeCityLinks, fillHomeLatestEvent } from '../scripts/home-city-links.mjs'
 
 const summaryId = '\0virtual:directory-summary'
 const directorySummaryPlugin: Plugin = {
@@ -25,7 +25,7 @@ const homeFiles = new Set([
   'index.html', 'sports.html', 'art.html', 'anime.html', 'travel.html', 'activities.html',
   'hangzhou-travel.html', 'lanzhou-travel.html', 'lanzhou-day-story.html', 'japan-travel.html',
 ])
-const mimeTypes: Record<string, string> = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.webp': 'image/webp', '.gif': 'image/gif', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.svg': 'image/svg+xml', '.json': 'application/json', '.mp4': 'video/mp4', '.mp3': 'audio/mpeg', '.m4a': 'audio/mp4', '.wav': 'audio/wav', '.ogg': 'audio/ogg', '.flac': 'audio/flac' }
+const mimeTypes: Record<string, string> = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.webp': 'image/webp', '.gif': 'image/gif', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.svg': 'image/svg+xml', '.json': 'application/json', '.geojson': 'application/geo+json', '.mp4': 'video/mp4', '.mp3': 'audio/mpeg', '.m4a': 'audio/mp4', '.wav': 'audio/wav', '.ogg': 'audio/ogg', '.flac': 'audio/flac' }
 
 // Vite serves the rank app; also serve the existing personal site at its real URL.
 const personalSitePreview = {
@@ -52,13 +52,16 @@ const personalSitePreview = {
       }
       if (!pathname.startsWith(homeBase) || pathname.startsWith(rankBase)) return next()
       const file = pathname.slice(homeBase.length) || 'index.html'
-      if (!homeFiles.has(file) && !/^images\/(?!anime\/events\/).+\.(webp|gif|png|jpe?g|svg)$/i.test(file) && !/^assets\/.+\.(css|js|json|webp|gif|mp4|svg|mp3|m4a|wav|ogg|flac)$/i.test(file)) return next()
+      if (!homeFiles.has(file) && !/^images\/(?!anime\/events\/).+\.(webp|gif|png|jpe?g|svg)$/i.test(file) && !/^assets\/.+\.(css|js|json|geojson|webp|gif|png|jpe?g|mp4|svg|mp3|m4a|wav|ogg|flac)$/i.test(file)) return next()
       const target = resolve(homeRoot, file), relativePath = relative(homeRoot, target)
       if (relativePath.startsWith('..') || isAbsolute(relativePath) || !existsSync(target)) return next()
       response.setHeader('Content-Type', mimeTypes[extname(target)] || 'application/octet-stream')
       response.setHeader('Cache-Control', 'no-cache')
       if (file === 'index.html') {
-        response.end(fillHomeCityLinks(readFileSync(target, 'utf8'), JSON.parse(readFileSync(resolve(homeRoot, 'rank/src/data/places.json'), 'utf8')), rankBase))
+        const html = fillHomeCityLinks(readFileSync(target, 'utf8'), JSON.parse(readFileSync(resolve(homeRoot, 'rank/src/data/places.json'), 'utf8')), rankBase)
+        const manifest = resolve(homeRoot, 'assets/generated/activities/manifest.json')
+        const latestEvent = existsSync(manifest) ? JSON.parse(readFileSync(manifest, 'utf8'))[0] : undefined
+        response.end(fillHomeLatestEvent(html, latestEvent))
         return
       }
       createReadStream(target).on('error', () => response.destroy()).pipe(response)
@@ -88,7 +91,7 @@ const siteConsole = {
     handler() {
       return [
         { tag: 'link', attrs: { rel: 'stylesheet', href: `${homeBase}assets/css/site-console.css?v=13`, 'data-site-console-style': '' }, injectTo: 'head' as const },
-        { tag: 'script', attrs: { src: `${homeBase}assets/js/site-console.js?v=18`, defer: true }, injectTo: 'body' as const },
+        { tag: 'script', attrs: { src: `${homeBase}assets/js/site-console.js?v=19`, defer: true }, injectTo: 'body' as const },
       ]
     },
   },

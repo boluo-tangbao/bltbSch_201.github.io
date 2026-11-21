@@ -318,8 +318,25 @@
   veil.setAttribute('aria-hidden', 'true');
   const loadingGif = new URL('assets/images/transitions/mutsumi-loading.gif', root).href;
   const loadingPoster = new URL('assets/images/transitions/mutsumi-loading-poster.webp', root).href;
-  veil.innerHTML = `<div class="site-page-message"><picture><source media="(prefers-reduced-motion: reduce)" srcset="${loadingPoster}"><img class="site-page-loading-image" src="${loadingGif}" width="270" height="270" decoding="async" alt=""></picture><p class="site-page-loading-copy"><span>已经在加载了，</span><span>不要压力一个小睦QWQ</span></p></div>`;
+  veil.innerHTML = `<div class="site-page-message"><picture><img class="site-page-loading-image" src="${loadingPoster}" width="270" height="270" decoding="async" alt=""></picture><p class="site-page-loading-copy"><span>已经在加载了，</span><span>不要压力一个小睦QWQ</span></p></div>`;
   document.body.append(veil);
+  const poster = veil.querySelector('.site-page-loading-image');
+  let animation;
+  function showDepartureAnimation() {
+    if (!animation) {
+      animation = new Image(270, 270);
+      animation.className = poster.className;
+      animation.alt = '';
+      animation.decoding = 'async';
+      animation.addEventListener('load', () => {
+        if (leaving) poster.replaceWith(animation);
+      }, { once: true });
+      animation.addEventListener('error', () => { animation = null; }, { once: true });
+      animation.src = loadingGif;
+    } else if (animation.complete && animation.naturalWidth) {
+      poster.replaceWith(animation);
+    }
+  }
   function pageTarget(value) {
     const url = new URL(value, location.href);
     if (url.origin !== location.origin || !url.pathname.startsWith(root.pathname)) return null;
@@ -334,6 +351,7 @@
     cancelAnimationFrame(fadeFrame);
     setVolume(state.volume);
     document.documentElement.classList.remove('site-page-leaving');
+    animation?.replaceWith(poster);
   }
   function navigate(value) {
     const url = pageTarget(value);
@@ -344,7 +362,10 @@
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
     const fadeDuration = departurePlaying ? 280 : 0;
     const duration = reduced ? fadeDuration : 900;
-    if (!reduced) document.documentElement.classList.add('site-page-leaving');
+    if (!reduced) {
+      document.documentElement.classList.add('site-page-leaving');
+      showDepartureAnimation();
+    }
     if (departurePlaying) { unlockAudio(); fadeVolume(0, fadeDuration); }
     // Start warming the destination while the existing page and music are still alive.
     const preload = document.createElement('link');

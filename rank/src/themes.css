@@ -32,6 +32,7 @@
 :root[data-theme="night"] :is(.board-page .compact-board-hero,.guide-page .guide-hero,.qa-page .guide-hero) { background: linear-gradient(117deg, var(--edition-surface) 0 59%, var(--edition-soft) 59.2% 100%); border-color: var(--edition-line); box-shadow: 6px 6px 0 var(--edition-header); }
 :root[data-theme="night"] :is(.hero::before,.guide-hero::after) { background: radial-gradient(circle, #c7e68a66 1px, transparent 1.6px) 0 0 / 13px 13px; }
 :root[data-theme="night"] .hero h1 { color: #e4eadb; text-shadow: 2px 2px 0 var(--edition-soft); }
+:root[data-theme="night"] .compact-board-hero h1 { text-shadow: 2px 3px 0 #768b5e, 3px 4px 0 var(--edition-header); }
 :root[data-theme="night"] .hero .eyebrow { background: var(--edition-paper); color: var(--edition-accent-text); border-color: var(--edition-line); box-shadow: 2px 2px 0 var(--edition-header); }
 :root[data-theme="night"] .hero-counts { color: #e4eadb; }
 :root[data-theme="night"] input:is([type="checkbox"],[type="radio"]) { accent-color: var(--edition-accent); }

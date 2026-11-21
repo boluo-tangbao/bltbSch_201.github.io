@@ -182,7 +182,8 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
         <div class="byline">
           <span class="board-hero-author">{{ site.author }}</span>
           <span class="board-hero-note">本人亲测 随逛随更新</span>
-          <span>{{ contentDate ? `更新 ${contentDate}` : '等我逛完第一站～' }}</span>
+          <span v-if="contentDate" class="board-hero-update">更新 <time :datetime="contentDate">{{ contentDate }}</time></span>
+          <span v-else>等我逛完第一站～</span>
         </div>
         <div class="hero-counts" aria-label="榜单概况">
           <span><strong>{{ all.length }}</strong> 处<span class="board-count-detail">逛店地点</span></span>

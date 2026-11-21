@@ -1,55 +1,159 @@
 import {mountTravelMap} from './travel-map.js';
 const viewTabs=document.querySelector('.j-tabs'),viewButtons=viewTabs.querySelectorAll('[data-view]'),compactView=matchMedia('(max-width: 700px)');
-const $=id=>document.getElementById(id),params=new URLSearchParams(location.search);let data,mapCatalog,mapComponent,mapFailure=false,view=['cities','records'].includes(params.get('view'))?params.get('view'):'map',photos=[],active=0,focusBefore,observer;
+const recordBatchSize=5;
+let recordLimit=recordBatchSize;
+const $=id=>document.getElementById(id),params=new URLSearchParams(location.search);let data,mapCatalog,mapComponent,mapLoad,view=['cities','records'].includes(params.get('view'))?params.get('view'):'map',photos=[],active=0,focusBefore,observer,coverObserver;
 const make=(tag,cls,text)=>{const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el;};
 const link=(text,href,cls)=>{const el=make('a',cls,text);el.href=href;return el;};
 const city=id=>data.cities.find(row=>row.id===id),record=id=>data.records.find(row=>row.id===id);
 const allImages=row=>row.sections.flatMap(section=>section.images.map(image=>({...image,area:section.label})));
 const large=image=>image.width*image.height>32000000;
 function image(src,alt,cls){const img=make('img',cls);img.src=src;img.alt=alt;img.loading='lazy';img.decoding='async';return img;}
-function card(title,href,cover,subtitle,tags=[]){const el=link('',href,'j-card');el.append(image(cover,title,'j-cover'));const copy=make('div','j-card-copy');copy.append(make('h3','',title),make('p','',subtitle));const chips=make('div','j-tags');for(const tag of tags)chips.append(make('span','',tag));copy.append(chips);el.append(copy);return el;}
+function card(title,href,cover,subtitle,tags=[]){
+  const el=link('',href,'j-card');
+  if(cover){
+    const frame=make('div','j-cover-frame'),img=make('img','j-cover');
+    img.alt='';img.dataset.src=cover;img.decoding='async';
+    frame.append(img);
+    el.append(frame);
+  }
+  const copy=make('div','j-card-copy');
+  copy.append(make('h3','',title),make('p','',subtitle));
+  const chips=make('div','j-tags');
+  for(const tag of tags)chips.append(make('span','',tag));
+  copy.append(chips);
+  el.append(copy);
+  return el;
+}
+function stopCovers(){
+  coverObserver?.disconnect();
+  coverObserver=null;
+}
+function loadCovers(grid){
+  const first=grid.querySelector('.j-cover');
+  if(!first)return;
+  const observeRemaining=()=>{
+    for(const img of grid.querySelectorAll('.j-cover:not([src])'))coverObserver.observe(img);
+  };
+  if(coverObserver){
+    if(first.complete)observeRemaining();
+    return;
+  }
+  const remaining=new IntersectionObserver(entries=>{
+    if(coverObserver!==remaining)return;
+    for(const entry of entries)if(entry.isIntersecting){
+      const img=entry.target;
+      img.src=img.dataset.src;
+      remaining.unobserve(img);
+    }
+  },{rootMargin:'120px 0px'});
+  coverObserver=remaining;
+  const firstSettled=()=>{
+    if(coverObserver===remaining)observeRemaining();
+  };
+  first.addEventListener('load',firstSettled,{once:true});
+  first.addEventListener('error',firstSettled,{once:true});
+  first.fetchPriority='high';
+  first.src=first.dataset.src;
+}
 function recordCard(row){return card(row.title,'#record/'+row.id,row.cover,city(row.cityId).name+' · '+row.photos+' 张图片',row.sections.map(section=>section.label));}
 function sync(){const url=new URL(location.href);for(const [key,value] of [['view',view==='map'?'':view],['q',$('j-search').value],['city',$('j-city').value],['work',$('j-work').value]]){if(value)url.searchParams.set(key,value);else url.searchParams.delete(key);}history.replaceState(history.state,'',url);}
 function filtered(){const q=$('j-search').value.trim().toLocaleLowerCase(),selectedCity=$('j-city').value,work=$('j-work').value;return data.records.filter(row=>(!selectedCity||row.cityId===selectedCity)&&(!work||row.works.includes(work))&&(!q||[row.title,city(row.cityId).name,...row.works,...row.sections.flatMap(section=>[section.label,section.note,...section.images.flatMap(image=>[image.caption,image.file])])].join(' ').toLocaleLowerCase().includes(q)));}
+function showResultCount(rows){
+  const shown=$('j-grid').childElementCount;
+  const photos=rows.reduce((sum,row)=>sum+row.photos,0);
+  const summary=rows.length+' 组个人记录 · '+photos+' 张图片';
+  if(view==='cities')$('j-count').textContent=shown+' 个城市分组 · '+summary;
+  else if(view==='records'&&rows.length>recordBatchSize)$('j-count').textContent=summary+' · 已显示 '+shown+' 组';
+  else $('j-count').textContent=summary;
+}
+function appendRecords(rows){
+  const grid=$('j-grid');
+  grid.append(...rows.slice(grid.childElementCount,recordLimit).map(recordCard));
+  $('j-more').hidden=grid.childElementCount>=rows.length;
+  loadCovers(grid);
+}
 function renderIndex(){
-  observer?.disconnect();const rows=filtered(),grid=$('j-grid');grid.replaceChildren();
+  stopCovers();const rows=filtered(),grid=$('j-grid');grid.replaceChildren();
   grid.hidden=view==='map';$('j-map').hidden=view!=='map';grid.classList.toggle('j-cities',view==='cities');
+  $('j-more').hidden=true;
   for(const button of viewButtons)button.setAttribute('aria-pressed',String(button.dataset.view===view));
   if(view==='map'){
     if(mapComponent)mapComponent.update(rows,{q:$('j-search').value,city:$('j-city').value,work:$('j-work').value});
-    else if(mapFailure)$('j-map').textContent='地图暂时未能加载，可以切换到「按城市」或「全部记录」继续浏览。';
+    else mapLoad??=loadMap();
   }else if(view==='cities'){
-    for(const c of data.cities){const matches=rows.filter(row=>row.cityId===c.id);if(matches.length)grid.append(card(c.name,'#city/'+c.id,matches[0].cover,matches.length+' 组记录 · '+matches.reduce((n,row)=>n+row.photos,0)+' 张图片',[c.description]));}
-  }else for(const row of rows)grid.append(recordCard(row));
-  $('j-count').textContent=(view==='cities'?grid.children.length+' 个城市分组 · ':'')+rows.length+' 组个人记录 · '+rows.reduce((n,row)=>n+row.photos,0)+' 张图片';
+    for(const c of data.cities){const matches=rows.filter(row=>row.cityId===c.id);if(matches.length)grid.append(card(c.name,'#city/'+c.id,null,matches.length+' 组记录 · '+matches.reduce((n,row)=>n+row.photos,0)+' 张图片',[c.description]));}
+  }else appendRecords(rows);
+  showResultCount(rows);
   $('j-empty').hidden=view==='map'||rows.length>0;
 }
 function share(kind,id){const button=make('button','j-share','复制记录链接'),status=make('p','j-muted');status.setAttribute('role','status');button.type='button';button.onclick=async()=>{const url=new URL('japan-travel.html',location.href);url.hash=kind+'/'+id;try{await navigator.clipboard.writeText(url.href);status.textContent='链接已复制。';}catch{status.replaceChildren(make('span','','请复制链接：'));const input=make('input','j-share-url');input.readOnly=true;input.value=url.href;input.setAttribute('aria-label','分享链接');status.append(input);input.focus();input.select();}};return [button,status];}
 function back(text,href,rootView){const el=link(text,href,'j-back');if(rootView)el.onclick=()=>{view=rootView;sync();};return el;}
-function renderCity(c){const el=$('j-detail'),rows=data.records.filter(row=>row.cityId===c.id);el.append(back('← 返回全部城市','#','cities'),make('h1','j-title',c.name),make('p','j-note',c.description),make('p','j-muted',rows.length+' 组记录 · '+rows.reduce((n,row)=>n+row.photos,0)+' 张图片'),...share('city',c.id));const grid=make('div','j-grid');for(const row of rows)grid.append(recordCard(row));el.append(grid);}
+function renderCity(c){const el=$('j-detail'),rows=data.records.filter(row=>row.cityId===c.id);el.append(back('← 返回全部城市','#','cities'),make('h1','j-title',c.name),make('p','j-note',c.description),make('p','j-muted',rows.length+' 组记录 · '+rows.reduce((n,row)=>n+row.photos,0)+' 张图片'),...share('city',c.id));const grid=make('div','j-grid');for(const row of rows)grid.append(recordCard(row));el.append(grid);loadCovers(grid);}
 function showImage(index){active=(index+photos.length)%photos.length;const item=photos[active],body=$('j-viewer-body');body.replaceChildren();$('j-original').href=item.src;$('j-caption').textContent=item.area+' · '+item.caption;$('j-position').textContent=(active+1)+' / '+photos.length;if(large(item)){const box=make('div','j-empty','这张照片保留了完整原尺寸，请在新页面查看。');const a=link('查看原尺寸图片 ↗',item.src);a.target='_blank';a.rel='noopener noreferrer';box.append(a);body.append(box);}else{const img=image(item.src,item.caption);img.loading='eager';img.addEventListener('error',()=>{if(!img.isConnected)return;const box=make('div','j-empty','图片暂时无法加载。');const retry=make('button','','重试');retry.type='button';retry.onclick=()=>showImage(active);box.append(retry);body.replaceChildren(box);},{once:true});body.append(img);}}
 function openImage(index){focusBefore=document.activeElement;showImage(index);$('j-viewer').showModal();$('j-close').focus();}
 function renderRecord(row){const el=$('j-detail');photos=allImages(row);el.append(back('← 返回'+city(row.cityId).name,'#city/'+row.cityId),make('h1','j-title',row.title),make('p','j-muted',city(row.cityId).name+' · '+row.photos+' 张图片 · '+data.trip.start+' — '+data.trip.end+'（行程范围）'),...share('record',row.id));const jumps=make('nav','j-jumps');jumps.setAttribute('aria-label','片区与地点');row.sections.forEach((section,i)=>{const button=make('button','j-jump',section.label);button.type='button';button.onclick=()=>document.getElementById('j-section-'+i).scrollIntoView({behavior:'smooth',block:'start'});jumps.append(button);});el.append(jumps);let index=0;observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){const img=entry.target;img.src=img.dataset.src;observer.unobserve(img);}},{rootMargin:'200px'});row.sections.forEach((section,i)=>{const block=make('section','j-section');block.id='j-section-'+i;block.append(make('h2','',section.label));if(section.note)block.append(make('p','j-note',section.note));const grid=make('div','j-gallery');for(const item of section.images){const figure=make('figure','j-photo'),button=make('button');button.type='button';button.setAttribute('aria-label','查看 '+item.caption);if(large(item)){const placeholder=make('div','j-large-placeholder','原尺寸照片 · 点开查看');button.append(placeholder);}else{const img=make('img');img.alt=item.caption;img.width=item.width;img.height=item.height;img.dataset.src=item.src;img.decoding='async';button.append(img);observer.observe(img);}const imageIndex=index++;button.onclick=()=>openImage(imageIndex);figure.append(button,make('figcaption','',item.caption));grid.append(figure);}block.append(grid);el.append(block);});}
-function route(focus=false){if($('j-viewer').open)$('j-viewer').close();observer?.disconnect();const [kind,id]=location.hash.slice(1).split('/');const detail=kind==='city'||kind==='record';$('j-index').hidden=detail;$('j-detail').hidden=!detail;$('j-detail').replaceChildren();if(!detail){document.title='日本旅行 | 汤包的生活手记';renderIndex();return;}const row=kind==='city'?city(id):record(id);if(!row){$('j-detail').append(back('← 返回旅行列表','#'),make('h1','j-title','没有找到这条旅行记录'));return;}document.title=(row.title||row.name)+' | 日本旅行';if(kind==='city')renderCity(row);else renderRecord(row);if(focus){$('j-detail').focus({preventScroll:true});$('j-detail').scrollIntoView({behavior:'instant',block:'start'});}}
+function route(focus=false){if($('j-viewer').open)$('j-viewer').close();observer?.disconnect();const [kind,id]=location.hash.slice(1).split('/');const detail=kind==='city'||kind==='record';$('j-index').hidden=detail;$('j-detail').hidden=!detail;$('j-detail').replaceChildren();if(!detail){document.title='日本旅行 | 汤包的生活手记';renderIndex();return;}stopCovers();const row=kind==='city'?city(id):record(id);if(!row){$('j-detail').append(back('← 返回旅行列表','#'),make('h1','j-title','没有找到这条旅行记录'));return;}document.title=(row.title||row.name)+' | 日本旅行';if(kind==='city')renderCity(row);else renderRecord(row);if(focus){$('j-detail').focus({preventScroll:true});$('j-detail').scrollIntoView({behavior:'instant',block:'start'});}}
 $('j-close').onclick=()=>$('j-viewer').close();$('j-prev').onclick=()=>showImage(active-1);$('j-next').onclick=()=>showImage(active+1);$('j-viewer').addEventListener('keydown',event=>{if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();showImage(active+(event.key==='ArrowLeft'?-1:1));}});$('j-viewer').addEventListener('close',()=>{$('j-viewer-body').replaceChildren();focusBefore?.focus({preventScroll:true});});$('j-viewer').addEventListener('click',event=>{if(event.target!==$('j-viewer'))return;const r=$('j-viewer').getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)$('j-viewer').close();});
 for(const button of viewButtons)button.onclick=()=>{
   if(view===button.dataset.view)return;
   view=button.dataset.view;
-  sync();
+  resetResults();
   if(!data)return;
-  renderIndex();
   if(compactView.matches)viewTabs.scrollIntoView({block:'start',behavior:'instant'});
 };
-for(const id of ['j-search','j-city','j-work'])$(id).addEventListener(id==='j-search'?'input':'change',()=>{sync();renderIndex();});$('j-clear').onclick=()=>{for(const id of ['j-search','j-city','j-work'])$(id).value='';sync();renderIndex();};
+function resetResults(){
+  recordLimit=recordBatchSize;
+  sync();
+  if(data)renderIndex();
+}
+for(const id of ['j-search','j-city','j-work'])$(id).addEventListener(id==='j-search'?'input':'change',resetResults);
+$('j-clear').onclick=()=>{for(const id of ['j-search','j-city','j-work'])$(id).value='';resetResults();};
+$('j-more').onclick=()=>{
+  const grid=$('j-grid'),firstNew=grid.childElementCount,rows=filtered();
+  recordLimit+=recordBatchSize;
+  appendRecords(rows);
+  showResultCount(rows);
+  grid.children[firstNew]?.focus();
+};
 function restore(){const p=new URLSearchParams(location.search);view=['cities','records'].includes(p.get('view'))?p.get('view'):'map';$('j-search').value=p.get('q')||'';$('j-city').value=p.get('city')||'';$('j-work').value=p.get('work')||'';}
 window.addEventListener('hashchange',()=>data&&route(true));window.addEventListener('popstate',()=>{if(data){restore();route(true);}});
-async function load(){try{const response=await fetch('assets/generated/japan-travel/manifest.json');if(!response.ok)throw Error('load');data=await response.json();if(data.version!==1||!Array.isArray(data.records)||!Array.isArray(data.cities))throw Error('invalid');try{
-  const [catalogResponse,boundaryResponse]=await Promise.all([fetch('assets/data/pilgrimage-map.json'),fetch('assets/data/japan-boundary.geojson')]);
-  if(!catalogResponse.ok||!boundaryResponse.ok)throw Error('map load');
-  mapCatalog=await catalogResponse.json();const boundary=await boundaryResponse.json();
-  mapComponent=mountTravelMap($('j-map'),{catalog:mapCatalog,boundary,city});
-}catch(error){console.error('巡礼地图暂时不可用',error);mapFailure=true;}
-for(const c of data.cities)$('j-city').append(new Option(c.name,c.id));
-for(const c of new Map((mapCatalog?.references||[]).map(p=>[p.cityId,p])).values())if(!data.cities.some(city=>city.id===c.cityId))$('j-city').append(new Option(c.city+'（参考地点）',c.cityId));
-for(const name of [...new Set([...data.records.flatMap(row=>row.works),...(mapCatalog?.references||[]).flatMap(row=>row.works)])].sort())$('j-work').append(new Option(name,name));$('j-trip').textContent=data.trip.title+' · '+data.trip.start+' — '+data.trip.end;$('j-sources').append(make('p','',data.trip.photoCredit),make('p','',data.trip.referenceCredit));const a=link('Anitabi Map ↗',data.trip.referenceUrl);a.target='_blank';a.rel='noopener noreferrer';$('j-sources').append(a,make('p','','图中作品画面用于巡礼对照。具体到访日、集数与时间点未逐张登记。'));restore();route(!!location.hash);}catch(error){console.error(error);$('j-index').hidden=true;$('j-detail').hidden=true;$('j-error').hidden=false;}}
+async function readJson(path){
+  const response=await fetch(path);
+  if(!response.ok)throw Error('无法读取 '+path);
+  return response.json();
+}
+async function loadMap(){
+  try{
+    if(!mapCatalog)throw Error('缺少巡礼地点资料');
+    const boundary=await readJson('assets/data/japan-boundary.geojson');
+    mapComponent=mountTravelMap($('j-map'),{catalog:mapCatalog,boundary,city});
+    if(view==='map'&&!$('j-index').hidden)renderIndex();
+  }catch(error){
+    console.error('巡礼地图暂时不可用',error);
+    $('j-map').textContent='地图暂时未能加载，可以切换到「按城市」或「全部记录」继续浏览。';
+  }
+}
+async function load(){
+  try{
+    const [manifest,catalog]=await Promise.all([
+      readJson('assets/generated/japan-travel/manifest.json'),
+      readJson('assets/data/pilgrimage-map.json').catch(()=>null)
+    ]);
+    if(manifest.version!==1||!Array.isArray(manifest.records)||!Array.isArray(manifest.cities))throw Error('invalid');
+    data=manifest;
+    mapCatalog=catalog;
+    for(const c of data.cities)$('j-city').append(new Option(c.name,c.id));
+    for(const c of new Map((mapCatalog?.references||[]).map(p=>[p.cityId,p])).values())if(!data.cities.some(city=>city.id===c.cityId))$('j-city').append(new Option(c.city+'（参考地点）',c.cityId));
+    for(const name of [...new Set([...data.records.flatMap(row=>row.works),...(mapCatalog?.references||[]).flatMap(row=>row.works)])].sort())$('j-work').append(new Option(name,name));
+    $('j-trip').textContent=data.trip.title+' · '+data.trip.start+' — '+data.trip.end;
+    $('j-sources').append(make('p','',data.trip.photoCredit),make('p','',data.trip.referenceCredit));
+    const a=link('Anitabi Map ↗',data.trip.referenceUrl);
+    a.target='_blank';a.rel='noopener noreferrer';
+    $('j-sources').append(a,make('p','','图中作品画面用于巡礼对照。具体到访日、集数与时间点未逐张登记。'));
+    restore();route(!!location.hash);
+  }catch(error){
+    console.error(error);$('j-index').hidden=true;$('j-detail').hidden=true;$('j-error').hidden=false;
+  }
+}
 load();

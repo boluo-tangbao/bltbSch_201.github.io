@@ -6,6 +6,8 @@ import { openMobileTools } from '../browser/browse-tools'
 test('统一入口可往返，手机控制台滚动后仍可见并避开行程栏', async ({ page, baseURL }, info) => {
   const origin = new URL(baseURL!).origin
   await page.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort())
+  const requests: string[] = []
+  page.on('request', request => requests.push(request.url()))
   const narrow = page.viewportSize()!.width <= 900
   const fits = async () => expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
   const evidence = resolve('../test-results/acceptance/evidence')
@@ -31,6 +33,16 @@ test('统一入口可往返，手机控制台滚动后仍可见并避开行程�
       const cityLinks = page.getByRole('group', { name: '按城市逛', exact: true })
       await expect(cityLinks).toBeInViewport()
       expect((await cityLinks.boundingBox())!.y).toBeLessThan((await page.locator('#home-latest-event').boundingBox())!.y)
+      const latest = page.locator('#home-latest-event')
+      await expect(latest).toHaveAttribute('href', /^activities\.html#event\//)
+      await expect(latest.locator('img')).toHaveAttribute('src', /^assets\/generated\/activities\/media\//)
+      expect(requests.some(url => url.endsWith('/activities/manifest.json'))).toBe(false)
+      if (narrow) {
+        const cover = page.locator('.home-travel-cover[data-src]')
+        expect(await cover.getAttribute('src')).toBeNull()
+        await page.locator('.home-travel-frame').scrollIntoViewIfNeeded()
+        await expect(cover).toHaveAttribute('src', /^assets\/generated\/japan-travel\/media\//)
+      }
       const cityLink = cityLinks.getByRole('link').first()
       const city = await cityLink.innerText()
       await cityLink.click()
