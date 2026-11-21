@@ -40,6 +40,18 @@
 .contents button { font-size: .875rem; }
 .contents img { height: clamp(58px, 7vw, 96px); }
 .visual { background: #292820; }
+.story-album-link {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 44px;
+  margin-left: auto;
+  color: var(--red);
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  font-size: .875rem;
+}
+.story-album-link + .contents { margin-top: 0; }
 
 .album-heading, .album-group-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 28px; }

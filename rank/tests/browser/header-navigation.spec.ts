@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 import { mkdirSync } from 'node:fs'
 
 const base = process.env.BROWSE_TEST_BASE || 'http://127.0.0.1:4173/bltbSch_201.github.io/rank/'
-const names = ['图片榜单', '地图找店', 'QA 与建议', '活动记录', '个人主页']
+const names = ['逛店榜单', '地图找店', 'QA 与建议', '活动记录', '个人主页']
 mkdirSync('test-results/evidence', { recursive: true })
 
 test('pixel brand loads on every ranking page and matches the favicon', async ({ page }) => {

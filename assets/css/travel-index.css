@@ -37,6 +37,8 @@ body {
 
 .journal-cover {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .journal-cover img {
@@ -45,6 +47,7 @@ body {
   display: block;
   object-fit: cover;
   border-radius: 3px;
+  order: -1;
 }
 
 .journal-meta {
@@ -147,14 +150,45 @@ body {
 }
 
 @media (max-width: 640px) {
+  .page-hero {
+    min-height: auto;
+    padding-bottom: .5rem;
+  }
+
+  .page-hero .navbar {
+    margin-bottom: 1.5rem;
+  }
+
+  .page-hero h1 {
+    margin: .5rem 0 .75rem;
+  }
+
+  .page-hero-text {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    margin-top: 1rem;
+  }
+
+  .travel-journals {
+    padding-top: 1.25rem;
+  }
+
   .journal-shelf {
     grid-template-columns: 1fr;
     gap: 1.75rem;
   }
 
   .journal-cover img {
+    order: 0;
+    margin-top: .6rem;
     height: auto;
     aspect-ratio: 16 / 9;
+  }
+
+  .journal-meta {
+    margin-top: 0;
   }
 
   .japan-directory nav {

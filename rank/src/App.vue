@@ -244,8 +244,8 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
       <Guestbook />
     </div>
 
-    <section v-if="currentPlace" class="detail-page"><nav class="detail-navigation" aria-label="地点浏览操作"><a :href="`#place-card-${currentPlace.id}`" class="back-link" @click="returnToBoard">← 返回图片榜单</a><div class="detail-secondary-actions"><a :href="`${guideUrl}#/place/${currentPlace.id}`">地图找店 ↗</a><PlaceCompare :places="all" :current-place="currentPlace" /></div></nav><PlaceDetail :key="currentPlace.id" @ready="detailReady" :search-query="parsePlaceRoute(route)?.query" :place="currentPlace" :rank="site.rankWithinTier ? rankOf(currentPlace) : undefined" :color="cityColor(currentPlace.city, colors)" /></section>
-    <section v-else-if="!isHome" class="not-found"><p class="eyebrow">这一站暂未收录</p><h1>没有找到这个条目</h1><p>链接可能有误，或条目尚未公开。</p><a href="#/" class="button dark">返回图片榜单</a></section>
+    <section v-if="currentPlace" class="detail-page"><nav class="detail-navigation" aria-label="地点浏览操作"><a :href="`#place-card-${currentPlace.id}`" class="back-link" @click="returnToBoard">← 返回逛店榜单</a><div class="detail-secondary-actions"><a :href="`${guideUrl}#/place/${currentPlace.id}`">地图找店 ↗</a><PlaceCompare :places="all" :current-place="currentPlace" /></div></nav><PlaceDetail :key="currentPlace.id" @ready="detailReady" :search-query="parsePlaceRoute(route)?.query" :place="currentPlace" :rank="site.rankWithinTier ? rankOf(currentPlace) : undefined" :color="cityColor(currentPlace.city, colors)" /></section>
+    <section v-else-if="!isHome" class="not-found"><p class="eyebrow">这一站暂未收录</p><h1>没有找到这个条目</h1><p>链接可能有误，或条目尚未公开。</p><a href="#/" class="button dark">返回逛店榜单</a></section>
   </main>
   <TripPlanner :places="all" :current-place="currentPlace" />
   <footer class="site-footer"><span><b>{{ site.author }}</b> · 纯主观感受，你们永远对。 <a :href="citiesUrl">城市逛店指南 ↗</a></span><VisitCounter /></footer>

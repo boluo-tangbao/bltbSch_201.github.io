@@ -44,7 +44,7 @@ function add() {
       <p class="route-note">打开链接只预览；点击加入后才合并到你的想逛清单。此链接不包含对方的行程名称、自填内容、出行设置或地图轨迹。</p>
     </template>
     <p v-else role="status">路线链接不完整或无法读取，请让朋友重新复制公开路线链接。</p>
-    <a :href="boardUrl">返回图片榜单 ↗</a>
+    <a :href="boardUrl">返回逛店榜单 ↗</a>
   </main>
   <TripPlanner :places="places" />
 </template>
