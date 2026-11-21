@@ -29,6 +29,17 @@ async function setup({ reduced = false, playback, blocked = false, webAudio = fa
     async play() { if (blocked) throw Object.assign(new Error(), { name: 'NotAllowedError' }); this.paused = false; this.emit('play'); }
     pause() { if (!this.paused) { this.paused = true; this.emit('pause'); } }
   }
+  // The playback tests leave the GIF pending; browser acceptance checks its actual loading.
+  class Image extends Element {
+    constructor(width, height) {
+      super();
+      this.width = width;
+      this.height = height;
+      this.complete = false;
+      this.naturalWidth = 0;
+    }
+    replaceWith() {} // The pending image has no parent to replace it in.
+  }
   const storage = new Map();
   if (playback) storage.set('site-console:/demo/:playback', JSON.stringify(playback));
   const sessionStorage = { getItem: key => storage.get(key) || null, setItem: (key, value) => storage.set(key, value), removeItem: key => storage.delete(key) };
@@ -46,7 +57,7 @@ async function setup({ reduced = false, playback, blocked = false, webAudio = fa
   };
   const timeout = (fn, delay = 0) => { const key = ++id; timers.set(key, { fn, at: now + delay }); return key; };
   vm.runInNewContext(source, {
-    window, document, location, Audio, URL, localStorage: { getItem: () => null, setItem() {} }, sessionStorage,
+    window, document, location, Audio, Image, URL, localStorage: { getItem: () => null, setItem() {} }, sessionStorage,
     matchMedia: query => ({ matches: query.includes('reduced-motion') && reduced, addEventListener() {} }),
     performance: { now: () => now }, setTimeout: timeout, clearTimeout: key => timers.delete(key),
     requestAnimationFrame: fn => timeout(() => fn(now), 16), cancelAnimationFrame: key => timers.delete(key),
