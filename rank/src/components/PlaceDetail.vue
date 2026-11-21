@@ -161,7 +161,7 @@ onBeforeUnmount(() => {
       <button v-for="chapter in chapters" :key="chapter.key" type="button" :aria-controls="chapterId(chapter.key)" :aria-current="activeChapter === chapter.key ? 'location' : undefined" @click="goToChapter(chapter.key)">{{ chapter.label }}</button>
     </nav>
     <nav class="detail-side-nav" aria-label="页面侧边导航">
-      <button type="button" class="side-nav-toggle" data-float-handle title="拖动移动导航" :aria-expanded="sideNavOpen" aria-controls="side-chapter-list" @click="sideNavOpen = !sideNavOpen"><span aria-hidden="true">☰</span> {{ sideNavOpen ? '收起' : '导航' }}</button>
+      <button type="button" class="side-nav-toggle" :aria-expanded="sideNavOpen" aria-controls="side-chapter-list" @click="sideNavOpen = !sideNavOpen"><span aria-hidden="true">☰</span> {{ sideNavOpen ? '收起' : '导航' }}</button>
       <div v-if="sideNavOpen" id="side-chapter-list" class="side-nav-list">
         <span class="side-nav-title">快速直达</span>
         <button v-for="chapter in chapters" :key="chapter.key" type="button" :aria-controls="chapterId(chapter.key)" :aria-current="activeChapter === chapter.key ? 'location' : undefined" @click="goToChapter(chapter.key)">{{ chapter.label }}</button>

@@ -8,7 +8,7 @@
 #site-console :focus-visible { outline: 3px solid #a83750; outline-offset: 3px; }
 #site-console button:disabled { opacity: .45; cursor: default; }
 .sc-launcher-icon { display: none; }
-#site-console .sc-launcher { position: absolute; right: 100%; top: clamp(24px, 12vh, 112px); display: flex; flex-direction: column; gap: 12px; width: 44px; height: 112px; padding: 14px 8px; border-right: 0; border-radius: 14px 0 0 14px; background: linear-gradient(165deg, #f3d4e2 0%, #e9ddf1 48%, #cce6ee 100%); color: #514568; box-shadow: -3px 4px 16px #70576e14; pointer-events: auto; opacity: .68; filter: grayscale(.9); transition: opacity .2s, filter .2s, box-shadow .2s; }
+#site-console .sc-launcher { --console-tab-height: 112px; position: absolute; right: env(safe-area-inset-right, 0px); top: clamp(36px, calc(12vh + 12px), 124px); display: flex; flex-direction: column; gap: 12px; width: var(--console-tab-width); height: var(--console-tab-height); padding: 14px 8px; border-right: 0; border-radius: 14px 0 0 14px; background: linear-gradient(165deg, #f3d4e2 0%, #e9ddf1 48%, #cce6ee 100%); color: #514568; box-shadow: -3px 4px 16px #70576e14; pointer-events: auto; opacity: .68; filter: grayscale(.9); transition: opacity .2s, filter .2s, box-shadow .2s; }
 #site-console .sc-launcher:is(:hover, :focus-visible, [aria-expanded="true"]) { opacity: 1; filter: none; box-shadow: -3px 4px 20px #ae536f40; }
 #site-console .sc-launcher:hover { background: linear-gradient(165deg, #edc4d8, #dcd0ee 48%, #b9dfe9); }
 #site-console .sc-launcher:focus-visible { outline-offset: -4px; }
@@ -56,7 +56,7 @@ html[data-site-cursor="off"] :is(a, button, summary, [role="button"], [role="lin
 @media (max-width: 359px) { #site-console .sc-panel { padding: 16px 12px; } #site-console .sc-destination { padding-inline: 10px; } #site-console .sc-destination-note { font-size: 10px; } }
 @media (max-width: 900px) {
   body:has(.trip-plan-entry:not(.is-browsing), .trip-plan-dock) { --console-launcher-bottom: 112px; }
-  .sc-launcher { --sc-light: var(--ui-accent, var(--aqua-deep, #a83750)); position: fixed; z-index: 89; right: max(12px, env(safe-area-inset-right)); bottom: calc(var(--console-launcher-bottom, 16px) + env(safe-area-inset-bottom)); display: inline-flex; align-items: center; justify-content: center; gap: 10px; flex: none; min-height: 56px; padding: 8px; border: 0; border-radius: 0; background: transparent; box-shadow: none; color: var(--ui-muted, var(--muted, #79626b)); opacity: .74; font: 600 13px/1.4 system-ui, "Microsoft YaHei", sans-serif; cursor: pointer; transition: color .2s, opacity .2s; }
+  .sc-launcher { --console-tab-height: 56px; --sc-light: var(--ui-accent, var(--aqua-deep, #a83750)); position: fixed; z-index: 89; right: env(safe-area-inset-right, 0px); bottom: calc(var(--console-launcher-bottom, 16px) + env(safe-area-inset-bottom)); display: inline-flex; align-items: center; justify-content: center; gap: 10px; flex: none; min-height: var(--console-tab-height); padding: 8px; border: 0; border-radius: 0; background: transparent; box-shadow: none; color: var(--ui-muted, var(--muted, #79626b)); opacity: .74; font: 600 13px/1.4 system-ui, "Microsoft YaHei", sans-serif; cursor: pointer; transition: color .2s, opacity .2s; }
   .sc-launcher::before { content: ""; position: absolute; left: 8px; top: 50%; width: 38px; height: 38px; transform: translateY(-50%); border-radius: 50%; background: var(--ui-surface, #fffdfa); box-shadow: 0 0 0 1px color-mix(in srgb, currentColor 35%, transparent), 0 2px 8px #302d3914; transition: box-shadow .2s; pointer-events: none; }
   .sc-launcher::after { content: ""; position: absolute; left: 40px; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: .5; pointer-events: none; }
   .sc-launcher .sc-launcher-icon { display: block; position: relative; flex: none; box-sizing: border-box; width: 38px; height: 38px; padding: 7px; transition: transform .2s; }
@@ -76,23 +76,29 @@ html[data-site-cursor="off"] :is(a, button, summary, [role="button"], [role="lin
   #site-console { width: min(380px, calc(100vw - 16px)); }
   #site-console > .sc-launcher { display: none; }
   #site-console .sc-close { display: inline-flex; }
+  body > .sc-launcher[data-floating-position] { z-index: 705; }
 }
 @media (min-width: 901px) {
-  body > .sc-launcher[data-floating-position] { z-index: 89; width: 44px; height: 112px; padding: 14px 8px; border: 1px solid var(--ui-border, #e4d3d9); border-radius: 12px; background: var(--ui-surface, #fffdfa); color: var(--ui-ink, #514568); font: 700 14px/1.4 system-ui, "Microsoft YaHei", sans-serif; }
-  body > .sc-launcher[data-floating-position] .sc-tab-title { writing-mode: vertical-rl; letter-spacing: .25em; }
+  #site-console, #site-console.sc-open { --console-tab-width: 44px; top: 0; bottom: 0; transform: none; transition: none; }
+  #site-console .sc-panel {
+    inset: max(12px, env(safe-area-inset-top)) var(--console-tab-width) max(12px, env(safe-area-inset-bottom)) auto;
+    width: 100%;
+    transform: translateX(calc(100% + var(--console-tab-width)));
+    transition: transform .26s cubic-bezier(.22,.68,.25,1), visibility 0s .26s;
+  }
+  #site-console.sc-open .sc-panel { transform: none; transition-delay: 0s; }
 }
-[data-float-handle] { touch-action: none; }
-:root [data-float-dragging] { cursor: grabbing; user-select: none; }
-/* Anchor to both the screen and the control so resizing or expanding keeps it visible. */
-:root [data-floating-position]:is(.sc-launcher,.detail-side-nav) {
-  position: fixed;
-  inset: auto;
-  left: calc(8px + (100% - 16px) * var(--float-x, 1));
-  top: calc(8px + (100% - 16px) * var(--float-y, 1));
-  transform: none;
-  translate: calc(-100% * var(--float-x, 1)) calc(-100% * var(--float-y, 1));
+.sc-launcher { touch-action: none; }
+:is(#site-console, :root) .sc-launcher[data-float-dragging] { cursor: grabbing; user-select: none; }
+:is(#site-console, :root) .sc-launcher[data-floating-position] {
+  top: clamp(
+    max(8px, env(safe-area-inset-top)),
+    var(--console-drag-y),
+    calc(100dvh - var(--console-tab-height) - var(--console-launcher-bottom, 8px) - env(safe-area-inset-bottom))
+  );
+  bottom: auto;
 }
-:root .sc-launcher[data-floating-position] { z-index: 705; }
+@media (prefers-reduced-motion: reduce) { #site-console .sc-panel { transition: none; } }
 @media (prefers-reduced-motion: reduce) { .sc-launcher, .sc-launcher::before, .sc-launcher .sc-launcher-icon { transition: none !important; } }
 @media print { #site-console, .sc-launcher { display: none !important; } }
 

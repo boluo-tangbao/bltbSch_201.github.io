@@ -134,7 +134,7 @@ test('控制台支持键盘展开、Esc收起和焦点返回', async ({ page }) 
   await expect(page.locator('.sc-panel')).toBeHidden()
 })
 
-test('详情导航与控制台默认错开，可分别拖动且松手不触发点击', async ({ page }) => {
+test('控制台沿右侧上下拖动，详情导航保持固定，松手不触发点击', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' })
   await page.goto('./#/place/guangzhou-shop-001')
   const navigation = page.locator('.detail-side-nav')
@@ -150,7 +150,13 @@ test('详情导航与控制台默认错开，可分别拖动且松手不触发�
   }
   const navBox = (await navigation.boundingBox())!
   const consoleBox = (await launcher.boundingBox())!
+  const rightEdge = await page.evaluate(() => document.documentElement.clientWidth)
+  const expectAtRight = async () => {
+    const box = (await launcher.boundingBox())!
+    expect(Math.abs(box.x + box.width - rightEdge)).toBeLessThan(1)
+  }
   expect(await floatsOverlap()).toBe(false)
+  await expectAtRight()
 
   async function drag(handle: Locator, x: number, y: number) {
     const box = (await handle.boundingBox())!
@@ -162,22 +168,32 @@ test('详情导航与控制台默认错开，可分别拖动且松手不触发�
 
   const wasExpanded = await toggle.getAttribute('aria-expanded')
   await drag(toggle, 55, 230)
-  await expect(navigation).toHaveAttribute('data-floating-position', '')
   await expect(toggle).toHaveAttribute('aria-expanded', wasExpanded!)
-  expect((await navigation.boundingBox())!.x).toBeLessThan(navBox.x)
+  expect(await navigation.boundingBox()).toEqual(navBox)
   await toggle.click()
   await expect(toggle).toHaveAttribute('aria-expanded', wasExpanded === 'true' ? 'false' : 'true')
+  await toggle.click()
+  expect(await navigation.boundingBox()).toEqual(navBox)
 
-  if (page.viewportSize()!.width > 900) await launcher.hover()
-  await drag(launcher, 170, 430)
+  await drag(launcher, 80, consoleBox.y + consoleBox.height / 2)
+  expect((await launcher.boundingBox())!.y).toBeCloseTo(consoleBox.y)
+  await expectAtRight()
+
+  await drag(launcher, 170, 350)
   await expect(launcher).toHaveAttribute('data-floating-position', '')
   await expect(launcher).toHaveAttribute('aria-expanded', 'false')
-  expect((await launcher.boundingBox())!.x).toBeLessThan(consoleBox.x)
-  const movedNav = (await navigation.boundingBox())!
-  await drag(launcher, movedNav.x + movedNav.width / 2, movedNav.y + movedNav.height / 2)
+  expect(Math.abs((await launcher.boundingBox())!.y - consoleBox.y)).toBeGreaterThan(50)
+  await expectAtRight()
+  await drag(launcher, navBox.x + navBox.width / 2, navBox.y + navBox.height / 2)
   expect(await floatsOverlap()).toBe(false)
+  expect(await navigation.boundingBox()).toEqual(navBox)
+  await expectAtRight()
+  await drag(launcher, 80, 2)
+  expect((await launcher.boundingBox())!.y).toBeGreaterThanOrEqual(0)
+  await expectAtRight()
   await launcher.click()
   await expect(page.locator('.sc-panel')).toBeVisible()
+  await expectAtRight()
   await page.keyboard.press('Escape')
   await expect(launcher).toBeFocused()
 })
@@ -195,6 +211,21 @@ test('触屏点击侧签展开和收起', async ({ browser, baseURL }, testInfo)
     else await tab.tap()
     await expect(tab).toHaveAttribute('aria-expanded', 'false')
     await expect(page.locator('.sc-panel')).toBeHidden()
+
+    const before = (await tab.boundingBox())!
+    const start = { x: before.x + before.width / 2, y: before.y + before.height / 2 }
+    const cdp = await context.newCDPSession(page)
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [start] })
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: start.x - 85, y: start.y + (start.y > 300 ? -100 : 100) }] })
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] })
+    await expect(tab).toHaveAttribute('data-floating-position', '')
+    const after = (await tab.boundingBox())!
+    expect(after.x).toBeCloseTo(before.x)
+    expect(Math.abs(after.y - before.y)).toBeGreaterThan(50)
+    await expect(tab).toHaveAttribute('aria-expanded', 'false')
+    await tab.tap()
+    await expect(page.locator('.sc-panel')).toBeVisible()
+    await cdp.detach()
   } finally {
     await context.close()
   }

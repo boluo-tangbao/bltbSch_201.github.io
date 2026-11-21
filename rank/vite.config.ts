@@ -90,8 +90,8 @@ const siteConsole = {
     order: 'post' as const,
     handler() {
       return [
-        { tag: 'link', attrs: { rel: 'stylesheet', href: `${homeBase}assets/css/site-console.css?v=13`, 'data-site-console-style': '' }, injectTo: 'head' as const },
-        { tag: 'script', attrs: { src: `${homeBase}assets/js/site-console.js?v=19`, defer: true }, injectTo: 'body' as const },
+        { tag: 'link', attrs: { rel: 'stylesheet', href: `${homeBase}assets/css/site-console.css?v=14`, 'data-site-console-style': '' }, injectTo: 'head' as const },
+        { tag: 'script', attrs: { src: `${homeBase}assets/js/site-console.js?v=20`, defer: true }, injectTo: 'body' as const },
       ]
     },
   },

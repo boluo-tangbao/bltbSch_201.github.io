@@ -18,7 +18,7 @@
     const stylesheet = document.createElement('link');
     stylesheet.rel = 'stylesheet';
     stylesheet.setAttribute('blocking', 'render');
-    stylesheet.href = new URL('assets/css/site-console.css?v=13', root).href;
+    stylesheet.href = new URL('assets/css/site-console.css?v=14', root).href;
     document.head.append(stylesheet);
   }
   const host = document.createElement('aside');
@@ -45,7 +45,7 @@
       </section>
       <section class="sc-section" aria-labelledby="sc-effects-heading"><h3 id="sc-effects-heading">浏览偏好</h3><label class="sc-check">点击星光<input type="checkbox" data-effects></label><label class="sc-check">菠萝鼠标<input type="checkbox" data-cursor></label></section>
     </section>
-    <button type="button" class="sc-launcher" data-float-handle title="拖动移动控制台" aria-label="展开控制台" aria-controls="sc-panel" aria-expanded="false"><svg class="sc-launcher-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M5 3v7m0 5v6M12 3v2m0 5v11M19 3v10m0 5v3"/><circle cx="5" cy="12.5" r="2.5"/><circle cx="12" cy="7.5" r="2.5"/><circle cx="19" cy="15.5" r="2.5"/></svg><span class="sc-tab-title" aria-hidden="true">控制台</span></button>`;
+    <button type="button" class="sc-launcher" title="沿右侧上下拖动控制台" aria-label="展开控制台" aria-controls="sc-panel" aria-expanded="false"><svg class="sc-launcher-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M5 3v7m0 5v6M12 3v2m0 5v11M19 3v10m0 5v3"/><circle cx="5" cy="12.5" r="2.5"/><circle cx="12" cy="7.5" r="2.5"/><circle cx="19" cy="15.5" r="2.5"/></svg><span class="sc-tab-title" aria-hidden="true">控制台</span></button>`;
   document.body.append(host);
   const $ = selector => host.querySelector(selector);
   const panel = $('.sc-panel'), launcher = $('.sc-launcher');
@@ -53,10 +53,9 @@
   const inlineLayout = matchMedia('(max-width: 900px)');
   const findInlineTarget = () => document.querySelector('.site-header .header-inner nav, .navbar .nav-links, .site-nav nav');
   function placeLauncher() {
-    const inlineTarget = findInlineTarget();
-    if (inlineLayout.matches && inlineTarget) inlineTarget.append(launcher);
-    else if (launcher.hasAttribute('data-floating-position')) document.body.append(launcher);
-    else host.append(launcher);
+    let target = host;
+    if (inlineLayout.matches) target = launcher.hasAttribute('data-floating-position') ? document.body : findInlineTarget() ?? host;
+    if (launcher.parentElement !== target) target.append(launcher);
   }
   placeLauncher();
   // The shared script can finish before the rank app mounts its header.
@@ -66,7 +65,7 @@
     });
     headerObserver.observe(document.body, { childList: true, subtree: true });
   }
-  inlineLayout.addEventListener('change', () => { close(false); placeLauncher(); });
+  inlineLayout.addEventListener('change', () => { close(false); placeLauncher(); keepClearOfNavigation(); });
   let closeTimer;
   function open(focusContent = false) {
     clearTimeout(closeTimer);
@@ -102,89 +101,74 @@
   });
   const floatInset = 8;
   let drag;
-  let draggedHandle;
+  let suppressLauncherClick = false;
   document.addEventListener('pointerdown', event => {
     if (!event.isPrimary || event.button !== 0) return;
-    draggedHandle = null;
-    const handle = event.target.closest?.('[data-float-handle]');
-    if (!handle) return;
-    const floating = handle === launcher ? launcher : handle.closest('.detail-side-nav');
-    if (!floating) return;
+    suppressLauncherClick = false;
+    if (!launcher.contains(event.target)) return;
     drag = {
-      handle, floating, pointer: event.pointerId,
+      pointer: event.pointerId,
       startX: event.clientX, startY: event.clientY,
-      origin: floating.getBoundingClientRect(), moved: false,
+      top: launcher.getBoundingClientRect().top, moved: false,
     };
   });
-  function positionFraction(position, available) {
-    return Math.max(0, Math.min(1, (position - floatInset) / Math.max(1, available - 2 * floatInset)));
+  function setLauncherTop(top) {
+    launcher.style.setProperty('--console-drag-y', `${top}px`);
   }
-  function setFloatPosition(floating, left, top) {
-    const viewport = document.documentElement;
-    floating.style.setProperty('--float-x', positionFraction(left, viewport.clientWidth - floating.offsetWidth));
-    floating.style.setProperty('--float-y', positionFraction(top, viewport.clientHeight - floating.offsetHeight));
-  }
-  function separateFloats(floating) {
-    const other = floating === launcher ? document.querySelector('.detail-side-nav') : launcher;
-    if (!other?.getClientRects().length) return;
-    const current = floating.getBoundingClientRect(), reserved = other.getBoundingClientRect();
+  function keepClearOfNavigation() {
+    if (!launcher.hasAttribute('data-floating-position')) return;
+    const navigation = document.querySelector('.detail-side-nav');
+    if (!navigation?.getClientRects().length) return;
+    const current = launcher.getBoundingClientRect(), reserved = navigation.getBoundingClientRect();
     if (current.right <= reserved.left || reserved.right <= current.left ||
         current.bottom <= reserved.top || reserved.bottom <= current.top) return;
-    const viewport = document.documentElement;
-    const positions = [
-      [current.left, reserved.top - current.height - floatInset],
-      [current.left, reserved.bottom + floatInset],
-      [reserved.left - current.width - floatInset, current.top],
-      [reserved.right + floatInset, current.top],
-    ].filter(([left, top]) =>
-      left >= 0 && top >= 0 && left + current.width <= viewport.clientWidth && top + current.height <= viewport.clientHeight);
-    const distance = ([left, top]) => Math.hypot(left - current.left, top - current.top);
-    positions.sort((a, b) => distance(a) - distance(b));
-    if (positions.length) setFloatPosition(floating, ...positions[0]);
+    const positions = [reserved.top - current.height - floatInset, reserved.bottom + floatInset];
+    positions.sort((a, b) => Math.abs(a - current.top) - Math.abs(b - current.top));
+    for (const top of positions) {
+      setLauncherTop(top);
+      const tab = launcher.getBoundingClientRect();
+      if (tab.bottom <= reserved.top || tab.top >= reserved.bottom) return;
+    }
   }
   document.addEventListener('pointermove', event => {
     if (!drag || event.pointerId !== drag.pointer) return;
     const dx = event.clientX - drag.startX, dy = event.clientY - drag.startY;
-    if (!drag.moved && Math.hypot(dx, dy) < 7) return;
-    const { handle, floating, origin } = drag;
+    if (Math.hypot(dx, dy) >= 7) suppressLauncherClick = true;
+    if (!drag.moved && Math.abs(dy) < 7) return;
     if (!drag.moved) {
       drag.moved = true;
-      draggedHandle = handle;
-      floating.setAttribute('data-floating-position', '');
-      handle.setAttribute('data-float-dragging', '');
-      if (handle === launcher) {
-        close(false);
-        if (!inlineLayout.matches) document.body.append(launcher);
-      }
-      handle.setPointerCapture(event.pointerId);
+      launcher.setAttribute('data-floating-position', '');
+      launcher.setAttribute('data-float-dragging', '');
+      close(false);
+      if (inlineLayout.matches) placeLauncher();
+      launcher.setPointerCapture(event.pointerId);
     }
-    setFloatPosition(floating, origin.left + dx, origin.top + dy);
+    setLauncherTop(drag.top + dy);
   });
   function finishDrag(event) {
     if (!drag || event.pointerId !== drag.pointer) return;
-    const { handle, floating, moved } = drag;
+    const { moved } = drag;
     drag = null;
-    handle.removeAttribute('data-float-dragging');
-    if (moved) separateFloats(floating);
-    else if (event.type === 'pointerup' && event.pointerType === 'touch' && floating.hasAttribute('data-floating-position')) {
+    launcher.removeAttribute('data-float-dragging');
+    if (moved) keepClearOfNavigation();
+    else if (!suppressLauncherClick && event.type === 'pointerup' && event.pointerType === 'touch' && launcher.hasAttribute('data-floating-position')) {
       // A touch engine may suppress the compatibility click after a drag.
-      const bounds = handle.getBoundingClientRect();
+      const bounds = launcher.getBoundingClientRect();
       if (event.clientX < bounds.left || event.clientX > bounds.right ||
           event.clientY < bounds.top || event.clientY > bounds.bottom) return;
-      draggedHandle = handle;
-      handle.click();
+      suppressLauncherClick = true;
+      launcher.click();
     }
   }
   document.addEventListener('pointerup', finishDrag);
   document.addEventListener('pointercancel', finishDrag);
-  document.addEventListener('lostpointercapture', event => {
-    if (event.target === drag?.handle) finishDrag(event);
-  });
+  launcher.addEventListener('lostpointercapture', finishDrag);
+  window.addEventListener('resize', () => { if (!drag) keepClearOfNavigation(); });
   document.addEventListener('click', event => {
-    if (event.detail > 0 && draggedHandle?.contains(event.target)) {
+    if (event.detail > 0 && suppressLauncherClick && launcher.contains(event.target)) {
       event.preventDefault();
       event.stopImmediatePropagation();
-      draggedHandle = null;
+      suppressLauncherClick = false;
     }
   }, true);
   $('.sc-close').addEventListener('click', () => close());
@@ -192,7 +176,10 @@
     if (event.relatedTarget && !host.contains(event.relatedTarget) && event.relatedTarget !== launcher) close(false);
   });
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && host.classList.contains('sc-open')) { event.preventDefault(); close(); } });
-  document.addEventListener('click', event => { if (!host.contains(event.target) && !launcher.contains(event.target) && host.classList.contains('sc-open')) close(false); });
+  document.addEventListener('click', event => {
+    if (!host.contains(event.target) && !launcher.contains(event.target) && host.classList.contains('sc-open')) close(false);
+    if (event.target.closest?.('.side-nav-toggle')) requestAnimationFrame(keepClearOfNavigation);
+  });
   for (const [key, path] of Object.entries({ home: './', board: 'rank/' })) $(`[data-${key}]`).href = new URL(path, root).href;
   function applyPreferences() {
     document.documentElement.dataset.siteEffects = state.effects ? 'on' : 'off';
