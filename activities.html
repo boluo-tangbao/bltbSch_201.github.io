@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>活动记录 | 汤包的生活手记</title>
   <link rel="stylesheet" href="assets/css/style.css?v=9" />
-  <link rel="stylesheet" href="assets/css/activities.css?v=6" />
+  <link rel="stylesheet" href="assets/css/activities.css?v=7" />
   <link rel="stylesheet" href="assets/css/site-console.css?v=14" data-site-console-style />
 </head>
 <body class="activities-page">
@@ -42,6 +42,7 @@
       <div id="event-index" hidden>
         <nav class="event-filters event-type-tabs" id="event-filters" aria-label="活动形式"></nav>
         <div class="event-toolbar">
+          <label class="event-search">搜索活动名称<input type="search" id="event-search" placeholder="例如 BilibiliWorld" /></label>
           <label id="event-topic-control">主题标签<select id="event-topic"><option value="">全部主题</option><option value="acg">二次元</option><option value="sports">体育</option><option value="art">艺术</option><option value="travel">旅行</option><option value="life">生活</option><option value="other">其他</option></select></label>
           <label>参加年份<select id="event-year"><option value="">全部年份</option></select></label>
         </div>
@@ -67,7 +68,7 @@
   </main>
   <footer><p>© 2026 菠萝汤包scho · 汤包的生活手记 · 活动记录</p></footer>
   <script src="assets/js/script.js?v=10"></script>
-  <script type="module" src="assets/js/activities.js?v=9"></script>
+  <script type="module" src="assets/js/activities.js?v=10"></script>
   <script src="assets/js/site-console.js?v=20" defer></script>
 </body>
 </html>

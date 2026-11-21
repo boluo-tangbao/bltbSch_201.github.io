@@ -8,6 +8,7 @@ import { activityCategories, normalizeActivityCategory, activityCategory, activi
  history.scrollRestoration = 'manual';
  const $ = id => document.getElementById(id);
  const dialog = $('event-dialog'), viewer = $('event-dialog-body');
+ const search = $('event-search');
  let events = [], activeEvent = null, activeIndex = 0, category = '', year = '', previousFocus = null, previousOverflow = '';
  const params = new URLSearchParams(location.search);
  const scope = params.get('topic');
@@ -30,9 +31,16 @@ import { activityCategories, normalizeActivityCategory, activityCategory, activi
  }
  const make = (tag, className, text) => { const node = document.createElement(tag); if (className) node.className = className; if (text !== undefined) node.textContent = text; return node; };
  const counts = event => [event.photos ? event.photos+' 张照片' : '', event.videos ? event.videos+' 段视频' : '', event.bvid ? 'B站视频' : ''].filter(Boolean).join(' · ');
+ const searchText = value => value.normalize('NFKC').toLowerCase().replace(/\s+/g, '');
  function thumbnail(src, alt) { const image = make('img'); image.src=src; image.alt=alt; image.loading='lazy'; image.decoding='async'; return image; }
  function renderIndex() {
-  const filtered=events.filter(event=>(!selectedTopic||hasActivityTopic(event,selectedTopic))&&(!category||hasActivityCategory(event,category))&&(!year||event.year===year));
+  const query = searchText(search.value);
+  const filtered = events.filter(event =>
+   (!selectedTopic || hasActivityTopic(event, selectedTopic)) &&
+   (!category || hasActivityCategory(event, category)) &&
+   (!year || event.year === year) &&
+   (!query || searchText(event.name).includes(query))
+  );
   $('event-grid').replaceChildren();
   filtered.forEach(event=>{
    const card=make('a','event-card'); card.href='#event/'+event.id; card.setAttribute('aria-label','查看 '+event.name+'，'+event.dateLabel);
@@ -42,7 +50,9 @@ import { activityCategories, normalizeActivityCategory, activityCategory, activi
    const bottom=make('div','event-card-bottom'), date=make('time','',event.dateLabel); if(event.date)date.dateTime=event.date;
    bottom.append(date,make('span','',counts(event)));copy.append(bottom,make('span','event-open-hint','翻开这次记录 ↗'));card.append(copy);$('event-grid').append(card);
   });
-  $('event-result').textContent=filtered.length ? '共 '+filtered.length+' 场记录 · 按参加时间倒序' : '这个分类暂时没有活动记录，试试其他筛选。';
+  $('event-result').textContent = filtered.length
+   ? '共 '+filtered.length+' 场记录 · 按参加时间倒序'
+   : query ? '没有找到匹配的活动。试试其他关键词，或调整筛选。' : '这个分类暂时没有活动记录，试试其他筛选。';
  }
  function route() {
   if(dialog.open)dialog.close();
@@ -110,7 +120,7 @@ import { activityCategories, normalizeActivityCategory, activityCategory, activi
  window.addEventListener('popstate',navigate);
  function syncFilters() {
   const url=new URL(location.href);
-  for(const [key,value] of [['filterTopic',selectedTopic],['category',category],['year',year]]){if(value)url.searchParams.set(key,value);else url.searchParams.delete(key);}
+  for(const [key,value] of [['filterTopic',selectedTopic],['category',category],['year',year],['q',search.value.trim()]]){if(value)url.searchParams.set(key,value);else url.searchParams.delete(key);}
   listPosition=null;history.replaceState({...history.state,activitiesList:null},'',url);
  }
  $('event-share').addEventListener('click',async()=>{
@@ -123,6 +133,11 @@ import { activityCategories, normalizeActivityCategory, activityCategory, activi
  });
  $('event-filters').addEventListener('click',event=>{const button=event.target.closest('button[data-category]');if(!button)return;category=button.dataset.category;for(const item of $('event-filters').querySelectorAll('button'))item.setAttribute('aria-pressed',String(item===button));syncFilters();renderIndex();});
  $('event-year').addEventListener('change',event=>{year=event.target.value;syncFilters();renderIndex();});
+ search.addEventListener('input', event => {
+  if (event.isComposing) return;
+  syncFilters();
+  renderIndex();
+ });
  function updateCategories() {
   const values = ['', ...activityCategories];
   if (!values.includes(category)) category = '';
@@ -131,6 +146,7 @@ import { activityCategories, normalizeActivityCategory, activityCategory, activi
  }
  function restoreFilters() {
   const current=new URLSearchParams(location.search);
+  search.value=current.get('q')||'';
   selectedTopic=!scopedTopic&&Object.hasOwn(topicLabels,current.get('filterTopic'))?current.get('filterTopic'):'';
   category=normalizeActivityCategory(current.get('category')||'');year=current.get('year')||'';
   updateCategories();
