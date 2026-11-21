@@ -40,7 +40,7 @@
 .contents button { font-size: .875rem; }
 .contents img { height: clamp(58px, 7vw, 96px); }
 .visual { background: #292820; }
-.story-album-link {
+.story-album-link, .album-context a {
   display: flex;
   align-items: center;
   width: fit-content;
@@ -53,6 +53,7 @@
 }
 .story-album-link + .contents { margin-top: 0; }
 
+.album-context { display: flex; align-items: center; gap: 12px; color: #665c4c; font-size: .875rem; }
 .album-heading, .album-group-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 28px; }
 .filters button, .album-toggle, .viewer-bar button {

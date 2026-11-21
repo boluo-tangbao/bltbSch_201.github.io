@@ -54,12 +54,44 @@ const exportOpen = ref(false)
 const toolsOpen = ref(false)
 const criteriaOpen = ref(false)
 const plan = useTripPlan()
-async function showTierMeaning(id: string) {
+const tierOriginKey = 'tangbaoTierOrigin'
+const tierReturnKey = 'tangbaoTierReturn'
+const tierIdFromHash = (hash: string) => tiers.find(tier => hash === `#tier-meaning-${tier.id}`)?.id
+const activeTierRule = computed(() => tierIdFromHash(route.value))
+async function focusTierMeaning(id: string) {
   criteriaOpen.value = true
   await nextTick()
   const target = document.getElementById(`tier-meaning-${id}`)
   target?.focus({ preventScroll: true })
   target?.scrollIntoView({ block: 'center', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })
+}
+function showTierMeaning(event: MouseEvent, id: string) {
+  if (!plainClick(event)) return
+  event.preventDefault()
+  history.replaceState({ ...history.state, [tierOriginKey]: { id, top: window.scrollY } }, '')
+  history.pushState({ [tierReturnKey]: true }, '', `#tier-meaning-${id}`)
+  syncRoute()
+}
+function returnToTier() {
+  if (history.state?.[tierReturnKey]) {
+    history.back()
+    return
+  }
+  const url = new URL(location.href)
+  url.hash = ''
+  history.replaceState(history.state, '', url)
+  syncRoute()
+}
+function restoreTierFocus(id: string) {
+  requestAnimationFrame(() => {
+    if (!isHome.value || activeTierRule.value) return
+    const link = document.querySelector<HTMLAnchorElement>(`#tier-${id} .tier-meaning-link`)
+    if (!link) { main.value?.focus(); return }
+    const origin = history.state?.[tierOriginKey]
+    if (origin?.id === id) window.scrollTo({ top: origin.top, behavior: 'instant' })
+    else link.scrollIntoView({ block: 'center', behavior: 'instant' })
+    link.focus({ preventScroll: true })
+  })
 }
 type BoardPosition = { id: string; top: number; width: number; view: BoardView; labels: boolean; tools: boolean }
 const positionKey = 'tangbaoBoardPosition'
@@ -121,9 +153,12 @@ function focusBoardCard() {
   return true
 }
 const syncRoute = () => {
+  const previousTier = activeTierRule.value
   route.value = location.hash
   nextTick(() => {
-    if (route.value === '#guestbook') document.getElementById('guestbook')?.scrollIntoView()
+    if (activeTierRule.value) void focusTierMeaning(activeTierRule.value)
+    else if (previousTier && isHome.value) restoreTierFocus(previousTier)
+    else if (route.value === '#guestbook') document.getElementById('guestbook')?.scrollIntoView()
     else if (isHome.value && (history.state?.[positionKey] || route.value.startsWith('#place-card-'))) restoreBoardFocus()
     else { main.value?.focus({ preventScroll: true }); window.scrollTo({ top: 0, behavior: 'instant' }) }
   })
@@ -146,14 +181,15 @@ const base = import.meta.env.BASE_URL
 const guideUrl = computed(() => linkTo(`${import.meta.env.BASE_URL}guide/`))
 const updatesUrl = `${import.meta.env.BASE_URL}updates/`
 const citiesUrl = `${import.meta.env.BASE_URL}cities/`
-const isHome = computed(() => !route.value || route.value === '#' || route.value === '#/' || route.value === '#guestbook' || /^#place-card-[a-z0-9-]+$/.test(route.value))
+const isHome = computed(() => !route.value || route.value === '#' || route.value === '#/' || route.value === '#guestbook' || !!activeTierRule.value || /^#place-card-[a-z0-9-]+$/.test(route.value))
 watch([boardView, showLabels, toolsOpen, city, tag, query], () => {
   if (!isHome.value || restoringBoard || !history.state?.[positionKey]) return
   const { [positionKey]: previousPosition, ...state } = history.state
   history.replaceState(state, '')
 }, { flush: 'sync' })
 onMounted(() => nextTick(() => {
-  if (route.value === '#guestbook') document.getElementById('guestbook')?.scrollIntoView()
+  if (activeTierRule.value) void focusTierMeaning(activeTierRule.value)
+  else if (route.value === '#guestbook') document.getElementById('guestbook')?.scrollIntoView()
   else if (isHome.value) restoreBoardFocus()
 }))
 function detailReady() {
@@ -228,7 +264,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
         <p v-else class="board-view-hint">图片下方显示店名、城市与短评</p>
         <div v-if="!all.length && !hasFilters" class="empty-intro"><span class="empty-icon" aria-hidden="true">＋</span><div><strong>规划中，还在路上待访问</strong><p>等亲自来，再写~</p></div><span class="empty-pill">待填充</span></div>
         <div v-if="hasFilters && !filtered.length" class="no-results" role="status"><strong>没有找到匹配的条目</strong><span>试试其他关键词、城市或标签。</span><button class="text-button" @click="reset">重置筛选 ↗</button></div>
-        <div v-if="boardSections.length" class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels, 'comfortable-view': boardView === 'comfortable' }"><section v-for="tier in boardSections" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ tier.index + 1 }}</span><h3 :id="`tier-${tier.id}`"><a class="tier-meaning-link" :aria-label="`${tier.label}：查看档位说明`" :href="`#tier-meaning-${tier.id}`" :aria-describedby="`tier-hint-${tier.id}`" @click.prevent="showTierMeaning(tier.id)">{{ tier.label }}<span class="tier-help-mark" aria-hidden="true">?</span><span :id="`tier-hint-${tier.id}`" class="tier-hint" role="tooltip">{{ site.tierDescriptions[tier.id] }}<small>点击查看完整排序说明 ↓</small></span></a></h3><span class="tier-action">{{ tierActions[tier.id] }}</span><span class="tier-count">{{ tier.places.length }} 处地点</span></div><div class="tier-content"><div v-if="!tier.places.length" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in tier.places" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="linkTo(`${base}${placeDetailHash(p.id, query)}`)" :rank="site.rankWithinTier ? rankOf(p) : undefined" :priority="p.id === firstPhotoId" :comfortable="boardView === 'comfortable'" :badge="recentBadge(p.id, updates, site.recentDays)" :match="searchMatches.get(p.id)" /></div></div></section></div>
+        <div v-if="boardSections.length" class="tier-board photo-board" :class="{ 'show-photo-labels': showLabels, 'comfortable-view': boardView === 'comfortable' }"><section v-for="tier in boardSections" :key="tier.id" class="tier-row" :style="{ '--tier-color': tier.color, '--tier-pale': tier.pale }" :aria-labelledby="`tier-${tier.id}`"><div class="tier-label"><span class="tier-index">0{{ tier.index + 1 }}</span><h3 :id="`tier-${tier.id}`"><a class="tier-meaning-link" :aria-label="`${tier.label}：查看档位说明`" :href="`#tier-meaning-${tier.id}`" :aria-describedby="`tier-hint-${tier.id}`" @click="showTierMeaning($event, tier.id)">{{ tier.label }}<span class="tier-help-mark" aria-hidden="true">?</span><span :id="`tier-hint-${tier.id}`" class="tier-hint" role="tooltip">{{ site.tierDescriptions[tier.id] }}<small>点击查看完整排序说明 ↓</small></span></a></h3><span class="tier-action">{{ tierActions[tier.id] }}</span><span class="tier-count">{{ tier.places.length }} 处地点</span></div><div class="tier-content"><div v-if="!tier.places.length" class="tier-empty"><span class="empty-dash" aria-hidden="true"></span><span>暂无条目</span></div><div v-else class="card-grid"><PlaceCard v-for="p in tier.places" :key="p.id" :place="p" :color="cityColor(p.city, colors)" :href="linkTo(`${base}${placeDetailHash(p.id, query)}`)" :rank="site.rankWithinTier ? rankOf(p) : undefined" :priority="p.id === firstPhotoId" :comfortable="boardView === 'comfortable'" :badge="recentBadge(p.id, updates, site.recentDays)" :match="searchMatches.get(p.id)" /></div></div></section></div>
         <p v-if="boardSections.length" class="board-caption"><span>推荐度从上到下递减</span><span>{{ site.rankWithinTier ? '同档分先后 · 从左到右，从上到下' : '同档不分先后' }}</span></p>
       </section>
 
@@ -240,7 +276,7 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
         </div>
       </section>
       <div class="bottom-grid"><section class="updates-section" aria-labelledby="updates-title"><div class="section-heading"><div><span class="section-number">02</span><h2 id="updates-title">最近更新</h2></div><a :href="updatesUrl" target="_blank" rel="noopener noreferrer" class="updates-all-link">查看全部 ↗<span class="sr-only">（新标签页）</span></a></div><UpdateList :updates="updates.slice(0, 2)" :places="all" /></section>
-      <section class="criteria-section" aria-labelledby="criteria-title"><div class="section-heading"><div><span class="section-number">03</span><h2 id="criteria-title">关于这份榜单</h2></div></div><RankingCriteriaCopy class="criteria-copy" :text="site.criteria" /><div class="criteria-scale"><span v-for="t in tiers" :key="t.id"><i :style="{ background: t.color }"></i>{{ t.label }}</span></div><details :open="criteriaOpen" @toggle="criteriaOpen = ($event.target as HTMLDetailsElement).open"><summary>查看各档标准与排序规则</summary><dl><template v-for="t in tiers" :key="t.id"><dt :id="`tier-meaning-${t.id}`" tabindex="-1">{{ t.label }}</dt><dd><RankingCriteriaCopy :text="site.tierDescriptions[t.id]" compact /></dd></template></dl><p>{{ site.rankWithinTier ? '同档有先后，卡片编号表示该档内的完整排名；筛选后保留原排名。' : '同档不分先后。' }}</p><p>到访日期未提供时显示“未记录”；内容更新日期由作者维护。</p></details><p class="personal-note">仅代表个人体验，供你出发前参考。</p></section></div>
+      <section class="criteria-section" aria-labelledby="criteria-title"><div class="section-heading"><div><span class="section-number">03</span><h2 id="criteria-title">关于这份榜单</h2></div></div><RankingCriteriaCopy class="criteria-copy" :text="site.criteria" /><div class="criteria-scale"><span v-for="t in tiers" :key="t.id"><i :style="{ background: t.color }"></i>{{ t.label }}</span></div><details :open="criteriaOpen" @toggle="criteriaOpen = ($event.target as HTMLDetailsElement).open"><summary>查看各档标准与排序规则</summary><dl><template v-for="t in tiers" :key="t.id"><dt :id="`tier-meaning-${t.id}`" tabindex="-1">{{ t.label }}</dt><dd><RankingCriteriaCopy :text="site.tierDescriptions[t.id]" compact /><button v-if="activeTierRule === t.id" type="button" class="text-button tier-rule-return" @click="returnToTier">返回榜单档位</button></dd></template></dl><p>{{ site.rankWithinTier ? '同档有先后，卡片编号表示该档内的完整排名；筛选后保留原排名。' : '同档不分先后。' }}</p><p>到访日期未提供时显示“未记录”；内容更新日期由作者维护。</p></details><p class="personal-note">仅代表个人体验，供你出发前参考。</p></section></div>
       <Guestbook />
     </div>
 
@@ -254,5 +290,6 @@ watch(currentPlace, p => { document.title = `${p ? p.name + ' · ' : ''}${site.t
 
 <style scoped>
 .board-browse-content { display: contents; }
+.tier-rule-return { min-height: 44px; }
 .photo-board .tier-action { display: block; font-size: 12px; line-height: 1.5; font-weight: 500; margin: 6px 0; }
 </style>
