@@ -45,7 +45,18 @@ export function readActivities(root = activityRoot) {
   if(date&&dateLabel.slice(0,4)!==date.slice(0,4))fail('date 与 dateLabel 年份冲突')
   const files=activityFiles(folder,root)
   if(event.bvid!==undefined&&(typeof event.bvid!=='string'||!/^BV[0-9A-Za-z]{10}$/.test(event.bvid)))fail('bvid 应为有效的 BV 视频号')
-  if(!files.length&&!event.bvid)fail('没有支持的图片或视频')
+  if(event.bvidPage!==undefined&&(!event.bvid||!Number.isSafeInteger(event.bvidPage)||event.bvidPage<1))fail('bvidPage 须配合 bvid，且为正整数分 P 编号')
+  if(event.bilibiliVideos!==undefined) {
+   if(!Array.isArray(event.bilibiliVideos)||!event.bilibiliVideos.length)fail('bilibiliVideos 应为非空视频数组')
+   const seen=new Set(event.bvid?[event.bvid+':'+(event.bvidPage||1)]:[])
+   for(const video of event.bilibiliVideos) {
+    if(!video||!/^BV[0-9A-Za-z]{10}$/.test(video.bvid)||!Number.isSafeInteger(video.page)||video.page<1||typeof video.title!=='string'||!video.title.trim())fail('bilibiliVideos 每段须有有效 bvid、正整数 page 和 title')
+    const key=video.bvid+':'+video.page
+    if(seen.has(key))fail('bilibiliVideos 分 P 重复')
+    seen.add(key)
+   }
+  }
+  if(!files.length&&!event.bvid&&!event.bilibiliVideos?.length)fail('没有支持的图片或视频')
   if(event.previewImage!==undefined) {
    if(typeof event.previewImage!=='string'||!/^preview\/[^/\\]+\.(jpg|jpeg|png|webp)$/i.test(event.previewImage)||!statSync(resolve(root,folder,event.previewImage),{throwIfNoEntry:false})?.isFile())fail('previewImage 应为本活动 preview/ 目录下存在的图片')
   }

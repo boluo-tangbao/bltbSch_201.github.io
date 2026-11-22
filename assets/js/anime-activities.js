@@ -1,4 +1,5 @@
 import { activityTopics, activityTopicLabels, hasActivityTopic } from './activity-topics.js';
+import { activityBilibiliVideos } from './activity-videos.js';
 import { activityCategoryLabel } from './activity-categories.js';
 (() => {
  const section = document.querySelector('.event-preview');
@@ -28,7 +29,7 @@ import { activityCategoryLabel } from './activity-categories.js';
    const copy=make('div','event-card-copy');copy.append(make('span','event-card-category',activityCategoryLabel(event)),make('h3','',event.name));
    const tags=make('div','event-topic-tags');for(const topic of activityTopics(event))tags.append(make('span','',activityTopicLabels[topic]));copy.append(tags);
    const bottom=make('div','event-card-bottom'),date=make('time','',event.dateLabel);if(event.date)date.dateTime=event.date;
-   const total=[event.photos?event.photos+' 张照片':'',event.videos?event.videos+' 段视频':'',event.bvid?'B站视频':''].filter(Boolean).join(' · ');
+   const total=[event.photos?event.photos+' 张照片':'',event.videos?event.videos+' 段视频':'',activityBilibiliVideos(event).length?activityBilibiliVideos(event).length+' 段B站视频':''].filter(Boolean).join(' · ');
    bottom.append(date,make('span','',total));copy.append(bottom,make('span','event-open-hint','查看这次记录 ↗'));card.append(copy);grid.append(card);
   }
   status.hidden=true;

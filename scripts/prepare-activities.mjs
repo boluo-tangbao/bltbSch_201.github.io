@@ -58,7 +58,7 @@ export async function prepareActivities() {
    media.push({ file, type:isVideo?'video':'image', preview:url+small, src:url+(isVideo?video:full), poster:isVideo?url+full:undefined })
    webBytes += statSync(resolve(output,small)).size+statSync(resolve(output,full)).size+(isVideo?statSync(resolve(output,video)).size:0)
   }
-  if (!media.length && !event.bvid) throw new Error('活动没有可展示的素材：'+event.folder)
+  if (!media.length && !event.bvid && !event.bilibiliVideos?.length) throw new Error('活动没有可展示的素材：'+event.folder)
   const photos=media.filter(item=>item.type==='image').length
   let cover = (event.cover ? media.find(item=>item.file===event.cover) : media[0])?.preview
   if (event.previewImage) {
@@ -72,7 +72,7 @@ export async function prepareActivities() {
    cover = 'assets/generated/activities/media/'+hash+'-480.webp'
   }
   if (!cover) throw new Error('活动缺少预览图：'+event.folder)
-  records.push({id:event.id,name,date,dateLabel:date||dateLabel,year:dateLabel.slice(0,4),category:event.category,categories:event.categories,categoryDetail:event.categoryDetail,topic:event.topic,topics:event.topics,photos,videos:media.length-photos,cover,...(event.note?{note:event.note}:{}),...(event.bvid?{bvid:event.bvid}:{}),media})
+  records.push({id:event.id,name,date,dateLabel:date||dateLabel,year:dateLabel.slice(0,4),category:event.category,categories:event.categories,categoryDetail:event.categoryDetail,topic:event.topic,topics:event.topics,photos,videos:media.length-photos,cover,...(event.note?{note:event.note}:{}),...(event.bvid?{bvid:event.bvid}:{}),...(event.bvidPage?{bvidPage:event.bvidPage}:{}),...(event.bilibiliVideos?{bilibiliVideos:event.bilibiliVideos}:{}),media})
   console.log('活动相册：'+name+' · '+media.length+' 个素材')
  }
  // 仅在全部活动生成成功后清理失效缓存，旧素材不会继续被打包。

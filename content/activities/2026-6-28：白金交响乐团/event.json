@@ -3,6 +3,31 @@
   "name": "白金交响乐团",
   "date": "2026-06-28",
   "dateLabel": "2026-06-28",
-  "topics": ["acg", "art"],
-  "category": "演出"
+  "topics": [
+    "acg",
+    "art"
+  ],
+  "category": "演出",
+  "bilibiliVideos": [
+    {
+      "bvid": "BV1teyGzCEij",
+      "page": 3,
+      "title": "26-6-28 安可内容——富士山下"
+    },
+    {
+      "bvid": "BV1teyGzCEij",
+      "page": 4,
+      "title": "26-6-28 可愛くてごめん（HoneyWorks feat. kapi）"
+    },
+    {
+      "bvid": "BV1teyGzCEij",
+      "page": 5,
+      "title": "26-6-28 Butter-fly（数码宝贝／和田光司）"
+    },
+    {
+      "bvid": "BV1teyGzCEij",
+      "page": 6,
+      "title": "26-6-28 Bling-Bang-Bang-Born（物理魔法师马修）"
+    }
+  ]
 }

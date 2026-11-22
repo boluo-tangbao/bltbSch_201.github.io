@@ -12,8 +12,12 @@
     "originalSha256": "5c19d975fc31410b27f4addc9fa924216676658dad8918fbd4bb97ad4d84eb39"
   },
   "content/activities/2026-10-11：崩坏三十周年+新世界小暹罗邦邦快闪/VID20261011130637.mp4": {
-    "sha256": "8ddb3618328d832003e57ebc383a437ef26332394d889c2261b3ce34443f2eb7",
-    "originalSha256": "2d07784f842744978ec99ac36675d9d045c584a4b158e5f150806e0ae81e562a"
+    "sha256": "b28465f3f338093456a1a7831e38e21aafc3ec3cc8e993cf3f8822f74336ac70",
+    "originalSha256": "2d07784f842744978ec99ac36675d9d045c584a4b158e5f150806e0ae81e562a",
+    "trim": {
+      "startSeconds": 0,
+      "endSeconds": 32
+    }
   },
   "content/activities/2026-10-11：崩坏三十周年+新世界小暹罗邦邦快闪/小暹罗邦邦/1793245262606.mp4": {
     "sha256": "a213b8ae25041e8fd52111af62ebf3b144b120e88c87168ed1dc9745bc957a29",
@@ -36,7 +40,7 @@
     "originalSha256": "3170ea137391329f86dd5e9452c454c71c32e7fdc20814e9a1b6f518575d6a15"
   },
   "content/activities/2026-9-19：苏州黄龄live/1794067163020.mp4": {
-    "sha256": "d22553bc0d2eb7206b0a85973afea2f7f432f5143c3adac7b5b7533be5fec904",
+    "sha256": "639dd740b41f06902b88fc8ffa6e64482ffcb094c7c8b5c8a7fb61cf3f15b435",
     "originalSha256": "5b04563ecc3c5896739233eeea7b41da43b8ac6c0323e871f5d0ba368d618a41"
   },
   "content/activities/2026-9-19：苏州黄龄live/1794067165054.mp4": {
@@ -54,18 +58,6 @@
   "content/activities/2026-9-19：苏州黄龄live/VID20260919210131.mp4": {
     "sha256": "a8e581b71206b69b3f233fe04aa5dc1bae1af93653624a4a2f17b9e2165b26e2",
     "originalSha256": "525580503a34630d0ebc29fd99921f283b0c61b8e66f0494f0478ad660ffdc90"
-  },
-  "content/activities/2026-9-19：苏州黄龄live/VID20260919210312.mp4": {
-    "sha256": "91adce226a9eefc9ce607b63b1a5e93de09a71f5e8296a87a7242881e69a2127",
-    "originalSha256": "419bb8f888aeb9af37abdc1f0320821d46ac2ebf23605023190caeee35ab8160"
-  },
-  "rank/public/images/places/Guangzhou/地王/35535402E9D00B3C356DBD3717904600.mp4": {
-    "sha256": "0c1c709a68c793917181ba3c029294df404aee0b2e633469b834089379b9130b",
-    "originalSha256": "3497306443852106fba57490b6b3766a5382b06d5458284eff6f60d9496d4bd3"
-  },
-  "rank/public/images/places/Guangzhou/官方账号补充/nikaido-route.mp4": {
-    "sha256": "1faffe749bc2424ccc9d2c5e47d7c720ad28b0695d39b3a21f54d6513d509cac",
-    "originalSha256": "9b9cf154114573f06cca89e28c25d0558c167cca5542aa07bce32420e8332df0"
   },
   "rank/public/images/places/Guangzhou/时尚天河/西区/Kpop店实录.mp4": {
     "sha256": "dfee40e78ff023381124ab4da2deadb938fe4efe688a6954513048f3cf18543a",
@@ -95,10 +87,6 @@
     "sha256": "6432e5b7cb98b4e0d204d50ac1ea9b1362cfa977b788d7268e385a4a2da2a540",
     "originalSha256": "c0707514d6f70ed2087b3d5658bf38a1cd4cc88cd761e88adb9605d80fa45477"
   },
-  "content/activities/2026-8-1：ChinaJoy/1794627409362.mp4": {
-    "sha256": "fedbf7620fcbfa74100776a73b2b1309582384a20fe66ef8cb58e591b04c76bd",
-    "originalSha256": "07f9cc9ffbc36b5045d813529745e03d6651cac5cb3a1c473d334de149dcb8de"
-  },
   "content/activities/2026-8-1：ChinaJoy/1794627410860.mp4": {
     "sha256": "8d82fbc3fedadc6af6c9e97879607fe0394c56b920c3550215d4f02c5e8d6410",
     "originalSha256": "8bcf300a54f07f0db2595b90a95de04fad5ded3591241493675f5ed8bf7c63c1"
@@ -110,10 +98,6 @@
   "content/activities/2026-06-06：七草夏日祭/1794794991432.mp4": {
     "sha256": "798bf429514f038a3a7cd3046108c95eaa52d2273220c4161574a596e997b9df",
     "originalSha256": "e2bc663d18dc71f2f189f6850c758ec8cf091edff28ea90547fe1208d06fcc7e"
-  },
-  "content/activities/2026-07-05：CCG游戏展/1794794096471.mp4": {
-    "sha256": "34ea590e1b7f8e2a0853328e23a2e5c93ab9d3c27c601e564b68b0bd29b40576",
-    "originalSha256": "de22a962e2e8c89d39151b5a9b2bd4ec9c855e469c0b020d356acf17c50bdd4c"
   },
   "content/activities/2026-07-05：CCG游戏展/1794794099515.mp4": {
     "sha256": "4fee2c49b9388d567e1787ef718d65c12e22b292b56985464e31479167a5fe93",
@@ -152,16 +136,16 @@
     "originalSha256": "e0acacfa64559465faaabb75c4cd4d0b35d77ab49fd13f702ae8c8d6165c9a89"
   },
   "content/activities/2026-7-11：bilibiliWorld/1794793469041.mp4": {
-    "sha256": "77bad88d1f04a5ad4f9541018f2697902407dae3a6305926c594450054c8aee4",
-    "originalSha256": "486b90842f89eca1a2bf69acd4a347199e5ab2ab150f5613d408dec81c9b96e7"
+    "sha256": "563dfe926183025071bf76ad86500c8a010ff1c7bea73bc726f1497f3f09fc73",
+    "originalSha256": "486b90842f89eca1a2bf69acd4a347199e5ab2ab150f5613d408dec81c9b96e7",
+    "trim": {
+      "startSeconds": 0,
+      "endSeconds": 111
+    }
   },
   "content/activities/2026-7-11：bilibiliWorld/1794793497404.mp4": {
     "sha256": "62fc9ecc4d718ebd97829704cb391faab01f3f5d8e385b36c07a6716f9e57a1d",
     "originalSha256": "bcf61b46f905c66283e37028617163b99043888f03025f5939a4316f57981048"
-  },
-  "content/activities/2026-7-11：bilibiliWorld/1794793501951.mp4": {
-    "sha256": "abe3d102602c7535bd820b232a730074277c2d77603591f0c6615957b3dd3995",
-    "originalSha256": "4f5fb7a843b8fc7b6852dac950be3d39c3ea846fe2fcb5672b16185ca75cfc90"
   },
   "content/activities/2026-04-17：杭州vs北京国安/VID20260417201031.mp4": {
     "sha256": "0b210e0a9f8e811f73ec808e69d77d1330416afd10af6205a25de2bd50cb0f4a",
@@ -188,7 +172,7 @@
     "originalSha256": "a967f71c220bb565ae7ed2bf81385634518efd8af00033fa9d6e40898d793174"
   },
   "content/activities/2025-10-19：中北华师文化节/VID20251019192854.mp4": {
-    "sha256": "b050ffeadb46202ccd96f5ec2a8834b71b2928d407f6acf9c4ae305dfed2fe84",
+    "sha256": "a9634e521caf3428726ec870ea5daebbcaf8dbc3250270c2cb556f86944286c7",
     "originalSha256": "d4afc58a6ab49bf2947e7f33b5b32f27bbf8998e58f004040e7374e657228f2a"
   },
   "content/activities/2025-10-19：中北华师文化节/wx_camera_1760872918770.mp4": {

@@ -1,5 +1,6 @@
 import { hasActivityCategory } from '../assets/js/activity-categories.js'
 import { hasActivityTopic } from '../assets/js/activity-topics.js'
+import { activityBilibiliVideos, activityBilibiliUrl } from '../assets/js/activity-videos.js'
 import { createHash } from 'node:crypto'
 import { activityRoot, activityFiles, readActivities } from './activity-metadata.mjs'
 import { createRequire } from 'node:module'
@@ -20,6 +21,8 @@ for(const event of source) {
  const record=data.find(e=>e.id===event.id),files=activityFiles(event.folder)
  assert.deepEqual(record.categories,event.categories);assert.deepEqual(record.topics,event.topics);assert.equal(record.topic,event.topic);assert.equal(record.category,event.category);assert.equal(record.date,event.date);assert.equal(record.dateLabel,event.date||event.dateLabel)
  assert.equal(record.bvid,event.bvid)
+ assert.equal(record.bvidPage,event.bvidPage)
+ assert.deepEqual(record.bilibiliVideos,event.bilibiliVideos)
  assert.ok(record.cover,'活动必须有预览封面：'+event.name)
  assert.ok(existsSync(new URL('../_site/'+record.cover,import.meta.url)))
  assert.equal(record.photos,files.filter(f=>!['.mp4','.mov'].includes(extname(f).toLowerCase())).length)
@@ -89,8 +92,14 @@ try{
   await expect(page.locator('#event-album-title')).toHaveText(event.name);
   await expect(page.locator('#event-album')).toBeVisible();
   await expect(page.locator('.event-media')).toHaveCount(event.media.length);
-  await expect(page.locator('.event-bilibili')).toHaveCount(event.bvid ? 1 : 0);
-  if(event.bvid)await expect(page.locator('.event-bilibili')).toHaveAttribute('src', 'https://player.bilibili.com/player.html?bvid='+event.bvid+'&autoplay=0');
+  const clips=activityBilibiliVideos(event);
+  await expect(page.locator('.event-bilibili')).toHaveCount(clips.length ? 1 : 0);
+  await expect(page.locator('.event-bilibili-link')).toHaveCount(clips.length);
+  for(const [index,clip] of clips.entries()) {
+   if(clips.length>1)await page.locator('.event-bilibili-controls select').selectOption(String(index));
+   await expect(page.locator('.event-bilibili')).toHaveAttribute('src',activityBilibiliUrl(clip,true));
+   await expect(page.locator('.event-bilibili-link').nth(index)).toHaveAttribute('href',activityBilibiliUrl(clip));
+  }
  }
  await page.goto(base+'activities.html#event/'+videoEvent.id);await page.locator('.event-media').nth(videoEvent.media.findIndex(m=>m.type==='video')).click();await page.waitForFunction(()=>document.querySelector('#event-dialog video')?.readyState>=1);assert.ok(await page.locator('video').evaluate(v=>v.duration>0));await page.locator('video').evaluate(v=>v.play());await page.waitForFunction(()=>document.querySelector('video')?.currentTime>.25);await page.locator('#event-close').click();await page.locator('video').waitFor({state:'detached'});assert.equal(await page.locator('video').count(),0)
  await page.goto(base+'activities.html#event/not-found');await page.locator('.event-card').first().waitFor();assert.equal(await page.locator('.event-card').count(),data.length)

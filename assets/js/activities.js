@@ -1,4 +1,5 @@
 import { activityTopicLabels, activityTopics, hasActivityTopic } from './activity-topics.js';
+import { activityBilibiliVideos, activityBilibiliUrl } from './activity-videos.js';
 import { activityCategories, normalizeActivityCategory, activityCategory, activityCategoryDetail, hasActivityCategory, activityCategoryLabel } from './activity-categories.js';
 (() => {
  const section = document.getElementById('event-records');
@@ -30,7 +31,7 @@ import { activityCategories, normalizeActivityCategory, activityCategory, activi
   section.querySelector('.event-back').textContent = '← 返回' + topicLabel + '活动记录';
  }
  const make = (tag, className, text) => { const node = document.createElement(tag); if (className) node.className = className; if (text !== undefined) node.textContent = text; return node; };
- const counts = event => [event.photos ? event.photos+' 张照片' : '', event.videos ? event.videos+' 段视频' : '', event.bvid ? 'B站视频' : ''].filter(Boolean).join(' · ');
+ const counts = event => [event.photos ? event.photos+' 张照片' : '', event.videos ? event.videos+' 段视频' : '', activityBilibiliVideos(event).length ? activityBilibiliVideos(event).length+' 段B站视频' : ''].filter(Boolean).join(' · ');
  const searchText = value => value.normalize('NFKC').toLowerCase().replace(/\s+/g, '');
  function thumbnail(src, alt) { const image = make('img'); image.src=src; image.alt=alt; image.loading='lazy'; image.decoding='async'; return image; }
  function renderIndex() {
@@ -72,12 +73,23 @@ import { activityCategories, normalizeActivityCategory, activityCategory, activi
   $('event-album-meta').textContent=event.dateLabel+' · '+counts(event)+' · 个人参加记录';
   $('event-album-note').textContent=event.note || '';
   $('event-album-note').hidden=!event.note;
-  if(event.bvid){
+  const clips=activityBilibiliVideos(event);
+  if(clips.length){
    const player=make('iframe','event-bilibili');
-   player.title=event.name+' · B站视频';
-   player.src='https://player.bilibili.com/player.html?bvid='+encodeURIComponent(event.bvid)+'&autoplay=0';
+   const load=clip=>{player.title=event.name+' · '+clip.title;player.src=activityBilibiliUrl(clip,true);};
+   load(clips[0]);
    player.allow='fullscreen';player.allowFullscreen=true;player.referrerPolicy='strict-origin-when-cross-origin';
-   $('event-media-grid').append(player);
+   const controls=make('div','event-bilibili-controls');
+   if(clips.length>1){
+    const label=make('label','','选择视频：'),select=make('select');select.setAttribute('aria-label','选择 B站视频');
+    clips.forEach((clip,index)=>{const option=make('option','',clip.title);option.value=String(index);select.append(option);});
+    select.addEventListener('change',()=>load(clips[Number(select.value)]));label.append(select);controls.append(label);
+   }
+   for(const clip of clips){
+    const link=make('a','event-bilibili-link',clip.title+' · B站 P'+clip.page);
+    link.href=activityBilibiliUrl(clip);link.target='_blank';link.rel='noopener noreferrer';controls.append(link);
+   }
+   $('event-media-grid').append(controls,player);
   }
   event.media.forEach((item,index)=>{
    const label=(item.type==='video'?'视频':'照片')+' '+String(index+1).padStart(2,'0');
