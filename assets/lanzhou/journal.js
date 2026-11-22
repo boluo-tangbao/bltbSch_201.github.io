@@ -2,30 +2,22 @@ const originalRevision = "ca61150e32a74358836c9dac065a74cd5cc1e494";
 const originalPhotos = {
   "5e94ca6866bc6282": "content/pilgrimage/2026-4：清明兰州武威/4.1 武威/雷台汉文化馆/1795062235588.jpg",
   "27c6453c6cb24b75": "content/pilgrimage/2026-4：清明兰州武威/4.1 武威/雷台汉文化馆/1795062235722.jpg",
-  "fcd6047d9dfca44b": "content/pilgrimage/2026-4：清明兰州武威/4.1 武威/武威市博物馆/1795062235317.jpg",
   "dd9596c282997ad2": "content/pilgrimage/2026-4：清明兰州武威/4.1 武威/武威市博物馆/1795062235447.jpg",
   "3300cb10f926d636": "content/pilgrimage/2026-4：清明兰州武威/4.2 武威+兰州/武威/武威古南城门楼+五凉文化博物馆/1795062236098.jpg",
   "a73c4ba9dfbbd7e2": "content/pilgrimage/2026-4：清明兰州武威/4.2 武威+兰州/武威/武威古南城门楼+五凉文化博物馆/1795061081641.jpg",
-  "fe096ca9c66e7bb7": "content/pilgrimage/2026-4：清明兰州武威/4.2 武威+兰州/武威/武威文庙/1795061081729.jpg",
-  "3b4a7875e32e8bef": "content/pilgrimage/2026-4：清明兰州武威/4.2 武威+兰州/武威/鸠摩罗什寺/1795061080941.jpg",
   "40a3f266c13e8d5a": "content/pilgrimage/2026-4：清明兰州武威/4.2 武威+兰州/兰州/敦煌艺术馆/1795061080621.jpg",
   "14066b374c33a8ca": "content/pilgrimage/2026-4：清明兰州武威/4.2 武威+兰州/兰州/水车博览园/1795061079571.jpg",
-  "536a6b9be58f34ac": "content/pilgrimage/2026-4：清明兰州武威/4.3 兰州/兰州水墨丹霞/1795060604471.jpg",
   "698d3d46d6fa6178": "content/pilgrimage/2026-4：清明兰州武威/4.3 兰州/兰州水墨丹霞/1795060602726.jpg",
-  "029a6a8f442d8ade": "content/pilgrimage/2026-4：清明兰州武威/4.3 兰州/兰州水墨丹霞/1795060603568.jpg",
   "316a5fb9bd4ac6f2": "content/pilgrimage/2026-4：清明兰州武威/4.3 兰州/兰州水墨丹霞/1795060606539.jpg",
   "68e9b82a11f86a1a": "content/pilgrimage/2026-4：清明兰州武威/4.3 兰州/兰州黄河最短段/1795060519089.jpg",
   "2d0e19c1f25d8dcd": "content/pilgrimage/2026-4：清明兰州武威/4.3 兰州/中山桥深夜夜市/1795060519619.jpg",
-  "6402e36d5c4e3784": "content/pilgrimage/2026-4：清明兰州武威/4.4 兰州/甘肃博物馆/1795060548770.jpg",
-  "02357d584a4197cf": "content/pilgrimage/2026-4：清明兰州武威/4.4 兰州/甘肃博物馆/1795060549380.jpg",
-  "d15c86f4a3267f41": "content/pilgrimage/2026-4：清明兰州武威/4.4 兰州/甘肃博物馆/1795060549795.jpg",
-  "3c35ebe37d9da93a": "content/pilgrimage/2026-4：清明兰州武威/4.5 兰州/1795059657042.jpg"
+  "d15c86f4a3267f41": "content/pilgrimage/2026-4：清明兰州武威/4.4 兰州/甘肃博物馆/1795060549795.jpg"
 };
 const originalPhotoUrl = path => 'https://github.com/boluo-tangbao/bltbSch_201.github.io/blob/' + originalRevision + '/' + path.split('/').map(encodeURIComponent).join('/');
 const $=id=>document.getElementById(id);
 const days=window.tripDays;
 const titles=['初到武威','两座城之间','大地的褶皱','从小西湖到机场','从空中回望'];
-const covers=['1795062235498','1795062236098','1795060604471','1795060549134','1795059656686'];
+const covers=['1795062235588','1795062236098','1795060602726','1795060549134','1795059656965'];
 const aprilSecondPhotos=new Set(days.find(d=>d.date==='4.2').groups.flatMap(g=>g.media.filter(m=>!m.video).map(m=>m.id)));
 const src=(m,thumb=false)=>'assets/lanzhou/'+m.id+(aprilSecondPhotos.has(m.id)?'-story':'')+(thumb?'-s.webp':m.video?'.mp4':'.webp');
 function el(tag,text){const node=document.createElement(tag);if(text)node.textContent=text;return node}
@@ -36,7 +28,7 @@ const periodLabels=['上','中','下','晚'];
 function selectFrame(i){selected=i;Array.from($('reel').children).forEach((frame,j)=>{frame.classList.toggle('active',j===i);frame.querySelector('button').setAttribute('aria-pressed',String(j===i))})}
 days.forEach((d,i)=>{
  const frame=el('div');frame.className='frame';
- const cover=d.groups.flatMap(g=>g.media).find(m=>m.name===covers[i]+'.jpg');
+ const cover=d.groups.flatMap(g=>g.media).find(m=>m.name===covers[i]+'.jpg') || d.groups.flatMap(g=>g.media).find(m=>!m.video);
  const img=el('img');img.src=src(cover);img.alt='';
  const btn=el('button','04.0'+(i+1));btn.append(el('strong',titles[i]));btn.onclick=()=>selectFrame(i);
  const link=el('a','进入这一天 →');link.href='lanzhou-day-story.html?day='+d.date;
@@ -76,7 +68,7 @@ function renderGroups(){
  name.append(el(g.period?'h3':'h2',g.label),el('small',(g.media.length-videos)+' 张照片'+(videos?' · '+videos+' 段视频':'')));head.append(name);
  const all=expanded.has(j);
  const photos=g.media.filter(m=>!m.video);
- const featured=g.label.includes('水墨丹霞')?['1795060604471','1795060602726'].map(n=>photos.find(m=>m.name===n+'.jpg')).filter(Boolean):[];
+ const featured=g.label.includes('水墨丹霞')?(g.story?.picks||[]).map(id=>photos.find(m=>m.id===id)).filter(Boolean):[];
  const picks=[...new Set([...featured,...(photos.length?photos:g.media)])].slice(0,2);
  if(g.media.length>picks.length){const toggle=el('button',all?'收起':'查看全部');toggle.setAttribute('aria-expanded',String(all));toggle.onclick=()=>{all?expanded.delete(j):expanded.add(j);renderGroups();const group=$('groups').querySelector('[data-group="'+j+'"]');group.scrollIntoView({block:'start'});group.querySelector('header button').focus({preventScroll:true})};head.append(toggle)}
  section.dataset.group=j;
