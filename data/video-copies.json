@@ -186,5 +186,29 @@
   "content/activities/2026-7-11：bilibiliWorld/1794793721343.mp4": {
     "sha256": "493f3c92a246cef32195120679e45422355729a90876225e98fb7a772e0b3346",
     "originalSha256": "a967f71c220bb565ae7ed2bf81385634518efd8af00033fa9d6e40898d793174"
+  },
+  "content/activities/2025-10-19：中北华师文化节/VID20251019192854.mp4": {
+    "sha256": "8c03d8d4c97a3fa65caacf8e39602de176ddd8fe9a4314d7579340d8237382db",
+    "originalSha256": "d4afc58a6ab49bf2947e7f33b5b32f27bbf8998e58f004040e7374e657228f2a"
+  },
+  "content/activities/2025-10-19：中北华师文化节/wx_camera_1760872918770.mp4": {
+    "sha256": "fd45bcd14b8d78be0857c3d836ec598a25bcee062aef50f72b5a28445af7d6f0",
+    "originalSha256": "39a28e7a2b90d6ef601dbf2a69fc1ff0ba8dbf86f6fcecc6367c7935daca25dd"
+  },
+  "content/activities/2025-12-7：白金二次元+邯郸沸点冬日祭/VID20251207155310.mp4": {
+    "sha256": "d3d802086b037a9b272c719abfd457b53bf889389f0a13cc94b470bd8ba9c5bd",
+    "originalSha256": "ad161bdb8daec8a7de8eea5815c9fb16cb553e382446b8c4edbaffb58109104e"
+  },
+  "content/activities/2025-12-7：白金二次元+邯郸沸点冬日祭/VID20251207155700.mp4": {
+    "sha256": "7d5621ad4f5264434abb43006c7faf35624ef8ee26a309a1c5b36829e7d5549f",
+    "originalSha256": "79d3c548c8486522fec04bf88f1739edf8a7cb9a12cb5d19257cd7c620d49b1d"
+  },
+  "content/activities/2025-12-7：白金二次元+邯郸沸点冬日祭/VID20251207185840.mp4": {
+    "sha256": "44c5cb9f2ba215f52bd2650e79ca77b62765d5d7ba1c804023a8edc921c75e8b",
+    "originalSha256": "2989fdb15ff39482265554342de4b22f93e9d075f349a747a7526f59c5613d8b"
+  },
+  "content/activities/2025-7-25：野田爱实live/1795311559339.mp4": {
+    "sha256": "e632a5c5a5fda3eac9fbc4b5a17ffe8ef0d0cb4d2e17ed1fbb0ee7a773bbc00c",
+    "originalSha256": "31c45e3cae9348a5f5320520d98acdc197e6f839a4763f33e1c8e9bea267ab27"
   }
 }
