@@ -1,0 +1,23 @@
+[
+  {
+    "id": "cixi-20251005",
+    "title": "慈溪 · 树影与动物",
+    "city": "慈溪",
+    "date": "2025-10-05",
+    "description": "树影、水边，还有停下来看动物的片刻。把这一天的九张随拍收在一起。",
+    "tags": ["自然", "动物", "一日随拍"],
+    "sourceFolder": "content/pilgrimage/2025-10-5：浙江慈溪",
+    "cover": "1795281093090.jpg",
+    "photos": [
+      { "file": "1795281092374.jpg", "caption": "树干与垂下的枝叶", "trimBottom": 576 },
+      { "file": "1795281092442.jpg", "caption": "抬头看天", "trimBottom": 576 },
+      { "file": "1795281092489.jpg", "caption": "木架上的浣熊", "trimBottom": 580 },
+      { "file": "1795281092788.jpg", "caption": "水中的鹿", "trimBottom": 576 },
+      { "file": "1795281092881.jpg", "caption": "岸边的雁群", "trimBottom": 576 },
+      { "file": "1795281093090.jpg", "caption": "停在木架上的一群浣熊", "trimBottom": 580 },
+      { "file": "1795281093202.jpg", "caption": "水边的植物", "trimBottom": 576 },
+      { "file": "1795281093289.jpg", "caption": "树下的孔雀", "trimBottom": 576 },
+      { "file": "1795281093396.jpg", "caption": "水边的鹿与鸟", "trimBottom": 580 }
+    ]
+  }
+]

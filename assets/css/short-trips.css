@@ -1,0 +1,34 @@
+.short-trips { margin: 2.5rem 0 3rem; scroll-margin-top: 24px; }
+.short-trips [hidden] { display: none !important; }
+.short-trip-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 1.4rem; }
+.short-trip-heading h2 { margin: .25rem 0 .45rem; font: 600 clamp(28px,4vw,40px)/1.4 "Songti SC",SimSun,serif; }
+.short-trip-heading p { margin: 0; color: var(--muted); }
+.short-trip-heading > a { flex: none; color: #41695f; font-size: 14px; }
+.short-trip-kicker { color: #41695f; font-size: 11px; font-weight: 800; letter-spacing: .16em; }
+.short-trip-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(min(100%,280px),1fr)); gap: 24px; }
+.short-trip-grid .event-card { max-width: 420px; border-color: #b7d6cd; box-shadow: 5px 6px 0 #aacbb33d; }
+.short-trip-grid .event-card > img { aspect-ratio: 4/3; }
+.short-trip-grid .event-card-category, .short-trip-grid .event-open-hint { color: #41695f; }
+.short-trip-grid .event-card h3 { font-family: "Songti SC",SimSun,serif; }
+.short-trip-description { margin: 0 0 1rem; color: var(--muted); font-size: 14px; line-height: 1.8; }
+.short-trip-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+.short-trip-tags span { border: 1px solid #cbdcd1; padding: 2px 8px; border-radius: 3px; font-size: 11px; color: #416157; }
+.short-trip-back { display: inline-block; padding: 8px 0; color: #41695f; }
+.short-trip-title { margin: 20px 0 8px; font: 600 clamp(28px,5vw,44px)/1.35 "Songti SC",SimSun,serif; }
+.short-trip-meta { color: #416157; font-size: 14px; }
+.short-trip-note { max-width: 48rem; color: var(--muted); line-height: 1.9; }
+.short-trip-album-actions { display: flex; justify-content: space-between; gap: 12px; align-items: center; flex-wrap: wrap; }
+.short-trip-gallery { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; margin-top: 24px; }
+.short-trip-photo { padding: 8px; min-width: 0; border: 1px solid #d3ded3; background: #fffef8; border-radius: 3px; cursor: pointer; color: var(--ink); font: inherit; text-align: left; }
+.short-trip-photo img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; background: #e7ebe3; }
+.short-trip-photo span { display: block; padding: 10px 4px 3px; font-size: 12px; }
+.short-trip-photo:hover { border-color: #41695f; }
+.short-trip-expand { display: block; margin: 22px auto 0; padding: 11px 20px; border: 1px solid #b7d6cd; border-radius: 4px; background: #fffef8; color: #41695f; font: inherit; cursor: pointer; }
+.short-trip-feedback { color: var(--muted); font-size: 13px; }
+.short-trip-share-url { display: block; width: 100%; padding: 10px; border: 1px solid #b7d6cd; border-radius: 4px; font: inherit; }
+.short-trips-page .page-hero { min-height: auto; padding-bottom: 1.5rem; }
+.short-trips-page .navbar { position: relative; inset: auto; flex-wrap: wrap; gap: 18px 24px; margin-bottom: 34px; }
+.short-trips-page .page-hero h1 { font-size: clamp(36px,6vw,60px); }
+.short-trips-page .short-trips { margin-top: 1rem; }
+@media(min-width:900px) { .short-trip-preview .short-trip-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+@media(max-width:640px) { .short-trip-heading { align-items: flex-start; flex-direction: column; gap: 8px; } .short-trip-gallery { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; } .short-trip-photo { padding: 5px; } .short-trip-grid .event-card { max-width: none; } }
