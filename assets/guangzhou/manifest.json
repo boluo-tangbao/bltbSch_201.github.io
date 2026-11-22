@@ -1,0 +1,1559 @@
+{
+  "id": "guangzhou-202601",
+  "title": "广州四日",
+  "subtitle": "从祠堂到珠江，把四天慢慢翻完。",
+  "days": [
+    {
+      "id": "2026-01-18",
+      "date": "2026-01-18",
+      "title": "从祠堂到夜街",
+      "route": "飞机 → 陈家祠 → 茶点轩 → 北京路与大佛寺 → 动漫星城",
+      "cover": "1.18/北京路步行街+大佛寺/1795280330289.jpg",
+      "groups": [
+        {
+          "id": "flight",
+          "period": "午间",
+          "label": "飞往广州",
+          "picks": [
+            {
+              "file": "1.18/飞机餐.jpg",
+              "title": "从飞机上的一餐开始",
+              "text": "餐盒放上小桌板，广州行从这一餐翻起。"
+            }
+          ],
+          "media": [
+            {
+              "id": "eb2b7c8e39b37d71",
+              "file": "1.18/飞机餐.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/51382ad8a94f407849ab-480.webp",
+              "src": "assets/guangzhou/media/51382ad8a94f407849ab-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "从飞机上的一餐开始"
+            }
+          ]
+        },
+        {
+          "id": "chen-clan",
+          "period": "下午",
+          "label": "陈家祠",
+          "picks": [
+            {
+              "file": "1.18/陈家祠/1795280330716.jpg",
+              "title": "走到陈家祠门前",
+              "text": "蓝天下的屋脊先映入眼里，再一步步走进门里。"
+            },
+            {
+              "file": "1.18/陈家祠/1795280329992.jpg",
+              "title": "墙上的龙与云",
+              "text": "浮雕把龙身和云纹挤在一面墙上，近看时，每一层都有不同的深浅。"
+            },
+            {
+              "file": "1.18/陈家祠/1795280330139.jpg",
+              "title": "抬头看木雕",
+              "text": "门与梁之间满是细密的雕刻，镜头往上，颜色也一点点暗下来。"
+            }
+          ],
+          "media": [
+            {
+              "id": "0de77219e0da216d",
+              "file": "1.18/陈家祠/1795280329992.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/060430d96394a65b6688-480.webp",
+              "src": "assets/guangzhou/media/060430d96394a65b6688-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "墙上的龙与云"
+            },
+            {
+              "id": "b9be8c172875899f",
+              "file": "1.18/陈家祠/1795280330024.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/ebaeabb3b748ca3a65a6-480.webp",
+              "src": "assets/guangzhou/media/ebaeabb3b748ca3a65a6-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "陈家祠 · 照片 2"
+            },
+            {
+              "id": "775ac0a817c32376",
+              "file": "1.18/陈家祠/1795280330139.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/4df20b43f2cb6a6a4437-480.webp",
+              "src": "assets/guangzhou/media/4df20b43f2cb6a6a4437-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "抬头看木雕"
+            },
+            {
+              "id": "1e1731f51a6d6257",
+              "file": "1.18/陈家祠/1795280330169.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/f92e13aec8c6d75a60ac-480.webp",
+              "src": "assets/guangzhou/media/f92e13aec8c6d75a60ac-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "陈家祠 · 照片 4"
+            },
+            {
+              "id": "5ed891d8af8b84ab",
+              "file": "1.18/陈家祠/1795280330258.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/e51b83389ed27649f190-480.webp",
+              "src": "assets/guangzhou/media/e51b83389ed27649f190-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "陈家祠 · 照片 5"
+            },
+            {
+              "id": "21d3a1096abf8cfc",
+              "file": "1.18/陈家祠/1795280330318.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/5d7c0789f3c61738f355-480.webp",
+              "src": "assets/guangzhou/media/5d7c0789f3c61738f355-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "陈家祠 · 照片 6"
+            },
+            {
+              "id": "053fce6b350f7733",
+              "file": "1.18/陈家祠/1795280330660.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/4eb8949e0a84c1f94279-480.webp",
+              "src": "assets/guangzhou/media/4eb8949e0a84c1f94279-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "陈家祠 · 照片 7"
+            },
+            {
+              "id": "3bf176416f6f040b",
+              "file": "1.18/陈家祠/1795280330716.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/750365615d0da4f888d2-480.webp",
+              "src": "assets/guangzhou/media/750365615d0da4f888d2-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "走到陈家祠门前"
+            },
+            {
+              "id": "1774c44c03e1f563",
+              "file": "1.18/陈家祠/1795280330745.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/eeb2d083a8fba110523d-480.webp",
+              "src": "assets/guangzhou/media/eeb2d083a8fba110523d-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "陈家祠 · 照片 9"
+            }
+          ]
+        },
+        {
+          "id": "street",
+          "period": "下午",
+          "label": "广州街头",
+          "picks": [
+            {
+              "file": "1.18/广州街头看到的特色大楼.jpg",
+              "title": "街头的一栋楼",
+              "text": "离开祠堂，抬头看到另一种竖直的线条。"
+            }
+          ],
+          "media": [
+            {
+              "id": "a9af99797f2d7f49",
+              "file": "1.18/广州街头看到的特色大楼.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/849fa224f25e31239259-480.webp",
+              "src": "assets/guangzhou/media/849fa224f25e31239259-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "街头的一栋楼"
+            }
+          ]
+        },
+        {
+          "id": "tea",
+          "period": "晚上",
+          "label": "茶点轩晚茶",
+          "picks": [
+            {
+              "file": "1.18/晚餐：茶点轩/1795280329957.jpg",
+              "title": "竹笼里的颜色",
+              "text": "晚茶上桌，小小的竹笼里装着鲜亮的颜色。"
+            },
+            {
+              "file": "1.18/晚餐：茶点轩/1795280330448.jpg",
+              "title": "给虾饺留一张",
+              "text": "筷子夹起一只虾饺，先留个近景，再继续吃。"
+            }
+          ],
+          "media": [
+            {
+              "id": "6e66aae8e72e55e2",
+              "file": "1.18/晚餐：茶点轩/1795280329957.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/0a98383cefffacd3b667-480.webp",
+              "src": "assets/guangzhou/media/0a98383cefffacd3b667-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "竹笼里的颜色"
+            },
+            {
+              "id": "845808150b3efa0b",
+              "file": "1.18/晚餐：茶点轩/1795280330424.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/8e85b06b2d7904de6103-480.webp",
+              "src": "assets/guangzhou/media/8e85b06b2d7904de6103-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "茶点轩晚茶 · 照片 2"
+            },
+            {
+              "id": "583e4a0d5ad9a48f",
+              "file": "1.18/晚餐：茶点轩/1795280330448.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/dfb585b090fd5cb86a69-480.webp",
+              "src": "assets/guangzhou/media/dfb585b090fd5cb86a69-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "给虾饺留一张"
+            },
+            {
+              "id": "99f6926e8eb0ba78",
+              "file": "1.18/晚餐：茶点轩/1795280330590.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/eb7666f4d17926aa5652-480.webp",
+              "src": "assets/guangzhou/media/eb7666f4d17926aa5652-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "茶点轩晚茶 · 照片 4"
+            },
+            {
+              "id": "fb07c970ab084a6f",
+              "file": "1.18/晚餐：茶点轩/wx_camera_1768728774164.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/304275c6d375757f1d17-480.webp",
+              "src": "assets/guangzhou/media/304275c6d375757f1d17-1600.webp",
+              "width": 1600,
+              "height": 900,
+              "caption": "茶点轩晚茶 · 照片 5"
+            }
+          ]
+        },
+        {
+          "id": "beijing-road",
+          "period": "晚上",
+          "label": "大佛寺与北京路",
+          "picks": [
+            {
+              "file": "1.18/北京路步行街+大佛寺/1795280330289.jpg",
+              "title": "亮起来的大佛寺",
+              "text": "夜色落下来，层层屋檐被金色的灯光勾了出来。"
+            },
+            {
+              "file": "1.18/北京路步行街+大佛寺/1795280330203.jpg",
+              "title": "街道下的旧路",
+              "text": "隔着玻璃往下看，热闹街道的下面，还留着另一层时间。"
+            }
+          ],
+          "media": [
+            {
+              "id": "dc18116764fd423a",
+              "file": "1.18/北京路步行街+大佛寺/1795280330051.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/238d0d70ec6a6c2bef98-480.webp",
+              "src": "assets/guangzhou/media/238d0d70ec6a6c2bef98-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "大佛寺与北京路 · 照片 1"
+            },
+            {
+              "id": "108739d9d06584b7",
+              "file": "1.18/北京路步行街+大佛寺/1795280330082.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/9c9e2f218b5bdd1f4bd3-480.webp",
+              "src": "assets/guangzhou/media/9c9e2f218b5bdd1f4bd3-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "大佛寺与北京路 · 照片 2"
+            },
+            {
+              "id": "395b2dfb1fbc2e3d",
+              "file": "1.18/北京路步行街+大佛寺/1795280330203.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/5be0cb932f9927f5c6c9-480.webp",
+              "src": "assets/guangzhou/media/5be0cb932f9927f5c6c9-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "街道下的旧路"
+            },
+            {
+              "id": "34d57935e9570311",
+              "file": "1.18/北京路步行街+大佛寺/1795280330289.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/20644a966683bab1891b-480.webp",
+              "src": "assets/guangzhou/media/20644a966683bab1891b-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "亮起来的大佛寺"
+            },
+            {
+              "id": "545dc637e3258fd7",
+              "file": "1.18/北京路步行街+大佛寺/1795280330470.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/b854ffe8cf4b3be8019f-480.webp",
+              "src": "assets/guangzhou/media/b854ffe8cf4b3be8019f-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "大佛寺与北京路 · 照片 5"
+            },
+            {
+              "id": "a986babd323e8cfc",
+              "file": "1.18/北京路步行街+大佛寺/1795280330553.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/3477a44a50f8ac9d28c8-480.webp",
+              "src": "assets/guangzhou/media/3477a44a50f8ac9d28c8-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "大佛寺与北京路 · 照片 6"
+            }
+          ]
+        },
+        {
+          "id": "anime-star",
+          "period": "晚上",
+          "label": "动漫星城西区",
+          "picks": [],
+          "link": {
+            "href": "rank/guide/#/place/guangzhou-shop-002",
+            "label": "查看动漫星城西区的逛店记录 ↗"
+          },
+          "note": "晚些时候去动漫星城西区逛了一圈，逛店记录收在榜单。",
+          "media": []
+        }
+      ]
+    },
+    {
+      "id": "2026-01-19",
+      "date": "2026-01-19",
+      "title": "动物园到珠江边",
+      "route": "广州动物园 → 民记煲仔饭 → 时尚天河 → 广州塔与珠江 → 炳胜",
+      "cover": "1.19/广州塔/1795280055965.jpg",
+      "groups": [
+        {
+          "id": "zoo",
+          "period": "上午",
+          "label": "广州动物园",
+          "picks": [
+            {
+              "file": "1.19/广州动物园/1795280055512.jpg",
+              "title": "隔着玻璃看熊猫",
+              "text": "熊猫靠近玻璃，黑白两色一下子占满了镜头。"
+            },
+            {
+              "file": "1.19/广州动物园/1795280057461.jpg",
+              "title": "树上的小熊猫",
+              "text": "枝叶之间，一只小熊猫把身子搭在了树上。"
+            },
+            {
+              "file": "1.19/广州动物园/1795280055305.jpg",
+              "title": "停下来看鹿",
+              "text": "沿着围栏慢慢走，给伸过头来的鹿留一张。"
+            }
+          ],
+          "media": [
+            {
+              "id": "8a140df3deb9a7e6",
+              "file": "1.19/广州动物园/1795280055305.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/76d0bc036708301af986-480.webp",
+              "src": "assets/guangzhou/media/76d0bc036708301af986-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "停下来看鹿"
+            },
+            {
+              "id": "331d88fa1a37c3db",
+              "file": "1.19/广州动物园/1795280055394.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/97c1d860c7534684399e-480.webp",
+              "src": "assets/guangzhou/media/97c1d860c7534684399e-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "广州动物园 · 照片 2"
+            },
+            {
+              "id": "26fdc6bea5b11b18",
+              "file": "1.19/广州动物园/1795280055512.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/c1939f9001057fb8ca93-480.webp",
+              "src": "assets/guangzhou/media/c1939f9001057fb8ca93-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "隔着玻璃看熊猫"
+            },
+            {
+              "id": "26fb142130a4d3cc",
+              "file": "1.19/广州动物园/1795280055631.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/b8bd6951cf9ea0b04972-480.webp",
+              "src": "assets/guangzhou/media/b8bd6951cf9ea0b04972-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "广州动物园 · 照片 4"
+            },
+            {
+              "id": "cc47d75fd8d300eb",
+              "file": "1.19/广州动物园/1795280056019.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/7dcd5721c677755050f7-480.webp",
+              "src": "assets/guangzhou/media/7dcd5721c677755050f7-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "广州动物园 · 照片 5"
+            },
+            {
+              "id": "094909dc9ef5b6e8",
+              "file": "1.19/广州动物园/1795280056060.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/73e9c859fc1ba59ef680-480.webp",
+              "src": "assets/guangzhou/media/73e9c859fc1ba59ef680-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "广州动物园 · 照片 6"
+            },
+            {
+              "id": "31fbba48509f14c0",
+              "file": "1.19/广州动物园/1795280056243.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/626b1169ce1cdbc9b7af-480.webp",
+              "src": "assets/guangzhou/media/626b1169ce1cdbc9b7af-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "广州动物园 · 照片 7"
+            },
+            {
+              "id": "a7456bda6234d5e9",
+              "file": "1.19/广州动物园/1795280056310.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/c599f033107f69aa7c20-480.webp",
+              "src": "assets/guangzhou/media/c599f033107f69aa7c20-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "广州动物园 · 照片 8"
+            },
+            {
+              "id": "6d6a55d69a39974c",
+              "file": "1.19/广州动物园/1795280056563.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/ba68f6275730c0b06f4a-480.webp",
+              "src": "assets/guangzhou/media/ba68f6275730c0b06f4a-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "广州动物园 · 照片 9"
+            },
+            {
+              "id": "b831ebe48793e8fe",
+              "file": "1.19/广州动物园/1795280056727.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/d188796c43c70f55f4f3-480.webp",
+              "src": "assets/guangzhou/media/d188796c43c70f55f4f3-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "广州动物园 · 照片 10"
+            },
+            {
+              "id": "dfe90ecc24857bf4",
+              "file": "1.19/广州动物园/1795280057180.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/8a59ab3e2425f09e8caa-480.webp",
+              "src": "assets/guangzhou/media/8a59ab3e2425f09e8caa-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "广州动物园 · 照片 11"
+            },
+            {
+              "id": "ce7aa08e39ddde3b",
+              "file": "1.19/广州动物园/1795280057256.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/96a433f8da338bf6623a-480.webp",
+              "src": "assets/guangzhou/media/96a433f8da338bf6623a-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "广州动物园 · 照片 12"
+            },
+            {
+              "id": "e41dabc018d3a77a",
+              "file": "1.19/广州动物园/1795280057297.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/e0a4443d220d83f35688-480.webp",
+              "src": "assets/guangzhou/media/e0a4443d220d83f35688-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "广州动物园 · 照片 13"
+            },
+            {
+              "id": "f1713ca0de07cce4",
+              "file": "1.19/广州动物园/1795280057461.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/11c6152bc901c23ba8f2-480.webp",
+              "src": "assets/guangzhou/media/11c6152bc901c23ba8f2-1600.webp",
+              "width": 900,
+              "height": 1600,
+              "caption": "树上的小熊猫"
+            },
+            {
+              "id": "f7462ed85db32980",
+              "file": "1.19/广州动物园/1795280057613.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/3eaa37a033879f82e1da-480.webp",
+              "src": "assets/guangzhou/media/3eaa37a033879f82e1da-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "广州动物园 · 照片 15"
+            },
+            {
+              "id": "a855f9fb6e272ac1",
+              "file": "1.19/广州动物园/VID20260119104802.mp4",
+              "type": "video",
+              "preview": "assets/guangzhou/media/36bd3995c6a199b62800-480.webp",
+              "src": "assets/guangzhou/media/36bd3995c6a199b62800.mp4",
+              "poster": "assets/guangzhou/media/36bd3995c6a199b62800-1600.webp",
+              "videoSettings": {
+                "profile": "720p",
+                "segments": [
+                  [
+                    35,
+                    70
+                  ]
+                ]
+              },
+              "width": 1280,
+              "height": 720,
+              "caption": "广州动物园 · 现场片段 16"
+            },
+            {
+              "id": "3bb349b150e1ec7a",
+              "file": "1.19/广州动物园/VID20260119105526.mp4",
+              "type": "video",
+              "preview": "assets/guangzhou/media/5d01b1575f7574e5ea7d-480.webp",
+              "src": "assets/guangzhou/media/5d01b1575f7574e5ea7d.mp4",
+              "poster": "assets/guangzhou/media/5d01b1575f7574e5ea7d-1600.webp",
+              "videoSettings": {
+                "profile": "720p",
+                "segments": [
+                  [
+                    0,
+                    5
+                  ],
+                  [
+                    35,
+                    70
+                  ]
+                ]
+              },
+              "width": 720,
+              "height": 1280,
+              "caption": "广州动物园 · 现场片段 17"
+            },
+            {
+              "id": "a0c4c6517166536e",
+              "file": "1.19/广州动物园/VID20260119111300.mp4",
+              "type": "video",
+              "preview": "assets/guangzhou/media/56aaf198451580a6f822-480.webp",
+              "src": "assets/guangzhou/media/56aaf198451580a6f822.mp4",
+              "poster": "assets/guangzhou/media/56aaf198451580a6f822-1600.webp",
+              "videoSettings": {
+                "profile": "720p",
+                "segments": null
+              },
+              "width": 720,
+              "height": 1280,
+              "caption": "广州动物园 · 现场片段 18"
+            },
+            {
+              "id": "047024b9a03360b5",
+              "file": "1.19/广州动物园/VID20260119112652.mp4",
+              "type": "video",
+              "preview": "assets/guangzhou/media/e1707826cb5ee6c7123a-480.webp",
+              "src": "assets/guangzhou/media/e1707826cb5ee6c7123a.mp4",
+              "poster": "assets/guangzhou/media/e1707826cb5ee6c7123a-1600.webp",
+              "videoSettings": {
+                "profile": "720p",
+                "segments": null
+              },
+              "width": 720,
+              "height": 1280,
+              "caption": "广州动物园 · 现场片段 19"
+            },
+            {
+              "id": "c83e577590c01fb2",
+              "file": "1.19/广州动物园/VID20260119115103.mp4",
+              "type": "video",
+              "preview": "assets/guangzhou/media/976b9d654d8d3dd28add-480.webp",
+              "src": "assets/guangzhou/media/976b9d654d8d3dd28add.mp4",
+              "poster": "assets/guangzhou/media/976b9d654d8d3dd28add-1600.webp",
+              "videoSettings": {
+                "profile": "720p",
+                "segments": null
+              },
+              "width": 720,
+              "height": 1280,
+              "caption": "广州动物园 · 现场片段 20"
+            }
+          ]
+        },
+        {
+          "id": "claypot",
+          "period": "午间",
+          "label": "民记煲仔饭",
+          "picks": [
+            {
+              "file": "1.19/午餐：民记煲仔饭（时尚天河附近）/1795280055695.jpg",
+              "title": "店门前的午饭时间",
+              "text": "店名挂在门头上，人和车把门前的小路挤得满满的。"
+            },
+            {
+              "file": "1.19/午餐：民记煲仔饭（时尚天河附近）/1795280057224.jpg",
+              "title": "煲仔饭端上桌",
+              "text": "锅边还热着，青菜和腊味铺在饭上。"
+            }
+          ],
+          "media": [
+            {
+              "id": "c9fe12a7caeb51a9",
+              "file": "1.19/午餐：民记煲仔饭（时尚天河附近）/1795280055695.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/d143bd4def874bbf8a89-480.webp",
+              "src": "assets/guangzhou/media/d143bd4def874bbf8a89-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "店门前的午饭时间"
+            },
+            {
+              "id": "a0de3385a7f5e99a",
+              "file": "1.19/午餐：民记煲仔饭（时尚天河附近）/1795280056154.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/00e99337cf4547adec44-480.webp",
+              "src": "assets/guangzhou/media/00e99337cf4547adec44-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "民记煲仔饭 · 照片 2"
+            },
+            {
+              "id": "1ded5f292ac0a1e1",
+              "file": "1.19/午餐：民记煲仔饭（时尚天河附近）/1795280057144.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/424991c3bd0b3be8cab2-480.webp",
+              "src": "assets/guangzhou/media/424991c3bd0b3be8cab2-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "民记煲仔饭 · 照片 3"
+            },
+            {
+              "id": "a2f083132168cdb5",
+              "file": "1.19/午餐：民记煲仔饭（时尚天河附近）/1795280057224.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/f69897d8591f4910998a-480.webp",
+              "src": "assets/guangzhou/media/f69897d8591f4910998a-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "煲仔饭端上桌"
+            }
+          ]
+        },
+        {
+          "id": "fashion-tianhe",
+          "period": "下午",
+          "label": "时尚天河",
+          "picks": [],
+          "note": "午饭后去时尚天河逛店，对应的店单和照片收在逛店榜单。",
+          "link": {
+            "href": "rank/guide/#/place/guangzhou-shop-004",
+            "label": "查看时尚天河的逛店记录 ↗"
+          },
+          "media": []
+        },
+        {
+          "id": "canton-tower",
+          "period": "下午",
+          "label": "广州塔与珠江",
+          "picks": [
+            {
+              "file": "1.19/广州塔/1795280057074.jpg",
+              "title": "从塔下往上看",
+              "text": "站到塔下，白色的线条一路收向天空。"
+            },
+            {
+              "file": "1.19/广州塔/1795280057353.jpg",
+              "title": "江面与远处的楼",
+              "text": "视线从塔身落到江面，远处的楼在天光里变成了剪影。"
+            }
+          ],
+          "media": [
+            {
+              "id": "e3d764a097b18abf",
+              "file": "1.19/广州塔/1795280056956.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/5e79bd74e276eabc85ef-480.webp",
+              "src": "assets/guangzhou/media/5e79bd74e276eabc85ef-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "广州塔与珠江 · 照片 1"
+            },
+            {
+              "id": "7b6a8a47263192f7",
+              "file": "1.19/广州塔/1795280057074.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/684cd13dec32a2430f8d-480.webp",
+              "src": "assets/guangzhou/media/684cd13dec32a2430f8d-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "从塔下往上看"
+            },
+            {
+              "id": "da1b3d0e5d22c85c",
+              "file": "1.19/广州塔/1795280057353.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/a0377a3f9b8f6e98ae7a-480.webp",
+              "src": "assets/guangzhou/media/a0377a3f9b8f6e98ae7a-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "江面与远处的楼"
+            }
+          ]
+        },
+        {
+          "id": "riverside-walk",
+          "period": "下午",
+          "label": "广州塔花车巡礼逛街",
+          "picks": [
+            {
+              "file": "1.19/广州塔/广州塔花车巡礼逛街/1795280055459.jpg",
+              "title": "沿着江边继续走",
+              "text": "沿着原来整理的路线继续逛，桥和江面成了这一段的背景。"
+            },
+            {
+              "file": "1.19/广州塔/广州塔花车巡礼逛街/1795280055799.jpg",
+              "title": "走过一段绿地",
+              "text": "从建筑之间走出来，路边又换成了一片绿色。"
+            }
+          ],
+          "media": [
+            {
+              "id": "6f594f400b4f2ce3",
+              "file": "1.19/广州塔/广州塔花车巡礼逛街/1795280055459.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/ad3edf8827f92cfe9805-480.webp",
+              "src": "assets/guangzhou/media/ad3edf8827f92cfe9805-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "沿着江边继续走"
+            },
+            {
+              "id": "63f5b1f712640898",
+              "file": "1.19/广州塔/广州塔花车巡礼逛街/1795280055663.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/0965ea784ad94d3b6da5-480.webp",
+              "src": "assets/guangzhou/media/0965ea784ad94d3b6da5-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "广州塔花车巡礼逛街 · 照片 2"
+            },
+            {
+              "id": "56cf6d419ba25150",
+              "file": "1.19/广州塔/广州塔花车巡礼逛街/1795280055799.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/d5f88737e16e0fea0cb0-480.webp",
+              "src": "assets/guangzhou/media/d5f88737e16e0fea0cb0-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "走过一段绿地"
+            },
+            {
+              "id": "d98b4ec27b4373b7",
+              "file": "1.19/广州塔/广州塔花车巡礼逛街/1795280057582.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/93f3f3600ea58ba1aa3e-480.webp",
+              "src": "assets/guangzhou/media/93f3f3600ea58ba1aa3e-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "广州塔花车巡礼逛街 · 照片 4"
+            }
+          ]
+        },
+        {
+          "id": "tower-night",
+          "period": "晚上",
+          "label": "广州塔夜色",
+          "picks": [
+            {
+              "file": "1.19/广州塔/1795280055965.jpg",
+              "title": "塔身换上了颜色",
+              "text": "白天看过的线条，到了夜里变成了一整条彩色的光。"
+            }
+          ],
+          "media": [
+            {
+              "id": "d6fedfd24c1abc8a",
+              "file": "1.19/广州塔/1795280055359.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/e5a4206ed885487d4f06-480.webp",
+              "src": "assets/guangzhou/media/e5a4206ed885487d4f06-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "广州塔夜色 · 照片 1"
+            },
+            {
+              "id": "c3ac64d06398e3e0",
+              "file": "1.19/广州塔/1795280055965.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/ef3ceb0cc6ed6a4fd98e-480.webp",
+              "src": "assets/guangzhou/media/ef3ceb0cc6ed6a4fd98e-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "塔身换上了颜色"
+            }
+          ]
+        },
+        {
+          "id": "bingsheng",
+          "period": "晚上",
+          "label": "炳胜晚餐",
+          "picks": [
+            {
+              "file": "1.19/晚餐：炳胜/1795280055827.jpg",
+              "title": "晚饭回到餐桌前",
+              "text": "走了一天，再把注意力交还给盘里的菜。"
+            },
+            {
+              "file": "1.19/晚餐：炳胜/1795280056432.jpg",
+              "title": "砂锅里的热气",
+              "text": "给砂锅留一个近景，今天的行程在饭桌旁慢下来。"
+            }
+          ],
+          "media": [
+            {
+              "id": "6aaa192ea24cfee8",
+              "file": "1.19/晚餐：炳胜/1795280055827.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/c1071ebfb76cb5755c66-480.webp",
+              "src": "assets/guangzhou/media/c1071ebfb76cb5755c66-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "晚饭回到餐桌前"
+            },
+            {
+              "id": "50c37184c3e0f8db",
+              "file": "1.19/晚餐：炳胜/1795280056432.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/4dfc0fa147a4723a6f57-480.webp",
+              "src": "assets/guangzhou/media/4dfc0fa147a4723a6f57-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "砂锅里的热气"
+            },
+            {
+              "id": "55243e12d90dd944",
+              "file": "1.19/晚餐：炳胜/1795280057693.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/99ced5a4bf2211e91a85-480.webp",
+              "src": "assets/guangzhou/media/99ced5a4bf2211e91a85-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "炳胜晚餐 · 照片 3"
+            },
+            {
+              "id": "8f5dafcc8a789958",
+              "file": "1.19/晚餐：炳胜/1795280057842.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/771a12395c2ff770d5eb-480.webp",
+              "src": "assets/guangzhou/media/771a12395c2ff770d5eb-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "炳胜晚餐 · 照片 4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2026-01-20",
+      "date": "2026-01-20",
+      "title": "从黄埔到西关",
+      "route": "黄埔军校 → 兰州拉面 → 沙面 → 友联菜馆 → 永庆坊 → 地王广场 → 甜品",
+      "cover": "1.20/黄埔军校/1795275374273.jpg",
+      "groups": [
+        {
+          "id": "whampoa",
+          "period": "上午",
+          "label": "黄埔军校",
+          "picks": [
+            {
+              "file": "1.20/黄埔军校/1795275374273.jpg",
+              "title": "走到军校门前",
+              "text": "白墙、钟楼和门前的树，把这一站的轮廓留了下来。"
+            },
+            {
+              "file": "1.20/黄埔军校/1795275373921.jpg",
+              "title": "礼堂里的木椅",
+              "text": "走进礼堂，一排排木椅朝着同一个方向展开。"
+            },
+            {
+              "file": "1.20/黄埔军校/1795275373885.jpg",
+              "title": "墙上的字",
+              "text": "把镜头靠近一些，读一读墙上留下的文字。"
+            }
+          ],
+          "media": [
+            {
+              "id": "88eb621224a89918",
+              "file": "1.20/黄埔军校/1795275373510.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/6a1e27e5e9f3f3f93dd3-480.webp",
+              "src": "assets/guangzhou/media/6a1e27e5e9f3f3f93dd3-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "黄埔军校 · 照片 1"
+            },
+            {
+              "id": "230803dccc0cf8b3",
+              "file": "1.20/黄埔军校/1795275373667.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/3cf03638fb986fae72c6-480.webp",
+              "src": "assets/guangzhou/media/3cf03638fb986fae72c6-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "黄埔军校 · 照片 2"
+            },
+            {
+              "id": "774d50632bc02157",
+              "file": "1.20/黄埔军校/1795275373735.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/7376e31eaa6ae3793581-480.webp",
+              "src": "assets/guangzhou/media/7376e31eaa6ae3793581-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "黄埔军校 · 照片 3"
+            },
+            {
+              "id": "3f0c47a98a18d5de",
+              "file": "1.20/黄埔军校/1795275373885.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/a7a3f2534ffef474e94e-480.webp",
+              "src": "assets/guangzhou/media/a7a3f2534ffef474e94e-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "墙上的字"
+            },
+            {
+              "id": "faab1147a0e40b41",
+              "file": "1.20/黄埔军校/1795275373921.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/fcb2f7f3db6086bbaf37-480.webp",
+              "src": "assets/guangzhou/media/fcb2f7f3db6086bbaf37-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "礼堂里的木椅"
+            },
+            {
+              "id": "1c61557d3ec8a962",
+              "file": "1.20/黄埔军校/1795275374273.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/ad05721e213163980ca1-480.webp",
+              "src": "assets/guangzhou/media/ad05721e213163980ca1-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "走到军校门前"
+            },
+            {
+              "id": "aa29856047ee68a8",
+              "file": "1.20/黄埔军校/1795275374351.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/136ede263eac7c13eefd-480.webp",
+              "src": "assets/guangzhou/media/136ede263eac7c13eefd-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "黄埔军校 · 照片 7"
+            },
+            {
+              "id": "74247b382f9795c7",
+              "file": "1.20/黄埔军校/1795275374403.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/c21484f8daab1adf3457-480.webp",
+              "src": "assets/guangzhou/media/c21484f8daab1adf3457-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "黄埔军校 · 照片 8"
+            },
+            {
+              "id": "9aa49bdfbfe4713e",
+              "file": "1.20/黄埔军校/1795275374433.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/4f2dcca708ea83178a0c-480.webp",
+              "src": "assets/guangzhou/media/4f2dcca708ea83178a0c-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "黄埔军校 · 照片 9"
+            }
+          ]
+        },
+        {
+          "id": "noodles",
+          "period": "午间",
+          "label": "和奶奶的午饭",
+          "picks": [],
+          "note": "奶奶想吃兰州拉面，午饭就吃了这个，再买了蜜雪冰城。",
+          "media": []
+        },
+        {
+          "id": "shamian",
+          "period": "下午",
+          "label": "沙面岛",
+          "picks": [
+            {
+              "file": "1.20/沙面岛海关.jpg",
+              "title": "树影里的海关建筑",
+              "text": "树枝挡住了一部分外墙，楼上的窗和屋顶仍然一层层露出来。"
+            }
+          ],
+          "media": [
+            {
+              "id": "e1c6f523e0787185",
+              "file": "1.20/沙面岛海关.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/e7075fb066912ba73e9a-480.webp",
+              "src": "assets/guangzhou/media/e7075fb066912ba73e9a-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "树影里的海关建筑"
+            }
+          ]
+        },
+        {
+          "id": "youlian",
+          "period": "下午",
+          "label": "友联菜馆",
+          "picks": [
+            {
+              "file": "1.20/友联菜馆/1795275373561.jpg",
+              "title": "提早吃的一顿晚饭",
+              "text": "逛完沙面，早早坐下来吃晚饭。"
+            },
+            {
+              "file": "1.20/友联菜馆/1795275374373.jpg",
+              "title": "餐盘里的近景",
+              "text": "青葱落在切好的肉上，给上桌的菜留一张近照。"
+            }
+          ],
+          "media": [
+            {
+              "id": "62caf7de4054c2dd",
+              "file": "1.20/友联菜馆/1795275373561.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/1634bbd9abc850ca2840-480.webp",
+              "src": "assets/guangzhou/media/1634bbd9abc850ca2840-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "提早吃的一顿晚饭"
+            },
+            {
+              "id": "8b74988f2be6e103",
+              "file": "1.20/友联菜馆/1795275374373.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/a2ed9cbef85ba3dfc922-480.webp",
+              "src": "assets/guangzhou/media/a2ed9cbef85ba3dfc922-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "餐盘里的近景"
+            }
+          ]
+        },
+        {
+          "id": "yongqingfang",
+          "period": "晚上",
+          "label": "永庆坊",
+          "picks": [
+            {
+              "file": "1.20/永庆坊/1795275373485.jpg",
+              "title": "灯下的牌坊",
+              "text": "入夜后，灯光把牌坊和水边的轮廓照了出来。"
+            },
+            {
+              "file": "1.20/永庆坊/1795275373951.jpg",
+              "title": "门里的灯光",
+              "text": "再往门里看，亮起来的装饰收住了这一站的夜色。"
+            }
+          ],
+          "media": [
+            {
+              "id": "35dcfe09abcbc5af",
+              "file": "1.20/永庆坊/1795275373485.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/26c7b36480afb424ab5a-480.webp",
+              "src": "assets/guangzhou/media/26c7b36480afb424ab5a-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "灯下的牌坊"
+            },
+            {
+              "id": "b4ce104df8343aee",
+              "file": "1.20/永庆坊/1795275373951.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/727e378f2be4aca23bf6-480.webp",
+              "src": "assets/guangzhou/media/727e378f2be4aca23bf6-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "门里的灯光"
+            }
+          ]
+        },
+        {
+          "id": "diwang",
+          "period": "晚上",
+          "label": "地王广场",
+          "picks": [
+            {
+              "file": "1.20/地王广场.png",
+              "title": "逛到地王广场",
+              "text": "手里的小卡片和身后的通道，留作这次逛店的记号。"
+            }
+          ],
+          "link": {
+            "href": "rank/guide/#/place/guangzhou-shop-001",
+            "label": "查看地王广场的逛店记录 ↗"
+          },
+          "media": [
+            {
+              "id": "23fafdb636466f1e",
+              "file": "1.20/地王广场.png",
+              "type": "image",
+              "preview": "assets/guangzhou/media/8dcf46f4914d0f2e7f53-480.webp",
+              "src": "assets/guangzhou/media/8dcf46f4914d0f2e7f53-1600.webp",
+              "width": 1016,
+              "height": 1547,
+              "caption": "逛到地王广场"
+            }
+          ]
+        },
+        {
+          "id": "dessert",
+          "period": "晚上",
+          "label": "芝麻糊世家等甜品",
+          "picks": [
+            {
+              "file": "1.20/甜品.jpg",
+              "title": "夜里的一碗甜",
+              "text": "把勺子放进碗里，这一天以一份甜品收尾。"
+            }
+          ],
+          "media": [
+            {
+              "id": "3112efd3e2268828",
+              "file": "1.20/甜品.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/149994927c248f52881f-480.webp",
+              "src": "assets/guangzhou/media/149994927c248f52881f-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "夜里的一碗甜"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2026-01-21",
+      "date": "2026-01-21",
+      "title": "从展柜到归途",
+      "route": "南越王博物馆 → 中山纪念堂 → 圣心大教堂 → 東園 → 动漫星城 → 返程",
+      "cover": "1.21/中山纪念堂/1795076257080.jpg",
+      "groups": [
+        {
+          "id": "nanyue",
+          "period": "上午",
+          "label": "南越王博物馆",
+          "picks": [
+            {
+              "file": "1.21/南越王博物馆/1795076257126.jpg",
+              "title": "红墙前的一眼",
+              "text": "红色的墙和玻璃入口，先把博物馆留在镜头里。"
+            },
+            {
+              "file": "1.21/南越王博物馆/1795076256664.jpg",
+              "title": "展柜里的一点浅色",
+              "text": "暗下来的展厅里，浅色的器物在灯下显了出来。"
+            },
+            {
+              "file": "1.21/南越王博物馆/1795076256482.jpg",
+              "title": "层层叠起的细节",
+              "text": "靠近展柜，看那些细密排列、层层叠起的纹样。"
+            }
+          ],
+          "media": [
+            {
+              "id": "cd3bf061fa00aa7b",
+              "file": "1.21/南越王博物馆/1795076255932.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/160ea5bdcb6f172f018e-480.webp",
+              "src": "assets/guangzhou/media/160ea5bdcb6f172f018e-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "南越王博物馆 · 照片 1"
+            },
+            {
+              "id": "4688f25ea1c21ef6",
+              "file": "1.21/南越王博物馆/1795076256052.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/a95b00d88ecd052d532f-480.webp",
+              "src": "assets/guangzhou/media/a95b00d88ecd052d532f-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "南越王博物馆 · 照片 2"
+            },
+            {
+              "id": "18abc1ae4d12100c",
+              "file": "1.21/南越王博物馆/1795076256073.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/3c9dc78198f738e12f1a-480.webp",
+              "src": "assets/guangzhou/media/3c9dc78198f738e12f1a-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "南越王博物馆 · 照片 3"
+            },
+            {
+              "id": "d7eeadf64d77064e",
+              "file": "1.21/南越王博物馆/1795076256095.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/c1804976cc5d85bd3c45-480.webp",
+              "src": "assets/guangzhou/media/c1804976cc5d85bd3c45-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "南越王博物馆 · 照片 4"
+            },
+            {
+              "id": "e10289820020b79b",
+              "file": "1.21/南越王博物馆/1795076256386.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/d1d37dfd939e50552a3c-480.webp",
+              "src": "assets/guangzhou/media/d1d37dfd939e50552a3c-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "南越王博物馆 · 照片 5"
+            },
+            {
+              "id": "9003cb133c5058c0",
+              "file": "1.21/南越王博物馆/1795076256482.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/411eaaa8696800aedac0-480.webp",
+              "src": "assets/guangzhou/media/411eaaa8696800aedac0-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "层层叠起的细节"
+            },
+            {
+              "id": "10f5d15819d3a870",
+              "file": "1.21/南越王博物馆/1795076256664.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/0a9c35c269c3f5cea1f6-480.webp",
+              "src": "assets/guangzhou/media/0a9c35c269c3f5cea1f6-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "展柜里的一点浅色"
+            },
+            {
+              "id": "6bf903ac50486756",
+              "file": "1.21/南越王博物馆/1795076256728.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/eeb918645b4c4a2104c3-480.webp",
+              "src": "assets/guangzhou/media/eeb918645b4c4a2104c3-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "南越王博物馆 · 照片 8"
+            },
+            {
+              "id": "d92eed6d2ab0ab0f",
+              "file": "1.21/南越王博物馆/1795076256797.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/9e228be52072a5fb5d5e-480.webp",
+              "src": "assets/guangzhou/media/9e228be52072a5fb5d5e-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "南越王博物馆 · 照片 9"
+            },
+            {
+              "id": "7300ce68bada38cd",
+              "file": "1.21/南越王博物馆/1795076256831.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/6a459d34111c28d33a5a-480.webp",
+              "src": "assets/guangzhou/media/6a459d34111c28d33a5a-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "南越王博物馆 · 照片 10"
+            },
+            {
+              "id": "401c778832826d13",
+              "file": "1.21/南越王博物馆/1795076256936.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/8a0c0ae986041dcd67cf-480.webp",
+              "src": "assets/guangzhou/media/8a0c0ae986041dcd67cf-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "南越王博物馆 · 照片 11"
+            },
+            {
+              "id": "6e044a72fef78e53",
+              "file": "1.21/南越王博物馆/1795076256995.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/fbc3a7801039547a5cda-480.webp",
+              "src": "assets/guangzhou/media/fbc3a7801039547a5cda-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "南越王博物馆 · 照片 12"
+            },
+            {
+              "id": "430758c5fc319863",
+              "file": "1.21/南越王博物馆/1795076257126.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/6b1a6eb656cd63da288a-480.webp",
+              "src": "assets/guangzhou/media/6b1a6eb656cd63da288a-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "红墙前的一眼"
+            },
+            {
+              "id": "c8fb2166caf0365c",
+              "file": "1.21/南越王博物馆/1795076257328.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/e17d3aac2c898c7b7cac-480.webp",
+              "src": "assets/guangzhou/media/e17d3aac2c898c7b7cac-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "南越王博物馆 · 照片 14"
+            },
+            {
+              "id": "0a97c06d43464b4e",
+              "file": "1.21/南越王博物馆/1795076257352.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/e62d6667d8a80d947e18-480.webp",
+              "src": "assets/guangzhou/media/e62d6667d8a80d947e18-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "南越王博物馆 · 照片 15"
+            }
+          ]
+        },
+        {
+          "id": "memorial",
+          "period": "上午",
+          "label": "中山纪念堂",
+          "picks": [
+            {
+              "file": "1.21/中山纪念堂/1795076257080.jpg",
+              "title": "屋檐下的纪念堂",
+              "text": "从正面看过去，屋顶和门前的立柱把画面排得很整齐。"
+            }
+          ],
+          "media": [
+            {
+              "id": "3f5fee44144101a5",
+              "file": "1.21/中山纪念堂/1795076256158.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/6c93ebb344c26e917021-480.webp",
+              "src": "assets/guangzhou/media/6c93ebb344c26e917021-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "中山纪念堂 · 照片 1"
+            },
+            {
+              "id": "7686b147e31a36b8",
+              "file": "1.21/中山纪念堂/1795076257046.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/e59bb81a2abddcd6ac19-480.webp",
+              "src": "assets/guangzhou/media/e59bb81a2abddcd6ac19-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "中山纪念堂 · 照片 2"
+            },
+            {
+              "id": "58b7430403b77d8e",
+              "file": "1.21/中山纪念堂/1795076257080.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/35276349a069b3155e83-480.webp",
+              "src": "assets/guangzhou/media/35276349a069b3155e83-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "屋檐下的纪念堂"
+            }
+          ]
+        },
+        {
+          "id": "cathedral",
+          "period": "午间",
+          "label": "圣心大教堂与附近甜品",
+          "picks": [
+            {
+              "file": "1.21/圣心大教堂/1795076256266.jpg",
+              "title": "抬头看双塔",
+              "text": "站到教堂前，尖顶把视线引向了天空。"
+            },
+            {
+              "file": "1.21/圣心大教堂/附近吃的甜品.jpg",
+              "title": "先吃点甜的",
+              "text": "在附近吃一份甜品，给接下来的路垫垫肚子。"
+            }
+          ],
+          "media": [
+            {
+              "id": "52f9a8d5cb8aea42",
+              "file": "1.21/圣心大教堂/1795076256266.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/0111ff673bb575b18988-480.webp",
+              "src": "assets/guangzhou/media/0111ff673bb575b18988-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "抬头看双塔"
+            },
+            {
+              "id": "e4bce960863f92de",
+              "file": "1.21/圣心大教堂/1795076257249.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/2f7802c748d63931a2d5-480.webp",
+              "src": "assets/guangzhou/media/2f7802c748d63931a2d5-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "圣心大教堂与附近甜品 · 照片 2"
+            },
+            {
+              "id": "ad3ca7e758ccef11",
+              "file": "1.21/圣心大教堂/附近吃的甜品.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/b062b1eeccf13424793f-480.webp",
+              "src": "assets/guangzhou/media/b062b1eeccf13424793f-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "先吃点甜的"
+            }
+          ]
+        },
+        {
+          "id": "dongyuan",
+          "period": "午间",
+          "label": "東園午饭",
+          "picks": [
+            {
+              "file": "1.21/東園/1795076256453.jpg",
+              "title": "回北京路吃午饭",
+              "text": "逛完这一段，再回北京路坐下来吃午饭。"
+            },
+            {
+              "file": "1.21/東園/1795076256764.jpg",
+              "title": "盘里的腊味",
+              "text": "切好的腊味铺在盘中，又是一顿很实在的午饭。"
+            }
+          ],
+          "media": [
+            {
+              "id": "52dc401f9fe0554b",
+              "file": "1.21/東園/1795076256453.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/46825f650e1f945be3ac-480.webp",
+              "src": "assets/guangzhou/media/46825f650e1f945be3ac-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "回北京路吃午饭"
+            },
+            {
+              "id": "1fbe121aad76497e",
+              "file": "1.21/東園/1795076256764.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/8476d51c3ed61277ace2-480.webp",
+              "src": "assets/guangzhou/media/8476d51c3ed61277ace2-1600.webp",
+              "width": 1600,
+              "height": 1200,
+              "caption": "盘里的腊味"
+            }
+          ]
+        },
+        {
+          "id": "anime-star-return",
+          "period": "下午",
+          "label": "动漫星城西区",
+          "picks": [
+            {
+              "file": "1.21/动星抽的通行证.jpg",
+              "title": "带走一张通行证",
+              "text": "离开广州前，再去动漫星城逛一趟，带走一张小小的纪念。"
+            }
+          ],
+          "link": {
+            "href": "rank/guide/#/place/guangzhou-shop-002",
+            "label": "查看动漫星城西区的逛店记录 ↗"
+          },
+          "media": [
+            {
+              "id": "11d4ab757c7c87de",
+              "file": "1.21/动星抽的通行证.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/6155ac83ba72e3eead37-480.webp",
+              "src": "assets/guangzhou/media/6155ac83ba72e3eead37-1600.webp",
+              "width": 727,
+              "height": 1600,
+              "caption": "带走一张通行证"
+            }
+          ]
+        },
+        {
+          "id": "return-flight",
+          "period": "返程",
+          "label": "飞机返程",
+          "picks": [
+            {
+              "file": "1.21/飞机上打卡.jpg",
+              "title": "把小卡片带上飞机",
+              "text": "回到机舱里，把这趟旅行的小记号拿出来留一张。"
+            },
+            {
+              "file": "1.21/飞机餐1.jpg",
+              "title": "回程的飞机餐",
+              "text": "餐盒再次摆上小桌板，这次是回家的路上。"
+            }
+          ],
+          "media": [
+            {
+              "id": "1e8342d1279c2970",
+              "file": "1.21/飞机上打卡.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/3d1897ba57c0d66dad56-480.webp",
+              "src": "assets/guangzhou/media/3d1897ba57c0d66dad56-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "把小卡片带上飞机"
+            },
+            {
+              "id": "b8a75bb75dcc5587",
+              "file": "1.21/飞机餐.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/14289b2ed9c1fe66df45-480.webp",
+              "src": "assets/guangzhou/media/14289b2ed9c1fe66df45-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "飞机返程 · 照片 2"
+            },
+            {
+              "id": "b5718106d14745bc",
+              "file": "1.21/飞机餐1.jpg",
+              "type": "image",
+              "preview": "assets/guangzhou/media/e760f5daa9ed30c94bfb-480.webp",
+              "src": "assets/guangzhou/media/e760f5daa9ed30c94bfb-1600.webp",
+              "width": 1200,
+              "height": 1600,
+              "caption": "回程的飞机餐"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 import { validateTravelMap } from '../assets/js/travel-map-data.js'
 import { prepareJapanTravel } from './prepare-japan-travel.mjs'
+import { prepareShortTrips } from './prepare-short-trips.mjs'
+import { prepareGuangzhouJournal } from './prepare-guangzhou-journal.mjs'
 import { validatePilgrimage } from '../assets/js/pilgrimage-data.js'
 import { prepareActivities } from './prepare-activities.mjs'
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs'
@@ -17,6 +19,8 @@ const out = resolve(root, '_site')
 validatePilgrimage(JSON.parse(readFileSync(resolve(root,'assets/data/pilgrimage.json'),'utf8')))
 const [latestEvent] = await prepareActivities()
 await prepareJapanTravel()
+await prepareShortTrips()
+await prepareGuangzhouJournal()
 validateTravelMap(JSON.parse(readFileSync(resolve(root,'assets/data/pilgrimage-map.json'),'utf8')),JSON.parse(readFileSync(resolve(root,'content/pilgrimage/records.json'),'utf8')).cities.map(city=>city.id))
 if(!existsSync(resolve(root,'assets/data/japan-boundary.geojson')))throw new Error('缺少离线日本底图')
 if (!existsSync(resolve(root,'rank/dist/index.html'))) throw new Error('请先在 rank/ 运行 npm run build')
@@ -74,6 +78,8 @@ const descriptions = {
  'art.html': '菠萝汤包scho的艺术兴趣、音乐与现场活动记录。',
  'anime.html': '菠萝汤包scho的二次元生活：城市逛店、活动记录与喜欢的作品。',
  'travel.html': '菠萝汤包scho的旅行与城市体验记录。',
+ 'short-trips.html': '照片不多，也想留一页。慈溪与更多短途出游的封面卡片、日期和小相册。',
+ 'guangzhou-travel.html': '2026 年 1 月 18–21 日广州四日照片手记：陈家祠、动物园、珠江、黄埔与西关，按天翻阅精选照片和完整相册。',
  'pilgrimage.html': '菠萝汤包scho的圣地巡礼记录：按作品、地点浏览实拍对照与到访手记。',
  'japan-travel.html': '菠萝汤包scho的日本旅行专题：旅程手记、城市见闻与圣地巡礼。',
  'rank/index.html': '菠萝汤包scho的个人逛店体验榜，按城市、地点与标签查找真实体验和店铺资料。',

@@ -1,0 +1,460 @@
+{
+  "1.18/飞机餐.jpg": {
+    "sha256": "b609d21214c1488af78bcd9ee5d959637239ed71b90e408a6bcb0c22339c10d5",
+    "trimBottom": 580
+  },
+  "1.18/陈家祠/1795280329992.jpg": {
+    "sha256": "77b1f7fbe5bc7a4113fd0cde2446d91957c50a521df8cd82767f92defd678da7",
+    "trimBottom": 580
+  },
+  "1.18/陈家祠/1795280330024.jpg": {
+    "sha256": "f0b06da36b93401dd3fcf6b324f7fb44e47e502e03ffebc90237e5cfa68308b3",
+    "trimBottom": 580
+  },
+  "1.18/陈家祠/1795280330139.jpg": {
+    "sha256": "3a5c727cbd309066df1193d5f5d8c9877aabd48aad934583999379ad907eff7c",
+    "trimBottom": 580
+  },
+  "1.18/陈家祠/1795280330169.jpg": {
+    "sha256": "5cc296704e9623c3e5f88a70fd785059cd40a1467fd4aa94958d8d0fe17b4040",
+    "trimBottom": 580
+  },
+  "1.18/陈家祠/1795280330258.jpg": {
+    "sha256": "9252281ce453d7450f59b29db30df44993a5c7017d36c1a4c77f44dc90293794",
+    "trimBottom": 580
+  },
+  "1.18/陈家祠/1795280330318.jpg": {
+    "sha256": "b58ce057454fb476a3832cda85472bee943ea420b1ae932ec7c86b9bef5e1edd",
+    "trimBottom": 580
+  },
+  "1.18/陈家祠/1795280330660.jpg": {
+    "sha256": "7965ae8ce98db27bf70fe94240669066e8643de31099a8a09dab12d1177a7d7a",
+    "trimBottom": 580
+  },
+  "1.18/陈家祠/1795280330716.jpg": {
+    "sha256": "527f80cde1aebce44a27e5f7e96272dde95d6ec53879fe0f882e105fd7113338",
+    "trimBottom": 580
+  },
+  "1.18/陈家祠/1795280330745.jpg": {
+    "sha256": "b9bebad69d490e575ff707ea0ca165cdfe21185fe83fa6a52418b12242ecb734",
+    "trimBottom": 580
+  },
+  "1.18/广州街头看到的特色大楼.jpg": {
+    "sha256": "0dd06e8d515ba3319121fd529737bc648949a38ff9b4ede4bb668d293e103160",
+    "trimBottom": 580
+  },
+  "1.18/晚餐：茶点轩/1795280329957.jpg": {
+    "sha256": "15576b1851190b299f4124bccffd4a4ea142f9a7f27cbc8d5e0833e77467cd8e",
+    "trimBottom": 580
+  },
+  "1.18/晚餐：茶点轩/1795280330424.jpg": {
+    "sha256": "41bcd11188c9b37ef65a736714d9ee628cfa7432e0e70ede050979e1520d9543",
+    "trimBottom": 580
+  },
+  "1.18/晚餐：茶点轩/1795280330448.jpg": {
+    "sha256": "ca76aea42d6a6be46bfc7ec1b04a8d17f7df39f9422e643151dbda0f114fcb9c",
+    "trimBottom": 580
+  },
+  "1.18/晚餐：茶点轩/1795280330590.jpg": {
+    "sha256": "06d86e0d5e433b29e6308b31cf2cebc19147b7231ac919dc334dcee5a0f38e92",
+    "trimBottom": 580
+  },
+  "1.18/晚餐：茶点轩/wx_camera_1768728774164.jpg": {
+    "sha256": "5eb0652ea9ee94be99a707d7c676b8fd65a9c988f83b8a067bc3420aee06fa67",
+    "trimBottom": 0
+  },
+  "1.18/北京路步行街+大佛寺/1795280330051.jpg": {
+    "sha256": "9d34c694a893c20d5a3b18976cc40292fd535c0eed9d33ed9ea28ce10444e6f1",
+    "trimBottom": 580
+  },
+  "1.18/北京路步行街+大佛寺/1795280330082.jpg": {
+    "sha256": "43093177b5a22a468d23032bd8d0e739df4ab6832d5175ec70ebebbf45c48dad",
+    "trimBottom": 580
+  },
+  "1.18/北京路步行街+大佛寺/1795280330203.jpg": {
+    "sha256": "fe31261fc425ec8e6069fdccf7a870fe68c53f5db2dab99ef01833a4fbbe8403",
+    "trimBottom": 580
+  },
+  "1.18/北京路步行街+大佛寺/1795280330289.jpg": {
+    "sha256": "79206dc191143bfc4230e5bef1f3452096054cbb92a775dc6031e4b3bd9a50b6",
+    "trimBottom": 580
+  },
+  "1.18/北京路步行街+大佛寺/1795280330470.jpg": {
+    "sha256": "dd23f296be94363c1a783bda0603ebe47d00a7f3ae77303e85fb51152594d8ba",
+    "trimBottom": 580
+  },
+  "1.18/北京路步行街+大佛寺/1795280330553.jpg": {
+    "sha256": "5dc81f4c6253849386b8159f13cc84cf67fba7ce163b5a5c5a732e4886d15b1c",
+    "trimBottom": 580
+  },
+  "1.18/动星/1795280330114.jpg": {
+    "sha256": "89f0bf3765a3630f1135e86e7276c05ccc656fa324e609b4fa6c861d2e3f3185",
+    "trimBottom": 580
+  },
+  "1.18/动星/1795280330343.jpg": {
+    "sha256": "42bf99c1333578842553b2a817bfc4b6f9bc6cb33a0bad610b50c818275622d0",
+    "trimBottom": 580
+  },
+  "1.18/动星/VID20260118215231.mp4": {
+    "sha256": "a8aa1a8b7e33115fb87f28e20c0389af4f18ff982d027f6c3ff3eef9d0a93dfd",
+    "trimBottom": 0
+  },
+  "1.19/广州动物园/1795280055305.jpg": {
+    "sha256": "a882b8a926e153c5b4bfec83d20263b247ae80ca8324f9af296f9590e14b94f2",
+    "trimBottom": 580
+  },
+  "1.19/广州动物园/1795280055394.jpg": {
+    "sha256": "baa7678443b9edbb7fff98ce4a0e0b2c2e1bc2f0e24121098bc6b84d8e192c32",
+    "trimBottom": 580
+  },
+  "1.19/广州动物园/1795280055512.jpg": {
+    "sha256": "d7dc1e23c4a81a37cf4a74991c72e6d355770c7eb745134423fa5e00602028ff",
+    "trimBottom": 580
+  },
+  "1.19/广州动物园/1795280055631.jpg": {
+    "sha256": "f1cc0672bdb1ceee190e4cef3c274055a0866b1d1bf3524a372489c4a9a826dd",
+    "trimBottom": 580
+  },
+  "1.19/广州动物园/1795280056019.jpg": {
+    "sha256": "624b31c84df491cdbe03812fd2691fcf81bae61fd2554fd097179bd1d1f74460",
+    "trimBottom": 580
+  },
+  "1.19/广州动物园/1795280056060.jpg": {
+    "sha256": "9319c870f93a05fa13966d560d574745694fa689818eca3d539793b063d10b15",
+    "trimBottom": 580
+  },
+  "1.19/广州动物园/1795280056243.jpg": {
+    "sha256": "2e8715b6241c0f64d24d805a9f218ce89871d0bf0a189b92c6ca5e15be974480",
+    "trimBottom": 580
+  },
+  "1.19/广州动物园/1795280056310.jpg": {
+    "sha256": "ac7eef8c04c57c1478f1c6f6f48762f7993c9e8650b41ed64aed8c845034495b",
+    "trimBottom": 580
+  },
+  "1.19/广州动物园/1795280056563.jpg": {
+    "sha256": "9cb498de1136c6ec3c6ed754f5999d46cdb4c7915d11c3b9a90a9b1367c68e10",
+    "trimBottom": 580
+  },
+  "1.19/广州动物园/1795280056727.jpg": {
+    "sha256": "1edd4213e4f676c3053a30af752018189de2b1fb3c2e919ce8aed0e825f6cc57",
+    "trimBottom": 580
+  },
+  "1.19/广州动物园/1795280057180.jpg": {
+    "sha256": "2915111a737cfb69be17152542b496a99c710667fa0ec75fc6b348604ed4c049",
+    "trimBottom": 580
+  },
+  "1.19/广州动物园/1795280057256.jpg": {
+    "sha256": "86189a2822e43a2eb415168241960d984be0382698aa59303b4e8c62187dd25d",
+    "trimBottom": 580
+  },
+  "1.19/广州动物园/1795280057297.jpg": {
+    "sha256": "1f3ad8a00784509768db8588a983935bdcca4cdbc38821caadfa635babaa41c7",
+    "trimBottom": 580
+  },
+  "1.19/广州动物园/1795280057461.jpg": {
+    "sha256": "45cbfecf13c92925ce2fd70e6ed862dbf8fab28f8a0ac5e756257d0cfeecd6f1",
+    "trimBottom": 0
+  },
+  "1.19/广州动物园/1795280057613.jpg": {
+    "sha256": "34910b4aec7109a8087789015b690650cfa8a305e539e5ff25cc5a02115b23e3",
+    "trimBottom": 580
+  },
+  "1.19/广州动物园/VID20260119104802.mp4": {
+    "sha256": "0ac3d850d72c21379fe27a78e36710cca55fba8979be1a35d9f7513b1a0fd7a5",
+    "trimBottom": 0,
+    "videoSettings": {
+      "profile": "720p",
+      "segments": [
+        [
+          35,
+          70
+        ]
+      ]
+    }
+  },
+  "1.19/广州动物园/VID20260119105526.mp4": {
+    "sha256": "1a908dc951d214d12079f42f908a64b208f4e6090b5869c39d35bb15cc9364eb",
+    "trimBottom": 0,
+    "videoSettings": {
+      "profile": "720p",
+      "segments": [
+        [
+          0,
+          5
+        ],
+        [
+          35,
+          70
+        ]
+      ]
+    }
+  },
+  "1.19/广州动物园/VID20260119111300.mp4": {
+    "sha256": "86ed4ae4603ad09d384cc1e8a62459209fc0987d92491f8c26308fbfbd098049",
+    "trimBottom": 0,
+    "videoSettings": {
+      "profile": "720p",
+      "segments": null
+    }
+  },
+  "1.19/广州动物园/VID20260119112652.mp4": {
+    "sha256": "bd239bdd20821b8a96ebc1d3f7824d9cc6615b23701c4675168124322793943c",
+    "trimBottom": 0,
+    "videoSettings": {
+      "profile": "720p",
+      "segments": null
+    }
+  },
+  "1.19/广州动物园/VID20260119114313.mp4": {
+    "sha256": "5a7c495dfda17180f9b3651d5770bd13f6dfb2e63cde7634bc1653bfb9b57311",
+    "trimBottom": 0
+  },
+  "1.19/广州动物园/VID20260119115103.mp4": {
+    "sha256": "304f5884adf74d9b7d3a49f8e35dc5b1ca0902dc860d8f8af092a7ed0e79739e",
+    "trimBottom": 0,
+    "videoSettings": {
+      "profile": "720p",
+      "segments": null
+    }
+  },
+  "1.19/午餐：民记煲仔饭（时尚天河附近）/1795280055695.jpg": {
+    "sha256": "d555c4c57cc4860f6766302c0a1bf767ad2fd1c2fde9e0ebc9edc45d0b06aa5e",
+    "trimBottom": 580
+  },
+  "1.19/午餐：民记煲仔饭（时尚天河附近）/1795280056154.jpg": {
+    "sha256": "4fe538423779f690fa2e8917fe7f8b8bac71cb2198e4760abf759bd6b101b0e8",
+    "trimBottom": 580
+  },
+  "1.19/午餐：民记煲仔饭（时尚天河附近）/1795280057144.jpg": {
+    "sha256": "93c459451efe833e2f8d87596b2f86277bef71aae98d145534a56fd399dc2a32",
+    "trimBottom": 580
+  },
+  "1.19/午餐：民记煲仔饭（时尚天河附近）/1795280057224.jpg": {
+    "sha256": "11b3052e3427d424086b733cf68f72d5e23eca0d3e12ec25f25c6a2f572d8fcd",
+    "trimBottom": 580
+  },
+  "1.19/广州塔/1795280056956.jpg": {
+    "sha256": "305ea4fc1f487fd1d4667647c8c669bb88100cd3afe0b630ddbf0dbc0170f72f",
+    "trimBottom": 580
+  },
+  "1.19/广州塔/1795280057074.jpg": {
+    "sha256": "015aa6a11356b13749e9fbe0babca1242cbcec953b75bc76832e8ca9acc9dcbc",
+    "trimBottom": 580
+  },
+  "1.19/广州塔/1795280057353.jpg": {
+    "sha256": "d4531080d66148d56855e2b4a10e3e01e91c6af855cc75b256fe90500eb07353",
+    "trimBottom": 580
+  },
+  "1.19/广州塔/广州塔花车巡礼逛街/1795280055459.jpg": {
+    "sha256": "5e092fdb90d195f493bb6a6293bed9541969e5e8ea32b5d2de3f67d54019a07b",
+    "trimBottom": 580
+  },
+  "1.19/广州塔/广州塔花车巡礼逛街/1795280055663.jpg": {
+    "sha256": "70b11322d06cd31b466a1c4afac35ed20ab2798bbe1d0ea055d4bf540ab01567",
+    "trimBottom": 580
+  },
+  "1.19/广州塔/广州塔花车巡礼逛街/1795280055799.jpg": {
+    "sha256": "6e14710a4f3e3ab70e1cc41a4b7d83ec097b65cbf8be847a0fe0396b67c31c89",
+    "trimBottom": 580
+  },
+  "1.19/广州塔/广州塔花车巡礼逛街/1795280057582.jpg": {
+    "sha256": "4e5e629e8c6faca3d844b48296b780a05d531846634a16f787fb28272565e8c2",
+    "trimBottom": 580
+  },
+  "1.19/广州塔/1795280055359.jpg": {
+    "sha256": "233d0ee79d8bd10bca139dbe57e182dd884d46c73b6d0bf1679ccb331438df3f",
+    "trimBottom": 580
+  },
+  "1.19/广州塔/1795280055965.jpg": {
+    "sha256": "fbbe550ddbfa072da4759708bf2fcd092048817de81321c1f9a9f1520303f851",
+    "trimBottom": 580
+  },
+  "1.19/晚餐：炳胜/1795280055827.jpg": {
+    "sha256": "5425db016d8c60b5ed0041c2dd9a8afceace6c4c8014d27b74c8c61716b701a9",
+    "trimBottom": 580
+  },
+  "1.19/晚餐：炳胜/1795280056432.jpg": {
+    "sha256": "d74130aae25ea0366317e8621d099964ff5e3d7a243d76dfc5030540d461dc5e",
+    "trimBottom": 580
+  },
+  "1.19/晚餐：炳胜/1795280057693.jpg": {
+    "sha256": "0fd81ebc6182d0922a50d5f5ff5f76d891dfdac2c7e79578b85fe0fe6c7a5756",
+    "trimBottom": 580
+  },
+  "1.19/晚餐：炳胜/1795280057842.jpg": {
+    "sha256": "a835da0fc7ad1dfc4e8b9acbfa88735c7c32652041ac5cbf842853d091a75305",
+    "trimBottom": 580
+  },
+  "1.20/黄埔军校/1795275373510.jpg": {
+    "sha256": "2ae646a5166de031074b17c694367624cd7794201f629bb1f8c078ef6b63fbf6",
+    "trimBottom": 580
+  },
+  "1.20/黄埔军校/1795275373667.jpg": {
+    "sha256": "98817c5c59cadb16e5df76083719a02702977931b471efe6d35508a6f339b53c",
+    "trimBottom": 580
+  },
+  "1.20/黄埔军校/1795275373735.jpg": {
+    "sha256": "94d8544708b7086cbedc8872ddddde605d968871b5a35531d49864c678e52f9a",
+    "trimBottom": 580
+  },
+  "1.20/黄埔军校/1795275373885.jpg": {
+    "sha256": "6af0409561e354e4cac91b7d863b84ef6bd4e7f4b003be2ef0b0e70ce2c68542",
+    "trimBottom": 580
+  },
+  "1.20/黄埔军校/1795275373921.jpg": {
+    "sha256": "5cb5818a3664dc9179875fc570f2f9c3c1c0f5c5e232d84b7fd80b10058eacdb",
+    "trimBottom": 580
+  },
+  "1.20/黄埔军校/1795275374273.jpg": {
+    "sha256": "ce01d02eb84578b552e8413abb41907f364ece20153eb9aa4823f5851cdbc449",
+    "trimBottom": 580
+  },
+  "1.20/黄埔军校/1795275374351.jpg": {
+    "sha256": "2a4ee2e6f2d89f1aee91fdda2278e885c42493aa13bbd1ef55258f258cb771ac",
+    "trimBottom": 580
+  },
+  "1.20/黄埔军校/1795275374403.jpg": {
+    "sha256": "28d575b8174d429056dc56fe66c707cf6907d5ce53689f22aee20f49aa4ace1b",
+    "trimBottom": 580
+  },
+  "1.20/黄埔军校/1795275374433.jpg": {
+    "sha256": "a932f0a0b3f83b9b03b299579863991f6d0d2b32619c8ed2fcbef1618a283817",
+    "trimBottom": 580
+  },
+  "1.20/沙面岛海关.jpg": {
+    "sha256": "a8e41a46e704c5bd385f97629b23d9cfdf63707e1a42dd4a5ee2eb62febaeacd",
+    "trimBottom": 580
+  },
+  "1.20/友联菜馆/1795275373561.jpg": {
+    "sha256": "a837cd12d9d9417175fbba36d39d83abb4c9ba39a7399bc156fbef8756b67126",
+    "trimBottom": 580
+  },
+  "1.20/友联菜馆/1795275374373.jpg": {
+    "sha256": "e6f00bc8cd15cb55bbaf1b7106642a06b0877f8b61bc22648b245fd14c4eab3f",
+    "trimBottom": 580
+  },
+  "1.20/永庆坊/1795275373485.jpg": {
+    "sha256": "8e2035156a386e5ed29254112e1dbbe7e024d205408008b4761f744634bc0c9c",
+    "trimBottom": 580
+  },
+  "1.20/永庆坊/1795275373951.jpg": {
+    "sha256": "05d6e0a849aed7e60fccf30611ed8886512a964cedaf972ef2e427478b69b76a",
+    "trimBottom": 580
+  },
+  "1.20/地王广场.png": {
+    "sha256": "7bcc71f8575a910cf7999c38d7ba7046eb022d34e44491699dd5516307291ad2",
+    "trimBottom": 0
+  },
+  "1.20/甜品.jpg": {
+    "sha256": "026df04bd1909a0e603288551f79a67703317b5b640aebe4e6b81edea91b4b73",
+    "trimBottom": 580
+  },
+  "1.21/南越王博物馆/1795076255932.jpg": {
+    "sha256": "6005569ac138cea7b354eca5bee3cf3e2228059746121a00578aef5e500d11be",
+    "trimBottom": 580
+  },
+  "1.21/南越王博物馆/1795076256052.jpg": {
+    "sha256": "f2ee39aaa260534188b667bb107ec763d29a6b1d2cf356c6c532dc40246b8497",
+    "trimBottom": 580
+  },
+  "1.21/南越王博物馆/1795076256073.jpg": {
+    "sha256": "736f965c7f8e9167e6e5dd09eef657ade77da5966f85e372fec04886e7d7e9df",
+    "trimBottom": 580
+  },
+  "1.21/南越王博物馆/1795076256095.jpg": {
+    "sha256": "fa7cea5c847dae6dbcf355283dfcbaab30f5bcc4d3ea343fdd7745ab11be4e85",
+    "trimBottom": 580
+  },
+  "1.21/南越王博物馆/1795076256386.jpg": {
+    "sha256": "876f6c76054ed7641eea3254cc495f6af4e8c0770af9d31b1c7627be38ba528f",
+    "trimBottom": 580
+  },
+  "1.21/南越王博物馆/1795076256482.jpg": {
+    "sha256": "dab80b1e8d06ff3b5a774bcb186e649bbde030d4ba95336eca364bd21209570f",
+    "trimBottom": 580
+  },
+  "1.21/南越王博物馆/1795076256664.jpg": {
+    "sha256": "3e22aaaf43208fad46713e4c3117e5073f7d07c5a5a310eea1093fda475ece81",
+    "trimBottom": 580
+  },
+  "1.21/南越王博物馆/1795076256728.jpg": {
+    "sha256": "ebf6c5402155159d37cb3c3cf4d778420d63b5d1c091a9a6deadbcf87616f2bd",
+    "trimBottom": 580
+  },
+  "1.21/南越王博物馆/1795076256797.jpg": {
+    "sha256": "2e361cc40d1a9f0c98c615e27eba5447a97db931762b5325c96c99800e9fde0d",
+    "trimBottom": 580
+  },
+  "1.21/南越王博物馆/1795076256831.jpg": {
+    "sha256": "b72e4844bb07a591c3e8abfdc8791d2b84b658e7bd0f38d0110bd6f72f6c05ed",
+    "trimBottom": 580
+  },
+  "1.21/南越王博物馆/1795076256936.jpg": {
+    "sha256": "1148b03adc28a144fb6df130e510ea357bdd21d87ccd1428c855fe28d45db65f",
+    "trimBottom": 580
+  },
+  "1.21/南越王博物馆/1795076256995.jpg": {
+    "sha256": "222ec0ce1889bfc2b8e27483d7f6df4927697d187d24d733b1fa798d7425b312",
+    "trimBottom": 580
+  },
+  "1.21/南越王博物馆/1795076257126.jpg": {
+    "sha256": "a4ed95b5854f1e24923d67a637449d12f8bba3456cfe2b20daab4a1795f3a9c9",
+    "trimBottom": 580
+  },
+  "1.21/南越王博物馆/1795076257328.jpg": {
+    "sha256": "e09632d561048b24dead472f603f6ca5f992ff48c95a1c21567bef65e3ee3a69",
+    "trimBottom": 580
+  },
+  "1.21/南越王博物馆/1795076257352.jpg": {
+    "sha256": "c4eafae9d6b97adfa6b54b4e1b30b1a74191f753859ed42dedcaeee138c0b2ee",
+    "trimBottom": 580
+  },
+  "1.21/中山纪念堂/1795076256158.jpg": {
+    "sha256": "9aaa4152fd5fe9216c2f0b054eef979c66a174e5bb918349c7005e4079868c4a",
+    "trimBottom": 580
+  },
+  "1.21/中山纪念堂/1795076257046.jpg": {
+    "sha256": "d8e5dfd8222b3960faf56bb9c89af2daecef23dad568c9ce656549c09cce5af7",
+    "trimBottom": 580
+  },
+  "1.21/中山纪念堂/1795076257080.jpg": {
+    "sha256": "d29a93b97089462f37e0c50b62e4e908378d53b2482901390a42f2fd34d37c38",
+    "trimBottom": 580
+  },
+  "1.21/圣心大教堂/1795076256266.jpg": {
+    "sha256": "048306e9be3aacc830b56657cfa6bd6ddc6bc6653ca5b42635d4f0389e51011b",
+    "trimBottom": 580
+  },
+  "1.21/圣心大教堂/1795076257249.jpg": {
+    "sha256": "9056e9d5c9fad9754a44fa91d6d18952781605f8f329ccd6fa38c41ff7a049e0",
+    "trimBottom": 580
+  },
+  "1.21/圣心大教堂/附近吃的甜品.jpg": {
+    "sha256": "ecd3d4f7bf7cf0278220294f352ec9013f4432fd3904b20861d24ad0155d8420",
+    "trimBottom": 580
+  },
+  "1.21/東園/1795076256453.jpg": {
+    "sha256": "1786fc0dfc18052039d10382592a21a8ce5345143ae42e5b48ba9fa631e8aa9c",
+    "trimBottom": 580
+  },
+  "1.21/東園/1795076256764.jpg": {
+    "sha256": "f747bc45b98f4a8939f08293e37528ae5216c6c59ec7f0d14efa40413fb4fc6a",
+    "trimBottom": 580
+  },
+  "1.21/动星抽的通行证.jpg": {
+    "sha256": "1b36535bdb14749153bd5305b3a757f4d97e372bddb14105c690768d6a2008af",
+    "trimBottom": 0
+  },
+  "1.21/飞机上打卡.jpg": {
+    "sha256": "fdd0d548d73b605e7d542ac5940a4b992bc38371a1b9232325c7b4822868cc33",
+    "trimBottom": 580
+  },
+  "1.21/飞机餐.jpg": {
+    "sha256": "43a9200a494951321d9139ac8c6104e70d03e7221c8a202ed9bab08e02c8639e",
+    "trimBottom": 580
+  },
+  "1.21/飞机餐1.jpg": {
+    "sha256": "e65cda0a8eb6f3543b6e8a2c225094d6db0384463d96740976ba9a2a3d4d209e",
+    "trimBottom": 580
+  }
+}

@@ -55,5 +55,43 @@
     },
     "preview": "assets/images/snapshots/anime-nine-preview.webp",
     "fullImage": "assets/images/snapshots/anime-nine-view.webp"
+  },
+  {
+    "id": "anime-characters-2025",
+    "title": "2025 年底动画人物",
+    "heading": "2025 年底",
+    "highlight": "动画人物",
+    "sticker": "我的动画角色偏好！",
+    "description": "从本命、初恋到最佳性格，用十五个格子记下 2025 年底喜欢的动画角色。",
+    "tags": ["✦ 动画", "角色喜好", "十五格"],
+    "countLabel": "15",
+    "recordedAt": "2026-11-22",
+    "source": {
+      "type": "user-provided",
+      "originalName": "2025年底动画人物.jpg",
+      "archive": ".local-media/personal-snapshots/anime-characters-2025.jpg",
+      "sha256": "5e0f9128a123e78aba1dcac364960d32fe7548ed5b45f75b7846ed759e0be382"
+    },
+    "preview": "assets/images/snapshots/anime-characters-2025-preview.webp",
+    "fullImage": "assets/images/snapshots/anime-characters-2025-view.webp"
+  },
+  {
+    "id": "arknights-operators-2025",
+    "title": "2025 年 9 月明日方舟干员拼图",
+    "heading": "2025 年 9 月",
+    "highlight": "干员拼图",
+    "sticker": "我的方舟干员偏好！",
+    "description": "把各职业里喜欢的干员拼成一张图，留下 2025 年 9 月的方舟偏好。",
+    "tags": ["✚ 明日方舟", "干员", "趣味存档"],
+    "countLabel": "08",
+    "recordedAt": "2026-11-22",
+    "source": {
+      "type": "user-provided",
+      "originalName": "25.9粥粥XP.png",
+      "archive": ".local-media/personal-snapshots/arknights-operators-2025.png",
+      "sha256": "1c9313c72315a69d82aefd4f6b973703a06a8ea64441c5b36288344a65592fbb"
+    },
+    "preview": "assets/images/snapshots/arknights-operators-2025-preview.webp",
+    "fullImage": "assets/images/snapshots/arknights-operators-2025-view.webp"
   }
 ]

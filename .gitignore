@@ -20,6 +20,11 @@ playwright-report/
 /content/pilgrimage/2026-4：杭州/**/*.jpg
 /content/pilgrimage/2026-4：杭州/**/*.mp4
 
+# 广州手记提交 assets/guangzhou 网页副本；源素材保留本地，顺序说明仍可提交。
+/content/pilgrimage/2026-1：广州/**/*.jpg
+/content/pilgrimage/2026-1：广州/**/*.png
+/content/pilgrimage/2026-1：广州/**/*.mp4
+
 # Local music originals and downloads. Publish the MP3 copies.
 /assets/music/*.flac
 /assets/music/KugouMusic/

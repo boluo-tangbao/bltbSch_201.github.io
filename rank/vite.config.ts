@@ -24,6 +24,8 @@ const homeRoot = fileURLToPath(new URL('../', import.meta.url))
 const homeFiles = new Set([
   'index.html', 'sports.html', 'art.html', 'anime.html', 'travel.html', 'activities.html',
   'hangzhou-travel.html', 'lanzhou-travel.html', 'lanzhou-day-story.html', 'japan-travel.html',
+  'short-trips.html',
+  'guangzhou-travel.html',
 ])
 const mimeTypes: Record<string, string> = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.webp': 'image/webp', '.gif': 'image/gif', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.svg': 'image/svg+xml', '.json': 'application/json', '.geojson': 'application/geo+json', '.mp4': 'video/mp4', '.mp3': 'audio/mpeg', '.m4a': 'audio/mp4', '.wav': 'audio/wav', '.ogg': 'audio/ogg', '.flac': 'audio/flac' }
 

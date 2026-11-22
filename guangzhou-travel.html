@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>广州四日 · 从祠堂到珠江</title>
+  <meta name="description" content="2026 年 1 月 18–21 日的广州旅行照片手记。按天翻过陈家祠、动物园、珠江、黄埔与西关，再从展柜回到归途。">
+  <link rel="stylesheet" href="assets/lanzhou/story.css">
+  <link rel="stylesheet" href="assets/hangzhou/journal.css">
+  <link rel="stylesheet" href="assets/css/photo-journal.css">
+</head>
+<body>
+<main class="book">
+  <nav class="mast" aria-label="旅行导航"><a href="travel.html">← 旅行手记</a><span>广州行 <i></i> 2026</span><a href="guangzhou-travel.html">四日行程 ↗</a></nav>
+  <p id="journal-status" class="journal-status" role="status">正在翻开广州手记…</p>
+  <section id="trip-overview" hidden aria-labelledby="trip-title">
+    <header class="journey-intro"><p class="date">2026.01.18 — 01.21　／　广东 · 广州</p><h1 id="trip-title">广州四日<span>。</span></h1><p class="journey-subtitle">从祠堂到珠江，把四天慢慢翻完。</p><p class="journey-tally" id="trip-count"></p></header>
+    <div class="day-strip" id="day-strip" aria-label="选择旅行日期"></div>
+    <p class="journey-hint">选一天，从当天的照片开始。也可以展开相册，慢慢看完整段行程。</p>
+  </section>
+  <article id="day-journal" hidden>
+    <header class="journal-heading"><p class="date" id="day-date"></p><h1 id="day-title"></h1><p class="day-route" id="day-route"></p></header>
+    <section id="story" class="journal-section" aria-labelledby="story-title">
+      <div class="section-heading"><h2 class="section-title" id="story-title">当天手记</h2><a class="story-album-link" href="#album">当天相册 ↘</a></div>
+      <nav id="periods" class="periods" aria-label="按时段翻阅手记"></nav>
+      <div class="spread"><div class="visual" id="visual"><div class="shot" id="story-photo"></div></div><div class="note"><div class="folio"><span id="counter"></span><span id="place"></span></div><h3 id="scene-title"></h3><p id="prose"></p><a id="scene-link" class="scene-link" hidden></a><button id="story-clip" class="clip" type="button" hidden>看现场片段</button></div></div>
+      <div class="transport"><button id="play" type="button" aria-pressed="false">播放手记</button><div class="track" aria-hidden="true"><span id="progress"></span></div><button id="back" type="button" aria-label="上一页">←</button><button id="next" type="button" aria-label="下一页">→</button></div>
+      <nav class="contents" id="contents" aria-label="按站点翻阅"></nav>
+    </section>
+    <section class="journal-section" id="album" aria-labelledby="album-title"><div class="album-context"><span id="album-date"></span><a href="#story">返回当天手记 ↑</a></div><div class="album-heading"><h2 class="section-title" id="album-title">当天相册</h2><p id="album-count"></p></div><div class="filters" id="filters" role="group" aria-label="筛选相册时段"></div><div id="album-groups"></div></section>
+    <nav id="day-links" class="day-links" aria-label="继续翻阅其他日期"></nav>
+    <div class="journal-share"><button id="share-day" type="button">复制当天手记链接</button><p id="share-status" role="status"></p><input id="share-url" aria-label="当天手记分享链接" readonly hidden></div>
+  </article>
+  <noscript>请启用 JavaScript，查看四日行程、精选照片和当天相册。</noscript>
+</main>
+<dialog id="viewer" aria-labelledby="media-title"><div class="viewer-bar"><span id="media-title"></span><button type="button" id="close-viewer">关闭</button></div><div class="viewer-stage" id="stage"></div><div class="viewer-bar viewer-controls"><button type="button" id="previous-media">上一项</button><span id="media-count" aria-live="polite"></span><button type="button" id="next-media">下一项</button></div></dialog>
+<footer class="journal-footer">汤包的生活手记 · 广州四日 · 2026</footer>
+<script src="assets/js/travel-story-playback.js"></script><script type="module" src="assets/js/photo-journal.js"></script>
+</body></html>
