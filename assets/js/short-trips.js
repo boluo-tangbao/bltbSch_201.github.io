@@ -44,7 +44,9 @@ if (root) {
   root.querySelector('[data-trip-title]').textContent=active.title;
   root.querySelector('[data-trip-meta]').textContent=active.date+' · '+active.city+' · '+count(active);
   root.querySelector('[data-trip-note]').textContent=active.description;
-  renderGallery();root.querySelector('[data-trip-title]').focus({preventScroll:true});
+  renderGallery();
+  root.scrollIntoView({block:'start',behavior:'instant'});
+  root.querySelector('[data-trip-title]').focus({preventScroll:true});
  }
  async function load() {
   try {
