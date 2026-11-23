@@ -194,5 +194,13 @@
   "content/activities/2025-7-25：野田爱实live/1795311559339.mp4": {
     "sha256": "51084604860cb5f39d5b280448fc2c1ede6df67d0c23a8e7dc258f6bb7e6bdc2",
     "originalSha256": "31c45e3cae9348a5f5320520d98acdc197e6f839a4763f33e1c8e9bea267ab27"
+  },
+  "content/activities/2025-05-16：ACL CS2 总决赛/1795359235959.mp4": {
+    "sha256": "000855e068984f156fc0ac99881c6b4bc7a2df90913e13318ae6eac285ac0250",
+    "originalSha256": "2a12af077451b73ad69eb8a994920dbc92ed25ab5754671acee15868c0c17d12",
+    "trim": {
+      "startSeconds": 16.6,
+      "endSeconds": 26.6
+    }
   }
 }
