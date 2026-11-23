@@ -12,7 +12,7 @@ test('统一入口可往返，手机控制台滚动后仍可见并避开行程�
   const fits = async () => expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
   const evidence = resolve('../test-results/acceptance/evidence')
   mkdirSync(evidence, { recursive: true })
-  for (const path of ['../', '../sports.html', '../art.html', '../anime.html', '../travel.html', '../activities.html']) {
+  for (const path of ['../', '../culture.html', '../sports.html', '../art.html', '../anime.html', '../travel.html', '../activities.html']) {
     await page.goto(path)
     await expect(page.locator('.logo')).toContainText('汤包的生活手记')
     await expect(page.locator('.nav-links a[aria-current="page"]')).toHaveCount(1)

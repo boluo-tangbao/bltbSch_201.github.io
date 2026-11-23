@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>文体生活 | 汤包的生活手记</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=10" />
+  <link rel="stylesheet" href="assets/css/activities.css?v=8" />
+  <link rel="stylesheet" href="assets/css/site-console.css?v=14" data-site-console-style />
+</head>
+
+<body class="culture-page">
+  <div class="click-layer" id="clickLayer"></div>
+
+  <header class="page-hero">
+    <nav class="navbar">
+      <a class="logo" href="index.html" aria-label="汤包的生活手记 · 个人主页"><strong>汤包的生活手记</strong><small>菠萝汤包scho · 个人主页</small></a>
+      <div class="nav-links nav-links-grouped">
+        <div class="nav-group nav-primary" role="group" aria-label="主要入口">
+          <a href="index.html">个人主页</a>
+          <a href="rank/">逛店榜单</a>
+          <a href="activities.html">活动记录</a>
+        </div>
+        <div class="nav-group nav-topics" role="group" aria-label="生活分类">
+          <a href="culture.html" aria-current="page">文体生活</a>
+          <a href="anime.html">二次元</a>
+          <a href="travel.html">旅行</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="page-hero-content">
+      <p class="eyebrow">01 / Arts &amp; Sports</p>
+      <h1>文体生活</h1>
+      <p class="page-hero-text">球场、舞台和展厅，把喜欢的事留在现场。</p>
+    </div>
+  </header>
+
+  <main class="detail-main">
+    <section class="event-section event-preview" id="event-records" data-topic="culture" data-preview-count="3" aria-labelledby="event-section-title">
+      <header class="event-section-header"><div><span class="event-kicker">LIVE / 文体现场</span><h2 id="event-section-title">最近的文体活动</h2><p>从演出到比赛，按时间翻阅。</p></div><a class="event-all-link" href="activities.html?topic=culture#event-records">查看全部文体记录 ↗</a></header>
+      <nav class="event-filters" aria-label="文体活动筛选">
+        <a href="culture.html" data-preview-topic="culture" aria-current="page">全部</a>
+        <a href="culture.html?topic=art" data-preview-topic="art">艺术</a>
+        <a href="culture.html?topic=sports" data-preview-topic="sports">体育</a>
+      </nav>
+      <p id="event-preview-status" class="event-status" role="status">正在加载活动预览…</p>
+      <div class="event-grid" id="event-preview-grid"></div>
+      <noscript><a href="activities.html?topic=culture">前往文体活动记录</a></noscript>
+    </section>
+
+    <section class="detail-panel" aria-labelledby="culture-about">
+      <h2 id="culture-about">看现场，也在日常里参与</h2>
+      <p>喜欢音乐、历史、电影和故事，也会跑步、健身、踢球、游泳、打羽毛球。运动帮我调整节奏，艺术让我感受情绪与故事；这里留下到过的现场。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 菠萝汤包scho · 汤包的生活手记 · Arts &amp; Sports</p>
+  </footer>
+
+  <script src="assets/js/script.js?v=10"></script>
+  <script type="module" src="assets/js/anime-activities.js?v=5"></script>
+  <script src="assets/js/site-console.js?v=20" defer></script>
+</body>
+</html>

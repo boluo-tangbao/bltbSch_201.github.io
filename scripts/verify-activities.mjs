@@ -140,7 +140,7 @@ try{
  await page.goto(base+'anime.html#event/'+acg[0].id);await page.waitForURL('**/activities.html?topic=acg#event/'+acg[0].id);await page.locator('#event-album').waitFor({state:'visible'});
  await page.unroute('**/anime.html');
  // 所有主站页面、导航与 CSS/JS/图片引用可以访问。
- for(const file of ['index.html','sports.html','art.html','anime.html','travel.html','activities.html']) {
+ for(const file of ['index.html','culture.html','sports.html','art.html','anime.html','travel.html','activities.html']) {
   await page.goto(base+file);await page.waitForLoadState('networkidle');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   const refs=await page.locator('[src],link[rel="stylesheet"],a[href]').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('src')||n.getAttribute('href')).filter(Boolean));
   for(const ref of new Set(refs))if(!/^(https?:|#|mailto:)/.test(ref)){const response=await page.request.get(new URL(ref,base+file).href);assert.ok(response.ok(),file+': '+ref);}
@@ -207,7 +207,7 @@ try{
   assert.deepEqual(await response.body(),originalGif,preview+' GIF 应保留完整原字节');
   assert.ok((await page.request.get(preview+'assets/images/transitions/mutsumi-loading-poster.webp')).ok(),preview+' 切页静态预览');
  }
- for(const file of ['index.html','sports.html','art.html','anime.html','travel.html','activities.html','assets/css/style.css','assets/js/activities.js','assets/generated/activities/manifest.json',videoEvent.media.find(m=>m.type==='video').src])assert.ok((await page.request.get(devBase+file)).ok(),file);
+ for(const file of ['index.html','culture.html','sports.html','art.html','anime.html','travel.html','activities.html','assets/css/style.css','assets/js/activities.js','assets/generated/activities/manifest.json',videoEvent.media.find(m=>m.type==='video').src])assert.ok((await page.request.get(devBase+file)).ok(),file);
  // All five Vite entries must load the one shared script from the home assets.
  for(const file of ['rank/','rank/guide/','rank/qa/','rank/updates/','rank/route/']) {
   const html=await (await page.request.get(devBase+file)).text();

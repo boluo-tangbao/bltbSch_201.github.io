@@ -12,3 +12,9 @@ test('old topic and new multi-topic metadata resolve consistently', () => {
 test('metadata rejects missing, empty, duplicate, unknown and conflicting tags', () => {
  for(const event of [{},{topics:[]},{topics:'acg'},{topics:['acg','acg']},{topics:['bad']},{topic:'bad'},{topic:'art',topics:['acg']}])assert.throws(()=>validateActivityTopics(event));
 });
+
+test('culture combines art and sports once without becoming a stored topic', () => {
+ const events=[{topics:['art']},{topic:'sports'},{topics:['art','sports']},{topics:['acg']},{topics:['life']}];
+ assert.deepEqual(events.filter(event=>hasActivityTopic(event,'culture')),events.slice(0,3));
+ assert.throws(()=>validateActivityTopics({topics:['culture']}));
+});

@@ -3,7 +3,10 @@ export function activityTopics(event) {
  const values = Array.isArray(event.topics) ? event.topics : [event.topic];
  return [...new Set(values.filter(value => Object.hasOwn(activityTopicLabels, value)))];
 }
-export const hasActivityTopic = (event, topic) => activityTopics(event).includes(topic);
+// culture is a combined reading view; stored event topics keep their original meaning.
+export const hasActivityTopic = (event, topic) => topic === 'culture'
+ ? activityTopics(event).some(value => value === 'art' || value === 'sports')
+ : activityTopics(event).includes(topic);
 export function validateActivityTopics(event) {
  if (event.topic !== undefined && !Object.hasOwn(activityTopicLabels, event.topic)) throw new Error('topic 应为有效的主题');
  if (event.topics !== undefined && (!Array.isArray(event.topics) || !event.topics.length || event.topics.some(value => !Object.hasOwn(activityTopicLabels, value)) || new Set(event.topics).size !== event.topics.length)) throw new Error('topics 必须为非空、无重复的有效主题数组');

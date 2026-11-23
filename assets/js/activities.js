@@ -1,4 +1,4 @@
-import { activityTopicLabels, activityTopics, hasActivityTopic } from './activity-topics.js';
+import { activityTopicLabels, activityTopics, hasActivityTopic } from './activity-topics.js?v=2';
 import { activityBilibiliVideos, activityBilibiliUrl } from './activity-videos.js';
 import { activityCategories, normalizeActivityCategory, activityCategory, activityCategoryDetail, hasActivityCategory, activityCategoryLabel } from './activity-categories.js';
 (() => {
@@ -14,8 +14,8 @@ import { activityCategories, normalizeActivityCategory, activityCategory, activi
  const params = new URLSearchParams(location.search);
  const scope = params.get('topic');
  const topicLabels = activityTopicLabels;
- const scopedTopic = Object.hasOwn(topicLabels, scope) ? scope : '';
- const topicLabel = topicLabels[scopedTopic] || '';
+ const scopedTopic = scope === 'culture' || Object.hasOwn(topicLabels, scope) ? scope : '';
+ const topicLabel = scopedTopic === 'culture' ? '文体生活' : topicLabels[scopedTopic] || '';
  let selectedTopic = Object.hasOwn(topicLabels, params.get('filterTopic')) ? params.get('filterTopic') : '';
  if(scopedTopic)selectedTopic='';
  category=normalizeActivityCategory(params.get('category')||'');year=params.get('year')||'';

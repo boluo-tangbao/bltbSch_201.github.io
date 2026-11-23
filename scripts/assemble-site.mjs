@@ -74,8 +74,7 @@ writeFileSync(homePage, fillHomeLatestEvent(homeHtml, latestEvent))
 const descriptions = {
  'index.html': '菠萝汤包scho的生活手记：亲自逛过的店、到过的活动，以及运动、艺术、二次元与旅行记录。',
  'activities.html': '菠萝汤包scho参加过的活动，按主题与年份浏览现场照片和视频。',
- 'sports.html': '菠萝汤包scho的运动兴趣与体育活动记录。',
- 'art.html': '菠萝汤包scho的艺术兴趣、音乐与现场活动记录。',
+ 'culture.html': '菠萝汤包scho的文体生活：音乐、演出、展览与体育比赛的现场记录。',
  'anime.html': '菠萝汤包scho的二次元生活：城市逛店、活动记录与喜欢的作品。',
  'travel.html': '菠萝汤包scho的旅行与城市体验记录。',
  'short-trips.html': '照片不多，也想留一页。慈溪与更多短途出游的封面卡片、日期和小相册。',

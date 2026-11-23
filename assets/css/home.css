@@ -192,7 +192,7 @@ body:has(.snapshot-dialog[open]) { overflow: hidden; }
 .home-life-heading h2 { margin: 6px 0 0; font-size: clamp(28px, 3.5vw, 40px); line-height: 1.3; letter-spacing: -.04em; }
 .home-life-heading h2 > span { color: #a83750; }
 .home-life-heading p { margin: 0 0 3px; font-size: 13px; line-height: 1.8; color: #67505a; }
-.home-life-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 26px; }
+.home-life-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 26px; }
 .life-card {
   --life-accent: #d8eee4;
   display: block;
@@ -206,7 +206,7 @@ body:has(.snapshot-dialog[open]) { overflow: hidden; }
   scroll-margin-top: 24px;
   transition: transform .2s ease, box-shadow .2s ease;
 }
-.life-card-art { --life-accent: #f3cbd3; }
+.life-card-culture { --life-accent: #f3cbd3; }
 .life-card-anime { --life-accent: #dcd1ef; }
 .life-card-travel { --life-accent: #f4dfb1; }
 .life-card-photo { position: relative; overflow: hidden; aspect-ratio: 8 / 5; background: #e9e5de; border-bottom: 2px solid var(--life-ink); }
@@ -227,8 +227,7 @@ body:has(.snapshot-dialog[open]) { overflow: hidden; }
   overflow-wrap: anywhere;
   pointer-events: none;
 }
-.life-card-sports img { object-position: 50% 70%; }
-.life-card-art img { object-position: 50% 60%; }
+.life-card-culture img { object-position: 50% 60%; }
 .life-card-anime img { object-position: 50% 40%; }
 .life-card-travel .life-card-photo { display: grid; place-items: center; background: #f5ecd9; }
 .home-travel-frame { position: relative; width: 100%; aspect-ratio: 1931 / 1080; overflow: hidden; }
@@ -265,7 +264,9 @@ body:has(.snapshot-dialog[open]) { overflow: hidden; }
   .home-life-heading h2 { margin-top: 5px; font-size: 30px; }
   .home-life-heading p { margin: 10px 0 0; font-size: 12px; }
   .home-life-heading p br { display: none; }
-  .home-life-grid { gap: 20px 14px; }
+  .home-life-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 14px; }
+  .life-card-culture { grid-column: 1 / -1; }
+  .life-card-culture .life-card-photo { aspect-ratio: 8 / 5; }
   .life-card { border-radius: 6px; box-shadow: 3px 4px 0 var(--life-accent); }
   .life-card-photo { aspect-ratio: 4 / 5; }
   .life-card-anime .life-card-photo { background: #e6dcf0; }

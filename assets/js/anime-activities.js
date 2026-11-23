@@ -1,9 +1,20 @@
-import { activityTopics, activityTopicLabels, hasActivityTopic } from './activity-topics.js';
+import { activityTopics, activityTopicLabels, hasActivityTopic } from './activity-topics.js?v=2';
 import { activityBilibiliVideos } from './activity-videos.js';
 import { activityCategoryLabel } from './activity-categories.js';
 (() => {
  const section = document.querySelector('.event-preview');
- const previewTopic = section?.dataset.topic || 'acg';
+ const sectionTopic = section?.dataset.topic || 'acg';
+ const requestedTopic = new URLSearchParams(location.search).get('topic');
+ const previewTopic = sectionTopic === 'culture' && ['art', 'sports'].includes(requestedTopic) ? requestedTopic : sectionTopic;
+ for (const link of section?.querySelectorAll('[data-preview-topic]') || []) {
+  if (link.dataset.previewTopic === previewTopic) link.setAttribute('aria-current', 'page');
+  else link.removeAttribute('aria-current');
+ }
+ if (sectionTopic === 'culture') {
+  const allLink = section.querySelector('.event-all-link');
+  allLink.href = 'activities.html?topic='+previewTopic+'#event-records';
+  allLink.textContent = '查看全部'+(activityTopicLabels[previewTopic] || '文体')+'记录 ↗';
+ }
  // 旧分享链接独立于预览开关。
  function redirectOldEvent() {
   if (!location.hash.startsWith('#event/')) return false;

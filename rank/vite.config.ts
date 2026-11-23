@@ -22,7 +22,7 @@ const rankBase = process.env.SITE_BASE || '/bltbSch_201.github.io/rank/'
 const homeBase = rankBase.replace(/rank\/$/, '')
 const homeRoot = fileURLToPath(new URL('../', import.meta.url))
 const homeFiles = new Set([
-  'index.html', 'sports.html', 'art.html', 'anime.html', 'travel.html', 'activities.html',
+  'index.html', 'culture.html', 'sports.html', 'art.html', 'anime.html', 'travel.html', 'activities.html',
   'hangzhou-travel.html', 'lanzhou-travel.html', 'lanzhou-day-story.html', 'japan-travel.html',
   'short-trips.html',
   'guangzhou-travel.html',

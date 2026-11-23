@@ -4,7 +4,7 @@
 
 ```text
 /
-├── index.html / sports.html / art.html / anime.html / travel.html
+├── index.html / culture.html / anime.html / travel.html
 ├── activities.html
 ├── content/activities/日期：活动名称/
 │   ├── event.json
@@ -23,11 +23,11 @@
 └── _site/                   自动生成的部署产物，忽略提交
 ```
 
-公开页面地址保持不变。`activities.html` 查看全部活动；`activities.html?topic=acg`、`?topic=sports`、`?topic=art`、`?topic=travel`、`?topic=life` 分别只查看二次元、体育、艺术、旅行、生活主题；`?topic=other` 查看其他主题（如校招宣讲）。每个主题视图的统计、类型、年份和相册均限制在该主题。
+`culture.html` 为文体生活入口，艺术与体育合并浏览；`art.html`、`sports.html` 保留为对应筛选的兼容跳转，查询参数与活动锚点继续有效。`activities.html` 查看全部活动；`activities.html?topic=acg`、`?topic=sports`、`?topic=art`、`?topic=travel`、`?topic=life` 分别只查看二次元、体育、艺术、旅行、生活主题；`?topic=other` 查看其他主题（如校招宣讲）。`activities.html?topic=culture` 展示艺术与体育的并集，交叉活动按稳定 ID 只计一次；每个主题视图的统计、类型、年份和相册均限制在该主题。
 
 `activities.html#event/稳定ID` 可直接分享、刷新；加上 `?topic=acg` 等查询参数也可分享。跨主题相册共用同一稳定 ID；例如《京吹》演奏记录可同时带二次元与艺术标签，从两个栏目进入同一相册，也可使用不带 topic 的普通分享链接。禁止复制记录或素材来实现交叉展示。旧 `anime.html#event/稳定ID` 自动跳到相应二次元相册，包括关闭预览时。
 
-`anime.html` 默认只展示最近三场二次元预览，把 `.event-preview` 的 `data-preview-count="3"` 改成 `0` 即可关闭预览。二次元列表入口继续保留。体育、艺术页各有对应主题入口；rank 的活动入口仍指向二次元。
+`anime.html` 默认只展示最近三场二次元预览，把 `.event-preview` 的 `data-preview-count="3"` 改成 `0` 即可关闭预览。二次元列表入口继续保留。文体页默认展示最近三场艺术／体育活动，可切换全部、艺术和体育，再进入对应完整列表；rank 的活动入口仍指向二次元。
 
 ## 分享与继续浏览
 
@@ -129,7 +129,7 @@ CCG 采用用户缩减后的素材。按用户随后确认的“普通局部细�
 
 ## 修改页面与样式
 
-页面文案、栏目链接和预览数量在根目录 HTML 修改。共享主站样式在 `assets/css/style.css`，活动样式在 `assets/css/activities.css`；交互在 `assets/js/script.js`、`activities.js`、`anime-activities.js`；主题标签和形式规则由 `activity-topics.js`、`activity-categories.js` 共用。二次元与艺术页使用同一预览组件，分别指定 data-topic="acg" 和 data-topic="art"。原有封面继续在 `images/`。rank 的组件和样式继续由 `rank/` 自己管理。
+页面文案、栏目链接和预览数量在根目录 HTML 修改。共享主站样式在 `assets/css/style.css`，活动样式在 `assets/css/activities.css`；交互在 `assets/js/script.js`、`activities.js`、`anime-activities.js`；主题标签和形式规则由 `activity-topics.js`、`activity-categories.js` 共用。二次元与文体页使用同一预览组件，分别指定 data-topic="acg" 与 data-topic="culture"，各最多展示最近三场；culture 仅为组合阅读视图，活动数据仍保留 art／sports 原主题。首页收为文体生活、二次元、旅行三个照片入口，文体页兴趣介绍压缩为一段；封面与相册引用同一份活动素材，不另生成栏目副本。原有封面继续在 `images/`。rank 的组件和样式继续由 `rank/` 自己管理。
 
 ## 生成、构建与验收
 
