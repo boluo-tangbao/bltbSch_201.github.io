@@ -154,3 +154,7 @@ node scripts/preview-site.mjs
 `verify-activities.mjs --static` 只执行元数据、逐场素材数量和部署排除检查。完整验收还覆盖全部活动、六主题隔离（额外主题使用测试响应，不写真实记录）、类型与年份、直接分享、旧链接、预览开关、图片放大、视频实际播放及关闭、返回列表、rank 入口、页面与资源访问和 390/768/1440px 布局。截图保存在忽略的 `test-results/activities/`。日常验收按当前元数据和原始素材动态检查。长期迁移基线保存于 [activity-migration-baseline.json](activity-migration-baseline.json)，不放临时测试目录；必要时追加 `--migration` 校验149个迁移原件的SHA-256，普通新增活动不更新或套用这份历史基线。2026-10-19整理前已存在差异：历史基线中的4张ChinaJoy照片不在现目录，现存145项哈希一致；保留原基线，不将完整迁移核验记为通过。
 
 GitHub Pages 工作流继续从 main 部署，使用通用脚本组装和验收；活动生成缓存可复用。用户只提交源码、元数据和原始素材，生成产物自动处理。店铺维护另遵守 [固定维护规则](shop-directory-rules.md)。
+
+## 白金二次元与邯郸冬日祭拆分（2026-11-24）
+
+按用户拆分的素材目录登记为两场演出，日期同为 2025-12-07，沿用二次元与艺术主题。白金二次元使用新 ID `platinum-acg-2025`，关联白金合集 `BV1teyGzCEij` P1–P2；邯郸沸点冬日祭保留旧 ID `platinum-handan-winter-festival-2025` 与 `BV1ubfqBNE3K` P4，旧分享链接继续进入邯郸相册。分别使用用户拆分后的三张照片和一张视频截图，不恢复已移除素材。`docs/visual-assets.md` 中原合并记录的视频关联为历史记录，以本节拆分配置为准。
