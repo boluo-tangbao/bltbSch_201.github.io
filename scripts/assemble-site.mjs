@@ -12,7 +12,8 @@ import { publishedRankAssets, shouldPublishRankAsset } from '../rank/scripts/pub
 import { generateDiscoveryPages } from './generate-discovery-pages.mjs'
 import { pageMetadata } from './page-metadata.mjs'
 import { fillHomeCityLinks, fillHomeLatestEvent } from './home-city-links.mjs'
-import './prepare-home-images.mjs'
+import { fillGuangzhouOverview, guangzhouDayCovers } from './guangzhou-overview.mjs'
+import { prepareCoverVariants } from './prepare-home-images.mjs'
 import './prepare-personal-snapshots.mjs'
 const root = resolve(fileURLToPath(new URL('../', import.meta.url)))
 const out = resolve(root, '_site')
@@ -20,7 +21,9 @@ validatePilgrimage(JSON.parse(readFileSync(resolve(root,'assets/data/pilgrimage.
 const [latestEvent] = await prepareActivities()
 await prepareJapanTravel()
 await prepareShortTrips()
-await prepareGuangzhouJournal()
+const guangzhouTrip = await prepareGuangzhouJournal()
+const guangzhouCovers = guangzhouDayCovers(guangzhouTrip)
+await prepareCoverVariants(guangzhouCovers.map(({ src }) => src))
 validateTravelMap(JSON.parse(readFileSync(resolve(root,'assets/data/pilgrimage-map.json'),'utf8')),JSON.parse(readFileSync(resolve(root,'content/pilgrimage/records.json'),'utf8')).cities.map(city=>city.id))
 if(!existsSync(resolve(root,'assets/data/japan-boundary.geojson')))throw new Error('缺少离线日本底图')
 if (!existsSync(resolve(root,'rank/dist/index.html'))) throw new Error('请先在 rank/ 运行 npm run build')
@@ -71,6 +74,8 @@ const homeBase = rankBase.replace(/rank\/$/, '')
 const homePage = resolve(out, 'index.html')
 const homeHtml = fillHomeCityLinks(readFileSync(homePage, 'utf8'), json('rank/src/data/places.json'), rankBase)
 writeFileSync(homePage, fillHomeLatestEvent(homeHtml, latestEvent))
+const guangzhouPage = resolve(out, 'guangzhou-travel.html')
+writeFileSync(guangzhouPage, fillGuangzhouOverview(readFileSync(guangzhouPage, 'utf8'), guangzhouTrip, guangzhouCovers))
 const descriptions = {
  'index.html': '菠萝汤包scho的生活手记：亲自逛过的店、到过的活动，以及运动、艺术、二次元与旅行记录。',
  'activities.html': '菠萝汤包scho参加过的活动，按主题与年份浏览现场照片和视频。',

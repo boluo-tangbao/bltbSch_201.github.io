@@ -11,6 +11,6 @@ export function fillHomeLatestEvent(html, event) {
   if (!event) return html
   return html.replace(/<a\b[^>]*\bid="home-latest-event"[^>]*>[\s\S]*?<\/a>/, entry => entry
     .replace('href="activities.html"', () => `href="activities.html#event/${encodeURIComponent(event.id)}"`)
-    .replace(/<img\b[^>]*>/, () => `<img src="${escape(event.cover)}" alt="${escape(event.name)}的现场记录" decoding="async" fetchpriority="high" />`)
+    .replace(/<img\b[^>]*>/, () => `<img src="${escape(event.cover)}" alt="${escape(event.name)}的现场记录" width="132" height="132" decoding="async" />`)
     .replace(/(<span id="home-latest-event-caption">)[^<]*/, (_, opening) => `${opening}${escape(event.dateLabel)} · ${escape(event.name)}`))
 }

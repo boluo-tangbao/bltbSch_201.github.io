@@ -71,12 +71,12 @@ async function initializePixelGallery() {
       stage.className = "pixel-character-stage";
       framePortrait(stage, character);
       const image = document.createElement("img");
-      image.src = `rank/${character.thumbnail || character.portrait}`;
       image.alt = `${character.name}的正面半身像`;
       image.width = 512;
       image.height = 512;
       image.loading = "lazy";
       image.decoding = "async";
+      image.src = `rank/${character.thumbnail || character.portrait}`;
       const name = document.createElement("span");
       name.className = "pixel-character-name";
       name.textContent = character.name;

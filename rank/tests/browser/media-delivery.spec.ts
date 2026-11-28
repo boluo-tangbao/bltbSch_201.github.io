@@ -13,6 +13,9 @@ test.beforeAll(async () => { server = await previewServer(4180) })
 test.afterAll(async () => { if (server) await new Promise<void>(done => server.close(done)) })
 
 test('the assembled site displays photos and plays videos locally; only explicit original links point to GitHub', async ({ page }) => {
+  await page.addLocatorHandler(page.locator('.visit-notices-dialog[open]'), async dialog => {
+    await dialog.getByRole('button', { name: '知道了，继续看介绍' }).click()
+  })
   const originalsRequested: string[] = []
   page.on('request', request => {
     const url = new URL(request.url())

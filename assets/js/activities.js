@@ -33,7 +33,7 @@ import { activityCategories, normalizeActivityCategory, activityCategory, activi
  const make = (tag, className, text) => { const node = document.createElement(tag); if (className) node.className = className; if (text !== undefined) node.textContent = text; return node; };
  const counts = event => [event.photos ? event.photos+' 张照片' : '', event.videos ? event.videos+' 段视频' : '', activityBilibiliVideos(event).length ? activityBilibiliVideos(event).length+' 段B站视频' : ''].filter(Boolean).join(' · ');
  const searchText = value => value.normalize('NFKC').toLowerCase().replace(/\s+/g, '');
- function thumbnail(src, alt) { const image = make('img'); image.src=src; image.alt=alt; image.loading='lazy'; image.decoding='async'; return image; }
+ function thumbnail(src, alt) { const image = make('img'); image.alt=alt; image.loading='lazy'; image.decoding='async'; image.src=src; return image; }
  function renderIndex() {
   const query = searchText(search.value);
   const filtered = events.filter(event =>
@@ -167,14 +167,18 @@ import { activityCategories, normalizeActivityCategory, activityCategory, activi
  }
  $('event-topic').addEventListener('change',event=>{selectedTopic=event.target.value;updateCategories();syncFilters();renderIndex();});
  async function load(){
+  $('event-index').setAttribute('aria-busy','true');
+  $('event-loading').textContent='正在翻开活动相册…';
+  updateCategories();
   try{
-   const response=await fetch('assets/generated/activities/manifest.json');if(!response.ok)throw new Error('load');events=await response.json();if(!Array.isArray(events))throw new Error('invalid');events=events.map(event=>({...event,categoryDetail:activityCategoryDetail(event),category:activityCategory(event),topics:activityTopics(event)}));if(scopedTopic)events=events.filter(event=>hasActivityTopic(event,scopedTopic));updateCategories();
+   const response=await fetch('assets/generated/activities/manifest.json');if(!response.ok)throw new Error('load');events=await response.json();if(!Array.isArray(events))throw new Error('invalid');events=events.map(event=>({...event,categoryDetail:activityCategoryDetail(event),category:activityCategory(event),topics:activityTopics(event)}));if(scopedTopic)events=events.filter(event=>hasActivityTopic(event,scopedTopic));
    $('event-total').textContent=events.length;$('event-photos').textContent=events.reduce((n,e)=>n+e.photos,0);$('event-videos').textContent=events.reduce((n,e)=>n+e.videos,0);
    for(const value of [...new Set(events.map(event=>event.year))].sort().reverse()){const option=make('option','',value+' 年');option.value=value;$('event-year').append(option);}
    if(!Array.from($('event-year').options).some(option=>option.value===year))year='';
    $('event-year').value=year;$('event-topic').value=selectedTopic;
-   $('event-loading').hidden=true;$('event-index').hidden=false;route();scrollRoute();
+   $('event-loading').hidden=true;$('event-result').hidden=false;route();scrollRoute();
   }catch{ $('event-loading').textContent='活动记录暂时没有加载成功。';const retry=make('button','','重试');retry.type='button';retry.addEventListener('click',load);$('event-loading').append(retry); }
+  finally { $('event-index').removeAttribute('aria-busy'); }
  }
  load();
 })();

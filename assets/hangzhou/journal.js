@@ -137,9 +137,10 @@
     const first = pages.findIndex(page => page.group === group);
     const jump = button(group.place, () => playback.go(first));
     const thumbnail = make('img');
-    thumbnail.src = imageUrl(pages[first].id, true);
     thumbnail.alt = '';
     thumbnail.loading = 'lazy';
+    thumbnail.decoding = 'async';
+    thumbnail.src = imageUrl(pages[first].id, true);
     jump.prepend(thumbnail);
     get('contents').append(jump);
     return jump;
@@ -271,9 +272,10 @@
         const tile = button('', event => openMedia(items, index, event.currentTarget));
         tile.setAttribute('aria-label', video ? `播放${title}` : `查看${title}`);
         const photo = make('img');
-        photo.src = imageUrl(id, true);
         photo.alt = '';
         photo.loading = 'lazy';
+        photo.decoding = 'async';
+        photo.src = imageUrl(id, true);
         tile.append(photo);
         if (video) tile.append(make('span', '▶ 视频'));
         return tile;

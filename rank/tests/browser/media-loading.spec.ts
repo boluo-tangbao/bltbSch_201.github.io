@@ -25,14 +25,18 @@ test('board requests responsive previews without downloading original covers', a
   expect(await photos.first().evaluate((img: HTMLImageElement) => img.currentSrc)).toMatch(/-160\.webp$/)
 })
 
-test('three-column mobile board uses smaller previews on high-density screens', async ({ browser }) => {
+test('three-column mobile board loads nearby previews at the matching pixel density', async ({ browser }) => {
   const context = await browser.newContext({ viewport: { width: 390, height: 950 }, deviceScaleFactor: 3 })
   try {
     const page = await context.newPage()
     await page.goto(base)
     const photos = page.locator('.card-photo img')
-    await photos.evaluateAll(images => images.forEach(image => { (image as HTMLImageElement).loading = 'eager' }))
-    await expect.poll(() => photos.evaluateAll(images => images.every(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0))).toBe(true)
+    await expect(photos.first()).toHaveJSProperty('complete', true)
+    await expect(photos.last()).not.toHaveAttribute('src')
+    for (const photo of await photos.all()) {
+      await photo.scrollIntoViewIfNeeded()
+      await expect.poll(() => photo.evaluate(image => (image as HTMLImageElement).naturalWidth)).toBeGreaterThan(0)
+    }
     expect(await photos.evaluateAll(images => images.every(image => (image as HTMLImageElement).currentSrc.endsWith('-320.webp')))).toBe(true)
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
   } finally { await context.close() }

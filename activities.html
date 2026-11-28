@@ -37,15 +37,15 @@
         <div><span class="event-kicker">LIFE / MEMORIES</span><h2 id="event-section-title">那些到场的日子</h2><p>参加过的活动，照片和视频都收在这里。</p></div>
         <div class="event-tally" aria-label="活动素材总数"><span><strong id="event-total">—</strong>场记录</span><span><strong id="event-photos">—</strong>张照片</span><span><strong id="event-videos">—</strong>段视频</span></div>
       </header>
-      <p id="event-loading" class="event-status" role="status">正在翻开活动相册…</p>
-      <div id="event-index" hidden>
+      <div id="event-index" aria-busy="true">
         <nav class="event-filters event-type-tabs" id="event-filters" aria-label="活动形式"></nav>
         <div class="event-toolbar">
           <label class="event-search">搜索活动名称<input type="search" id="event-search" placeholder="例如 BilibiliWorld" /></label>
           <label id="event-topic-control">主题标签<select id="event-topic"><option value="">全部主题</option><option value="acg">二次元</option><option value="sports">体育</option><option value="art">艺术</option><option value="travel">旅行</option><option value="life">生活</option><option value="other">其他</option></select></label>
           <label>参加年份<select id="event-year"><option value="">全部年份</option></select></label>
         </div>
-        <p id="event-result" class="event-result" role="status"></p>
+        <p id="event-loading" class="event-result" role="status">正在翻开活动相册…</p>
+        <p id="event-result" class="event-result" role="status" hidden></p>
         <div class="event-grid" id="event-grid"></div>
       </div>
       <div id="event-album" hidden>

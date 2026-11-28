@@ -2,8 +2,8 @@
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import FullImage from './FullImage.vue'
 
-const props = defineProps<{ src: string; alt: string; zoom: number }>()
-const emit = defineEmits<{ 'update:zoom': [value: number]; navigate: [offset: number] }>()
+const props = defineProps<{ src: string; alt: string; zoom: number; preview?: string }>()
+const emit = defineEmits<{ 'update:zoom': [value: number]; navigate: [offset: number]; ready: [] }>()
 const surface = ref<HTMLElement>()
 const scale = ref(props.zoom)
 const x = ref(0)
@@ -121,7 +121,7 @@ onBeforeUnmount(() => observer?.disconnect())
 <template>
   <div ref="surface" class="gallery-photo-surface" :class="{ 'is-zoomed': scale > 1 }" :data-zoom="scale.toFixed(2)" @pointerdown.prevent="pointerDown" @pointermove="pointerMove" @pointerup="pointerEnd($event)" @pointercancel="pointerEnd($event, true)" @lostpointercapture="pointerEnd($event, true)" @dblclick.prevent="doubleClick" @dragstart.prevent @load.capture="clampPosition">
     <div class="gallery-photo-transform" :style="{ transform: `translate(${x}px, ${y}px) scale(${scale})` }">
-      <FullImage :src="src" :alt="alt" contained />
+      <FullImage :src="src" :alt="alt" :preview="preview" contained @ready="emit('ready')" />
     </div>
   </div>
 </template>

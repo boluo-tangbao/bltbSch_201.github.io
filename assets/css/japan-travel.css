@@ -49,3 +49,14 @@
   cursor: pointer;
 }
 .j-more:hover { background: #e5f5f7; }
+
+.j-trip:empty { min-height: 25px; }
+#j-map:empty { min-height: 859px; background: #e9f5f0; border-radius: 18px; }
+.j-sources:empty { min-height: 188px; }
+@media (max-width: 1000px) {
+  #j-map:empty { min-height: 819px; }
+}
+@media (max-width: 700px) {
+  #j-map:empty { min-height: 1260px; }
+  .j-sources:empty { min-height: 211px; }
+}

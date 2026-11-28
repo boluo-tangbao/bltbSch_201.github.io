@@ -1,0 +1,69 @@
+name: Lighthouse CI
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+  pages: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+          lfs: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: rank/package-lock.json
+      - name: Configure Pages paths
+        id: pages
+        uses: actions/configure-pages@v6
+        with:
+          enablement: false
+      - run: npm ci
+        working-directory: rank
+      - name: Build ranking
+        run: npm run build
+        working-directory: rank
+        env:
+          SITE_BASE: ${{ steps.pages.outputs.base_path }}/rank/
+      - name: Restore generated activity media cache
+        uses: actions/cache@v4
+        with:
+          path: assets/generated/activities/media
+          key: activities-v1-${{ runner.os }}-${{ hashFiles('content/activities/**', 'scripts/prepare-activities.mjs') }}
+          restore-keys: activities-v1-${{ runner.os }}-
+      - name: Assemble Pages site
+        run: node scripts/assemble-site.mjs
+      - name: Install Lighthouse CI
+        run: npm install --prefix "$RUNNER_TEMP/lhci" --no-audit --no-fund @lhci/cli@0.16.0
+      - name: Audit mobile and desktop
+        id: audit
+        run: |
+          export CHROME_PATH="$(command -v google-chrome)"
+          test -x "$CHROME_PATH"
+          node scripts/lighthouse/run.mjs
+        env:
+          SITE_BASE: ${{ steps.pages.outputs.base_path }}/
+          LHCI_TOOLS_DIR: ${{ runner.temp }}/lhci
+      - name: Summarize setup failure
+        if: ${{ failure() && steps.audit.outcome == 'skipped' }}
+        run: |
+          {
+            echo '## Lighthouse CI'
+            echo
+            echo '构建或测试环境准备失败。查看前序步骤日志。本次没有可判定的性能指标。'
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Save Lighthouse reports
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: lighthouse-reports
+          path: test-results/lighthouse/
+          retention-days: 14
+          if-no-files-found: ignore

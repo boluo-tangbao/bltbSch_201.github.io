@@ -305,11 +305,12 @@
   veil.setAttribute('aria-hidden', 'true');
   const loadingGif = new URL('assets/images/transitions/mutsumi-loading.gif', root).href;
   const loadingPoster = new URL('assets/images/transitions/mutsumi-loading-poster.webp', root).href;
-  veil.innerHTML = `<div class="site-page-message"><picture><img class="site-page-loading-image" src="${loadingPoster}" width="270" height="270" decoding="async" alt=""></picture><p class="site-page-loading-copy"><span>已经在加载了，</span><span>不要压力一个小睦QWQ</span></p></div>`;
+  veil.innerHTML = '<div class="site-page-message"><picture><img class="site-page-loading-image" width="270" height="270" decoding="async" alt=""></picture><p class="site-page-loading-copy"><span>已经在加载了，</span><span>不要压力一个小睦QWQ</span></p></div>';
   document.body.append(veil);
   const poster = veil.querySelector('.site-page-loading-image');
   let animation;
   function showDepartureAnimation() {
+    if (!poster.hasAttribute('src')) poster.src = loadingPoster;
     if (!animation) {
       animation = new Image(270, 270);
       animation.className = poster.className;

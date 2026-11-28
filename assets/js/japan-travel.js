@@ -8,7 +8,7 @@ const link=(text,href,cls)=>{const el=make('a',cls,text);el.href=href;return el;
 const city=id=>data.cities.find(row=>row.id===id),record=id=>data.records.find(row=>row.id===id);
 const allImages=row=>row.sections.flatMap(section=>section.images.map(image=>({...image,area:section.label})));
 const large=image=>image.width*image.height>32000000;
-function image(src,alt,cls){const img=make('img',cls);img.src=src;img.alt=alt;img.loading='lazy';img.decoding='async';return img;}
+function image(src,alt){const img=make('img');img.alt=alt;img.loading='eager';img.decoding='async';img.src=src;return img;}
 function card(title,href,cover,subtitle,tags=[]){
   const el=link('',href,'j-card');
   if(cover){
@@ -35,26 +35,20 @@ function loadCovers(grid){
   const observeRemaining=()=>{
     for(const img of grid.querySelectorAll('.j-cover:not([src])'))coverObserver.observe(img);
   };
-  if(coverObserver){
-    if(first.complete)observeRemaining();
-    return;
-  }
+  if(coverObserver){observeRemaining();return;}
   const remaining=new IntersectionObserver(entries=>{
     if(coverObserver!==remaining)return;
     for(const entry of entries)if(entry.isIntersecting){
       const img=entry.target;
+      img.fetchPriority='low';
       img.src=img.dataset.src;
       remaining.unobserve(img);
     }
   },{rootMargin:'120px 0px'});
   coverObserver=remaining;
-  const firstSettled=()=>{
-    if(coverObserver===remaining)observeRemaining();
-  };
-  first.addEventListener('load',firstSettled,{once:true});
-  first.addEventListener('error',firstSettled,{once:true});
   first.fetchPriority='high';
   first.src=first.dataset.src;
+  observeRemaining();
 }
 function recordCard(row){return card(row.title,'#record/'+row.id,row.cover,city(row.cityId).name+' · '+row.photos+' 张图片',row.sections.map(section=>section.label));}
 function sync(){const url=new URL(location.href);for(const [key,value] of [['view',view==='map'?'':view],['q',$('j-search').value],['city',$('j-city').value],['work',$('j-work').value]]){if(value)url.searchParams.set(key,value);else url.searchParams.delete(key);}history.replaceState(history.state,'',url);}
@@ -123,10 +117,12 @@ async function readJson(path){
   if(!response.ok)throw Error('无法读取 '+path);
   return response.json();
 }
+let mapBoundary;
 async function loadMap(){
   try{
     if(!mapCatalog)throw Error('缺少巡礼地点资料');
-    const boundary=await readJson('assets/data/japan-boundary.geojson');
+    const boundary=await (mapBoundary||readJson('assets/data/japan-boundary.geojson'));
+    if(!boundary)throw Error('缺少巡礼底图');
     mapComponent=mountTravelMap($('j-map'),{catalog:mapCatalog,boundary,city});
     if(view==='map'&&!$('j-index').hidden)renderIndex();
   }catch(error){
@@ -136,6 +132,7 @@ async function loadMap(){
 }
 async function load(){
   try{
+    if(view==='map'&&!/^#(?:city|record)\//.test(location.hash))mapBoundary=readJson('assets/data/japan-boundary.geojson').catch(()=>null);
     const [manifest,catalog]=await Promise.all([
       readJson('assets/generated/japan-travel/manifest.json'),
       readJson('assets/data/pilgrimage-map.json').catch(()=>null)

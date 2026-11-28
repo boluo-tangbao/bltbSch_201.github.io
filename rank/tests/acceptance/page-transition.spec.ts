@@ -5,12 +5,15 @@ import { resolve } from 'node:path'
 test('切页使用本地小睦GIF与两行文案，手机不溢出且正常跳转', async ({ page, context, baseURL }, info) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' })
   await context.route('**/*', route => new URL(route.request().url()).origin === new URL(baseURL!).origin ? route.continue() : route.abort())
-  const animations: string[] = []
-  page.on('request', request => { if (request.url().endsWith('/mutsumi-loading.gif')) animations.push(request.url()) })
+  const animations: string[] = [], posters: string[] = []
+  page.on('request', request => {
+    if (request.url().endsWith('/mutsumi-loading.gif')) animations.push(request.url())
+    if (request.url().endsWith('/mutsumi-loading-poster.webp')) posters.push(request.url())
+  })
   await page.goto('./')
   const image = page.locator('.site-page-loading-image')
-  await expect(image).toHaveAttribute('src', /\/mutsumi-loading-poster\.webp$/)
-  await expect.poll(() => image.evaluate(element => (element as HTMLImageElement).naturalWidth)).toBe(270)
+  await expect(image).not.toHaveAttribute('src')
+  expect(posters).toHaveLength(0)
   expect(animations).toHaveLength(0)
   let release!: () => void
   let releaseGif!: () => void
@@ -24,6 +27,7 @@ test('切页使用本地小睦GIF与两行文案，手机不溢出且正常跳�
     await expect(page.locator('html')).toHaveClass(/site-page-leaving/)
     await expect.poll(() => animations.length).toBe(1)
     await expect(image).toHaveAttribute('src', /\/mutsumi-loading-poster\.webp$/)
+    await expect.poll(() => posters.length).toBe(1)
     releaseGif()
     await expect(image).toHaveAttribute('src', /\/assets\/images\/transitions\/mutsumi-loading\.gif$/)
     await expect(page.locator('.site-page-loading-copy span')).toHaveText(['已经在加载了，', '不要压力一个小睦QWQ'])

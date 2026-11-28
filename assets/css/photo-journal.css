@@ -1,4 +1,18 @@
 .journal-status { padding: 24px 0; color: #665c4c; }
+.journal-loading #day-journal,
+.journal-loading.journal-day-route #trip-overview { display: none; }
+.journal-loading.journal-day-route #day-journal { display: block; }
+.journal-loading .journal-status { position: absolute; }
+.journey-tally:empty { min-height: 1.5em; }
+.day-strip:empty { min-height: clamp(310px,35vw,450px); background: #e8e2d5; }
+.journal-heading .date:empty { min-height: 1.5em; }
+.journal-heading h1:empty { min-height: 1.1em; }
+.day-route:empty { min-height: 1.9em; }
+#periods:empty { min-height: calc(clamp(20px,2.5vw,35px) * 1.35 + 17px); }
+@media(max-width:700px) {
+  .day-strip:empty { min-height: 710px; }
+  .day-route:empty { min-height: 3.8em; }
+}
 .journey-intro { padding: clamp(36px,6vw,80px) 0 30px; }
 .journey-intro h1 { font-size: clamp(48px,8vw,96px); margin: 14px 0 22px; }
 .journey-intro h1 span { color: var(--red); }

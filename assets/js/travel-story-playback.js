@@ -7,8 +7,10 @@ function createTravelStoryPlayback(frames, render, updateControls) {
   let playing = false;
   let timer;
 
-  async function loadImage(url, fallback) {
+  async function loadImage(url, fallback, priority) {
     const image = new Image();
+    image.decoding = 'async';
+    image.fetchPriority = priority;
     image.src = url;
     const ready = await new Promise(resolve => {
       const deadline = setTimeout(() => resolve(false), 6000);
@@ -17,12 +19,12 @@ function createTravelStoryPlayback(frames, render, updateControls) {
     });
     if (ready) return image;
     image.removeAttribute('src');
-    return fallback ? loadImage(fallback) : null;
+    return fallback ? loadImage(fallback, null, priority) : null;
   }
 
-  function prepare(index) {
+  function prepare(index, priority) {
     if (!prepared.has(index)) {
-      prepared.set(index, Promise.all(frames[index].map(([url, fallback]) => loadImage(url, fallback))));
+      prepared.set(index, Promise.all(frames[index].map(([url, fallback]) => loadImage(url, fallback, priority))));
     }
     return prepared.get(index);
   }
@@ -34,8 +36,7 @@ function createTravelStoryPlayback(frames, render, updateControls) {
   async function show(index) {
     target = Math.max(0, Math.min(index, last));
     const request = ++revision;
-    const ready = prepare(target);
-    for (let next = target + 1; next <= Math.min(target + 2, last); next++) prepare(next);
+    const ready = prepare(target, 'high');
     for (const key of prepared.keys()) {
       if (key < target - 1 || key > target + 2) prepared.delete(key);
     }
@@ -46,6 +47,13 @@ function createTravelStoryPlayback(frames, render, updateControls) {
     if (current === last) playing = false;
     updateControls(playing, current === last);
     schedule();
+    // Give the current frame its own request and decode before warming later pages.
+    setTimeout(() => {
+      if (request !== revision || document.hidden) return;
+      const connection = navigator.connection;
+      if (connection?.saveData || connection?.effectiveType?.includes('2g')) return;
+      for (let next = current + 1; next <= Math.min(current + 2, last); next++) prepare(next, 'low');
+    }, 0);
   }
 
   function stop() {

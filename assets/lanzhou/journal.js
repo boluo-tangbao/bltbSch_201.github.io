@@ -29,7 +29,9 @@ function selectFrame(i){selected=i;Array.from($('reel').children).forEach((frame
 days.forEach((d,i)=>{
  const frame=el('div');frame.className='frame';
  const cover=d.groups.flatMap(g=>g.media).find(m=>m.name===covers[i]+'.jpg') || d.groups.flatMap(g=>g.media).find(m=>!m.video);
- const img=el('img');img.src=src(cover);img.alt='';
+ const img=el('img');img.alt='';img.decoding='async';
+ const priority=i===selected&&!days.some(day=>day.date===location.hash.slice(1));
+ img.loading=priority?'eager':'lazy';img.fetchPriority=priority?'high':'auto';img.src=src(cover);
  const btn=el('button','04.0'+(i+1));btn.append(el('strong',titles[i]));btn.onclick=()=>selectFrame(i);
  const link=el('a','进入这一天 →');link.href='lanzhou-day-story.html?day='+d.date;
  frame.append(img,btn,link);$('reel').append(frame);
@@ -73,7 +75,7 @@ function renderGroups(){
  if(g.media.length>picks.length){const toggle=el('button',all?'收起':'查看全部');toggle.setAttribute('aria-expanded',String(all));toggle.onclick=()=>{all?expanded.delete(j):expanded.add(j);renderGroups();const group=$('groups').querySelector('[data-group="'+j+'"]');group.scrollIntoView({block:'start'});group.querySelector('header button').focus({preventScroll:true})};head.append(toggle)}
  section.dataset.group=j;
  const grid=el('div');grid.className='tiles';
- for(const m of all?g.media:picks){const b=el('button'),img=el('img');img.src=src(m,true);img.loading='lazy';img.alt=g.label+' · '+(m.caption || m.name);b.append(img);if(m.video)b.append(el('b','▶ 视频'));b.onclick=()=>{sequence=g.media;index=sequence.indexOf(m);$('viewer').dataset.label=g.label;paintViewer();$('viewer').showModal()};grid.append(b)}
+ for(const m of all?g.media:picks){const b=el('button'),img=el('img');img.loading='lazy';img.decoding='async';img.alt=g.label+' · '+(m.caption || m.name);img.src=src(m,true);b.append(img);if(m.video)b.append(el('b','▶ 视频'));b.onclick=()=>{sequence=g.media;index=sequence.indexOf(m);$('viewer').dataset.label=g.label;paintViewer();$('viewer').showModal()};grid.append(b)}
  section.append(head,grid);$('groups').append(section)
  })
 }

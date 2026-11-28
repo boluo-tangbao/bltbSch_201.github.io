@@ -34,6 +34,7 @@
 | 想了解什么 | 文档 |
 | --- | --- |
 | 项目目录、原件、生成副本与清理方法 | [本地文件结构](本地文件结构.md) |
+| Lighthouse 性能预算、本地复测和初始基线 | [Lighthouse CI 性能检测](docs/lighthouse-ci.md) |
 | 新增城市的研究、谷店一览、现场图集与网图补充全流程 | [新增城市与商圈的完整工作方法](docs/city-expansion-workflow.md) · [研究工作单](docs/templates/city-research.md) |
 | 填写店铺、图集、地图和更新记录 | [城市归档填写指南](docs/city-data.md) |
 | 添加活动和维护相册 | [活动记录维护](docs/activities.md) |

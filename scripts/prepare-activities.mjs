@@ -80,6 +80,9 @@ export async function prepareActivities() {
  // 模糊日期只参与粗略排序，页面仍显示原始时间范围。
  records.sort((a,b)=>(b.date||b.year+'-07-01').localeCompare(a.date||a.year+'-07-01'))
  writeFileSync(resolve(root,'assets/generated/activities/manifest.json'), JSON.stringify(records,null,2)+'\n')
+ // Topic cards only use event metadata. Keep album entries out of this request.
+ const summaries = records.map(({ media, note, ...summary }) => summary)
+ writeFileSync(resolve(root,'assets/generated/activities/summaries.json'), JSON.stringify(summaries)+'\n')
  console.log('活动素材：'+(originals/1e6).toFixed(1)+' MB → 网页版 '+(webBytes/1e6).toFixed(1)+' MB')
  return records
 }

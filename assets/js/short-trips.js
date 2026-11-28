@@ -1,7 +1,7 @@
 const root = document.querySelector('[data-short-trips]');
 if (root) {
  const make = (tag, className, text) => { const node=document.createElement(tag); if(className)node.className=className; if(text!==undefined)node.textContent=text; return node; };
- const image = (photo, alt) => { const node=make('img'); node.src=photo;node.alt=alt;node.loading='lazy';node.decoding='async';return node; };
+ const image = (photo, alt, loading='lazy') => { const node=make('img');node.alt=alt;node.loading=loading;node.decoding='async';node.src=photo;return node; };
  const preview = root.dataset.shortTrips === 'preview';
  let trips=[], active=null, expanded=false, index=0, previousFocus=null, previousOverflow='';
  const grid=root.querySelector('[data-trip-grid]'), status=root.querySelector('[data-trip-status]');
@@ -25,7 +25,7 @@ if (root) {
  }
  function showPhoto(at) {
   index=(at+active.photos.length)%active.photos.length;
-  const photo=active.photos[index],large=image(photo.src,photo.caption);large.loading='eager';
+  const photo=active.photos[index],large=image(photo.src,photo.caption,'eager');
   const body=dialog.querySelector('[data-trip-viewer]');body.replaceChildren(large);
   large.addEventListener('error',()=>{if(large.src!==new URL(photo.preview,location.href).href)large.src=photo.preview;},{once:true});
   dialog.querySelector('[data-trip-position]').textContent=(index+1)+' / '+active.photos.length+' · '+photo.caption;
@@ -40,7 +40,7 @@ if (root) {
   root.querySelector('[data-trip-index]').hidden=!!active;root.querySelector('[data-trip-album]').hidden=!active;
   root.querySelector('[data-trip-feedback]').textContent='';root.querySelector('[data-trip-share-url]').hidden=true;
   document.title=active?active.title+' | 小旅行集':'小旅行集 | 汤包的生活手记';
-  if(!active){status.textContent=id?'没有找到这份小旅行，下面是已有记录。':'共 '+trips.length+' 份小旅行 · 按日期倒序';return;}
+  if(!active){if(!grid.childElementCount)grid.replaceChildren(...trips.map(card));status.textContent=id?'没有找到这份小旅行，下面是已有记录。':'共 '+trips.length+' 份小旅行 · 按日期倒序';return;}
   root.querySelector('[data-trip-title]').textContent=active.title;
   root.querySelector('[data-trip-meta]').textContent=active.date+' · '+active.city+' · '+count(active);
   root.querySelector('[data-trip-note]').textContent=active.description;
@@ -52,7 +52,7 @@ if (root) {
   try {
    const response=await fetch('assets/short-trips/manifest.json');if(!response.ok)throw new Error('load');
    trips=await response.json();if(!Array.isArray(trips))throw new Error('format');
-   grid.replaceChildren(...(preview?trips.slice(0,3):trips).map(card));
+   if(preview)grid.replaceChildren(...trips.slice(0,3).map(card));
    status.textContent=trips.length?'':'下一段小旅行，留待下次出发。';
    route();
   } catch {

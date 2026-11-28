@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, ref, watch } from 'vue'
 import { pixelMascotById, pixelPortraitVariants } from '../data/mascots'
-import { portraitUrl } from '../utils/assets'
+import { portraitUrl } from '../utils/portraits'
 
 const props = defineProps<{ ids: string[]; label?: string; rotateAll?: boolean; priority?: boolean }>()
 const characters = computed(() => [...new Set(props.rotateAll ? [...props.ids, ...Object.keys(pixelMascotById)] : props.ids)]

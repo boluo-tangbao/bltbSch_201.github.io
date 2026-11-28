@@ -8,16 +8,25 @@
   <link rel="stylesheet" href="assets/hangzhou/journal.css">
   <link rel="stylesheet" href="assets/css/photo-journal.css">
 </head>
-<body>
+<body class="journal-loading">
+<script>if (new URLSearchParams(location.search).get('day')) document.body.classList.add('journal-day-route');</script>
 <main class="book">
   <nav class="mast" aria-label="旅行导航"><a href="travel.html">← 旅行手记</a><span>广州行 <i></i> 2026</span><a href="guangzhou-travel.html">四日行程 ↗</a></nav>
   <p id="journal-status" class="journal-status" role="status">正在翻开广州手记…</p>
-  <section id="trip-overview" hidden aria-labelledby="trip-title">
-    <header class="journey-intro"><p class="date">2026.01.18 — 01.21　／　广东 · 广州</p><h1 id="trip-title">广州四日<span>。</span></h1><p class="journey-subtitle">从祠堂到珠江，把四天慢慢翻完。</p><p class="journey-tally" id="trip-count"></p></header>
+  <section id="trip-overview" aria-labelledby="trip-title">
+    <header class="journey-intro"><p class="date">2026.01.18 — 01.21　／　广东 · 广州</p><h1 id="trip-title">广州四日<span>。</span></h1><p class="journey-subtitle">从祠堂到珠江，把四天慢慢翻完。</p><p class="journey-tally" id="trip-count"><!-- journal-overview-count --></p></header>
     <div class="day-strip" id="day-strip" aria-label="选择旅行日期"></div>
+    <template id="journal-overview-cards"><!-- journal-overview-cards --></template>
+    <script>
+      const overviewCards = document.getElementById('journal-overview-cards').content;
+      if (!new URLSearchParams(location.search).get('day') && overviewCards.childElementCount) {
+        document.getElementById('day-strip').append(overviewCards.cloneNode(true));
+        document.getElementById('journal-status').hidden = true;
+      }
+    </script>
     <p class="journey-hint">选一天，从当天的照片开始。也可以展开相册，慢慢看完整段行程。</p>
   </section>
-  <article id="day-journal" hidden>
+  <article id="day-journal">
     <header class="journal-heading"><p class="date" id="day-date"></p><h1 id="day-title"></h1><p class="day-route" id="day-route"></p></header>
     <section id="story" class="journal-section" aria-labelledby="story-title">
       <div class="section-heading"><h2 class="section-title" id="story-title">当天手记</h2><a class="story-album-link" href="#album">当天相册 ↘</a></div>

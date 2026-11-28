@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url'
 import { resolve } from 'node:path'
 import { createServer } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { directorySummary } from '../scripts/directory-summary.mjs'
 
 const root = fileURLToPath(new URL('../', import.meta.url)), empty = process.argv.includes('--empty'), target = resolve(root, empty ? '.fixture-empty' : '.fixture-app')
 mkdirSync(target, { recursive: true })
@@ -10,6 +11,8 @@ for (const item of ['src', 'index.html', 'guide', 'qa']) cpSync(resolve(root, it
 // The copied source sits one directory deeper than the real app.
 const mascotSource = resolve(target, 'src/data/mascots.ts')
 writeFileSync(mascotSource, readFileSync(mascotSource, 'utf8').replace('../../../docs/', '../../../../docs/'))
+const sharedStyles = resolve(target, 'src/design-system.css')
+writeFileSync(sharedStyles, readFileSync(sharedStyles, 'utf8').replace('../../assets/css/', '../../../assets/css/'))
 mkdirSync(resolve(target, 'public/images/places'), { recursive: true })
 cpSync(resolve(root, 'public/favicon.svg'), resolve(target, 'public/favicon.svg'))
 mkdirSync(resolve(target, 'public/brand'), { recursive: true })
@@ -42,6 +45,14 @@ writeFileSync(resolve(target, 'src/data/shop-directories.json'), JSON.stringify(
   ],
 } }))
 writeFileSync(resolve(target, 'public/images/places/test.svg'), '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300"><rect width="600" height="300" fill="#e4bd74"/><circle cx="300" cy="150" r="85" fill="#628875"/><text x="300" y="165" text-anchor="middle" font-size="40" fill="white">DEMO</text></svg>')
-const server = await createServer({ root: target, configFile: false, plugins: [vue()], base: '/bltbSch_201.github.io/rank/', server: { host: '127.0.0.1', port: empty ? 4175 : 4174, strictPort: true, fs: { allow: [root, resolve(root, '../docs')] } } })
+const fixtureData = {
+  name: 'fixture-data',
+  resolveId(id) { if (['virtual:cover-previews', 'virtual:directory-summary'].includes(id)) return '\0' + id },
+  load(id) {
+    if (id === '\0virtual:cover-previews') return 'export default {}'
+    if (id === '\0virtual:directory-summary') return 'export default ' + JSON.stringify(directorySummary(JSON.parse(readFileSync(resolve(target, 'src/data/shop-directories.json'), 'utf8'))))
+  },
+}
+const server = await createServer({ root: target, configFile: false, plugins: [vue(), fixtureData], base: '/bltbSch_201.github.io/rank/', server: { host: '127.0.0.1', port: empty ? 4175 : 4174, strictPort: true, fs: { allow: [root, resolve(root, '../docs'), resolve(root, '../assets')] } } })
 await server.listen()
 server.printUrls()

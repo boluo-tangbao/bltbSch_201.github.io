@@ -5,6 +5,9 @@ import { createReadStream, existsSync, readFileSync } from 'node:fs'
 import { extname, isAbsolute, relative, resolve } from 'node:path'
 import { directorySummary } from './scripts/directory-summary.mjs'
 import { fillHomeCityLinks, fillHomeLatestEvent } from '../scripts/home-city-links.mjs'
+import { filterPlaces, flattenPlaces } from './src/utils/model.ts'
+import { boardViewKey, compactCardSizes, comfortableCardSizes, previewSources, storedFiltersKey, type Preview } from './src/utils/imageSources.ts'
+import type { PlacesByCity } from './src/types'
 
 const summaryId = '\0virtual:directory-summary'
 const directorySummaryPlugin: Plugin = {
@@ -21,6 +24,69 @@ const directorySummaryPlugin: Plugin = {
 const rankBase = process.env.SITE_BASE || '/bltbSch_201.github.io/rank/'
 const homeBase = rankBase.replace(/rank\/$/, '')
 const homeRoot = fileURLToPath(new URL('../', import.meta.url))
+const placeFile = resolve(homeRoot, 'rank/src/data/places.json')
+const previewFile = resolve(homeRoot, 'rank/src/data/media-previews.json')
+function coversForBoard() {
+  const groups = JSON.parse(readFileSync(placeFile, 'utf8')) as PlacesByCity
+  const previews = JSON.parse(readFileSync(previewFile, 'utf8')) as Record<string, Preview>
+  const places = filterPlaces(flattenPlaces(groups)).filter(place => place.cover)
+  return { places, previews }
+}
+
+const coverPreviews: Plugin = {
+  name: 'board-cover-previews',
+  resolveId(id) { if (id === 'virtual:cover-previews') return '\0virtual:cover-previews' },
+  load(id) {
+    if (id !== '\0virtual:cover-previews') return
+    this.addWatchFile(placeFile)
+    this.addWatchFile(previewFile)
+    const { places, previews } = coversForBoard()
+    const covers = Object.fromEntries(places.flatMap(({ cover }) => {
+      const preview = cover && previews[cover]
+      return cover && preview ? [[cover, { tiny: preview.tiny, small: preview.small, large: preview.large }]] : []
+    }))
+    return `export default ${JSON.stringify(covers)}`
+  },
+  transformIndexHtml: {
+    order: 'post',
+    handler(html, context) {
+      if (relative(homeRoot, context.filename).split('\\').join('/') !== 'rank/index.html') return
+      const { places, previews } = coversForBoard()
+      const byCity = Object.fromEntries([...new Set(['', ...places.map(place => place.city)])].flatMap(city => {
+        const cover = places.find(place => !city || place.city === city)?.cover
+        return cover && previews[cover] ? [[city, previewSources(rankBase, cover, previews[cover]).srcset]] : []
+      }))
+      // Fragments and saved filters are only available in the browser. Skip
+      // routes whose first card cannot be inferred before the app loads.
+      const script = `<script>(() => {
+        if (location.hash && location.hash !== '#/') return;
+        const params = new URLSearchParams(location.search);
+        let filters = { city: params.get('city') || '', tag: params.get('tag') || '', query: params.get('q') || '' };
+        let view;
+        try {
+          view = localStorage.getItem(${JSON.stringify(boardViewKey)});
+          if (!['filters', 'city', 'tag', 'q'].some(key => params.has(key))) {
+            const saved = JSON.parse(localStorage.getItem(${JSON.stringify(storedFiltersKey)}) || '{}') || {};
+            for (const key of Object.keys(filters)) if (typeof saved[key] === 'string') filters[key] = saved[key];
+          }
+        } catch {}
+        if (filters.tag || filters.query.trim()) return;
+        const covers = ${JSON.stringify(byCity).replaceAll('<', '\\u003c')};
+        if (!Object.hasOwn(covers, filters.city)) return;
+        const link = document.createElement('link');
+        if (!('imageSrcset' in link)) return;
+        link.rel = 'preload';
+        link.as = 'image';
+        link.fetchPriority = 'high';
+        link.imageSizes = view === 'comfortable' || (view !== 'compact' && params.get('city')?.trim())
+          ? ${JSON.stringify(comfortableCardSizes)} : ${JSON.stringify(compactCardSizes)};
+        link.imageSrcset = covers[filters.city];
+        document.head.append(link);
+      })();</script>`
+      return html.replace(/(?=<script type="module"[^>]+src=)|(?=<\/head>)/, () => script + '\n')
+    },
+  },
+}
 const homeFiles = new Set([
   'index.html', 'culture.html', 'sports.html', 'art.html', 'anime.html', 'travel.html', 'activities.html',
   'hangzhou-travel.html', 'lanzhou-travel.html', 'lanzhou-day-story.html', 'japan-travel.html',
@@ -100,7 +166,7 @@ const siteConsole = {
 }
 
 export default defineConfig({
-  plugins: [personalSitePreview, criticalPortraits, vue(), siteConsole, directorySummaryPlugin],
+  plugins: [personalSitePreview, criticalPortraits, coverPreviews, vue(), siteConsole, directorySummaryPlugin],
   base: rankBase,
   build: {
     rolldownOptions: {

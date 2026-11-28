@@ -2,7 +2,8 @@
 import { ref } from 'vue'
 import { displayUrl, previewUrl } from '../utils/assets'
 
-defineProps<{ src: string; alt: string; contained?: boolean }>()
+defineProps<{ src: string; alt: string; preview?: string; contained?: boolean }>()
+const emit = defineEmits<{ ready: [] }>()
 const loaded = ref(false)
 const failed = ref(false)
 const attempt = ref(0)
@@ -11,8 +12,8 @@ function retry() { loaded.value = false; failed.value = false; attempt.value++ }
 
 <template>
   <div class="full-image" :class="{ 'is-contained': contained }" :aria-busy="!loaded && !failed">
-    <img class="full-image-preview" :class="{ 'is-hidden': loaded }" :src="previewUrl(src)" alt="" aria-hidden="true" decoding="async">
-    <img :key="`${src}-${attempt}`" class="full-image-original" :class="{ 'is-ready': loaded }" :src="displayUrl(src)" :alt="alt" decoding="async" fetchpriority="high" @load="loaded = true" @error="failed = true">
+    <img class="full-image-preview" :class="{ 'is-hidden': loaded }" :src="preview || previewUrl(src)" alt="" aria-hidden="true" decoding="async">
+    <img :key="`${src}-${attempt}`" class="full-image-original" :class="{ 'is-ready': loaded }" :src="displayUrl(src)" :alt="alt" decoding="async" fetchpriority="high" @load="loaded = true; emit('ready')" @error="failed = true">
     <div v-if="!loaded" class="full-image-status" role="status">
       <template v-if="failed">大图加载失败 <button type="button" @click="retry">重试</button></template>
       <template v-else>正在加载高清图片…</template>

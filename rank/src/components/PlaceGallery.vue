@@ -10,6 +10,9 @@ const closeButton = ref<HTMLButtonElement>()
 const lightbox = ref<HTMLElement>()
 const zoom = ref(1)
 const preloaded = new Set<string>()
+const gallery = ref<HTMLElement>()
+const preview = ref<string>()
+let turnDirection = 0
 let previousFocus: HTMLElement | null = null
 let previousOverflow = ''
 
@@ -46,31 +49,39 @@ function handleKeydown(event: KeyboardEvent) {
   if (event.key === 'ArrowLeft') { event.preventDefault(); showRelativeImage(-1) }
 }
 
-watch(activeIndex, index => {
-  zoom.value = 1
-  if (index === null || props.images.length < 2) return
-  if ((navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData) return
-  for (const offset of [-1, 1]) {
-    const image = props.images[(index + offset + props.images.length) % props.images.length]
-    if (image.type === 'video') continue
-    const url = displayUrl(image.src)
-    if (url === assetUrl(image.src) || preloaded.has(url)) continue
-    preloaded.add(url)
-    const preload = new Image()
-    preload.decoding = 'async'
-    preload.fetchPriority = 'low'
-    preload.src = url
-  }
-})
+watch(activeIndex, () => { zoom.value = 1 })
+
+function warmNext() {
+  const index = activeIndex.value
+  if (index !== null && currentImage.value) preloaded.add(displayUrl(currentImage.value.src))
+  const connection = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection
+  if (index === null || !turnDirection || props.images.length < 3 || connection?.saveData || connection?.effectiveType?.includes('2g')) return
+  const image = props.images[(index + turnDirection + props.images.length) % props.images.length]
+  if (image.type === 'video') return
+  const url = displayUrl(image.src)
+  if (url === assetUrl(image.src) || preloaded.has(url)) return
+  preloaded.add(url)
+  const preload = new Image()
+  preload.decoding = 'async'
+  preload.fetchPriority = 'low'
+  preload.onerror = () => preloaded.delete(url)
+  preload.src = url
+}
+
+function selectImage(index: number, image = gallery.value?.querySelector<HTMLImageElement>(`[data-gallery-index="${index}"] img`)) {
+  preview.value = image?.complete && image.naturalWidth ? image.currentSrc : undefined
+  activeIndex.value = index
+}
 
 function scrollToGroup(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' })
 }
 
-function openGallery(index: number) {
+function openGallery(index: number, event: MouseEvent) {
   previousFocus = document.activeElement as HTMLElement | null
   previousOverflow = document.body.style.overflow
-  activeIndex.value = index
+  turnDirection = 0
+  selectImage(index, (event.currentTarget as HTMLButtonElement).querySelector('img') ?? undefined)
   document.body.style.overflow = 'hidden'
   window.addEventListener('keydown', handleKeydown)
   nextTick(() => closeButton.value?.focus())
@@ -85,7 +96,8 @@ function closeGallery() {
 
 function showRelativeImage(offset: number) {
   if (activeIndex.value === null || props.images.length < 2) return
-  activeIndex.value = (activeIndex.value + offset + props.images.length) % props.images.length
+  turnDirection = offset
+  selectImage((activeIndex.value + offset + props.images.length) % props.images.length)
 }
 
 onBeforeUnmount(() => {
@@ -95,7 +107,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <section class="place-gallery" :style="{ '--city-color': color }" aria-labelledby="place-gallery-heading">
+  <section ref="gallery" class="place-gallery" :style="{ '--city-color': color }" aria-labelledby="place-gallery-heading">
     <header class="place-gallery-heading">
       <div>
         <p class="section-label">PHOTO ALBUM</p>
@@ -114,8 +126,8 @@ onBeforeUnmount(() => {
         <div class="place-gallery-group-heading"><h3>{{ group.name }}</h3><span>{{ group.images.length }} 个素材</span></div>
         <div class="place-gallery-grid">
           <article v-for="entry in group.images" :key="entry.image.src" class="place-gallery-item">
-            <button class="place-gallery-image-preview" type="button" :aria-label="`${entry.image.type === 'video' ? '播放' : '查看'}：${entry.image.alt}`" @click="openGallery(entry.index)">
-              <img :src="previewUrl(entry.image.src)" :srcset="previewSrcset(entry.image.src)" sizes="(max-width: 580px) 40vw, (max-width: 800px) 160px, 220px" :alt="entry.image.alt" loading="lazy" decoding="async">
+            <button class="place-gallery-image-preview" :data-gallery-index="entry.index" type="button" :aria-label="`${entry.image.type === 'video' ? '播放' : '查看'}：${entry.image.alt}`" @click="openGallery(entry.index, $event)">
+              <img loading="lazy" decoding="async" sizes="(max-width: 580px) 40vw, (max-width: 800px) 160px, 220px" :srcset="previewSrcset(entry.image.src)" :src="previewUrl(entry.image.src)" :alt="entry.image.alt">
               <span v-if="entry.image.type === 'video'" class="place-gallery-play" aria-hidden="true">▶</span>
               <span v-else class="place-gallery-zoom" aria-hidden="true">↗</span>
             </button>
@@ -141,11 +153,11 @@ onBeforeUnmount(() => {
         </header>
         <figure class="place-gallery-viewer">
           <div class="gallery-stage">
-          <video v-if="currentImage.type === 'video'" :key="currentImage.src" class="place-gallery-lightbox-video" controls autoplay preload="metadata" playsinline :poster="previewUrl(currentImage.src)" :aria-label="currentImage.alt">
+          <video v-if="currentImage.type === 'video'" :key="currentImage.src" class="place-gallery-lightbox-video" controls autoplay preload="metadata" playsinline :poster="preview || previewUrl(currentImage.src)" :aria-label="currentImage.alt">
             <source :src="playbackUrl(currentImage.src)" type="video/mp4">
             浏览器暂不支持播放此视频。
           </video>
-          <GalleryPhoto v-else :key="currentImage.src" v-model:zoom="zoom" :src="currentImage.src" :alt="currentImage.alt" @navigate="showRelativeImage" />
+          <GalleryPhoto v-else :key="currentImage.src" v-model:zoom="zoom" :src="currentImage.src" :alt="currentImage.alt" :preview="preview" @ready="warmNext" @navigate="showRelativeImage" />
           </div>
           <figcaption><span>{{ currentImage.alt }}</span><a :href="originalUrl(currentImage.src)" target="_blank" rel="noopener noreferrer" :title="currentImage.type === 'video' ? '查看网页视频文件' : '查看原件；GitHub 文件页提供下载入口'">{{ currentImage.type === 'video' ? '打开视频文件' : '打开原图' }} ↗</a><a v-if="currentImage.sourceUrl" :href="currentImage.sourceUrl" target="_blank" rel="noopener noreferrer">来源：{{ currentImage.sourceName || '原始页面' }} ↗</a><span v-else-if="currentImage.sourceName">来源：{{ currentImage.sourceName }}</span></figcaption>
         </figure>
